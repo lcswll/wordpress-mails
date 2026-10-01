@@ -2,20 +2,23 @@
 /**
  * Plugin settings (single autoloaded option).
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Settings {
 
-	const OPTION = 'outbox_settings';
+	const OPTION = 'outbox_mail_log_settings';
 
 	/** Capabilities that may be granted read access to the log. */
 	const CAPABILITIES = array( 'manage_options', 'edit_others_posts', 'manage_woocommerce' );
 
+	/**
+	 * @return array<string,string|int|bool>
+	 */
 	public static function defaults(): array {
 		return array(
 			'capability'               => 'manage_options',
@@ -28,6 +31,9 @@ final class Settings {
 		);
 	}
 
+	/**
+	 * @return array<string,mixed>
+	 */
 	public static function all(): array {
 		$stored = get_option( self::OPTION, array() );
 		return array_merge( self::defaults(), is_array( $stored ) ? $stored : array() );
@@ -53,6 +59,7 @@ final class Settings {
 
 	/**
 	 * @param mixed $input Raw option value.
+	 * @return array<string,string|int|bool>
 	 */
 	public static function sanitize( $input ): array {
 		$input    = is_array( $input ) ? $input : array();

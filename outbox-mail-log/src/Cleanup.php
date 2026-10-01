@@ -2,16 +2,16 @@
 /**
  * Daily retention cleanup via WP-Cron.
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Cleanup {
 
-	const HOOK = 'outbox_cleanup';
+	const HOOK = 'outbox_mail_log_cleanup';
 
 	/** @var Repository */
 	private $repository;

@@ -1,0 +1,38 @@
+{
+  "name": "outbox-mail-log-dev",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Dev tooling for the Outbox – Mail Log WordPress plugin: checks, tests, e2e, release ZIP.",
+  "license": "GPL-2.0-or-later",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "setup:php": "node scripts/setup-php.mjs",
+    "verify": "node scripts/verify.mjs",
+    "lint:js": "eslint --max-warnings=0 .",
+    "phpcs": "node scripts/php.mjs vendor/bin/phpcs",
+    "phpcbf": "node scripts/php.mjs vendor/bin/phpcbf",
+    "phpstan": "node scripts/php.mjs vendor/bin/phpstan analyse --memory-limit=2G",
+    "test:php": "node scripts/php.mjs vendor/bin/phpunit",
+    "test:e2e": "node scripts/e2e.mjs",
+    "check": "node scripts/repo-checks.mjs",
+    "i18n": "node scripts/i18n.mjs",
+    "build": "node scripts/build-zip.mjs",
+    "playground": "node scripts/playground-server.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.56.0",
+    "@wp-playground/cli": "^3.0.0",
+    "eslint": "^10.0.0",
+    "eslint-plugin-no-unsanitized": "^4.1.5",
+    "globals": "^17.0.0",
+    "yauzl": "^3.2.0",
+    "yazl": "^3.3.1"
+  },
+  "overrides": {
+    "qs": "^6.16.0"
+  }
+}

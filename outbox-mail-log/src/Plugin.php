@@ -2,10 +2,10 @@
 /**
  * Bootstrap: wires all components to WordPress.
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -42,7 +42,17 @@ final class Plugin {
 		add_action( 'init', array( self::class, 'load_textdomain' ) );
 	}
 
+	/**
+	 * Bundled translations are only a fallback: language packs from
+	 * translate.wordpress.org (wp-content/languages/plugins) take precedence
+	 * and are loaded just in time by WordPress itself.
+	 */
 	public static function load_textdomain(): void {
-		load_plugin_textdomain( 'outbox-mail-log', false, dirname( plugin_basename( FILE ) ) . '/languages' );
+		$locale = determine_locale();
+		if ( file_exists( WP_LANG_DIR . "/plugins/outbox-mail-log-{$locale}.mo" ) || file_exists( WP_LANG_DIR . "/plugins/outbox-mail-log-{$locale}.l10n.php" ) ) {
+			return;
+		}
+		// WordPress 6.5+ prefers the .l10n.php variant of this path automatically.
+		load_textdomain( 'outbox-mail-log', dirname( FILE ) . "/languages/outbox-mail-log-{$locale}.mo", $locale );
 	}
 }

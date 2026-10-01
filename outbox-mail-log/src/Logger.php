@@ -8,16 +8,20 @@
  *   succeeded / failed  → single UPDATE with status + enrichment
  * A pre_wp_mail short-circuit (e.g. API-based mailers) resolves the row as well.
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Logger {
 
-	/** Set while the plugin itself resends a mail, so the source is recorded correctly. */
+	/**
+	 * Set while the plugin itself resends a mail, so the source is recorded correctly.
+	 *
+	 * @var string
+	 */
 	public static $source_override = '';
 
 	/** @var Repository */
@@ -26,7 +30,7 @@ final class Logger {
 	/**
 	 * Mails in flight (wp_mail can be nested, e.g. a failure handler sending a mail).
 	 *
-	 * @var array<int,array{id:int,hash:string,data:array}>
+	 * @var array<int,array{id:int,hash:string,data:array<string,string>}>
 	 */
 	private $stack = array();
 
@@ -59,7 +63,7 @@ final class Logger {
 		$id      = 0;
 
 		// A skipped mail still gets a stack slot (id 0) so result hooks stay aligned.
-		if ( apply_filters( 'outbox_should_log', true, $atts ) ) {
+		if ( apply_filters( 'outbox_mail_log_should_log', true, $atts ) ) {
 			try {
 				$id = $this->repository->insert( $this->normalize( $atts, $message ) );
 			} catch ( \Throwable $e ) { // Logging must never break mail delivery.
@@ -91,11 +95,11 @@ final class Logger {
 	 * Records what PHPMailer will actually send (other plugins may rewrite the
 	 * body in phpmailer_init, e.g. HTML template wrappers).
 	 *
-	 * @param object $mailer PHPMailer instance.
+	 * @param mixed $mailer PHPMailer instance passed by phpmailer_init.
 	 */
 	public function enrich( $mailer ): void {
 		$key = array_key_last( $this->stack );
-		if ( null === $key || ! $this->stack[ $key ]['id'] ) {
+		if ( null === $key || ! $this->stack[ $key ]['id'] || ! $mailer instanceof \PHPMailer\PHPMailer\PHPMailer ) {
 			return;
 		}
 
@@ -112,15 +116,12 @@ final class Logger {
 		$this->stack[ $key ]['data'] = $data;
 	}
 
-	/**
-	 * @param array $mail_data Unused.
-	 */
-	public function succeeded( $mail_data = array() ): void {
+	public function succeeded(): void {
 		$this->resolve( Repository::STATUS_SENT );
 	}
 
 	/**
-	 * @param \WP_Error $error
+	 * @param mixed $error WP_Error from wp_mail().
 	 */
 	public function failed( $error ): void {
 		$this->resolve( Repository::STATUS_FAILED, is_wp_error( $error ) ? $error->get_error_message() : '' );
@@ -147,6 +148,10 @@ final class Logger {
 		$this->repository->update( $entry['id'], $data );
 	}
 
+	/**
+	 * @param array<string,mixed> $atts wp_mail() arguments.
+	 * @return array<string,string|int> Row for Repository::insert().
+	 */
 	private function normalize( array $atts, string $message ): array {
 		$to          = self::to_list( $atts['to'] ?? array(), ',' );
 		$headers     = self::to_list( $atts['headers'] ?? array(), "\n" );
@@ -159,10 +164,14 @@ final class Logger {
 			);
 		}
 
+		// Best guess from the headers; phpmailer_init replaces both with the final values.
 		$content_type = '';
+		$sender       = '';
 		foreach ( $headers as $header ) {
 			if ( preg_match( '/^content-type:\s*([^;\s]+)/i', $header, $m ) ) {
 				$content_type = strtolower( $m[1] );
+			} elseif ( preg_match( '/^from:\s*(.+)$/i', $header, $m ) ) {
+				$sender = substr( trim( $m[1] ), 0, 255 );
 			}
 		}
 
@@ -175,7 +184,7 @@ final class Logger {
 			'headers'      => implode( "\n", $headers ),
 			'attachments'  => $attachments ? (string) wp_json_encode( $attachments ) : '',
 			'content_type' => $content_type,
-			'sender'       => '',
+			'sender'       => $sender,
 			'source'       => self::$source_override ? self::$source_override : $this->source(),
 			'error'        => '',
 		);
@@ -184,13 +193,20 @@ final class Logger {
 	/**
 	 * Same splitting rules wp_mail() applies to string arguments.
 	 *
-	 * @param mixed $value
+	 * @param mixed            $value
+	 * @param non-empty-string $separator
+	 * @return array<int|string,string>
 	 */
 	private static function to_list( $value, string $separator, bool $keep_keys = false ): array {
 		if ( ! is_array( $value ) ) {
 			$value = explode( $separator, str_replace( "\r\n", "\n", (string) $value ) );
 		}
-		$value = array_filter( array_map( 'trim', array_map( 'strval', $value ) ), 'strlen' );
+		$value = array_filter(
+			array_map( 'trim', array_map( 'strval', $value ) ),
+			static function ( string $item ): bool {
+				return '' !== $item;
+			}
+		);
 		return $keep_keys ? $value : array_values( $value );
 	}
 
@@ -202,7 +218,7 @@ final class Logger {
 		if ( ! Settings::get( 'redact_secrets' ) || '' === $text ) {
 			return $text;
 		}
-		$params = (array) apply_filters( 'outbox_redact_params', array( 'key', 'token', 'reset_key', 'activation_key', 'login_token', 'password', 'pass', 'pwd' ) );
+		$params = (array) apply_filters( 'outbox_mail_log_redact_params', array( 'key', 'token', 'reset_key', 'activation_key', 'login_token', 'password', 'pass', 'pwd' ) );
 		$params = implode( '|', array_map( 'preg_quote', $params ) );
 		$result = preg_replace( '/([?&](?:amp;)?(?:' . $params . ')=)[^&\s"\'<>]+/i', '$1[redacted]', $text );
 		return null === $result ? $text : $result;

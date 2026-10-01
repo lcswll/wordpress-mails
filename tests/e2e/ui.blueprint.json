@@ -1,0 +1,22 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/admin.php?page=outbox-mail-log",
+	"login": true,
+	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Example Shop",
+				"permalink_structure": "/%postname%/"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "outbox-mail-log/outbox-mail-log.php"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/e2e/seed.php';"
+		}
+	]
+}

@@ -2,18 +2,22 @@
 /**
  * Schema installation and upgrades.
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Installer {
 
-	const DB_VERSION_OPTION = 'outbox_db_version';
+	const DB_VERSION_OPTION = 'outbox_mail_log_db_version';
 
-	public static function activate( bool $network_wide = false ): void {
+	/**
+	 * Installs the table for the current site. On network activation other
+	 * sites are installed lazily by maybe_upgrade() on their first request.
+	 */
+	public static function activate(): void {
 		self::install();
 		Cleanup::schedule();
 	}

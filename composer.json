@@ -1,0 +1,43 @@
+{
+    "name": "lcswll/outbox-mail-log",
+    "description": "Dev tooling for the Outbox – Mail Log WordPress plugin (PHPCS, PHPStan, PHPUnit). The plugin itself has no Composer dependencies.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "automattic/vipwpcs": "^3.0",
+        "brain/monkey": "^2.6",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "php-stubs/wordpress-stubs": "^6.8",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpunit/phpunit": "^9.6",
+        "squizlabs/php_codesniffer": "^3.13",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "wp-coding-standards/wpcs": "^3.2"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OutboxMailLog\\": "outbox-mail-log/src/",
+            "OutboxMailLog\\Tests\\": "tests/unit/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4.33"
+        }
+    },
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpcbf": "phpcbf",
+        "phpstan": "phpstan analyse --memory-limit=2G",
+        "test": "phpunit"
+    }
+}

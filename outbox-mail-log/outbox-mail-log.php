@@ -12,10 +12,10 @@
  * Text Domain:       outbox-mail-log
  * Domain Path:       /languages
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -24,11 +24,11 @@ const DB_VERSION = 1;
 const FILE       = __FILE__;
 
 spl_autoload_register(
-	static function ( string $class ): void {
-		if ( 0 !== strpos( $class, __NAMESPACE__ . '\\' ) ) {
+	static function ( string $class_name ): void {
+		if ( 0 !== strpos( $class_name, __NAMESPACE__ . '\\' ) ) {
 			return;
 		}
-		$file = __DIR__ . '/src/' . str_replace( '\\', '/', substr( $class, strlen( __NAMESPACE__ ) + 1 ) ) . '.php';
+		$file = __DIR__ . '/src/' . str_replace( '\\', '/', substr( $class_name, strlen( __NAMESPACE__ ) + 1 ) ) . '.php';
 		if ( is_readable( $file ) ) {
 			require $file;
 		}

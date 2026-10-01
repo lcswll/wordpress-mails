@@ -1,13 +1,13 @@
 <?php
 /**
- * REST API used by the admin screen (outbox/v1).
+ * REST API used by the admin screen (outbox-mail-log/v1).
  *
  * Never exposes server file paths; attachment names only.
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 use WP_Error;
 use WP_REST_Request;
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 
 final class Rest {
 
-	const NS = 'outbox/v1';
+	const NS = 'outbox-mail-log/v1';
 
 	/** @var Repository */
 	private $repository;
@@ -222,6 +222,10 @@ final class Rest {
 		);
 	}
 
+	/**
+	 * @param array<string,string> $row
+	 * @return array<string,mixed>
+	 */
 	private function summary( array $row ): array {
 		if ( null === $this->date_format ) {
 			$this->date_format = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
@@ -280,6 +284,9 @@ final class Rest {
 		return new WP_Error( 'outbox_not_found', __( 'Log entry not found.', 'outbox-mail-log' ), array( 'status' => 404 ) );
 	}
 
+	/**
+	 * @return array<string,array<string,mixed>>
+	 */
 	private function list_args(): array {
 		$date = array(
 			'type'    => 'string',

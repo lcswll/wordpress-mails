@@ -10,7 +10,7 @@
 ( function () {
 	'use strict';
 
-	const cfg = window.outboxConfig;
+	const cfg = window.outboxMailLogConfig;
 	const app = document.getElementById( 'outbox-app' );
 	if ( ! cfg || ! app ) {
 		return;
@@ -57,7 +57,7 @@
 
 	const state = Object.assign( {}, DEFAULTS, readUrl(), { per_page: readPerPage() } );
 	let data = { items: [], total: 0, pages: 0, counts: {} };
-	let selection = new Set();
+	const selection = new Set();
 	let controller = null;
 	let current = null; // Mail shown in the dialog.
 	let view = 'preview';
@@ -108,7 +108,7 @@
 
 	function endpoint( path, params ) {
 		const url = new URL( cfg.restUrl, location.href );
-		// Sites without pretty permalinks use ?rest_route=/outbox/v1.
+		// Sites without pretty permalinks use ?rest_route=/outbox-mail-log/v1.
 		if ( url.searchParams.has( 'rest_route' ) ) {
 			url.searchParams.set( 'rest_route', url.searchParams.get( 'rest_route' ).replace( /\/?$/, '/' ) + path );
 		} else {
@@ -405,7 +405,8 @@
 		renderView();
 	}
 
-	const REMOTE_RE = /(?:src|background|srcset|href)\s*=\s*["']?\s*(?:https?:)?\/\/|url\(\s*["']?\s*(?:https?:)?\/\//i;
+	// Only what the browser would fetch on render (images, backgrounds, CSS, fonts) – not ordinary links.
+	const REMOTE_RE = /\b(?:src|srcset|background)\s*=\s*["']?\s*(?:https?:)?\/\/|url\(\s*["']?\s*(?:https?:)?\/\/|<link\b[^>]*\bhref\s*=\s*["']?\s*(?:https?:)?\/\/|@import\s+["']?(?:https?:)?\/\//i;
 
 	function renderView() {
 		el.dialog.querySelectorAll( '[role="tab"]' ).forEach( ( tab ) => {

@@ -2,15 +2,17 @@
 /**
  * All database access for the mail log table.
  *
- * Table name is built from $wpdb->prefix and never from user input; every
- * value goes through $wpdb->prepare(), every ORDER BY through a whitelist.
+ * Every value and identifier goes through $wpdb->prepare() (%i for the table
+ * name and the whitelisted ORDER BY column, available since WordPress 6.2).
  *
- * phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery
+ * Direct queries are intended: this is the plugin's own table, and object
+ * caching would only serve stale data for a log that changes with every mail.
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -26,9 +28,6 @@ final class Repository {
 		self::STATUS_FAILED  => 'failed',
 	);
 
-	/** Columns needed for the list view (never the heavy message body). */
-	const LIST_COLUMNS = 'id, created_at, status, recipients, subject, attachments, source, error';
-
 	const ORDER_COLUMNS = array(
 		'date'    => 'id', // Auto-increment id follows insertion time and uses the primary key.
 		'to'      => 'recipients',
@@ -37,19 +36,25 @@ final class Repository {
 
 	public static function table(): string {
 		global $wpdb;
-		return $wpdb->prefix . 'outbox_mails';
+		return $wpdb->prefix . 'outbox_mail_log';
 	}
 
 	public static function status_slug( int $status ): string {
 		return self::STATUSES[ $status ] ?? 'pending';
 	}
 
+	/**
+	 * @param array<string,string|int> $row
+	 */
 	public function insert( array $row ): int {
 		global $wpdb;
 		$ok = $wpdb->insert( self::table(), $row );
 		return $ok ? (int) $wpdb->insert_id : 0;
 	}
 
+	/**
+	 * @param array<string,string|int> $data
+	 */
 	public function update( int $id, array $data ): void {
 		global $wpdb;
 		if ( $id > 0 && $data ) {
@@ -57,24 +62,27 @@ final class Repository {
 		}
 	}
 
+	/**
+	 * @return array<string,string>|null
+	 */
 	public function find( int $id ): ?array {
 		global $wpdb;
-		$row = $wpdb->get_row( $wpdb->prepare( 'SELECT * FROM ' . self::table() . ' WHERE id = %d', $id ), ARRAY_A );
-		return $row ?: null;
+		$row = $wpdb->get_row( $wpdb->prepare( 'SELECT * FROM %i WHERE id = %d', self::table(), $id ), ARRAY_A );
+		return is_array( $row ) ? $row : null;
 	}
 
 	/**
 	 * Paginated, filtered list plus per-status counts for the same filter.
 	 *
-	 * @param array{page:int,per_page:int,search:string,in_body:bool,status:string,orderby:string,order:string,after:string,before:string} $args
-	 * @return array{items:array,total:int,counts:array<string,int>}
+	 * @param array{page?:int,per_page?:int,search?:string,in_body?:bool,status?:string,orderby?:string,order?:string,after?:string,before?:string} $args
+	 * @return array{items:array<int,array<string,string>>,total:int,counts:array<string,int>}
 	 */
 	public function query( array $args ): array {
 		global $wpdb;
 
-		$table  = self::table();
-		$where  = array();
-		$params = array();
+		// WHERE fragments are string literals only; every value is a placeholder.
+		$where  = array( '1=1' );
+		$params = array( self::table() );
 
 		$search = trim( (string) ( $args['search'] ?? '' ) );
 		if ( '' !== $search ) {
@@ -99,13 +107,13 @@ final class Repository {
 		}
 
 		// One grouped query yields the tab counts and the total for the active tab.
-		$sql  = "SELECT status, COUNT(*) AS n FROM {$table}" . self::where( $where ) . ' GROUP BY status';
-		$rows = $wpdb->get_results( $params ? $wpdb->prepare( $sql, $params ) : $sql, ARRAY_A );
+		$sql  = 'SELECT status, COUNT(*) AS n FROM %i WHERE ' . implode( ' AND ', $where ) . ' GROUP BY status';
+		$rows = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals above.
 
 		$counts = array_fill_keys( array( 'all', 'sent', 'failed', 'pending' ), 0 );
 		foreach ( (array) $rows as $row ) {
 			$counts[ self::status_slug( (int) $row['status'] ) ] += (int) $row['n'];
-			$counts['all']                                    += (int) $row['n'];
+			$counts['all']                                       += (int) $row['n'];
 		}
 
 		$status = (string) ( $args['status'] ?? 'all' );
@@ -126,21 +134,17 @@ final class Repository {
 			);
 		}
 
-		$column = self::ORDER_COLUMNS[ $args['orderby'] ?? 'date' ] ?? 'id';
-		$order  = 'asc' === ( $args['order'] ?? 'desc' ) ? 'ASC' : 'DESC';
-		$sort   = 'id' === $column ? "id {$order}" : "{$column} {$order}, id DESC";
-
-		$per_page = max( 1, (int) $args['per_page'] );
+		$per_page = max( 1, (int) ( $args['per_page'] ?? 25 ) );
+		$column   = self::ORDER_COLUMNS[ $args['orderby'] ?? 'date' ] ?? 'id';
+		$order    = 'asc' === ( $args['order'] ?? 'desc' ) ? 'ASC' : 'DESC';
+		$params[] = $column;
 		$params[] = $per_page;
-		$params[] = ( max( 1, (int) $args['page'] ) - 1 ) * $per_page;
+		$params[] = ( max( 1, (int) ( $args['page'] ?? 1 ) ) - 1 ) * $per_page;
 
-		$items = $wpdb->get_results(
-			$wpdb->prepare(
-				'SELECT ' . self::LIST_COLUMNS . " FROM {$table}" . self::where( $where ) . " ORDER BY {$sort} LIMIT %d OFFSET %d",
-				$params
-			),
-			ARRAY_A
-		);
+		// Secondary sort on id keeps pagination stable for equal recipients/subjects.
+		$sql   = 'SELECT id, created_at, status, recipients, subject, attachments, source, error FROM %i WHERE '
+			. implode( ' AND ', $where ) . " ORDER BY %i {$order}, id {$order} LIMIT %d OFFSET %d";
+		$items = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals above, $order is ASC|DESC.
 
 		return array(
 			'items'  => (array) $items,
@@ -150,7 +154,7 @@ final class Repository {
 	}
 
 	/**
-	 * @param int[] $ids
+	 * @param array<int,int|string> $ids
 	 */
 	public function delete( array $ids ): int {
 		global $wpdb;
@@ -159,19 +163,20 @@ final class Repository {
 			return 0;
 		}
 		$placeholders = implode( ',', array_fill( 0, count( $ids ), '%d' ) );
-		return (int) $wpdb->query( $wpdb->prepare( 'DELETE FROM ' . self::table() . " WHERE id IN ({$placeholders})", $ids ) );
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- one %d per id.
+		return (int) $wpdb->query( $wpdb->prepare( "DELETE FROM %i WHERE id IN ({$placeholders})", self::table(), ...$ids ) );
 	}
 
 	public function delete_all(): void {
 		global $wpdb;
-		$wpdb->query( 'TRUNCATE TABLE ' . self::table() );
+		$wpdb->query( $wpdb->prepare( 'TRUNCATE TABLE %i', self::table() ) );
 	}
 
 	/** Deletes every entry created before the given GMT datetime. */
 	public function delete_before( string $gmt_datetime ): int {
 		global $wpdb;
 		$max_id = (int) $wpdb->get_var(
-			$wpdb->prepare( 'SELECT id FROM ' . self::table() . ' WHERE created_at < %s ORDER BY id DESC LIMIT 1', $gmt_datetime )
+			$wpdb->prepare( 'SELECT id FROM %i WHERE created_at < %s ORDER BY id DESC LIMIT 1', self::table(), $gmt_datetime )
 		);
 		return $max_id ? $this->delete_up_to( $max_id ) : 0;
 	}
@@ -180,7 +185,7 @@ final class Repository {
 	public function trim_to( int $keep ): int {
 		global $wpdb;
 		$max_id = (int) $wpdb->get_var(
-			$wpdb->prepare( 'SELECT id FROM ' . self::table() . ' ORDER BY id DESC LIMIT 1 OFFSET %d', $keep )
+			$wpdb->prepare( 'SELECT id FROM %i ORDER BY id DESC LIMIT 1 OFFSET %d', self::table(), $keep )
 		);
 		return $max_id ? $this->delete_up_to( $max_id ) : 0;
 	}
@@ -191,7 +196,7 @@ final class Repository {
 		$deleted = 0;
 		do {
 			$n        = (int) $wpdb->query(
-				$wpdb->prepare( 'DELETE FROM ' . self::table() . ' WHERE id <= %d ORDER BY id LIMIT %d', $max_id, $batch )
+				$wpdb->prepare( 'DELETE FROM %i WHERE id <= %d ORDER BY id LIMIT %d', self::table(), $max_id, $batch )
 			);
 			$deleted += $n;
 		} while ( $n === $batch );
@@ -201,30 +206,31 @@ final class Repository {
 	/**
 	 * Entries whose To list contains exactly this address (for privacy tools).
 	 *
-	 * @param int|null $scanned Receives the number of raw candidate rows (for pagination).
-	 * @return array<int,array>
+	 * @param int $scanned Receives the number of raw candidate rows (for pagination).
+	 * @return array<int,array<string,string>>
 	 */
-	public function find_by_recipient( string $email, int $limit, int $offset = 0, ?int &$scanned = null ): array {
+	public function find_by_recipient( string $email, int $limit, int $offset = 0, int &$scanned = 0 ): array {
 		global $wpdb;
 		$scanned = 0;
 		$email   = strtolower( trim( $email ) );
 		if ( ! is_email( $email ) ) {
 			return array();
 		}
-		$rows = $wpdb->get_results(
+		$rows    = (array) $wpdb->get_results(
 			$wpdb->prepare(
-				'SELECT ' . self::LIST_COLUMNS . ' FROM ' . self::table() . ' WHERE recipients LIKE %s ORDER BY id LIMIT %d OFFSET %d',
+				'SELECT id, created_at, status, recipients, subject, attachments, source, error FROM %i WHERE recipients LIKE %s ORDER BY id LIMIT %d OFFSET %d',
+				self::table(),
 				'%' . $wpdb->esc_like( $email ) . '%',
 				$limit,
 				$offset
 			),
 			ARRAY_A
 		);
-		$scanned = count( (array) $rows );
+		$scanned = count( $rows );
 		// LIKE is only a pre-filter ("anna@x.de" also matches "joanna@x.de").
 		return array_values(
 			array_filter(
-				(array) $rows,
+				$rows,
 				static function ( array $row ) use ( $email ): bool {
 					return in_array( $email, self::extract_emails( $row['recipients'] ), true );
 				}
@@ -235,8 +241,8 @@ final class Repository {
 	/**
 	 * @return string[] Lower-cased addresses from a "Name <a@b>, c@d" list.
 	 */
-	public static function extract_emails( string $list ): array {
-		preg_match_all( '/[^\s<>,;"\']+@[^\s<>,;"\']+/', $list, $m );
+	public static function extract_emails( string $recipients ): array {
+		preg_match_all( '/[^\s<>,;"\']+@[^\s<>,;"\']+/', $recipients, $m );
 		return array_map( 'strtolower', $m[0] );
 	}
 
@@ -245,14 +251,10 @@ final class Repository {
 	 */
 	public function stats(): array {
 		global $wpdb;
-		$status = $wpdb->get_row( $wpdb->prepare( 'SHOW TABLE STATUS LIKE %s', self::table() ), ARRAY_A );
+		$status = $wpdb->get_row( $wpdb->prepare( 'SHOW TABLE STATUS LIKE %s', $wpdb->esc_like( self::table() ) ), ARRAY_A );
 		return array(
-			'rows'  => (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . self::table() ),
-			'bytes' => $status ? (int) $status['Data_length'] + (int) $status['Index_length'] : 0,
+			'rows'  => (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', self::table() ) ),
+			'bytes' => is_array( $status ) ? (int) $status['Data_length'] + (int) $status['Index_length'] : 0,
 		);
-	}
-
-	private static function where( array $conditions ): string {
-		return $conditions ? ' WHERE ' . implode( ' AND ', $conditions ) : '';
 	}
 }

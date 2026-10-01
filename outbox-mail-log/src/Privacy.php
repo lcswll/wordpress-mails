@@ -2,10 +2,10 @@
 /**
  * GDPR: personal data exporter / eraser and privacy policy suggestion.
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -26,6 +26,10 @@ final class Privacy {
 		add_action( 'admin_init', array( $this, 'policy_content' ) );
 	}
 
+	/**
+	 * @param array<string,array<string,mixed>> $exporters
+	 * @return array<string,array<string,mixed>>
+	 */
 	public function add_exporter( array $exporters ): array {
 		$exporters['outbox-mail-log'] = array(
 			'exporter_friendly_name' => __( 'Email log', 'outbox-mail-log' ),
@@ -34,6 +38,10 @@ final class Privacy {
 		return $exporters;
 	}
 
+	/**
+	 * @param array<string,array<string,mixed>> $erasers
+	 * @return array<string,array<string,mixed>>
+	 */
 	public function add_eraser( array $erasers ): array {
 		$erasers['outbox-mail-log'] = array(
 			'eraser_friendly_name' => __( 'Email log', 'outbox-mail-log' ),
@@ -42,6 +50,9 @@ final class Privacy {
 		return $erasers;
 	}
 
+	/**
+	 * @return array{data:array<int,array<string,mixed>>,done:bool}
+	 */
 	public function export( string $email, int $page = 1 ): array {
 		// The LIKE pre-filter pages over raw rows, so "done" is based on the raw batch size.
 		$scanned = 0;
@@ -76,18 +87,21 @@ final class Privacy {
 		);
 	}
 
+	/**
+	 * @return array{items_removed:bool,items_retained:bool,messages:string[],done:bool}
+	 */
 	public function erase( string $email, int $page = 1 ): array {
 		// Matches get deleted, so only the non-matching candidates seen so far need to be skipped.
 		$scanned = 0;
-		$offset  = (int) get_transient( 'outbox_erase_offset_' . md5( $email ) );
+		$offset  = (int) get_transient( 'outbox_mail_log_erase_offset_' . md5( $email ) );
 		$rows    = $this->repository->find_by_recipient( $email, self::BATCH, 1 === $page ? 0 : $offset, $scanned );
 		$deleted = $this->repository->delete( array_column( $rows, 'id' ) );
 		$done    = $scanned < self::BATCH;
 
 		if ( $done ) {
-			delete_transient( 'outbox_erase_offset_' . md5( $email ) );
+			delete_transient( 'outbox_mail_log_erase_offset_' . md5( $email ) );
 		} else {
-			set_transient( 'outbox_erase_offset_' . md5( $email ), ( 1 === $page ? 0 : $offset ) + $scanned - $deleted, HOUR_IN_SECONDS );
+			set_transient( 'outbox_mail_log_erase_offset_' . md5( $email ), ( 1 === $page ? 0 : $offset ) + $scanned - $deleted, HOUR_IN_SECONDS );
 		}
 
 		return array(

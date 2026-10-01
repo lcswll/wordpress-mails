@@ -5,16 +5,16 @@
  * The log itself is rendered client-side from the REST API; mail data is only
  * ever inserted into the DOM via textContent or a sandboxed iframe.
  *
- * @package Outbox
+ * @package OutboxMailLog
  */
 
-namespace Outbox;
+namespace OutboxMailLog;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Admin {
 
-	const SLUG = 'outbox';
+	const SLUG = 'outbox-mail-log';
 
 	/** @var Repository */
 	private $repository;
@@ -44,6 +44,9 @@ final class Admin {
 		}
 	}
 
+	/**
+	 * @param array<string,string> $args Extra query args.
+	 */
 	public static function url( array $args = array() ): string {
 		$base = 'tools' === Settings::get( 'menu_location' ) ? 'tools.php' : 'admin.php';
 		return add_query_arg( array_merge( array( 'page' => self::SLUG ), $args ), admin_url( $base ) );
@@ -51,7 +54,7 @@ final class Admin {
 
 	public function register_settings(): void {
 		register_setting(
-			'outbox',
+			'outbox_mail_log',
 			Settings::OPTION,
 			array(
 				'type'              => 'array',
@@ -62,6 +65,10 @@ final class Admin {
 		);
 	}
 
+	/**
+	 * @param array<int|string,string> $links
+	 * @return array<int|string,string>
+	 */
 	public function action_links( array $links ): array {
 		array_unshift(
 			$links,
@@ -77,14 +84,14 @@ final class Admin {
 		}
 
 		$base = plugin_dir_url( FILE ) . 'assets/';
-		wp_enqueue_style( 'outbox-admin', $base . 'admin.css', array(), VERSION );
+		wp_enqueue_style( 'outbox-mail-log-admin', $base . 'admin.css', array(), VERSION );
 
 		if ( 'settings' === $this->current_tab() ) {
 			return;
 		}
 
 		wp_enqueue_script(
-			'outbox-admin',
+			'outbox-mail-log-admin',
 			$base . 'admin.js',
 			array(),
 			VERSION,
@@ -100,46 +107,53 @@ final class Admin {
 			'remoteImages' => (bool) Settings::get( 'remote_images' ),
 			'canPurge'     => current_user_can( 'manage_options' ),
 			'i18n'         => array(
-				'sent'           => __( 'Sent', 'outbox-mail-log' ),
-				'failed'         => __( 'Failed', 'outbox-mail-log' ),
-				'pending'        => __( 'Unknown', 'outbox-mail-log' ),
-				'empty'          => __( 'No emails found.', 'outbox-mail-log' ),
-				'emptyFiltered'  => __( 'No emails match these filters.', 'outbox-mail-log' ),
-				'entries'        => __( '%s entries', 'outbox-mail-log' ),
-				'selected'       => __( '%s selected', 'outbox-mail-log' ),
-				'noSubject'      => __( '(no subject)', 'outbox-mail-log' ),
-				'core'           => __( 'WordPress', 'outbox-mail-log' ),
-				'resent'         => __( 'Resent from log', 'outbox-mail-log' ),
-				'view'           => __( 'View', 'outbox-mail-log' ),
-				'resend'         => __( 'Resend', 'outbox-mail-log' ),
-				'delete'         => __( 'Delete', 'outbox-mail-log' ),
-				'confirmDelete'  => __( 'Delete this log entry?', 'outbox-mail-log' ),
-				'confirmBulk'    => __( 'Delete %s selected log entries?', 'outbox-mail-log' ),
-				'purge'          => __( 'Empty log', 'outbox-mail-log' ),
-				'confirmPurge'   => __( 'Delete ALL log entries? This cannot be undone.', 'outbox-mail-log' ),
-				'confirmResend'  => __( 'Send this email again to %s?', 'outbox-mail-log' ),
-				'resendOk'       => __( 'Email sent again.', 'outbox-mail-log' ),
-				'resendFail'     => __( 'Sending failed – see the new log entry for details.', 'outbox-mail-log' ),
-				'missingFiles'   => __( 'Attachments no longer available: %s', 'outbox-mail-log' ),
-				'deleted'        => __( 'Deleted.', 'outbox-mail-log' ),
-				'requestFailed'  => __( 'Request failed: %s', 'outbox-mail-log' ),
-				'attachments'    => __( 'Attachments', 'outbox-mail-log' ),
-				'from'           => __( 'From', 'outbox-mail-log' ),
-				'to'             => __( 'To', 'outbox-mail-log' ),
-				'date'           => __( 'Date', 'outbox-mail-log' ),
-				'status'         => __( 'Status', 'outbox-mail-log' ),
-				'source'         => __( 'Source', 'outbox-mail-log' ),
-				'contentType'    => __( 'Format', 'outbox-mail-log' ),
-				'error'          => __( 'Error', 'outbox-mail-log' ),
-				'remoteBlocked'  => __( 'Remote images and fonts are blocked so senders cannot track when you open this entry.', 'outbox-mail-log' ),
-				'remoteLoaded'   => __( 'Remote content is loaded.', 'outbox-mail-log' ),
-				'loadRemote'     => __( 'Load remote content', 'outbox-mail-log' ),
-				'blockRemote'    => __( 'Block again', 'outbox-mail-log' ),
-				'pageOf'         => __( 'of %s', 'outbox-mail-log' ),
+				'sent'          => __( 'Sent', 'outbox-mail-log' ),
+				'failed'        => __( 'Failed', 'outbox-mail-log' ),
+				'pending'       => __( 'Unknown', 'outbox-mail-log' ),
+				'empty'         => __( 'No emails found.', 'outbox-mail-log' ),
+				'emptyFiltered' => __( 'No emails match these filters.', 'outbox-mail-log' ),
+				/* translators: %s: number of log entries */
+				'entries'       => __( '%s entries', 'outbox-mail-log' ),
+				/* translators: %s: number of selected entries */
+				'selected'      => __( '%s selected', 'outbox-mail-log' ),
+				'noSubject'     => __( '(no subject)', 'outbox-mail-log' ),
+				'core'          => __( 'WordPress', 'outbox-mail-log' ),
+				'resent'        => __( 'Resent from log', 'outbox-mail-log' ),
+				'view'          => __( 'View', 'outbox-mail-log' ),
+				'resend'        => __( 'Resend', 'outbox-mail-log' ),
+				'delete'        => __( 'Delete', 'outbox-mail-log' ),
+				'confirmDelete' => __( 'Delete this log entry?', 'outbox-mail-log' ),
+				/* translators: %s: number of selected entries */
+				'confirmBulk'   => __( 'Delete %s selected log entries?', 'outbox-mail-log' ),
+				'purge'         => __( 'Empty log', 'outbox-mail-log' ),
+				'confirmPurge'  => __( 'Delete ALL log entries? This cannot be undone.', 'outbox-mail-log' ),
+				/* translators: %s: recipient email address(es) */
+				'confirmResend' => __( 'Send this email again to %s?', 'outbox-mail-log' ),
+				'resendOk'      => __( 'Email sent again.', 'outbox-mail-log' ),
+				'resendFail'    => __( 'Sending failed – see the new log entry for details.', 'outbox-mail-log' ),
+				/* translators: %s: comma-separated attachment file names */
+				'missingFiles'  => __( 'Attachments no longer available: %s', 'outbox-mail-log' ),
+				'deleted'       => __( 'Deleted.', 'outbox-mail-log' ),
+				/* translators: %s: error message */
+				'requestFailed' => __( 'Request failed: %s', 'outbox-mail-log' ),
+				'attachments'   => __( 'Attachments', 'outbox-mail-log' ),
+				'from'          => __( 'From', 'outbox-mail-log' ),
+				'to'            => __( 'To', 'outbox-mail-log' ),
+				'date'          => __( 'Date', 'outbox-mail-log' ),
+				'status'        => __( 'Status', 'outbox-mail-log' ),
+				'source'        => __( 'Source', 'outbox-mail-log' ),
+				'contentType'   => __( 'Format', 'outbox-mail-log' ),
+				'error'         => __( 'Error', 'outbox-mail-log' ),
+				'remoteBlocked' => __( 'Remote images and fonts are blocked so senders cannot track when you open this entry.', 'outbox-mail-log' ),
+				'remoteLoaded'  => __( 'Remote content is loaded.', 'outbox-mail-log' ),
+				'loadRemote'    => __( 'Load remote content', 'outbox-mail-log' ),
+				'blockRemote'   => __( 'Block again', 'outbox-mail-log' ),
+				/* translators: %s: total number of pages */
+				'pageOf'        => __( 'of %s', 'outbox-mail-log' ),
 			),
 		);
 
-		wp_add_inline_script( 'outbox-admin', 'window.outboxConfig = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'outbox-mail-log-admin', 'window.outboxMailLogConfig = ' . wp_json_encode( $config ) . ';', 'before' );
 	}
 
 	private function current_tab(): string {
@@ -310,7 +324,7 @@ final class Admin {
 		settings_errors();
 		?>
 		<form method="post" action="options.php" class="outbox-settings">
-			<?php settings_fields( 'outbox' ); ?>
+			<?php settings_fields( 'outbox_mail_log' ); ?>
 
 			<h2><?php esc_html_e( 'Access', 'outbox-mail-log' ); ?></h2>
 			<table class="form-table" role="presentation">

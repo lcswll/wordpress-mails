@@ -1,0 +1,4 @@
+#!/bin/sh
+# Fast local checks before every push (static analysis, unit tests, readiness, ZIP). Enable once with:
+#   git config core.hooksPath .githooks
+exec node scripts/verify.mjs --fast
