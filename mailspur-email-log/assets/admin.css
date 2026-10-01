@@ -729,3 +729,23 @@
 		transition: none;
 	}
 }
+
+/* ---------------------------------------------------------------- import */
+
+.mailspur .mailspur-import {
+	max-width: 900px;
+	margin-top: 12px;
+}
+
+.mailspur .mailspur-import td {
+	vertical-align: middle;
+}
+
+.mailspur-import-actions {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.mailspur-import-actions .button-link {
+	margin-left: 12px;
+}

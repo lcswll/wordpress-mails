@@ -62,6 +62,24 @@ wp_mail(
 wp_mail( 'subscribers@example.com', 'Your weekly newsletter', 'This week: new coaching slots.' );
 wp_mail( 'x@example.com', '<img src=x onerror=alert(1)>XSS subject', '<b>plain?</b>' );
 
+// An old WP Mail Logging table in its own format (literal ",\n" lists, site-local time) for the import UI.
+global $wpdb;
+$wpdb->query( "CREATE TABLE {$wpdb->prefix}wpml_mails (mail_id INTEGER PRIMARY KEY AUTO_INCREMENT, timestamp DATETIME NOT NULL, host VARCHAR(200) NOT NULL DEFAULT '0', receiver VARCHAR(200) NOT NULL DEFAULT '0', subject VARCHAR(200) NOT NULL DEFAULT '0', message TEXT NULL, headers TEXT NULL, attachments VARCHAR(800) NOT NULL DEFAULT '0', error VARCHAR(400) NULL DEFAULT '', plugin_version VARCHAR(200) NOT NULL DEFAULT '0')" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+foreach ( array( 'Old welcome mail', 'Old invoice', 'Old newsletter' ) as $i => $subject ) {
+	$wpdb->insert( // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		$wpdb->prefix . 'wpml_mails',
+		array(
+			'timestamp'   => gmdate( 'Y-m-d H:i:s', time() - ( 3 + $i ) * DAY_IN_SECONDS ),
+			'receiver'    => 'legacy' . $i . '@example.com',
+			'subject'     => $subject,
+			'message'     => '<p>From the old log</p>',
+			'headers'     => 'From: Shop <shop@example.com>,\nContent-Type: text/html; charset=UTF-8',
+			'attachments' => '',
+			'error'       => 2 === $i ? 'SMTP Error: Could not authenticate.' : '',
+		)
+	);
+}
+
 // Tell tests/e2e/wait-for-wordpress.js that the blueprint has finished.
 if ( is_dir( '/e2e-out' ) ) {
 	file_put_contents( '/e2e-out/seeded', gmdate( 'c' ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents

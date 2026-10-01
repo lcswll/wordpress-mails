@@ -20,7 +20,7 @@ namespace Mailspur;
 defined( 'ABSPATH' ) || exit;
 
 const VERSION    = '1.0.0';
-const DB_VERSION = 1;
+const DB_VERSION = 2; // 2: status/created_at and source indexes (date sorting, import undo).
 const FILE       = __FILE__;
 
 spl_autoload_register(

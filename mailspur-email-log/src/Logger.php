@@ -110,7 +110,7 @@ final class Logger {
 
 		$body = (string) $mailer->Body; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
 		if ( md5( $body ) !== $this->stack[ $key ]['hash'] ) {
-			$data['message'] = $this->redact( $body );
+			$data['message'] = Redactor::redact( $body );
 		}
 
 		$this->stack[ $key ]['data'] = $data;
@@ -180,7 +180,7 @@ final class Logger {
 			'status'       => Repository::STATUS_PENDING,
 			'recipients'   => implode( ', ', $to ),
 			'subject'      => (string) ( $atts['subject'] ?? '' ),
-			'message'      => $this->redact( $message ),
+			'message'      => Redactor::redact( $message ),
 			'headers'      => implode( "\n", $headers ),
 			'attachments'  => $attachments ? (string) wp_json_encode( $attachments ) : '',
 			'content_type' => $content_type,
@@ -208,20 +208,6 @@ final class Logger {
 			}
 		);
 		return $keep_keys ? $value : array_values( $value );
-	}
-
-	/**
-	 * Masks one-time secrets (password reset / activation keys, order keys) so
-	 * the log cannot be used to take over accounts.
-	 */
-	private function redact( string $text ): string {
-		if ( ! Settings::get( 'redact_secrets' ) || '' === $text ) {
-			return $text;
-		}
-		$params = (array) apply_filters( 'mailspur_redact_params', array( 'key', 'token', 'reset_key', 'activation_key', 'login_token', 'password', 'pass', 'pwd' ) );
-		$params = implode( '|', array_map( 'preg_quote', $params ) );
-		$result = preg_replace( '/([?&](?:amp;)?(?:' . $params . ')=)[^&\s"\'<>]+/i', '$1[redacted]', $text );
-		return null === $result ? $text : $result;
 	}
 
 	/** Which plugin / theme triggered the mail, e.g. "plugin:woocommerce". */

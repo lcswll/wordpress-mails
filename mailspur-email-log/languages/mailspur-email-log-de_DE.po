@@ -8,8 +8,17 @@ msgstr ""
 msgid "%1$s entries, %2$s"
 msgstr "%1$s Einträge, %2$s"
 
+msgid "%1$s imported, %2$s skipped"
+msgstr "%1$s importiert, %2$s übersprungen"
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "%1$s von %2$s Einträgen verarbeitet …"
+
 msgid "%s entries"
 msgstr "%s Einträge"
+
+msgid "%s imported entries removed."
+msgstr "%s importierte Einträge entfernt."
 
 msgid "%s selected"
 msgstr "%s ausgewählt"
@@ -59,6 +68,9 @@ msgstr "Schließen"
 msgid "Close (Esc)"
 msgstr "Schließen (Esc)"
 
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Übernimmt das vorhandene Protokoll eines anderen Mail-Log-Plugins in Mailspur, damit alte E-Mails hier durchsucht und angesehen werden können. Das andere Plugin und seine Daten bleiben unverändert; ein erneuter Import übernimmt nur neue Einträge."
+
 msgid "Current page"
 msgstr "Aktuelle Seite"
 
@@ -92,6 +104,9 @@ msgstr "Diesen Protokolleintrag löschen?"
 msgid "Deleted."
 msgstr "Gelöscht."
 
+msgid "Done: %1$s imported, %2$s skipped."
+msgstr "Fertig: %1$s importiert, %2$s übersprungen."
+
 msgid "Editors and above"
 msgstr "Redakteure und höher"
 
@@ -103,6 +118,12 @@ msgstr "E-Mail wurde erneut gesendet."
 
 msgid "Empty log"
 msgstr "Protokoll leeren"
+
+msgid "Entries"
+msgstr "Einträge"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Einträge, die älter als %s Tage sind, werden übersprungen, weil die Aufbewahrungseinstellung sie ohnehin löschen würde. Passe die Aufbewahrung oben zuerst an, um alles zu importieren."
 
 msgid "Error"
 msgstr "Fehler"
@@ -127,6 +148,24 @@ msgstr "Von Datum"
 
 msgid "Headers"
 msgstr "Header"
+
+msgid "Import"
+msgstr "Importieren"
+
+msgid "Import failed: %s"
+msgstr "Import fehlgeschlagen: %s"
+
+msgid "Import from other plugins"
+msgstr "Aus anderen Plugins importieren"
+
+msgid "Import new entries"
+msgstr "Neue Einträge importieren"
+
+msgid "Imported"
+msgstr "Importiert"
+
+msgid "Imported from %s"
+msgstr "Importiert aus %s"
 
 msgid "Keep at most"
 msgstr "Höchstens behalten"
@@ -176,6 +215,12 @@ msgstr "Noch keine E-Mails protokolliert."
 msgid "No emails match these filters."
 msgstr "Keine E-Mails passen zu diesen Filtern."
 
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Auf dieser Website wurde kein Protokoll eines anderen Mail-Log-Plugins gefunden."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Auf dieser Website wurde kein Protokoll dieses Plugins gefunden."
+
 msgid "Only administrators can empty the log."
 msgstr "Nur Administratoren können das Protokoll leeren."
 
@@ -187,6 +232,9 @@ msgstr "Seitennavigation"
 
 msgid "Per page"
 msgstr "Pro Seite"
+
+msgid "Plugin"
+msgstr "Plugin"
 
 msgid "Preview"
 msgstr "Vorschau"
@@ -220,6 +268,12 @@ msgstr "Externe Inhalte werden geladen."
 
 msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
 msgstr "Externe Bilder und Schriften sind blockiert, damit niemand verfolgen kann, wann du diesen Eintrag öffnest."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Alle aus %s importierten Einträge entfernen? Die Daten im anderen Plugin bleiben unberührt."
+
+msgid "Remove imported entries"
+msgstr "Importierte Einträge entfernen"
 
 msgid "Request failed: %s"
 msgstr "Anfrage fehlgeschlagen: %s"
@@ -272,8 +326,14 @@ msgstr "Status"
 msgid "Subject"
 msgstr "Betreff"
 
+msgid "Supported: %s."
+msgstr "Unterstützt: %s."
+
 msgid "The mail log requires JavaScript."
 msgstr "Das Mail-Log benötigt JavaScript."
+
+msgid "This import is already running in another tab."
+msgstr "Dieser Import läuft bereits in einem anderen Tab."
 
 msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
 msgstr "Diese Website protokolliert die von ihr versendeten E-Mails (Empfänger, Betreff, Inhalt und Zustellstatus), um die Zustellung zu prüfen und Fehler zu beheben. Protokolleinträge werden nach der eingestellten Aufbewahrungsdauer automatisch gelöscht."

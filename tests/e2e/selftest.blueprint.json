@@ -13,8 +13,26 @@
 			}
 		},
 		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "wp-mail-logging"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "email-log"
+			}
+		},
+		{
 			"step": "runPHP",
 			"code": "<?php require '/e2e/plugin-check.php';"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/e2e/import-test.php';"
 		},
 		{
 			"step": "runPHP",

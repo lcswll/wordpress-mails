@@ -55,7 +55,7 @@ try {
 	// ---------------------------------------------------------------- activation.
 	check( is_plugin_active( 'mailspur-email-log/mailspur-email-log.php' ), 'plugin is active' );
 	check( null !== $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) ), 'log table exists', $wpdb->last_error );
-	check( 1 === (int) get_option( 'mailspur_db_version' ), 'schema version stored' );
+	check( \Mailspur\DB_VERSION === (int) get_option( 'mailspur_db_version' ), 'schema version stored' );
 	check( (bool) wp_next_scheduled( 'mailspur_cleanup' ), 'daily cleanup scheduled' );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i', $table ) ); // Start from a known state.
 

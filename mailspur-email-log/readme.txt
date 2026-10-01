@@ -45,6 +45,10 @@ Most email logs treat the log as a simple archive. Mailspur treats it as sensiti
 * Password-reset, activation and access keys in links are masked before they are stored, so the log cannot be used to take over accounts.
 * Only administrators see the log by default. You can grant access to editors or shop managers.
 
+= Bring your old log along =
+
+Switching from another plugin? Mailspur imports existing logs of WP Mail Logging, Email Log, Check & Log Email, FluentSMTP, Post SMTP, SureMail, WP Mail Catcher and WP Mail Log (Settings → Import from other plugins). The import runs in batches, can be resumed and repeated without duplicates, converts time zones correctly and masks secrets in old emails as well. The other plugin's data is only read, never changed.
+
 = Fast and lightweight =
 
 * Its own indexed database table; the list never loads email bodies.
@@ -88,6 +92,10 @@ Not with the default settings. Secret keys in links (`key=`, `token=` and simila
 = Why are images missing in the preview? =
 
 Remote images and fonts are blocked on purpose: otherwise every preview would tell the sender's tracking service that the email was opened. Click "Load remote content" above the preview, or enable "Always load remote images" in the settings.
+
+= Can I keep my history when switching from WP Mail Logging or another log plugin? =
+
+Yes. Under Mail Log → Settings → "Import from other plugins" Mailspur lists every supported log it finds on the site (also from deactivated plugins) and imports it with one click. You can run it again later to pick up new entries, or remove everything imported from one plugin. Entries older than your retention period are skipped, so raise the retention first if you want the complete history.
 
 = Are attachments stored? =
 

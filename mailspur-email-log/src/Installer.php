@@ -61,7 +61,8 @@ source varchar(100) NOT NULL DEFAULT '',
 error text NOT NULL,
 PRIMARY KEY  (id),
 KEY created_at (created_at),
-KEY status (status)
+KEY status_created (status,created_at),
+KEY source (source)
 ) {$charset};"
 		);
 

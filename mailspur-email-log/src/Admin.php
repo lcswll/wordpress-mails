@@ -87,6 +87,7 @@ final class Admin {
 		wp_enqueue_style( 'mailspur-email-log-admin', $base . 'admin.css', array(), VERSION );
 
 		if ( 'settings' === $this->current_tab() ) {
+			$this->import_assets( $base );
 			return;
 		}
 
@@ -106,6 +107,12 @@ final class Admin {
 			'nonce'        => wp_create_nonce( 'wp_rest' ),
 			'remoteImages' => (bool) Settings::get( 'remote_images' ),
 			'canPurge'     => current_user_can( 'manage_options' ),
+			'importLabels' => array_map(
+				static function ( Import\Source $source ): string {
+					return $source->label();
+				},
+				Import\Importer::sources()
+			),
 			'i18n'         => array(
 				'sent'          => __( 'Sent', 'mailspur-email-log' ),
 				'failed'        => __( 'Failed', 'mailspur-email-log' ),
@@ -119,6 +126,8 @@ final class Admin {
 				'noSubject'     => __( '(no subject)', 'mailspur-email-log' ),
 				'core'          => __( 'WordPress', 'mailspur-email-log' ),
 				'resent'        => __( 'Resent from log', 'mailspur-email-log' ),
+				/* translators: %s: name of another plugin, e.g. "WP Mail Logging" */
+				'imported'      => __( 'Imported from %s', 'mailspur-email-log' ),
 				'view'          => __( 'View', 'mailspur-email-log' ),
 				'resend'        => __( 'Resend', 'mailspur-email-log' ),
 				'delete'        => __( 'Delete', 'mailspur-email-log' ),
@@ -419,6 +428,115 @@ final class Admin {
 
 			<?php submit_button(); ?>
 		</form>
+		<?php
+		$this->render_import();
+	}
+
+	private function import_assets( string $base ): void {
+		wp_enqueue_script(
+			'mailspur-import',
+			$base . 'import.js',
+			array(),
+			VERSION,
+			array(
+				'in_footer' => true,
+				'strategy'  => 'defer',
+			)
+		);
+		$config = array(
+			'restUrl' => esc_url_raw( rest_url( Rest::NS ) ),
+			'nonce'   => wp_create_nonce( 'wp_rest' ),
+			'i18n'    => array(
+				/* translators: 1: entries imported so far, 2: entries in total */
+				'progress'    => __( '%1$s of %2$s entries processed …', 'mailspur-email-log' ),
+				/* translators: 1: number of imported entries, 2: number of skipped entries */
+				'done'        => __( 'Done: %1$s imported, %2$s skipped.', 'mailspur-email-log' ),
+				/* translators: %s: name of another plugin */
+				'confirmUndo' => __( 'Remove all entries imported from %s? The data in the other plugin is not affected.', 'mailspur-email-log' ),
+				/* translators: %s: number of removed entries */
+				'undone'      => __( '%s imported entries removed.', 'mailspur-email-log' ),
+				/* translators: %s: error message */
+				'failed'      => __( 'Import failed: %s', 'mailspur-email-log' ),
+			),
+		);
+		wp_add_inline_script( 'mailspur-import', 'window.mailspurImportConfig = ' . wp_json_encode( $config ) . ';', 'before' );
+	}
+
+	private function render_import(): void {
+		$sources = ( new Import\Importer( $this->repository ) )->overview();
+		$cutoff  = Import\Importer::retention_cutoff();
+		$names   = array_map(
+			static function ( Import\Source $source ): string {
+				return $source->label();
+			},
+			array_values( Import\Importer::sources() )
+		);
+		?>
+		<h2 id="mailspur-import"><?php esc_html_e( 'Import from other plugins', 'mailspur-email-log' ); ?></h2>
+		<p class="description">
+			<?php esc_html_e( 'Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries.', 'mailspur-email-log' ); ?>
+		</p>
+		<?php if ( $cutoff ) : ?>
+			<p class="description">
+				<?php
+				printf(
+					/* translators: %s: number of days */
+					esc_html__( 'Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything.', 'mailspur-email-log' ),
+					esc_html( number_format_i18n( (int) Settings::get( 'retention_days' ) ) )
+				);
+				?>
+			</p>
+		<?php endif; ?>
+
+		<?php if ( ! $sources ) : ?>
+			<p><em><?php esc_html_e( 'No log of another mail logging plugin was found on this site.', 'mailspur-email-log' ); ?></em></p>
+		<?php else : ?>
+			<table class="widefat striped mailspur-import" role="presentation">
+				<thead>
+					<tr>
+						<th scope="col"><?php esc_html_e( 'Plugin', 'mailspur-email-log' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Entries', 'mailspur-email-log' ); ?></th>
+						<th scope="col"><?php esc_html_e( 'Imported', 'mailspur-email-log' ); ?></th>
+						<th scope="col"><span class="screen-reader-text"><?php esc_html_e( 'Actions', 'mailspur-email-log' ); ?></span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ( $sources as $source ) : ?>
+						<tr data-source="<?php echo esc_attr( $source['id'] ); ?>" data-label="<?php echo esc_attr( $source['label'] ); ?>" data-total="<?php echo esc_attr( (string) $source['total'] ); ?>" data-remaining="<?php echo esc_attr( (string) $source['remaining'] ); ?>">
+							<td><strong><?php echo esc_html( $source['label'] ); ?></strong></td>
+							<td><?php echo esc_html( number_format_i18n( $source['total'] ) ); ?></td>
+							<td class="mailspur-import-status" aria-live="polite">
+								<?php
+								printf(
+									/* translators: 1: imported entries, 2: skipped entries */
+									esc_html__( '%1$s imported, %2$s skipped', 'mailspur-email-log' ),
+									esc_html( number_format_i18n( $source['imported'] ) ),
+									esc_html( number_format_i18n( $source['skipped'] ) )
+								);
+								?>
+							</td>
+							<td class="mailspur-import-actions">
+								<button type="button" class="button button-primary" data-import-action="run" <?php disabled( 0 === $source['remaining'] ); ?>>
+									<?php 0 === $source['imported'] ? esc_html_e( 'Import', 'mailspur-email-log' ) : esc_html_e( 'Import new entries', 'mailspur-email-log' ); ?>
+								</button>
+								<?php if ( $source['imported'] > 0 ) : ?>
+									<button type="button" class="button-link mailspur-purge" data-import-action="undo"><?php esc_html_e( 'Remove imported entries', 'mailspur-email-log' ); ?></button>
+								<?php endif; ?>
+							</td>
+						</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		<?php endif; ?>
+		<p class="description">
+			<?php
+			printf(
+				/* translators: %s: comma-separated list of plugin names */
+				esc_html__( 'Supported: %s.', 'mailspur-email-log' ),
+				esc_html( implode( ', ', $names ) )
+			);
+			?>
+		</p>
 		<?php
 	}
 }

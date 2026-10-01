@@ -29,7 +29,7 @@ final class Repository {
 	);
 
 	const ORDER_COLUMNS = array(
-		'date'    => 'id', // Auto-increment id follows insertion time and uses the primary key.
+		'date'    => 'created_at', // Not the id: imported entries are old but get new ids.
 		'to'      => 'recipients',
 		'subject' => 'subject',
 	);
@@ -135,7 +135,7 @@ final class Repository {
 		}
 
 		$per_page = max( 1, (int) ( $args['per_page'] ?? 25 ) );
-		$column   = self::ORDER_COLUMNS[ $args['orderby'] ?? 'date' ] ?? 'id';
+		$column   = self::ORDER_COLUMNS[ $args['orderby'] ?? 'date' ] ?? 'created_at';
 		$order    = 'asc' === ( $args['order'] ?? 'desc' ) ? 'ASC' : 'DESC';
 		$params[] = $column;
 		$params[] = $per_page;
@@ -172,32 +172,100 @@ final class Repository {
 		$wpdb->query( $wpdb->prepare( 'TRUNCATE TABLE %i', self::table() ) );
 	}
 
-	/** Deletes every entry created before the given GMT datetime. */
+	/**
+	 * Deletes every entry created before the given GMT datetime.
+	 *
+	 * By date, not by id: imported entries are old but get new ids.
+	 */
 	public function delete_before( string $gmt_datetime ): int {
 		global $wpdb;
-		$max_id = (int) $wpdb->get_var(
-			$wpdb->prepare( 'SELECT id FROM %i WHERE created_at < %s ORDER BY id DESC LIMIT 1', self::table(), $gmt_datetime )
+		return $this->delete_in_batches(
+			static function ( int $batch ) use ( $wpdb, $gmt_datetime ): int {
+				return (int) $wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE created_at < %s LIMIT %d', self::table(), $gmt_datetime, $batch ) );
+			}
 		);
-		return $max_id ? $this->delete_up_to( $max_id ) : 0;
 	}
 
-	/** Keeps only the newest $keep entries. */
+	/** Keeps only the newest $keep entries (by send date). */
 	public function trim_to( int $keep ): int {
 		global $wpdb;
-		$max_id = (int) $wpdb->get_var(
-			$wpdb->prepare( 'SELECT id FROM %i ORDER BY id DESC LIMIT 1 OFFSET %d', self::table(), $keep )
+		$edge = $wpdb->get_row(
+			$wpdb->prepare( 'SELECT created_at, id FROM %i ORDER BY created_at DESC, id DESC LIMIT 1 OFFSET %d', self::table(), $keep ),
+			ARRAY_A
 		);
-		return $max_id ? $this->delete_up_to( $max_id ) : 0;
+		if ( ! is_array( $edge ) ) {
+			return 0;
+		}
+		return $this->delete_in_batches(
+			static function ( int $batch ) use ( $wpdb, $edge ): int {
+				return (int) $wpdb->query(
+					$wpdb->prepare(
+						'DELETE FROM %i WHERE created_at < %s OR ( created_at = %s AND id <= %d ) LIMIT %d',
+						self::table(),
+						$edge['created_at'],
+						$edge['created_at'],
+						(int) $edge['id'],
+						$batch
+					)
+				);
+			}
+		);
 	}
 
-	/** Deletes in primary-key batches to keep locks and binlog events small. */
-	private function delete_up_to( int $max_id, int $batch = 5000 ): int {
+	/** Deletes all entries imported from one source plugin (undo an import). */
+	public function delete_by_source( string $source ): int {
 		global $wpdb;
+		return $this->delete_in_batches(
+			static function ( int $batch ) use ( $wpdb, $source ): int {
+				return (int) $wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source = %s LIMIT %d', self::table(), $source, $batch ) );
+			}
+		);
+	}
+
+	/**
+	 * Inserts many rows with one multi-row INSERT per call (used by the importer).
+	 *
+	 * @param array<int,array<string,string|int>> $rows Rows in the format of Logger::normalize().
+	 */
+	public function insert_many( array $rows ): int {
+		global $wpdb;
+		if ( ! $rows ) {
+			return 0;
+		}
+		$columns = array(
+			'created_at'   => '%s',
+			'status'       => '%d',
+			'recipients'   => '%s',
+			'subject'      => '%s',
+			'message'      => '%s',
+			'headers'      => '%s',
+			'attachments'  => '%s',
+			'content_type' => '%s',
+			'sender'       => '%s',
+			'source'       => '%s',
+			'error'        => '%s',
+		);
+		$tuple   = '(' . implode( ',', $columns ) . ')';
+		$values  = array( self::table() );
+		foreach ( $rows as $row ) {
+			foreach ( array_keys( $columns ) as $column ) {
+				$values[] = $row[ $column ] ?? '';
+			}
+		}
+		$sql = 'INSERT INTO %i (' . implode( ',', array_keys( $columns ) ) . ') VALUES ' . implode( ',', array_fill( 0, count( $rows ), $tuple ) );
+		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literal column names and placeholders.
+		return (int) $wpdb->query( $wpdb->prepare( $sql, $values ) );
+	}
+
+	/**
+	 * Runs a LIMITed DELETE until nothing is left, keeping locks and binlog events small.
+	 *
+	 * @param callable(int):int $delete Deletes at most $batch rows, returns the number deleted.
+	 */
+	private function delete_in_batches( callable $delete, int $batch = 5000 ): int {
 		$deleted = 0;
 		do {
-			$n        = (int) $wpdb->query(
-				$wpdb->prepare( 'DELETE FROM %i WHERE id <= %d ORDER BY id LIMIT %d', self::table(), $max_id, $batch )
-			);
+			$n        = $delete( $batch );
 			$deleted += $n;
 		} while ( $n === $batch );
 		return $deleted;

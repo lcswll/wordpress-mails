@@ -32,6 +32,7 @@ final class Plugin {
 			'rest_api_init',
 			static function () use ( $repository ): void {
 				( new Rest( $repository ) )->register_routes();
+				( new Import\Controller( new Import\Importer( $repository ) ) )->register_routes();
 			}
 		);
 

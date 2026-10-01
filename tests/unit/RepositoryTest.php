@@ -78,7 +78,7 @@ final class RepositoryTest extends TestCase {
 		$this->assertStringContainsString( 'message LIKE %s', $this->wpdb->prepared[3]['sql'] );
 	}
 
-	public function test_unknown_order_column_falls_back_to_id(): void {
+	public function test_unknown_order_column_falls_back_to_send_date(): void {
 		$this->query(
 			array(
 				'orderby' => 'id; DROP TABLE wp_users',
@@ -88,7 +88,7 @@ final class RepositoryTest extends TestCase {
 
 		$prepared = $this->wpdb->prepared[1];
 		$this->assertStringContainsString( 'ORDER BY %i ASC, id ASC LIMIT %d OFFSET %d', $prepared['sql'] );
-		$this->assertContains( 'id', $prepared['args'] );
+		$this->assertContains( 'created_at', $prepared['args'] );
 		$this->assertNotContains( 'id; DROP TABLE wp_users', $prepared['args'] );
 	}
 
@@ -103,7 +103,7 @@ final class RepositoryTest extends TestCase {
 
 		$this->assertSame( 1, $result['total'] );
 		$args = $this->wpdb->prepared[1]['args'];
-		$this->assertSame( array( 'wp_mailspur', 2, 'id', 10, 20 ), $args );
+		$this->assertSame( array( 'wp_mailspur', 2, 'created_at', 10, 20 ), $args );
 	}
 
 	public function test_empty_result_skips_the_item_query(): void {

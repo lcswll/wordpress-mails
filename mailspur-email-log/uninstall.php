@@ -20,6 +20,7 @@ $mailspur_uninstall = static function (): void {
 	$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}mailspur" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 	delete_option( 'mailspur_settings' );
 	delete_option( 'mailspur_db_version' );
+	delete_option( 'mailspur_import' );
 };
 
 if ( is_multisite() ) {

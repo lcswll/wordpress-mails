@@ -6,8 +6,9 @@
  *   npm run test:e2e -- --php 7.4 --wp 6.5    # oldest supported combination
  *   npm run test:e2e -- --no-ui               # without the Playwright browser tests
  *
- * 1. tests/e2e/selftest.blueprint.json activates the plugin, installs the official Plugin Check plugin and runs
- *    tests/e2e/plugin-check.php (static Plugin Check checks) and tests/e2e/selftest.php (integration assertions).
+ * 1. tests/e2e/selftest.blueprint.json activates the plugin, installs the official Plugin Check plugin plus
+ *    WP Mail Logging and Email Log, and runs tests/e2e/plugin-check.php (static Plugin Check checks),
+ *    tests/e2e/import-test.php (import from other plugins) and tests/e2e/selftest.php (integration assertions).
  *    Results land in .cache/e2e-out/*.json.
  * 2. Playwright (playwright.config.js) starts a Playground server with seeded mails and tests the admin screen.
  */
@@ -76,6 +77,20 @@ if (!selftest) {
 		console.log(`  ${r.ok ? '✓' : '✗'} ${r.name}${r.ok ? '' : `\n      ${JSON.stringify(r.detail)}`}`);
 	}
 	failed ||= selftest.failed > 0 || run.code !== 0;
+}
+
+const imports = read('import.json');
+if (!imports) {
+	failed = true;
+	console.error('No import report.');
+} else {
+	console.log(`
+Import from other plugins: ${imports.passed} passed, ${imports.failed} failed`);
+	for (const r of imports.results) {
+		console.log(`  ${r.ok ? '✓' : '✗'} ${r.name}${r.ok ? '' : `
+      ${JSON.stringify(r.detail)}`}`);
+	}
+	failed ||= imports.failed > 0;
 }
 
 const pcp = read('plugin-check.json');

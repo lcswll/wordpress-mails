@@ -245,6 +245,10 @@
 		if ( 'mailspur:resend' === source ) {
 			return t.resent;
 		}
+		if ( 0 === source.indexOf( 'import:' ) ) {
+			const id = source.slice( 7 );
+			return fmt( t.imported, ( cfg.importLabels && cfg.importLabels[ id ] ) || id );
+		}
 		const i = source.indexOf( ':' );
 		return i > -1 ? source.slice( i + 1 ) : source;
 	}

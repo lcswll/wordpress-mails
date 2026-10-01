@@ -190,6 +190,31 @@ test('settings are saved and validated', async ({ page }) => {
 	await expect(page.locator('input[name="mailspur_settings[remote_images]"]')).toBeChecked();
 });
 
+test('import from WP Mail Logging', async ({ page }) => {
+	const seen = watch(page); // Also confirms the undo prompt.
+	await page.goto(`${LOG}&tab=settings`);
+	const row = page.locator('.mailspur-import tr[data-source="wp-mail-logging"]');
+	await expect(row).toContainText('WP Mail Logging');
+	await expect(row.locator('td').nth(1)).toHaveText('3');
+
+	await row.getByRole('button', { name: 'Import' }).click();
+	await expect(row.locator('.mailspur-import-status')).toContainText('Done: 3 imported, 0 skipped.');
+
+	await page.goto(`${LOG}&s=Old%20`);
+	await expect(rows(page)).toHaveCount(3);
+	await expect(rows(page).first().locator('.col-source')).toHaveText('Imported from WP Mail Logging');
+	// Imported failures keep their status and error.
+	await expect(page.locator('#mailspur-rows .mailspur-error')).toHaveText('SMTP Error: Could not authenticate.');
+
+	// Undo brings the log back to its previous state.
+	await page.goto(`${LOG}&tab=settings`);
+	await page.getByRole('button', { name: 'Remove imported entries' }).click();
+	await expect(row.locator('.mailspur-import-status')).toContainText('3 imported entries removed.');
+	await page.goto(`${LOG}&s=Old%20`);
+	await expect(page.locator('.mailspur-empty')).toBeVisible();
+	expect(seen.errors).toEqual([]);
+});
+
 test('mobile layout has no horizontal scrolling', async ({ page }) => {
 	await page.setViewportSize({ width: 375, height: 812 });
 	await page.goto(LOG);
