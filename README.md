@@ -10,7 +10,7 @@ Alles außerhalb von `mailspur-email-log/` ist Entwicklungswerkzeug und wird nie
 
 ## Lokale Entwicklung
 
-Voraussetzung: Node ≥ 22. PHP muss nicht installiert sein.
+Voraussetzung: Node ≥ 24 (unter Node 22 stürzt das php-wasm von Playground mit PHP 7.4 ab). PHP muss nicht installiert sein.
 
 ```bash
 npm ci

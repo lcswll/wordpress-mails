@@ -438,7 +438,23 @@
 		el.dBody.replaceChildren( pre );
 	}
 
+	/**
+	 * Defuses references the browser would fetch on render, so blocked remote content is never even requested.
+	 * Defence in depth: the CSP in previewDocument() blocks anything this misses.
+	 */
+	function defuseRemote( html ) {
+		const remote = '(?:https?:)?\\/\\/';
+		return html
+			.replace( new RegExp( '(\\s)(src|srcset|background|poster)(\\s*=\\s*["\']?\\s*' + remote + ')', 'gi' ), '$1data-blocked-$2$3' )
+			.replace( new RegExp( '(<link\\b[^>]*\\s)href(\\s*=\\s*["\']?\\s*' + remote + ')', 'gi' ), '$1data-blocked-href$2' )
+			.replace( new RegExp( 'url\\(\\s*(["\']?)\\s*' + remote, 'gi' ), 'url($1data:,' )
+			.replace( new RegExp( '@import\\s+(["\'])\\s*' + remote, 'gi' ), '@import $1data:,' );
+	}
+
 	function previewDocument( html, remote ) {
+		if ( ! remote ) {
+			html = defuseRemote( html );
+		}
 		const ext = remote ? ' https: http:' : '';
 		const csp = [
 			"default-src 'none'",

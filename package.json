@@ -6,7 +6,7 @@
   "description": "Dev tooling for the Mailspur – Email Log WordPress plugin: checks, tests, e2e, release ZIP.",
   "license": "GPL-2.0-or-later",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
     "setup:php": "node scripts/setup-php.mjs",

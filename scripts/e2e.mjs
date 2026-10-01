@@ -17,6 +17,13 @@ import path from 'node:path';
 import { root } from './lib/php.mjs';
 import { mountArgs, playground } from './lib/playground.mjs';
 
+// Playground's php-wasm needs JSPI (Node 24+); the asyncify fallback on Node 22 crashes with PHP 7.4
+// ("RuntimeError: unreachable").
+if (Number(process.versions.node.split('.')[0]) < 24) {
+	console.error(`Node ${process.versions.node}: the WordPress runtime tests need Node 24 or newer.`);
+	process.exit(2);
+}
+
 const args = process.argv.slice(2);
 const opt = (name, fallback) => (args.includes(`--${name}`) ? args[args.indexOf(`--${name}`) + 1] : fallback);
 const php = opt('php', '8.3');

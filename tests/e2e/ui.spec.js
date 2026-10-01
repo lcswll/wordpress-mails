@@ -109,6 +109,8 @@ test('HTML preview is isolated: no scripts, no forms, no tracking', async ({ pag
 	expect(srcdoc).toContain("default-src 'none'");
 	expect(srcdoc).toContain('key=[redacted]');
 	expect(srcdoc).not.toContain('SECRET123');
+	// Remote references are defused before rendering, so the pixel is never even requested (CSP is the 2nd layer).
+	expect(srcdoc).toContain('data-blocked-src="https://example.com/pixel.gif"');
 
 	const inner = page.frameLocator('iframe.mailspur-frame');
 	await expect(inner.locator('h1')).toHaveText('Thanks for your order!');
@@ -140,9 +142,8 @@ test('HTML preview is isolated: no scripts, no forms, no tracking', async ({ pag
 	await page.keyboard.press('Escape');
 	await expect(dialog).toBeHidden();
 	expect(seen.errors).toEqual([]);
-	// The browser confirms both protections: the injected <script> and the tracking pixel were blocked.
+	// The browser confirms the sandbox blocked the injected <script>.
 	expect(seen.blocked.some((m) => m.includes("Blocked script execution in 'about:srcdoc'"))).toBe(true);
-	expect(seen.blocked.some((m) => m.includes('https://example.com/pixel.gif'))).toBe(true);
 });
 
 test('keyboard navigation and delete from the dialog', async ({ page }) => {

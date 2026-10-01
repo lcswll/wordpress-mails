@@ -152,7 +152,7 @@ jobs:
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '22'
+          node-version: '24'
           # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
           package-manager-cache: false
 
@@ -181,7 +181,7 @@ jobs:
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '22'
+          node-version: '24'
           # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
           package-manager-cache: false
 
@@ -198,6 +198,9 @@ jobs:
     name: Plugin Check (official action)
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    permissions:
+      contents: read
+      pull-requests: write # the action posts its report as a PR comment
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -219,7 +222,8 @@ jobs:
   e2e:
     name: WordPress ${{ matrix.wp }} / PHP ${{ matrix.php }} (Playground)
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    # A healthy run takes ~5 minutes; scripts/e2e.mjs also stops Playground after 10 minutes.
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -234,7 +238,7 @@ jobs:
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '22'
+          node-version: '24'
           # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
           package-manager-cache: false
 
@@ -321,7 +325,7 @@ jobs:
 
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '22'
+          node-version: '24'
           # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
           package-manager-cache: false
 
