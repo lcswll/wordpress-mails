@@ -8,8 +8,8 @@ msgstr ""
 msgid "%1$s entries, %2$s"
 msgstr "%1$s Einträge, %2$s"
 
-msgid "%1$s imported, %2$s skipped"
-msgstr "%1$s importiert, %2$s übersprungen"
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s importiert, %2$s Duplikate, %3$s zu alt"
 
 msgid "%1$s of %2$s entries processed …"
 msgstr "%1$s von %2$s Einträgen verarbeitet …"
@@ -104,8 +104,8 @@ msgstr "Diesen Protokolleintrag löschen?"
 msgid "Deleted."
 msgstr "Gelöscht."
 
-msgid "Done: %1$s imported, %2$s skipped."
-msgstr "Fertig: %1$s importiert, %2$s übersprungen."
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Fertig: %1$s importiert, %2$s Duplikate, %3$s zu alt."
 
 msgid "Editors and above"
 msgstr "Redakteure und höher"
@@ -115,6 +115,9 @@ msgstr "E-Mail-Protokoll"
 
 msgid "Email sent again."
 msgstr "E-Mail wurde erneut gesendet."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "E-Mails, die bereits im Protokoll stehen – von Mailspur selbst protokolliert oder aus einem anderen Plugin importiert –, werden an Empfängern, Betreff und Versandzeit erkannt und als Duplikat übersprungen."
 
 msgid "Empty log"
 msgstr "Protokoll leeren"

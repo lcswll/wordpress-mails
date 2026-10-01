@@ -42,21 +42,29 @@ function import_rest( $method, $route ) {
 /** Runs the import of one source to the end, like the admin screen does. */
 function import_all( $source ) {
 	$total = array(
-		'imported' => 0,
-		'skipped'  => 0,
-		'calls'    => 0,
+		'imported'   => 0,
+		'skipped'    => 0,
+		'duplicates' => 0,
+		'calls'      => 0,
 	);
 	do {
 		$res = import_rest( 'POST', '/import/' . $source );
 		if ( 200 !== $res->get_status() ) {
 			return array( 'error' => $res->get_data() );
 		}
-		$data               = $res->get_data();
-		$total['imported'] += $data['imported'];
-		$total['skipped']  += $data['skipped'];
+		$data                 = $res->get_data();
+		$total['imported']   += $data['imported'];
+		$total['skipped']    += $data['skipped'];
+		$total['duplicates'] += $data['duplicates'];
 		++$total['calls'];
 	} while ( ! $data['done'] && $total['calls'] < 50 );
 	return $total;
+}
+
+/** Number of log entries with this subject, any source. */
+function log_count( $subject ) {
+	global $wpdb;
+	return (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i WHERE subject = %s', Repository::table(), $subject ) );
 }
 
 /** @return array<string,string>|null */
@@ -85,12 +93,19 @@ try {
 	import_check( is_plugin_active( 'email-log/email-log.php' ), 'Email Log is active' );
 
 	add_filter( 'pre_wp_mail', '__return_true' ); // Playground has no MTA; both plugins log in the wp_mail filter.
+
+	// Mail A: only the two old plugins log it (Mailspur was not installed yet).
+	add_filter( 'mailspur_should_log', '__return_false' );
 	wp_mail(
 		array( 'anna@example.com', 'Bob <bob@example.org>' ),
 		'Live order mail',
 		'<p>Reset: https://shop.example/wp-login.php?action=rp&key=LIVESECRET&login=anna</p>',
 		array( 'Content-Type: text/html; charset=UTF-8', 'From: Shop <shop@example.com>' )
 	);
+	remove_filter( 'mailspur_should_log', '__return_false' );
+
+	// Mail B: logged three times – by Mailspur and by both old plugins (all ran in parallel).
+	wp_mail( 'Carla <carla@example.com>', 'Live native mail', 'Body', array( 'From: Shop <shop@example.com>' ) );
 	remove_filter( 'pre_wp_mail', '__return_true' );
 
 	// ------------------------------------------- tables of the other plugins.
@@ -200,7 +215,7 @@ try {
 	$overview = import_rest( 'GET', '/import' )->get_data();
 	$found    = wp_list_pluck( $overview['sources'], 'total', 'id' );
 	import_check( 8 === count( $found ), 'all 8 sources detected', array_keys( $found ) );
-	import_check( 1 === ( $found['wp-mail-logging'] ?? 0 ) && 1 === ( $found['email-log'] ?? 0 ), 'live plugins logged the mail', $found );
+	import_check( 2 === ( $found['wp-mail-logging'] ?? 0 ) && 2 === ( $found['email-log'] ?? 0 ), 'live plugins logged both mails', $found );
 
 	wp_set_current_user( 0 );
 	import_check( 401 === import_rest( 'POST', '/import/email-log' )->get_status(), 'import requires login' );
@@ -208,12 +223,24 @@ try {
 	import_check( 400 === import_rest( 'POST', '/import/not-a-plugin' )->get_status(), 'unknown source rejected' );
 
 	// ------------------------------------------------------------------ import.
-	$before = array();
+	// WP Mail Logging comes first: it brings mail A, mail B is already in the log (Mailspur's own entry).
+	// Email Log then has nothing new: A came from WP Mail Logging, B from Mailspur.
+	$expected = array(
+		'wp-mail-logging' => array( 1, 1 ),
+		'email-log'       => array( 0, 2 ),
+	);
+	$before   = array();
 	foreach ( array_keys( $found ) as $id ) {
-		$before[ $id ] = (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', \Mailspur\Import\Importer::source( $id )->table() ) );
-		$run           = import_all( $id );
-		import_check( 1 === ( $run['imported'] ?? 0 ), "import {$id}", $run );
+		$before[ $id ]                 = (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', \Mailspur\Import\Importer::source( $id )->table() ) );
+		$run                           = import_all( $id );
+		list( $imported, $duplicates ) = $expected[ $id ] ?? array( 1, 0 );
+		$got                           = array( $run['imported'] ?? -1, $run['duplicates'] ?? -1 );
+		import_check( array( $imported, $duplicates ) === $got, "import {$id}: {$imported} imported, {$duplicates} duplicates", $run );
 	}
+
+	import_check( 1 === log_count( 'Live order mail' ), 'mail logged by two old plugins is in the log once', log_count( 'Live order mail' ) );
+	import_check( 1 === log_count( 'Live native mail' ), 'mail logged three times is in the log once', log_count( 'Live native mail' ) );
+	import_check( null === imported_row( 'wp-mail-logging', 'Live native mail' ), "Mailspur's own entry wins over imported copies" );
 
 	// Live WP Mail Logging row: literal ",\n" lists, local time, redaction.
 	$wpml = imported_row( 'wp-mail-logging', 'Live order mail' );
@@ -222,9 +249,15 @@ try {
 	import_check( $wpml && false === strpos( $wpml['message'], 'LIVESECRET' ) && false !== strpos( $wpml['message'], 'key=[redacted]' ), 'secrets redacted on import', $wpml['message'] ?? null );
 	import_check( $wpml && abs( strtotime( $wpml['created_at'] . ' UTC' ) - time() ) < 300, 'WPML local time converted to UTC', $wpml['created_at'] ?? null );
 
+	// Without WP Mail Logging's copy, Email Log's own copy of mail A is imported (undo + re-import).
+	import_rest( 'DELETE', '/import/wp-mail-logging' );
+	import_rest( 'DELETE', '/import/email-log' );
+	$rerun = import_all( 'email-log' );
+	import_check( 1 === $rerun['imported'] && 1 === $rerun['duplicates'], 'undo, then re-import from the other plugin', $rerun );
 	$elog = imported_row( 'email-log', 'Live order mail' );
 	import_check( $elog && '1' === $elog['status'] && 'anna@example.com, Bob <bob@example.org>' === $elog['recipients'], 'Email Log row', $elog );
 	import_check( $elog && abs( strtotime( $elog['created_at'] . ' UTC' ) - time() ) < 300, 'Email Log local time converted to UTC', $elog['created_at'] ?? null );
+	import_check( 0 === import_all( 'wp-mail-logging' )['imported'], 'WP Mail Logging now only finds duplicates' );
 
 	$check = imported_row( 'check-email', "Tom & Jerry's offer" );
 	import_check( $check && '2' === $check['status'] && '2026-07-30 12:00:00' === $check['created_at'], 'Check & Log Email: decoded subject, failed, UTC', $check );
@@ -268,7 +301,7 @@ try {
 	$sorted = $dates;
 	rsort( $sorted );
 	import_check( $dates === $sorted, 'list sorted by send date incl. imported mails', $dates );
-	import_check( 'import:fluent-smtp' === $list['items'][0]['source'] || 'import:wp-mail-logging' === $list['items'][0]['source'] || 'import:email-log' === $list['items'][0]['source'], 'newest entries first', $list['items'][0] );
+	import_check( '2026-07-30' !== substr( $list['items'][0]['date_iso'], 0, 10 ), 'newest entries first', $list['items'][0] );
 
 	// Retention: old entries are skipped instead of imported and deleted right away.
 	import_rest( 'DELETE', '/import/wp-mail-catcher' );

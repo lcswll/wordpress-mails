@@ -68,6 +68,7 @@ The log contains personal data (recipients and content of emails). Mailspur:
 
 * `mailspur_should_log` (filter, bool, `$atts`) – return false to skip logging a specific email.
 * `mailspur_redact_params` (filter, string[]) – URL query parameters whose values are masked.
+* `mailspur_import_duplicate_window` (filter, int) – seconds within which an imported email counts as a duplicate of an existing one (default 120).
 
 = Source code =
 
@@ -96,6 +97,10 @@ Remote images and fonts are blocked on purpose: otherwise every preview would te
 = Can I keep my history when switching from WP Mail Logging or another log plugin? =
 
 Yes. Under Mail Log → Settings → "Import from other plugins" Mailspur lists every supported log it finds on the site (also from deactivated plugins) and imports it with one click. You can run it again later to pick up new entries, or remove everything imported from one plugin. Entries older than your retention period are skipped, so raise the retention first if you want the complete history.
+
+= What if two plugins logged the same email, or Mailspur already logged it? =
+
+It is imported only once. Before each entry is imported, Mailspur looks for the same recipients and subject sent within two minutes from another source – Mailspur itself or another import. Mailspur's own entry always wins because it is the most accurate one. Identical mails logged by the same plugin are kept, as they were really sent twice. The window can be changed with the `mailspur_import_duplicate_window` filter (seconds, 0 disables the check).
 
 = Are attachments stored? =
 

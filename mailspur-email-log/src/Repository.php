@@ -212,6 +212,31 @@ final class Repository {
 		);
 	}
 
+	/**
+	 * Duplicate candidates for the importer: entries of OTHER sources sent within ±$window seconds
+	 * whose recipients contain $email. Uses the created_at index; the LIKE only runs on that slice.
+	 *
+	 * @return array<int,array{recipients:string,subject:string}>
+	 */
+	public function near( string $gmt_datetime, int $window, string $exclude_source, string $email ): array {
+		global $wpdb;
+		$time = strtotime( $gmt_datetime . ' UTC' );
+		if ( false === $time ) {
+			return array();
+		}
+		return (array) $wpdb->get_results(
+			$wpdb->prepare(
+				'SELECT recipients, subject FROM %i WHERE created_at BETWEEN %s AND %s AND source <> %s AND recipients LIKE %s LIMIT 200',
+				self::table(),
+				gmdate( 'Y-m-d H:i:s', $time - $window ),
+				gmdate( 'Y-m-d H:i:s', $time + $window ),
+				$exclude_source,
+				'%' . $wpdb->esc_like( $email ) . '%'
+			),
+			ARRAY_A
+		);
+	}
+
 	/** Deletes all entries imported from one source plugin (undo an import). */
 	public function delete_by_source( string $source ): int {
 		global $wpdb;

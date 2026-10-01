@@ -198,7 +198,7 @@ test('import from WP Mail Logging', async ({ page }) => {
 	await expect(row.locator('td').nth(1)).toHaveText('3');
 
 	await row.getByRole('button', { name: 'Import' }).click();
-	await expect(row.locator('.mailspur-import-status')).toContainText('Done: 3 imported, 0 skipped.');
+	await expect(row.locator('.mailspur-import-status')).toContainText('Done: 3 imported, 0 duplicates, 0 too old.');
 
 	await page.goto(`${LOG}&s=Old%20`);
 	await expect(rows(page)).toHaveCount(3);

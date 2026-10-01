@@ -6,6 +6,8 @@
  * - Progress (last imported primary key per source) is stored, so running it again only picks up
  *   new rows – no duplicates – and a long import survives page reloads.
  * - Entries older than the retention period are skipped (the daily cleanup would delete them anyway).
+ * - Mails already in the log from another source (Mailspur itself or another import) are skipped as
+ *   duplicates, see Duplicates.
  * - Secrets in links are redacted like for logged mails.
  *
  * @package Mailspur
@@ -72,12 +74,13 @@ final class Importer {
 			}
 			$state = $this->state( $source );
 			$out[] = array(
-				'id'        => $source->id(),
-				'label'     => $source->label(),
-				'total'     => $source->remaining( 0 ),
-				'remaining' => $source->remaining( $state['last'] ),
-				'imported'  => $state['imported'],
-				'skipped'   => $state['skipped'],
+				'id'         => $source->id(),
+				'label'      => $source->label(),
+				'total'      => $source->remaining( 0 ),
+				'remaining'  => $source->remaining( $state['last'] ),
+				'imported'   => $state['imported'],
+				'skipped'    => $state['skipped'],
+				'duplicates' => $state['duplicates'],
 			);
 		}
 		return $out;
@@ -86,7 +89,7 @@ final class Importer {
 	/**
 	 * Imports the next batch.
 	 *
-	 * @return array{imported:int,skipped:int,remaining:int,done:bool}|null Null when another import of this source is running.
+	 * @return array{imported:int,skipped:int,duplicates:int,remaining:int,done:bool}|null Null when another import of this source is running.
 	 */
 	public function run( Source $source, int $batch = self::BATCH ): ?array {
 		if ( ! $this->lock( $source ) ) {
@@ -99,12 +102,18 @@ final class Importer {
 			$cutoff = self::retention_cutoff();
 			$insert = array();
 			$skip   = 0;
+			$dupes  = 0;
+			$check  = new Duplicates( $this->repository );
 
 			foreach ( $rows as $raw ) {
 				$state['last'] = max( $state['last'], $source->key_of( $raw ) );
 				$row           = $source->map( $raw );
 				if ( null === $row || ( $cutoff && $row['created_at'] < $cutoff ) ) {
 					++$skip;
+					continue;
+				}
+				if ( $check->exists( $row ) ) {
+					++$dupes;
 					continue;
 				}
 				$row['message'] = Redactor::redact( (string) $row['message'] );
@@ -116,15 +125,17 @@ final class Importer {
 				$this->repository->insert_many( $chunk );
 			}
 
-			$state['imported'] += count( $insert );
-			$state['skipped']  += $skip;
+			$state['imported']   += count( $insert );
+			$state['skipped']    += $skip;
+			$state['duplicates'] += $dupes;
 			$this->save_state( $source, $state );
 
 			return array(
-				'imported'  => count( $insert ),
-				'skipped'   => $skip,
-				'remaining' => $source->remaining( $state['last'] ),
-				'done'      => count( $rows ) < $batch,
+				'imported'   => count( $insert ),
+				'skipped'    => $skip,
+				'duplicates' => $dupes,
+				'remaining'  => $source->remaining( $state['last'] ),
+				'done'       => count( $rows ) < $batch,
 			);
 		} finally {
 			delete_option( self::LOCK_PREFIX . $source->id() );
@@ -147,20 +158,21 @@ final class Importer {
 	}
 
 	/**
-	 * @return array{last:int,imported:int,skipped:int}
+	 * @return array{last:int,imported:int,skipped:int,duplicates:int}
 	 */
 	private function state( Source $source ): array {
 		$all   = (array) get_option( self::STATE_OPTION, array() );
 		$state = isset( $all[ $source->id() ] ) && is_array( $all[ $source->id() ] ) ? $all[ $source->id() ] : array();
 		return array(
-			'last'     => (int) ( $state['last'] ?? 0 ),
-			'imported' => (int) ( $state['imported'] ?? 0 ),
-			'skipped'  => (int) ( $state['skipped'] ?? 0 ),
+			'last'       => (int) ( $state['last'] ?? 0 ),
+			'imported'   => (int) ( $state['imported'] ?? 0 ),
+			'skipped'    => (int) ( $state['skipped'] ?? 0 ),
+			'duplicates' => (int) ( $state['duplicates'] ?? 0 ),
 		);
 	}
 
 	/**
-	 * @param array{last:int,imported:int,skipped:int} $state
+	 * @param array{last:int,imported:int,skipped:int,duplicates:int} $state
 	 */
 	private function save_state( Source $source, array $state ): void {
 		$all                  = (array) get_option( self::STATE_OPTION, array() );

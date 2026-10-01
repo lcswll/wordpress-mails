@@ -55,6 +55,7 @@
 		const startRemaining = parseInt( row.dataset.remaining, 10 ) || 0;
 		let imported = 0;
 		let skipped = 0;
+		let duplicates = 0;
 
 		buttons.forEach( ( b ) => ( b.disabled = true ) );
 		try {
@@ -62,12 +63,13 @@
 				const res = await api( 'import/' + row.dataset.source, 'POST' );
 				imported += res.imported;
 				skipped += res.skipped;
-				status.textContent = fmt( t.progress, num( total - startRemaining + imported + skipped ), num( total ) );
+				duplicates += res.duplicates;
+				status.textContent = fmt( t.progress, num( total - startRemaining + imported + skipped + duplicates ), num( total ) );
 				if ( res.done || 0 === res.remaining ) {
 					break;
 				}
 			}
-			status.textContent = fmt( t.done, num( imported ), num( skipped ) );
+			status.textContent = fmt( t.done, num( imported ), num( duplicates ), num( skipped ) );
 			// Reload so buttons and counts reflect the new state.
 			setTimeout( () => location.reload(), 1200 );
 		} catch ( err ) {

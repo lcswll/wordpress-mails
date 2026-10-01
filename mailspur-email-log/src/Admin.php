@@ -449,8 +449,8 @@ final class Admin {
 			'i18n'    => array(
 				/* translators: 1: entries imported so far, 2: entries in total */
 				'progress'    => __( '%1$s of %2$s entries processed …', 'mailspur-email-log' ),
-				/* translators: 1: number of imported entries, 2: number of skipped entries */
-				'done'        => __( 'Done: %1$s imported, %2$s skipped.', 'mailspur-email-log' ),
+				/* translators: 1: imported entries, 2: duplicates skipped, 3: entries older than the retention period */
+				'done'        => __( 'Done: %1$s imported, %2$s duplicates, %3$s too old.', 'mailspur-email-log' ),
 				/* translators: %s: name of another plugin */
 				'confirmUndo' => __( 'Remove all entries imported from %s? The data in the other plugin is not affected.', 'mailspur-email-log' ),
 				/* translators: %s: number of removed entries */
@@ -475,6 +475,9 @@ final class Admin {
 		<h2 id="mailspur-import"><?php esc_html_e( 'Import from other plugins', 'mailspur-email-log' ); ?></h2>
 		<p class="description">
 			<?php esc_html_e( 'Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries.', 'mailspur-email-log' ); ?>
+		</p>
+		<p class="description">
+			<?php esc_html_e( 'Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates.', 'mailspur-email-log' ); ?>
 		</p>
 		<?php if ( $cutoff ) : ?>
 			<p class="description">
@@ -508,9 +511,10 @@ final class Admin {
 							<td class="mailspur-import-status" aria-live="polite">
 								<?php
 								printf(
-									/* translators: 1: imported entries, 2: skipped entries */
-									esc_html__( '%1$s imported, %2$s skipped', 'mailspur-email-log' ),
+									/* translators: 1: imported entries, 2: duplicates skipped, 3: entries older than the retention period */
+									esc_html__( '%1$s imported, %2$s duplicates, %3$s too old', 'mailspur-email-log' ),
 									esc_html( number_format_i18n( $source['imported'] ) ),
+									esc_html( number_format_i18n( $source['duplicates'] ) ),
 									esc_html( number_format_i18n( $source['skipped'] ) )
 								);
 								?>
