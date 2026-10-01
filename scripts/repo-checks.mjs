@@ -125,12 +125,28 @@ if (online) {
 		...(readme.match(/https?:\/\/[^\s)<>"'`]+/g) || []).filter((u) => !/example\.|\/\/(localhost|127\.)/.test(u)),
 		meta['License URI'],
 	].filter(Boolean));
+	// A dead link (HTTP 4xx/5xx) fails the check. A network error is only a warning: some hosts (e.g. gnu.org)
+	// throttle or drop requests from CI runners, which says nothing about the link itself.
 	for (const url of urls) {
-		try {
-			const res = await fetch(url, { method: 'GET', redirect: 'follow', headers: { 'User-Agent': 'Mozilla/5.0 (repo-checks)' } });
-			expect(res.ok, `${url} is reachable (HTTP ${res.status})`);
-		} catch (err) {
-			errors.push(`${url} is not reachable (${err.message})`);
+		let status = null;
+		let lastError = '';
+		for (let attempt = 1; attempt <= 3 && status === null; attempt++) {
+			try {
+				const res = await fetch(url, {
+					redirect: 'follow',
+					headers: { 'User-Agent': 'Mozilla/5.0 (repo-checks)' },
+					signal: AbortSignal.timeout(15_000),
+				});
+				status = res.status;
+			} catch (err) {
+				lastError = err.cause?.code || err.message;
+				await new Promise((r) => setTimeout(r, attempt * 2000));
+			}
+		}
+		if (status === null) {
+			warnings.push(`${url} could not be checked (${lastError}) – network issue, not counted as a dead link`);
+		} else {
+			expect(status >= 200 && status < 400, `${url} is reachable (HTTP ${status})`);
 		}
 	}
 }
