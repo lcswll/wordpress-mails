@@ -1,0 +1,11 @@
+{
+	"version": "0.0.1",
+	"configurations": [
+		{
+			"name": "playground",
+			"runtimeExecutable": "npx",
+			"runtimeArgs": ["-y", "@wp-playground/cli@latest", "server", "--port=9400", "--mount=./outbox-mail-log:/wordpress/wp-content/plugins/outbox-mail-log", "--blueprint=./tools-playground-blueprint.json", "--login"],
+			"port": 9400
+		}
+	]
+}
