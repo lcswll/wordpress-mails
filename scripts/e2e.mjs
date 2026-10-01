@@ -42,8 +42,14 @@ const run = await playground(
 		`--blueprint=${blueprintFile}`,
 		...mountArgs({ '/e2e': path.join(root, 'tests', 'e2e'), '/e2e-out': out }),
 	],
-	{ quiet: true },
+	{
+		quiet: !process.env.CI, // In CI the full output helps when something hangs.
+		timeoutMs: 10 * 60_000,
+		// selftest.php writes its report as the very last step.
+		doneWhen: () => fs.existsSync(path.join(out, 'selftest.json')),
+	},
 );
+if (run.timedOut) console.error('Playground did not finish within 10 minutes.');
 
 const read = (file) => {
 	try {
