@@ -5,7 +5,7 @@
  *
  * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
 require '/wordpress/wp-load.php';

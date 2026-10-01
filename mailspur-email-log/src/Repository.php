@@ -9,10 +9,10 @@
  * caching would only serve stale data for a log that changes with every mail.
  * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -36,7 +36,7 @@ final class Repository {
 
 	public static function table(): string {
 		global $wpdb;
-		return $wpdb->prefix . 'outbox_mail_log';
+		return $wpdb->prefix . 'mailspur';
 	}
 
 	public static function status_slug( int $status ): string {

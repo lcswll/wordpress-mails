@@ -1,6 +1,6 @@
 {
-    "name": "lcswll/outbox-mail-log",
-    "description": "Dev tooling for the Outbox – Mail Log WordPress plugin (PHPCS, PHPStan, PHPUnit). The plugin itself has no Composer dependencies.",
+    "name": "lcswll/mailspur-email-log",
+    "description": "Dev tooling for the Mailspur – Email Log WordPress plugin (PHPCS, PHPStan, PHPUnit). The plugin itself has no Composer dependencies.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "require": {
@@ -21,8 +21,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "OutboxMailLog\\": "outbox-mail-log/src/",
-            "OutboxMailLog\\Tests\\": "tests/unit/"
+            "Mailspur\\": "mailspur-email-log/src/",
+            "Mailspur\\Tests\\": "tests/unit/"
         }
     },
     "config": {

@@ -4,7 +4,7 @@
  *
  * phpcs:disable Generic.CodeAnalysis.UnusedFunctionParameter -- signatures mirror wpdb.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
 /**

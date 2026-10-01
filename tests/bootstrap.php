@@ -2,7 +2,7 @@
 /**
  * PHPUnit bootstrap: plugin classes without WordPress (Brain Monkey stubs the functions).
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
 require dirname( __DIR__ ) . '/vendor/autoload.php';

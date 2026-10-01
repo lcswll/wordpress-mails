@@ -2,16 +2,16 @@
 /**
  * Plugin settings (single autoloaded option).
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Settings {
 
-	const OPTION = 'outbox_mail_log_settings';
+	const OPTION = 'mailspur_settings';
 
 	/** Capabilities that may be granted read access to the log. */
 	const CAPABILITIES = array( 'manage_options', 'edit_others_posts', 'manage_woocommerce' );

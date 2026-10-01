@@ -68,7 +68,7 @@ jobs:
               echo "$out"
               exit 1
             fi
-          done < <(find outbox-mail-log -type f -name '*.php' -print0 | sort -z)
+          done < <(find mailspur-email-log -type f -name '*.php' -print0 | sort -z)
           echo "OK: ${count} files on PHP ${PHP_VERSION}"
 
   phpcs:
@@ -205,8 +205,8 @@ jobs:
 
       - uses: WordPress/plugin-check-action@10857da14b6c2246d15402b3e69f777edcf8c12e # v1.1.9
         with:
-          build-dir: ./outbox-mail-log
-          slug: outbox-mail-log
+          build-dir: ./mailspur-email-log
+          slug: mailspur-email-log
           include-experimental: true
           # Runtime/performance checks need a front end; the plugin has none (admin screen only).
           exclude-checks: |

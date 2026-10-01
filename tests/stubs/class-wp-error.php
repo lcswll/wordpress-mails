@@ -2,7 +2,7 @@
 /**
  * Minimal WP_Error stand-in for unit tests.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
 /** Just enough of WP_Error for the logger. */

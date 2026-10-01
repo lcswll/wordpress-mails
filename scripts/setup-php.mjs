@@ -18,7 +18,7 @@ import { root } from './lib/php.mjs';
 const args = process.argv.slice(2);
 const version = args.includes('--php') ? args[args.indexOf('--php') + 1] : '7.4';
 const cache = path.join(root, '.cache');
-const UA = { 'User-Agent': 'outbox-mail-log-setup (node)' };
+const UA = { 'User-Agent': 'mailspur-email-log-setup (node)' };
 const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
 
 async function download(url) {

@@ -9,7 +9,7 @@ export default [
 	},
 	js.configs.recommended,
 	{
-		files: ['outbox-mail-log/assets/**/*.js'],
+		files: ['mailspur-email-log/assets/**/*.js'],
 		languageOptions: {
 			ecmaVersion: 2020,
 			sourceType: 'script',

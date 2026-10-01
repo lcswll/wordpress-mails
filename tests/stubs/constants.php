@@ -1,12 +1,12 @@
 <?php
 /**
- * Namespaced constants normally defined by outbox-mail-log.php (not loaded in unit tests).
+ * Namespaced constants normally defined by mailspur-email-log.php (not loaded in unit tests).
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 const VERSION    = 'test';
 const DB_VERSION = 1;
-const FILE       = WP_PLUGIN_DIR . '/outbox-mail-log/outbox-mail-log.php';
+const FILE       = WP_PLUGIN_DIR . '/mailspur-email-log/mailspur-email-log.php';

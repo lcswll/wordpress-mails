@@ -1,13 +1,13 @@
 <?php
 /**
- * REST API used by the admin screen (outbox-mail-log/v1).
+ * REST API used by the admin screen (mailspur-email-log/v1).
  *
  * Never exposes server file paths; attachment names only.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 use WP_Error;
 use WP_REST_Request;
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 
 final class Rest {
 
-	const NS = 'outbox-mail-log/v1';
+	const NS = 'mailspur-email-log/v1';
 
 	/** @var Repository */
 	private $repository;
@@ -168,7 +168,7 @@ final class Rest {
 	public function delete_items( WP_REST_Request $request ) {
 		if ( $request['all'] ) {
 			if ( ! current_user_can( 'manage_options' ) ) {
-				return new WP_Error( 'rest_forbidden', __( 'Only administrators can empty the log.', 'outbox-mail-log' ), array( 'status' => 403 ) );
+				return new WP_Error( 'rest_forbidden', __( 'Only administrators can empty the log.', 'mailspur-email-log' ), array( 'status' => 403 ) );
 			}
 			$this->repository->delete_all();
 			return new WP_REST_Response( array( 'deleted' => true ) );
@@ -210,7 +210,7 @@ final class Rest {
 
 		$headers = array_filter( explode( "\n", (string) $row['headers'] ) );
 
-		Logger::$source_override = 'outbox:resend';
+		Logger::$source_override = 'mailspur:resend';
 		$sent                    = wp_mail( $row['recipients'], $row['subject'], $row['message'], $headers, $files );
 		Logger::$source_override = '';
 
@@ -281,7 +281,7 @@ final class Rest {
 	}
 
 	private function not_found(): WP_Error {
-		return new WP_Error( 'outbox_not_found', __( 'Log entry not found.', 'outbox-mail-log' ), array( 'status' => 404 ) );
+		return new WP_Error( 'mailspur_not_found', __( 'Log entry not found.', 'mailspur-email-log' ), array( 'status' => 404 ) );
 	}
 
 	/**

@@ -2,10 +2,10 @@
 /**
  * Bootstrap: wires all components to WordPress.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -49,10 +49,10 @@ final class Plugin {
 	 */
 	public static function load_textdomain(): void {
 		$locale = determine_locale();
-		if ( file_exists( WP_LANG_DIR . "/plugins/outbox-mail-log-{$locale}.mo" ) || file_exists( WP_LANG_DIR . "/plugins/outbox-mail-log-{$locale}.l10n.php" ) ) {
+		if ( file_exists( WP_LANG_DIR . "/plugins/mailspur-email-log-{$locale}.mo" ) || file_exists( WP_LANG_DIR . "/plugins/mailspur-email-log-{$locale}.l10n.php" ) ) {
 			return;
 		}
 		// WordPress 6.5+ prefers the .l10n.php variant of this path automatically.
-		load_textdomain( 'outbox-mail-log', dirname( FILE ) . "/languages/outbox-mail-log-{$locale}.mo", $locale );
+		load_textdomain( 'mailspur-email-log', dirname( FILE ) . "/languages/mailspur-email-log-{$locale}.mo", $locale );
 	}
 }

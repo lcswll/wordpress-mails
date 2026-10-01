@@ -2,10 +2,10 @@
 /**
  * GDPR: personal data exporter / eraser and privacy policy suggestion.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -31,8 +31,8 @@ final class Privacy {
 	 * @return array<string,array<string,mixed>>
 	 */
 	public function add_exporter( array $exporters ): array {
-		$exporters['outbox-mail-log'] = array(
-			'exporter_friendly_name' => __( 'Email log', 'outbox-mail-log' ),
+		$exporters['mailspur-email-log'] = array(
+			'exporter_friendly_name' => __( 'Email log', 'mailspur-email-log' ),
 			'callback'               => array( $this, 'export' ),
 		);
 		return $exporters;
@@ -43,8 +43,8 @@ final class Privacy {
 	 * @return array<string,array<string,mixed>>
 	 */
 	public function add_eraser( array $erasers ): array {
-		$erasers['outbox-mail-log'] = array(
-			'eraser_friendly_name' => __( 'Email log', 'outbox-mail-log' ),
+		$erasers['mailspur-email-log'] = array(
+			'eraser_friendly_name' => __( 'Email log', 'mailspur-email-log' ),
 			'callback'             => array( $this, 'erase' ),
 		);
 		return $erasers;
@@ -61,20 +61,20 @@ final class Privacy {
 
 		foreach ( $rows as $row ) {
 			$data[] = array(
-				'group_id'    => 'outbox-mail-log',
-				'group_label' => __( 'Email log', 'outbox-mail-log' ),
-				'item_id'     => 'outbox-mail-' . $row['id'],
+				'group_id'    => 'mailspur-email-log',
+				'group_label' => __( 'Email log', 'mailspur-email-log' ),
+				'item_id'     => 'mailspur-mail-' . $row['id'],
 				'data'        => array(
 					array(
-						'name'  => __( 'Date', 'outbox-mail-log' ),
+						'name'  => __( 'Date', 'mailspur-email-log' ),
 						'value' => get_date_from_gmt( $row['created_at'] ),
 					),
 					array(
-						'name'  => __( 'Recipient', 'outbox-mail-log' ),
+						'name'  => __( 'Recipient', 'mailspur-email-log' ),
 						'value' => $row['recipients'],
 					),
 					array(
-						'name'  => __( 'Subject', 'outbox-mail-log' ),
+						'name'  => __( 'Subject', 'mailspur-email-log' ),
 						'value' => $row['subject'],
 					),
 				),
@@ -93,15 +93,15 @@ final class Privacy {
 	public function erase( string $email, int $page = 1 ): array {
 		// Matches get deleted, so only the non-matching candidates seen so far need to be skipped.
 		$scanned = 0;
-		$offset  = (int) get_transient( 'outbox_mail_log_erase_offset_' . md5( $email ) );
+		$offset  = (int) get_transient( 'mailspur_erase_offset_' . md5( $email ) );
 		$rows    = $this->repository->find_by_recipient( $email, self::BATCH, 1 === $page ? 0 : $offset, $scanned );
 		$deleted = $this->repository->delete( array_column( $rows, 'id' ) );
 		$done    = $scanned < self::BATCH;
 
 		if ( $done ) {
-			delete_transient( 'outbox_mail_log_erase_offset_' . md5( $email ) );
+			delete_transient( 'mailspur_erase_offset_' . md5( $email ) );
 		} else {
-			set_transient( 'outbox_mail_log_erase_offset_' . md5( $email ), ( 1 === $page ? 0 : $offset ) + $scanned - $deleted, HOUR_IN_SECONDS );
+			set_transient( 'mailspur_erase_offset_' . md5( $email ), ( 1 === $page ? 0 : $offset ) + $scanned - $deleted, HOUR_IN_SECONDS );
 		}
 
 		return array(
@@ -117,8 +117,8 @@ final class Privacy {
 			return;
 		}
 		wp_add_privacy_policy_content(
-			__( 'Outbox – Mail Log', 'outbox-mail-log' ),
-			'<p>' . esc_html__( 'This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period.', 'outbox-mail-log' ) . '</p>'
+			__( 'Mailspur – Email Log', 'mailspur-email-log' ),
+			'<p>' . esc_html__( 'This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period.', 'mailspur-email-log' ) . '</p>'
 		);
 	}
 }

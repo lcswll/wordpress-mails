@@ -69,7 +69,7 @@ jobs:
             in_log && $0 ~ "^= " v " =" { take = 1; next }
             take && /^= / { exit }
             take { print }
-          ' outbox-mail-log/readme.txt > notes.md
+          ' mailspur-email-log/readme.txt > notes.md
           {
             echo
             echo "**SHA-256:** \`$(cut -d' ' -f1 dist/*.sha256)\`"
@@ -90,7 +90,7 @@ jobs:
     timeout-minutes: 15
     environment:
       name: wordpress-org
-      url: https://wordpress.org/plugins/outbox-mail-log/
+      url: https://wordpress.org/plugins/mailspur-email-log/
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -112,6 +112,6 @@ jobs:
         env:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SLUG: outbox-mail-log
-          BUILD_DIR: build/outbox-mail-log
+          SLUG: mailspur-email-log
+          BUILD_DIR: build/mailspur-email-log
           ASSETS_DIR: .wordpress-org

@@ -2,14 +2,14 @@
 /**
  * Logger: what gets stored and how delivery results are matched to rows.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog\Tests;
+namespace Mailspur\Tests;
 
 use Brain\Monkey\Filters;
-use OutboxMailLog\Logger;
-use OutboxMailLog\Repository;
+use Mailspur\Logger;
+use Mailspur\Repository;
 use PHPMailer\PHPMailer\PHPMailer;
 use WP_Error;
 
@@ -57,7 +57,7 @@ final class LoggerTest extends TestCase {
 
 		$inserts = $this->writes( 'insert' );
 		$this->assertCount( 1, $inserts );
-		$this->assertSame( 'wp_outbox_mail_log', $inserts[0][1] );
+		$this->assertSame( 'wp_mailspur', $inserts[0][1] );
 
 		$row = $inserts[0][2];
 		$this->assertSame( Repository::STATUS_PENDING, $row['status'] );
@@ -183,7 +183,7 @@ final class LoggerTest extends TestCase {
 	}
 
 	public function test_skipped_mail_keeps_result_hooks_aligned(): void {
-		Filters\expectApplied( 'outbox_mail_log_should_log' )->twice()->andReturn( true, false );
+		Filters\expectApplied( 'mailspur_should_log' )->twice()->andReturn( true, false );
 
 		$this->logger->capture( $this->atts() ); // Logged as row 1.
 		$this->logger->capture( $this->atts() ); // Skipped, but occupies a stack slot.
@@ -199,8 +199,8 @@ final class LoggerTest extends TestCase {
 	public function test_source_identifies_the_calling_plugin(): void {
 		$this->assertSame( 'core', $this->writes_source() );
 
-		Logger::$source_override = 'outbox:resend';
-		$this->assertSame( 'outbox:resend', $this->writes_source() );
+		Logger::$source_override = 'mailspur:resend';
+		$this->assertSame( 'mailspur:resend', $this->writes_source() );
 		Logger::$source_override = '';
 	}
 

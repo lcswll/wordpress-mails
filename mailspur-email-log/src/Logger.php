@@ -8,10 +8,10 @@
  *   succeeded / failed  → single UPDATE with status + enrichment
  * A pre_wp_mail short-circuit (e.g. API-based mailers) resolves the row as well.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -63,7 +63,7 @@ final class Logger {
 		$id      = 0;
 
 		// A skipped mail still gets a stack slot (id 0) so result hooks stay aligned.
-		if ( apply_filters( 'outbox_mail_log_should_log', true, $atts ) ) {
+		if ( apply_filters( 'mailspur_should_log', true, $atts ) ) {
 			try {
 				$id = $this->repository->insert( $this->normalize( $atts, $message ) );
 			} catch ( \Throwable $e ) { // Logging must never break mail delivery.
@@ -218,7 +218,7 @@ final class Logger {
 		if ( ! Settings::get( 'redact_secrets' ) || '' === $text ) {
 			return $text;
 		}
-		$params = (array) apply_filters( 'outbox_mail_log_redact_params', array( 'key', 'token', 'reset_key', 'activation_key', 'login_token', 'password', 'pass', 'pwd' ) );
+		$params = (array) apply_filters( 'mailspur_redact_params', array( 'key', 'token', 'reset_key', 'activation_key', 'login_token', 'password', 'pass', 'pwd' ) );
 		$params = implode( '|', array_map( 'preg_quote', $params ) );
 		$result = preg_replace( '/([?&](?:amp;)?(?:' . $params . ')=)[^&\s"\'<>]+/i', '$1[redacted]', $text );
 		return null === $result ? $text : $result;
@@ -235,7 +235,12 @@ final class Logger {
 			'theme'     => wp_normalize_path( get_theme_root() ) . '/',
 		);
 
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
+		/*
+		 * Not debug code: the backtrace is the only way to tell which plugin or theme called wp_mail()
+		 * (shown as "Source" in the log). Arguments are not collected and the depth is capped,
+		 * so it is cheap and never exposes data; only the file paths of the frames are inspected.
+		 */
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- feature, see above.
 		foreach ( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 30 ) as $frame ) {
 			if ( empty( $frame['file'] ) ) {
 				continue;

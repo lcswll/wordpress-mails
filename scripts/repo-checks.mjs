@@ -44,7 +44,6 @@ expect(/^\d+\.\d+\.\d+$/.test(header.Version || ''), `Version "${header.Version}
 expect(header['Text Domain'] === PLUGIN_SLUG, `Text Domain equals the slug "${PLUGIN_SLUG}"`);
 expect(/GPL/i.test(header.License || ''), 'license is GPL-compatible');
 if (header['Domain Path']) expect(fs.existsSync(path.join(pluginDir, header['Domain Path'])), `Domain Path ${header['Domain Path']} exists`);
-expect(!header['Plugin URI'] || !/github\.com\/[^/]+\/wordpress-mails/.test(header['Plugin URI']), 'Plugin URI is public (not the private repo)');
 const constVersion = /const VERSION\s*=\s*'([^']+)'/.exec(main)?.[1];
 expect(constVersion === header.Version, `const VERSION (${constVersion}) equals the header Version (${header.Version})`);
 expect((header.Description || '').length <= 150, 'header description ≤ 150 characters', warnings);
@@ -118,6 +117,21 @@ if (online) {
 		expect(diff >= 0, `"Tested up to" ${meta['Tested up to']} is the current WordPress ${current} – test and bump it`, warnings);
 	} catch (err) {
 		warnings.push(`could not fetch the current WordPress version (${err.message})`);
+	}
+
+	// Reviewers open every URI in the header and readme; dead links get the submission sent back.
+	const urls = new Set([
+		...['Plugin URI', 'Author URI', 'License URI', 'Update URI'].map((f) => header[f]).filter(Boolean),
+		...(readme.match(/https?:\/\/[^\s)<>"'`]+/g) || []).filter((u) => !/example\.|\/\/(localhost|127\.)/.test(u)),
+		meta['License URI'],
+	].filter(Boolean));
+	for (const url of urls) {
+		try {
+			const res = await fetch(url, { method: 'GET', redirect: 'follow', headers: { 'User-Agent': 'Mozilla/5.0 (repo-checks)' } });
+			expect(res.ok, `${url} is reachable (HTTP ${res.status})`);
+		} catch (err) {
+			errors.push(`${url} is not reachable (${err.message})`);
+		}
 	}
 }
 

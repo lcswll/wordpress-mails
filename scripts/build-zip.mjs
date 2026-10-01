@@ -2,7 +2,7 @@
 /**
  * Builds the installable plugin ZIP and verifies it.
  *
- *   npm run build      → dist/outbox-mail-log-<version>.zip (+ .sha256, manifest.json)
+ *   npm run build      → dist/mailspur-email-log-<version>.zip (+ .sha256, manifest.json)
  *
  * - Root folder inside the ZIP is the plugin slug (what WordPress and wordpress.org expect).
  * - Only an allowlist of file types is packed; dotfiles, maps and dev files never are.

@@ -1,5 +1,5 @@
 /**
- * Outbox – Mail Log admin screen.
+ * Mailspur – Email Log admin screen.
  *
  * Dependency-free. Security rules:
  *  - Mail data is only inserted via textContent / attribute setters, never innerHTML.
@@ -10,8 +10,8 @@
 ( function () {
 	'use strict';
 
-	const cfg = window.outboxMailLogConfig;
-	const app = document.getElementById( 'outbox-app' );
+	const cfg = window.mailspurConfig;
+	const app = document.getElementById( 'mailspur-app' );
 	if ( ! cfg || ! app ) {
 		return;
 	}
@@ -25,28 +25,28 @@
 	const num = ( n ) => Number( n ).toLocaleString( document.documentElement.lang || undefined );
 
 	const el = {
-		rows: $( 'outbox-rows' ),
-		search: $( 'outbox-search' ),
-		inBody: $( 'outbox-in-body' ),
-		after: $( 'outbox-after' ),
-		before: $( 'outbox-before' ),
-		reset: $( 'outbox-reset' ),
-		perPage: $( 'outbox-per-page' ),
-		page: $( 'outbox-page' ),
-		pages: $( 'outbox-pages' ),
-		summary: $( 'outbox-summary' ),
-		selectAll: $( 'outbox-select-all' ),
-		bulk: $( 'outbox-bulk' ),
-		selected: $( 'outbox-selected' ),
-		toast: $( 'outbox-toast' ),
-		dialog: $( 'outbox-dialog' ),
-		dStatus: $( 'outbox-d-status' ),
-		dSubject: $( 'outbox-d-subject' ),
-		dMeta: $( 'outbox-d-meta' ),
-		dBody: $( 'outbox-d-body' ),
-		dRemote: $( 'outbox-d-remote' ),
-		dRemoteText: $( 'outbox-d-remote-text' ),
-		dRemoteToggle: $( 'outbox-d-remote-toggle' ),
+		rows: $( 'mailspur-rows' ),
+		search: $( 'mailspur-search' ),
+		inBody: $( 'mailspur-in-body' ),
+		after: $( 'mailspur-after' ),
+		before: $( 'mailspur-before' ),
+		reset: $( 'mailspur-reset' ),
+		perPage: $( 'mailspur-per-page' ),
+		page: $( 'mailspur-page' ),
+		pages: $( 'mailspur-pages' ),
+		summary: $( 'mailspur-summary' ),
+		selectAll: $( 'mailspur-select-all' ),
+		bulk: $( 'mailspur-bulk' ),
+		selected: $( 'mailspur-selected' ),
+		toast: $( 'mailspur-toast' ),
+		dialog: $( 'mailspur-dialog' ),
+		dStatus: $( 'mailspur-d-status' ),
+		dSubject: $( 'mailspur-d-subject' ),
+		dMeta: $( 'mailspur-d-meta' ),
+		dBody: $( 'mailspur-d-body' ),
+		dRemote: $( 'mailspur-d-remote' ),
+		dRemoteText: $( 'mailspur-d-remote-text' ),
+		dRemoteToggle: $( 'mailspur-d-remote-toggle' ),
 	};
 
 	/* ------------------------------------------------------------------ state */
@@ -97,7 +97,7 @@
 
 	function readPerPage() {
 		try {
-			const n = parseInt( localStorage.getItem( 'outbox.perPage' ), 10 );
+			const n = parseInt( localStorage.getItem( 'mailspur.perPage' ), 10 );
 			return [ 25, 50, 100, 200 ].includes( n ) ? n : 25;
 		} catch ( e ) {
 			return 25;
@@ -108,7 +108,7 @@
 
 	function endpoint( path, params ) {
 		const url = new URL( cfg.restUrl, location.href );
-		// Sites without pretty permalinks use ?rest_route=/outbox-mail-log/v1.
+		// Sites without pretty permalinks use ?rest_route=/mailspur-email-log/v1.
 		if ( url.searchParams.has( 'rest_route' ) ) {
 			url.searchParams.set( 'rest_route', url.searchParams.get( 'rest_route' ).replace( /\/?$/, '/' ) + path );
 		} else {
@@ -225,7 +225,7 @@
 	}
 
 	function iconButton( action, icon, label ) {
-		const b = node( 'button', 'outbox-row-action' );
+		const b = node( 'button', 'mailspur-row-action' );
 		b.type = 'button';
 		b.dataset.action = action;
 		b.title = label;
@@ -235,14 +235,14 @@
 	}
 
 	function badge( status ) {
-		return node( 'span', 'outbox-badge is-' + status, t[ status ] || status );
+		return node( 'span', 'mailspur-badge is-' + status, t[ status ] || status );
 	}
 
 	function sourceLabel( source ) {
 		if ( ! source || 'core' === source ) {
 			return t.core;
 		}
-		if ( 'outbox:resend' === source ) {
+		if ( 'mailspur:resend' === source ) {
 			return t.resent;
 		}
 		const i = source.indexOf( ':' );
@@ -274,18 +274,18 @@
 		to.title = item.to;
 
 		const subject = node( 'td', 'col-subject' );
-		const open = node( 'button', 'outbox-open', item.subject || t.noSubject );
+		const open = node( 'button', 'mailspur-open', item.subject || t.noSubject );
 		open.type = 'button';
 		open.dataset.action = 'view';
 		subject.append( open );
 		if ( item.attachments.length ) {
-			const clip = node( 'span', 'outbox-clip dashicons dashicons-paperclip' );
+			const clip = node( 'span', 'mailspur-clip dashicons dashicons-paperclip' );
 			clip.title = item.attachments.join( ', ' );
 			clip.setAttribute( 'aria-label', t.attachments + ': ' + item.attachments.join( ', ' ) );
 			subject.append( clip );
 		}
 		if ( item.error ) {
-			subject.append( node( 'span', 'outbox-error', item.error ) );
+			subject.append( node( 'span', 'mailspur-error', item.error ) );
 		}
 
 		const source = node( 'td', 'col-source', sourceLabel( item.source ) );
@@ -299,7 +299,7 @@
 	}
 
 	function emptyRow() {
-		const tr = node( 'tr', 'outbox-empty' );
+		const tr = node( 'tr', 'mailspur-empty' );
 		const td = node( 'td', '', data.counts && data.counts.all === 0 && ! state.search && ! state.after && ! state.before ? t.empty : t.emptyFiltered );
 		td.colSpan = 7;
 		tr.append( td );
@@ -379,7 +379,7 @@
 
 	function renderDialog() {
 		const m = current;
-		el.dStatus.className = 'outbox-badge is-' + m.status;
+		el.dStatus.className = 'mailspur-badge is-' + m.status;
 		el.dStatus.textContent = t[ m.status ] || m.status;
 		el.dSubject.textContent = m.subject || t.noSubject;
 
@@ -413,7 +413,7 @@
 			tab.setAttribute( 'aria-selected', String( tab.dataset.view === view ) );
 			tab.tabIndex = tab.dataset.view === view ? 0 : -1;
 		} );
-		el.dBody.setAttribute( 'aria-labelledby', 'outbox-tab-' + view );
+		el.dBody.setAttribute( 'aria-labelledby', 'mailspur-tab-' + view );
 
 		const showRemote = 'preview' === view && current.is_html && REMOTE_RE.test( current.message );
 		el.dRemote.hidden = ! showRemote;
@@ -423,7 +423,7 @@
 		}
 
 		if ( 'preview' === view && current.is_html ) {
-			const frame = node( 'iframe', 'outbox-frame' );
+			const frame = node( 'iframe', 'mailspur-frame' );
 			// Unique opaque origin: no scripts, forms, storage or access to wp-admin.
 			frame.setAttribute( 'sandbox', 'allow-popups allow-popups-to-escape-sandbox' );
 			frame.setAttribute( 'referrerpolicy', 'no-referrer' );
@@ -434,7 +434,7 @@
 		}
 
 		const text = 'headers' === view ? current.headers : current.message;
-		const pre = node( 'pre', 'outbox-pre', text );
+		const pre = node( 'pre', 'mailspur-pre', text );
 		el.dBody.replaceChildren( pre );
 	}
 
@@ -479,7 +479,7 @@
 			renderView();
 			return;
 		}
-		if ( e.target.closest( '#outbox-d-remote-toggle' ) ) {
+		if ( e.target.closest( '#mailspur-d-remote-toggle' ) ) {
 			allowRemote = ! allowRemote;
 			renderView();
 			return;
@@ -531,7 +531,7 @@
 
 	el.dialog.addEventListener( 'close', () => {
 		el.dBody.replaceChildren(); // Drop the iframe so nothing keeps running/loading.
-		const tr = current && el.rows.querySelector( 'tr[data-id="' + current.id + '"] .outbox-open' );
+		const tr = current && el.rows.querySelector( 'tr[data-id="' + current.id + '"] .mailspur-open' );
 		if ( tr ) {
 			tr.focus();
 		}
@@ -583,7 +583,7 @@
 		state.per_page = parseInt( el.perPage.value, 10 );
 		state.page = 1;
 		try {
-			localStorage.setItem( 'outbox.perPage', String( state.per_page ) );
+			localStorage.setItem( 'mailspur.perPage', String( state.per_page ) );
 		} catch ( e ) {
 			// Storage unavailable (private mode) – keep the in-memory value.
 		}
@@ -604,13 +604,13 @@
 		updateSelection();
 	} );
 
-	$( 'outbox-bulk-clear' ).addEventListener( 'click', () => {
+	$( 'mailspur-bulk-clear' ).addEventListener( 'click', () => {
 		selection.clear();
 		el.rows.querySelectorAll( '.col-check input' ).forEach( ( cb ) => ( cb.checked = false ) );
 		updateSelection();
 	} );
 
-	$( 'outbox-bulk-delete' ).addEventListener( 'click', () => {
+	$( 'mailspur-bulk-delete' ).addEventListener( 'click', () => {
 		if ( window.confirm( fmt( t.confirmBulk, num( selection.size ) ) ) ) {
 			remove( [ ...selection ] ).catch( ( err ) => toast( fmt( t.requestFailed, err.message ), true ) );
 		}
@@ -643,7 +643,7 @@
 			return;
 		}
 
-		const tr = e.target.closest( '#outbox-rows tr[data-id]' );
+		const tr = e.target.closest( '#mailspur-rows tr[data-id]' );
 		if ( ! tr ) {
 			return;
 		}
@@ -682,7 +682,7 @@
 
 	// Purge button only for administrators.
 	if ( cfg.canPurge ) {
-		const purge = node( 'button', 'button-link outbox-purge', t.purge );
+		const purge = node( 'button', 'button-link mailspur-purge', t.purge );
 		purge.type = 'button';
 		purge.addEventListener( 'click', async () => {
 			if ( ! window.confirm( t.confirmPurge ) ) {
@@ -698,7 +698,7 @@
 				toast( fmt( t.requestFailed, err.message ), true );
 			}
 		} );
-		app.querySelector( '.outbox-footer' ).append( purge );
+		app.querySelector( '.mailspur-footer' ).append( purge );
 	}
 
 	load();

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"landingPage": "/wp-admin/admin.php?page=outbox-mail-log",
+	"landingPage": "/wp-admin/admin.php?page=mailspur-email-log",
 	"login": true,
 	"steps": [
 		{
@@ -12,7 +12,7 @@
 		},
 		{
 			"step": "activatePlugin",
-			"pluginPath": "outbox-mail-log/outbox-mail-log.php"
+			"pluginPath": "mailspur-email-log/mailspur-email-log.php"
 		},
 		{
 			"step": "runPHP",

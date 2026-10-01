@@ -11,6 +11,6 @@ parameters:
         max: 80599
     tmpDir: .cache/phpstan
     paths:
-        - outbox-mail-log
+        - mailspur-email-log
     excludePaths:
-        - outbox-mail-log/languages/*
+        - mailspur-email-log/languages/*

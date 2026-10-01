@@ -48,26 +48,26 @@ if (shots) {
 		}
 
 		const page = await browser.newPage({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 });
-		const base = `http://127.0.0.1:${port}/wp-admin/admin.php?page=outbox-mail-log`;
+		const base = `http://127.0.0.1:${port}/wp-admin/admin.php?page=mailspur-email-log`;
 		const hideNoise = () => page.addStyleTag({ content: '#wpfooter, .notice, .update-nag { display: none !important; }' });
 
 		// The XSS test entry is for the tests, not for the directory page.
 		await page.goto(base);
 		await page.evaluate(async () => {
-			const c = window.outboxMailLogConfig;
+			const c = window.mailspurConfig;
 			const headers = { 'X-WP-Nonce': c.nonce };
 			const list = await (await fetch(`${c.restUrl}/mails?search=XSS`, { headers })).json();
 			await Promise.all(list.items.map((i) => fetch(`${c.restUrl}/mails/${i.id}`, { method: 'DELETE', headers })));
 		});
 		await page.goto(base);
-		await page.locator('#outbox-rows tr[data-id]').first().waitFor();
+		await page.locator('#mailspur-rows tr[data-id]').first().waitFor();
 		await hideNoise();
 		await page.screenshot({ path: path.join(out, 'screenshot-1.png') });
 		console.log('✓ screenshot-1.png (log)');
 
 		await page.goto(`${base}&s=lena1%40`);
-		await page.locator('#outbox-rows .outbox-open').first().click();
-		await page.frameLocator('iframe.outbox-frame').locator('h1').waitFor();
+		await page.locator('#mailspur-rows .mailspur-open').first().click();
+		await page.frameLocator('iframe.mailspur-frame').locator('h1').waitFor();
 		await page.evaluate(() => document.activeElement?.blur());
 		await hideNoise();
 		await page.screenshot({ path: path.join(out, 'screenshot-2.png') });

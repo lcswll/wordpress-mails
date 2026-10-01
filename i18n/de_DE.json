@@ -98,7 +98,7 @@
 	"Current size": "Aktuelle Größe",
 	"%1$s entries, %2$s": "%1$s Einträge, %2$s",
 	"Email log": "E-Mail-Protokoll",
-	"Outbox – Mail Log": "Outbox – Mail-Log",
+	"Mailspur – Email Log": "Mailspur – E-Mail-Log",
 	"This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period.": "Diese Website protokolliert die von ihr versendeten E-Mails (Empfänger, Betreff, Inhalt und Zustellstatus), um die Zustellung zu prüfen und Fehler zu beheben. Protokolleinträge werden nach der eingestellten Aufbewahrungsdauer automatisch gelöscht.",
 	"Only administrators can empty the log.": "Nur Administratoren können das Protokoll leeren.",
 	"Log entry not found.": "Protokolleintrag nicht gefunden."

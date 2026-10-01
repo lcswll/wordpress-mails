@@ -1,8 +1,8 @@
 // Admin screen in a real browser: filtering, preview isolation, actions, settings, mobile layout.
 import { expect, test } from '@playwright/test';
 
-const LOG = '/wp-admin/admin.php?page=outbox-mail-log';
-const rows = (page) => page.locator('#outbox-rows tr[data-id]');
+const LOG = '/wp-admin/admin.php?page=mailspur-email-log';
+const rows = (page) => page.locator('#mailspur-rows tr[data-id]');
 
 // Hosts referenced by the seeded mails (tracking pixel, links, form target). WordPress core itself
 // may load e.g. Gravatar in the admin bar – that is not the plugin's business.
@@ -40,11 +40,11 @@ test('log lists the seeded mails with counts', async ({ page }) => {
 	await expect(rows(page)).toHaveCount(25);
 	await expect(page.locator('[data-count="all"]')).toHaveText('63');
 	await expect(page.locator('[data-count="failed"]')).toHaveText('1');
-	await expect(page.locator('#outbox-summary')).toContainText('63');
+	await expect(page.locator('#mailspur-summary')).toContainText('63');
 
 	// The XSS subject is shown as text, never parsed.
-	await expect(rows(page).first().locator('.outbox-open')).toHaveText('<img src=x onerror=alert(1)>XSS subject');
-	await expect(page.locator('#outbox-rows img')).toHaveCount(0);
+	await expect(rows(page).first().locator('.mailspur-open')).toHaveText('<img src=x onerror=alert(1)>XSS subject');
+	await expect(page.locator('#mailspur-rows img')).toHaveCount(0);
 
 	expect(seen.errors).toEqual([]);
 	expect(seen.external).toEqual([]);
@@ -61,18 +61,18 @@ test('search, status, sorting and pagination', async ({ page }) => {
 	await expect(rows(page)).toHaveCount(25);
 
 	await page.keyboard.press('/');
-	await expect(page.locator('#outbox-search')).toBeFocused();
+	await expect(page.locator('#mailspur-search')).toBeFocused();
 	await page.keyboard.type('bob@example');
 	await expect(rows(page)).toHaveCount(1);
 	await expect(page).toHaveURL(/[?&]s=bob%40example/);
 	await expect(rows(page).first()).toContainText('Password reset');
 
-	await page.locator('#outbox-reset').click();
+	await page.locator('#mailspur-reset').click();
 	await expect(rows(page)).toHaveCount(25);
 
 	await page.locator('[data-status="failed"]').click();
 	await expect(rows(page)).toHaveCount(1);
-	await expect(rows(page).first().locator('.outbox-error')).toContainText('Could not instantiate mail function');
+	await expect(rows(page).first().locator('.mailspur-error')).toContainText('Could not instantiate mail function');
 	await page.locator('[data-status="all"]').click();
 
 	await page.locator('[data-sort="subject"]').click();
@@ -82,9 +82,9 @@ test('search, status, sorting and pagination', async ({ page }) => {
 	await expect(rows(page).first()).toContainText('<img src=x');
 
 	await page.locator('[data-page="next"]').click();
-	await expect(page.locator('#outbox-page')).toHaveValue('2');
+	await expect(page.locator('#mailspur-page')).toHaveValue('2');
 	await expect(page).toHaveURL(/paged=2/);
-	await page.locator('#outbox-per-page').selectOption('100');
+	await page.locator('#mailspur-per-page').selectOption('100');
 	await expect(rows(page)).toHaveCount(63);
 
 	// Filters survive a reload because they live in the URL.
@@ -96,21 +96,21 @@ test('HTML preview is isolated: no scripts, no forms, no tracking', async ({ pag
 	const seen = watch(page);
 	await page.goto(`${LOG}&s=jan0%40`);
 	await expect(rows(page)).toHaveCount(1);
-	await rows(page).first().locator('.outbox-open').click();
+	await rows(page).first().locator('.mailspur-open').click();
 
-	const dialog = page.locator('#outbox-dialog');
+	const dialog = page.locator('#mailspur-dialog');
 	await expect(dialog).toBeVisible();
-	await expect(page.locator('#outbox-d-subject')).toHaveText('[Example Shop] Your order #125600 has been received');
-	await expect(page.locator('#outbox-d-meta')).toContainText('Example Shop <shop@example.com>');
+	await expect(page.locator('#mailspur-d-subject')).toHaveText('[Example Shop] Your order #125600 has been received');
+	await expect(page.locator('#mailspur-d-meta')).toContainText('Example Shop <shop@example.com>');
 
-	const frame = page.locator('iframe.outbox-frame');
+	const frame = page.locator('iframe.mailspur-frame');
 	await expect(frame).toHaveAttribute('sandbox', 'allow-popups allow-popups-to-escape-sandbox');
 	const srcdoc = await frame.getAttribute('srcdoc');
 	expect(srcdoc).toContain("default-src 'none'");
 	expect(srcdoc).toContain('key=[redacted]');
 	expect(srcdoc).not.toContain('SECRET123');
 
-	const inner = page.frameLocator('iframe.outbox-frame');
+	const inner = page.frameLocator('iframe.mailspur-frame');
 	await expect(inner.locator('h1')).toHaveText('Thanks for your order!');
 
 	// The injected script must not have touched the admin page.
@@ -119,23 +119,23 @@ test('HTML preview is isolated: no scripts, no forms, no tracking', async ({ pag
 	// Opaque origin: the admin page cannot reach into the frame either (and vice versa).
 	expect(await frame.evaluate((f) => f.contentDocument)).toBeNull();
 
-	await expect(page.locator('#outbox-d-remote')).toBeVisible();
+	await expect(page.locator('#mailspur-d-remote')).toBeVisible();
 	expect(seen.external).toEqual([]);
 
 	// Opting in relaxes the CSP for this one mail.
-	await page.locator('#outbox-d-remote-toggle').click();
-	expect(await page.locator('iframe.outbox-frame').getAttribute('srcdoc')).toMatch(/img-src data: cid: https: http:/);
+	await page.locator('#mailspur-d-remote-toggle').click();
+	expect(await page.locator('iframe.mailspur-frame').getAttribute('srcdoc')).toMatch(/img-src data: cid: https: http:/);
 
 	await page.getByRole('tab', { name: 'Headers' }).click();
 	await page.keyboard.press('Escape');
 
 	// Ordinary links are not remote content: a clean mail must not show the notice.
 	await page.goto(`${LOG}&s=lena1%40`);
-	await rows(page).first().locator('.outbox-open').click();
-	await expect(page.frameLocator('iframe.outbox-frame').locator('h1')).toHaveText('Thanks for your order');
-	await expect(page.locator('#outbox-d-remote')).toBeHidden();
+	await rows(page).first().locator('.mailspur-open').click();
+	await expect(page.frameLocator('iframe.mailspur-frame').locator('h1')).toHaveText('Thanks for your order');
+	await expect(page.locator('#mailspur-d-remote')).toBeHidden();
 	await page.getByRole('tab', { name: 'Headers' }).click();
-	await expect(page.locator('#outbox-d-body pre')).toContainText('Content-Type: text/html; charset=UTF-8');
+	await expect(page.locator('#mailspur-d-body pre')).toContainText('Content-Type: text/html; charset=UTF-8');
 
 	await page.keyboard.press('Escape');
 	await expect(dialog).toBeHidden();
@@ -148,18 +148,18 @@ test('HTML preview is isolated: no scripts, no forms, no tracking', async ({ pag
 test('keyboard navigation and delete from the dialog', async ({ page }) => {
 	watch(page);
 	await page.goto(LOG);
-	await rows(page).nth(1).locator('.outbox-open').click();
-	await expect(page.locator('#outbox-d-subject')).toHaveText('Your weekly newsletter');
+	await rows(page).nth(1).locator('.mailspur-open').click();
+	await expect(page.locator('#mailspur-d-subject')).toHaveText('Your weekly newsletter');
 
 	await page.keyboard.press('j');
-	await expect(page.locator('#outbox-d-subject')).toHaveText('Password reset');
-	await expect(page.locator('#outbox-d-body pre')).toContainText('key=[redacted]&login=anna');
+	await expect(page.locator('#mailspur-d-subject')).toHaveText('Password reset');
+	await expect(page.locator('#mailspur-d-body pre')).toContainText('key=[redacted]&login=anna');
 	await page.keyboard.press('k');
-	await expect(page.locator('#outbox-d-subject')).toHaveText('Your weekly newsletter');
+	await expect(page.locator('#mailspur-d-subject')).toHaveText('Your weekly newsletter');
 
-	await page.locator('#outbox-dialog [data-action="delete"]').click();
+	await page.locator('#mailspur-dialog [data-action="delete"]').click();
 	await expect(page.locator('[data-count="all"]')).toHaveText('62');
-	await expect(page.locator('#outbox-d-subject')).toHaveText('Password reset');
+	await expect(page.locator('#mailspur-d-subject')).toHaveText('Password reset');
 	await page.keyboard.press('Escape');
 });
 
@@ -167,32 +167,32 @@ test('bulk delete', async ({ page }) => {
 	watch(page);
 	await page.goto(`${LOG}&s=lena`);
 	await expect(rows(page)).toHaveCount(6);
-	await page.locator('#outbox-select-all').check();
-	await expect(page.locator('#outbox-selected')).toContainText('6');
-	await page.locator('#outbox-bulk-delete').click();
-	await expect(page.locator('.outbox-empty')).toBeVisible();
+	await page.locator('#mailspur-select-all').check();
+	await expect(page.locator('#mailspur-selected')).toContainText('6');
+	await page.locator('#mailspur-bulk-delete').click();
+	await expect(page.locator('.mailspur-empty')).toBeVisible();
 	await expect(page.locator('[data-count="all"]')).toHaveText('0');
 });
 
 test('settings are saved and validated', async ({ page }) => {
 	await page.goto(`${LOG}&tab=settings`);
-	await page.locator('#outbox-retention').fill('30');
+	await page.locator('#mailspur-retention').fill('30');
 	// Bypass the browser's min="0" like a crafted request would, so the server-side sanitizer is tested.
-	await page.locator('#outbox-max').evaluate((el) => el.removeAttribute('min'));
-	await page.locator('#outbox-max').fill('-5');
-	await page.locator('input[name="outbox_mail_log_settings[remote_images]"]').check();
+	await page.locator('#mailspur-max').evaluate((el) => el.removeAttribute('min'));
+	await page.locator('#mailspur-max').fill('-5');
+	await page.locator('input[name="mailspur_settings[remote_images]"]').check();
 	await page.getByRole('button', { name: 'Save Changes' }).click();
 
 	await expect(page.locator('#setting-error-settings_updated')).toBeVisible();
-	await expect(page.locator('#outbox-retention')).toHaveValue('30');
-	await expect(page.locator('#outbox-max')).toHaveValue('5');
-	await expect(page.locator('input[name="outbox_mail_log_settings[remote_images]"]')).toBeChecked();
+	await expect(page.locator('#mailspur-retention')).toHaveValue('30');
+	await expect(page.locator('#mailspur-max')).toHaveValue('5');
+	await expect(page.locator('input[name="mailspur_settings[remote_images]"]')).toBeChecked();
 });
 
 test('mobile layout has no horizontal scrolling', async ({ page }) => {
 	await page.setViewportSize({ width: 375, height: 812 });
 	await page.goto(LOG);
 	await expect(rows(page).first()).toBeVisible();
-	const overflow = await page.evaluate(() => document.querySelector('.outbox-app').scrollWidth - document.querySelector('.outbox-app').clientWidth);
+	const overflow = await page.evaluate(() => document.querySelector('.mailspur-app').scrollWidth - document.querySelector('.mailspur-app').clientWidth);
 	expect(overflow).toBeLessThanOrEqual(0);
 });

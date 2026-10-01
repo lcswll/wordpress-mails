@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       Outbox – Mail Log
- * Plugin URI:        https://github.com/lcswll02/outbox-mail-log
+ * Plugin Name:       Mailspur – Email Log
+ * Plugin URI:        https://github.com/lcswll/wordpress-mails
  * Description:       Logs every outgoing email and lets you search, filter and safely inspect it. A modern, lightweight replacement for classic mail logging plugins.
  * Version:           1.0.0
  * Requires at least: 6.5
@@ -9,13 +9,13 @@
  * Author:            Lucas
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       outbox-mail-log
+ * Text Domain:       mailspur-email-log
  * Domain Path:       /languages
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 defined( 'ABSPATH' ) || exit;
 

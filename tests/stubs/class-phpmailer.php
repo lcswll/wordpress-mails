@@ -2,7 +2,7 @@
 /**
  * PHPMailer stand-in with the public properties the logger reads in phpmailer_init.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
 namespace PHPMailer\PHPMailer;

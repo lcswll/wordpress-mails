@@ -10,7 +10,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
-export const PLUGIN_SLUG = 'outbox-mail-log';
+export const PLUGIN_SLUG = 'mailspur-email-log';
 export const pluginDir = path.join(root, PLUGIN_SLUG);
 
 const runs = (bin) => spawnSync(bin, ['-v'], { encoding: 'utf8', shell: bin === 'php' && process.platform === 'win32' }).status === 0;

@@ -2,13 +2,13 @@
 /**
  * Settings: sanitizing untrusted form input.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog\Tests;
+namespace Mailspur\Tests;
 
 use Brain\Monkey\Functions;
-use OutboxMailLog\Settings;
+use Mailspur\Settings;
 
 final class SettingsTest extends TestCase {
 

@@ -1,4 +1,4 @@
-=== Outbox – Mail Log ===
+=== Mailspur – Email Log ===
 Contributors: lcswll
 Tags: email log, mail log, wp_mail, smtp, email
 Requires at least: 6.5
@@ -12,7 +12,16 @@ Logs every email WordPress sends. Search, filter, preview and resend mails safel
 
 == Description ==
 
-Did the order confirmation go out? Why did the password reset never arrive? Outbox records every email sent through `wp_mail()` – no matter which plugin triggered it or which SMTP or API mailer delivers it – and shows it in a fast, filterable log.
+Did the order confirmation go out? Why did the password reset never arrive? Mailspur records every email sent through `wp_mail()` – no matter which plugin triggered it or which SMTP or API mailer delivers it – and shows it in a fast, filterable log.
+
+= What makes it different =
+
+Most email logs treat the log as a simple archive. Mailspur treats it as sensitive data and a potential attack surface:
+
+* **Logged emails cannot attack you.** HTML emails are shown in a sandboxed frame with an opaque origin: injected scripts, phishing forms and tracking pixels in a logged email stay inert. Many logs render stored HTML directly in the admin area.
+* **The log cannot be used to take over accounts.** One-time secrets in links (password resets, activation keys, order keys) are masked *before* they are written to the database.
+* **It records what was actually sent** – the final body after template plugins, the real sender and content type – and which plugin or theme sent the email, also for API mailers that bypass PHPMailer.
+* **Built for large logs:** an indexed table, live search and status counts in a single query, retention in small batches. No upsells, no external services, no tracking.
 
 = Find any email in seconds =
 
@@ -44,7 +53,7 @@ Did the order confirmation go out? Why did the password reset never arrive? Outb
 
 = Privacy =
 
-The log contains personal data (recipients and content of emails). Outbox:
+The log contains personal data (recipients and content of emails). Mailspur:
 
 * deletes entries automatically after a configurable retention period (default: 90 days) and/or above a maximum number of entries,
 * integrates with the WordPress personal data export and erasure tools (Tools → Export/Erase Personal Data),
@@ -53,12 +62,16 @@ The log contains personal data (recipients and content of emails). Outbox:
 
 = For developers =
 
-* `outbox_mail_log_should_log` (filter, bool, `$atts`) – return false to skip logging a specific email.
-* `outbox_mail_log_redact_params` (filter, string[]) – URL query parameters whose values are masked.
+* `mailspur_should_log` (filter, bool, `$atts`) – return false to skip logging a specific email.
+* `mailspur_redact_params` (filter, string[]) – URL query parameters whose values are masked.
+
+= Source code =
+
+Development happens on GitHub: https://github.com/lcswll/wordpress-mails – issues and pull requests are welcome.
 
 == Installation ==
 
-1. Install the plugin via Plugins → Add New (search for "Outbox Mail Log") or upload the ZIP file.
+1. Install the plugin via Plugins → Add New (search for "Mailspur Email Log") or upload the ZIP file.
 2. Activate it. Logging starts immediately.
 3. Open "Mail Log" in the admin menu. Adjust retention and access under the "Settings" tab.
 
@@ -66,7 +79,7 @@ The log contains personal data (recipients and content of emails). Outbox:
 
 = Does it work with my SMTP plugin? =
 
-Yes. Outbox hooks into `wp_mail()` itself, so it works with any SMTP or API mailer that uses WordPress' mail function – including those that send through `pre_wp_mail`.
+Yes. Mailspur hooks into `wp_mail()` itself, so it works with any SMTP or API mailer that uses WordPress' mail function – including those that send through `pre_wp_mail`.
 
 = Can the log be used to hijack accounts via logged password-reset links? =
 

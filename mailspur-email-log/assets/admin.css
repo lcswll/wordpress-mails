@@ -1,6 +1,6 @@
-/* Outbox – Mail Log admin styles. Uses WP admin color scheme variables where available. */
+/* Mailspur – Email Log admin styles. Uses WP admin color scheme variables where available. */
 
-.outbox {
+.mailspur {
 	--ob-accent: var(--wp-admin-theme-color, #2271b1);
 	--ob-border: #dcdcde;
 	--ob-muted: #646970;
@@ -17,7 +17,7 @@
 
 /* ---------------------------------------------------------------- header */
 
-.outbox-header {
+.mailspur-header {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -25,7 +25,7 @@
 	margin-bottom: 12px;
 }
 
-.outbox .outbox-title {
+.mailspur .mailspur-title {
 	display: flex;
 	align-items: center;
 	gap: 6px;
@@ -33,19 +33,19 @@
 	margin: 0;
 }
 
-.outbox-title .dashicons {
+.mailspur-title .dashicons {
 	width: 26px;
 	height: 26px;
 	font-size: 26px;
 	color: var(--ob-accent);
 }
 
-.outbox-nav {
+.mailspur-nav {
 	display: flex;
 	gap: 4px;
 }
 
-.outbox-nav a {
+.mailspur-nav a {
 	padding: 6px 12px;
 	border-radius: var(--ob-radius);
 	color: #1d2327;
@@ -53,18 +53,18 @@
 	text-decoration: none;
 }
 
-.outbox-nav a:hover {
+.mailspur-nav a:hover {
 	background: #e5e5e5;
 }
 
-.outbox-nav a.is-active {
+.mailspur-nav a.is-active {
 	background: var(--ob-accent);
 	color: #fff;
 }
 
 /* --------------------------------------------------------------- toolbar */
 
-.outbox-toolbar {
+.mailspur-toolbar {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -73,13 +73,13 @@
 	margin-bottom: 12px;
 }
 
-.outbox-status {
+.mailspur-status {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 6px;
 }
 
-.outbox-chip {
+.mailspur-chip {
 	display: inline-flex;
 	align-items: center;
 	gap: 6px;
@@ -93,66 +93,66 @@
 	cursor: pointer;
 }
 
-.outbox-chip:hover {
+.mailspur-chip:hover {
 	border-color: #8c8f94;
 }
 
-.outbox-chip[aria-pressed="true"] {
+.mailspur-chip[aria-pressed="true"] {
 	border-color: var(--ob-accent);
 	background: var(--ob-accent);
 	color: #fff;
 }
 
-.outbox-count {
+.mailspur-count {
 	color: var(--ob-muted);
 	font-variant-numeric: tabular-nums;
 }
 
-.outbox-count:empty {
+.mailspur-count:empty {
 	display: none;
 }
 
-.outbox-chip[aria-pressed="true"] .outbox-count {
+.mailspur-chip[aria-pressed="true"] .mailspur-count {
 	color: inherit;
 	opacity: 0.85;
 }
 
-.outbox-chip.is-failed .outbox-count:not(:empty) {
+.mailspur-chip.is-failed .mailspur-count:not(:empty) {
 	color: var(--ob-failed);
 }
 
-.outbox-chip.is-failed[aria-pressed="true"] .outbox-count {
+.mailspur-chip.is-failed[aria-pressed="true"] .mailspur-count {
 	color: inherit;
 }
 
-.outbox-filters {
+.mailspur-filters {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	gap: 8px 12px;
 }
 
-.outbox-search {
+.mailspur-search {
 	position: relative;
 	display: flex;
 	align-items: center;
 }
 
-.outbox-search .dashicons {
+.mailspur-search .dashicons {
 	position: absolute;
 	left: 8px;
 	color: var(--ob-muted);
 	pointer-events: none;
 }
 
-.outbox .outbox-search input {
+.mailspur .mailspur-search input {
 	width: 300px;
 	min-height: 32px;
 	padding: 0 32px;
 	border-radius: var(--ob-radius);
 }
 
-.outbox-search kbd {
+.mailspur-search kbd {
 	position: absolute;
 	right: 8px;
 	padding: 0 5px;
@@ -165,28 +165,28 @@
 	pointer-events: none;
 }
 
-.outbox-search input:focus ~ kbd {
+.mailspur-search input:focus ~ kbd {
 	display: none;
 }
 
-.outbox-dates {
+.mailspur-dates {
 	display: inline-flex;
 	align-items: center;
 	gap: 4px;
 }
 
-.outbox .outbox-dates input {
+.mailspur .mailspur-dates input {
 	min-height: 32px;
 	border-radius: var(--ob-radius);
 }
 
-.outbox-check {
+.mailspur-check {
 	white-space: nowrap;
 }
 
 /* ------------------------------------------------------------------ bulk */
 
-.outbox-bulk {
+.mailspur-bulk {
 	display: flex;
 	align-items: center;
 	gap: 12px;
@@ -196,13 +196,13 @@
 	background: #f0f6fc;
 }
 
-.outbox-bulk[hidden] {
+.mailspur-bulk[hidden] {
 	display: none;
 }
 
 /* ----------------------------------------------------------------- table */
 
-.outbox-table-wrap {
+.mailspur-table-wrap {
 	overflow: hidden;
 	border: 1px solid var(--ob-border);
 	border-radius: var(--ob-radius);
@@ -210,26 +210,26 @@
 	transition: opacity 0.15s;
 }
 
-.outbox-app[aria-busy="true"] .outbox-table-wrap {
+.mailspur-app[aria-busy="true"] .mailspur-table-wrap {
 	opacity: 0.6;
 }
 
-.outbox-table {
+.mailspur-table {
 	width: 100%;
 	border-collapse: collapse;
 	table-layout: fixed;
 }
 
-.outbox-table th,
-.outbox-table td {
+.mailspur-table th,
+.mailspur-table td {
 	padding: 9px 10px;
 	border-bottom: 1px solid #f0f0f1;
 	text-align: left;
 	vertical-align: middle;
 }
 
-.outbox-table thead th,
-.outbox-table thead td {
+.mailspur-table thead th,
+.mailspur-table thead td {
 	border-bottom-color: var(--ob-border);
 	background: #f6f7f7;
 	color: #1d2327;
@@ -237,7 +237,7 @@
 	font-weight: 600;
 }
 
-.outbox-table thead button {
+.mailspur-table thead button {
 	padding: 0;
 	border: 0;
 	background: none;
@@ -246,7 +246,7 @@
 	cursor: pointer;
 }
 
-.outbox-table thead button::after {
+.mailspur-table thead button::after {
 	content: "";
 	display: inline-block;
 	width: 0;
@@ -256,63 +256,63 @@
 	opacity: 0;
 }
 
-.outbox-table th[aria-sort="descending"] button::after {
+.mailspur-table th[aria-sort="descending"] button::after {
 	border-top-color: currentColor;
 	border-bottom-width: 0;
 	opacity: 1;
 }
 
-.outbox-table th[aria-sort="ascending"] button::after {
+.mailspur-table th[aria-sort="ascending"] button::after {
 	border-bottom-color: currentColor;
 	border-top-width: 0;
 	opacity: 1;
 }
 
-.outbox-table tbody tr:last-child > * {
+.mailspur-table tbody tr:last-child > * {
 	border-bottom: 0;
 }
 
-.outbox-table tbody tr[data-id] {
+.mailspur-table tbody tr[data-id] {
 	cursor: pointer;
 }
 
-.outbox-table tbody tr[data-id]:hover,
-.outbox-table tbody tr.is-current {
+.mailspur-table tbody tr[data-id]:hover,
+.mailspur-table tbody tr.is-current {
 	background: var(--ob-row-hover);
 }
 
-.outbox-table tbody tr.is-current {
+.mailspur-table tbody tr.is-current {
 	box-shadow: inset 3px 0 0 var(--ob-accent);
 }
 
-.outbox-table .col-check {
+.mailspur-table .col-check {
 	width: 28px;
 	padding-right: 0;
 }
 
-.outbox-table .col-check input {
+.mailspur-table .col-check input {
 	margin: 0;
 }
 
-.outbox-table .col-date {
+.mailspur-table .col-date {
 	width: 150px;
 	color: var(--ob-muted);
 	font-variant-numeric: tabular-nums;
 	white-space: nowrap;
 }
 
-.outbox-table .col-status {
+.mailspur-table .col-status {
 	width: 90px;
 }
 
-.outbox-table .col-to {
+.mailspur-table .col-to {
 	width: 24%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
 
-.outbox-table .col-source {
+.mailspur-table .col-source {
 	width: 130px;
 	overflow: hidden;
 	color: var(--ob-muted);
@@ -320,13 +320,13 @@
 	white-space: nowrap;
 }
 
-.outbox-table .col-actions {
+.mailspur-table .col-actions {
 	width: 100px;
 	text-align: right;
 	white-space: nowrap;
 }
 
-.outbox-open {
+.mailspur-open {
 	padding: 0;
 	border: 0;
 	background: none;
@@ -336,13 +336,13 @@
 	cursor: pointer;
 }
 
-.outbox-open:hover,
-.outbox-open:focus {
+.mailspur-open:hover,
+.mailspur-open:focus {
 	color: var(--ob-accent);
 	text-decoration: underline;
 }
 
-.outbox-clip {
+.mailspur-clip {
 	width: 16px;
 	height: 16px;
 	margin-left: 4px;
@@ -351,14 +351,14 @@
 	vertical-align: text-bottom;
 }
 
-.outbox-error {
+.mailspur-error {
 	display: block;
 	margin-top: 2px;
 	color: var(--ob-failed);
 	font-size: 12px;
 }
 
-.outbox-row-action {
+.mailspur-row-action {
 	width: 28px;
 	height: 28px;
 	padding: 0;
@@ -369,25 +369,25 @@
 	cursor: pointer;
 }
 
-.outbox-row-action:hover,
-.outbox-row-action:focus {
+.mailspur-row-action:hover,
+.mailspur-row-action:focus {
 	background: #dcdcde;
 	color: #1d2327;
 }
 
-.outbox-row-action[data-action="delete"]:hover {
+.mailspur-row-action[data-action="delete"]:hover {
 	background: var(--ob-failed-bg);
 	color: var(--ob-failed);
 }
 
-.outbox-empty td {
+.mailspur-empty td {
 	padding: 48px 12px;
 	color: var(--ob-muted);
 	text-align: center;
 	cursor: default;
 }
 
-.outbox-badge {
+.mailspur-badge {
 	display: inline-block;
 	padding: 1px 8px;
 	border-radius: 999px;
@@ -397,24 +397,24 @@
 	white-space: nowrap;
 }
 
-.outbox-badge.is-sent {
+.mailspur-badge.is-sent {
 	background: var(--ob-sent-bg);
 	color: #007017;
 }
 
-.outbox-badge.is-failed {
+.mailspur-badge.is-failed {
 	background: var(--ob-failed-bg);
 	color: var(--ob-failed);
 }
 
-.outbox-badge.is-pending {
+.mailspur-badge.is-pending {
 	background: var(--ob-pending-bg);
 	color: var(--ob-pending);
 }
 
 /* ---------------------------------------------------------------- footer */
 
-.outbox-footer {
+.mailspur-footer {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -422,29 +422,29 @@
 	margin-top: 12px;
 }
 
-#outbox-summary {
+#mailspur-summary {
 	color: var(--ob-muted);
 }
 
-.outbox-pager {
+.mailspur-pager {
 	display: flex;
 	align-items: center;
 	gap: 4px;
 	margin-left: auto;
 }
 
-.outbox .outbox-pager input {
+.mailspur .mailspur-pager input {
 	width: 64px;
 	text-align: center;
 }
 
-.outbox-purge.button-link {
+.mailspur-purge.button-link {
 	color: var(--ob-failed);
 }
 
 /* ---------------------------------------------------------------- dialog */
 
-.outbox-dialog {
+.mailspur-dialog {
 	width: min(1100px, calc(100vw - 32px));
 	height: calc(100vh - 64px);
 	max-width: none;
@@ -455,16 +455,16 @@
 	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
-.outbox-dialog[open] {
+.mailspur-dialog[open] {
 	display: flex;
 	flex-direction: column;
 }
 
-.outbox-dialog::backdrop {
+.mailspur-dialog::backdrop {
 	background: rgba(15, 23, 42, 0.55);
 }
 
-.outbox-d-head {
+.mailspur-d-head {
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
@@ -472,48 +472,48 @@
 	padding: 16px 20px 8px;
 }
 
-.outbox-d-title {
+.mailspur-d-title {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 	min-width: 0;
 }
 
-.outbox-d-title h2 {
+.mailspur-d-title h2 {
 	margin: 0;
 	font-size: 18px;
 	line-height: 1.4;
 	overflow-wrap: anywhere;
 }
 
-.outbox-d-actions {
+.mailspur-d-actions {
 	display: flex;
 	flex-shrink: 0;
 	gap: 4px;
 }
 
-.outbox-d-actions .button {
+.mailspur-d-actions .button {
 	display: inline-flex;
 	align-items: center;
 	gap: 4px;
 }
 
-.outbox-d-actions .button .dashicons {
+.mailspur-d-actions .button .dashicons {
 	width: 16px;
 	height: 16px;
 	font-size: 16px;
 }
 
-.outbox-d-actions .outbox-icon {
+.mailspur-d-actions .mailspur-icon {
 	padding: 0 6px;
 }
 
-.outbox-d-actions .outbox-danger:hover {
+.mailspur-d-actions .mailspur-danger:hover {
 	border-color: var(--ob-failed);
 	color: var(--ob-failed);
 }
 
-.outbox-d-meta {
+.mailspur-d-meta {
 	display: grid;
 	grid-template-columns: max-content 1fr;
 	gap: 4px 16px;
@@ -522,20 +522,20 @@
 	font-size: 13px;
 }
 
-.outbox-d-meta dt {
+.mailspur-d-meta dt {
 	color: var(--ob-muted);
 }
 
-.outbox-d-meta dd {
+.mailspur-d-meta dd {
 	margin: 0;
 	overflow-wrap: anywhere;
 }
 
-.outbox-d-meta .is-error {
+.mailspur-d-meta .is-error {
 	color: var(--ob-failed);
 }
 
-.outbox-d-tabs {
+.mailspur-d-tabs {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -544,7 +544,7 @@
 	border-bottom: 1px solid var(--ob-border);
 }
 
-.outbox-d-tabs [role="tab"] {
+.mailspur-d-tabs [role="tab"] {
 	margin-bottom: -1px;
 	padding: 10px 2px;
 	border: 0;
@@ -556,12 +556,12 @@
 	cursor: pointer;
 }
 
-.outbox-d-tabs [role="tab"][aria-selected="true"] {
+.mailspur-d-tabs [role="tab"][aria-selected="true"] {
 	border-bottom-color: var(--ob-accent);
 	color: #1d2327;
 }
 
-.outbox-d-remote {
+.mailspur-d-remote {
 	display: inline-flex;
 	align-items: center;
 	gap: 6px;
@@ -570,18 +570,18 @@
 	font-size: 12px;
 }
 
-.outbox-d-remote[hidden] {
+.mailspur-d-remote[hidden] {
 	display: none;
 }
 
-.outbox-d-body {
+.mailspur-d-body {
 	flex: 1;
 	min-height: 0;
 	overflow: auto;
 	background: #f6f7f7;
 }
 
-.outbox-frame {
+.mailspur-frame {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -589,7 +589,7 @@
 	background: #fff;
 }
 
-.outbox-pre {
+.mailspur-pre {
 	margin: 0;
 	padding: 16px 20px;
 	font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -599,7 +599,7 @@
 
 /* ----------------------------------------------------------------- toast */
 
-.outbox-toast {
+.mailspur-toast {
 	position: fixed;
 	z-index: 100100;
 	bottom: 24px;
@@ -616,53 +616,53 @@
 	transition: opacity 0.2s, transform 0.2s;
 }
 
-.outbox-toast.is-visible {
+.mailspur-toast.is-visible {
 	opacity: 1;
 	transform: translate(-50%, 0);
 }
 
-.outbox-toast.is-error {
+.mailspur-toast.is-error {
 	background: var(--ob-failed);
 }
 
 /* -------------------------------------------------------------- settings */
 
-.outbox-settings h2 {
+.mailspur-settings h2 {
 	margin-top: 28px;
 }
 
-.outbox .outbox-narrow {
+.mailspur .mailspur-narrow {
 	width: 8em;
 }
 
 /* ---------------------------------------------------------------- mobile */
 
 @media (max-width: 960px) {
-	.outbox-table .col-source {
+	.mailspur-table .col-source {
 		display: none;
 	}
 }
 
 @media (max-width: 782px) {
-	.outbox .outbox-search,
-	.outbox .outbox-search input {
+	.mailspur .mailspur-search,
+	.mailspur .mailspur-search input {
 		width: 100%;
 	}
 
-	.outbox-filters {
+	.mailspur-filters {
 		width: 100%;
 	}
 
-	.outbox-table thead {
+	.mailspur-table thead {
 		display: none;
 	}
 
-	.outbox-table,
-	.outbox-table tbody {
+	.mailspur-table,
+	.mailspur-table tbody {
 		display: block;
 	}
 
-	.outbox-table tbody tr[data-id] {
+	.mailspur-table tbody tr[data-id] {
 		display: grid;
 		grid-template-columns: 28px 1fr auto;
 		gap: 2px 8px;
@@ -670,62 +670,62 @@
 		border-bottom: 1px solid #f0f0f1;
 	}
 
-	.outbox-table tbody tr[data-id] > * {
+	.mailspur-table tbody tr[data-id] > * {
 		display: block;
 		width: auto;
 		padding: 0;
 		border: 0;
 	}
 
-	.outbox-table tbody .col-check {
+	.mailspur-table tbody .col-check {
 		grid-row: 1 / 5;
 	}
 
-	.outbox-table tbody tr[data-id] > .col-source {
+	.mailspur-table tbody tr[data-id] > .col-source {
 		display: none;
 	}
 
-	.outbox-table tbody .col-date {
+	.mailspur-table tbody .col-date {
 		grid-column: 2;
 	}
 
-	.outbox-table tbody .col-status {
+	.mailspur-table tbody .col-status {
 		grid-column: 3;
 		grid-row: 1;
 	}
 
-	.outbox-table tbody .col-to,
-	.outbox-table tbody .col-subject {
+	.mailspur-table tbody .col-to,
+	.mailspur-table tbody .col-subject {
 		grid-column: 2 / 4;
 	}
 
-	.outbox-table tbody .col-actions {
+	.mailspur-table tbody .col-actions {
 		grid-column: 2 / 4;
 		text-align: left;
 	}
 
-	.outbox-pager {
+	.mailspur-pager {
 		margin-left: 0;
 	}
 
-	.outbox-dialog {
+	.mailspur-dialog {
 		width: 100vw;
 		height: 100vh;
 		border-radius: 0;
 	}
 
-	.outbox-d-head {
+	.mailspur-d-head {
 		flex-direction: column;
 	}
 
-	.outbox-d-actions {
+	.mailspur-d-actions {
 		flex-wrap: wrap;
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.outbox-toast,
-	.outbox-table-wrap {
+	.mailspur-toast,
+	.mailspur-table-wrap {
 		transition: none;
 	}
 }

@@ -1,9 +1,9 @@
 {
-  "name": "outbox-mail-log-dev",
+  "name": "mailspur-email-log-dev",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Dev tooling for the Outbox – Mail Log WordPress plugin: checks, tests, e2e, release ZIP.",
+  "description": "Dev tooling for the Mailspur – Email Log WordPress plugin: checks, tests, e2e, release ZIP.",
   "license": "GPL-2.0-or-later",
   "engines": {
     "node": ">=22"

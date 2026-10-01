@@ -3,7 +3,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Language: de_DE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Domain: outbox-mail-log\n"
+"X-Domain: mailspur-email-log\n"
 
 msgid "%1$s entries, %2$s"
 msgstr "%1$s Einträge, %2$s"
@@ -152,6 +152,9 @@ msgstr "Mail-Log"
 msgid "Mail Log sections"
 msgstr "Mail-Log-Bereiche"
 
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – E-Mail-Log"
+
 msgid "Mask password-reset, activation and access keys in logged links"
 msgstr "Passwort-Reset-, Aktivierungs- und Zugriffsschlüssel in protokollierten Links maskieren"
 
@@ -175,9 +178,6 @@ msgstr "Keine E-Mails passen zu diesen Filtern."
 
 msgid "Only administrators can empty the log."
 msgstr "Nur Administratoren können das Protokoll leeren."
-
-msgid "Outbox – Mail Log"
-msgstr "Outbox – Mail-Log"
 
 msgid "Own top-level menu item"
 msgstr "Eigener Hauptmenüpunkt"

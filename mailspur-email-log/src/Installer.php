@@ -2,16 +2,16 @@
 /**
  * Schema installation and upgrades.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog;
+namespace Mailspur;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Installer {
 
-	const DB_VERSION_OPTION = 'outbox_mail_log_db_version';
+	const DB_VERSION_OPTION = 'mailspur_db_version';
 
 	/**
 	 * Installs the table for the current site. On network activation other

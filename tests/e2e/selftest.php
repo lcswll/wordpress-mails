@@ -7,13 +7,13 @@
  *
  * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
 require '/wordpress/wp-load.php';
 require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
-use OutboxMailLog\Repository;
+use Mailspur\Repository;
 
 $results = array();
 
@@ -41,7 +41,7 @@ function last_row() {
 
 /** @return WP_REST_Response */
 function rest( $method, $route, $params = array() ) {
-	$request = new WP_REST_Request( $method, '/outbox-mail-log/v1' . $route );
+	$request = new WP_REST_Request( $method, '/mailspur-email-log/v1' . $route );
 	foreach ( $params as $key => $value ) {
 		$request->set_param( $key, $value );
 	}
@@ -53,10 +53,10 @@ try {
 	$table = Repository::table();
 
 	// ---------------------------------------------------------------- activation.
-	check( is_plugin_active( 'outbox-mail-log/outbox-mail-log.php' ), 'plugin is active' );
+	check( is_plugin_active( 'mailspur-email-log/mailspur-email-log.php' ), 'plugin is active' );
 	check( null !== $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) ), 'log table exists', $wpdb->last_error );
-	check( 1 === (int) get_option( 'outbox_mail_log_db_version' ), 'schema version stored' );
-	check( (bool) wp_next_scheduled( 'outbox_mail_log_cleanup' ), 'daily cleanup scheduled' );
+	check( 1 === (int) get_option( 'mailspur_db_version' ), 'schema version stored' );
+	check( (bool) wp_next_scheduled( 'mailspur_cleanup' ), 'daily cleanup scheduled' );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i', $table ) ); // Start from a known state.
 
 	// ------------------------------------------------- delivery via pre_wp_mail.
@@ -111,11 +111,11 @@ try {
 	check( 'text/plain' === $main['content_type'], 'final content type stored', $main['content_type'] );
 	check( 'Nested failure notice' === $inner['subject'] && '2' === $inner['status'], 'nested mail resolved separately', $inner );
 
-	add_filter( 'outbox_mail_log_should_log', '__return_false' );
+	add_filter( 'mailspur_should_log', '__return_false' );
 	$before = (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) );
 	wp_mail( 'skip@example.com', 'Skipped', 'x' );
-	remove_filter( 'outbox_mail_log_should_log', '__return_false' );
-	check( (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) ) === $before, 'outbox_mail_log_should_log can skip mails' );
+	remove_filter( 'mailspur_should_log', '__return_false' );
+	check( (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) ) === $before, 'mailspur_should_log can skip mails' );
 
 	// ------------------------------------------------------------ REST: access.
 	wp_set_current_user( 0 );
@@ -180,20 +180,20 @@ try {
 
 	$resend = rest( 'POST', '/mails/' . $first['id'] . '/resend' );
 	$row    = last_row();
-	check( 200 === $resend->get_status() && 'outbox:resend' === $row['source'], 'resend creates a new entry', $row );
+	check( 200 === $resend->get_status() && 'mailspur:resend' === $row['source'], 'resend creates a new entry', $row );
 
 	$delete = rest( 'DELETE', '/mails', array( 'ids' => array( (int) $row['id'] ) ) )->get_data();
 	check( 1 === $delete['deleted'], 'bulk delete', $delete );
 
 	// ------------------------------------------------------------- retention.
-	update_option( 'outbox_mail_log_settings', array_merge( get_option( 'outbox_mail_log_settings', array() ), array( 'retention_days' => 30 ) ) );
+	update_option( 'mailspur_settings', array_merge( get_option( 'mailspur_settings', array() ), array( 'retention_days' => 30 ) ) );
 	$old = (int) $wpdb->get_var( $wpdb->prepare( 'SELECT MIN(id) FROM %i', $table ) );
 	$wpdb->update( $table, array( 'created_at' => gmdate( 'Y-m-d H:i:s', time() - 40 * DAY_IN_SECONDS ) ), array( 'id' => $old ) );
-	do_action( 'outbox_mail_log_cleanup' );
+	do_action( 'mailspur_cleanup' );
 	check( null === $wpdb->get_var( $wpdb->prepare( 'SELECT id FROM %i WHERE id = %d', $table, $old ) ), 'entries older than retention are deleted' );
 
-	update_option( 'outbox_mail_log_settings', array_merge( get_option( 'outbox_mail_log_settings', array() ), array( 'max_entries' => 2 ) ) );
-	do_action( 'outbox_mail_log_cleanup' );
+	update_option( 'mailspur_settings', array_merge( get_option( 'mailspur_settings', array() ), array( 'max_entries' => 2 ) ) );
+	do_action( 'mailspur_cleanup' );
 	check( 2 === (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) ), 'max entries enforced' );
 
 	// --------------------------------------------------------------- privacy.
@@ -201,12 +201,12 @@ try {
 	wp_mail( 'xprivacy@example.com', 'Similar address', 'x' );
 	$exporters = apply_filters( 'wp_privacy_personal_data_exporters', array() );
 	$erasers   = apply_filters( 'wp_privacy_personal_data_erasers', array() );
-	check( isset( $exporters['outbox-mail-log'], $erasers['outbox-mail-log'] ), 'privacy exporter and eraser registered' );
-	$export = call_user_func( $exporters['outbox-mail-log']['callback'], 'privacy@example.com', 1 );
+	check( isset( $exporters['mailspur-email-log'], $erasers['mailspur-email-log'] ), 'privacy exporter and eraser registered' );
+	$export = call_user_func( $exporters['mailspur-email-log']['callback'], 'privacy@example.com', 1 );
 	check( 1 === count( $export['data'] ) && $export['done'], 'export finds exact address only', $export );
-	$erase = call_user_func( $erasers['outbox-mail-log']['callback'], 'privacy@example.com', 1 );
+	$erase = call_user_func( $erasers['mailspur-email-log']['callback'], 'privacy@example.com', 1 );
 	check( $erase['items_removed'] && $erase['done'], 'eraser removes entries', $erase );
-	check( 0 === count( call_user_func( $exporters['outbox-mail-log']['callback'], 'privacy@example.com', 1 )['data'] ), 'nothing left after erase' );
+	check( 0 === count( call_user_func( $exporters['mailspur-email-log']['callback'], 'privacy@example.com', 1 )['data'] ), 'nothing left after erase' );
 	check( 1 === (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i WHERE recipients = %s', $table, 'xprivacy@example.com' ) ), 'similar address kept' );
 
 	// ---------------------------------------------------------- purge (admin).
@@ -214,14 +214,14 @@ try {
 	check( 0 === (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) ), 'log is empty after purge' );
 
 	// ------------------------------------------------- deactivate + uninstall.
-	deactivate_plugins( 'outbox-mail-log/outbox-mail-log.php' );
-	check( ! wp_next_scheduled( 'outbox_mail_log_cleanup' ), 'deactivation removes cron event' );
+	deactivate_plugins( 'mailspur-email-log/mailspur-email-log.php' );
+	check( ! wp_next_scheduled( 'mailspur_cleanup' ), 'deactivation removes cron event' );
 
-	define( 'WP_UNINSTALL_PLUGIN', 'outbox-mail-log/outbox-mail-log.php' );
-	include WP_PLUGIN_DIR . '/outbox-mail-log/uninstall.php';
+	define( 'WP_UNINSTALL_PLUGIN', 'mailspur-email-log/mailspur-email-log.php' );
+	include WP_PLUGIN_DIR . '/mailspur-email-log/uninstall.php';
 	$wpdb->suppress_errors( true );
 	check( null === $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i', $table ) ), 'uninstall drops the table' );
-	check( false === get_option( 'outbox_mail_log_settings' ) && false === get_option( 'outbox_mail_log_db_version' ), 'uninstall deletes options' );
+	check( false === get_option( 'mailspur_settings' ) && false === get_option( 'mailspur_db_version' ), 'uninstall deletes options' );
 } catch ( Throwable $e ) {
 	check( false, 'uncaught ' . get_class( $e ), $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
 }

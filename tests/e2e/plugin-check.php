@@ -6,12 +6,12 @@
  * The PHPCS-based Plugin Check rules run outside Playground (scripts/plugin-check.mjs) because
  * php-wasm cannot take the file locks PHPCS uses for its temp reports.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
 require '/wordpress/wp-load.php';
 
-$outbox_mail_log_checks = array(
+$mailspur_checks = array(
 	'code_obfuscation',
 	'plugin_content',
 	'file_type',
@@ -26,30 +26,30 @@ $outbox_mail_log_checks = array(
 	'wp_functions_compatibility',
 );
 
-$outbox_mail_log_runner = new WordPress\Plugin_Check\Checker\AJAX_Runner();
-$outbox_mail_log_runner->set_plugin( 'outbox-mail-log/outbox-mail-log.php' );
-$outbox_mail_log_runner->set_check_slugs( $outbox_mail_log_checks );
-$outbox_mail_log_runner->set_experimental_flag( true );
-$outbox_mail_log_cleanup = $outbox_mail_log_runner->prepare();
-$outbox_mail_log_result  = $outbox_mail_log_runner->run();
-$outbox_mail_log_cleanup();
+$mailspur_runner = new WordPress\Plugin_Check\Checker\AJAX_Runner();
+$mailspur_runner->set_plugin( 'mailspur-email-log/mailspur-email-log.php' );
+$mailspur_runner->set_check_slugs( $mailspur_checks );
+$mailspur_runner->set_experimental_flag( true );
+$mailspur_cleanup = $mailspur_runner->prepare();
+$mailspur_result  = $mailspur_runner->run();
+$mailspur_cleanup();
 
-$outbox_mail_log_findings = array();
+$mailspur_findings = array();
 foreach ( array(
-	'ERROR'   => $outbox_mail_log_result->get_errors(),
-	'WARNING' => $outbox_mail_log_result->get_warnings(),
-) as $outbox_mail_log_type => $outbox_mail_log_files ) {
-	foreach ( $outbox_mail_log_files as $outbox_mail_log_file => $outbox_mail_log_lines ) {
-		foreach ( $outbox_mail_log_lines as $outbox_mail_log_line => $outbox_mail_log_columns ) {
-			foreach ( $outbox_mail_log_columns as $outbox_mail_log_messages ) {
-				foreach ( $outbox_mail_log_messages as $outbox_mail_log_message ) {
-					$outbox_mail_log_findings[] = array(
-						'type'     => $outbox_mail_log_type,
-						'file'     => $outbox_mail_log_file,
-						'line'     => $outbox_mail_log_line,
-						'code'     => $outbox_mail_log_message['code'],
-						'message'  => wp_strip_all_tags( $outbox_mail_log_message['message'] ),
-						'severity' => $outbox_mail_log_message['severity'] ?? 5,
+	'ERROR'   => $mailspur_result->get_errors(),
+	'WARNING' => $mailspur_result->get_warnings(),
+) as $mailspur_type => $mailspur_files ) {
+	foreach ( $mailspur_files as $mailspur_file => $mailspur_lines ) {
+		foreach ( $mailspur_lines as $mailspur_line => $mailspur_columns ) {
+			foreach ( $mailspur_columns as $mailspur_messages ) {
+				foreach ( $mailspur_messages as $mailspur_message ) {
+					$mailspur_findings[] = array(
+						'type'     => $mailspur_type,
+						'file'     => $mailspur_file,
+						'line'     => $mailspur_line,
+						'code'     => $mailspur_message['code'],
+						'message'  => wp_strip_all_tags( $mailspur_message['message'] ),
+						'severity' => $mailspur_message['severity'] ?? 5,
 					);
 				}
 			}
@@ -61,8 +61,8 @@ file_put_contents( // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system
 	'/e2e-out/plugin-check.json',
 	wp_json_encode(
 		array(
-			'checks'   => $outbox_mail_log_checks,
-			'findings' => $outbox_mail_log_findings,
+			'checks'   => $mailspur_checks,
+			'findings' => $mailspur_findings,
 		),
 		JSON_PRETTY_PRINT
 	)

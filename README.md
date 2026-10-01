@@ -1,12 +1,12 @@
-# Outbox – Mail Log
+# Mailspur – Email Log
 
 Leichtgewichtiges WordPress-Plugin, das alle ausgehenden E-Mails protokolliert: Live-Suche, Filter, Status, erneut senden. Sichere Vorschau in einer Sandbox ohne Tracking-Pixel, maskierte Reset-Links, DSGVO-Export.
 
-- **Plugin-Code:** [`outbox-mail-log/`](outbox-mail-log/) – genau dieser Ordner wird ausgeliefert (ZIP / wordpress.org).
-- **Beschreibung für wordpress.org:** [`outbox-mail-log/readme.txt`](outbox-mail-log/readme.txt)
+- **Plugin-Code:** [`mailspur-email-log/`](mailspur-email-log/) – genau dieser Ordner wird ausgeliefert (ZIP / wordpress.org).
+- **Beschreibung für wordpress.org:** [`mailspur-email-log/readme.txt`](mailspur-email-log/readme.txt)
 - **Verzeichnis-Grafiken (Icon, Banner, Screenshots):** [`.wordpress-org/`](.wordpress-org/) → landen im SVN unter `/assets`.
 
-Alles außerhalb von `outbox-mail-log/` ist Entwicklungswerkzeug und wird nie mit ausgeliefert.
+Alles außerhalb von `mailspur-email-log/` ist Entwicklungswerkzeug und wird nie mit ausgeliefert.
 
 ## Lokale Entwicklung
 
@@ -55,7 +55,7 @@ Actions sind auf Commit-SHAs gepinnt, Werkzeuge werden mit fester Version und SH
 
 ## Release
 
-1. Version in `outbox-mail-log/outbox-mail-log.php` (Header **und** `const VERSION`) und `readme.txt` (`Stable tag`) anheben, Changelog-Eintrag `= x.y.z =` ergänzen. `npm run check` meldet jede Abweichung.
+1. Version in `mailspur-email-log/mailspur-email-log.php` (Header **und** `const VERSION`) und `readme.txt` (`Stable tag`) anheben, Changelog-Eintrag `= x.y.z =` ergänzen. `npm run check` meldet jede Abweichung.
 2. Tag pushen:
 
    ```bash
@@ -72,7 +72,7 @@ Actions sind auf Commit-SHAs gepinnt, Werkzeuge werden mit fester Version und SH
 
 1. Konto auf [wordpress.org](https://login.wordpress.org/register) anlegen und den Benutzernamen in `readme.txt` unter `Contributors:` eintragen.
 2. Zwei-Faktor-Authentifizierung im Profil aktivieren (für Plugin-Autoren Pflicht).
-3. ZIP bauen (`npm run build`) und unter [wordpress.org/plugins/developers/add](https://wordpress.org/plugins/developers/add/) hochladen. Slug: `outbox-mail-log`.
+3. ZIP bauen (`npm run build`) und unter [wordpress.org/plugins/developers/add](https://wordpress.org/plugins/developers/add/) hochladen. Slug: `mailspur-email-log`.
 4. Prüfung durch das Plugin-Team abwarten (Mail kommt an die Konto-Adresse; Rückfragen dort beantworten).
 5. Nach der Freigabe: SVN-Passwort unter *Profil → Konto & Sicherheit* erzeugen, im GitHub-Repo die Secrets `SVN_USERNAME` und `SVN_PASSWORD` sowie die Variable `WPORG_DEPLOY=true` setzen. Optional die Umgebung `wordpress-org` mit Freigabe absichern.
 6. Ab dann veröffentlicht jeder Tag automatisch – inklusive Icon, Banner und Screenshots aus `.wordpress-org/`.

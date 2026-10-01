@@ -2,12 +2,12 @@
 /**
  * Repository: query construction (everything prepared, ORDER BY whitelisted).
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog\Tests;
+namespace Mailspur\Tests;
 
-use OutboxMailLog\Repository;
+use Mailspur\Repository;
 
 final class RepositoryTest extends TestCase {
 
@@ -103,7 +103,7 @@ final class RepositoryTest extends TestCase {
 
 		$this->assertSame( 1, $result['total'] );
 		$args = $this->wpdb->prepared[1]['args'];
-		$this->assertSame( array( 'wp_outbox_mail_log', 2, 'id', 10, 20 ), $args );
+		$this->assertSame( array( 'wp_mailspur', 2, 'id', 10, 20 ), $args );
 	}
 
 	public function test_empty_result_skips_the_item_query(): void {
@@ -147,6 +147,6 @@ final class RepositoryTest extends TestCase {
 
 		$prepared = $this->wpdb->prepared[0];
 		$this->assertSame( 'DELETE FROM %i WHERE id IN (%d,%d)', $prepared['sql'] );
-		$this->assertSame( array( 'wp_outbox_mail_log', 3, 7 ), $prepared['args'] );
+		$this->assertSame( array( 'wp_mailspur', 3, 7 ), $prepared['args'] );
 	}
 }

@@ -2,10 +2,10 @@
 /**
  * Base test case: Brain Monkey + a fresh recording $wpdb + common WordPress function stubs.
  *
- * @package OutboxMailLog
+ * @package Mailspur
  */
 
-namespace OutboxMailLog\Tests;
+namespace Mailspur\Tests;
 
 use Brain\Monkey;
 use Brain\Monkey\Functions;
@@ -17,7 +17,7 @@ abstract class TestCase extends PHPUnitTestCase {
 	/** @var Fake_WPDB */
 	protected $wpdb;
 
-	/** @var array<string,mixed> Value returned by get_option( 'outbox_mail_log_settings' ). */
+	/** @var array<string,mixed> Value returned by get_option( 'mailspur_settings' ). */
 	protected $settings = array();
 
 	protected function setUp(): void {
@@ -56,7 +56,7 @@ abstract class TestCase extends PHPUnitTestCase {
 					return $date;
 				},
 				'get_option'        => function ( $name, $fallback = false ) {
-					return 'outbox_mail_log_settings' === $name ? $this->settings : $fallback;
+					return 'mailspur_settings' === $name ? $this->settings : $fallback;
 				},
 			)
 		);
