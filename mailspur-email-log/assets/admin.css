@@ -1,20 +1,95 @@
-/* Mailspur – Email Log admin styles. Uses WP admin color scheme variables where available. */
+/*
+ * Mailspur – Email Log admin styles.
+ *
+ * Brand: night indigo, violet accent, coral trail, mint for "delivered". The --ms-* tokens are shared with the
+ * module stylesheets (insights, types, …); everything stays inside .mailspur so other admin screens are untouched.
+ */
+
+.mailspur,
+.mailspur-review {
+	--ms-night: #1b1145;
+	--ms-indigo: #2a1a6e;
+	--ms-accent: #5b3ff0;
+	--ms-accent-strong: #4a2fd6;
+	--ms-accent-soft: #f1edff;
+	--ms-accent-ring: rgba(91, 63, 240, 0.28);
+	--ms-coral: #ff6b4a;
+	--ms-mint: #2bd9a1;
+	--ms-ink: #1b1530;
+	--ms-surface: #fff;
+	--ms-canvas: #f6f5fb;
+	--ms-line: #e7e3f3;
+	--ms-line-soft: #f1eef8;
+	--ms-shadow: 0 1px 2px rgba(27, 17, 69, 0.06), 0 10px 30px -18px rgba(27, 17, 69, 0.28);
+	--ob-accent: var(--ms-accent);
+	--ob-border: var(--ms-line);
+	--ob-muted: #625c78;
+	--ob-bg: var(--ms-surface);
+	--ob-row-hover: #faf8ff;
+	--ob-sent: #0b8a5f;
+	--ob-sent-bg: #e3f8ef;
+	--ob-failed: #c8321f;
+	--ob-failed-bg: #fff0ec;
+	--ob-pending: #8a5a00;
+	--ob-pending-bg: #fff6dc;
+	--ob-held: #4a2fd6;
+	--ob-held-bg: #f1edff;
+	--ob-radius: 10px;
+	--ms-logo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.18' cy='.12' r='.95'%3E%3Cstop offset='0' stop-color='%234a33c8'/%3E%3Cstop offset='.55' stop-color='%232a1a6e'/%3E%3Cstop offset='1' stop-color='%231b1145'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='24' fill='url(%23g)'/%3E%3Cg fill='%23ff6b4a'%3E%3Ccircle cx='13' cy='90' r='4' opacity='.55'/%3E%3Ccircle cx='22' cy='80' r='4.6' opacity='.8'/%3E%3C/g%3E%3Cg transform='translate(56 47) rotate(-14)'%3E%3Crect x='-28' y='-20' width='56' height='40' rx='8' fill='%23fff8f2'/%3E%3Cpath d='M-21 -12 L0 4 L21 -12' fill='none' stroke='%236c4bff' stroke-width='6.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Mailspur's page gets a slightly tinted canvas. */
+body.toplevel_page_mailspur-email-log,
+body.tools_page_mailspur-email-log {
+	background: #f6f5fb;
+}
 
 .mailspur {
-	--ob-accent: var(--wp-admin-theme-color, #2271b1);
-	--ob-border: #dcdcde;
-	--ob-muted: #646970;
-	--ob-bg: #fff;
-	--ob-row-hover: #f6f7f7;
-	--ob-sent: #00a32a;
-	--ob-sent-bg: #edfaef;
-	--ob-failed: #d63638;
-	--ob-failed-bg: #fcf0f1;
-	--ob-pending: #996800;
-	--ob-pending-bg: #fcf9e8;
-	--ob-held: #3858e9;
-	--ob-held-bg: #eff2ff;
-	--ob-radius: 6px;
+	color: var(--ms-ink);
+}
+
+.mailspur a {
+	color: var(--ms-accent);
+}
+
+.mailspur a:hover,
+.mailspur a:focus {
+	color: var(--ms-accent-strong);
+}
+
+.mailspur .button-primary {
+	border-color: var(--ms-accent);
+	background: var(--ms-accent);
+	color: #fff;
+}
+
+.mailspur .button-primary:hover,
+.mailspur .button-primary:focus {
+	border-color: var(--ms-accent-strong);
+	background: var(--ms-accent-strong);
+	color: #fff;
+}
+
+.mailspur .button:not(.button-primary):not(.button-link):hover {
+	border-color: var(--ms-accent);
+	color: var(--ms-accent-strong);
+}
+
+.mailspur input[type="text"]:focus,
+.mailspur input[type="search"]:focus,
+.mailspur input[type="email"]:focus,
+.mailspur input[type="url"]:focus,
+.mailspur input[type="number"]:focus,
+.mailspur input[type="date"]:focus,
+.mailspur select:focus,
+.mailspur textarea:focus,
+.mailspur input[type="checkbox"]:focus {
+	border-color: var(--ms-accent);
+	box-shadow: 0 0 0 3px var(--ms-accent-ring);
+}
+
+.mailspur :focus-visible {
+	outline-color: var(--ms-accent);
 }
 
 /* ---------------------------------------------------------------- header */
@@ -23,44 +98,77 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	gap: 8px 24px;
-	margin-bottom: 12px;
+	gap: 12px 28px;
+	margin: 4px 0 18px;
+	padding: 12px 14px;
+	border: 1px solid var(--ms-line);
+	border-radius: 14px;
+	background: var(--ms-surface);
+	box-shadow: var(--ms-shadow);
 }
 
 .mailspur .mailspur-title {
 	display: flex;
 	align-items: center;
-	gap: 6px;
+	gap: 12px;
 	padding: 0;
 	margin: 0;
+	color: var(--ms-ink);
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	line-height: 1.15;
 }
 
-.mailspur-title .dashicons {
-	width: 26px;
-	height: 26px;
-	font-size: 26px;
-	color: var(--ob-accent);
+.mailspur-logo {
+	flex: 0 0 auto;
+	width: 40px;
+	height: 40px;
+	border-radius: 11px;
+	background: var(--ms-logo) center / cover no-repeat;
+	box-shadow: 0 6px 14px -6px rgba(42, 26, 110, 0.6);
+}
+
+.mailspur-title-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.mailspur-brand {
+	color: var(--ms-accent);
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
 }
 
 .mailspur-nav {
 	display: flex;
-	gap: 4px;
+	flex-wrap: wrap;
+	gap: 2px;
+	padding: 4px;
+	border-radius: 12px;
+	background: var(--ms-canvas);
 }
 
 .mailspur-nav a {
-	padding: 6px 12px;
-	border-radius: var(--ob-radius);
-	color: #1d2327;
-	font-weight: 500;
+	padding: 7px 14px;
+	border-radius: 9px;
+	color: #4b4566;
+	font-weight: 600;
 	text-decoration: none;
+	transition: background 0.15s, color 0.15s;
 }
 
-.mailspur-nav a:hover {
-	background: #e5e5e5;
+.mailspur-nav a:hover,
+.mailspur-nav a:focus {
+	background: #fff;
+	color: var(--ms-ink);
 }
 
 .mailspur-nav a.is-active {
-	background: var(--ob-accent);
+	background: var(--ms-accent);
+	box-shadow: 0 6px 14px -8px var(--ms-accent);
 	color: #fff;
 }
 
@@ -86,17 +194,20 @@
 	align-items: center;
 	gap: 6px;
 	min-height: 32px;
-	padding: 0 12px;
+	padding: 0 14px;
 	border: 1px solid var(--ob-border);
 	border-radius: 999px;
 	background: var(--ob-bg);
-	color: #1d2327;
+	color: var(--ms-ink);
 	font: inherit;
+	font-weight: 500;
 	cursor: pointer;
+	transition: border-color 0.15s, background 0.15s;
 }
 
 .mailspur-chip:hover {
-	border-color: #8c8f94;
+	border-color: var(--ms-accent);
+	background: var(--ms-accent-soft);
 }
 
 .mailspur-chip[aria-pressed="true"] {
@@ -271,8 +382,9 @@
 .mailspur-table-wrap {
 	overflow: hidden;
 	border: 1px solid var(--ob-border);
-	border-radius: var(--ob-radius);
+	border-radius: 14px;
 	background: var(--ob-bg);
+	box-shadow: var(--ms-shadow);
 	transition: opacity 0.15s;
 }
 
@@ -288,8 +400,8 @@
 
 .mailspur-table th,
 .mailspur-table td {
-	padding: 9px 10px;
-	border-bottom: 1px solid #f0f0f1;
+	padding: 11px 12px;
+	border-bottom: 1px solid var(--ms-line-soft);
 	text-align: left;
 	vertical-align: middle;
 }
@@ -297,10 +409,12 @@
 .mailspur-table thead th,
 .mailspur-table thead td {
 	border-bottom-color: var(--ob-border);
-	background: #f6f7f7;
-	color: #1d2327;
-	font-size: 12px;
-	font-weight: 600;
+	background: #fbfaff;
+	color: #625c78;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 }
 
 .mailspur-table thead button {
@@ -309,6 +423,8 @@
 	background: none;
 	color: inherit;
 	font: inherit;
+	letter-spacing: inherit;
+	text-transform: inherit;
 	cursor: pointer;
 }
 
@@ -396,7 +512,7 @@
 	padding: 0;
 	border: 0;
 	background: none;
-	color: #1d2327;
+	color: var(--ms-ink);
 	font: inherit;
 	text-align: left;
 	cursor: pointer;
@@ -437,8 +553,8 @@
 
 .mailspur-row-action:hover,
 .mailspur-row-action:focus {
-	background: #dcdcde;
-	color: #1d2327;
+	background: var(--ms-accent-soft);
+	color: var(--ms-accent-strong);
 }
 
 .mailspur-row-action[data-action="delete"]:hover {
@@ -454,18 +570,28 @@
 }
 
 .mailspur-badge {
-	display: inline-block;
-	padding: 1px 8px;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 1px 10px 1px 8px;
 	border-radius: 999px;
 	font-size: 12px;
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 20px;
 	white-space: nowrap;
 }
 
+.mailspur-badge::before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: currentColor;
+}
+
 .mailspur-badge.is-sent {
 	background: var(--ob-sent-bg);
-	color: #007017;
+	color: var(--ob-sent);
 }
 
 .mailspur-badge.is-failed {
@@ -522,8 +648,8 @@
 	max-height: none;
 	padding: 0;
 	border: 0;
-	border-radius: 10px;
-	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+	border-radius: 16px;
+	box-shadow: 0 30px 80px -20px rgba(27, 17, 69, 0.55);
 }
 
 .mailspur-dialog[open] {
@@ -532,7 +658,8 @@
 }
 
 .mailspur-dialog::backdrop {
-	background: rgba(15, 23, 42, 0.55);
+	background: rgba(27, 17, 69, 0.55);
+	backdrop-filter: blur(2px);
 }
 
 .mailspur-d-head {
@@ -678,9 +805,9 @@
 	max-width: min(560px, calc(100vw - 32px));
 	padding: 10px 16px;
 	border-radius: var(--ob-radius);
-	background: #1d2327;
+	background: var(--ms-night);
 	color: #fff;
-	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 10px 30px -10px rgba(27, 17, 69, 0.6);
 	opacity: 0;
 	pointer-events: none;
 	transform: translate(-50%, 12px);
@@ -700,6 +827,98 @@
 
 .mailspur-settings h2 {
 	margin-top: 28px;
+	color: var(--ms-ink);
+}
+
+.mailspur-settings .form-table {
+	border-radius: 14px;
+	background: var(--ms-surface);
+	box-shadow: var(--ms-shadow);
+}
+
+.mailspur-settings .form-table th {
+	padding-left: 20px;
+}
+
+/* ---------------------------------------------------------------- review */
+
+.mailspur-review {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin: 0 0 18px;
+	padding: 18px 22px;
+	overflow: hidden;
+	border-radius: 14px;
+	background:
+		radial-gradient(circle at 8% 0%, rgba(108, 75, 255, 0.55), transparent 45%),
+		radial-gradient(circle at 100% 120%, rgba(255, 107, 74, 0.35), transparent 45%),
+		var(--ms-night);
+	color: #fff;
+	box-shadow: var(--ms-shadow);
+}
+
+.mailspur-review-mark {
+	flex: 0 0 auto;
+	width: 56px;
+	height: 56px;
+	border-radius: 15px;
+	background: var(--ms-logo) center / cover no-repeat;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
+
+.mailspur-review h2 {
+	margin: 0 0 4px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.mailspur-review p {
+	max-width: 720px;
+	margin: 0;
+	color: #ddd8ff;
+}
+
+.mailspur-review .mailspur-review-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	margin-top: 12px;
+}
+
+.mailspur-review .button-primary,
+.mailspur .mailspur-review .button-primary {
+	border-color: var(--ms-coral);
+	background: var(--ms-coral);
+	color: #1b1145;
+	font-weight: 600;
+}
+
+.mailspur-review .button-primary:hover,
+.mailspur-review .button-primary:focus {
+	border-color: #ff8a6e;
+	background: #ff8a6e;
+	color: #1b1145;
+}
+
+.mailspur-review .button:not(.button-primary) {
+	border-color: rgba(255, 255, 255, 0.35);
+	background: transparent;
+	color: #fff;
+}
+
+.mailspur-review .button-link,
+.mailspur .mailspur-review a.button-link {
+	color: #ddd8ff;
+}
+
+@media (max-width: 600px) {
+	.mailspur-review {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 
 .mailspur .mailspur-narrow {

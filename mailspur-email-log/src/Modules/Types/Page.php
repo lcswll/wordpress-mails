@@ -232,7 +232,7 @@ final class Page {
 									<th scope="col" class="mst-col-type"><?php esc_html_e( 'Email type', 'mailspur-email-log' ); ?></th>
 									<th scope="col" class="mst-col-volume"><?php esc_html_e( 'Last 30 days', 'mailspur-email-log' ); ?></th>
 									<th scope="col"><?php esc_html_e( 'Rhythm', 'mailspur-email-log' ); ?></th>
-									<th scope="col"><?php esc_html_e( 'Last sent', 'mailspur-email-log' ); ?></th>
+									<th scope="col" class="mst-col-last"><?php esc_html_e( 'Last sent', 'mailspur-email-log' ); ?></th>
 									<th scope="col" class="mst-col-state"><?php esc_html_e( 'Status', 'mailspur-email-log' ); ?></th>
 									<th scope="col"><span class="screen-reader-text"><?php esc_html_e( 'Actions', 'mailspur-email-log' ); ?></span></th>
 								</tr>
@@ -306,7 +306,7 @@ final class Page {
 				</span>
 			</td>
 			<td><?php echo esc_html( self::rhythm_text( $item['rhythm'] ) ); ?></td>
-			<td>
+			<td class="mst-col-last">
 				<?php
 				/* translators: %s: time span, e.g. "3 hours" */
 				printf( esc_html__( '%s ago', 'mailspur-email-log' ), esc_html( human_time_diff( (int) $item['last_seen'], $now ) ) );

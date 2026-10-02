@@ -2,104 +2,216 @@
 <html>
 <head>
 <meta charset="utf-8">
-<!-- Source for the wordpress.org icon and banners. Rendered by scripts/wporg-assets.mjs into .wordpress-org/ (?asset=icon|banner). -->
+<!--
+	Source of the Mailspur brand assets, rendered by scripts/wporg-assets.mjs into .wordpress-org/:
+	  ?asset=icon&frame=N  – one frame of the animated icon (window.iconFrames lists frames and delays)
+	  ?asset=banner        – the directory banner
+	The mark: an envelope that flies in along its dotted trail ("Spur") and lands with a check.
+-->
 <style>
 	:root {
-		--blue: #2271b1;
-		--blue-dark: #0a4b78;
-		--ink: #101517;
-		--muted: #50575e;
-		--green: #00a32a;
-		--red: #d63638;
+		--night: #1b1145;
+		--indigo: #2a1a6e;
+		--violet: #6c4bff;
+		--violet-soft: #a996ff;
+		--coral: #ff6b4a;
+		--mint: #2bd9a1;
+		--paper: #fff8f2;
+		--ink: #1b1145;
+		--muted: #6b6489;
 	}
 	* { box-sizing: border-box; margin: 0; }
 	[hidden] { display: none !important; }
-	html, body { width: 100%; height: 100%; overflow: hidden; }
-	body { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+	html, body { width: 100%; height: 100%; overflow: hidden; background: var(--night); }
+	body { font-family: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
 
-	/* ------------------------------------------------------------- icon */
-	.icon {
-		width: 100%;
-		height: 100%;
-		display: grid;
-		place-items: center;
-		background: linear-gradient(145deg, #3582c4 0%, var(--blue) 45%, var(--blue-dark) 100%);
-	}
-	.icon svg { width: 70%; height: 70%; }
+	#icon, #icon svg { display: block; width: 100%; height: 100%; }
 
 	/* ----------------------------------------------------------- banner */
 	.banner {
 		position: relative;
 		width: 100%;
 		height: 100%;
+		overflow: hidden;
 		display: flex;
 		align-items: center;
-		gap: 6%;
-		padding: 0 6%;
+		gap: 4.5%;
+		padding: 0 5.5%;
 		background:
-			radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.12), transparent 40%),
-			linear-gradient(120deg, var(--blue-dark) 0%, var(--blue) 60%, #3582c4 100%);
+			radial-gradient(circle at 12% 18%, rgba(108, 75, 255, 0.55), transparent 42%),
+			radial-gradient(circle at 92% 110%, rgba(255, 107, 74, 0.28), transparent 45%),
+			var(--night);
 		color: #fff;
 	}
-	.banner .mark { flex: 0 0 auto; width: 16%; }
-	.banner .mark svg { width: 100%; height: auto; display: block; }
-	.banner .copy { flex: 1 1 auto; }
-	.banner h1 { font-size: 5.6vw; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
-	.banner p { margin-top: 1.4vw; font-size: 2.15vw; opacity: 0.9; line-height: 1.35; }
+	.banner .trail { position: absolute; inset: 0; width: 100%; height: 100%; }
+	.banner .mark { position: relative; flex: 0 0 auto; width: 15%; aspect-ratio: 1; border-radius: 22%; overflow: hidden; box-shadow: 0 1.6vw 3.2vw rgba(0, 0, 0, 0.35); }
+	.banner .mark svg { display: block; width: 100%; height: 100%; }
+	.banner .copy { position: relative; flex: 1 1 auto; }
+	.banner h1 { font-size: 6vw; font-weight: 700; letter-spacing: -0.035em; line-height: 1; }
+	.banner h1 span { color: var(--coral); }
+	.banner p { margin-top: 1.5vw; max-width: 30vw; font-size: 2.05vw; line-height: 1.32; color: #d9d3ff; }
 	.banner .card {
-		flex: 0 0 34%;
-		align-self: center;
-		background: #fff;
+		position: relative;
+		flex: 0 0 37%;
+		background: var(--paper);
 		color: var(--ink);
-		border-radius: 1.2vw;
-		box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.25);
-		padding: 1.4vw 1.6vw;
-		font-size: 1.25vw;
+		border-radius: 1.3vw;
+		box-shadow: 0 2vw 5vw rgba(5, 0, 30, 0.5);
+		padding: 1.5vw 1.7vw 1.1vw;
+		font-size: 1.22vw;
 	}
-	.row { display: flex; align-items: center; gap: 1vw; padding: 0.75vw 0; border-bottom: 1px solid #f0f0f1; }
-	.row:last-child { border-bottom: 0; }
-	.badge { flex: 0 0 auto; border-radius: 99px; padding: 0.15vw 0.8vw; font-size: 1vw; font-weight: 600; }
-	.sent { background: #edfaef; color: #007017; }
-	.failed { background: #fcf0f1; color: var(--red); }
-	.row .to { flex: 1 1 auto; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-	.row .time { color: var(--muted); font-variant-numeric: tabular-nums; }
-	.search { display: flex; align-items: center; gap: 0.6vw; border: 1px solid #c3c4c7; border-radius: 0.6vw; padding: 0.55vw 0.8vw; color: var(--muted); margin-bottom: 0.6vw; }
+	.card h2 { display: flex; align-items: center; justify-content: space-between; font-size: 1.3vw; font-weight: 700; margin-bottom: 0.6vw; }
+	.card h2 small { font-size: 0.95vw; font-weight: 600; color: var(--muted); }
+	.row { display: grid; grid-template-columns: 1fr 7.5vw auto; align-items: center; gap: 1vw; padding: 0.72vw 0; border-top: 1px solid #efe8e1; }
+	.row b { font-weight: 600; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.row i { font-style: normal; color: var(--muted); font-size: 0.95vw; }
+	.row svg { width: 100%; height: 1.9vw; display: block; }
+	.badge { border-radius: 99px; padding: 0.15vw 0.75vw; font-size: 0.95vw; font-weight: 700; white-space: nowrap; }
+	.ok { background: #e3f9f0; color: #0b6b4e; }
+	.stopped { background: #ffe9e3; color: #b8321a; }
 </style>
 </head>
 <body>
-<template id="mark">
-	<!-- Envelope with an outgoing arrow: "mailspur". -->
-	<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<rect x="8" y="26" width="64" height="48" rx="8" stroke="#fff" stroke-width="7"/>
-		<path d="M12 32 L40 54 L68 32" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-		<circle cx="74" cy="28" r="20" fill="#fff"/>
-		<path d="M66 36 L82 20 M71 20 H82 V31" stroke="#2271b1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-	</svg>
-</template>
-
-<div id="icon" class="icon" hidden></div>
+<div id="icon" hidden></div>
 
 <div id="banner" class="banner" hidden>
+	<svg class="trail" viewBox="0 0 1544 500" preserveAspectRatio="none" aria-hidden="true"></svg>
 	<div class="mark"></div>
 	<div class="copy">
-		<h1>Mailspur</h1>
-		<p>Every email WordPress sends –<br>searchable, safe to preview.</p>
+		<h1>Mailspur<span>.</span></h1>
+		<p>Every email your site sends – logged, explained and watched.</p>
 	</div>
 	<div class="card" aria-hidden="true">
-		<div class="search">⌕&nbsp; order</div>
-		<div class="row"><span class="badge sent">Sent</span><span class="to">jan@example.com</span><span class="time">20:01</span></div>
-		<div class="row"><span class="badge sent">Sent</span><span class="to">lena@example.com</span><span class="time">19:55</span></div>
-		<div class="row"><span class="badge failed">Failed</span><span class="to">mia@example.com</span><span class="time">19:34</span></div>
-		<div class="row"><span class="badge sent">Sent</span><span class="to">noah@example.com</span><span class="time">17:58</span></div>
+		<h2>Email types <small>last 30 days</small></h2>
+		<div class="row"><span><b>Order #… received</b><i>WooCommerce · daily</i></span><span class="spark" data-seed="3"></span><span class="badge ok">OK</span></div>
+		<div class="row"><span><b>Welcome, …!</b><i>WordPress · daily</i></span><span class="spark" data-seed="7"></span><span class="badge ok">OK</span></div>
+		<div class="row"><span><b>Subscription #… renewed</b><i>Subscriptions · daily</i></span><span class="spark" data-seed="5" data-stop="5"></span><span class="badge stopped">Stopped</span></div>
+		<div class="row"><span><b>New message from …</b><i>Contact Form 7 · weekly</i></span><span class="spark" data-seed="11" data-weekly="1"></span><span class="badge ok">OK</span></div>
 	</div>
 </div>
 
 <script>
-	const asset = new URLSearchParams(location.search).get('asset') || 'banner';
-	const mark = document.getElementById('mark').innerHTML;
-	document.querySelector('#icon').innerHTML = mark;
-	document.querySelector('#banner .mark').innerHTML = mark;
-	document.getElementById(asset).hidden = false;
+	const C = { night: '#1b1145', indigo: '#2a1a6e', violet: '#6c4bff', coral: '#ff6b4a', mint: '#2bd9a1', paper: '#fff8f2', check: '#0b3b2e' };
+
+	// Flight path of the envelope (viewBox 0..100): from outside bottom-left to its resting place.
+	const P = [[-22, 128], [8, 104], [24, 62], [57, 50]];
+	const bez = (t) => {
+		const u = 1 - t;
+		return [0, 1].map((k) => u * u * u * P[0][k] + 3 * u * u * t * P[1][k] + 3 * u * t * t * P[2][k] + t * t * t * P[3][k]);
+	};
+	const ease = (t) => 1 - Math.pow(1 - t, 3);
+	const back = (t) => { const s = 2.2; return 1 + (s + 1) * Math.pow(t - 1, 3) + s * Math.pow(t - 1, 2); };
+
+	// Trail dots at equal distances along the path (sampled arc length).
+	const samples = [];
+	let length = 0;
+	for (let i = 0, prev = bez(0); i <= 400; i++) {
+		const p = bez(i / 400);
+		length += Math.hypot(p[0] - prev[0], p[1] - prev[1]);
+		samples.push([i / 400, length]);
+		prev = p;
+	}
+	const atDistance = (d) => samples.find((s) => s[1] >= d)?.[0] ?? 1;
+	const DOTS = [];
+	for (let d = 7; d < length - 22; d += 7.2) DOTS.push(atDistance(d));
+
+	/**
+	 * The mark at one moment.
+	 * @param {number} fly   0..1 – envelope position along the path.
+	 * @param {number} trail 0..1 – opacity of the trail.
+	 * @param {number} check 0..1+ – scale of the check badge (overshoots).
+	 * @param {boolean} rounded – rounded square (banner) or full square (icon; wordpress.org adds no mask).
+	 */
+	function mark({ fly = 1, trail = 1, check = 1, rounded = false } = {}) {
+		const t = ease(fly);
+		const [x, y] = bez(t);
+		const eps = 0.002;
+		const [x2, y2] = bez(Math.min(1, t + eps));
+		const [x1, y1] = bez(Math.max(0, t - eps));
+		const tangent = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+		const angle = tangent * 0.6;
+		const scale = 0.72 + 0.28 * t;
+
+		const dots = DOTS.filter((s) => s < t - 0.06).map((s, i, all) => {
+			const [dx, dy] = bez(s);
+			const r = 1.5 + 1.6 * (i / Math.max(1, all.length - 1));
+			return `<circle cx="${dx.toFixed(2)}" cy="${dy.toFixed(2)}" r="${r.toFixed(2)}" fill="${C.coral}" opacity="${(trail * (0.45 + 0.55 * i / Math.max(1, all.length - 1))).toFixed(3)}"/>`;
+		}).join('');
+
+		const badge = check > 0.01
+			? `<g transform="translate(21 -16) scale(${check.toFixed(3)})">
+					<circle r="10.5" fill="${C.mint}" stroke="${C.indigo}" stroke-width="3"/>
+					<path d="M-4.6 0.2 L-1.2 3.6 L5 -3.6" fill="none" stroke="${C.check}" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+				</g>`
+			: '';
+
+		return `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<radialGradient id="glow" cx="0.18" cy="0.12" r="0.95">
+					<stop offset="0" stop-color="#4a33c8"/>
+					<stop offset="0.55" stop-color="${C.indigo}"/>
+					<stop offset="1" stop-color="${C.night}"/>
+				</radialGradient>
+				<clipPath id="clip"><rect width="100" height="100" rx="${rounded ? 22 : 0}"/></clipPath>
+			</defs>
+			<g clip-path="url(#clip)">
+				<rect width="100" height="100" fill="url(#glow)"/>
+				${dots}
+				<g transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${angle.toFixed(2)}) scale(${scale.toFixed(3)})">
+					<rect x="-23" y="-16.5" width="46" height="33" rx="6.5" fill="${C.paper}"/>
+					<path d="M-17.5 -10 L0 3.2 L17.5 -10" fill="none" stroke="${C.violet}" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+					${badge}
+				</g>
+			</g>
+		</svg>`;
+	}
+
+	// Animation: the finished mark (held), the trail fades, the envelope flies in again and lands with a check.
+	const frames = [{ state: {}, delay: 2200 }];
+	for (let i = 1; i <= 4; i++) frames.push({ state: { fly: 1, trail: 1 - i / 4, check: 1 - i / 4 }, delay: 50 });
+	for (let i = 0; i <= 16; i++) frames.push({ state: { fly: i / 16, trail: 1, check: 0 }, delay: 55 });
+	for (let i = 1; i <= 6; i++) frames.push({ state: { fly: 1, trail: 1, check: back(i / 6) }, delay: 45 });
+	window.iconFrames = frames.map((f) => f.delay);
+
+	// Small sparkline for the banner card (deterministic).
+	function spark(el) {
+		let seed = Number(el.dataset.seed);
+		const rand = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+		const stop = Number(el.dataset.stop || 0);
+		const weekly = el.dataset.weekly === '1';
+		let bars = '';
+		for (let i = 0; i < 30; i++) {
+			const silent = stop && i >= 30 - stop;
+			const v = weekly ? (i % 7 === 2 ? 0.6 + rand() * 0.4 : 0) : silent ? 0 : 0.35 + rand() * 0.65;
+			const h = Math.max(0.6, v * 16);
+			bars += `<rect x="${i * 4}" y="${18 - h}" width="3" height="${h}" rx="0.8" fill="${v ? (silent ? C.coral : C.violet) : '#e4dcd4'}"/>`;
+		}
+		el.innerHTML = `<svg viewBox="0 0 120 18" preserveAspectRatio="none">${bars}</svg>`;
+	}
+
+	const params = new URLSearchParams(location.search);
+	const asset = params.get('asset') || 'banner';
+	if (asset === 'icon') {
+		const frame = frames[Number(params.get('frame') || 0)] || frames[0];
+		document.getElementById('icon').innerHTML = mark(frame.state);
+		document.getElementById('icon').hidden = false;
+	} else {
+		const banner = document.getElementById('banner');
+		banner.querySelector('.mark').innerHTML = mark({ rounded: true });
+		banner.querySelectorAll('.spark').forEach(spark);
+		// The trail continues across the banner behind the mark.
+		let dots = '';
+		for (let i = 0; i < 26; i++) {
+			const t = i / 25;
+			const x = -40 + t * 330;
+			const y = 470 - Math.sin(t * Math.PI * 0.62) * 260;
+			dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(2.5 + t * 4).toFixed(1)}" fill="${C.coral}" opacity="${(0.12 + t * 0.4).toFixed(2)}"/>`;
+		}
+		banner.querySelector('.trail').innerHTML = dots;
+		banner.hidden = false;
+	}
+	window.mailspurMark = () => mark({ rounded: true });
+	document.documentElement.dataset.ready = '1';
 </script>
 </body>
 </html>

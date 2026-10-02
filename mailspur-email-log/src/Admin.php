@@ -16,6 +16,9 @@ final class Admin {
 
 	const SLUG = 'mailspur-email-log';
 
+	/** Menu icon: envelope with its trail (monochrome SVG, recoloured by WordPress to match the admin colour scheme). */
+	const MENU_ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PHBhdGggZmlsbD0iYmxhY2siIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNSA0LjVoOS41YTIgMiAwIDAgMSAyIDJ2N2EyIDIgMCAwIDEtMiAySDcuNWEyIDIgMCAwIDEtMi0ydi03YTIgMiAwIDAgMSAyLTJ6TTcuNiA2LjlsNC42NSAzLjUgNC42NS0zLjV2MS42bC00LjY1IDMuNS00LjY1LTMuNXoiLz48Y2lyY2xlIGZpbGw9ImJsYWNrIiBjeD0iMy42IiBjeT0iMTYuNCIgcj0iMS4yNSIvPjxjaXJjbGUgZmlsbD0iYmxhY2siIGN4PSIxLjQiIGN5PSIxOC43IiByPSIwLjkiLz48L3N2Zz4=';
+
 	/** @var Repository */
 	private $repository;
 
@@ -40,7 +43,7 @@ final class Admin {
 		if ( 'tools' === Settings::get( 'menu_location' ) ) {
 			$this->hook = (string) add_management_page( $title, $title, $cap, self::SLUG, array( $this, 'render' ) );
 		} else {
-			$this->hook = (string) add_menu_page( $title, $title, $cap, self::SLUG, array( $this, 'render' ), 'dashicons-email-alt', 81 );
+			$this->hook = (string) add_menu_page( $title, $title, $cap, self::SLUG, array( $this, 'render' ), self::MENU_ICON, 81 );
 		}
 	}
 
@@ -219,7 +222,7 @@ final class Admin {
 		?>
 		<div class="wrap mailspur">
 			<header class="mailspur-header">
-				<h1 class="mailspur-title"><span class="dashicons dashicons-email-alt" aria-hidden="true"></span> <?php esc_html_e( 'Mail Log', 'mailspur-email-log' ); ?></h1>
+				<h1 class="mailspur-title"><span class="mailspur-logo" aria-hidden="true"></span><span class="mailspur-title-text"><span class="mailspur-brand">Mailspur</span> <?php esc_html_e( 'Mail Log', 'mailspur-email-log' ); ?></span></h1>
 				<?php if ( count( $this->tabs() ) > 1 ) : ?>
 					<nav class="mailspur-nav" aria-label="<?php esc_attr_e( 'Mail Log sections', 'mailspur-email-log' ); ?>">
 						<?php
@@ -233,6 +236,9 @@ final class Admin {
 			</header>
 			<hr class="wp-header-end">
 			<?php
+			/** Above every tab: e.g. the review request (Review). */
+			do_action( 'mailspur_admin_top' );
+
 			if ( 'settings' === $tab ) {
 				$this->render_settings();
 			} elseif ( 'log' === $tab ) {

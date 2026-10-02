@@ -701,6 +701,9 @@ msgstr "Stunden"
 msgid "How to fix:"
 msgstr "So behebst du es:"
 
+msgid "I already did"
+msgstr "Hab ich schon"
+
 msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
 msgstr "Mir ist klar, dass der Rohquelltext NICHT geschwärzt wird und den Speicherbedarf pro E-Mail etwa verdoppelt"
 
@@ -785,6 +788,9 @@ msgstr "Ungültige Absenderadresse: %1$s"
 msgid "Irregular"
 msgstr "Unregelmäßig"
 
+msgid "Is Mailspur helping you?"
+msgstr "Hilft dir Mailspur?"
+
 msgid "JSON"
 msgstr "JSON"
 
@@ -802,6 +808,9 @@ msgstr "Letzte Seite"
 
 msgid "Last sent"
 msgstr "Zuletzt versendet"
+
+msgid "Leave a ★★★★★ review"
+msgstr "Gib eine ★★★★★-Bewertung ab"
 
 msgid "Link text shows %1$s but leads to %2$s"
 msgstr "Linktext zeigt %1$s, führt aber zu %2$s"
@@ -857,6 +866,12 @@ msgstr "Versandart"
 msgid "Mailspur alerts"
 msgstr "Mailspur-Benachrichtigungen"
 
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur hat auf dieser Website bisher %s zugestellte E-Mails protokolliert. Wenn es dir Zeit spart, würde mir eine kurze Bewertung auf WordPress.org viel bedeuten – sie hilft anderen, das Plugin zu finden, und hält es kostenlos."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur wird von %1$s entwickelt. Gefällt es dir? %2$s"
+
 msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
 msgstr "Mailspur lernt den Rhythmus jedes E-Mail-Typs aus den letzten 8 Wochen – eine tägliche Bestellbestätigung ist nach 2 Tagen überfällig, ein wöchentlicher Bericht nach 2 Wochen. Die Benachrichtigung nennt den Typ, seinen Absender und die seit seiner letzten E-Mail aktualisierten Plugins. Nutzt die Kanäle oben; ignorierte Typen lösen nie aus."
 
@@ -880,6 +895,9 @@ msgstr "Viele Mailprogramme blockieren Bilder, bis der Leser sie erlaubt. Ohne A
 
 msgid "Mask password-reset, activation and access keys in logged links"
 msgstr "Passwort-Reset-, Aktivierungs- und Zugriffsschlüssel in protokollierten Links maskieren"
+
+msgid "Maybe later"
+msgstr "Vielleicht später"
 
 msgid "Menu position"
 msgstr "Menüposition"
@@ -1174,6 +1192,12 @@ msgstr "REST-Route"
 
 msgid "Rarely"
 msgstr "Selten"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Mailspur auf WordPress.org bewerten"
+
+msgid "Rate Mailspur ★★★★★"
+msgstr "Mailspur bewerten ★★★★★"
 
 msgid "Raw source"
 msgstr "Rohquelltext"

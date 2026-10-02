@@ -94,6 +94,10 @@ The sender check (SPF/DKIM/DMARC/MX) and the recipient-domain check only ask you
 
 Development happens on GitHub: https://github.com/lcswll/wordpress-mails – issues and pull requests are welcome.
 
+= About the author =
+
+Mailspur is made by [Lucas Wille](https://lucaswille.de/), web designer and developer from Magdeburg, Germany. If Mailspur saves you time, a [review on WordPress.org](https://wordpress.org/support/plugin/mailspur-email-log/reviews/#new-post) helps a lot.
+
 == Installation ==
 
 1. Install the plugin via Plugins → Add New (search for "Mailspur Email Log") or upload the ZIP file.

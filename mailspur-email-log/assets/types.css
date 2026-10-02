@@ -3,14 +3,14 @@
 .mailspur-types,
 .mailspur-type-dd {
 	--mst-surface: #fff;
-	--mst-border: #dcdcde;
-	--mst-ink: #1d2327;
+	--mst-border: var(--ms-line, #dcdcde);
+	--mst-ink: var(--ms-ink, #1d2327);
 	--mst-muted: #646970;
-	--mst-bar: #2a78d6;
+	--mst-bar: var(--ms-accent, #5b3ff0);
 	--mst-held: #a7aaad;
 	--mst-failed: #d03b3b;
 	--mst-base: #dcdcde;
-	--mst-radius: 6px;
+	--mst-radius: 10px;
 }
 
 .mailspur-types {
@@ -98,7 +98,18 @@
 }
 
 .mst-table {
-	border-radius: var(--mst-radius);
+	overflow: hidden;
+	border-color: var(--ms-line, #dcdcde);
+	border-radius: 14px;
+	box-shadow: var(--ms-shadow, none);
+}
+
+.mailspur-types .mst-table thead th {
+	color: #625c78;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 }
 
 .mst-table td {
@@ -226,7 +237,8 @@
 	color: var(--mst-muted);
 }
 
-.mst-actions {
+.mst-actions,
+.mst-col-last {
 	white-space: nowrap;
 }
 

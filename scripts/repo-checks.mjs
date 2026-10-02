@@ -85,15 +85,20 @@ expect(new RegExp(`^= ${header.Version.replace(/\./g, '\\.')}`, 'm').test(change
 
 // ---------------------------------------------------------- wordpress.org assets.
 const assetsDir = path.join(root, '.wordpress-org');
-const pngSize = (file) => {
+const imageSize = (file) => {
 	const b = fs.readFileSync(file);
-	return b.toString('ascii', 1, 4) === 'PNG' ? [b.readUInt32BE(16), b.readUInt32BE(20)] : null;
+	if (b.toString('ascii', 1, 4) === 'PNG') return [b.readUInt32BE(16), b.readUInt32BE(20)];
+	if (b.toString('ascii', 0, 4) === 'GIF8') return [b.readUInt16LE(6), b.readUInt16LE(8)];
+	return null;
 };
-for (const [file, w, h] of [['icon-128x128.png', 128, 128], ['icon-256x256.png', 256, 256], ['banner-772x250.png', 772, 250], ['banner-1544x500.png', 1544, 500]]) {
+// Icons are animated GIFs (max. 1 MB each); a PNG icon next to them would compete on wordpress.org.
+for (const [file, w, h, max] of [['icon-128x128.gif', 128, 128, 1024], ['icon-256x256.gif', 256, 256, 1024], ['banner-772x250.png', 772, 250, 4096], ['banner-1544x500.png', 1544, 500, 4096]]) {
 	const full = path.join(assetsDir, file);
-	const size = fs.existsSync(full) ? pngSize(full) : null;
+	const size = fs.existsSync(full) ? imageSize(full) : null;
 	expect(size && size[0] === w && size[1] === h, `.wordpress-org/${file} is ${w}×${h}`);
+	expect(size && fs.statSync(full).size <= max * 1024, `.wordpress-org/${file} is at most ${max / 1024} MB`);
 }
+expect(!fs.existsSync(path.join(assetsDir, 'icon-128x128.png')) && !fs.existsSync(path.join(assetsDir, 'icon-256x256.png')), 'no PNG icon competes with the animated GIF icon');
 const screenshotsInReadme = ((readme.split(/^== Screenshots ==$/m)[1] || '').split(/^== /m)[0].match(/^\d+\./gm) || []).length;
 const screenshotFiles = fs.existsSync(assetsDir) ? fs.readdirSync(assetsDir).filter((f) => /^screenshot-\d+\.(png|jpg)$/.test(f)).length : 0;
 expect(screenshotsInReadme === screenshotFiles, `${screenshotsInReadme} screenshot caption(s) / ${screenshotFiles} screenshot file(s)`);
@@ -101,7 +106,8 @@ expect(screenshotsInReadme === screenshotFiles, `${screenshotsInReadme} screensh
 // ---------------------------------------------------------------- plugin assets.
 for (const file of fs.readdirSync(path.join(pluginDir, 'assets'))) {
 	const content = fs.readFileSync(path.join(pluginDir, 'assets', file), 'utf8');
-	const remote = content.match(/https?:\/\/[a-z0-9.-]+\.[a-z]{2,}/gi) || [];
+	// The SVG namespace in inline data: URIs is an identifier, never fetched.
+	const remote = content.replace(/http:\/\/www\.w3\.org\/2000\/svg/g, '').match(/https?:\/\/[a-z0-9.-]+\.[a-z]{2,}/gi) || [];
 	expect(remote.length === 0, `assets/${file} loads nothing from external hosts${remote.length ? ` (${remote.join(', ')})` : ''}`);
 }
 
