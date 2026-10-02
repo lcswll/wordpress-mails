@@ -156,6 +156,15 @@ final class Rest {
 		$item['content_type'] = $type;
 		$item['is_html']      = false !== strpos( $type, 'html' );
 		$item['sender']       = $row['sender'];
+		$item['meta']         = self::decode_meta( (string) ( $row['meta'] ?? '' ) );
+
+		/**
+		 * Detail payload of one log entry (dialog). Modules add their fields here.
+		 *
+		 * @param array<string,mixed>  $item
+		 * @param array<string,string> $row  Raw database row.
+		 */
+		$item = (array) apply_filters( 'mailspur_rest_item', $item, $row );
 
 		$response = new WP_REST_Response( $item );
 		$response->header( 'Cache-Control', 'no-store' );
@@ -232,7 +241,7 @@ final class Rest {
 		}
 		$timestamp = (int) strtotime( $row['created_at'] . ' UTC' );
 
-		return array(
+		$item = array(
 			'id'          => (int) $row['id'],
 			'date'        => (string) wp_date( $this->date_format, $timestamp ),
 			'date_iso'    => gmdate( 'c', $timestamp ),
@@ -242,7 +251,25 @@ final class Rest {
 			'attachments' => array_column( self::decode_attachments( (string) $row['attachments'] ), 'name' ),
 			'source'      => (string) $row['source'],
 			'error'       => (string) $row['error'],
+			'notes'       => (int) ( $row['notes'] ?? 0 ),
+			'size'        => (int) ( $row['size'] ?? 0 ),
 		);
+
+		/**
+		 * List payload of one log entry. Keep it small: it is sent for every row of a page.
+		 *
+		 * @param array<string,mixed>  $item
+		 * @param array<string,string> $row  Raw database row (list columns only).
+		 */
+		return (array) apply_filters( 'mailspur_rest_summary', $item, $row );
+	}
+
+	/**
+	 * @return array<string,mixed>
+	 */
+	public static function decode_meta( string $json ): array {
+		$meta = '' === $json ? array() : json_decode( $json, true );
+		return is_array( $meta ) ? $meta : array();
 	}
 
 	/**
@@ -316,7 +343,7 @@ final class Rest {
 			),
 			'status'   => array(
 				'type'    => 'string',
-				'enum'    => array( 'all', 'sent', 'failed', 'pending' ),
+				'enum'    => array( 'all', 'sent', 'failed', 'pending', 'held' ),
 				'default' => 'all',
 			),
 			'orderby'  => array(

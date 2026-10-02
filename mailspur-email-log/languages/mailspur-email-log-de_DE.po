@@ -152,6 +152,9 @@ msgstr "Von Datum"
 msgid "Headers"
 msgstr "Header"
 
+msgid "Held"
+msgstr "Zurückgehalten"
+
 msgid "Import"
 msgstr "Importieren"
 

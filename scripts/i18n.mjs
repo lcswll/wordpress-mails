@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * Bundled translations: extracts the plugin's strings and builds languages/*.l10n.php + .po from i18n/<locale>.json.
+ * Bundled translations: extracts the plugin's strings and builds languages/*.l10n.php + .po from i18n/<locale>/*.json.
  *
- *   npm run i18n               # rebuild the language files
+ *   npm run i18n               # rebuild the language files from i18n/<locale>/*.json (one file per module)
  *   npm run i18n -- --check    # CI: fail on missing/unused translations or outdated generated files
  *
  * wordpress.org language packs (translate.wordpress.org) take precedence at runtime; the bundled files are
@@ -38,9 +38,16 @@ const po = (s) => '"' + s.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"';
 
 const problems = [];
 const files = {};
-for (const jsonFile of fs.readdirSync(path.join(root, 'i18n')).filter((f) => f.endsWith('.json'))) {
-	const locale = path.basename(jsonFile, '.json');
-	const map = JSON.parse(fs.readFileSync(path.join(root, 'i18n', jsonFile), 'utf8'));
+// i18n/<locale>/*.json – one file per module (core.json, trace.json …), merged here.
+for (const locale of fs.readdirSync(path.join(root, 'i18n')).filter((f) => fs.statSync(path.join(root, 'i18n', f)).isDirectory())) {
+	const jsonFile = `${locale}/*.json`;
+	const map = {};
+	for (const part of fs.readdirSync(path.join(root, 'i18n', locale)).filter((f) => f.endsWith('.json')).sort()) {
+		for (const [key, value] of Object.entries(JSON.parse(fs.readFileSync(path.join(root, 'i18n', locale, part), 'utf8')))) {
+			if (key in map && map[key] !== value) problems.push(`${locale}: "${key}" translated differently in ${part}`);
+			map[key] = value;
+		}
+	}
 	for (const s of sorted) if (!(s in map)) problems.push(`${locale}: missing translation for "${s}"`);
 	for (const s of Object.keys(map)) if (!strings.has(s)) problems.push(`${locale}: unused translation "${s}"`);
 

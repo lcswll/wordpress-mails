@@ -49,6 +49,7 @@ final class RepositoryTest extends TestCase {
 				'sent'    => 3,
 				'failed'  => 1,
 				'pending' => 0,
+				'held'    => 0,
 			),
 			$result['counts']
 		);

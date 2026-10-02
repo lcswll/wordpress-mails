@@ -80,6 +80,11 @@ foreach ( array( 'Old welcome mail', 'Old invoice', 'Old newsletter' ) as $i => 
 	);
 }
 
+// Module seed data for the browser tests: tests/e2e/seed.d/*.php.
+foreach ( (array) glob( __DIR__ . '/seed.d/*.php' ) as $seed_file ) {
+	require $seed_file;
+}
+
 // Tell tests/e2e/wait-for-wordpress.js that the blueprint has finished.
 if ( is_dir( '/e2e-out' ) ) {
 	file_put_contents( '/e2e-out/seeded', gmdate( 'c' ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents

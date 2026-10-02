@@ -40,6 +40,18 @@ let failed = false;
 // The CLI's --php/--wp flags do not reach run-blueprint; preferredVersions in the blueprint does.
 const blueprint = JSON.parse(fs.readFileSync(path.join(root, 'tests', 'e2e', 'selftest.blueprint.json'), 'utf8'));
 blueprint.preferredVersions = { php, wp };
+
+// Module integration tests: tests/e2e/features/<name>.php run before the self-test (which uninstalls the
+// plugin at its end) and write /e2e-out/features/<name>.json in the same format as selftest.json.
+const featureDir = path.join(root, 'tests', 'e2e', 'features');
+const features = fs.existsSync(featureDir) ? fs.readdirSync(featureDir).filter((f) => f.endsWith('.php')).sort() : [];
+fs.mkdirSync(path.join(out, 'features'), { recursive: true });
+const selftestIndex = blueprint.steps.findIndex((step) => 'runPHP' === step.step && step.code.includes('selftest.php'));
+blueprint.steps.splice(
+	selftestIndex,
+	0,
+	...features.map((file) => ({ step: 'runPHP', code: `<?php require '/e2e/features/${file}';` })),
+);
 const blueprintFile = path.join(root, '.cache', 'e2e-selftest.blueprint.json');
 fs.writeFileSync(blueprintFile, JSON.stringify(blueprint, null, '\t'));
 
@@ -91,6 +103,21 @@ Import from other plugins: ${imports.passed} passed, ${imports.failed} failed`);
       ${JSON.stringify(r.detail)}`}`);
 	}
 	failed ||= imports.failed > 0;
+}
+
+for (const file of features) {
+	const name = path.basename(file, '.php');
+	const report = read(`features/${name}.json`);
+	if (!report) {
+		failed = true;
+		console.error(`\nNo report from tests/e2e/features/${file}.`);
+		continue;
+	}
+	console.log(`\nFeature "${name}": ${report.passed} passed, ${report.failed} failed`);
+	for (const r of report.results) {
+		console.log(`  ${r.ok ? '✓' : '✗'} ${r.name}${r.ok ? '' : `\n      ${JSON.stringify(r.detail)}`}`);
+	}
+	failed ||= report.failed > 0;
 }
 
 const pcp = read('plugin-check.json');

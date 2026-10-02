@@ -24,6 +24,13 @@ final class Plugin {
 
 		$repository = new Repository();
 
+		// Feature modules first, so their settings defaults and filters exist before anything runs.
+		foreach ( (array) require __DIR__ . '/Modules.php' as $class ) {
+			if ( is_string( $class ) && class_exists( $class ) && is_subclass_of( $class, Module::class ) ) {
+				( new $class( $repository ) )->register();
+			}
+		}
+
 		( new Logger( $repository ) )->register();
 		( new Cleanup( $repository ) )->register();
 		( new Privacy( $repository ) )->register();

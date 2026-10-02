@@ -21,11 +21,13 @@ final class Repository {
 	const STATUS_PENDING = 0;
 	const STATUS_SENT    = 1;
 	const STATUS_FAILED  = 2;
+	const STATUS_HELD    = 3; // Intercepted on purpose, e.g. staging mode: logged but not delivered.
 
 	const STATUSES = array(
 		self::STATUS_PENDING => 'pending',
 		self::STATUS_SENT    => 'sent',
 		self::STATUS_FAILED  => 'failed',
+		self::STATUS_HELD    => 'held',
 	);
 
 	const ORDER_COLUMNS = array(
@@ -110,7 +112,7 @@ final class Repository {
 		$sql  = 'SELECT status, COUNT(*) AS n FROM %i WHERE ' . implode( ' AND ', $where ) . ' GROUP BY status';
 		$rows = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals above.
 
-		$counts = array_fill_keys( array( 'all', 'sent', 'failed', 'pending' ), 0 );
+		$counts = array_fill_keys( array( 'all', 'sent', 'failed', 'pending', 'held' ), 0 );
 		foreach ( (array) $rows as $row ) {
 			$counts[ self::status_slug( (int) $row['status'] ) ] += (int) $row['n'];
 			$counts['all']                                       += (int) $row['n'];
@@ -142,7 +144,7 @@ final class Repository {
 		$params[] = ( max( 1, (int) ( $args['page'] ?? 1 ) ) - 1 ) * $per_page;
 
 		// Secondary sort on id keeps pagination stable for equal recipients/subjects.
-		$sql   = 'SELECT id, created_at, status, recipients, subject, attachments, source, error FROM %i WHERE '
+		$sql   = 'SELECT id, created_at, status, recipients, subject, attachments, source, error, notes, size FROM %i WHERE '
 			. implode( ' AND ', $where ) . " ORDER BY %i {$order}, id {$order} LIMIT %d OFFSET %d";
 		$items = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals above, $order is ASC|DESC.
 
@@ -269,6 +271,10 @@ final class Repository {
 			'sender'       => '%s',
 			'source'       => '%s',
 			'error'        => '%s',
+			'meta'         => '%s',
+			'notes'        => '%d',
+			'size'         => '%d',
+			'raw'          => '%s',
 		);
 		$tuple   = '(' . implode( ',', $columns ) . ')';
 		$values  = array( self::table() );

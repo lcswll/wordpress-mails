@@ -12,6 +12,8 @@
 	--ob-failed-bg: #fcf0f1;
 	--ob-pending: #996800;
 	--ob-pending-bg: #fcf9e8;
+	--ob-held: #3858e9;
+	--ob-held-bg: #eff2ff;
 	--ob-radius: 6px;
 }
 
@@ -410,6 +412,11 @@
 .mailspur-badge.is-pending {
 	background: var(--ob-pending-bg);
 	color: var(--ob-pending);
+}
+
+.mailspur-badge.is-held {
+	background: var(--ob-held-bg);
+	color: var(--ob-held);
 }
 
 /* ---------------------------------------------------------------- footer */

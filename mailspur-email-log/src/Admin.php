@@ -84,12 +84,26 @@ final class Admin {
 		}
 
 		$base = plugin_dir_url( FILE ) . 'assets/';
+		$tab  = $this->current_tab();
 		wp_enqueue_style( 'mailspur-email-log-admin', $base . 'admin.css', array(), VERSION );
 
-		if ( 'settings' === $this->current_tab() ) {
+		if ( 'log' === $tab ) {
+			$this->log_assets( $base );
+		} elseif ( 'settings' === $tab ) {
 			$this->import_assets( $base );
-			return;
 		}
+
+		/**
+		 * Modules enqueue their own assets here. On the log tab, scripts depending on the
+		 * 'mailspur-email-log-admin' handle can use the window.mailspur API (docs/MODULES.md).
+		 *
+		 * @param string $tab  Current tab key.
+		 * @param string $base URL of the plugin's assets folder (with trailing slash).
+		 */
+		do_action( 'mailspur_admin_enqueue', $tab, $base );
+	}
+
+	private function log_assets( string $base ): void {
 
 		wp_enqueue_script(
 			'mailspur-email-log-admin',
@@ -117,6 +131,7 @@ final class Admin {
 				'sent'          => __( 'Sent', 'mailspur-email-log' ),
 				'failed'        => __( 'Failed', 'mailspur-email-log' ),
 				'pending'       => __( 'Unknown', 'mailspur-email-log' ),
+				'held'          => __( 'Held', 'mailspur-email-log' ),
 				'empty'         => __( 'No emails found.', 'mailspur-email-log' ),
 				'emptyFiltered' => __( 'No emails match these filters.', 'mailspur-email-log' ),
 				/* translators: %s: number of log entries */
@@ -165,10 +180,35 @@ final class Admin {
 		wp_add_inline_script( 'mailspur-email-log-admin', 'window.mailspurConfig = ' . wp_json_encode( $config ) . ';', 'before' );
 	}
 
+	/**
+	 * Tabs of the admin screen: key => array( label, capability ). Modules add tabs through the
+	 * mailspur_admin_tabs filter and render them on the mailspur_render_tab_{key} action.
+	 *
+	 * @return array<string,array{0:string,1:string}>
+	 */
+	private function tabs(): array {
+		$tabs = (array) apply_filters(
+			'mailspur_admin_tabs',
+			array(
+				'log' => array( __( 'Log', 'mailspur-email-log' ), Settings::capability() ),
+			)
+		);
+		// Settings always last and always for administrators only.
+		$tabs['settings'] = array( __( 'Settings', 'mailspur-email-log' ), 'manage_options' );
+
+		$out = array();
+		foreach ( $tabs as $key => $tab ) {
+			if ( is_array( $tab ) && isset( $tab[0], $tab[1] ) && ( current_user_can( (string) $tab[1] ) || current_user_can( 'manage_options' ) ) ) {
+				$out[ sanitize_key( (string) $key ) ] = array( (string) $tab[0], (string) $tab[1] );
+			}
+		}
+		return $out;
+	}
+
 	private function current_tab(): string {
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only tab switch.
 		$tab = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : '';
-		return ( 'settings' === $tab && current_user_can( 'manage_options' ) ) ? 'settings' : 'log';
+		return isset( $this->tabs()[ $tab ] ) ? $tab : 'log';
 	}
 
 	public function render(): void {
@@ -180,14 +220,11 @@ final class Admin {
 		<div class="wrap mailspur">
 			<header class="mailspur-header">
 				<h1 class="mailspur-title"><span class="dashicons dashicons-email-alt" aria-hidden="true"></span> <?php esc_html_e( 'Mail Log', 'mailspur-email-log' ); ?></h1>
-				<?php if ( current_user_can( 'manage_options' ) ) : ?>
+				<?php if ( count( $this->tabs() ) > 1 ) : ?>
 					<nav class="mailspur-nav" aria-label="<?php esc_attr_e( 'Mail Log sections', 'mailspur-email-log' ); ?>">
 						<?php
-						$tabs = array(
-							'log'      => array( self::url(), __( 'Log', 'mailspur-email-log' ) ),
-							'settings' => array( self::url( array( 'tab' => 'settings' ) ), __( 'Settings', 'mailspur-email-log' ) ),
-						);
-						foreach ( $tabs as $key => list( $href, $label ) ) :
+						foreach ( $this->tabs() as $key => list( $label ) ) :
+							$href = 'log' === $key ? self::url() : self::url( array( 'tab' => $key ) );
 							?>
 							<a href="<?php echo esc_url( $href ); ?>" class="<?php echo esc_attr( $key === $tab ? 'is-active' : '' ); ?>" aria-current="<?php echo esc_attr( $key === $tab ? 'page' : 'false' ); ?>"><?php echo esc_html( $label ); ?></a>
 						<?php endforeach; ?>
@@ -198,8 +235,11 @@ final class Admin {
 			<?php
 			if ( 'settings' === $tab ) {
 				$this->render_settings();
-			} else {
+			} elseif ( 'log' === $tab ) {
 				$this->render_log();
+			} else {
+				/** Module tabs render themselves. */
+				do_action( 'mailspur_render_tab_' . $tab );
 			}
 			?>
 		</div>
@@ -219,6 +259,7 @@ final class Admin {
 						'sent'    => __( 'Sent', 'mailspur-email-log' ),
 						'failed'  => __( 'Failed', 'mailspur-email-log' ),
 						'pending' => __( 'Unknown', 'mailspur-email-log' ),
+						'held'    => __( 'Held', 'mailspur-email-log' ),
 					);
 					foreach ( $statuses as $key => $label ) :
 						?>
@@ -426,10 +467,24 @@ final class Admin {
 				</tr>
 			</table>
 
-			<?php submit_button(); ?>
+			<?php
+			/**
+			 * Module settings: render <h2> + form-table rows with inputs named
+			 * mailspur_settings[your_key]; register defaults/sanitizing via the
+			 * mailspur_settings_defaults / mailspur_settings_sanitize filters.
+			 *
+			 * @param array<string,mixed> $settings Current settings.
+			 * @param string              $name     Option name for input names.
+			 */
+			do_action( 'mailspur_settings_sections', $s, $name );
+			submit_button();
+			?>
 		</form>
 		<?php
 		$this->render_import();
+
+		/** Module content below the settings form (tools, checks …), outside the options form. */
+		do_action( 'mailspur_settings_after' );
 	}
 
 	private function import_assets( string $base ): void {

@@ -7,6 +7,7 @@
 
 namespace Mailspur\Tests;
 
+use Brain\Monkey\Actions;
 use Brain\Monkey\Filters;
 use Mailspur\Logger;
 use Mailspur\Repository;
@@ -128,10 +129,55 @@ final class LoggerTest extends TestCase {
 				'sender'       => 'Shop <shop@example.com>',
 				'message'      => '<p>Wrapped by a template plugin</p>',
 				'status'       => Repository::STATUS_SENT,
+				'meta'         => '',
+				'size'         => 35,
 			),
 			$updates[0][2]
 		);
 		$this->assertSame( array( 'id' => 1 ), $updates[0][3] );
+	}
+
+	public function test_modules_collect_meta_in_three_phases_and_set_columns(): void {
+		$phases = array();
+		Filters\expectApplied( 'mailspur_meta' )->times( 3 )->andReturnUsing(
+			static function ( $meta, $phase ) use ( &$phases ) {
+				$phases[]       = $phase;
+				$meta[ $phase ] = true;
+				return $meta;
+			}
+		);
+		Filters\expectApplied( 'mailspur_finalize_row' )->once()->andReturnUsing(
+			static function ( $data, $row ) {
+				$data['notes'] = 'Hello' === $row['subject'] ? 2 : 0;
+				return $data;
+			}
+		);
+		Actions\expectDone( 'mailspur_logged' )->once();
+
+		$this->logger->capture( $this->atts() );
+		$this->logger->enrich( new PHPMailer() );
+		$this->logger->succeeded();
+
+		$this->assertSame( array( 'capture', 'phpmailer', 'result' ), $phases );
+		$this->assertSame( '{"capture":true}', $this->writes( 'insert' )[0][2]['meta'] );
+		$update = $this->writes( 'update' )[0][2];
+		$this->assertSame( '{"capture":true,"phpmailer":true,"result":true}', $update['meta'] );
+		$this->assertSame( 2, $update['notes'] );
+	}
+
+	public function test_a_failing_module_does_not_lose_the_status(): void {
+		Filters\expectApplied( 'mailspur_finalize_row' )->andReturnUsing(
+			static function () {
+				throw new \RuntimeException( 'broken module' );
+			}
+		);
+
+		$this->logger->capture( $this->atts() );
+		$this->logger->failed( new WP_Error( 'x', 'SMTP down' ) );
+
+		$update = $this->writes( 'update' )[0][2];
+		$this->assertSame( Repository::STATUS_FAILED, $update['status'] );
+		$this->assertSame( 'SMTP down', $update['error'] );
 	}
 
 	public function test_unchanged_body_is_not_written_again(): void {

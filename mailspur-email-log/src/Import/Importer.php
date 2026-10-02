@@ -117,7 +117,7 @@ final class Importer {
 					continue;
 				}
 				$row['message'] = Redactor::redact( (string) $row['message'] );
-				$insert[]       = $row;
+				$insert[]       = self::finalize( $row, $source );
 			}
 
 			// Several smaller INSERTs keep each statement well below max_allowed_packet with large bodies.
@@ -140,6 +140,20 @@ final class Importer {
 		} finally {
 			delete_option( self::LOCK_PREFIX . $source->id() );
 		}
+	}
+
+	/**
+	 * Lets modules add their data to an imported row (same filter as for logged mails).
+	 *
+	 * @param array<string,string|int> $row
+	 * @return array<string,string|int>
+	 */
+	private static function finalize( array $row, Source $source ): array {
+		$data         = $row;
+		$data['meta'] = (array) apply_filters( 'mailspur_meta', array( 'import' => $source->id() ), 'import', $row );
+		$data         = (array) apply_filters( 'mailspur_finalize_row', $data, $data );
+		$data['meta'] = is_array( $data['meta'] ) ? \Mailspur\Logger::encode( $data['meta'] ) : (string) $data['meta'];
+		return array_merge( $row, $data );
 	}
 
 	/** Removes everything imported from this source and resets its progress. */

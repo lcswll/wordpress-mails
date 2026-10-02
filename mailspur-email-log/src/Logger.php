@@ -8,6 +8,12 @@
  *   succeeded / failed  → single UPDATE with status + enrichment
  * A pre_wp_mail short-circuit (e.g. API-based mailers) resolves the row as well.
  *
+ * Extension points for modules (see docs/MODULES.md):
+ *   filter mailspur_meta( array $meta, string $phase, mixed $context )
+ *          phase 'capture' (context: wp_mail args), 'phpmailer' (PHPMailer), 'result' (status/error)
+ *   filter mailspur_finalize_row( array $data, array $row )  – last chance to set columns (notes, meta …)
+ *   action mailspur_logged( int $id, array $row )            – after the final UPDATE
+ *
  * @package Mailspur
  */
 
@@ -30,7 +36,7 @@ final class Logger {
 	/**
 	 * Mails in flight (wp_mail can be nested, e.g. a failure handler sending a mail).
 	 *
-	 * @var array<int,array{id:int,hash:string,data:array<string,string>}>
+	 * @var array<int,array{id:int,hash:string,row:array<string,mixed>,data:array<string,mixed>,meta:array<string,mixed>}>
 	 */
 	private $stack = array();
 
@@ -61,11 +67,16 @@ final class Logger {
 
 		$message = (string) ( $atts['message'] ?? '' );
 		$id      = 0;
+		$row     = array();
+		$meta    = array();
 
 		// A skipped mail still gets a stack slot (id 0) so result hooks stay aligned.
 		if ( apply_filters( 'mailspur_should_log', true, $atts ) ) {
 			try {
-				$id = $this->repository->insert( $this->normalize( $atts, $message ) );
+				$row         = $this->normalize( $atts, $message );
+				$meta        = (array) apply_filters( 'mailspur_meta', array(), 'capture', $atts );
+				$row['meta'] = self::encode( $meta );
+				$id          = $this->repository->insert( $row );
 			} catch ( \Throwable $e ) { // Logging must never break mail delivery.
 				$id = 0;
 			}
@@ -74,7 +85,9 @@ final class Logger {
 		$this->stack[] = array(
 			'id'   => $id,
 			'hash' => md5( $message ),
+			'row'  => $row,
 			'data' => array(),
+			'meta' => $meta,
 		);
 
 		return $atts;
@@ -114,6 +127,7 @@ final class Logger {
 		}
 
 		$this->stack[ $key ]['data'] = $data;
+		$this->stack[ $key ]['meta'] = (array) apply_filters( 'mailspur_meta', $this->stack[ $key ]['meta'], 'phpmailer', $mailer );
 	}
 
 	public function succeeded(): void {
@@ -130,22 +144,64 @@ final class Logger {
 	/** Persists enrichment for mails sent by a pluggable wp_mail() that fires no result hooks. */
 	public function flush(): void {
 		while ( $this->stack ) {
-			$entry = array_pop( $this->stack );
-			$this->repository->update( $entry['id'], $entry['data'] );
+			$this->finish( (array) array_pop( $this->stack ), null );
 		}
 	}
 
 	private function resolve( int $status, string $error = '' ): void {
 		$entry = array_pop( $this->stack );
-		if ( ! $entry || ! $entry['id'] ) {
+		if ( $entry ) {
+			$this->finish( $entry, $status, $error );
+		}
+	}
+
+	/**
+	 * Single UPDATE per mail: status, PHPMailer enrichment and everything modules collected.
+	 *
+	 * @param array<string,mixed> $entry  Stack entry.
+	 * @param int|null            $status Null when the result is unknown (no result hook fired).
+	 */
+	private function finish( array $entry, ?int $status, string $error = '' ): void {
+		if ( empty( $entry['id'] ) ) {
 			return;
 		}
-		$data           = $entry['data'];
-		$data['status'] = $status;
+		$data = (array) $entry['data'];
+		if ( null !== $status ) {
+			$data['status'] = $status;
+		}
 		if ( '' !== $error ) {
 			$data['error'] = $error;
 		}
-		$this->repository->update( $entry['id'], $data );
+
+		try {
+			$data['meta'] = (array) apply_filters(
+				'mailspur_meta',
+				(array) $entry['meta'],
+				'result',
+				array(
+					'status' => $status,
+					'error'  => $error,
+				)
+			);
+			$row          = array_merge( (array) $entry['row'], $data );
+			$data['size'] = strlen( (string) ( $row['message'] ?? '' ) ) + strlen( (string) ( $row['headers'] ?? '' ) );
+			$data         = (array) apply_filters( 'mailspur_finalize_row', $data, array_merge( $row, $data ) );
+		} catch ( \Throwable $e ) { // A faulty module must not lose the status update.
+			unset( $data['meta'] );
+		}
+		if ( isset( $data['meta'] ) && is_array( $data['meta'] ) ) {
+			$data['meta'] = self::encode( $data['meta'] );
+		}
+
+		$this->repository->update( (int) $entry['id'], $data );
+		do_action( 'mailspur_logged', (int) $entry['id'], array_merge( (array) $entry['row'], $data ) );
+	}
+
+	/**
+	 * @param array<string,mixed> $meta
+	 */
+	public static function encode( array $meta ): string {
+		return $meta ? (string) wp_json_encode( $meta ) : '';
 	}
 
 	/**
@@ -187,6 +243,10 @@ final class Logger {
 			'sender'       => $sender,
 			'source'       => self::$source_override ? self::$source_override : $this->source(),
 			'error'        => '',
+			'meta'         => '',
+			'notes'        => 0,
+			'size'         => strlen( $message ),
+			'raw'          => '',
 		);
 	}
 

@@ -24,6 +24,18 @@ final class Installer {
 
 	public static function deactivate(): void {
 		Cleanup::unschedule();
+		self::unschedule_all();
+	}
+
+	/** Removes every scheduled event of the plugin (core and modules use the "mailspur_" hook prefix). */
+	public static function unschedule_all(): void {
+		foreach ( (array) _get_cron_array() as $events ) {
+			foreach ( array_keys( (array) $events ) as $hook ) {
+				if ( 0 === strpos( (string) $hook, 'mailspur_' ) ) {
+					wp_clear_scheduled_hook( (string) $hook );
+				}
+			}
+		}
 	}
 
 	/**
@@ -59,6 +71,10 @@ content_type varchar(100) NOT NULL DEFAULT '',
 sender varchar(255) NOT NULL DEFAULT '',
 source varchar(100) NOT NULL DEFAULT '',
 error text NOT NULL,
+meta longtext NOT NULL,
+notes smallint(5) unsigned NOT NULL DEFAULT 0,
+size int(10) unsigned NOT NULL DEFAULT 0,
+raw longtext NOT NULL,
 PRIMARY KEY  (id),
 KEY created_at (created_at),
 KEY status_created (status,created_at),

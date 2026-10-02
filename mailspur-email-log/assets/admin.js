@@ -63,6 +63,42 @@
 	let view = 'preview';
 	let allowRemote = !! cfg.remoteImages;
 
+	/* ------------------------------------------------------------ module API */
+
+	// Extension points for feature modules (docs/MODULES.md). Module scripts depend on this script's
+	// handle, run after it and register before the first render (DOMContentLoaded).
+	const registry = { tabs: [], rows: [], details: [], actions: [], listeners: [] };
+	const safely = ( fn, ...args ) => {
+		try {
+			return fn( ...args );
+		} catch ( err ) {
+			window.console.error( '[mailspur module]', err );
+		}
+	};
+	window.mailspur = {
+		cfg,
+		t,
+		fmt,
+		num,
+		node: ( ...args ) => node( ...args ),
+		api: ( ...args ) => api( ...args ),
+		endpoint: ( ...args ) => endpoint( ...args ),
+		toast: ( ...args ) => toast( ...args ),
+		reload: () => load(),
+		/** Mail shown in the dialog (detail payload incl. meta), or null. */
+		current: () => current,
+		/** Extra dialog tab: { id, label, render( container, mail ) }. */
+		registerTab: ( def ) => registry.tabs.push( def ),
+		/** Called for every list row: fn( tr, item ) – add badges, classes … */
+		registerRowDecorator: ( fn ) => registry.rows.push( fn ),
+		/** Called when the dialog opens: fn( dl, mail ) – add <dt>/<dd> pairs or other details. */
+		registerDetail: ( fn ) => registry.details.push( fn ),
+		/** Extra dialog button: { id, label, icon (dashicon name), run( mail ), visible?( mail ) }. */
+		registerAction: ( def ) => registry.actions.push( def ),
+		/** fn( data ) after every list load (items, total, counts). */
+		onList: ( fn ) => registry.listeners.push( fn ),
+	};
+
 	function readUrl() {
 		const params = new URLSearchParams( location.search );
 		const out = {};
@@ -192,6 +228,7 @@
 	}
 
 	function render() {
+		registry.listeners.forEach( ( fn ) => safely( fn, data ) );
 		Object.keys( data.counts || {} ).forEach( ( key ) => {
 			const node = app.querySelector( '[data-count="' + key + '"]' );
 			if ( node ) {
@@ -299,6 +336,7 @@
 		actions.append( iconButton( 'view', 'visibility', t.view ), iconButton( 'resend', 'controls-repeat', t.resend ), iconButton( 'delete', 'trash', t.delete ) );
 
 		tr.append( check, date, status, to, subject, source, actions );
+		registry.rows.forEach( ( fn ) => safely( fn, tr, item ) );
 		return tr;
 	}
 
@@ -401,6 +439,11 @@
 				.filter( ( [ , value ] ) => value )
 				.flatMap( ( [ label, value, cls ] ) => [ node( 'dt', cls, label ), node( 'dd', cls, value ) ] )
 		);
+		registry.details.forEach( ( fn ) => safely( fn, el.dMeta, m ) );
+		el.dialog.querySelectorAll( '[data-module-action]' ).forEach( ( btn ) => {
+			const def = registry.actions.find( ( a ) => a.id === btn.dataset.moduleAction );
+			btn.hidden = !! ( def && def.visible && ! safely( def.visible, m ) );
+		} );
 
 		const index = data.items.findIndex( ( i ) => i.id === m.id );
 		el.dialog.querySelector( '[data-action="prev"]' ).disabled = index <= 0;
@@ -424,6 +467,14 @@
 		if ( showRemote ) {
 			el.dRemoteText.textContent = allowRemote ? t.remoteLoaded : t.remoteBlocked;
 			el.dRemoteToggle.textContent = allowRemote ? t.blockRemote : t.loadRemote;
+		}
+
+		const moduleTab = registry.tabs.find( ( def ) => def.id === view );
+		if ( moduleTab ) {
+			el.dRemote.hidden = true;
+			el.dBody.replaceChildren();
+			safely( moduleTab.render, el.dBody, current );
+			return;
 		}
 
 		if ( 'preview' === view && current.is_html ) {
@@ -529,6 +580,13 @@
 					next ? openMail( next.id ) : el.dialog.close();
 				}
 				break;
+			case 'module': {
+				const def = registry.actions.find( ( a ) => a.id === btn.dataset.moduleAction );
+				if ( def ) {
+					await safely( def.run, current );
+				}
+				break;
+			}
 		}
 	} );
 
@@ -721,5 +779,41 @@
 		app.querySelector( '.mailspur-footer' ).append( purge );
 	}
 
-	load();
+	/** Adds module tabs and dialog buttons, then loads the list. */
+	function init() {
+		const tablist = el.dialog.querySelector( '.mailspur-d-tabs' );
+		const remote = el.dRemote;
+		registry.tabs.forEach( ( def ) => {
+			const tab = node( 'button', '', def.label );
+			tab.type = 'button';
+			tab.id = 'mailspur-tab-' + def.id;
+			tab.dataset.view = def.id;
+			tab.setAttribute( 'role', 'tab' );
+			tab.setAttribute( 'aria-selected', 'false' );
+			tab.setAttribute( 'aria-controls', 'mailspur-d-body' );
+			tablist.insertBefore( tab, remote );
+		} );
+		const close = el.dialog.querySelector( '[data-action="close"]' );
+		registry.actions.forEach( ( def ) => {
+			const btn = node( 'button', 'button' );
+			btn.type = 'button';
+			btn.dataset.action = 'module';
+			btn.dataset.moduleAction = def.id;
+			if ( def.icon ) {
+				const icon = node( 'span', 'dashicons dashicons-' + def.icon );
+				icon.setAttribute( 'aria-hidden', 'true' );
+				btn.append( icon, ' ' );
+			}
+			btn.append( def.label );
+			close.parentNode.insertBefore( btn, close );
+		} );
+		load();
+	}
+
+	// Deferred module scripts run after this one but before DOMContentLoaded.
+	if ( 'complete' === document.readyState ) {
+		init();
+	} else {
+		document.addEventListener( 'DOMContentLoaded', init );
+	}
 }() );

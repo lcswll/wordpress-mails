@@ -20,7 +20,7 @@ final class Settings {
 	 * @return array<string,string|int|bool>
 	 */
 	public static function defaults(): array {
-		return array(
+		$defaults = array(
 			'capability'               => 'manage_options',
 			'menu_location'            => 'top',
 			'retention_days'           => 90,
@@ -29,6 +29,13 @@ final class Settings {
 			'redact_secrets'           => true,
 			'delete_data_on_uninstall' => true,
 		);
+
+		/**
+		 * Module settings: add keys with their defaults (scalar values only).
+		 *
+		 * @param array<string,string|int|bool> $defaults
+		 */
+		return (array) apply_filters( 'mailspur_settings_defaults', $defaults );
 	}
 
 	/**
@@ -67,7 +74,7 @@ final class Settings {
 
 		$cap = isset( $input['capability'] ) ? sanitize_key( $input['capability'] ) : $defaults['capability'];
 
-		return array(
+		$clean = array(
 			'capability'               => in_array( $cap, self::CAPABILITIES, true ) ? $cap : 'manage_options',
 			'menu_location'            => ( isset( $input['menu_location'] ) && 'tools' === $input['menu_location'] ) ? 'tools' : 'top',
 			'retention_days'           => isset( $input['retention_days'] ) ? min( 3650, absint( $input['retention_days'] ) ) : $defaults['retention_days'],
@@ -76,5 +83,14 @@ final class Settings {
 			'redact_secrets'           => ! empty( $input['redact_secrets'] ),
 			'delete_data_on_uninstall' => ! empty( $input['delete_data_on_uninstall'] ),
 		);
+
+		/**
+		 * Module settings: sanitize your own keys from the raw form input. Unchecked checkboxes are
+		 * missing from $input and must become false.
+		 *
+		 * @param array<string,string|int|bool> $clean
+		 * @param array<string,mixed>           $input
+		 */
+		return (array) apply_filters( 'mailspur_settings_sanitize', $clean, $input );
 	}
 }

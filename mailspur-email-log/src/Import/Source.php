@@ -83,7 +83,7 @@ abstract class Source {
 	 * @return array<string,string|int>
 	 */
 	protected function row( array $data ): array {
-		$row = array_merge(
+		$row         = array_merge(
 			array(
 				'created_at'   => gmdate( 'Y-m-d H:i:s' ),
 				'status'       => Repository::STATUS_PENDING,
@@ -96,9 +96,14 @@ abstract class Source {
 				'sender'       => '',
 				'source'       => 'import:' . $this->id(),
 				'error'        => '',
+				'meta'         => '',
+				'notes'        => 0,
+				'size'         => 0,
+				'raw'          => '',
 			),
 			$data
 		);
+		$row['size'] = strlen( (string) $row['message'] ) + strlen( (string) $row['headers'] );
 
 		$row['content_type'] = (string) substr( strtolower( (string) $row['content_type'] ), 0, 100 );
 		$row['sender']       = (string) substr( (string) $row['sender'], 0, 255 );
