@@ -11,4 +11,5 @@ return array(
 	Mailspur\Modules\Trace\Module::class,
 	Mailspur\Modules\Notes\Module::class,
 	Mailspur\Modules\Delivery\Module::class,
+	Mailspur\Modules\Insights\Module::class,
 );
