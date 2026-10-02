@@ -1,0 +1,123 @@
+/* Mailspur – delivery module: sender check results, staging notices. */
+
+.mailspur-delivery-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.mailspur-delivery-state {
+	color: var(--ob-muted, #646970);
+}
+
+.mailspur-delivery-domain {
+	max-width: 960px;
+	margin: 16px 0;
+	background: var(--ob-bg, #fff);
+	border: 1px solid var(--ob-border, #dcdcde);
+	border-radius: var(--ob-radius, 6px);
+}
+
+.mailspur .mailspur-delivery-domain h3 {
+	margin: 0;
+	padding: 12px 16px;
+	font-size: 14px;
+	border-bottom: 1px solid var(--ob-border, #dcdcde);
+	overflow-wrap: anywhere;
+}
+
+.mailspur-delivery-seen {
+	font-weight: 400;
+	color: var(--ob-muted, #646970);
+}
+
+.mailspur-delivery-checks {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mailspur-delivery-item {
+	display: flex;
+	gap: 12px;
+	margin: 0;
+	padding: 12px 16px;
+	border-top: 1px solid #f0f0f1;
+}
+
+.mailspur-delivery-item:first-child {
+	border-top: 0;
+}
+
+.mailspur-delivery-body {
+	min-width: 0;
+	flex: 1;
+}
+
+.mailspur-delivery-body p {
+	margin: 0 0 4px;
+}
+
+.mailspur-delivery-hint,
+.mailspur-delivery-label {
+	color: var(--ob-muted, #646970);
+}
+
+.mailspur-delivery-label {
+	margin-top: 8px !important;
+	font-size: 12px;
+}
+
+.mailspur-delivery-record {
+	margin: 0;
+	padding: 8px 10px;
+	background: #f6f7f7;
+	border-radius: 4px;
+	font-size: 12px;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+	user-select: all;
+}
+
+.mailspur-delivery-record.is-suggestion {
+	background: var(--ob-sent-bg, #edfaef);
+}
+
+/* Traffic light; the state is also exposed as aria-label/title, never by colour alone. */
+.mailspur-light {
+	flex: none;
+	width: 14px;
+	height: 14px;
+	margin-top: 2px;
+	border-radius: 50%;
+	background: #a7aaad;
+	box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+.mailspur-light.is-ok {
+	background: var(--ob-sent, #00a32a);
+}
+
+.mailspur-light.is-warn {
+	background: #dba617;
+}
+
+.mailspur-light.is-bad {
+	background: var(--ob-failed, #d63638);
+}
+
+.mailspur-delivery-note {
+	max-width: 960px;
+	padding: 8px 12px;
+	border-left: 4px solid #a7aaad;
+	background: var(--ob-bg, #fff);
+}
+
+.mailspur-delivery-note.is-warn {
+	border-left-color: #dba617;
+}
+
+.mailspur-delivery-note.is-bad {
+	border-left-color: var(--ob-failed, #d63638);
+}

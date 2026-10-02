@@ -16,7 +16,6 @@ use Mailspur\Repository;
 use WP_REST_Request;
 use WP_REST_Response;
 
-require_once dirname( __DIR__ ) . '/stubs/class-wp-rest.php';
 
 final class NotesModuleTest extends TestCase {
 

@@ -26,17 +26,29 @@ msgstr "%s ausgewählt"
 msgid "(no subject)"
 msgstr "(kein Betreff)"
 
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all ist strenger; ~all ist üblich und zusammen mit DMARC in Ordnung."
+
 msgid "0 keeps entries forever. Cleanup runs once a day."
 msgstr "0 behält Einträge für immer. Die Bereinigung läuft einmal täglich."
 
 msgid "0 means no limit. The oldest entries are removed first."
 msgstr "0 bedeutet kein Limit. Die ältesten Einträge werden zuerst entfernt."
 
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Ein DKIM-Selektor darf nur Buchstaben, Ziffern, Punkte, Bindestriche und Unterstriche enthalten."
+
 msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
 msgstr "Ein Mailer-Plugin, das über eine API versendet, hat die Zustellung übernommen und einen Fehler gemeldet – ohne Grund."
 
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Ein veröffentlichter Schlüssel beweist nicht, dass deine E-Mails damit signiert werden – prüfe das DKIM-Ergebnis in den Headern einer empfangenen E-Mail."
+
 msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
 msgstr "Ein Empfänger oder die Absenderadresse ist keine gültige E-Mail-Adresse, deshalb hat PHPMailer den Versand verweigert."
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Für diesen Eintrag sind etwa %1$s DNS-Abfragen nötig – mehr als die erlaubten %2$s, daher ignorieren Empfänger ihn möglicherweise (PermError). Entferne nicht genutzte include:-Einträge."
 
 msgid "Access"
 msgstr "Zugriff"
@@ -47,14 +59,23 @@ msgstr "Aktionen"
 msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
 msgstr "Gib jedem Bild im Template ein kurzes alt-Attribut, z. B. alt=\"Logo Beispiel-Shop\"."
 
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Ergänze das include: deines Mail-Anbieters (z. B. include:_spf.google.com), falls du über einen versendest."
+
 msgid "Add your mail server or mail service to the SPF record of the sender domain."
 msgstr "Trage deinen Mailserver bzw. Maildienst im SPF-Eintrag der Absenderdomain ein."
 
 msgid "Administrators"
 msgstr "Administratoren"
 
+msgid "Aggregate reports go to %s."
+msgstr "Sammelberichte gehen an %s."
+
 msgid "All"
 msgstr "Alle"
+
+msgid "All emails are redirected to test addresses."
+msgstr "Alle E-Mails werden an Testadressen umgeleitet."
 
 msgid "Also search content"
 msgstr "Auch Inhalt durchsuchen"
@@ -98,6 +119,12 @@ msgstr "Kaputte Zeichen (Kodierung): %1$s"
 msgid "Bulk email without unsubscribe header (%1$s recipients)"
 msgstr "Massen-E-Mail ohne Abmelde-Header (%1$s Empfänger)"
 
+msgid "Change staging mode"
+msgstr "Staging-Modus ändern"
+
+msgid "Check again"
+msgstr "Erneut prüfen"
+
 msgid "Check emails"
 msgstr "E-Mails prüfen"
 
@@ -106,6 +133,9 @@ msgstr "Prüfe Host und Port; probiere 587 (TLS) statt 465 (SSL) oder umgekehrt.
 
 msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
 msgstr "Prüfe Host, Port, Verschlüsselung, Benutzername und Passwort in deinem SMTP-Plugin und sende dort eine Test-E-Mail."
+
+msgid "Check sender domains"
+msgstr "Absender-Domains prüfen"
 
 msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
 msgstr "Prüfe, ob die Verschlüsselung zum Port passt: TLS für 587, SSL für 465."
@@ -143,8 +173,17 @@ msgstr "Prüfe die Server-IP mit einem Blocklist-Checker und beantrage die Entfe
 msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
 msgstr "Prüfe die Schreibweise des Platzhalters im Template und ob das Plugin ihn für diesen E-Mail-Typ unterstützt. Shortcodes werden in E-Mails nur ausgeführt, wenn das sendende Plugin do_shortcode() aufruft."
 
+msgid "Checked %s."
+msgstr "Geprüft am %s."
+
 msgid "Checked just now"
 msgstr "Gerade geprüft"
+
+msgid "Checking DNS records …"
+msgstr "DNS-Einträge werden geprüft …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Prüft die DNS-Einträge der Domains, von denen deine Website sendet: die Standard-Absenderadresse und die häufigsten Absender im Protokoll. Fehlende oder schwache Einträge sind der häufigste Grund, warum E-Mails im Spam landen. Es wird nur der DNS-Resolver deines Servers verwendet; Ergebnisse werden eine Stunde lang zwischengespeichert."
 
 msgid "Clear selection"
 msgstr "Auswahl aufheben"
@@ -170,11 +209,38 @@ msgstr "Erstelle bei deinem Maildienst einen neuen API-Schlüssel mit Sendeberec
 msgid "Current page"
 msgstr "Aktuelle Seite"
 
+msgid "Current record"
+msgstr "Aktueller Eintrag"
+
 msgid "Current size"
 msgstr "Aktuelle Größe"
 
+msgid "DKIM key found (selector: %s)."
+msgstr "DKIM-Schlüssel gefunden (Selektor: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "DMARC-Eintrag mit p=none gefunden: nur Berichte, gefälschte E-Mails werden weiterhin zugestellt."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "DMARC-Eintrag mit Richtlinie p=%s gefunden."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "Der DMARC-Eintrag hat keine gültige Richtlinie (p=none, quarantine oder reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "DNS-Abfrage fehlgeschlagen oder abgelaufen. Versuche es später erneut."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "DNS-Abfragen sind auf diesem Server nicht verfügbar (dns_get_record() ist deaktiviert), daher kann die Absenderprüfung hier nicht laufen."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Benötigte DNS-Abfragen: etwa %1$s von %2$s erlaubten."
+
 msgid "Date"
 msgstr "Datum"
+
+msgid "Default sender"
+msgstr "Standard-Absender"
 
 msgid "Delete"
 msgstr "Löschen"
@@ -218,6 +284,12 @@ msgstr "E-Mail-Protokoll"
 msgid "Email sent again."
 msgstr "E-Mail wurde erneut gesendet."
 
+msgid "Email sent to %s."
+msgstr "E-Mail an %s gesendet."
+
+msgid "Emails are logged but not delivered."
+msgstr "E-Mails werden protokolliert, aber nicht zugestellt."
+
 msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
 msgstr "E-Mails, die bereits im Protokoll stehen – von Mailspur selbst protokolliert oder aus einem anderen Plugin importiert –, werden an Empfängern, Betreff und Versandzeit erkannt und als Duplikat übersprungen."
 
@@ -233,6 +305,9 @@ msgstr "Leerer Betreff"
 msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
 msgstr "Aktiviere die Bestätigung in zwei Schritten für das Google-Konto und erstelle ein App-Passwort (Google-Konto → Sicherheit → App-Passwörter)."
 
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Aktiviere die DKIM-Signatur bei deinem Mail-Anbieter oder Hoster und veröffentliche den Schlüssel, den du dort bekommst. Falls du schon signierst, gib deinen Selektor ein (den s=-Wert im DKIM-Signature-Header) und prüfe erneut."
+
 msgid "Enable DKIM signing at your mail service and publish its DNS record."
 msgstr "Aktiviere die DKIM-Signatur bei deinem Maildienst und veröffentliche den zugehörigen DNS-Eintrag."
 
@@ -247,6 +322,12 @@ msgstr "Verschlüsselte SMTP-Verbindungen (TLS/SSL) brauchen die PHP-Erweiterung
 
 msgid "Encryption (TLS/SSL) failed"
 msgstr "Verschlüsselung (TLS/SSL) fehlgeschlagen"
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Gib zwischen 1 und 10 E-Mail-Adressen ein."
+
+msgid "Enter one or more email addresses."
+msgstr "Gib eine oder mehrere E-Mail-Adressen ein."
 
 msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
 msgstr "Trage das App-Passwort in deinem SMTP-Plugin ein oder nutze die Verbindung „Mit Google anmelden“ (OAuth) des Plugins."
@@ -274,6 +355,9 @@ msgstr "Erste Seite"
 
 msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
 msgstr "Bei großen Anhängen kann das Zeitlimit auch während der Übertragung erreicht werden – sende kleinere Dateien oder Links."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Für Staging- und Entwicklungskopien einer Website: So bekommen Kunden niemals E-Mails von der Kopie. Jede E-Mail wird weiterhin protokolliert."
 
 msgid "Format"
 msgstr "Format"
@@ -304,6 +388,18 @@ msgstr "Header"
 
 msgid "Held"
 msgstr "Zurückgehalten"
+
+msgid "Held by staging mode – not delivered."
+msgstr "Vom Staging-Modus zurückgehalten – nicht zugestellt."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Zurückgehaltene E-Mail gesendet. Sie wird als neuer Eintrag protokolliert."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Zurückgehaltene E-Mails bekommen den Status „Zurückgehalten“ und können im Protokoll einzeln doch noch gesendet werden („Jetzt senden“)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Zurückgehalten: Der Staging-Modus steht auf Umleiten, aber es ist keine gültige Umleitungsadresse eingetragen."
 
 msgid "Hints about problems that can keep this email from arriving or displaying correctly."
 msgstr "Hinweise auf Probleme, durch die diese E-Mail nicht ankommt oder falsch angezeigt wird."
@@ -368,6 +464,9 @@ msgstr "Installiere ein SMTP-Plugin und versende über ein echtes Postfach oder 
 msgid "Invalid email address"
 msgstr "Ungültige E-Mail-Adresse"
 
+msgid "Invalid email address: %s"
+msgstr "Ungültige E-Mail-Adresse: %s"
+
 msgid "Invalid sender address: %1$s"
 msgstr "Ungültige Absenderadresse: %1$s"
 
@@ -401,6 +500,9 @@ msgstr "Protokoll"
 msgid "Log entry not found."
 msgstr "Protokolleintrag nicht gefunden."
 
+msgid "Log only – do not send any email"
+msgstr "Nur protokollieren – keine E-Mail senden"
+
 msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
 msgstr "Protokollierte E-Mails können personenbezogene Daten enthalten. Vergib den Zugriff so eng wie möglich. Die Einstellungen erfordern immer Administratorrechte."
 
@@ -419,8 +521,14 @@ msgstr "Mail-Log"
 msgid "Mail Log sections"
 msgstr "Mail-Log-Bereiche"
 
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Mailserver für Antworten und Bounces sind eingerichtet."
+
 msgid "Mailspur – Email Log"
 msgstr "Mailspur – E-Mail-Log"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: Staging-Modus"
 
 msgid "Make sure the From address in the mailer plugin matches the verified domain."
 msgstr "Stell sicher, dass die Absenderadresse im Mailer-Plugin zur verifizierten Domain passt."
@@ -446,6 +554,15 @@ msgstr "Microsoft 365 / Exchange Online blockiert die SMTP-Anmeldung (Standardau
 msgid "Most servers accept 10–25 MB in total."
 msgstr "Die meisten Server akzeptieren insgesamt 10–25 MB."
 
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Mehrere DMARC-Einträge gefunden. Empfänger ignorieren DMARC in diesem Fall – behalte nur einen."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Mehrere SPF-Einträge gefunden. Empfänger werten das als Fehler (PermError) – fasse sie zu einem Eintrag zusammen."
+
+msgid "Needs attention"
+msgstr "Prüfen"
+
 msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
 msgstr "Weder ein From-Header noch ein Absender wurde erfasst. Der Mailer nutzt seine Voreinstellung, oft wordpress@deinedomain."
 
@@ -457,6 +574,18 @@ msgstr "Nächste E-Mail (j)"
 
 msgid "Next page"
 msgstr "Nächste Seite"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Unter den gängigen Selektoren wurde kein DKIM-Schlüssel gefunden."
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Kein DMARC-Eintrag gefunden. Große Postfach-Anbieter erwarten einen, und ohne ihn kann jeder diese Domain unbemerkt fälschen."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Kein MX-Eintrag: Diese Domain kann keine Antworten oder Bounces empfangen, und manche Empfänger lehnen solche Absender ab."
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Kein SPF-Eintrag gefunden. Empfänger können nicht erkennen, welche Server für diese Domain senden dürfen."
 
 msgid "No connection to the SMTP server"
 msgstr "Keine Verbindung zum SMTP-Server"
@@ -476,8 +605,17 @@ msgstr "Auf dieser Website wurde kein Protokoll dieses Plugins gefunden."
 msgid "No problems found in this email."
 msgstr "Keine Probleme in dieser E-Mail gefunden."
 
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Keine öffentliche Absender-Domain gefunden (die Website-Adresse ist kein Domainname und das Protokoll enthält noch keine Absender)."
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Keine Berichtsadresse (rua) – du siehst nicht, wer in deinem Namen sendet."
+
 msgid "No sender address recorded"
 msgstr "Keine Absenderadresse erfasst"
+
+msgid "Not all selectors could be checked in time."
+msgstr "Nicht alle Selektoren konnten rechtzeitig geprüft werden."
 
 msgid "Notes"
 msgstr "Hinweise"
@@ -485,14 +623,38 @@ msgstr "Hinweise"
 msgid "Notes: %1$s. %2$s"
 msgstr "Hinweise: %1$s. %2$s"
 
+msgid "OK"
+msgstr "OK"
+
+msgid "Off – deliver emails normally"
+msgstr "Aus – E-Mails normal zustellen"
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Sobald deine Berichte zeigen, dass legitime E-Mails bestehen, wechsle zu p=quarantine (oder p=reject)."
+
 msgid "Only administrators can empty the log."
 msgstr "Nur Administratoren können das Protokoll leeren."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Nur Administratoren können E-Mails an andere Adressen senden."
+
+msgid "Only held emails can be released."
+msgstr "Nur zurückgehaltene E-Mails können freigegeben werden."
 
 msgid "Open the log or debug view of your mailer plugin for the exact error."
 msgstr "Öffne das Protokoll oder die Debug-Ansicht deines Mailer-Plugins, um den genauen Fehler zu sehen."
 
 msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
 msgstr "Oder richte die Adresse bei deinem Mailanbieter als Alias bzw. „Senden als“-Berechtigung ein."
+
+msgid "Original Bcc"
+msgstr "Ursprüngliches Bcc"
+
+msgid "Original Cc"
+msgstr "Ursprüngliches Cc"
+
+msgid "Original recipients"
+msgstr "Ursprüngliche Empfänger"
 
 msgid "Own top-level menu item"
 msgstr "Eigener Hauptmenüpunkt"
@@ -505,6 +667,9 @@ msgstr "Seitennavigation"
 
 msgid "Per page"
 msgstr "Pro Seite"
+
+msgid "Please enter valid email addresses."
+msgstr "Bitte gib gültige E-Mail-Adressen ein."
 
 msgid "Plugin"
 msgstr "Plugin"
@@ -527,6 +692,9 @@ msgstr "Vorherige Seite"
 msgid "Privacy & security"
 msgstr "Datenschutz & Sicherheit"
 
+msgid "Problem"
+msgstr "Problem"
+
 msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
 msgstr "Anbieter wie %2$s veröffentlichen eine strenge DMARC-Richtlinie. Eine E-Mail „von“ ihrer Domain, die dein Webserver verschickt, fällt durch diese Prüfung und wird abgelehnt oder landet im Spam."
 
@@ -548,6 +716,15 @@ msgstr "Empfohlen. Sonst könnte jeder mit Zugriff auf das Protokoll einen gespe
 msgid "Redact secrets"
 msgstr "Geheimnisse schwärzen"
 
+msgid "Redirect all emails to the addresses below"
+msgstr "Alle E-Mails an die folgenden Adressen umleiten"
+
+msgid "Redirect to"
+msgstr "Umleiten an"
+
+msgid "Redirected by staging mode."
+msgstr "Vom Staging-Modus umgeleitet."
+
 msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
 msgstr "Verkleinere das HTML: Entferne ungenutztes CSS, sich wiederholende Inline-Styles, Kommentare und lange Tracking-URLs. Bilder zählen nicht, nur das HTML selbst."
 
@@ -556,6 +733,9 @@ msgstr "Wegen SPF, DKIM oder DMARC abgelehnt"
 
 msgid "Relative links or images (%1$s), e.g. %2$s"
 msgstr "Relative Links oder Bilder (%1$s), z. B. %2$s"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Aus dem Staging freigegeben (zurückgehaltener Eintrag #%s)."
 
 msgid "Remote content"
 msgstr "Externe Inhalte"
@@ -596,11 +776,17 @@ msgstr "Erneut gesendet"
 msgid "Reset filters"
 msgstr "Filter zurücksetzen"
 
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Ergebnis aus dem Zwischenspeicher – nutze „Erneut prüfen“, nachdem du DNS-Einträge geändert hast."
+
 msgid "Retention"
 msgstr "Aufbewahrung"
 
 msgid "Review the notes of this email (links, sender, placeholders)."
 msgstr "Sieh dir die Hinweise zu dieser E-Mail an (Links, Absender, Platzhalter)."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Widerrufene Schlüssel (leeres p=): %s."
 
 msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
 msgstr "Führe ein Suchen & Ersetzen der alten Domain in der Datenbank aus und prüfe fest eingetragene URLs in E-Mail-Templates und Plugin-Einstellungen."
@@ -610,6 +796,24 @@ msgstr "SMTP AUTH ist in Microsoft 365 deaktiviert"
 
 msgid "SMTP login failed"
 msgstr "SMTP-Anmeldung fehlgeschlagen"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "Der SPF-Eintrag erlaubt jedem Server der Welt, für diese Domain zu senden (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "Der SPF-Eintrag endet mit ?all (neutral): Er schützt die Domain nicht vor Fälschungen."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "SPF-Eintrag gefunden (redirect= auf eine andere Richtlinie)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "SPF-Eintrag gefunden. Andere Server werden als verdächtig markiert (~all, Softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "SPF-Eintrag gefunden. Andere Server werden abgelehnt (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "Der SPF-Eintrag hat keinen „all“-Abschluss, daher werden E-Mails anderer Server als neutral behandelt."
 
 msgid "Search recipient or subject"
 msgstr "Empfänger oder Betreff suchen"
@@ -623,6 +827,9 @@ msgstr "Suche die alte Adresse im E-Mail-Template, in den Plugin-Einstellungen u
 msgid "Select all"
 msgstr "Alle auswählen"
 
+msgid "Selector \"%s\" has no key either."
+msgstr "Auch unter Selektor „%s“ gibt es keinen Schlüssel."
+
 msgid "Send a test email from the mailer plugin's settings."
 msgstr "Sende eine Test-E-Mail aus den Einstellungen des Mailer-Plugins."
 
@@ -632,20 +839,38 @@ msgstr "Sende große Dateien als Download-Link statt als Anhang."
 msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
 msgstr "Versende Newsletter mit einem Newsletter-Plugin oder -Dienst, der die Header List-Unsubscribe und List-Unsubscribe-Post setzt, und schicke keine E-Mail per Bcc an viele Personen."
 
+msgid "Send now"
+msgstr "Jetzt senden"
+
 msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
 msgstr "Sende die E-Mail mit dem Header „Content-Type: text/html; charset=UTF-8“ oder setze den Inhaltstyp mit dem Filter wp_mail_content_type. Viele Formular- und Shop-Plugins haben eine Option „HTML-E-Mail“."
 
 msgid "Send this email again to %s?"
 msgstr "Diese E-Mail erneut an %s senden?"
 
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Diese E-Mail senden an (bis zu 10 Adressen, durch Kommas getrennt):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Diese zurückgehaltene E-Mail jetzt an %s senden? Der Staging-Modus wird für diese eine E-Mail umgangen."
+
 msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
 msgstr "Versende über einen seriösen SMTP-Dienst statt über den Webserver, besonders bei Shared Hosting."
+
+msgid "Send to…"
+msgstr "Senden an …"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Absenderprüfung (SPF, DKIM, DMARC)"
 
 msgid "Sender domain %1$s differs from the site (%2$s)"
 msgstr "Absenderdomain %1$s weicht von der Website ab (%2$s)"
 
 msgid "Sender domain or address not verified"
 msgstr "Absenderdomain oder -adresse nicht verifiziert"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Absender von %s der letzten 200 E-Mails"
 
 msgid "Sending failed – see the new log entry for details."
 msgstr "Senden fehlgeschlagen – Details im neuen Protokolleintrag."
@@ -674,6 +899,9 @@ msgstr "Lege im Template oder in den Formulareinstellungen des sendenden Plugins
 msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
 msgstr "Setze die Absenderadresse in deinem SMTP-Plugin auf das Postfach, mit dem du dich anmeldest, und aktiviere „Absenderadresse erzwingen“."
 
+msgid "Set up staging mode"
+msgstr "Staging-Modus einrichten"
+
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -683,17 +911,41 @@ msgstr "Shop-Manager und höher"
 msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
 msgstr "Seit 2024 verlangen Gmail und Yahoo für Massen-E-Mails eine Ein-Klick-Abmeldung (Header List-Unsubscribe). Ohne sie werden Newsletter eher abgelehnt oder aussortiert."
 
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Einige Abfragen wurden übersprungen, weil DNS zu langsam geantwortet hat."
+
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Du hast leider keine Berechtigung, auf diese Seite zuzugreifen."
 
 msgid "Source"
 msgstr "Quelle"
 
+msgid "Staging"
+msgstr "Staging"
+
+msgid "Staging mode"
+msgstr "Staging-Modus"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Der Staging-Modus ist aktiv: Alle E-Mails werden an %s umgeleitet."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Der Staging-Modus ist aktiv: E-Mails werden protokolliert, aber nicht zugestellt."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Der Staging-Modus ist aktiv: E-Mails sollen umgeleitet werden, aber es ist keine gültige Umleitungsadresse eingetragen – alle E-Mails werden zurückgehalten und nicht zugestellt."
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Beginne mit p=none, um Berichte zu erhalten, und verschärfe auf quarantine oder reject, sobald SPF und DKIM bestehen."
+
 msgid "Status"
 msgstr "Status"
 
 msgid "Subject"
 msgstr "Betreff"
+
+msgid "Suggested TXT record for %s"
+msgstr "Vorgeschlagener TXT-Eintrag für %s"
 
 msgid "Supported: %s."
 msgstr "Unterstützt: %s."
@@ -767,6 +1019,9 @@ msgstr "Der Maildienst hat die Anfrage abgelehnt, weil der API-Schlüssel falsch
 msgid "The mailer plugin reported a failure"
 msgstr "Das Mailer-Plugin hat einen Fehler gemeldet"
 
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Die Richtlinie gilt nur für %s %% der E-Mails (pct)."
+
 msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
 msgstr "Der empfangende Server bittet um einen späteren Versuch (Antwortcode 450/451/452): Greylisting, ein volles Postfach oder zu viele E-Mails in kurzer Zeit."
 
@@ -824,6 +1079,9 @@ msgstr "Diese Live-Website hat einen Link auf eine lokale oder Test-Adresse vers
 msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
 msgstr "Diese Website protokolliert die von ihr versendeten E-Mails (Empfänger, Betreff, Inhalt und Zustellstatus), um die Zustellung zu prüfen und Fehler zu beheben. Protokolleinträge werden nach der eingestellten Aufbewahrungsdauer automatisch gelöscht."
 
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Diese Website läuft als %s-Umgebung. Schalte den Staging-Modus ein, damit kein echter Kunde E-Mails von ihr bekommt."
+
 msgid "To"
 msgstr "An"
 
@@ -847,6 +1105,9 @@ msgstr "Unbekannt"
 
 msgid "Unreplaced placeholders: %1$s"
 msgstr "Nicht ersetzte Platzhalter: %1$s"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Bis zu 10 Adressen, durch Kommas getrennt. Cc und Bcc werden entfernt und der Betreff zeigt die ursprünglichen Empfänger. Ohne gültige Adresse werden E-Mails stattdessen zurückgehalten."
 
 msgid "Use TLS on port 587 or SSL on port 465."
 msgstr "Nutze TLS auf Port 587 oder SSL auf Port 465."
@@ -892,6 +1153,9 @@ msgstr "WordPress"
 
 msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
 msgstr "WordPress versendet standardmäßig über die PHP-Funktion mail(). Auf diesem Server ist sie deaktiviert oder es ist kein Mailprogramm (sendmail) installiert – üblich bei lokalen Umgebungen, Docker und vielen Managed Hostern."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Dein DKIM-Selektor (optional)"
 
 msgid "days"
 msgstr "Tagen"

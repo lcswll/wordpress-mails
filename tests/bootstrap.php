@@ -20,3 +20,4 @@ require __DIR__ . '/stubs/constants.php';
 require __DIR__ . '/stubs/class-wp-error.php';
 require __DIR__ . '/stubs/class-fake-wpdb.php';
 require __DIR__ . '/stubs/class-phpmailer.php';
+require __DIR__ . '/stubs/class-wp-rest.php';
