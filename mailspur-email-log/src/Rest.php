@@ -47,7 +47,7 @@ final class Rest {
 					'methods'             => WP_REST_Server::READABLE,
 					'callback'            => array( $this, 'list_items' ),
 					'permission_callback' => array( $this, 'can_view' ),
-					'args'                => $this->list_args(),
+					'args'                => self::list_args(),
 				),
 				array(
 					'methods'             => WP_REST_Server::DELETABLE,
@@ -159,15 +159,19 @@ final class Rest {
 	public function list_items( WP_REST_Request $request ): WP_REST_Response {
 		$result = $this->repository->query(
 			array(
-				'page'     => (int) $request['page'],
-				'per_page' => (int) $request['per_page'],
-				'search'   => (string) $request['search'],
-				'in_body'  => (bool) $request['in_body'],
-				'status'   => (string) $request['status'],
-				'orderby'  => (string) $request['orderby'],
-				'order'    => (string) $request['order'],
-				'after'    => (string) $request['after'],
-				'before'   => (string) $request['before'],
+				'page'        => (int) $request['page'],
+				'per_page'    => (int) $request['per_page'],
+				'search'      => (string) $request['search'],
+				'in_body'     => (bool) $request['in_body'],
+				'status'      => (string) $request['status'],
+				'orderby'     => (string) $request['orderby'],
+				'order'       => (string) $request['order'],
+				'after'       => (string) $request['after'],
+				'before'      => (string) $request['before'],
+				'source'      => (string) $request['source'],
+				'format'      => (string) $request['format'],
+				'attachments' => (bool) $request['attachments'],
+				'notes'       => (bool) $request['notes'],
 			)
 		);
 
@@ -381,50 +385,64 @@ final class Rest {
 	/**
 	 * @return array<string,array<string,mixed>>
 	 */
-	private function list_args(): array {
+	public static function list_args(): array {
 		$date = array(
 			'type'    => 'string',
 			'pattern' => '^(\d{4}-\d{2}-\d{2})?$',
 			'default' => '',
 		);
+		$flag = array(
+			'type'    => 'boolean',
+			'default' => false,
+		);
 		return array(
-			'page'     => array(
+			'page'        => array(
 				'type'    => 'integer',
 				'minimum' => 1,
 				'default' => 1,
 			),
-			'per_page' => array(
+			'per_page'    => array(
 				'type'    => 'integer',
 				'minimum' => 1,
 				'maximum' => 200,
 				'default' => 25,
 			),
-			'search'   => array(
+			'search'      => array(
 				'type'      => 'string',
 				'maxLength' => 200,
 				'default'   => '',
 			),
-			'in_body'  => array(
-				'type'    => 'boolean',
-				'default' => false,
-			),
-			'status'   => array(
+			'in_body'     => $flag,
+			'status'      => array(
 				'type'    => 'string',
 				'enum'    => array( 'all', 'sent', 'failed', 'pending', 'held' ),
 				'default' => 'all',
 			),
-			'orderby'  => array(
+			'orderby'     => array(
 				'type'    => 'string',
 				'enum'    => array_keys( Repository::ORDER_COLUMNS ),
 				'default' => 'date',
 			),
-			'order'    => array(
+			'order'       => array(
 				'type'    => 'string',
 				'enum'    => array( 'asc', 'desc' ),
 				'default' => 'desc',
 			),
-			'after'    => $date,
-			'before'   => $date,
+			'after'       => $date,
+			'before'      => $date,
+			// Exact "source" value, e.g. "plugin:woocommerce" (indexed).
+			'source'      => array(
+				'type'      => 'string',
+				'maxLength' => 100,
+				'default'   => '',
+			),
+			'format'      => array(
+				'type'    => 'string',
+				'enum'    => array_merge( array( '' ), Repository::FORMATS ),
+				'default' => '',
+			),
+			'attachments' => $flag,
+			'notes'       => $flag,
 		);
 	}
 }

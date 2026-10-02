@@ -114,6 +114,62 @@ final class RepositoryTest extends TestCase {
 		$this->assertCount( 1, $this->wpdb->prepared );
 	}
 
+	public function test_source_format_attachment_and_notes_filters(): void {
+		$this->query(
+			array(
+				'source'      => "plugin:x' OR 1=1",
+				'format'      => 'html',
+				'attachments' => true,
+				'notes'       => true,
+				'status'      => 'failed',
+			)
+		);
+
+		$counts = $this->wpdb->prepared[0];
+		$this->assertStringContainsString( "source = %s AND content_type LIKE %s AND attachments <> '' AND notes > 0", $counts['sql'] );
+		$this->assertStringNotContainsString( 'status = %d', $counts['sql'], 'Counts cover every status.' );
+		$this->assertSame( array( 'wp_mailspur', "plugin:x' OR 1=1", '%html%' ), $counts['args'] );
+
+		$items = $this->wpdb->prepared[1];
+		$this->assertStringContainsString( 'notes > 0 AND status = %d ORDER BY', $items['sql'] );
+		$this->assertSame( array( 'wp_mailspur', "plugin:x' OR 1=1", '%html%', 2, 'created_at', 25, 0 ), $items['args'] );
+	}
+
+	public function test_plain_text_format_and_unknown_values_are_ignored_safely(): void {
+		$this->query( array( 'format' => 'text' ) );
+		$this->assertStringContainsString( 'content_type NOT LIKE %s', $this->wpdb->prepared[0]['sql'] );
+
+		$this->query(
+			array(
+				'format'      => 'pdf; DROP TABLE x',
+				'source'      => '',
+				'attachments' => false,
+				'notes'       => false,
+			)
+		);
+		$this->assertStringEndsWith( 'WHERE 1=1 GROUP BY status', $this->wpdb->prepared[2]['sql'] );
+	}
+
+	public function test_list_rows_carry_the_anonymised_flag(): void {
+		$this->query( array() );
+		$this->assertStringContainsString( "( meta LIKE '{\"anonymised\":%%' ) AS anonymised", $this->wpdb->prepared[1]['sql'] );
+	}
+
+	public function test_filter_is_shared_with_export_and_cli(): void {
+		list( $where, $params ) = $this->repository->filter(
+			array(
+				'status' => 'failed',
+				'search' => 'anna',
+				'after'  => '2026-01-01',
+			)
+		);
+		$this->assertSame( '1=1 AND (recipients LIKE %s OR subject LIKE %s) AND created_at >= %s AND status = %d', $where );
+		$this->assertSame( array( 'wp_mailspur', '%anna%', '%anna%', '2026-01-01 00:00:00', 2 ), $params );
+
+		list( $where ) = $this->repository->filter( array( 'status' => 'failed' ), false );
+		$this->assertSame( '1=1', $where );
+	}
+
 	public function test_extract_emails_handles_display_names(): void {
 		$this->assertSame(
 			array( 'anna@example.com', 'bob@example.org' ),

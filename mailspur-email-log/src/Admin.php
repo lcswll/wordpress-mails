@@ -284,7 +284,31 @@ final class Admin {
 						<label class="screen-reader-text" for="mailspur-before"><?php esc_html_e( 'To date', 'mailspur-email-log' ); ?></label>
 						<input type="date" id="mailspur-before">
 					</span>
+					<button type="button" class="button mailspur-more-toggle" id="mailspur-more-toggle" aria-expanded="false" aria-controls="mailspur-more">
+						<span class="dashicons dashicons-filter" aria-hidden="true"></span>
+						<?php esc_html_e( 'More filters', 'mailspur-email-log' ); ?>
+						<span class="mailspur-more-count" id="mailspur-more-count"></span>
+					</button>
 					<button type="button" class="button-link" id="mailspur-reset" hidden><?php esc_html_e( 'Reset filters', 'mailspur-email-log' ); ?></button>
+				</div>
+
+				<div class="mailspur-more" id="mailspur-more" role="group" aria-label="<?php esc_attr_e( 'More filters', 'mailspur-email-log' ); ?>" hidden>
+					<label class="mailspur-field" id="mailspur-source-field">
+						<span><?php esc_html_e( 'Source', 'mailspur-email-log' ); ?></span>
+						<select id="mailspur-source">
+							<option value=""><?php esc_html_e( 'All sources', 'mailspur-email-log' ); ?></option>
+						</select>
+					</label>
+					<label class="mailspur-field">
+						<span><?php esc_html_e( 'Format', 'mailspur-email-log' ); ?></span>
+						<select id="mailspur-format">
+							<option value=""><?php esc_html_e( 'Any format', 'mailspur-email-log' ); ?></option>
+							<option value="html"><?php esc_html_e( 'HTML', 'mailspur-email-log' ); ?></option>
+							<option value="text"><?php esc_html_e( 'Plain text', 'mailspur-email-log' ); ?></option>
+						</select>
+					</label>
+					<label class="mailspur-check"><input type="checkbox" id="mailspur-attachments"> <?php esc_html_e( 'With attachments', 'mailspur-email-log' ); ?></label>
+					<label class="mailspur-check"><input type="checkbox" id="mailspur-notes"> <?php esc_html_e( 'With notes', 'mailspur-email-log' ); ?></label>
 				</div>
 			</div>
 

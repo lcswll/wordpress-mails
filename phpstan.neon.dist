@@ -12,5 +12,9 @@ parameters:
     tmpDir: .cache/phpstan
     paths:
         - mailspur-email-log
+    # WP-CLI is not a Composer dependency; the commands (Modules/Workflow/Cli.php) only need these declarations.
+    scanFiles:
+        - tests/stubs/wp-cli/class-wp-cli.php
+        - tests/stubs/wp-cli/utils.php
     excludePaths:
         - mailspur-email-log/languages/*

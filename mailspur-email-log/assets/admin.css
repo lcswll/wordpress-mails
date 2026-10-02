@@ -186,6 +186,70 @@
 	white-space: nowrap;
 }
 
+.mailspur .mailspur-more-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	min-height: 32px;
+	border-radius: var(--ob-radius);
+}
+
+.mailspur-more-toggle .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.mailspur-more-toggle[aria-expanded="true"] {
+	border-color: var(--ob-accent);
+}
+
+.mailspur-more-count:not(:empty) {
+	min-width: 18px;
+	padding: 0 5px;
+	border-radius: 999px;
+	background: var(--ob-accent);
+	color: #fff;
+	font-size: 11px;
+	line-height: 18px;
+	text-align: center;
+}
+
+/* Second toolbar row, only while "More filters" is open. */
+.mailspur-more {
+	display: flex;
+	flex-basis: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+	padding: 10px 12px;
+	border: 1px solid var(--ob-border);
+	border-radius: var(--ob-radius);
+	background: var(--ob-bg);
+}
+
+.mailspur-more[hidden] {
+	display: none;
+}
+
+.mailspur-field {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-width: 0;
+}
+
+.mailspur-field > span {
+	color: var(--ob-muted);
+}
+
+.mailspur .mailspur-field select {
+	max-width: 260px;
+	min-height: 32px;
+	border-radius: var(--ob-radius);
+}
+
 /* ------------------------------------------------------------------ bulk */
 
 .mailspur-bulk {
@@ -658,6 +722,17 @@
 
 	.mailspur-filters {
 		width: 100%;
+	}
+
+	.mailspur-field {
+		flex: 1 1 100%;
+	}
+
+	.mailspur .mailspur-field select {
+		flex: 1;
+		width: 100%;
+		min-width: 0; /* Long source names must not widen the page. */
+		max-width: none;
 	}
 
 	.mailspur-table thead {

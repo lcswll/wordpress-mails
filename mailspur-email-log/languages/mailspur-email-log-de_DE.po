@@ -32,6 +32,12 @@ msgstr "%1$s ggü. %2$s – %3$s"
 msgid "%1$s, %2$s"
 msgstr "%1$s, %2$s"
 
+msgid "%s (must-use plugin)"
+msgstr "%s (Must-Use-Plugin)"
+
+msgid "%s (theme)"
+msgstr "%s (Theme)"
+
 msgid "%s entries"
 msgstr "%s Einträge"
 
@@ -58,6 +64,9 @@ msgstr "0 behält Einträge für immer. Die Bereinigung läuft einmal täglich."
 
 msgid "0 means no limit. The oldest entries are removed first."
 msgstr "0 bedeutet kein Limit. Die ältesten Einträge werden zuerst entfernt."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 schaltet es ab. Entfernt Inhalt, Header und Anhänge älterer Einträge und maskiert die Adressen (a***@example.com). Datum, Status, Quelle, Format, Größe und Hinweise bleiben für Statistiken erhalten. Läuft mit der täglichen Bereinigung, bevor Einträge gelöscht werden – wirkt also nur, wenn der Zeitraum kürzer ist als die Löschfrist oben."
 
 msgid "12 months"
 msgstr "12 Monate"
@@ -137,6 +146,12 @@ msgstr "Alle"
 msgid "All emails are redirected to test addresses."
 msgstr "Alle E-Mails werden an Testadressen umgeleitet."
 
+msgid "All sources"
+msgstr "Alle Quellen"
+
+msgid "Also remove the subject when anonymising"
+msgstr "Beim Anonymisieren auch den Betreff entfernen"
+
 msgid "Also search content"
 msgstr "Auch Inhalt durchsuchen"
 
@@ -145,6 +160,18 @@ msgstr "Alternativ bitte deinen Hoster, mail() / sendmail für diese Website zu 
 
 msgid "Always load remote images and fonts in the preview"
 msgstr "Externe Bilder und Schriften in der Vorschau immer laden"
+
+msgid "Anonymisation"
+msgstr "Anonymisierung"
+
+msgid "Anonymise entries after"
+msgstr "Einträge anonymisieren nach"
+
+msgid "Anonymised"
+msgstr "Anonymisiert"
+
+msgid "Any format"
+msgstr "Jedes Format"
 
 msgid "Apply"
 msgstr "Anwenden"
@@ -199,6 +226,9 @@ msgstr "Massen-E-Mail ohne Abmelde-Header (%1$s Empfänger)"
 
 msgid "Busiest day"
 msgstr "Stärkster Tag"
+
+msgid "CSV"
+msgstr "CSV"
 
 msgid "Change staging mode"
 msgstr "Staging-Modus ändern"
@@ -292,6 +322,15 @@ msgstr "Komponente"
 
 msgid "Configure alerts"
 msgstr "Benachrichtigungen einrichten"
+
+msgid "Content removed"
+msgstr "Inhalt entfernt"
+
+msgid "Content removed after %s days"
+msgstr "Inhalt nach %s Tagen entfernt"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Inhalt, Header und Anhänge wurden durch die Anonymisierung entfernt und die Adressen maskiert."
 
 msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
 msgstr "Übernimmt das vorhandene Protokoll eines anderen Mail-Log-Plugins in Mailspur, damit alte E-Mails hier durchsucht und angesehen werden können. Das andere Plugin und seine Daten bleiben unverändert; ein erneuter Import übernimmt nur neue Einträge."
@@ -391,6 +430,9 @@ msgstr ".eml herunterladen"
 
 msgid "Download started."
 msgstr "Download gestartet."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Die Einträge zu den aktuellen Filtern als %s herunterladen"
 
 msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
 msgstr "Jede E-Mail wird einmal beim Protokollieren oder Importieren geprüft (ohne externe Anfragen). Änderungen hier wirken nur für danach protokollierte E-Mails; ältere Einträge werden nicht erneut geprüft. DNS- und Mehrfachversand-Prüfungen laufen, wenn du einen Eintrag öffnest."
@@ -509,6 +551,12 @@ msgstr "Fehler"
 msgid "Every 15 minutes (Mailspur alerts)"
 msgstr "Alle 15 Minuten (Mailspur-Benachrichtigungen)"
 
+msgid "Export"
+msgstr "Exportieren"
+
+msgid "Export started – your download begins shortly."
+msgstr "Export gestartet – dein Download beginnt gleich."
+
 msgid "Failed"
 msgstr "Fehlgeschlagen"
 
@@ -568,6 +616,9 @@ msgstr "Gmail kürzt diese E-Mail (%1$s KB)"
 
 msgid "Google rejected the login"
 msgstr "Google hat die Anmeldung abgelehnt"
+
+msgid "HTML"
+msgstr "HTML"
 
 msgid "HTML sent as plain text"
 msgstr "HTML als reiner Text gesendet"
@@ -659,6 +710,9 @@ msgstr "Öffne im Microsoft 365 Admin Center den Benutzer → E-Mail → E-Mail-
 msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
 msgstr "Posteingänge zeigen etwa die ersten 40–80 Zeichen; der Rest wird abgeschnitten, auf Smartphones noch früher."
 
+msgid "Include content"
+msgstr "Mit Inhalt"
+
 msgid "Information"
 msgstr "Information"
 
@@ -676,6 +730,9 @@ msgstr "Ungültige E-Mail-Adresse: %s"
 
 msgid "Invalid sender address: %1$s"
 msgstr "Ungültige Absenderadresse: %1$s"
+
+msgid "JSON"
+msgstr "JSON"
 
 msgid "Keep at most"
 msgstr "Höchstens behalten"
@@ -784,6 +841,9 @@ msgstr "Überwachung & Benachrichtigungen"
 
 msgid "More"
 msgstr "Mehr"
+
+msgid "More filters"
+msgstr "Weitere Filter"
 
 msgid "Most servers accept 10–25 MB in total."
 msgstr "Die meisten Server akzeptieren insgesamt 10–25 MB."
@@ -977,6 +1037,9 @@ msgstr "Pro Seite"
 msgid "Period"
 msgstr "Zeitraum"
 
+msgid "Plain text"
+msgstr "Nur Text"
+
 msgid "Please enter valid email addresses."
 msgstr "Bitte gib gültige E-Mail-Adressen ein."
 
@@ -1006,6 +1069,9 @@ msgstr "Vorherige E-Mail (k)"
 
 msgid "Previous page"
 msgstr "Vorherige Seite"
+
+msgid "Privacy"
+msgstr "Datenschutz"
 
 msgid "Privacy & security"
 msgstr "Datenschutz & Sicherheit"
@@ -1301,6 +1367,9 @@ msgstr "Einige Abfragen wurden übersprungen, weil DNS zu langsam geantwortet ha
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Du hast leider keine Berechtigung, auf diese Seite zuzugreifen."
 
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Du darfst das Mail-Log leider nicht exportieren."
+
 msgid "Source"
 msgstr "Quelle"
 
@@ -1333,6 +1402,9 @@ msgstr "Den exakten MIME-Rohquelltext jeder E-Mail speichern"
 
 msgid "Subject"
 msgstr "Betreff"
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Betreffzeilen enthalten oft Namen oder Bestellnummern."
 
 msgid "Suggested TXT record for %s"
 msgstr "Vorgeschlagener TXT-Eintrag für %s"
@@ -1651,6 +1723,12 @@ msgstr "Ist das aus, können Tracking-Pixel nicht erkennen, wann du einen Eintra
 
 msgid "Who can view the log"
 msgstr "Wer darf das Protokoll sehen"
+
+msgid "With attachments"
+msgstr "Mit Anhängen"
+
+msgid "With notes"
+msgstr "Mit Hinweisen"
 
 msgid "WordPress"
 msgstr "WordPress"

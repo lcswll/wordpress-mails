@@ -73,16 +73,23 @@ final class Repository {
 		return is_array( $row ) ? $row : null;
 	}
 
+	/** Content formats for the "format" filter (matched against content_type). */
+	const FORMATS = array( 'html', 'text' );
+
 	/**
-	 * Paginated, filtered list plus per-status counts for the same filter.
+	 * WHERE clause of a list filter, shared by the list, the export and WP-CLI.
 	 *
-	 * @param array{page?:int,per_page?:int,search?:string,in_body?:bool,status?:string,orderby?:string,order?:string,after?:string,before?:string} $args
-	 * @return array{items:array<int,array<string,string>>,total:int,counts:array<string,int>}
+	 * Fragments are string literals only; every value is a placeholder. The returned params start
+	 * with the table name (for the "FROM %i" every caller uses).
+	 *
+	 * @param array<string,mixed> $args       search, in_body, after, before (Y-m-d, site time), source,
+	 *                                        format (html|text), attachments, notes (bool), status (slug).
+	 * @param bool                $with_status Whether to apply the status filter (the list needs counts across all statuses first).
+	 * @return array{0:string,1:array<int,mixed>} SQL condition and its params.
 	 */
-	public function query( array $args ): array {
+	public function filter( array $args, bool $with_status = true ): array {
 		global $wpdb;
 
-		// WHERE fragments are string literals only; every value is a placeholder.
 		$where  = array( '1=1' );
 		$params = array( self::table() );
 
@@ -101,16 +108,58 @@ final class Repository {
 
 		if ( ! empty( $args['after'] ) ) {
 			$where[]  = 'created_at >= %s';
-			$params[] = get_gmt_from_date( $args['after'] . ' 00:00:00' );
+			$params[] = get_gmt_from_date( (string) $args['after'] . ' 00:00:00' );
 		}
 		if ( ! empty( $args['before'] ) ) {
 			$where[]  = 'created_at <= %s';
-			$params[] = get_gmt_from_date( $args['before'] . ' 23:59:59' );
+			$params[] = get_gmt_from_date( (string) $args['before'] . ' 23:59:59' );
 		}
 
+		$source = (string) ( $args['source'] ?? '' );
+		if ( '' !== $source ) {
+			$where[]  = 'source = %s'; // Indexed.
+			$params[] = $source;
+		}
+
+		$format = (string) ( $args['format'] ?? '' );
+		if ( in_array( $format, self::FORMATS, true ) ) {
+			// Unknown content types (pre_wp_mail mailers) count as plain text here.
+			$where[]  = 'html' === $format ? 'content_type LIKE %s' : 'content_type NOT LIKE %s';
+			$params[] = '%html%';
+		}
+
+		if ( ! empty( $args['attachments'] ) ) {
+			$where[] = "attachments <> ''";
+		}
+		if ( ! empty( $args['notes'] ) ) {
+			$where[] = 'notes > 0';
+		}
+
+		if ( $with_status ) {
+			$code = array_search( (string) ( $args['status'] ?? 'all' ), self::STATUSES, true );
+			if ( false !== $code ) {
+				$where[]  = 'status = %d';
+				$params[] = $code;
+			}
+		}
+
+		return array( implode( ' AND ', $where ), $params );
+	}
+
+	/**
+	 * Paginated, filtered list plus per-status counts for the same filter.
+	 *
+	 * @param array{page?:int,per_page?:int,search?:string,in_body?:bool,status?:string,orderby?:string,order?:string,after?:string,before?:string,source?:string,format?:string,attachments?:bool,notes?:bool} $args
+	 * @return array{items:array<int,array<string,string>>,total:int,counts:array<string,int>}
+	 */
+	public function query( array $args ): array {
+		global $wpdb;
+
+		list( $where, $params ) = $this->filter( $args, false );
+
 		// One grouped query yields the tab counts and the total for the active tab.
-		$sql  = 'SELECT status, COUNT(*) AS n FROM %i WHERE ' . implode( ' AND ', $where ) . ' GROUP BY status';
-		$rows = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals above.
+		$sql  = 'SELECT status, COUNT(*) AS n FROM %i WHERE ' . $where . ' GROUP BY status';
+		$rows = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals in filter().
 
 		$counts = array_fill_keys( array( 'all', 'sent', 'failed', 'pending', 'held' ), 0 );
 		foreach ( (array) $rows as $row ) {
@@ -121,7 +170,7 @@ final class Repository {
 		$status = (string) ( $args['status'] ?? 'all' );
 		$code   = array_search( $status, self::STATUSES, true );
 		if ( false !== $code ) {
-			$where[]  = 'status = %d';
+			$where   .= ' AND status = %d';
 			$params[] = $code;
 		} else {
 			$status = 'all';
@@ -144,9 +193,10 @@ final class Repository {
 		$params[] = ( max( 1, (int) ( $args['page'] ?? 1 ) ) - 1 ) * $per_page;
 
 		// Secondary sort on id keeps pagination stable for equal recipients/subjects.
-		$sql   = 'SELECT id, created_at, status, recipients, subject, attachments, source, error, notes, size FROM %i WHERE '
-			. implode( ' AND ', $where ) . " ORDER BY %i {$order}, id {$order} LIMIT %d OFFSET %d";
-		$items = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals above, $order is ASC|DESC.
+		// "anonymised": flag set by the anonymisation (Modules\Workflow), which always writes that key first.
+		$sql   = "SELECT id, created_at, status, recipients, subject, attachments, source, error, notes, size, ( meta LIKE '{\"anonymised\":%%' ) AS anonymised FROM %i WHERE "
+			. $where . " ORDER BY %i {$order}, id {$order} LIMIT %d OFFSET %d";
+		$items = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals in filter(), $order is ASC|DESC.
 
 		return array(
 			'items'  => (array) $items,
