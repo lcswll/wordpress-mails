@@ -27,7 +27,7 @@ final class TraceMailer extends PHPMailer {
 	/** @var string */
 	public $Username = 'john@example.com';
 	/** @var string */
-	public $Password = 'S3cret-Passw0rd';
+	public $Password = 'S3cret-Passw0rd';  // gitleaks:allow – dummy value, the test asserts it is masked.
 	/** @var int */
 	public $SMTPDebug = 0;
 	/** @var mixed */
