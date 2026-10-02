@@ -82,6 +82,30 @@ add_action(
 					)
 				);
 			}
+			// Email types screenshot: a daily renewal that stopped three days ago (after a plugin update) …
+			if ( $day >= 3 ) {
+				$rows[] = array_merge(
+					$base,
+					array(
+						'created_at' => $at( $day, 4 ),
+						'recipients' => $person(),
+						'subject'    => sprintf( '[Example Shop] Your subscription #%d has been renewed', 8000 + $day ),
+						'source'     => 'plugin:woocommerce-subscriptions',
+					)
+				);
+			}
+			// … and welcome emails whose names merge into one type.
+			for ( $i = 0, $n = mt_rand( 0, 2 ); $i < $n; $i++ ) {
+				$rows[] = array_merge(
+					$base,
+					array(
+						'created_at' => $at( $day, mt_rand( 8, 22 ) ),
+						'recipients' => $person(),
+						'subject'    => sprintf( 'Welcome to Example Shop, %s!', ucfirst( $names[ mt_rand( 0, count( $names ) - 1 ) ] ) ),
+						'source'     => 'plugin:woocommerce',
+					)
+				);
+			}
 			if ( 2 === $weekday ) { // Tuesday newsletter.
 				for ( $i = 0; $i < 40; $i++ ) {
 					$rows[] = array_merge(
@@ -102,5 +126,28 @@ add_action(
 			$repository->insert_many( $chunk );
 		}
 		update_option( 'mailspur_e2e_history_seeded', count( $rows ), false );
+
+		// Readable sender names: plugin headers only (never activated), and the update that broke the renewals.
+		$plugins = array(
+			'woocommerce'               => 'WooCommerce',
+			'woocommerce-subscriptions' => 'WooCommerce Subscriptions',
+			'contact-form-7'            => 'Contact Form 7',
+			'mailpoet'                  => 'MailPoet',
+		);
+		foreach ( $plugins as $slug => $name ) {
+			wp_mkdir_p( WP_PLUGIN_DIR . '/' . $slug );
+			file_put_contents( WP_PLUGIN_DIR . "/{$slug}/{$slug}.php", "<?php\n/*\nPlugin Name: {$name}\nVersion: 9.4.1\n*/\n" ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
+		}
+		update_option(
+			'mailspur_types_updates',
+			array(
+				array(
+					'time'  => time() - 2 * DAY_IN_SECONDS - 5 * HOUR_IN_SECONDS,
+					'label' => 'WooCommerce Subscriptions 7.2.0',
+					'slug'  => 'plugin:woocommerce-subscriptions',
+				),
+			),
+			false
+		);
 	}
 );

@@ -45,7 +45,7 @@ final class Exporter {
 		check_admin_referer( self::NONCE );
 
 		// phpcs:disable WordPress.Security.NonceVerification.Missing -- verified just above.
-		$format = isset( $_POST['file'] ) && 'json' === $_POST['file'] ? 'json' : 'csv';
+		$format = isset( $_POST['file'] ) && 'json' === sanitize_key( wp_unslash( $_POST['file'] ) ) ? 'json' : 'csv';
 		$bodies = ! empty( $_POST['bodies'] );
 		// phpcs:enable WordPress.Security.NonceVerification.Missing
 		$filters = Filters::from_post();

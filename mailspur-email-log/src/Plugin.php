@@ -45,6 +45,7 @@ final class Plugin {
 
 		if ( is_admin() ) {
 			( new Admin( $repository ) )->register();
+			( new Review() )->register();
 		}
 
 		add_action( 'init', array( self::class, 'load_textdomain' ) );

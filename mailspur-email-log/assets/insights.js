@@ -21,9 +21,9 @@
 	} )();
 	const STATUSES = [ 'sent', 'failed', 'held', 'pending' ];
 	// Validated categorical slots (light surface); order = stack order bottom → top.
-	const COLORS = { sent: '#2a78d6', failed: '#d03b3b', held: '#4a3aa7', pending: '#eda100' };
-	// Sequential blue ramp for the heatmap, light → dark; zero gets a neutral gray.
-	const RAMP = [ '#cde2fb', '#86b6ef', '#3987e5', '#256abf', '#184f95' ];
+	const COLORS = { sent: '#5b3ff0', failed: '#e0442b', held: '#b4a6ff', pending: '#eda100' };
+	// Sequential violet ramp (brand) for the heatmap, light → dark; zero gets a neutral gray.
+	const RAMP = [ '#e9e4ff', '#c4b6ff', '#9781ff', '#6c4bff', '#3f24c4' ];
 	const ZERO = '#f0f0f1';
 
 	const locale = cfg.locale || undefined;

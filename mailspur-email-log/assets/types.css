@@ -1,0 +1,274 @@
+/* Mailspur – Email Log: "Email types" tab and the type line in the log dialog. */
+
+.mailspur-types,
+.mailspur-type-dd {
+	--mst-surface: #fff;
+	--mst-border: var(--ms-line, #dcdcde);
+	--mst-ink: var(--ms-ink, #1d2327);
+	--mst-muted: #646970;
+	--mst-bar: var(--ms-accent, #5b3ff0);
+	--mst-held: #a7aaad;
+	--mst-failed: #d03b3b;
+	--mst-base: #dcdcde;
+	--mst-radius: 10px;
+}
+
+.mailspur-types {
+	max-width: 1280px;
+	color: var(--mst-ink);
+}
+
+.mst-intro {
+	max-width: 760px;
+	color: var(--mst-muted);
+}
+
+/* ---------------------------------------------------------------- summary + views */
+
+.mst-summary {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 16px 0 12px;
+	padding: 0;
+	list-style: none;
+}
+
+.mst-summary li {
+	margin: 0;
+	padding: 6px 12px;
+	border: 1px solid var(--mst-border);
+	border-radius: var(--mst-radius);
+	background: var(--mst-surface);
+}
+
+.mst-summary .is-silent {
+	border-color: #e6a23c;
+	background: #fcf9e8;
+}
+
+.mst-summary .is-failing {
+	border-color: #e4a0a0;
+	background: #fcf0f1;
+}
+
+.mst-summary .is-new {
+	border-color: #9ec2e6;
+	background: #f0f6fc;
+}
+
+.mst-views {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 8px;
+}
+
+.mst-views a[aria-current="page"] {
+	color: var(--mst-ink);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+/* ---------------------------------------------------------------- groups + table */
+
+.mst-group {
+	margin: 24px 0 0;
+}
+
+.mst-group h2 {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 8px;
+	font-size: 1.15em;
+}
+
+.mst-count {
+	padding: 0 8px;
+	border-radius: 10px;
+	background: #f0f0f1;
+	color: var(--mst-muted);
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.mst-table-wrap {
+	overflow-x: auto;
+}
+
+.mst-table {
+	overflow: hidden;
+	border-color: var(--ms-line, #dcdcde);
+	border-radius: 14px;
+	box-shadow: var(--ms-shadow, none);
+}
+
+.mailspur-types .mst-table thead th {
+	color: #625c78;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.mst-table td {
+	vertical-align: middle;
+}
+
+.mst-col-type {
+	width: 34%;
+	min-width: 220px;
+}
+
+.mst-col-volume {
+	min-width: 160px;
+}
+
+.mst-col-state {
+	min-width: 180px;
+}
+
+.mst-row.is-silent {
+	box-shadow: inset 3px 0 0 #dba617;
+}
+
+.mst-row.is-failing {
+	box-shadow: inset 3px 0 0 var(--mst-failed);
+}
+
+.mst-row.is-muted {
+	opacity: 0.65;
+}
+
+.mst-pattern {
+	display: block;
+	font-weight: 600;
+	overflow-wrap: anywhere;
+}
+
+.mst-ph,
+.mst-other {
+	display: inline-block;
+	margin: 0 1px;
+	padding: 0 6px;
+	border-radius: 4px;
+	background: #f0f0f1;
+	color: var(--mst-muted);
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.mst-other {
+	margin: 0;
+	font-style: italic;
+}
+
+.mst-meta,
+.mst-volume,
+.mst-why {
+	display: block;
+	margin-top: 2px;
+	color: var(--mst-muted);
+	font-size: 12px;
+}
+
+.mst-notes {
+	color: #996800;
+}
+
+.mst-failed {
+	color: var(--mst-failed);
+}
+
+/* ---------------------------------------------------------------- sparkline */
+
+.mst-spark {
+	display: block;
+}
+
+.mst-spark .mst-bar {
+	fill: var(--mst-bar);
+}
+
+.mst-spark .mst-bar-held {
+	fill: var(--mst-held);
+}
+
+.mst-spark .mst-bar-failed {
+	fill: var(--mst-failed);
+}
+
+.mst-spark .mst-bar-base {
+	fill: var(--mst-base);
+}
+
+/* ---------------------------------------------------------------- state badges */
+
+.mst-state {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 10px;
+	background: #edfaef;
+	color: #00450c;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 18px;
+}
+
+.mst-state.is-silent {
+	background: #fcf9e8;
+	color: #614200;
+}
+
+.mst-state.is-failing {
+	background: #fcf0f1;
+	color: #8a2424;
+}
+
+.mst-state.is-new {
+	background: #f0f6fc;
+	color: #0a4b78;
+}
+
+.mst-state.is-muted {
+	background: #f0f0f1;
+	color: var(--mst-muted);
+}
+
+.mst-actions,
+.mst-col-last {
+	white-space: nowrap;
+}
+
+.mst-actions form {
+	display: inline;
+	margin-left: 8px;
+}
+
+.mst-empty {
+	padding: 24px;
+	border: 1px dashed var(--mst-border);
+	border-radius: var(--mst-radius);
+	background: var(--mst-surface);
+	text-align: center;
+}
+
+.mst-rebuild {
+	margin-top: 24px;
+}
+
+/* ---------------------------------------------------------------- log dialog */
+
+.mailspur-type-rhythm {
+	display: block;
+	color: var(--mst-muted);
+	font-size: 12px;
+}
+
+@media (max-width: 782px) {
+	.mst-col-type {
+		min-width: 180px;
+	}
+}
