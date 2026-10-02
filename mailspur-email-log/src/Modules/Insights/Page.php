@@ -236,6 +236,9 @@ final class Page {
 			if ( ! empty( $settings['alert_silence'] ) ) {
 				$active[] = __( 'unusual silence', 'mailspur-email-log' );
 			}
+			if ( ! empty( $settings['alert_types'] ) ) {
+				$active[] = __( 'stopped email types', 'mailspur-email-log' );
+			}
 		}
 		?>
 		<section class="msi-card msi-history" aria-labelledby="msi-history-title">
@@ -334,7 +337,7 @@ final class Page {
 		?>
 		<h2 id="mailspur-alerts"><?php esc_html_e( 'Monitoring alerts', 'mailspur-email-log' ); ?></h2>
 		<p class="description mailspur-alerts-intro">
-			<?php esc_html_e( 'Optional and off by default. When enabled, Mailspur checks the log every 15 minutes and notifies you about failure spikes or unusual silence. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text and a link to the log – never email contents.', 'mailspur-email-log' ); ?>
+			<?php esc_html_e( 'Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients.', 'mailspur-email-log' ); ?>
 		</p>
 		<table class="form-table" role="presentation">
 			<tr>

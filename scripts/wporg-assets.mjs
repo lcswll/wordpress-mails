@@ -105,7 +105,16 @@ if (shots) {
 		await page.screenshot({ path: path.join(out, 'screenshot-5.png') });
 		console.log('✓ screenshot-5.png (statistics)');
 
+		// Email types from the same history: a stopped renewal after a plugin update, merged welcome names.
+		await page.setViewportSize({ width: 1280, height: 1000 });
+		await page.goto(`${base}&tab=types`);
+		await page.locator('.mst-row').first().waitFor();
+		await hideNoise();
+		await page.screenshot({ path: path.join(out, 'screenshot-7.png') });
+		console.log('✓ screenshot-7.png (email types)');
+
 		// Tall viewport instead of fullPage, so the admin menu background reaches the bottom.
+		await page.setViewportSize({ width: 1280, height: 1100 });
 		await page.goto(`${base}&tab=settings`);
 		await hideNoise();
 		await page.screenshot({ path: path.join(out, 'screenshot-6.png') });

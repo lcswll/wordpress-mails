@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Logs every email WordPress sends – with search, safe preview, delivery diagnostics, charts and alerts. Private and lightweight.
+Logs every email WordPress sends, knows every type of email your site sends and alerts you when one stops. Safe preview, diagnostics, private.
 
 == Description ==
 
@@ -16,11 +16,21 @@ Did the order confirmation go out? Why did the password reset never arrive? Mail
 
 = What makes it different =
 
+* **It knows every email your site sends – and notices when one stops.** Mailspur builds a map of all email types on its own (order confirmation, password reset, contact form …), learns how often each one goes out and tells you when a type that normally runs daily or weekly suddenly falls silent – naming the plugin update that happened in between. As far as we know, no other email log plugin does this.
 * **Logged emails cannot attack you.** HTML emails are shown in a sandboxed frame with an opaque origin: injected scripts, phishing forms and tracking pixels in a logged email stay inert, and remote content is not even requested until you allow it.
 * **The log cannot be used to take over accounts.** One-time secrets in links (password resets, activation keys, order keys) are masked *before* they are written to the database.
 * **It explains problems instead of just listing them.** Every email is checked for issues that keep it from arriving or displaying correctly, and failed emails come with a plain-language explanation and concrete steps.
 * **It records what was actually sent** – the final body after template plugins, the real sender, the SMTP server or API plugin that delivered it, and the exact code that called `wp_mail()`.
 * **Built for large logs:** an indexed table, live search, two small queries per email. No upsells, no external services, no tracking.
+
+= Email types: the map of your site's emails =
+
+Most email problems are not failures but emails that are never triggered: a plugin update breaks the order confirmation, a cron job dies, a form stops sending. A log of the emails that *were* sent cannot show what is missing. Mailspur's "Email types" tab can:
+
+* **Every kind of email, found automatically.** Grouped by the plugin that sends it and by subject – order numbers, dates, addresses and even customer names become placeholders, so "Welcome, Anna!" and "Welcome, Ben!" are one type, while "Your order is complete" and "Your order is cancelled" stay two.
+* **Health per type:** emails and failures of the last 30 days as a small chart, the rhythm ("daily", "every 3 days", "weekly"), when it was last sent and notes found in its latest email.
+* **"This email type stopped":** Mailspur learns each type's rhythm from its own last 8 weeks – a daily order confirmation is overdue after 2 days, one that pauses on weekends after 4, a weekly report after 2 weeks. Overdue types are marked, and with alerts enabled you get one email or webhook message – including the plugins, themes or WordPress updates installed since the type was last sent – and another one when it is back.
+* **Built for privacy and speed:** sorting happens afterwards (hourly and when you open the tab), never while an email is sent. Only counters and subject patterns are stored – never recipients or contents – and they follow the retention period of the log. Types you do not care about can be ignored.
 
 = Find any email in seconds =
 
@@ -64,19 +74,20 @@ The log contains personal data (recipients and content of emails). Mailspur:
 * deletes entries automatically after a configurable retention period (default: 90 days) and/or above a maximum number of entries – or anonymises them first, keeping only what the statistics need,
 * integrates with the WordPress personal data export and erasure tools,
 * suggests a paragraph for your privacy policy,
-* contacts no external service. The only exception is a webhook URL you enter yourself for monitoring alerts (off by default), which receives a short alert text – never email contents.
+* contacts no external service. The only exception is a webhook URL you enter yourself for monitoring alerts (off by default), which receives a short alert text – never email contents or recipients.
 
 = External services =
 
 Mailspur works without any external service. There is exactly one optional exception:
 
-* **Alert webhook (off by default).** If you enable monitoring alerts and enter a webhook URL, your site sends a short JSON POST to exactly that URL when an alert fires (or when you click "Send test alert"): site name, site URL, the alert text, a link to the log and a timestamp – never email contents or recipient addresses. Where the data goes depends on the URL you enter. For Slack see the [terms](https://slack.com/terms-of-service) and [privacy policy](https://slack.com/privacy-policy), for Discord the [terms](https://discord.com/terms) and [privacy policy](https://discord.com/privacy).
+* **Alert webhook (off by default).** If you enable monitoring alerts and enter a webhook URL, your site sends a short JSON POST to exactly that URL when an alert fires (or when you click "Send test alert"): site name, site URL, the alert text, a link to the log and a timestamp – never email contents or recipient addresses. For a stopped email type the alert text names the sending plugin, the subject pattern with placeholders (e.g. "Your order #… has been received") and recently updated plugins. Where the data goes depends on the URL you enter. For Slack see the [terms](https://slack.com/terms-of-service) and [privacy policy](https://slack.com/privacy-policy), for Discord the [terms](https://discord.com/terms) and [privacy policy](https://discord.com/privacy).
 
 The sender check (SPF/DKIM/DMARC/MX) and the recipient-domain check only ask your server's own DNS resolver, on demand, and contact no third-party service.
 
 = For developers =
 
 * WP-CLI: `wp mailspur list|show|resend|stats|purge|export|import`.
+* REST: `GET /wp-json/mailspur-email-log/v1/types` lists every email type with its health.
 * Filters: `mailspur_should_log` (skip logging an email), `mailspur_redact_params` (masked URL parameters), `mailspur_import_duplicate_window` (seconds), `mailspur_note_rules` and `mailspur_note_texts` (own checks), `mailspur_staging_subject`.
 
 = Source code =
@@ -131,6 +142,14 @@ No. It only asks your server's own DNS resolver for the SPF, DMARC, DKIM and MX 
 
 It only alerts when the last 14 days show that your site normally sends emails in that time window (on at least 10 of 14 days, including the same weekday one and two weeks ago).
 
+= How does Mailspur know that an email type stopped? =
+
+From the type's own history, without any setting to tune: a type sent on at least 6 of the last 56 days is "regular", and it is overdue once the time since its last email exceeds twice its typical gap or its longest gap so far plus one day. Rare or irregular types never alert. Turn the alert on under Settings → "Stopped email types"; it uses the email addresses and webhook of the monitoring alerts.
+
+= Why are two of my emails shown as one type, or one email as two types? =
+
+Numbers, dates, addresses, links and quoted text are always placeholders. Other words only merge when they look like names (capitalised in a normally written subject) and most of the subject stays the same – so different wording always stays apart. If a sender produces more than 150 different subjects, the rest is collected as "Other emails" of that sender.
+
 = Can I keep my history when switching from WP Mail Logging or another log plugin? =
 
 Yes. Under Mail Log → Settings → "Import from other plugins" Mailspur lists every supported log it finds on the site (also from deactivated plugins) and imports it with one click. Entries older than your retention period are skipped, so raise the retention first if you want the complete history.
@@ -167,6 +186,7 @@ Yes. Each site keeps its own log.
 4. Notes and explained errors for a failed email.
 5. Statistics: emails over time, failure rate, heatmap and top lists.
 6. Settings: access, privacy, retention, staging mode and alerts.
+7. Email types: every kind of email the site sends, with volume, rhythm and status – here a renewal email that stopped after a plugin update.
 
 == Changelog ==
 

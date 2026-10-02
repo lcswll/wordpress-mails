@@ -384,7 +384,7 @@ final class Alerts {
 		);
 		$site    = wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES );
 		$title   = self::title( $type, $kind );
-		$link    = Admin::url( 'failures' === $type ? array( 'status' => 'failed' ) : array() );
+		$link    = Admin::url( 'failures' === $type ? array( 'status' => 'failed' ) : ( 'type' === $type ? array( 'tab' => 'types' ) : array() ) );
 
 		$to = (string) ( $settings['alert_email'] ?? '' );
 		if ( '' !== $to ) {
@@ -423,6 +423,9 @@ final class Alerts {
 	public static function title( string $type, string $kind ): string {
 		if ( 'test' === $kind ) {
 			return __( 'Test alert', 'mailspur-email-log' );
+		}
+		if ( 'type' === $type ) {
+			return 'recovery' === $kind ? __( 'Email type is sent again', 'mailspur-email-log' ) : __( 'Email type stopped', 'mailspur-email-log' );
 		}
 		if ( 'recovery' === $kind ) {
 			return 'failures' === $type ? __( 'Email failures resolved', 'mailspur-email-log' ) : __( 'Emails are flowing again', 'mailspur-email-log' );
