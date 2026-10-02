@@ -5,6 +5,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: mailspur-email-log\n"
 
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "„.eml herunterladen“ baut die Nachricht aus den protokollierten, geschwärzten Daten neu auf (ohne Anhänge)."
+
 msgid "%1$s entries, %2$s"
 msgstr "%1$s Einträge, %2$s"
 
@@ -38,8 +41,14 @@ msgstr "Zugriff"
 msgid "Actions"
 msgstr "Aktionen"
 
+msgid "Admin screen"
+msgstr "Admin-Bereich"
+
 msgid "Administrators"
 msgstr "Administratoren"
+
+msgid "Ajax"
+msgstr "Ajax"
 
 msgid "All"
 msgstr "Alle"
@@ -56,6 +65,12 @@ msgstr "Anhänge"
 msgid "Attachments no longer available: %s"
 msgstr "Anhänge nicht mehr vorhanden: %s"
 
+msgid "Authentication"
+msgstr "Anmeldung"
+
+msgid "Automatic TLS"
+msgstr "Automatisches TLS"
+
 msgid "Block again"
 msgstr "Wieder blockieren"
 
@@ -68,8 +83,17 @@ msgstr "Schließen"
 msgid "Close (Esc)"
 msgstr "Schließen (Esc)"
 
+msgid "Command line"
+msgstr "Kommandozeile"
+
+msgid "Component"
+msgstr "Komponente"
+
 msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
 msgstr "Übernimmt das vorhandene Protokoll eines anderen Mail-Log-Plugins in Mailspur, damit alte E-Mails hier durchsucht und angesehen werden können. Das andere Plugin und seine Daten bleiben unverändert; ein erneuter Import übernimmt nur neue Einträge."
+
+msgid "Copy"
+msgstr "Kopieren"
 
 msgid "Current page"
 msgstr "Aktuelle Seite"
@@ -104,8 +128,23 @@ msgstr "Diesen Protokolleintrag löschen?"
 msgid "Deleted."
 msgstr "Gelöscht."
 
+msgid "Delivered by %s (API)"
+msgstr "Zugestellt von %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Zugestellt von Code, der sich in pre_wp_mail einklinkt (API)"
+
+msgid "Delivery"
+msgstr "Zustellung"
+
 msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
 msgstr "Fertig: %1$s importiert, %2$s Duplikate, %3$s zu alt."
+
+msgid "Download .eml"
+msgstr ".eml herunterladen"
+
+msgid "Download started."
+msgstr "Download gestartet."
 
 msgid "Editors and above"
 msgstr "Redakteure und höher"
@@ -122,6 +161,9 @@ msgstr "E-Mails, die bereits im Protokoll stehen – von Mailspur selbst protoko
 msgid "Empty log"
 msgstr "Protokoll leeren"
 
+msgid "Encryption"
+msgstr "Verschlüsselung"
+
 msgid "Entries"
 msgstr "Einträge"
 
@@ -133,6 +175,9 @@ msgstr "Fehler"
 
 msgid "Failed"
 msgstr "Fehlgeschlagen"
+
+msgid "File"
+msgstr "Datei"
 
 msgid "Filter by status"
 msgstr "Nach Status filtern"
@@ -149,11 +194,26 @@ msgstr "Von"
 msgid "From date"
 msgstr "Von Datum"
 
+msgid "Front end"
+msgstr "Website"
+
+msgid "Function"
+msgstr "Funktion"
+
+msgid "Handler"
+msgstr "Handler"
+
 msgid "Headers"
 msgstr "Header"
 
 msgid "Held"
 msgstr "Zurückgehalten"
+
+msgid "Hooks"
+msgstr "Hooks"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Mir ist klar, dass der Rohquelltext NICHT geschwärzt wird und den Speicherbedarf pro E-Mail etwa verdoppelt"
 
 msgid "Import"
 msgstr "Importieren"
@@ -169,6 +229,9 @@ msgstr "Neue Einträge importieren"
 
 msgid "Imported"
 msgstr "Importiert"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Importierte Einträge haben keine Spur: Das andere Plugin hat diese Details nicht erfasst."
 
 msgid "Imported from %s"
 msgstr "Importiert aus %s"
@@ -197,6 +260,9 @@ msgstr "Mail-Log"
 msgid "Mail Log sections"
 msgstr "Mail-Log-Bereiche"
 
+msgid "Mailer"
+msgstr "Versandart"
+
 msgid "Mailspur – Email Log"
 msgstr "Mailspur – E-Mail-Log"
 
@@ -206,6 +272,9 @@ msgstr "Passwort-Reset-, Aktivierungs- und Zugriffsschlüssel in protokollierten
 msgid "Menu position"
 msgstr "Menüposition"
 
+msgid "Method"
+msgstr "Methode"
+
 msgid "Next email"
 msgstr "Nächste E-Mail"
 
@@ -214,6 +283,9 @@ msgstr "Nächste E-Mail (j)"
 
 msgid "Next page"
 msgstr "Nächste Seite"
+
+msgid "No SMTP transcript for this email."
+msgstr "Für diese E-Mail gibt es kein SMTP-Protokoll."
 
 msgid "No emails found."
 msgstr "Noch keine E-Mails protokolliert."
@@ -227,20 +299,56 @@ msgstr "Auf dieser Website wurde kein Protokoll eines anderen Mail-Log-Plugins g
 msgid "No log of this plugin was found on this site."
 msgstr "Auf dieser Website wurde kein Protokoll dieses Plugins gefunden."
 
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Für diesen Eintrag ist keine Spur vorhanden. Er wurde protokolliert, bevor es die Spur gab, oder von einer Version ohne sie."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Nicht aufgezeichnet: Ein anderes Plugin hatte das SMTP-Debugging eingeschaltet."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Nicht aufgezeichnet: Das SMTP-Protokoll ist in den Einstellungen ausgeschaltet."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Nicht aufgezeichnet: Diese E-Mail wurde nicht per SMTP verschickt."
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Nicht gespeichert: Protokolle werden nur für fehlgeschlagene E-Mails behalten."
+
+msgid "Off"
+msgstr "Aus"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Standardmäßig aus. Ohne diese Option baut „.eml herunterladen“ die Nachricht aus den protokollierten (geschwärzten) Daten neu auf. Der Rohquelltext enthält Links zum Zurücksetzen von Passwörtern und andere Geheimnisse genau so, wie sie verschickt wurden – schalte ihn nur ein, wenn du ihn brauchst, und setze beide Häkchen."
+
 msgid "Only administrators can empty the log."
 msgstr "Nur Administratoren können das Protokoll leeren."
+
+msgid "Origin"
+msgstr "Herkunft"
 
 msgid "Own top-level menu item"
 msgstr "Eigener Hauptmenüpunkt"
 
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer bereit (phpmailer_init)"
+
 msgid "Pagination"
 msgstr "Seitennavigation"
+
+msgid "Path"
+msgstr "Pfad"
 
 msgid "Per page"
 msgstr "Pro Seite"
 
 msgid "Plugin"
 msgstr "Plugin"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Preparation"
+msgstr "Vorbereitung"
 
 msgid "Preview"
 msgstr "Vorschau"
@@ -257,11 +365,29 @@ msgstr "Vorherige Seite"
 msgid "Privacy & security"
 msgstr "Datenschutz & Sicherheit"
 
+msgid "REST API"
+msgstr "REST-API"
+
+msgid "REST route"
+msgstr "REST-Route"
+
+msgid "Raw source"
+msgstr "Rohquelltext"
+
 msgid "Recipient"
 msgstr "Empfänger"
 
 msgid "Recommended. Otherwise anyone with log access could use a logged reset link to take over an account. Resending such an email sends the masked version."
 msgstr "Empfohlen. Sonst könnte jeder mit Zugriff auf das Protokoll einen gespeicherten Reset-Link nutzen, um ein Konto zu übernehmen. Wird eine solche E-Mail erneut gesendet, geht die maskierte Fassung raus."
+
+msgid "Record for every email"
+msgstr "Für jede E-Mail aufzeichnen"
+
+msgid "Record for failed emails only"
+msgstr "Nur für fehlgeschlagene E-Mails aufzeichnen"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Zeichnet die Unterhaltung mit dem SMTP-Server auf (nur beim Versand per SMTP). Zugangsdaten und der Inhalt der Nachricht werden nie aufgezeichnet. Entfällt, solange ein anderes Plugin das SMTP-Debugging eingeschaltet hat."
 
 msgid "Redact secrets"
 msgstr "Geheimnisse schwärzen"
@@ -281,6 +407,9 @@ msgstr "Alle aus %s importierten Einträge entfernen? Die Daten im anderen Plugi
 msgid "Remove imported entries"
 msgstr "Importierte Einträge entfernen"
 
+msgid "Request"
+msgstr "Anfrage"
+
 msgid "Request failed: %s"
 msgstr "Anfrage fehlgeschlagen: %s"
 
@@ -293,8 +422,17 @@ msgstr "Erneut gesendet"
 msgid "Reset filters"
 msgstr "Filter zurücksetzen"
 
+msgid "Result"
+msgstr "Ergebnis"
+
 msgid "Retention"
 msgstr "Aufbewahrung"
+
+msgid "SMTP host"
+msgstr "SMTP-Server"
+
+msgid "SMTP transcript"
+msgstr "SMTP-Protokoll"
 
 msgid "Search recipient or subject"
 msgstr "Empfänger oder Betreff suchen"
@@ -329,11 +467,20 @@ msgstr "Quelle"
 msgid "Status"
 msgstr "Status"
 
+msgid "Store the exact raw MIME source of every email"
+msgstr "Den exakten MIME-Rohquelltext jeder E-Mail speichern"
+
 msgid "Subject"
 msgstr "Betreff"
 
 msgid "Supported: %s."
 msgstr "Unterstützt: %s."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Die Unterhaltung mit dem SMTP-Server war leer."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Der exakte Rohquelltext ist gespeichert – „.eml herunterladen“ liefert ihn unverändert (nicht geschwärzt)."
 
 msgid "The mail log requires JavaScript."
 msgstr "Das Mail-Log benötigt JavaScript."
@@ -344,11 +491,29 @@ msgstr "Dieser Import läuft bereits in einem anderen Tab."
 msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
 msgstr "Diese Website protokolliert die von ihr versendeten E-Mails (Empfänger, Betreff, Inhalt und Zustellstatus), um die Zustellung zu prüfen und Fehler zu beheben. Protokolleinträge werden nach der eingestellten Aufbewahrungsdauer automatisch gelöscht."
 
+msgid "Timeline"
+msgstr "Zeitverlauf"
+
 msgid "To"
 msgstr "An"
 
 msgid "To date"
 msgstr "Bis Datum"
+
+msgid "Total: %s ms"
+msgstr "Gesamt: %s ms"
+
+msgid "Trace"
+msgstr "Spur"
+
+msgid "Transcript copied."
+msgstr "Protokoll kopiert."
+
+msgid "Transport"
+msgstr "Transport"
+
+msgid "Type"
+msgstr "Art"
 
 msgid "Under Tools"
 msgstr "Unter Werkzeuge"
@@ -359,8 +524,20 @@ msgstr "Deinstallation"
 msgid "Unknown"
 msgstr "Unbekannt"
 
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Unbekannt: Es wurde kein Zustellergebnis gemeldet (ersetzte wp_mail()-Funktion?)."
+
+msgid "User"
+msgstr "Benutzer"
+
+msgid "Username"
+msgstr "Benutzername"
+
 msgid "View"
 msgstr "Ansehen"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
 
 msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
 msgstr "Ist das aus, können Tracking-Pixel nicht erkennen, wann du einen Eintrag öffnest. Für einzelne E-Mails kannst du externe Inhalte trotzdem laden. Skripte und Formulare sind immer blockiert."
@@ -371,11 +548,26 @@ msgstr "Wer darf das Protokoll sehen"
 msgid "WordPress"
 msgstr "WordPress"
 
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
 msgid "days"
 msgstr "Tagen"
 
 msgid "entries"
 msgstr "Einträge"
 
+msgid "no"
+msgstr "nein"
+
+msgid "none"
+msgstr "keine"
+
 msgid "of %s"
 msgstr "von %s"
+
+msgid "wp_mail() called"
+msgstr "wp_mail() aufgerufen"
+
+msgid "yes"
+msgstr "ja"
