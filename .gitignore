@@ -9,6 +9,9 @@
 # Build output (release ZIPs are CI artifacts / GitHub release assets)
 /dist/
 
+# Agent worktrees (local only)
+/.claude/worktrees/
+
 # OS / editor
 .DS_Store
 Thumbs.db
