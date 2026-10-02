@@ -149,8 +149,12 @@ if (online) {
 				await new Promise((r) => setTimeout(r, attempt * 2000));
 			}
 		}
+		// The plugin's own wordpress.org pages (reviews, support) only exist once the plugin is approved and listed.
+		const ownDirectoryPage = /^https:\/\/wordpress\.org\/(support\/)?plugins?\/mailspur-email-log\//.test(url);
 		if (status === null) {
 			warnings.push(`${url} could not be checked (${lastError}) – network issue, not counted as a dead link`);
+		} else if (ownDirectoryPage && status === 404) {
+			warnings.push(`${url} does not exist yet (HTTP 404) – expected until the plugin is listed on wordpress.org`);
 		} else {
 			expect(status >= 200 && status < 400, `${url} is reachable (HTTP ${status})`);
 		}
