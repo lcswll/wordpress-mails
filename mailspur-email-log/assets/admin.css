@@ -1,0 +1,833 @@
+/* Mailspur – Email Log admin styles. Uses WP admin color scheme variables where available. */
+
+.mailspur {
+	--ob-accent: var(--wp-admin-theme-color, #2271b1);
+	--ob-border: #dcdcde;
+	--ob-muted: #646970;
+	--ob-bg: #fff;
+	--ob-row-hover: #f6f7f7;
+	--ob-sent: #00a32a;
+	--ob-sent-bg: #edfaef;
+	--ob-failed: #d63638;
+	--ob-failed-bg: #fcf0f1;
+	--ob-pending: #996800;
+	--ob-pending-bg: #fcf9e8;
+	--ob-held: #3858e9;
+	--ob-held-bg: #eff2ff;
+	--ob-radius: 6px;
+}
+
+/* ---------------------------------------------------------------- header */
+
+.mailspur-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 24px;
+	margin-bottom: 12px;
+}
+
+.mailspur .mailspur-title {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 0;
+	margin: 0;
+}
+
+.mailspur-title .dashicons {
+	width: 26px;
+	height: 26px;
+	font-size: 26px;
+	color: var(--ob-accent);
+}
+
+.mailspur-nav {
+	display: flex;
+	gap: 4px;
+}
+
+.mailspur-nav a {
+	padding: 6px 12px;
+	border-radius: var(--ob-radius);
+	color: #1d2327;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.mailspur-nav a:hover {
+	background: #e5e5e5;
+}
+
+.mailspur-nav a.is-active {
+	background: var(--ob-accent);
+	color: #fff;
+}
+
+/* --------------------------------------------------------------- toolbar */
+
+.mailspur-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.mailspur-status {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.mailspur-chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 32px;
+	padding: 0 12px;
+	border: 1px solid var(--ob-border);
+	border-radius: 999px;
+	background: var(--ob-bg);
+	color: #1d2327;
+	font: inherit;
+	cursor: pointer;
+}
+
+.mailspur-chip:hover {
+	border-color: #8c8f94;
+}
+
+.mailspur-chip[aria-pressed="true"] {
+	border-color: var(--ob-accent);
+	background: var(--ob-accent);
+	color: #fff;
+}
+
+.mailspur-count {
+	color: var(--ob-muted);
+	font-variant-numeric: tabular-nums;
+}
+
+.mailspur-count:empty {
+	display: none;
+}
+
+.mailspur-chip[aria-pressed="true"] .mailspur-count {
+	color: inherit;
+	opacity: 0.85;
+}
+
+.mailspur-chip.is-failed .mailspur-count:not(:empty) {
+	color: var(--ob-failed);
+}
+
+.mailspur-chip.is-failed[aria-pressed="true"] .mailspur-count {
+	color: inherit;
+}
+
+.mailspur-filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+}
+
+.mailspur-search {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.mailspur-search .dashicons {
+	position: absolute;
+	left: 8px;
+	color: var(--ob-muted);
+	pointer-events: none;
+}
+
+.mailspur .mailspur-search input {
+	width: 300px;
+	min-height: 32px;
+	padding: 0 32px;
+	border-radius: var(--ob-radius);
+}
+
+.mailspur-search kbd {
+	position: absolute;
+	right: 8px;
+	padding: 0 5px;
+	border: 1px solid var(--ob-border);
+	border-radius: 3px;
+	background: #f6f7f7;
+	color: var(--ob-muted);
+	font-size: 11px;
+	line-height: 16px;
+	pointer-events: none;
+}
+
+.mailspur-search input:focus ~ kbd {
+	display: none;
+}
+
+.mailspur-dates {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.mailspur .mailspur-dates input {
+	min-height: 32px;
+	border-radius: var(--ob-radius);
+}
+
+.mailspur-check {
+	white-space: nowrap;
+}
+
+.mailspur .mailspur-more-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	min-height: 32px;
+	border-radius: var(--ob-radius);
+}
+
+.mailspur-more-toggle .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.mailspur-more-toggle[aria-expanded="true"] {
+	border-color: var(--ob-accent);
+}
+
+.mailspur-more-count:not(:empty) {
+	min-width: 18px;
+	padding: 0 5px;
+	border-radius: 999px;
+	background: var(--ob-accent);
+	color: #fff;
+	font-size: 11px;
+	line-height: 18px;
+	text-align: center;
+}
+
+/* Second toolbar row, only while "More filters" is open. */
+.mailspur-more {
+	display: flex;
+	flex-basis: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+	padding: 10px 12px;
+	border: 1px solid var(--ob-border);
+	border-radius: var(--ob-radius);
+	background: var(--ob-bg);
+}
+
+.mailspur-more[hidden] {
+	display: none;
+}
+
+.mailspur-field {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-width: 0;
+}
+
+.mailspur-field > span {
+	color: var(--ob-muted);
+}
+
+.mailspur .mailspur-field select {
+	max-width: 260px;
+	min-height: 32px;
+	border-radius: var(--ob-radius);
+}
+
+/* ------------------------------------------------------------------ bulk */
+
+.mailspur-bulk {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 8px 12px;
+	margin-bottom: 8px;
+	border-radius: var(--ob-radius);
+	background: #f0f6fc;
+}
+
+.mailspur-bulk[hidden] {
+	display: none;
+}
+
+/* ----------------------------------------------------------------- table */
+
+.mailspur-table-wrap {
+	overflow: hidden;
+	border: 1px solid var(--ob-border);
+	border-radius: var(--ob-radius);
+	background: var(--ob-bg);
+	transition: opacity 0.15s;
+}
+
+.mailspur-app[aria-busy="true"] .mailspur-table-wrap {
+	opacity: 0.6;
+}
+
+.mailspur-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.mailspur-table th,
+.mailspur-table td {
+	padding: 9px 10px;
+	border-bottom: 1px solid #f0f0f1;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.mailspur-table thead th,
+.mailspur-table thead td {
+	border-bottom-color: var(--ob-border);
+	background: #f6f7f7;
+	color: #1d2327;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.mailspur-table thead button {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: inherit;
+	font: inherit;
+	cursor: pointer;
+}
+
+.mailspur-table thead button::after {
+	content: "";
+	display: inline-block;
+	width: 0;
+	margin-left: 4px;
+	vertical-align: middle;
+	border: 4px solid transparent;
+	opacity: 0;
+}
+
+.mailspur-table th[aria-sort="descending"] button::after {
+	border-top-color: currentColor;
+	border-bottom-width: 0;
+	opacity: 1;
+}
+
+.mailspur-table th[aria-sort="ascending"] button::after {
+	border-bottom-color: currentColor;
+	border-top-width: 0;
+	opacity: 1;
+}
+
+.mailspur-table tbody tr:last-child > * {
+	border-bottom: 0;
+}
+
+.mailspur-table tbody tr[data-id] {
+	cursor: pointer;
+}
+
+.mailspur-table tbody tr[data-id]:hover,
+.mailspur-table tbody tr.is-current {
+	background: var(--ob-row-hover);
+}
+
+.mailspur-table tbody tr.is-current {
+	box-shadow: inset 3px 0 0 var(--ob-accent);
+}
+
+.mailspur-table .col-check {
+	width: 28px;
+	padding-right: 0;
+}
+
+.mailspur-table .col-check input {
+	margin: 0;
+}
+
+.mailspur-table .col-date {
+	width: 150px;
+	color: var(--ob-muted);
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.mailspur-table .col-status {
+	width: 90px;
+}
+
+.mailspur-table .col-to {
+	width: 24%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.mailspur-table .col-source {
+	width: 130px;
+	overflow: hidden;
+	color: var(--ob-muted);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.mailspur-table .col-actions {
+	width: 100px;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.mailspur-open {
+	padding: 0;
+	border: 0;
+	background: none;
+	color: #1d2327;
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+
+.mailspur-open:hover,
+.mailspur-open:focus {
+	color: var(--ob-accent);
+	text-decoration: underline;
+}
+
+.mailspur-clip {
+	width: 16px;
+	height: 16px;
+	margin-left: 4px;
+	color: var(--ob-muted);
+	font-size: 16px;
+	vertical-align: text-bottom;
+}
+
+.mailspur-error {
+	display: block;
+	margin-top: 2px;
+	color: var(--ob-failed);
+	font-size: 12px;
+}
+
+.mailspur-row-action {
+	width: 28px;
+	height: 28px;
+	padding: 0;
+	border: 0;
+	border-radius: 4px;
+	background: none;
+	color: var(--ob-muted);
+	cursor: pointer;
+}
+
+.mailspur-row-action:hover,
+.mailspur-row-action:focus {
+	background: #dcdcde;
+	color: #1d2327;
+}
+
+.mailspur-row-action[data-action="delete"]:hover {
+	background: var(--ob-failed-bg);
+	color: var(--ob-failed);
+}
+
+.mailspur-empty td {
+	padding: 48px 12px;
+	color: var(--ob-muted);
+	text-align: center;
+	cursor: default;
+}
+
+.mailspur-badge {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
+	white-space: nowrap;
+}
+
+.mailspur-badge.is-sent {
+	background: var(--ob-sent-bg);
+	color: #007017;
+}
+
+.mailspur-badge.is-failed {
+	background: var(--ob-failed-bg);
+	color: var(--ob-failed);
+}
+
+.mailspur-badge.is-pending {
+	background: var(--ob-pending-bg);
+	color: var(--ob-pending);
+}
+
+.mailspur-badge.is-held {
+	background: var(--ob-held-bg);
+	color: var(--ob-held);
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.mailspur-footer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 16px;
+	margin-top: 12px;
+}
+
+#mailspur-summary {
+	color: var(--ob-muted);
+}
+
+.mailspur-pager {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-left: auto;
+}
+
+.mailspur .mailspur-pager input {
+	width: 64px;
+	text-align: center;
+}
+
+.mailspur-purge.button-link {
+	color: var(--ob-failed);
+}
+
+/* ---------------------------------------------------------------- dialog */
+
+.mailspur-dialog {
+	width: min(1100px, calc(100vw - 32px));
+	height: calc(100vh - 64px);
+	max-width: none;
+	max-height: none;
+	padding: 0;
+	border: 0;
+	border-radius: 10px;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.mailspur-dialog[open] {
+	display: flex;
+	flex-direction: column;
+}
+
+.mailspur-dialog::backdrop {
+	background: rgba(15, 23, 42, 0.55);
+}
+
+.mailspur-d-head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 16px 20px 8px;
+}
+
+.mailspur-d-title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-width: 0;
+}
+
+.mailspur-d-title h2 {
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.4;
+	overflow-wrap: anywhere;
+}
+
+.mailspur-d-actions {
+	display: flex;
+	flex-shrink: 0;
+	gap: 4px;
+}
+
+.mailspur-d-actions .button {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.mailspur-d-actions .button .dashicons {
+	width: 16px;
+	height: 16px;
+	font-size: 16px;
+}
+
+.mailspur-d-actions .mailspur-icon {
+	padding: 0 6px;
+}
+
+.mailspur-d-actions .mailspur-danger:hover {
+	border-color: var(--ob-failed);
+	color: var(--ob-failed);
+}
+
+.mailspur-d-meta {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 4px 16px;
+	margin: 0;
+	padding: 4px 20px 12px;
+	font-size: 13px;
+}
+
+.mailspur-d-meta dt {
+	color: var(--ob-muted);
+}
+
+.mailspur-d-meta dd {
+	margin: 0;
+	overflow-wrap: anywhere;
+}
+
+.mailspur-d-meta .is-error {
+	color: var(--ob-failed);
+}
+
+.mailspur-d-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px 16px;
+	padding: 0 20px;
+	border-bottom: 1px solid var(--ob-border);
+}
+
+.mailspur-d-tabs [role="tab"] {
+	margin-bottom: -1px;
+	padding: 10px 2px;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	background: none;
+	color: var(--ob-muted);
+	font: inherit;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.mailspur-d-tabs [role="tab"][aria-selected="true"] {
+	border-bottom-color: var(--ob-accent);
+	color: #1d2327;
+}
+
+.mailspur-d-remote {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-left: auto;
+	color: var(--ob-muted);
+	font-size: 12px;
+}
+
+.mailspur-d-remote[hidden] {
+	display: none;
+}
+
+.mailspur-d-body {
+	flex: 1;
+	min-height: 0;
+	overflow: auto;
+	background: #f6f7f7;
+}
+
+.mailspur-frame {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: #fff;
+}
+
+.mailspur-pre {
+	margin: 0;
+	padding: 16px 20px;
+	font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	white-space: pre-wrap;
+	overflow-wrap: anywhere;
+}
+
+/* ----------------------------------------------------------------- toast */
+
+.mailspur-toast {
+	position: fixed;
+	z-index: 100100;
+	bottom: 24px;
+	left: 50%;
+	max-width: min(560px, calc(100vw - 32px));
+	padding: 10px 16px;
+	border-radius: var(--ob-radius);
+	background: #1d2327;
+	color: #fff;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+	pointer-events: none;
+	transform: translate(-50%, 12px);
+	transition: opacity 0.2s, transform 0.2s;
+}
+
+.mailspur-toast.is-visible {
+	opacity: 1;
+	transform: translate(-50%, 0);
+}
+
+.mailspur-toast.is-error {
+	background: var(--ob-failed);
+}
+
+/* -------------------------------------------------------------- settings */
+
+.mailspur-settings h2 {
+	margin-top: 28px;
+}
+
+.mailspur .mailspur-narrow {
+	width: 8em;
+}
+
+/* ---------------------------------------------------------------- mobile */
+
+@media (max-width: 960px) {
+	.mailspur-table .col-source {
+		display: none;
+	}
+}
+
+@media (max-width: 782px) {
+	.mailspur .mailspur-search,
+	.mailspur .mailspur-search input {
+		width: 100%;
+	}
+
+	.mailspur-filters {
+		width: 100%;
+	}
+
+	.mailspur-field {
+		flex: 1 1 100%;
+	}
+
+	.mailspur .mailspur-field select {
+		flex: 1;
+		width: 100%;
+		min-width: 0; /* Long source names must not widen the page. */
+		max-width: none;
+	}
+
+	.mailspur-table thead {
+		display: none;
+	}
+
+	.mailspur-table,
+	.mailspur-table tbody {
+		display: block;
+	}
+
+	.mailspur-table tbody tr[data-id] {
+		display: grid;
+		grid-template-columns: 28px 1fr auto;
+		gap: 2px 8px;
+		padding: 10px 12px;
+		border-bottom: 1px solid #f0f0f1;
+	}
+
+	.mailspur-table tbody tr[data-id] > * {
+		display: block;
+		width: auto;
+		padding: 0;
+		border: 0;
+	}
+
+	.mailspur-table tbody .col-check {
+		grid-row: 1 / 5;
+	}
+
+	.mailspur-table tbody tr[data-id] > .col-source {
+		display: none;
+	}
+
+	.mailspur-table tbody .col-date {
+		grid-column: 2;
+	}
+
+	.mailspur-table tbody .col-status {
+		grid-column: 3;
+		grid-row: 1;
+	}
+
+	.mailspur-table tbody .col-to,
+	.mailspur-table tbody .col-subject {
+		grid-column: 2 / 4;
+	}
+
+	.mailspur-table tbody .col-actions {
+		grid-column: 2 / 4;
+		text-align: left;
+	}
+
+	.mailspur-pager {
+		margin-left: 0;
+	}
+
+	.mailspur-dialog {
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+	}
+
+	.mailspur-d-head {
+		flex-direction: column;
+	}
+
+	.mailspur-d-actions {
+		flex-wrap: wrap;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.mailspur-toast,
+	.mailspur-table-wrap {
+		transition: none;
+	}
+}
+
+/* ---------------------------------------------------------------- import */
+
+.mailspur .mailspur-import {
+	max-width: 900px;
+	margin-top: 12px;
+}
+
+.mailspur .mailspur-import td {
+	vertical-align: middle;
+}
+
+.mailspur-import-actions {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.mailspur-import-actions .button-link {
+	margin-left: 12px;
+}

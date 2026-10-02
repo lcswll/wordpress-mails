@@ -1,0 +1,15 @@
+# LF everywhere: reproducible release ZIPs (Windows and CI builds are byte-identical) and stable PHPCS results.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.gif binary
+*.mo binary
+*.zip binary
+
+# Not part of `git archive` exports (the release ZIP is built by scripts/build-zip.mjs anyway).
+/.github export-ignore
+/tests export-ignore
+/scripts export-ignore
+/i18n export-ignore
+/.wordpress-org export-ignore

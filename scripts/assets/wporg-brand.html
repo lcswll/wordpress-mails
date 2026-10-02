@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Source for the wordpress.org icon and banners. Rendered by scripts/wporg-assets.mjs into .wordpress-org/ (?asset=icon|banner). -->
+<style>
+	:root {
+		--blue: #2271b1;
+		--blue-dark: #0a4b78;
+		--ink: #101517;
+		--muted: #50575e;
+		--green: #00a32a;
+		--red: #d63638;
+	}
+	* { box-sizing: border-box; margin: 0; }
+	[hidden] { display: none !important; }
+	html, body { width: 100%; height: 100%; overflow: hidden; }
+	body { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+
+	/* ------------------------------------------------------------- icon */
+	.icon {
+		width: 100%;
+		height: 100%;
+		display: grid;
+		place-items: center;
+		background: linear-gradient(145deg, #3582c4 0%, var(--blue) 45%, var(--blue-dark) 100%);
+	}
+	.icon svg { width: 70%; height: 70%; }
+
+	/* ----------------------------------------------------------- banner */
+	.banner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 6%;
+		padding: 0 6%;
+		background:
+			radial-gradient(circle at 85% 20%, rgba(255, 255, 255, 0.12), transparent 40%),
+			linear-gradient(120deg, var(--blue-dark) 0%, var(--blue) 60%, #3582c4 100%);
+		color: #fff;
+	}
+	.banner .mark { flex: 0 0 auto; width: 16%; }
+	.banner .mark svg { width: 100%; height: auto; display: block; }
+	.banner .copy { flex: 1 1 auto; }
+	.banner h1 { font-size: 5.6vw; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+	.banner p { margin-top: 1.4vw; font-size: 2.15vw; opacity: 0.9; line-height: 1.35; }
+	.banner .card {
+		flex: 0 0 34%;
+		align-self: center;
+		background: #fff;
+		color: var(--ink);
+		border-radius: 1.2vw;
+		box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.25);
+		padding: 1.4vw 1.6vw;
+		font-size: 1.25vw;
+	}
+	.row { display: flex; align-items: center; gap: 1vw; padding: 0.75vw 0; border-bottom: 1px solid #f0f0f1; }
+	.row:last-child { border-bottom: 0; }
+	.badge { flex: 0 0 auto; border-radius: 99px; padding: 0.15vw 0.8vw; font-size: 1vw; font-weight: 600; }
+	.sent { background: #edfaef; color: #007017; }
+	.failed { background: #fcf0f1; color: var(--red); }
+	.row .to { flex: 1 1 auto; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+	.row .time { color: var(--muted); font-variant-numeric: tabular-nums; }
+	.search { display: flex; align-items: center; gap: 0.6vw; border: 1px solid #c3c4c7; border-radius: 0.6vw; padding: 0.55vw 0.8vw; color: var(--muted); margin-bottom: 0.6vw; }
+</style>
+</head>
+<body>
+<template id="mark">
+	<!-- Envelope with an outgoing arrow: "mailspur". -->
+	<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<rect x="8" y="26" width="64" height="48" rx="8" stroke="#fff" stroke-width="7"/>
+		<path d="M12 32 L40 54 L68 32" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+		<circle cx="74" cy="28" r="20" fill="#fff"/>
+		<path d="M66 36 L82 20 M71 20 H82 V31" stroke="#2271b1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+	</svg>
+</template>
+
+<div id="icon" class="icon" hidden></div>
+
+<div id="banner" class="banner" hidden>
+	<div class="mark"></div>
+	<div class="copy">
+		<h1>Mailspur</h1>
+		<p>Every email WordPress sends –<br>searchable, safe to preview.</p>
+	</div>
+	<div class="card" aria-hidden="true">
+		<div class="search">⌕&nbsp; order</div>
+		<div class="row"><span class="badge sent">Sent</span><span class="to">jan@example.com</span><span class="time">20:01</span></div>
+		<div class="row"><span class="badge sent">Sent</span><span class="to">lena@example.com</span><span class="time">19:55</span></div>
+		<div class="row"><span class="badge failed">Failed</span><span class="to">mia@example.com</span><span class="time">19:34</span></div>
+		<div class="row"><span class="badge sent">Sent</span><span class="to">noah@example.com</span><span class="time">17:58</span></div>
+	</div>
+</div>
+
+<script>
+	const asset = new URLSearchParams(location.search).get('asset') || 'banner';
+	const mark = document.getElementById('mark').innerHTML;
+	document.querySelector('#icon').innerHTML = mark;
+	document.querySelector('#banner .mark').innerHTML = mark;
+	document.getElementById(asset).hidden = false;
+</script>
+</body>
+</html>

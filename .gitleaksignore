@@ -1,0 +1,4 @@
+# Accepted gitleaks findings (one fingerprint per line, with the reason above it).
+
+# Dummy SMTP password of a PHPMailer test double; the test asserts it is masked in the SMTP transcript.
+1c28dddb96b717cabe3a30886401136bf10da4ff:tests/unit/TraceMailer.php:generic-api-key:30

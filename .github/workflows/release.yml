@@ -1,0 +1,117 @@
+name: Release
+
+# Tag push `v1.2.3` → full CI → GitHub release with the verified ZIP → (optional) deploy to wordpress.org SVN.
+#
+# wordpress.org deploy is off until the plugin has been approved. To switch it on:
+#   1. Repository secrets SVN_USERNAME / SVN_PASSWORD (wordpress.org username + the SVN password from
+#      https://profiles.wordpress.org/me/profile/edit/group/3/?screen=svn-password).
+#   2. Repository variable WPORG_DEPLOY = true.
+#   3. Optional: protect the `wordpress-org` environment with required reviewers (manual approval per release).
+# What is deployed is exactly the content of the ZIP that CI built and verified, plus .wordpress-org/ as assets.
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: CI
+    # `./` instead of the newer `$/` self-repository syntax: actionlint 1.7.12 does not accept `$/` yet.
+    uses: ./.github/workflows/ci.yml # zizmor: ignore[self-repository]
+
+  github-release:
+    name: GitHub release
+    needs: ci
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write # create the release
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
+          package-manager-cache: false
+
+      - name: Tag matches the plugin version, "Tested up to" is current
+        env:
+          TAG: ${{ github.ref_name }}
+        run: node scripts/repo-checks.mjs --online --tag "$TAG"
+
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: plugin-zip
+          path: dist
+
+      - name: Verify checksum
+        working-directory: dist
+        run: sha256sum -c ./*.sha256
+
+      - name: Release notes from the readme changelog
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="${TAG#v}"
+          awk -v v="$version" '
+            /^== Changelog ==/ { in_log = 1; next }
+            in_log && /^== / { exit }
+            in_log && $0 ~ "^= " v " =" { take = 1; next }
+            take && /^= / { exit }
+            take { print }
+          ' mailspur-email-log/readme.txt > notes.md
+          {
+            echo
+            echo "**SHA-256:** \`$(cut -d' ' -f1 dist/*.sha256)\`"
+          } >> notes.md
+          cat notes.md
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" dist/*.zip dist/*.sha256 dist/manifest.json --title "$TAG" --notes-file notes.md --verify-tag
+
+  wordpress-org:
+    name: Deploy to wordpress.org
+    needs: github-release
+    if: ${{ vars.WPORG_DEPLOY == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    environment:
+      name: wordpress-org
+      url: https://wordpress.org/plugins/mailspur-email-log/
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: plugin-zip
+          path: dist
+
+      - name: Unpack the verified ZIP
+        run: |
+          (cd dist && sha256sum -c ./*.sha256)
+          mkdir -p build
+          unzip -q dist/*.zip -d build
+
+      - name: SVN deploy (trunk, tags/<version>, assets)
+        uses: 10up/action-wordpress-plugin-deploy@54bd289b8525fd23a5c365ec369185f2966529c2 # 2.3.0
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: mailspur-email-log
+          BUILD_DIR: build/mailspur-email-log
+          ASSETS_DIR: .wordpress-org

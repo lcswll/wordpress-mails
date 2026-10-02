@@ -1,0 +1,43 @@
+/* Mailspur – Workflow module: export controls and anonymised entries. */
+
+.mailspur-export {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 4px 6px;
+}
+
+.mailspur-export-label {
+	color: var(--ob-muted);
+}
+
+.mailspur-export .mailspur-check {
+	margin-left: 4px;
+}
+
+.mailspur-anon-badge {
+	display: inline-block;
+	margin-left: 6px;
+	padding: 0 6px;
+	border-radius: 999px;
+	background: #f0f0f1;
+	color: var(--ob-muted);
+	font-size: 11px;
+	line-height: 18px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.mailspur-table tr.is-anonymised .col-to,
+.mailspur-table tr.is-anonymised .mailspur-open {
+	color: var(--ob-muted);
+}
+
+.mailspur-d-meta .is-anonymised {
+	color: var(--ob-muted);
+}
+
+/* Buttons hidden by modules (e.g. resend of an anonymised entry). */
+.mailspur-d-actions .button[hidden] {
+	display: none;
+}

@@ -1,0 +1,22 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/admin.php?page=mailspur-email-log",
+	"login": true,
+	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Example Shop",
+				"permalink_structure": "/%postname%/"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "mailspur-email-log/mailspur-email-log.php"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/e2e/seed.php';"
+		}
+	]
+}

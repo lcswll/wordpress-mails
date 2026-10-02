@@ -1,0 +1,20 @@
+# Dependencies (dev tooling only – the plugin itself has none)
+/node_modules/
+/vendor/
+
+# Tool caches, portable PHP, e2e output, Playwright traces
+/.cache/
+/.phpunit.result.cache
+
+# Build output (release ZIPs are CI artifacts / GitHub release assets)
+/dist/
+
+# Agent worktrees (local only)
+/.claude/worktrees/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

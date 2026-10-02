@@ -1,0 +1,356 @@
+name: CI
+
+# Checks and builds the plugin on every push to main, in pull requests, weekly and on demand; release.yml
+# calls it for tags. Every check blocks: the release ZIP is only built when all of them are green.
+#
+#   lint           php -l on every supported PHP version (7.4 – 8.5)
+#   phpcs          WordPress-Extra, VIP security sniffs, PHPCompatibility (no baseline) + composer audit
+#   phpstan        level 8 against PHP 7.4 – 8.5, WordPress stubs, deprecation rules
+#   phpunit        unit tests (Brain Monkey) on the oldest and newest PHP
+#   js             ESLint incl. DOM-XSS rules (no-unsanitized) + npm audit
+#   wporg          wordpress.org readiness (readme/header/versions/assets), translations, Plugin Check PHPCS rules
+#   plugin-check   official Plugin Check action (what wordpress.org reviewers run) against the plugin folder
+#   e2e            real WordPress via Playground: integration self-test + browser tests, oldest and newest PHP/WP
+#   secrets        gitleaks over the full history
+#   workflows      actionlint + zizmor over .github/
+#   build          reproducible, verified release ZIP (+ SHA-256, manifest) as artifact
+#
+# Locally: `npm run verify` (see README.md). Actions are pinned to commit SHAs; Dependabot keeps them current.
+# Tool binaries (gitleaks, actionlint, zizmor) are downloaded with a fixed version and verified SHA-256.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Mondays 05:23 UTC: new advisories (composer/npm audit), new WordPress/Plugin Check releases.
+    - cron: '23 5 * * 1'
+  workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: php -l (PHP ${{ matrix.php }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4', '8.5']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+
+      - name: Syntax check of all plugin files
+        shell: bash
+        env:
+          PHP_VERSION: ${{ matrix.php }}
+        run: |
+          set -euo pipefail
+          count=0
+          while IFS= read -r -d '' file; do
+            count=$((count + 1))
+            if ! out=$(php -l "$file" 2>&1); then
+              echo "::error file=${file}::Syntax error on PHP ${PHP_VERSION}"
+              echo "$out"
+              exit 1
+            fi
+          done < <(find mailspur-email-log -type f -name '*.php' -print0 | sort -z)
+          echo "OK: ${count} files on PHP ${PHP_VERSION}"
+
+  phpcs:
+    name: PHPCS + composer audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: '8.4'
+          coverage: none
+          tools: composer:v2, cs2pr
+
+      - uses: ramsey/composer-install@65e4f84970763564f46a70b8a54b90d033b3bdda # 4.0.0
+
+      - name: Known vulnerabilities in the dev tools
+        run: composer audit --locked
+
+      - name: PHPCS (annotations in the PR diff)
+        shell: bash
+        run: |
+          set -o pipefail
+          vendor/bin/phpcs -q --report-full --report-checkstyle=phpcs.xml || { cs2pr phpcs.xml; exit 1; }
+
+  phpstan:
+    name: PHPStan (level 8)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: '8.4'
+          coverage: none
+          tools: composer:v2
+
+      - uses: ramsey/composer-install@65e4f84970763564f46a70b8a54b90d033b3bdda # 4.0.0
+
+      - name: Analyse
+        run: vendor/bin/phpstan analyse --no-progress --memory-limit=2G --error-format=github
+
+  phpunit:
+    name: PHPUnit (PHP ${{ matrix.php }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '8.4']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: composer:v2
+
+      - uses: ramsey/composer-install@65e4f84970763564f46a70b8a54b90d033b3bdda # 4.0.0
+
+      - name: Unit tests
+        run: vendor/bin/phpunit
+
+  js:
+    name: ESLint + npm audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
+          package-manager-cache: false
+
+      - name: Install
+        run: npm ci --ignore-scripts
+
+      - name: ESLint
+        run: npx eslint --max-warnings=0 .
+
+      - name: Known vulnerabilities in the npm packages
+        run: npm audit --audit-level=moderate
+
+  wporg:
+    name: wordpress.org readiness
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: '8.4'
+          coverage: none
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
+          package-manager-cache: false
+
+      - name: Readme, header, versions, changelog, directory assets
+        run: node scripts/repo-checks.mjs --online
+
+      - name: Translations complete and generated files up to date
+        run: node scripts/i18n.mjs --check
+
+      - name: Plugin Check PHPCS rules (pinned Plugin Check version)
+        run: node scripts/plugin-check.mjs
+
+  plugin-check:
+    name: Plugin Check (official action)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pull-requests: write # the action posts its report as a PR comment
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: WordPress/plugin-check-action@10857da14b6c2246d15402b3e69f777edcf8c12e # v1.1.9
+        with:
+          build-dir: ./mailspur-email-log
+          slug: mailspur-email-log
+          include-experimental: true
+          # Runtime/performance checks need a front end; the plugin has none (admin screen only).
+          exclude-checks: |
+            enqueued_scripts_size
+            enqueued_styles_size
+            enqueued_styles_scope
+            enqueued_scripts_scope
+            non_blocking_scripts
+
+  e2e:
+    name: WordPress ${{ matrix.wp }} / PHP ${{ matrix.php }} (Playground)
+    runs-on: ubuntu-24.04
+    # A healthy run takes ~5 minutes; scripts/e2e.mjs also stops Playground after 10 minutes.
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Oldest supported combination (plugin header) and the newest.
+          - { php: '7.4', wp: '6.5' }
+          - { php: '8.4', wp: 'latest' }
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
+          package-manager-cache: false
+
+      - name: Install
+        run: npm ci --ignore-scripts
+
+      - name: Browser for the UI tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Integration self-test, Plugin Check (static), browser tests
+        env:
+          E2E_PHP: ${{ matrix.php }}
+          E2E_WP: ${{ matrix.wp }}
+        run: node scripts/e2e.mjs --php "$E2E_PHP" --wp "$E2E_WP"
+
+      - name: Reports
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: e2e-${{ matrix.php }}-${{ matrix.wp }}
+          path: |
+            .cache/e2e-out/
+            .cache/playwright/
+            .cache/playwright-report/
+          if-no-files-found: ignore
+          retention-days: 14
+
+  secrets:
+    name: Secrets (gitleaks, full history)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install gitleaks (8.30.1, SHA-256 verified)
+        run: |
+          curl -sSfL -o gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gitleaks.tar.gz" | sha256sum -c -
+          tar -xzf gitleaks.tar.gz -C "$RUNNER_TEMP" gitleaks
+
+      - name: Scan history and working tree (values redacted)
+        run: '"$RUNNER_TEMP/gitleaks" git . --redact --no-banner --verbose'
+
+  workflows:
+    name: Workflows (actionlint, zizmor)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install actionlint and zizmor (fixed versions, SHA-256 verified)
+        run: |
+          curl -sSfL -o actionlint.tar.gz https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz
+          echo "8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  actionlint.tar.gz" | sha256sum -c -
+          tar -xzf actionlint.tar.gz -C "$RUNNER_TEMP" actionlint
+          curl -sSfL -o zizmor.tar.gz https://github.com/zizmorcore/zizmor/releases/download/v1.30.1/zizmor-x86_64-unknown-linux-gnu.tar.gz
+          echo "e65324f4430c2717591937edcec90ccbefaf14c174f8ec9415e03ca875b46e1a  zizmor.tar.gz" | sha256sum -c -
+          tar -xzf zizmor.tar.gz -C "$RUNNER_TEMP"
+
+      - name: actionlint
+        run: '"$RUNNER_TEMP/actionlint" -color'
+
+      - name: zizmor (workflow security audit)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: '"$RUNNER_TEMP/zizmor" --format github --min-severity low .github/'
+
+  build:
+    name: Release ZIP
+    # Only from commits where every check is green.
+    needs: [lint, phpcs, phpstan, phpunit, js, wporg, plugin-check, e2e, secrets, workflows]
+    if: ${{ github.event_name != 'schedule' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: '24'
+          # No dependency cache: ci.yml also builds release artifacts (cache poisoning).
+          package-manager-cache: false
+
+      - name: Install
+        run: npm ci --ignore-scripts
+
+      - name: Build and verify the ZIP
+        run: node scripts/build-zip.mjs
+
+      - name: Summary
+        run: |
+          {
+            echo '### Release ZIP'
+            echo '```json'
+            cat dist/manifest.json
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plugin-zip
+          path: |
+            dist/*.zip
+            dist/*.sha256
+            dist/manifest.json
+          if-no-files-found: error
+          retention-days: 30

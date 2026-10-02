@@ -1,0 +1,45 @@
+# Keeps the pinned actions (SHA + version comment), the Composer dev tools and the npm dev tools current.
+# One grouped PR per ecosystem and week; every PR runs the full CI. cooldown: new versions are only proposed
+# after 7 days – compromised releases are usually caught within the first days. Security updates ignore it.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+    groups:
+      actions:
+        patterns: ['*']
+
+  - package-ecosystem: composer
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+    versioning-strategy: lockfile-only
+    ignore:
+      # Major jumps (PHPUnit 10+, …) need a deliberate migration.
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    groups:
+      dev-tools:
+        patterns: ['*']
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    groups:
+      npm-dev-tools:
+        patterns: ['*']

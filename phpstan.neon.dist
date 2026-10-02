@@ -1,0 +1,20 @@
+# PHPStan for the plugin (composer phpstan). No baseline: new findings fail the build.
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+
+parameters:
+    level: 8
+    # Header promises PHP 7.4; check the whole supported range.
+    phpVersion:
+        min: 70400
+        max: 80599
+    tmpDir: .cache/phpstan
+    paths:
+        - mailspur-email-log
+    # WP-CLI is not a Composer dependency; the commands (Modules/Workflow/Cli.php) only need these declarations.
+    scanFiles:
+        - tests/stubs/wp-cli/class-wp-cli.php
+        - tests/stubs/wp-cli/utils.php
+    excludePaths:
+        - mailspur-email-log/languages/*
