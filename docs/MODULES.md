@@ -93,6 +93,7 @@ m.registerRowDecorator( ( tr, item ) => { /* add badge to tr.querySelector( '.co
 m.registerDetail( ( dl, mail ) => { /* append <dt>/<dd> */ } );
 m.registerAction( { id: 'foo', label: 'Foo', icon: 'download', visible: ( mail ) => true, run: async ( mail ) => {} } );
 m.onList( ( data ) => {} );
+m.state(); // copy of the list state: filters (search, status, source, format …), sorting, page
 m.api( 'mails/1' ); m.toast( 'Done' ); m.reload(); m.current(); m.fmt( '%s of %s', 1, 2 ); m.node( 'span', 'cls', 'text' );
 ```
 

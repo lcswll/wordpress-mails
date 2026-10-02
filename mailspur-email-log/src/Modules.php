@@ -7,4 +7,6 @@
 
 defined( 'ABSPATH' ) || exit;
 
-return array();
+return array(
+	Mailspur\Modules\Workflow\Module::class,
+);

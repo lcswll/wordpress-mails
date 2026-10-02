@@ -31,6 +31,13 @@
 		after: $( 'mailspur-after' ),
 		before: $( 'mailspur-before' ),
 		reset: $( 'mailspur-reset' ),
+		moreToggle: $( 'mailspur-more-toggle' ),
+		more: $( 'mailspur-more' ),
+		moreCount: $( 'mailspur-more-count' ),
+		source: $( 'mailspur-source' ),
+		format: $( 'mailspur-format' ),
+		attachments: $( 'mailspur-attachments' ),
+		notes: $( 'mailspur-notes' ),
 		perPage: $( 'mailspur-per-page' ),
 		page: $( 'mailspur-page' ),
 		pages: $( 'mailspur-pages' ),
@@ -51,9 +58,40 @@
 
 	/* ------------------------------------------------------------------ state */
 
-	const DEFAULTS = { page: 1, search: '', in_body: false, status: 'all', orderby: 'date', order: 'desc', after: '', before: '' };
+	const DEFAULTS = {
+		page: 1,
+		search: '',
+		in_body: false,
+		status: 'all',
+		orderby: 'date',
+		order: 'desc',
+		after: '',
+		before: '',
+		source: '',
+		format: '',
+		attachments: false,
+		notes: false,
+	};
 	// URL keys (WordPress already owns "page").
-	const URL_KEYS = { page: 'paged', search: 's', in_body: 'body', status: 'status', orderby: 'orderby', order: 'order', after: 'after', before: 'before' };
+	const URL_KEYS = {
+		page: 'paged',
+		search: 's',
+		in_body: 'body',
+		status: 'status',
+		orderby: 'orderby',
+		order: 'order',
+		after: 'after',
+		before: 'before',
+		source: 'source',
+		format: 'format',
+		attachments: 'att',
+		notes: 'notes',
+	};
+	const FLAGS = [ 'in_body', 'attachments', 'notes' ];
+	// Filters behind the "More filters" toggle.
+	const MORE = [ 'source', 'format', 'attachments', 'notes' ];
+	// Everything that narrows the list (not paging/sorting).
+	const FILTERS = [ 'search', 'after', 'before', 'status' ].concat( MORE );
 
 	const state = Object.assign( {}, DEFAULTS, readUrl(), { per_page: readPerPage() } );
 	let data = { items: [], total: 0, pages: 0, counts: {} };
@@ -85,6 +123,8 @@
 		endpoint: ( ...args ) => endpoint( ...args ),
 		toast: ( ...args ) => toast( ...args ),
 		reload: () => load(),
+		/** Current list filters, sorting and paging (a copy), e.g. for exports. */
+		state: () => Object.assign( {}, state ),
 		/** Mail shown in the dialog (detail payload incl. meta), or null. */
 		current: () => current,
 		/** Extra dialog tab: { id, label, render( container, mail ) }. */
@@ -109,8 +149,8 @@
 			}
 			if ( 'page' === key ) {
 				out.page = Math.max( 1, parseInt( value, 10 ) || 1 );
-			} else if ( 'in_body' === key ) {
-				out.in_body = '1' === value;
+			} else if ( FLAGS.includes( key ) ) {
+				out[ key ] = '1' === value;
 			} else {
 				out[ key ] = value;
 			}
@@ -216,7 +256,20 @@
 		el.after.value = state.after;
 		el.before.value = state.before;
 		el.perPage.value = String( state.per_page );
-		el.reset.hidden = ! ( state.search || state.after || state.before || 'all' !== state.status );
+		el.reset.hidden = ! isFiltered();
+
+		if ( state.source && ! [ ...el.source.options ].some( ( o ) => o.value === state.source ) ) {
+			// Sources are loaded asynchronously (or not at all); keep the active one selectable.
+			const option = node( 'option', '', sourceLabel( state.source ) );
+			option.value = state.source;
+			el.source.append( option );
+		}
+		el.source.value = state.source;
+		el.format.value = state.format;
+		el.attachments.checked = state.attachments;
+		el.notes.checked = state.notes;
+		const extra = MORE.filter( ( key ) => state[ key ] !== DEFAULTS[ key ] ).length;
+		el.moreCount.textContent = extra ? num( extra ) : '';
 
 		app.querySelectorAll( '[data-status]' ).forEach( ( btn ) => {
 			btn.setAttribute( 'aria-pressed', String( btn.dataset.status === state.status ) );
@@ -340,9 +393,15 @@
 		return tr;
 	}
 
+	/** Whether anything narrows the list (status included). */
+	function isFiltered() {
+		return FILTERS.some( ( key ) => state[ key ] !== DEFAULTS[ key ] );
+	}
+
 	function emptyRow() {
 		const tr = node( 'tr', 'mailspur-empty' );
-		const td = node( 'td', '', data.counts && data.counts.all === 0 && ! state.search && ! state.after && ! state.before ? t.empty : t.emptyFiltered );
+		const unfiltered = FILTERS.every( ( key ) => 'status' === key || state[ key ] === DEFAULTS[ key ] );
+		const td = node( 'td', '', data.counts && data.counts.all === 0 && unfiltered ? t.empty : t.emptyFiltered );
 		td.colSpan = 7;
 		tr.append( td );
 		return tr;
@@ -645,6 +704,25 @@
 		input.addEventListener( 'change', () => {
 			state.after = el.after.value;
 			state.before = el.before.value;
+			state.page = 1;
+			load();
+		} )
+	);
+
+	function toggleMore( open ) {
+		el.more.hidden = ! open;
+		el.moreToggle.setAttribute( 'aria-expanded', String( open ) );
+	}
+	el.moreToggle.addEventListener( 'click', () => toggleMore( el.more.hidden ) );
+	// Open on load when one of its filters is active, so nothing is filtered invisibly.
+	toggleMore( MORE.some( ( key ) => state[ key ] !== DEFAULTS[ key ] ) );
+
+	[ el.source, el.format, el.attachments, el.notes ].forEach( ( input ) =>
+		input.addEventListener( 'change', () => {
+			state.source = el.source.value;
+			state.format = el.format.value;
+			state.attachments = el.attachments.checked;
+			state.notes = el.notes.checked;
 			state.page = 1;
 			load();
 		} )

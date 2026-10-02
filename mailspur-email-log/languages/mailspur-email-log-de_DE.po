@@ -14,6 +14,12 @@ msgstr "%1$s importiert, %2$s Duplikate, %3$s zu alt"
 msgid "%1$s of %2$s entries processed …"
 msgstr "%1$s von %2$s Einträgen verarbeitet …"
 
+msgid "%s (must-use plugin)"
+msgstr "%s (Must-Use-Plugin)"
+
+msgid "%s (theme)"
+msgstr "%s (Theme)"
+
 msgid "%s entries"
 msgstr "%s Einträge"
 
@@ -32,6 +38,9 @@ msgstr "0 behält Einträge für immer. Die Bereinigung läuft einmal täglich."
 msgid "0 means no limit. The oldest entries are removed first."
 msgstr "0 bedeutet kein Limit. Die ältesten Einträge werden zuerst entfernt."
 
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 schaltet es ab. Entfernt Inhalt, Header und Anhänge älterer Einträge und maskiert die Adressen (a***@example.com). Datum, Status, Quelle, Format, Größe und Hinweise bleiben für Statistiken erhalten. Läuft mit der täglichen Bereinigung, bevor Einträge gelöscht werden – wirkt also nur, wenn der Zeitraum kürzer ist als die Löschfrist oben."
+
 msgid "Access"
 msgstr "Zugriff"
 
@@ -44,11 +53,29 @@ msgstr "Administratoren"
 msgid "All"
 msgstr "Alle"
 
+msgid "All sources"
+msgstr "Alle Quellen"
+
+msgid "Also remove the subject when anonymising"
+msgstr "Beim Anonymisieren auch den Betreff entfernen"
+
 msgid "Also search content"
 msgstr "Auch Inhalt durchsuchen"
 
 msgid "Always load remote images and fonts in the preview"
 msgstr "Externe Bilder und Schriften in der Vorschau immer laden"
+
+msgid "Anonymisation"
+msgstr "Anonymisierung"
+
+msgid "Anonymise entries after"
+msgstr "Einträge anonymisieren nach"
+
+msgid "Anonymised"
+msgstr "Anonymisiert"
+
+msgid "Any format"
+msgstr "Jedes Format"
 
 msgid "Attachments"
 msgstr "Anhänge"
@@ -59,6 +86,9 @@ msgstr "Anhänge nicht mehr vorhanden: %s"
 msgid "Block again"
 msgstr "Wieder blockieren"
 
+msgid "CSV"
+msgstr "CSV"
+
 msgid "Clear selection"
 msgstr "Auswahl aufheben"
 
@@ -67,6 +97,15 @@ msgstr "Schließen"
 
 msgid "Close (Esc)"
 msgstr "Schließen (Esc)"
+
+msgid "Content removed"
+msgstr "Inhalt entfernt"
+
+msgid "Content removed after %s days"
+msgstr "Inhalt nach %s Tagen entfernt"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Inhalt, Header und Anhänge wurden durch die Anonymisierung entfernt und die Adressen maskiert."
 
 msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
 msgstr "Übernimmt das vorhandene Protokoll eines anderen Mail-Log-Plugins in Mailspur, damit alte E-Mails hier durchsucht und angesehen werden können. Das andere Plugin und seine Daten bleiben unverändert; ein erneuter Import übernimmt nur neue Einträge."
@@ -107,6 +146,9 @@ msgstr "Gelöscht."
 msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
 msgstr "Fertig: %1$s importiert, %2$s Duplikate, %3$s zu alt."
 
+msgid "Download the entries matching the current filters as %s"
+msgstr "Die Einträge zu den aktuellen Filtern als %s herunterladen"
+
 msgid "Editors and above"
 msgstr "Redakteure und höher"
 
@@ -131,6 +173,12 @@ msgstr "Einträge, die älter als %s Tage sind, werden übersprungen, weil die A
 msgid "Error"
 msgstr "Fehler"
 
+msgid "Export"
+msgstr "Exportieren"
+
+msgid "Export started – your download begins shortly."
+msgstr "Export gestartet – dein Download beginnt gleich."
+
 msgid "Failed"
 msgstr "Fehlgeschlagen"
 
@@ -148,6 +196,9 @@ msgstr "Von"
 
 msgid "From date"
 msgstr "Von Datum"
+
+msgid "HTML"
+msgstr "HTML"
 
 msgid "Headers"
 msgstr "Header"
@@ -172,6 +223,12 @@ msgstr "Importiert"
 
 msgid "Imported from %s"
 msgstr "Importiert aus %s"
+
+msgid "Include content"
+msgstr "Mit Inhalt"
+
+msgid "JSON"
+msgstr "JSON"
 
 msgid "Keep at most"
 msgstr "Höchstens behalten"
@@ -206,6 +263,9 @@ msgstr "Passwort-Reset-, Aktivierungs- und Zugriffsschlüssel in protokollierten
 msgid "Menu position"
 msgstr "Menüposition"
 
+msgid "More filters"
+msgstr "Weitere Filter"
+
 msgid "Next email"
 msgstr "Nächste E-Mail"
 
@@ -239,6 +299,9 @@ msgstr "Seitennavigation"
 msgid "Per page"
 msgstr "Pro Seite"
 
+msgid "Plain text"
+msgstr "Nur Text"
+
 msgid "Plugin"
 msgstr "Plugin"
 
@@ -253,6 +316,9 @@ msgstr "Vorherige E-Mail (k)"
 
 msgid "Previous page"
 msgstr "Vorherige Seite"
+
+msgid "Privacy"
+msgstr "Datenschutz"
 
 msgid "Privacy & security"
 msgstr "Datenschutz & Sicherheit"
@@ -323,6 +389,9 @@ msgstr "Shop-Manager und höher"
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Du hast leider keine Berechtigung, auf diese Seite zuzugreifen."
 
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Du darfst das Mail-Log leider nicht exportieren."
+
 msgid "Source"
 msgstr "Quelle"
 
@@ -331,6 +400,9 @@ msgstr "Status"
 
 msgid "Subject"
 msgstr "Betreff"
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Betreffzeilen enthalten oft Namen oder Bestellnummern."
 
 msgid "Supported: %s."
 msgstr "Unterstützt: %s."
@@ -367,6 +439,12 @@ msgstr "Ist das aus, können Tracking-Pixel nicht erkennen, wann du einen Eintra
 
 msgid "Who can view the log"
 msgstr "Wer darf das Protokoll sehen"
+
+msgid "With attachments"
+msgstr "Mit Anhängen"
+
+msgid "With notes"
+msgstr "Mit Hinweisen"
 
 msgid "WordPress"
 msgstr "WordPress"
