@@ -5,6 +5,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Domain: mailspur-email-log\n"
 
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "„.eml herunterladen“ baut die Nachricht aus den protokollierten, geschwärzten Daten neu auf (ohne Anhänge)."
+
 msgid "%1$s entries, %2$s"
 msgstr "%1$s Einträge, %2$s"
 
@@ -65,11 +68,17 @@ msgstr "Ergänze das include: deines Mail-Anbieters (z. B. include:_spf.google.c
 msgid "Add your mail server or mail service to the SPF record of the sender domain."
 msgstr "Trage deinen Mailserver bzw. Maildienst im SPF-Eintrag der Absenderdomain ein."
 
+msgid "Admin screen"
+msgstr "Admin-Bereich"
+
 msgid "Administrators"
 msgstr "Administratoren"
 
 msgid "Aggregate reports go to %s."
 msgstr "Sammelberichte gehen an %s."
+
+msgid "Ajax"
+msgstr "Ajax"
 
 msgid "All"
 msgstr "Alle"
@@ -106,6 +115,12 @@ msgstr "Anhänge"
 
 msgid "Attachments no longer available: %s"
 msgstr "Anhänge nicht mehr vorhanden: %s"
+
+msgid "Authentication"
+msgstr "Anmeldung"
+
+msgid "Automatic TLS"
+msgstr "Automatisches TLS"
 
 msgid "Block again"
 msgstr "Wieder blockieren"
@@ -194,11 +209,20 @@ msgstr "Schließen"
 msgid "Close (Esc)"
 msgstr "Schließen (Esc)"
 
+msgid "Command line"
+msgstr "Kommandozeile"
+
 msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
 msgstr "Vergleiche die Quellen dieser Einträge. Prüfe, ob zwei Plugins dieselbe Benachrichtigung senden oder ob ein Hook (z. B. Statuswechsel einer Bestellung) mehrfach ausgelöst wird."
 
+msgid "Component"
+msgstr "Komponente"
+
 msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
 msgstr "Übernimmt das vorhandene Protokoll eines anderen Mail-Log-Plugins in Mailspur, damit alte E-Mails hier durchsucht und angesehen werden können. Das andere Plugin und seine Daten bleiben unverändert; ein erneuter Import übernimmt nur neue Einträge."
+
+msgid "Copy"
+msgstr "Kopieren"
 
 msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
 msgstr "Korrigiere die Adresse (z. B. im Benutzerprofil oder in der Bestellung) und erwäge eine E-Mail-Prüfung in deinen Formularen."
@@ -266,11 +290,26 @@ msgstr "Diesen Protokolleintrag löschen?"
 msgid "Deleted."
 msgstr "Gelöscht."
 
+msgid "Delivered by %s (API)"
+msgstr "Zugestellt von %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Zugestellt von Code, der sich in pre_wp_mail einklinkt (API)"
+
+msgid "Delivery"
+msgstr "Zustellung"
+
 msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
 msgstr "Versende nicht „von“ Freemail-Adressen (gmail.com, gmx.de …) über deinen eigenen Server."
 
 msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
 msgstr "Fertig: %1$s importiert, %2$s Duplikate, %3$s zu alt."
+
+msgid "Download .eml"
+msgstr ".eml herunterladen"
+
+msgid "Download started."
+msgstr "Download gestartet."
 
 msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
 msgstr "Jede E-Mail wird einmal beim Protokollieren oder Importieren geprüft (ohne externe Anfragen). Änderungen hier wirken nur für danach protokollierte E-Mails; ältere Einträge werden nicht erneut geprüft. DNS- und Mehrfachversand-Prüfungen laufen, wenn du einen Eintrag öffnest."
@@ -320,6 +359,9 @@ msgstr "Aktiviere die Authentifizierung in deinem SMTP-Plugin."
 msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
 msgstr "Verschlüsselte SMTP-Verbindungen (TLS/SSL) brauchen die PHP-Erweiterung openssl, die auf diesem Server fehlt oder nicht aktiviert ist."
 
+msgid "Encryption"
+msgstr "Verschlüsselung"
+
 msgid "Encryption (TLS/SSL) failed"
 msgstr "Verschlüsselung (TLS/SSL) fehlgeschlagen"
 
@@ -347,6 +389,9 @@ msgstr "Fehler"
 msgid "Failed"
 msgstr "Fehlgeschlagen"
 
+msgid "File"
+msgstr "Datei"
+
 msgid "Filter by status"
 msgstr "Nach Status filtern"
 
@@ -368,6 +413,12 @@ msgstr "Von"
 msgid "From date"
 msgstr "Von Datum"
 
+msgid "Front end"
+msgstr "Website"
+
+msgid "Function"
+msgstr "Funktion"
+
 msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
 msgstr "Gmail und Google Workspace akzeptieren das normale Kontopasswort für SMTP nicht mehr."
 
@@ -382,6 +433,9 @@ msgstr "Google hat die Anmeldung abgelehnt"
 
 msgid "HTML sent as plain text"
 msgstr "HTML als reiner Text gesendet"
+
+msgid "Handler"
+msgstr "Handler"
 
 msgid "Headers"
 msgstr "Header"
@@ -404,8 +458,14 @@ msgstr "Zurückgehalten: Der Staging-Modus steht auf Umleiten, aber es ist keine
 msgid "Hints about problems that can keep this email from arriving or displaying correctly."
 msgstr "Hinweise auf Probleme, durch die diese E-Mail nicht ankommt oder falsch angezeigt wird."
 
+msgid "Hooks"
+msgstr "Hooks"
+
 msgid "How to fix:"
 msgstr "So behebst du es:"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Mir ist klar, dass der Rohquelltext NICHT geschwärzt wird und den Speicherbedarf pro E-Mail etwa verdoppelt"
 
 msgid "If it happens often, check the sending limits of your mail provider."
 msgstr "Wenn das oft passiert, prüfe die Versandlimits deines Mailanbieters."
@@ -445,6 +505,9 @@ msgstr "Neue Einträge importieren"
 
 msgid "Imported"
 msgstr "Importiert"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Importierte Einträge haben keine Spur: Das andere Plugin hat diese Details nicht erfasst."
 
 msgid "Imported from %s"
 msgstr "Importiert aus %s"
@@ -524,6 +587,9 @@ msgstr "Mail-Log-Bereiche"
 msgid "Mail servers for replies and bounces are set up."
 msgstr "Mailserver für Antworten und Bounces sind eingerichtet."
 
+msgid "Mailer"
+msgstr "Versandart"
+
 msgid "Mailspur – Email Log"
 msgstr "Mailspur – E-Mail-Log"
 
@@ -547,6 +613,9 @@ msgstr "Passwort-Reset-, Aktivierungs- und Zugriffsschlüssel in protokollierten
 
 msgid "Menu position"
 msgstr "Menüposition"
+
+msgid "Method"
+msgstr "Methode"
 
 msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
 msgstr "Microsoft 365 / Exchange Online blockiert die SMTP-Anmeldung (Standardauthentifizierung) für dieses Postfach oder die ganze Organisation."
@@ -584,6 +653,9 @@ msgstr "Kein DMARC-Eintrag gefunden. Große Postfach-Anbieter erwarten einen, un
 msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
 msgstr "Kein MX-Eintrag: Diese Domain kann keine Antworten oder Bounces empfangen, und manche Empfänger lehnen solche Absender ab."
 
+msgid "No SMTP transcript for this email."
+msgstr "Für diese E-Mail gibt es kein SMTP-Protokoll."
+
 msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
 msgstr "Kein SPF-Eintrag gefunden. Empfänger können nicht erkennen, welche Server für diese Domain senden dürfen."
 
@@ -614,8 +686,23 @@ msgstr "Keine Berichtsadresse (rua) – du siehst nicht, wer in deinem Namen sen
 msgid "No sender address recorded"
 msgstr "Keine Absenderadresse erfasst"
 
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Für diesen Eintrag ist keine Spur vorhanden. Er wurde protokolliert, bevor es die Spur gab, oder von einer Version ohne sie."
+
 msgid "Not all selectors could be checked in time."
 msgstr "Nicht alle Selektoren konnten rechtzeitig geprüft werden."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Nicht aufgezeichnet: Ein anderes Plugin hatte das SMTP-Debugging eingeschaltet."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Nicht aufgezeichnet: Das SMTP-Protokoll ist in den Einstellungen ausgeschaltet."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Nicht aufgezeichnet: Diese E-Mail wurde nicht per SMTP verschickt."
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Nicht gespeichert: Protokolle werden nur für fehlgeschlagene E-Mails behalten."
 
 msgid "Notes"
 msgstr "Hinweise"
@@ -625,6 +712,12 @@ msgstr "Hinweise: %1$s. %2$s"
 
 msgid "OK"
 msgstr "OK"
+
+msgid "Off"
+msgstr "Aus"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Standardmäßig aus. Ohne diese Option baut „.eml herunterladen“ die Nachricht aus den protokollierten (geschwärzten) Daten neu auf. Der Rohquelltext enthält Links zum Zurücksetzen von Passwörtern und andere Geheimnisse genau so, wie sie verschickt wurden – schalte ihn nur ein, wenn du ihn brauchst, und setze beide Häkchen."
 
 msgid "Off – deliver emails normally"
 msgstr "Aus – E-Mails normal zustellen"
@@ -647,6 +740,9 @@ msgstr "Öffne das Protokoll oder die Debug-Ansicht deines Mailer-Plugins, um de
 msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
 msgstr "Oder richte die Adresse bei deinem Mailanbieter als Alias bzw. „Senden als“-Berechtigung ein."
 
+msgid "Origin"
+msgstr "Herkunft"
+
 msgid "Original Bcc"
 msgstr "Ursprüngliches Bcc"
 
@@ -662,8 +758,14 @@ msgstr "Eigener Hauptmenüpunkt"
 msgid "PHP extension openssl is missing"
 msgstr "PHP-Erweiterung openssl fehlt"
 
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer bereit (phpmailer_init)"
+
 msgid "Pagination"
 msgstr "Seitennavigation"
+
+msgid "Path"
+msgstr "Pfad"
 
 msgid "Per page"
 msgstr "Pro Seite"
@@ -676,6 +778,12 @@ msgstr "Plugin"
 
 msgid "Point out problems that keep emails from arriving or displaying correctly"
 msgstr "Auf Probleme hinweisen, durch die E-Mails nicht ankommen oder falsch angezeigt werden"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Preparation"
+msgstr "Vorbereitung"
 
 msgid "Preview"
 msgstr "Vorschau"
@@ -701,6 +809,15 @@ msgstr "Anbieter wie %2$s veröffentlichen eine strenge DMARC-Richtlinie. Eine E
 msgid "Put the important information first and keep the subject under about 80 characters."
 msgstr "Stell das Wichtigste an den Anfang und halte den Betreff unter etwa 80 Zeichen."
 
+msgid "REST API"
+msgstr "REST-API"
+
+msgid "REST route"
+msgstr "REST-Route"
+
+msgid "Raw source"
+msgstr "Rohquelltext"
+
 msgid "Recipient"
 msgstr "Empfänger"
 
@@ -712,6 +829,15 @@ msgstr "Empfängerdomain nimmt keine E-Mails an: %1$s"
 
 msgid "Recommended. Otherwise anyone with log access could use a logged reset link to take over an account. Resending such an email sends the masked version."
 msgstr "Empfohlen. Sonst könnte jeder mit Zugriff auf das Protokoll einen gespeicherten Reset-Link nutzen, um ein Konto zu übernehmen. Wird eine solche E-Mail erneut gesendet, geht die maskierte Fassung raus."
+
+msgid "Record for every email"
+msgstr "Für jede E-Mail aufzeichnen"
+
+msgid "Record for failed emails only"
+msgstr "Nur für fehlgeschlagene E-Mails aufzeichnen"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Zeichnet die Unterhaltung mit dem SMTP-Server auf (nur beim Versand per SMTP). Zugangsdaten und der Inhalt der Nachricht werden nie aufgezeichnet. Entfällt, solange ein anderes Plugin das SMTP-Debugging eingeschaltet hat."
 
 msgid "Redact secrets"
 msgstr "Geheimnisse schwärzen"
@@ -752,6 +878,9 @@ msgstr "Alle aus %s importierten Einträge entfernen? Die Daten im anderen Plugi
 msgid "Remove imported entries"
 msgstr "Importierte Einträge entfernen"
 
+msgid "Request"
+msgstr "Anfrage"
+
 msgid "Request failed: %s"
 msgstr "Anfrage fehlgeschlagen: %s"
 
@@ -776,6 +905,9 @@ msgstr "Erneut gesendet"
 msgid "Reset filters"
 msgstr "Filter zurücksetzen"
 
+msgid "Result"
+msgstr "Ergebnis"
+
 msgid "Result from the cache – use \"Check again\" after changing DNS records."
 msgstr "Ergebnis aus dem Zwischenspeicher – nutze „Erneut prüfen“, nachdem du DNS-Einträge geändert hast."
 
@@ -794,8 +926,14 @@ msgstr "Führe ein Suchen & Ersetzen der alten Domain in der Datenbank aus und p
 msgid "SMTP AUTH is disabled in Microsoft 365"
 msgstr "SMTP AUTH ist in Microsoft 365 deaktiviert"
 
+msgid "SMTP host"
+msgstr "SMTP-Server"
+
 msgid "SMTP login failed"
 msgstr "SMTP-Anmeldung fehlgeschlagen"
+
+msgid "SMTP transcript"
+msgstr "SMTP-Protokoll"
 
 msgid "SPF record allows every server in the world to send for this domain (+all)."
 msgstr "Der SPF-Eintrag erlaubt jedem Server der Welt, für diese Domain zu senden (+all)."
@@ -941,6 +1079,9 @@ msgstr "Beginne mit p=none, um Berichte zu erhalten, und verschärfe auf quarant
 msgid "Status"
 msgstr "Status"
 
+msgid "Store the exact raw MIME source of every email"
+msgstr "Den exakten MIME-Rohquelltext jeder E-Mail speichern"
+
 msgid "Subject"
 msgstr "Betreff"
 
@@ -961,6 +1102,9 @@ msgstr "Der API-Schlüssel wurde abgelehnt"
 
 msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
 msgstr "Das SMTP-Konto darf nur mit seiner eigenen Adresse (oder verifizierten Aliassen) senden. WordPress oder ein Plugin hat eine andere Absenderadresse verwendet."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Die Unterhaltung mit dem SMTP-Server war leer."
 
 msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
 msgstr "Der SMTP-Server war gar nicht erreichbar: falscher Hostname oder Port, der Server ist ausgefallen oder der Hoster sperrt ausgehende Mail-Ports."
@@ -994,6 +1138,9 @@ msgstr "Die E-Mail ist zu groß"
 
 msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
 msgstr "Die E-Mail verlinkt WordPress-Dateien auf einem verwandten Host. Das passiert typischerweise auf einer Staging-Kopie, die noch URLs der Live-Website enthält – oder umgekehrt."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Der exakte Rohquelltext ist gespeichert – „.eml herunterladen“ liefert ihn unverändert (nicht geschwärzt)."
 
 msgid "The mail log requires JavaScript."
 msgstr "Das Mail-Log benötigt JavaScript."
@@ -1082,11 +1229,29 @@ msgstr "Diese Website protokolliert die von ihr versendeten E-Mails (Empfänger,
 msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
 msgstr "Diese Website läuft als %s-Umgebung. Schalte den Staging-Modus ein, damit kein echter Kunde E-Mails von ihr bekommt."
 
+msgid "Timeline"
+msgstr "Zeitverlauf"
+
 msgid "To"
 msgstr "An"
 
 msgid "To date"
 msgstr "Bis Datum"
+
+msgid "Total: %s ms"
+msgstr "Gesamt: %s ms"
+
+msgid "Trace"
+msgstr "Spur"
+
+msgid "Transcript copied."
+msgstr "Protokoll kopiert."
+
+msgid "Transport"
+msgstr "Transport"
+
+msgid "Type"
+msgstr "Art"
 
 msgid "Typo in recipient domain? %1$s → %2$s"
 msgstr "Tippfehler in der Empfängerdomain? %1$s → %2$s"
@@ -1102,6 +1267,9 @@ msgstr "Deinstallation"
 
 msgid "Unknown"
 msgstr "Unbekannt"
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Unbekannt: Es wurde kein Zustellergebnis gemeldet (ersetzte wp_mail()-Funktion?)."
 
 msgid "Unreplaced placeholders: %1$s"
 msgstr "Nicht ersetzte Platzhalter: %1$s"
@@ -1127,6 +1295,12 @@ msgstr "Verwende genau den Hostnamen, für den das Zertifikat ausgestellt ist (z
 msgid "Use the mailbox address of the SMTP account as sender (From)."
 msgstr "Verwende die Postfachadresse des SMTP-Kontos als Absender (From)."
 
+msgid "User"
+msgstr "Benutzer"
+
+msgid "Username"
+msgstr "Benutzername"
+
 msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
 msgstr "Verifiziere die Absenderdomain bei deinem Maildienst (DNS-Einträge hinzufügen) oder nutze eine bereits verifizierte Absenderadresse."
 
@@ -1135,6 +1309,9 @@ msgstr "Sehr langer Betreff (%1$s Zeichen)"
 
 msgid "View"
 msgstr "Ansehen"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
 
 msgid "Warnings"
 msgstr "Warnungen"
@@ -1154,6 +1331,9 @@ msgstr "WordPress"
 msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
 msgstr "WordPress versendet standardmäßig über die PHP-Funktion mail(). Auf diesem Server ist sie deaktiviert oder es ist kein Mailprogramm (sendmail) installiert – üblich bei lokalen Umgebungen, Docker und vielen Managed Hostern."
 
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
 msgid "Your DKIM selector (optional)"
 msgstr "Dein DKIM-Selektor (optional)"
 
@@ -1163,5 +1343,17 @@ msgstr "Tagen"
 msgid "entries"
 msgstr "Einträge"
 
+msgid "no"
+msgstr "nein"
+
+msgid "none"
+msgstr "keine"
+
 msgid "of %s"
 msgstr "von %s"
+
+msgid "wp_mail() called"
+msgstr "wp_mail() aufgerufen"
+
+msgid "yes"
+msgstr "ja"

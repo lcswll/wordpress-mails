@@ -1,0 +1,150 @@
+/* Mailspur – Trace module: dialog tab. Uses the variables of admin.css. */
+
+.mailspur-trace {
+	padding: 12px 20px 20px;
+	color: #1d2327;
+}
+
+.mailspur-trace-section {
+	margin: 0 0 18px;
+}
+
+.mailspur-trace-heading {
+	margin: 0 0 8px;
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--ob-muted);
+}
+
+.mailspur-trace-total {
+	margin: 0 0 6px;
+	font-weight: 600;
+}
+
+.mailspur-trace-bar {
+	display: flex;
+	gap: 2px;
+	height: 10px;
+	max-width: 640px;
+	overflow: hidden;
+	border-radius: 5px;
+	background: var(--ob-border);
+}
+
+.mailspur-trace-seg {
+	flex: 1 1 0;
+	min-width: 3px;
+}
+
+.mailspur-trace-seg.is-prepare {
+	background: #72aee6;
+}
+
+.mailspur-trace-seg.is-delivery {
+	background: var(--ob-accent);
+}
+
+.mailspur-trace-phases {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 18px;
+	margin: 8px 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+}
+
+.mailspur-trace-at {
+	font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	color: var(--ob-muted);
+}
+
+.mailspur-trace-table {
+	width: 100%;
+	max-width: 760px;
+	border-collapse: collapse;
+	background: var(--ob-bg);
+	border: 1px solid var(--ob-border);
+	border-radius: var(--ob-radius);
+}
+
+.mailspur-trace-table th,
+.mailspur-trace-table td {
+	padding: 6px 12px;
+	border-bottom: 1px solid #f0f0f1;
+	text-align: left;
+	vertical-align: top;
+	overflow-wrap: anywhere;
+}
+
+.mailspur-trace-table th {
+	width: 170px;
+	font-weight: 500;
+	color: var(--ob-muted);
+}
+
+.mailspur-trace-table tr:last-child th,
+.mailspur-trace-table tr:last-child td {
+	border-bottom: 0;
+}
+
+.mailspur-trace-table code {
+	padding: 0;
+	background: none;
+	font-size: 12px;
+}
+
+.mailspur-trace-hooks {
+	margin: 0 0 0 1.4em;
+	font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.mailspur-trace-api {
+	margin: 0 0 8px;
+	font-weight: 600;
+}
+
+.mailspur-trace-note,
+.mailspur-trace-empty {
+	margin: 0;
+	color: var(--ob-muted);
+}
+
+.mailspur-trace-empty {
+	padding: 12px 0;
+}
+
+.mailspur-trace-copy {
+	margin-bottom: 6px !important;
+}
+
+.mailspur-trace-copy .dashicons {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.mailspur-trace .mailspur-trace-transcript {
+	max-height: 360px;
+	overflow: auto;
+	padding: 10px 12px;
+	background: var(--ob-bg);
+	border: 1px solid var(--ob-border);
+	border-radius: var(--ob-radius);
+}
+
+.mailspur-trace-raw {
+	margin: 0;
+	font-style: italic;
+}
+
+@media (max-width: 782px) {
+	.mailspur-trace {
+		padding: 10px 12px 16px;
+	}
+
+	.mailspur-trace-table th {
+		width: 38%;
+	}
+}
