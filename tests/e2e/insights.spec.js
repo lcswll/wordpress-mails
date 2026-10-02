@@ -50,6 +50,8 @@ test('statistics tab shows KPIs, charts and top lists', async ({ page }) => {
 	await expect(page.locator('#msi-subjects li').first().locator('.msi-bar-value')).toHaveText('60');
 	await expect(page.locator('#msi-domains li').first()).toContainText('example.com');
 	await expect(page.locator('#msi-sources li').first()).toContainText('WordPress');
+	// Source bars open the log filtered by that sender (source filter of the log).
+	await expect(page.locator('#msi-sources li a').first()).toHaveAttribute('href', /[?&]source=core(&|$)/);
 	// The XSS subject is plain text.
 	await expect(page.locator('#msi-subjects img')).toHaveCount(0);
 

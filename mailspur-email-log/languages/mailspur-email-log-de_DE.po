@@ -1556,6 +1556,9 @@ msgstr "Der Benutzername ist meist die vollständige E-Mail-Adresse. Achte auf m
 msgid "The webhook URL was removed: only valid https URLs are allowed."
 msgstr "Die Webhook-URL wurde entfernt: Nur gültige https-URLs sind erlaubt."
 
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Dieser Eintrag wurde anonymisiert; sein Inhalt kann nicht mehr gesendet werden."
+
 msgid "This import is already running in another tab."
 msgstr "Dieser Import läuft bereits in einem anderen Tab."
 

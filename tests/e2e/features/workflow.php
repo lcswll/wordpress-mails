@@ -358,6 +358,8 @@ try {
 	} catch ( RuntimeException $e ) {
 		wf_check( true, 'anonymised entries cannot be resent' );
 	}
+	$rest_resend = rest_do_request( new WP_REST_Request( 'POST', '/mailspur-email-log/v1/mails/' . $old . '/resend' ) );
+	wf_check( 409 === $rest_resend->get_status(), 'core REST resend refuses anonymised entries', $rest_resend->get_data() );
 
 	// Imported entries older than the limit are stored anonymised right away.
 	$legacy   = array(

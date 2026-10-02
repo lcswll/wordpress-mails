@@ -73,12 +73,43 @@ if (shots) {
 		await page.screenshot({ path: path.join(out, 'screenshot-2.png') });
 		console.log('✓ screenshot-2.png (preview)');
 
-		// Tall viewport instead of fullPage, so the admin menu background reaches the bottom.
+		// Trace of a mail sent by a real web request: the "Lost your password?" form of wp-login.php.
+		await page.goto(`http://127.0.0.1:${port}/wp-login.php?action=lostpassword`);
+		await page.locator('#user_login').fill('admin');
+		await page.locator('#wp-submit').click();
+		await page.waitForLoadState('load');
+		await page.goto(`${base}&s=Password%20Reset`);
+		await page.locator('#mailspur-rows .mailspur-open').first().click();
+		await page.locator('#mailspur-dialog [role="tab"][data-view="trace"]').click();
+		await page.locator('#mailspur-d-body').getByText(/ms/).first().waitFor();
+		await page.evaluate(() => document.activeElement?.blur());
+		await page.screenshot({ path: path.join(out, 'screenshot-3.png') });
+		console.log('✓ screenshot-3.png (trace)');
+
+		// The failed newsletter: explained error + notes.
+		await page.goto(`${base}&s=newsletter`);
+		await page.locator('#mailspur-rows .mailspur-open').first().click();
+		await page.locator('#mailspur-dialog [role="tab"][data-view="notes"]').click();
+		await page.waitForTimeout(500);
+		await page.evaluate(() => document.activeElement?.blur());
+		await page.screenshot({ path: path.join(out, 'screenshot-4.png') });
+		console.log('✓ screenshot-4.png (notes)');
+
+		// 30 days of plausible shop traffic (tests/e2e/screenshot-seed.php), only for this screenshot.
+		await page.goto(`http://127.0.0.1:${port}/wp-admin/?mailspur-e2e-seed=history`);
 		await page.setViewportSize({ width: 1280, height: 1100 });
+		await page.goto(`${base}&tab=stats`);
+		await page.locator('.mailspur svg').first().waitFor();
+		await page.waitForTimeout(500);
+		await hideNoise();
+		await page.screenshot({ path: path.join(out, 'screenshot-5.png') });
+		console.log('✓ screenshot-5.png (statistics)');
+
+		// Tall viewport instead of fullPage, so the admin menu background reaches the bottom.
 		await page.goto(`${base}&tab=settings`);
 		await hideNoise();
-		await page.screenshot({ path: path.join(out, 'screenshot-3.png') });
-		console.log('✓ screenshot-3.png (settings)');
+		await page.screenshot({ path: path.join(out, 'screenshot-6.png') });
+		console.log('✓ screenshot-6.png (settings)');
 	} finally {
 		server.kill();
 	}

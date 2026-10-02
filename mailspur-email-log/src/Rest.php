@@ -264,6 +264,10 @@ final class Rest {
 		if ( ! $row ) {
 			return $this->not_found();
 		}
+		// Anonymised entries have no content left – resending would send an empty mail.
+		if ( ! empty( self::decode_meta( (string) ( $row['meta'] ?? '' ) )['anonymised'] ) ) {
+			return new WP_Error( 'mailspur_anonymised', __( 'This entry was anonymised; its content can no longer be sent.', 'mailspur-email-log' ), array( 'status' => 409 ) );
+		}
 
 		$files   = array();
 		$missing = array();

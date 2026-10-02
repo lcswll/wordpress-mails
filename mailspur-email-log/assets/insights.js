@@ -296,7 +296,7 @@
 		renderVolume( buckets.list, weekly );
 		renderRate( buckets.list, weekly );
 		renderHeatmap();
-		renderBars( el.sources, data.top.sources, null );
+		renderBars( el.sources, data.top.sources, 'key', 'source' );
 		renderBars( el.domains, data.top.domains, 'search' );
 		renderBars( el.subjects, data.top.subjects, 'search' );
 		el.sample.hidden = ! data.sample.limited;
@@ -844,7 +844,11 @@
 
 	/* Top lists: horizontal bars (HTML) ------------------------------------- */
 
-	function renderBars( list, items, linkKey ) {
+	/**
+	 * @param {string|null} linkKey Item field that filters the log, e.g. 'search'.
+	 * @param {string}      param   Log URL parameter it goes into ('s' search, 'source' sender filter).
+	 */
+	function renderBars( list, items, linkKey, param = 's' ) {
 		if ( ! items.length ) {
 			list.replaceChildren( node( 'li', 'msi-empty', t.noData ) );
 			return;
@@ -857,7 +861,7 @@
 				const label = item.label || t.noSubject;
 				const row = linkKey && item[ linkKey ] ? node( 'a', 'msi-bar' ) : node( 'div', 'msi-bar' );
 				if ( 'A' === row.tagName ) {
-					row.href = logUrl( { s: item[ linkKey ], after: range.from, before: range.to } );
+					row.href = logUrl( { [ param ]: item[ linkKey ], after: range.from, before: range.to } );
 					row.setAttribute( 'aria-label', fmt( t.openInLog, label ) + ': ' + num( item.count ) );
 				}
 				const head = node( 'span', 'msi-bar-head' );

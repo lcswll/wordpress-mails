@@ -522,6 +522,7 @@ return array(
 		'The statistics require JavaScript.' => 'Die Statistik benötigt JavaScript.',
 		'The user name is usually the full email address. Watch for spaces copied along with the password.' => 'Der Benutzername ist meist die vollständige E-Mail-Adresse. Achte auf mitkopierte Leerzeichen beim Passwort.',
 		'The webhook URL was removed: only valid https URLs are allowed.' => 'Die Webhook-URL wurde entfernt: Nur gültige https-URLs sind erlaubt.',
+		'This entry was anonymised; its content can no longer be sent.' => 'Dieser Eintrag wurde anonymisiert; sein Inhalt kann nicht mehr gesendet werden.',
 		'This import is already running in another tab.' => 'Dieser Import läuft bereits in einem anderen Tab.',
 		'This is a test alert. Your alert channels work.' => 'Dies ist eine Test-Benachrichtigung. Deine Benachrichtigungskanäle funktionieren.',
 		'This production site sent a link to a local or test address. Recipients cannot open it.' => 'Diese Live-Website hat einen Link auf eine lokale oder Test-Adresse versendet. Empfänger können ihn nicht öffnen.',
