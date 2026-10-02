@@ -66,6 +66,14 @@ The log contains personal data (recipients and content of emails). Mailspur:
 * suggests a paragraph for your privacy policy,
 * contacts no external service. The only exception is a webhook URL you enter yourself for monitoring alerts (off by default), which receives a short alert text – never email contents.
 
+= External services =
+
+Mailspur works without any external service. There is exactly one optional exception:
+
+* **Alert webhook (off by default).** If you enable monitoring alerts and enter a webhook URL, your site sends a short JSON POST to exactly that URL when an alert fires (or when you click "Send test alert"): site name, site URL, the alert text, a link to the log and a timestamp – never email contents or recipient addresses. Where the data goes depends on the URL you enter. For Slack see the [terms](https://slack.com/terms-of-service) and [privacy policy](https://slack.com/privacy-policy), for Discord the [terms](https://discord.com/terms) and [privacy policy](https://discord.com/privacy).
+
+The sender check (SPF/DKIM/DMARC/MX) and the recipient-domain check only ask your server's own DNS resolver, on demand, and contact no third-party service.
+
 = For developers =
 
 * WP-CLI: `wp mailspur list|show|resend|stats|purge|export|import`.
