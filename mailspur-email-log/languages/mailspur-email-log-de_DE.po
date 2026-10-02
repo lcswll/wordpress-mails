@@ -32,11 +32,23 @@ msgstr "0 behält Einträge für immer. Die Bereinigung läuft einmal täglich."
 msgid "0 means no limit. The oldest entries are removed first."
 msgstr "0 bedeutet kein Limit. Die ältesten Einträge werden zuerst entfernt."
 
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Ein Mailer-Plugin, das über eine API versendet, hat die Zustellung übernommen und einen Fehler gemeldet – ohne Grund."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Ein Empfänger oder die Absenderadresse ist keine gültige E-Mail-Adresse, deshalb hat PHPMailer den Versand verweigert."
+
 msgid "Access"
 msgstr "Zugriff"
 
 msgid "Actions"
 msgstr "Aktionen"
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Gib jedem Bild im Template ein kurzes alt-Attribut, z. B. alt=\"Logo Beispiel-Shop\"."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Trage deinen Mailserver bzw. Maildienst im SPF-Eintrag der Absenderdomain ein."
 
 msgid "Administrators"
 msgstr "Administratoren"
@@ -47,8 +59,26 @@ msgstr "Alle"
 msgid "Also search content"
 msgstr "Auch Inhalt durchsuchen"
 
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Alternativ bitte deinen Hoster, mail() / sendmail für diese Website zu aktivieren."
+
 msgid "Always load remote images and fonts in the preview"
 msgstr "Externe Bilder und Schriften in der Vorschau immer laden"
+
+msgid "Ask the recipient for a working address."
+msgstr "Frag den Empfänger nach einer funktionierenden Adresse."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Bitte deinen Hoster, die Erweiterung openssl zu aktivieren (oder aktiviere sie in den PHP-Einstellungen deines Hosting-Panels)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Bitte deinen Hoster, die CA-Zertifikate und OpenSSL des Servers zu aktualisieren."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Frag deinen Hoster, ob ausgehende SMTP-Verbindungen blockiert werden."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Frag deinen Hoster, ob ausgehende Verbindungen zu diesem Port erlaubt sind (Firewall)."
 
 msgid "Attachments"
 msgstr "Anhänge"
@@ -59,6 +89,63 @@ msgstr "Anhänge nicht mehr vorhanden: %s"
 msgid "Block again"
 msgstr "Wieder blockieren"
 
+msgid "Blocked as spam or by a blocklist"
+msgstr "Als Spam oder durch eine Blocklist abgewiesen"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Kaputte Zeichen (Kodierung): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Massen-E-Mail ohne Abmelde-Header (%1$s Empfänger)"
+
+msgid "Check emails"
+msgstr "E-Mails prüfen"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Prüfe Host und Port; probiere 587 (TLS) statt 465 (SSL) oder umgekehrt."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Prüfe Host, Port, Verschlüsselung, Benutzername und Passwort in deinem SMTP-Plugin und sende dort eine Test-E-Mail."
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Prüfe, ob die Verschlüsselung zum Port passt: TLS für 587, SSL für 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Prüfe, ob der Schlüssel zur richtigen Region bzw. zum richtigen Konto gehört (z. B. EU- statt US-Endpunkt)."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Prüfe die SPF-, DKIM- und DMARC-Einträge der Absenderdomain oder nutze eine Absenderadresse der Domain, über die du versendest."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Kläre die Adresse mit dem Empfänger und korrigiere sie dort, wo sie gespeichert ist (Benutzerprofil, Bestellung, Formulareintrag)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Kläre die Adresse mit dem Empfänger und korrigiere sie dort, wo sie gespeichert ist."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Prüfe Hostname und Port: 587 mit STARTTLS (TLS) oder 465 mit SSL. Port 25 sperren die meisten Hoster."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Prüfe Limits und aktuelle Nutzung in deinem Maildienst-Konto und wechsle bei Bedarf in einen größeren Tarif."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Prüfe die Empfängeradressen dieses Eintrags auf Tippfehler, Leerzeichen oder fehlende Teile."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Prüfe die Absenderadresse in deinem SMTP-Plugin und im Filter wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Prüfe die Versandlimits deines Mailkontos und die Hinweise zu dieser E-Mail."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Prüfe die Server-IP mit einem Blocklist-Checker und beantrage die Entfernung."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Prüfe die Schreibweise des Platzhalters im Template und ob das Plugin ihn für diesen E-Mail-Typ unterstützt. Shortcodes werden in E-Mails nur ausgeführt, wenn das sendende Plugin do_shortcode() aufruft."
+
+msgid "Checked just now"
+msgstr "Gerade geprüft"
+
 msgid "Clear selection"
 msgstr "Auswahl aufheben"
 
@@ -68,8 +155,17 @@ msgstr "Schließen"
 msgid "Close (Esc)"
 msgstr "Schließen (Esc)"
 
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Vergleiche die Quellen dieser Einträge. Prüfe, ob zwei Plugins dieselbe Benachrichtigung senden oder ob ein Hook (z. B. Statuswechsel einer Bestellung) mehrfach ausgelöst wird."
+
 msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
 msgstr "Übernimmt das vorhandene Protokoll eines anderen Mail-Log-Plugins in Mailspur, damit alte E-Mails hier durchsucht und angesehen werden können. Das andere Plugin und seine Daten bleiben unverändert; ein erneuter Import übernimmt nur neue Einträge."
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Korrigiere die Adresse (z. B. im Benutzerprofil oder in der Bestellung) und erwäge eine E-Mail-Prüfung in deinen Formularen."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Erstelle bei deinem Maildienst einen neuen API-Schlüssel mit Sendeberechtigung und trage ihn im Mailer-Plugin ein."
 
 msgid "Current page"
 msgstr "Aktuelle Seite"
@@ -104,8 +200,14 @@ msgstr "Diesen Protokolleintrag löschen?"
 msgid "Deleted."
 msgstr "Gelöscht."
 
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Versende nicht „von“ Freemail-Adressen (gmail.com, gmx.de …) über deinen eigenen Server."
+
 msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
 msgstr "Fertig: %1$s importiert, %2$s Duplikate, %3$s zu alt."
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Jede E-Mail wird einmal beim Protokollieren oder Importieren geprüft (ohne externe Anfragen). Änderungen hier wirken nur für danach protokollierte E-Mails; ältere Einträge werden nicht erneut geprüft. DNS- und Mehrfachversand-Prüfungen laufen, wenn du einen Eintrag öffnest."
 
 msgid "Editors and above"
 msgstr "Redakteure und höher"
@@ -119,8 +221,35 @@ msgstr "E-Mail wurde erneut gesendet."
 msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
 msgstr "E-Mails, die bereits im Protokoll stehen – von Mailspur selbst protokolliert oder aus einem anderen Plugin importiert –, werden an Empfängern, Betreff und Versandzeit erkannt und als Duplikat übersprungen."
 
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "E-Mails ohne Betreff wirken wie Spam und sind im Posteingang schwer zu finden."
+
 msgid "Empty log"
 msgstr "Protokoll leeren"
+
+msgid "Empty subject"
+msgstr "Leerer Betreff"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Aktiviere die Bestätigung in zwei Schritten für das Google-Konto und erstelle ein App-Passwort (Google-Konto → Sicherheit → App-Passwörter)."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Aktiviere die DKIM-Signatur bei deinem Maildienst und veröffentliche den zugehörigen DNS-Eintrag."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Aktiviere die Authentifizierung in deinem SMTP-Plugin und trage Benutzername und Passwort ein."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Aktiviere die Authentifizierung in deinem SMTP-Plugin."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Verschlüsselte SMTP-Verbindungen (TLS/SSL) brauchen die PHP-Erweiterung openssl, die auf diesem Server fehlt oder nicht aktiviert ist."
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Verschlüsselung (TLS/SSL) fehlgeschlagen"
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Trage das App-Passwort in deinem SMTP-Plugin ein oder nutze die Verbindung „Mit Google anmelden“ (OAuth) des Plugins."
 
 msgid "Entries"
 msgstr "Einträge"
@@ -129,6 +258,9 @@ msgid "Entries older than %s days are skipped because the retention setting woul
 msgstr "Einträge, die älter als %s Tage sind, werden übersprungen, weil die Aufbewahrungseinstellung sie ohnehin löschen würde. Passe die Aufbewahrung oben zuerst an, um alles zu importieren."
 
 msgid "Error"
+msgstr "Fehler"
+
+msgid "Errors"
 msgstr "Fehler"
 
 msgid "Failed"
@@ -140,6 +272,9 @@ msgstr "Nach Status filtern"
 msgid "First page"
 msgstr "Erste Seite"
 
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Bei großen Anhängen kann das Zeitlimit auch während der Übertragung erreicht werden – sende kleinere Dateien oder Links."
+
 msgid "Format"
 msgstr "Format"
 
@@ -149,11 +284,56 @@ msgstr "Von"
 msgid "From date"
 msgstr "Von Datum"
 
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail und Google Workspace akzeptieren das normale Kontopasswort für SMTP nicht mehr."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail kürzt HTML-E-Mails über 102 KB und zeigt „[Nachricht gekürzt]“. Alles danach – oft Fußzeile, Abmeldelink oder Impressum – ist ausgeblendet."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail kürzt diese E-Mail (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google hat die Anmeldung abgelehnt"
+
+msgid "HTML sent as plain text"
+msgstr "HTML als reiner Text gesendet"
+
 msgid "Headers"
 msgstr "Header"
 
 msgid "Held"
 msgstr "Zurückgehalten"
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Hinweise auf Probleme, durch die diese E-Mail nicht ankommt oder falsch angezeigt wird."
+
+msgid "How to fix:"
+msgstr "So behebst du es:"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Wenn das oft passiert, prüfe die Versandlimits deines Mailanbieters."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Wenn das häufiger passiert, sende weniger E-Mails auf einmal oder über einen Maildienst mit Warteschlange."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Wenn die Sicherheitsstandards das blockieren, nutze stattdessen die Microsoft-Verbindung (OAuth / Graph API) deines SMTP-Plugins."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Wenn mehrere Empfänger fehlgeschlagen sind, nennt die Serverantwort hinter der Adresse den Grund."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Wenn das Konto Zwei-Faktor-Authentifizierung nutzt, erstelle ein App-Passwort und verwende es stattdessen."
+
+msgid "Ignored notes"
+msgstr "Ignorierte Hinweise"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Ignorierte Hinweise werden für neue E-Mails nicht mehr erfasst und bei bestehenden Einträgen ausgeblendet."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Bilder ohne Alternativtext (%1$s)"
 
 msgid "Import"
 msgstr "Importieren"
@@ -173,11 +353,44 @@ msgstr "Importiert"
 msgid "Imported from %s"
 msgstr "Importiert aus %s"
 
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "Öffne im Microsoft 365 Admin Center den Benutzer → E-Mail → E-Mail-Apps verwalten und aktiviere „Authentifiziertes SMTP“."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Posteingänge zeigen etwa die ersten 40–80 Zeichen; der Rest wird abgeschnitten, auf Smartphones noch früher."
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Installiere ein SMTP-Plugin und versende über ein echtes Postfach oder einen Maildienst deiner Domain."
+
+msgid "Invalid email address"
+msgstr "Ungültige E-Mail-Adresse"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Ungültige Absenderadresse: %1$s"
+
 msgid "Keep at most"
 msgstr "Höchstens behalten"
 
 msgid "Last page"
 msgstr "Letzte Seite"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Linktext zeigt %1$s, führt aber zu %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Link auf eine Entwicklungsadresse: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Links und Bilder, die mit „/“ beginnen, funktionieren nur auf der Website. Im Mailprogramm fehlt die Website-Adresse zum Ergänzen – Bilder bleiben leer und Links führen ins Leere."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Links auf eine andere Kopie der Website: %1$s (diese Website: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Links, deren sichtbare Adresse vom echten Ziel abweicht, sehen nach Phishing aus. Spamfilter werten sie ab und manche Mailprogramme warnen den Leser."
 
 msgid "Load remote content"
 msgstr "Externe Inhalte laden"
@@ -191,6 +404,15 @@ msgstr "Protokolleintrag nicht gefunden."
 msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
 msgstr "Protokollierte E-Mails können personenbezogene Daten enthalten. Vergib den Zugriff so eng wie möglich. Die Einstellungen erfordern immer Administratorrechte."
 
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Anmeldung und Empfänger wurden akzeptiert, die E-Mail selbst aber abgelehnt – meist wegen Spamfilter, Versandlimit oder einer Richtlinie des Anbieters (Antwortcode 554)."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Suche die Serverantwort in der Fehlermeldung; sie nennt meist den Grund."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Suche im Protokoll nach unerwartetem Massenversand (Spam-Formulareinträge, Schleifen)."
+
 msgid "Mail Log"
 msgstr "Mail-Log"
 
@@ -200,11 +422,32 @@ msgstr "Mail-Log-Bereiche"
 msgid "Mailspur – Email Log"
 msgstr "Mailspur – E-Mail-Log"
 
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Stell sicher, dass die Absenderadresse im Mailer-Plugin zur verifizierten Domain passt."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Stell sicher, dass die E-Mail mit „charset=UTF-8“ gesendet wird, Template-Dateien als UTF-8 gespeichert sind und die Datenbanktabellen utf8mb4 nutzen. Korrigiere Texte, die bereits kaputt gespeichert wurden."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Stell sicher, dass die Verschlüsselung zum Port passt."
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Viele Mailprogramme blockieren Bilder, bis der Leser sie erlaubt. Ohne Alternativtext sieht er nur leere Kästen; Screenreader lesen nichts Sinnvolles vor."
+
 msgid "Mask password-reset, activation and access keys in logged links"
 msgstr "Passwort-Reset-, Aktivierungs- und Zugriffsschlüssel in protokollierten Links maskieren"
 
 msgid "Menu position"
 msgstr "Menüposition"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online blockiert die SMTP-Anmeldung (Standardauthentifizierung) für dieses Postfach oder die ganze Organisation."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Die meisten Server akzeptieren insgesamt 10–25 MB."
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Weder ein From-Header noch ein Absender wurde erfasst. Der Mailer nutzt seine Voreinstellung, oft wordpress@deinedomain."
 
 msgid "Next email"
 msgstr "Nächste E-Mail"
@@ -214,6 +457,9 @@ msgstr "Nächste E-Mail (j)"
 
 msgid "Next page"
 msgstr "Nächste Seite"
+
+msgid "No connection to the SMTP server"
+msgstr "Keine Verbindung zum SMTP-Server"
 
 msgid "No emails found."
 msgstr "Noch keine E-Mails protokolliert."
@@ -227,11 +473,32 @@ msgstr "Auf dieser Website wurde kein Protokoll eines anderen Mail-Log-Plugins g
 msgid "No log of this plugin was found on this site."
 msgstr "Auf dieser Website wurde kein Protokoll dieses Plugins gefunden."
 
+msgid "No problems found in this email."
+msgstr "Keine Probleme in dieser E-Mail gefunden."
+
+msgid "No sender address recorded"
+msgstr "Keine Absenderadresse erfasst"
+
+msgid "Notes"
+msgstr "Hinweise"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Hinweise: %1$s. %2$s"
+
 msgid "Only administrators can empty the log."
 msgstr "Nur Administratoren können das Protokoll leeren."
 
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Öffne das Protokoll oder die Debug-Ansicht deines Mailer-Plugins, um den genauen Fehler zu sehen."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Oder richte die Adresse bei deinem Mailanbieter als Alias bzw. „Senden als“-Berechtigung ein."
+
 msgid "Own top-level menu item"
 msgstr "Eigener Hauptmenüpunkt"
+
+msgid "PHP extension openssl is missing"
+msgstr "PHP-Erweiterung openssl fehlt"
 
 msgid "Pagination"
 msgstr "Seitennavigation"
@@ -241,6 +508,9 @@ msgstr "Pro Seite"
 
 msgid "Plugin"
 msgstr "Plugin"
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Auf Probleme hinweisen, durch die E-Mails nicht ankommen oder falsch angezeigt werden"
 
 msgid "Preview"
 msgstr "Vorschau"
@@ -257,14 +527,35 @@ msgstr "Vorherige Seite"
 msgid "Privacy & security"
 msgstr "Datenschutz & Sicherheit"
 
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Anbieter wie %2$s veröffentlichen eine strenge DMARC-Richtlinie. Eine E-Mail „von“ ihrer Domain, die dein Webserver verschickt, fällt durch diese Prüfung und wird abgelehnt oder landet im Spam."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Stell das Wichtigste an den Anfang und halte den Betreff unter etwa 80 Zeichen."
+
 msgid "Recipient"
 msgstr "Empfänger"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Empfängerdomain kann keine E-Mails empfangen: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Empfängerdomain nimmt keine E-Mails an: %1$s"
 
 msgid "Recommended. Otherwise anyone with log access could use a logged reset link to take over an account. Resending such an email sends the masked version."
 msgstr "Empfohlen. Sonst könnte jeder mit Zugriff auf das Protokoll einen gespeicherten Reset-Link nutzen, um ein Konto zu übernehmen. Wird eine solche E-Mail erneut gesendet, geht die maskierte Fassung raus."
 
 msgid "Redact secrets"
 msgstr "Geheimnisse schwärzen"
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Verkleinere das HTML: Entferne ungenutztes CSS, sich wiederholende Inline-Styles, Kommentare und lange Tracking-URLs. Bilder zählen nicht, nur das HTML selbst."
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Wegen SPF, DKIM oder DMARC abgelehnt"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Relative Links oder Bilder (%1$s), z. B. %2$s"
 
 msgid "Remote content"
 msgstr "Externe Inhalte"
@@ -287,6 +578,18 @@ msgstr "Anfrage fehlgeschlagen: %s"
 msgid "Resend"
 msgstr "Erneut senden"
 
+msgid "Resend the email from the log in a few minutes."
+msgstr "Sende die E-Mail in ein paar Minuten erneut aus dem Protokoll."
+
+msgid "Resend the email from the log later."
+msgstr "Sende die E-Mail später erneut aus dem Protokoll."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Sende die E-Mail erneut aus dem Protokoll, sobald der Versand funktioniert."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Sende die fehlgeschlagenen E-Mails erneut, sobald das Limit zurückgesetzt ist."
+
 msgid "Resent from log"
 msgstr "Erneut gesendet"
 
@@ -296,29 +599,89 @@ msgstr "Filter zurücksetzen"
 msgid "Retention"
 msgstr "Aufbewahrung"
 
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Sieh dir die Hinweise zu dieser E-Mail an (Links, Absender, Platzhalter)."
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Führe ein Suchen & Ersetzen der alten Domain in der Datenbank aus und prüfe fest eingetragene URLs in E-Mail-Templates und Plugin-Einstellungen."
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH ist in Microsoft 365 deaktiviert"
+
+msgid "SMTP login failed"
+msgstr "SMTP-Anmeldung fehlgeschlagen"
+
 msgid "Search recipient or subject"
 msgstr "Empfänger oder Betreff suchen"
 
 msgid "Search recipient or subject …"
 msgstr "Empfänger oder Betreff suchen …"
 
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Suche die alte Adresse im E-Mail-Template, in den Plugin-Einstellungen und in der Datenbank (z. B. nach einem Umzug der Website) und ersetze sie durch die Live-Domain."
+
 msgid "Select all"
 msgstr "Alle auswählen"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Sende eine Test-E-Mail aus den Einstellungen des Mailer-Plugins."
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Sende große Dateien als Download-Link statt als Anhang."
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Versende Newsletter mit einem Newsletter-Plugin oder -Dienst, der die Header List-Unsubscribe und List-Unsubscribe-Post setzt, und schicke keine E-Mail per Bcc an viele Personen."
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Sende die E-Mail mit dem Header „Content-Type: text/html; charset=UTF-8“ oder setze den Inhaltstyp mit dem Filter wp_mail_content_type. Viele Formular- und Shop-Plugins haben eine Option „HTML-E-Mail“."
 
 msgid "Send this email again to %s?"
 msgstr "Diese E-Mail erneut an %s senden?"
 
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Versende über einen seriösen SMTP-Dienst statt über den Webserver, besonders bei Shared Hosting."
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Absenderdomain %1$s weicht von der Website ab (%2$s)"
+
+msgid "Sender domain or address not verified"
+msgstr "Absenderdomain oder -adresse nicht verifiziert"
+
 msgid "Sending failed – see the new log entry for details."
 msgstr "Senden fehlgeschlagen – Details im neuen Protokolleintrag."
 
+msgid "Sending limit or quota reached"
+msgstr "Versandlimit oder Kontingent erreicht"
+
 msgid "Sent"
 msgstr "Gesendet"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Mit einer Freemail-Adresse gesendet: %1$s"
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Mehrfach gesendet: %1$s weitere identische E-Mails innerhalb von %2$s Minuten"
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Lege in deinem SMTP-Plugin oder über den Filter wp_mail_from eine Absenderadresse deiner Domain fest."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Lege eine Absenderadresse deiner echten Domain fest, z. B. im SMTP-Plugin oder über den Filter wp_mail_from, und prüfe die Website-Adresse unter Einstellungen → Allgemein."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Lege im Template oder in den Formulareinstellungen des sendenden Plugins einen Betreff fest."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Setze die Absenderadresse in deinem SMTP-Plugin auf das Postfach, mit dem du dich anmeldest, und aktiviere „Absenderadresse erzwingen“."
 
 msgid "Settings"
 msgstr "Einstellungen"
 
 msgid "Shop managers and above"
 msgstr "Shop-Manager und höher"
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Seit 2024 verlangen Gmail und Yahoo für Massen-E-Mails eine Ein-Klick-Abmeldung (Header List-Unsubscribe). Ohne sie werden Newsletter eher abgelehnt oder aussortiert."
 
 msgid "Sorry, you are not allowed to access this page."
 msgstr "Du hast leider keine Berechtigung, auf diese Seite zuzugreifen."
@@ -335,11 +698,128 @@ msgstr "Betreff"
 msgid "Supported: %s."
 msgstr "Unterstützt: %s."
 
+msgid "Temporary rejection – try again later"
+msgstr "Vorübergehend abgelehnt – später erneut versuchen"
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Das ist in Ordnung, wenn dein Mailserver für diese Domain senden darf. Sonst schlagen SPF und DMARC fehl und die E-Mail landet im Spam."
+
+msgid "The API key was rejected"
+msgstr "Der API-Schlüssel wurde abgelehnt"
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "Das SMTP-Konto darf nur mit seiner eigenen Adresse (oder verifizierten Aliassen) senden. WordPress oder ein Plugin hat eine andere Absenderadresse verwendet."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "Der SMTP-Server war gar nicht erreichbar: falscher Hostname oder Port, der Server ist ausgefallen oder der Hoster sperrt ausgehende Mail-Ports."
+
+msgid "The SMTP server refuses to relay"
+msgstr "Der SMTP-Server verweigert die Weiterleitung"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "Der SMTP-Server hat Benutzername oder Passwort abgelehnt (Antwortcode 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "Der SMTP-Server verlangt eine Anmeldung oder Verschlüsselung"
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Der Inhalt enthält HTML-Tags, die E-Mail wurde aber als text/plain gesendet (WordPress-Standard). Empfänger sehen die rohen Tags statt formatiertem Text."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Verbindung oder Übertragung hat zu lange gedauert. Meist verwirft eine Firewall die Verbindung stillschweigend, oder Host und Port sind falsch."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Die Domain hat im DNS weder einen MX- noch einen A-Eintrag. E-Mails dorthin kommen zurück. Meist ist die Adresse falsch geschrieben oder die Domain existiert nicht mehr."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Die Domain veröffentlicht einen „Null-MX“-Eintrag und erklärt damit ausdrücklich, dass sie keine E-Mails empfängt. Jede E-Mail dorthin kommt zurück."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "Die E-Mail enthält Template-Variablen, die nicht ausgefüllt wurden. Empfänger sehen sie wörtlich."
+
+msgid "The email is too large"
+msgstr "Die E-Mail ist zu groß"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "Die E-Mail verlinkt WordPress-Dateien auf einem verwandten Host. Das passiert typischerweise auf einer Staging-Kopie, die noch URLs der Live-Website enthält – oder umgekehrt."
+
 msgid "The mail log requires JavaScript."
 msgstr "Das Mail-Log benötigt JavaScript."
 
+msgid "The mail server did not answer in time"
+msgstr "Der Mailserver hat nicht rechtzeitig geantwortet"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Der Mailserver ist vorübergehend nicht verfügbar"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Der Mailserver hat die Größe der E-Mail abgelehnt (Antwortcode 552). Anhänge werden beim Kodieren um etwa ein Drittel größer."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Der Maildienst versendet nur von Domains oder Adressen, die du dort verifiziert hast."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Maildienst oder Postfach haben weitere E-Mails abgelehnt, weil ein Ratenlimit, Tageskontingent oder Tariflimit erreicht wurde."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Der Maildienst hat die Anfrage abgelehnt, weil der API-Schlüssel falsch, abgelaufen oder widerrufen ist oder keine Sendeberechtigung hat."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Das Mailer-Plugin hat einen Fehler gemeldet"
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Der empfangende Server bittet um einen späteren Versuch (Antwortcode 450/451/452): Greylisting, ein volles Postfach oder zu viele E-Mails in kurzer Zeit."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Der empfangende Server konnte nicht bestätigen, dass dein Server für die Absenderdomain senden darf."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Der empfangende Server kennt dieses Postfach nicht (Antwortcode 550 / 5.1.1) – die Adresse ist falsch geschrieben oder existiert nicht mehr."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Der empfangende Server hat die E-Mail wegen ihres Inhalts abgelehnt oder weil die IP-Adresse des sendenden Servers auf einer Blocklist steht."
+
+msgid "The recipient address was rejected"
+msgstr "Die Empfängeradresse wurde abgelehnt"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Die Empfängerdomain sieht aus wie ein Tippfehler eines bekannten E-Mail-Anbieters. Solche E-Mails kommen zurück – oder erreichen einen Fremden, der die Tippfehler-Domain registriert hat."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Derselbe Betreff ging in kurzer Zeit mehrmals an dieselben Empfänger. Typische Ursachen sind doppelte Bestellbestätigungen, ein doppelt abgeschicktes Formular, ein parallel laufender Cronjob oder eine Schleife in einem Plugin."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Die sichere Verbindung zum SMTP-Server kam nicht zustande: Das Zertifikat passt nicht zum Hostnamen, ist abgelaufen, oder der Server unterstützt die gewählte Verschlüsselung nicht."
+
+msgid "The sender address is not allowed"
+msgstr "Die Absenderadresse ist nicht erlaubt"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Der Absender hat keine öffentliche Domain (z. B. wordpress@localhost). Die meisten Mailserver lehnen solche E-Mails ab oder stecken sie in den Spam."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Der Server kann mit PHP mail() keine E-Mails senden"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Der Server hat die Verbindung geschlossen (Antwortcode 421), z. B. wegen Wartung, Überlastung oder zu vieler Verbindungen von deinem Server."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Der Server leitet keine E-Mails für dich weiter, meist weil du nicht angemeldet bist oder die Absenderadresse nicht zum Konto gehört."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Der Server nimmt E-Mails nur nach einer Anmeldung oder nach dem Wechsel auf eine verschlüsselte Verbindung an (Antwortcode 530)."
+
+msgid "The server rejected the content"
+msgstr "Der Server hat den Inhalt abgelehnt"
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Der Benutzername ist meist die vollständige E-Mail-Adresse. Achte auf mitkopierte Leerzeichen beim Passwort."
+
 msgid "This import is already running in another tab."
 msgstr "Dieser Import läuft bereits in einem anderen Tab."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Diese Live-Website hat einen Link auf eine lokale oder Test-Adresse versendet. Empfänger können ihn nicht öffnen."
 
 msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
 msgstr "Diese Website protokolliert die von ihr versendeten E-Mails (Empfänger, Betreff, Inhalt und Zustellstatus), um die Zustellung zu prüfen und Fehler zu beheben. Protokolleinträge werden nach der eingestellten Aufbewahrungsdauer automatisch gelöscht."
@@ -350,6 +830,12 @@ msgstr "An"
 msgid "To date"
 msgstr "Bis Datum"
 
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Tippfehler in der Empfängerdomain? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Umlaute oder Anführungszeichen erscheinen als Zeichensalat wie „Ã¤“ oder „â€™“. UTF-8-Text wurde unterwegs mit einem anderen Zeichensatz gelesen – in einem Template, einem Import oder der Datenbank."
+
 msgid "Under Tools"
 msgstr "Unter Werkzeuge"
 
@@ -359,8 +845,41 @@ msgstr "Deinstallation"
 msgid "Unknown"
 msgstr "Unbekannt"
 
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Nicht ersetzte Platzhalter: %1$s"
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Nutze TLS auf Port 587 oder SSL auf Port 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Verwende einen beschreibenden Linktext (z. B. „Bestellung ansehen“) oder zeig die Adresse, zu der der Link wirklich führt."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Nutze eine Absenderadresse deiner eigenen Domain und setz die Freemail-Adresse als Reply-To. Nur wenn du wirklich über den SMTP-Server dieses Anbieters mit dessen Zugangsdaten sendest, ist das in Ordnung."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Verwende absolute URLs mit https:// und Domain, z. B. mit home_url() oder wp_get_attachment_url() im Template."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Verwende genau den Hostnamen, für den das Zertifikat ausgestellt ist (z. B. den smtp.…-Host des Anbieters statt einer IP oder deiner eigenen Domain)."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Verwende die Postfachadresse des SMTP-Kontos als Absender (From)."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Verifiziere die Absenderdomain bei deinem Maildienst (DNS-Einträge hinzufügen) oder nutze eine bereits verifizierte Absenderadresse."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Sehr langer Betreff (%1$s Zeichen)"
+
 msgid "View"
 msgstr "Ansehen"
+
+msgid "Warnings"
+msgstr "Warnungen"
+
+msgid "What to do"
+msgstr "Was tun?"
 
 msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
 msgstr "Ist das aus, können Tracking-Pixel nicht erkennen, wann du einen Eintrag öffnest. Für einzelne E-Mails kannst du externe Inhalte trotzdem laden. Skripte und Formulare sind immer blockiert."
@@ -370,6 +889,9 @@ msgstr "Wer darf das Protokoll sehen"
 
 msgid "WordPress"
 msgstr "WordPress"
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress versendet standardmäßig über die PHP-Funktion mail(). Auf diesem Server ist sie deaktiviert oder es ist kein Mailprogramm (sendmail) installiert – üblich bei lokalen Umgebungen, Docker und vielen Managed Hostern."
 
 msgid "days"
 msgstr "Tagen"

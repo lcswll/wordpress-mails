@@ -1,0 +1,129 @@
+/* Mailspur – notes module: list badge, error hints, dialog tab. */
+
+.mailspur {
+	--ob-note-error: #b32d2e;
+	--ob-note-error-bg: #fcf0f1;
+	--ob-note-warning: #8a5a00;
+	--ob-note-warning-bg: #fcf9e8;
+	--ob-note-info: #2c4ec7;
+	--ob-note-info-bg: #eff2ff;
+}
+
+/* ----------------------------------------------------------------- list */
+
+.mailspur-notes-badge {
+	display: inline-block;
+	margin-left: 6px;
+	padding: 0 6px;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	background: var(--ob-note-warning-bg);
+	color: var(--ob-note-warning);
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 16px;
+	vertical-align: text-bottom;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.mailspur-notes-badge.is-error {
+	background: var(--ob-note-error-bg);
+	color: var(--ob-note-error);
+}
+
+.mailspur-notes-badge.is-info {
+	background: var(--ob-note-info-bg);
+	color: var(--ob-note-info);
+}
+
+.mailspur-notes-badge:focus-visible {
+	outline: 2px solid var(--ob-accent);
+	outline-offset: 1px;
+}
+
+.mailspur-notes-hint {
+	display: block;
+	margin-top: 1px;
+	color: var(--ob-muted);
+	font-size: 12px;
+}
+
+/* --------------------------------------------------------------- dialog */
+
+.mailspur-d-tabs .mailspur-notes-tab.is-error {
+	color: var(--ob-note-error);
+}
+
+.mailspur-d-tabs .mailspur-notes-tab.is-warning {
+	color: var(--ob-note-warning);
+}
+
+.mailspur-d-meta .mailspur-notes-help-label {
+	color: var(--ob-failed);
+}
+
+.mailspur-d-meta .mailspur-notes-help p {
+	margin: 2px 0 4px;
+}
+
+.mailspur-d-meta .mailspur-notes-help ol {
+	margin: 0 0 0 18px;
+}
+
+.mailspur-d-meta .mailspur-notes-help li {
+	margin: 0 0 2px;
+}
+
+.mailspur-notes {
+	max-width: 860px;
+	padding: 16px 20px;
+	font-size: 13px;
+}
+
+.mailspur-notes-intro,
+.mailspur-notes-none {
+	margin: 0 0 12px;
+	color: var(--ob-muted);
+}
+
+.mailspur-notes-group h3 {
+	margin: 16px 0 8px;
+	font-size: 13px;
+}
+
+.mailspur-notes-group ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.mailspur-note {
+	margin: 0 0 8px;
+	padding: 10px 12px;
+	border: 1px solid var(--ob-border);
+	border-left: 4px solid var(--ob-note-warning);
+	border-radius: 4px;
+	background: var(--ob-bg);
+}
+
+.mailspur-note.is-error {
+	border-left-color: var(--ob-note-error);
+}
+
+.mailspur-note.is-info {
+	border-left-color: var(--ob-note-info);
+}
+
+.mailspur-note p {
+	margin: 4px 0 0;
+}
+
+.mailspur-note-title {
+	overflow-wrap: anywhere;
+}
+
+.mailspur-note-dynamic {
+	color: var(--ob-muted);
+	font-size: 11px;
+}
