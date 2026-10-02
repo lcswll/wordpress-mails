@@ -98,9 +98,58 @@ final class Rest {
 				'methods'             => WP_REST_Server::CREATABLE,
 				'callback'            => array( $this, 'resend' ),
 				'permission_callback' => array( $this, 'can_view' ),
-				'args'                => $id_arg,
+				'args'                => $id_arg + array(
+					// Optional other recipients (array or comma list, max. 10). Administrators only.
+					'to' => array(
+						'description'       => 'Send to these addresses instead of the original recipients.',
+						'validate_callback' => static function ( $value ) {
+							$parsed = self::parse_recipients( $value );
+							return is_wp_error( $parsed ) ? $parsed : true;
+						},
+						'sanitize_callback' => static function ( $value ) {
+							return self::parse_recipients( $value );
+						},
+					),
+				),
 			)
 		);
+	}
+
+	/**
+	 * Validated recipient list of the resend "to" parameter.
+	 *
+	 * @param mixed $value Array of addresses or a comma/semicolon-separated string.
+	 * @return array<int,string>|WP_Error
+	 */
+	public static function parse_recipients( $value ) {
+		if ( is_string( $value ) ) {
+			$value = (array) preg_split( '/[,;]/', $value );
+		}
+		if ( ! is_array( $value ) ) {
+			return new WP_Error( 'rest_invalid_param', __( 'Enter one or more email addresses.', 'mailspur-email-log' ), array( 'status' => 400 ) );
+		}
+		$out = array();
+		foreach ( $value as $address ) {
+			$address = is_scalar( $address ) ? trim( (string) $address ) : '';
+			if ( '' === $address ) {
+				continue;
+			}
+			if ( ! is_email( $address ) ) {
+				return new WP_Error(
+					'rest_invalid_param',
+					/* translators: %s: invalid email address */
+					sprintf( __( 'Invalid email address: %s', 'mailspur-email-log' ), $address ),
+					array( 'status' => 400 )
+				);
+			}
+			if ( ! isset( $out[ strtolower( $address ) ] ) ) {
+				$out[ strtolower( $address ) ] = $address;
+			}
+		}
+		if ( ! $out || count( $out ) > 10 ) {
+			return new WP_Error( 'rest_invalid_param', __( 'Enter between 1 and 10 email addresses.', 'mailspur-email-log' ), array( 'status' => 400 ) );
+		}
+		return array_values( $out );
 	}
 
 	public function can_view(): bool {
@@ -202,6 +251,11 @@ final class Rest {
 	 * @return WP_REST_Response|WP_Error
 	 */
 	public function resend( WP_REST_Request $request ) {
+		$to = $request->get_param( 'to' );
+		if ( null !== $to && ! current_user_can( 'manage_options' ) ) {
+			return new WP_Error( 'rest_forbidden', __( 'Only administrators can send emails to other addresses.', 'mailspur-email-log' ), array( 'status' => 403 ) );
+		}
+
 		$row = $this->repository->find( (int) $request['id'] );
 		if ( ! $row ) {
 			return $this->not_found();
@@ -217,18 +271,31 @@ final class Rest {
 			}
 		}
 
-		$headers = array_filter( explode( "\n", (string) $row['headers'] ) );
+		$headers    = array_filter( explode( "\n", (string) $row['headers'] ) );
+		$recipients = $row['recipients'];
+		if ( is_array( $to ) ) {
+			// Other recipients only: the original Cc/Bcc must not get a copy.
+			$recipients = $to;
+			$headers    = array_filter(
+				$headers,
+				static function ( string $header ): bool {
+					return ! preg_match( '/^\s*b?cc\s*:/i', $header );
+				}
+			);
+		}
 
 		Logger::$source_override = 'mailspur:resend';
-		$sent                    = wp_mail( $row['recipients'], $row['subject'], $row['message'], $headers, $files );
+		$sent                    = wp_mail( $recipients, $row['subject'], $row['message'], array_values( $headers ), $files );
 		Logger::$source_override = '';
 
-		return new WP_REST_Response(
-			array(
-				'sent'                => (bool) $sent,
-				'missing_attachments' => $missing,
-			)
+		$result = array(
+			'sent'                => (bool) $sent,
+			'missing_attachments' => $missing,
 		);
+		if ( is_array( $to ) ) {
+			$result['to'] = $to;
+		}
+		return new WP_REST_Response( $result );
 	}
 
 	/**
