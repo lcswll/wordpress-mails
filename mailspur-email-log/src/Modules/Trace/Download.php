@@ -90,8 +90,14 @@ final class Download {
 		if ( 200 !== $result->get_status() || ! is_string( $result->get_data() ) || ! preg_match( self::ROUTE_PATTERN, $request->get_route() ) ) {
 			return $served;
 		}
-		// A MIME message for download (Content-Type message/rfc822, attachment, nosniff), not HTML output.
-		echo $result->get_data(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		/*
+		 * Not HTML output: the body is a MIME message (.eml) served as a file download –
+		 * Content-Type message/rfc822, Content-Disposition attachment and X-Content-Type-Options: nosniff –
+		 * so browsers never render it. Escaping would corrupt the file. Only for this route, only after the
+		 * REST permission check (log viewers) and nonce passed.
+		 */
+		header( 'X-Content-Type-Options: nosniff' );
+		echo $result->get_data(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- file download, see above.
 		return true;
 	}
 }

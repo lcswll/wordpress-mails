@@ -73,8 +73,7 @@ final class Dashboard {
 				</p>
 			</div>
 			<?php
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built from escaped parts in svg().
-			echo $this->svg( (array) $data['days'] );
+			echo wp_kses( $this->svg( (array) $data['days'] ), self::allowed_svg() );
 			?>
 			<ul class="msi-widget-legend" aria-hidden="true">
 				<?php foreach ( self::labels() as $slug => $label ) : ?>
@@ -116,6 +115,60 @@ final class Dashboard {
 			'failed'  => __( 'Failed', 'mailspur-email-log' ),
 			'held'    => __( 'Held', 'mailspur-email-log' ),
 			'pending' => __( 'Unknown', 'mailspur-email-log' ),
+		);
+	}
+
+	/**
+	 * Tags and attributes svg() produces – the allowlist for wp_kses() when the chart is printed.
+	 *
+	 * @return array<string,array<string,bool>>
+	 */
+	public static function allowed_svg(): array {
+		$cell = array(
+			'scope' => true,
+			'class' => true,
+		);
+		return array(
+			'svg'     => array(
+				'class'       => true,
+				'viewbox'     => true,
+				'role'        => true,
+				'aria-hidden' => true,
+				'focusable'   => true,
+			),
+			'g'       => array( 'class' => true ),
+			'title'   => array(),
+			'line'    => array(
+				'x1'    => true,
+				'x2'    => true,
+				'y1'    => true,
+				'y2'    => true,
+				'class' => true,
+			),
+			'path'    => array(
+				'd'    => true,
+				'fill' => true,
+			),
+			'rect'    => array(
+				'x'      => true,
+				'y'      => true,
+				'width'  => true,
+				'height' => true,
+				'fill'   => true,
+			),
+			'text'    => array(
+				'x'           => true,
+				'y'           => true,
+				'text-anchor' => true,
+				'class'       => true,
+			),
+			'table'   => array( 'class' => true ),
+			'caption' => array(),
+			'thead'   => array(),
+			'tbody'   => array(),
+			'tr'      => array(),
+			'th'      => $cell,
+			'td'      => $cell,
 		);
 	}
 
