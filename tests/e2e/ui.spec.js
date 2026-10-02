@@ -199,6 +199,8 @@ test('import from WP Mail Logging', async ({ page }) => {
 
 	await row.getByRole('button', { name: 'Import' }).click();
 	await expect(row.locator('.mailspur-import-status')).toContainText('Done: 3 imported, 0 duplicates, 0 too old.');
+	// import.js reloads the page ~1.2 s later; wait for it so the next navigation is not aborted.
+	await page.waitForEvent('load');
 
 	await page.goto(`${LOG}&s=Old%20`);
 	await expect(rows(page)).toHaveCount(3);
@@ -210,6 +212,8 @@ test('import from WP Mail Logging', async ({ page }) => {
 	await page.goto(`${LOG}&tab=settings`);
 	await page.getByRole('button', { name: 'Remove imported entries' }).click();
 	await expect(row.locator('.mailspur-import-status')).toContainText('3 imported entries removed.');
+	// import.js reloads the page ~1.2 s later; wait for it so the next navigation is not aborted.
+	await page.waitForEvent('load');
 	await page.goto(`${LOG}&s=Old%20`);
 	await expect(page.locator('.mailspur-empty')).toBeVisible();
 	expect(seen.errors).toEqual([]);
