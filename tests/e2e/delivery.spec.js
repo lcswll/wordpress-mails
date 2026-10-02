@@ -13,7 +13,8 @@ test.describe.configure({ mode: 'serial' });
 function watch(page, answers = []) {
 	const errors = [];
 	page.on('console', (msg) => {
-		if (msg.type() === 'error') errors.push(msg.text());
+		// The preview's CSP/sandbox reports blocked content – that is the protection working, not an error.
+		if (msg.type() === 'error' && !/Content Security Policy|about:srcdoc/.test(msg.text())) errors.push(msg.text());
 	});
 	page.on('pageerror', (err) => errors.push(err.message));
 	page.on('dialog', (dialog) => ('prompt' === dialog.type() ? dialog.accept(answers.shift() ?? '') : dialog.accept()));
