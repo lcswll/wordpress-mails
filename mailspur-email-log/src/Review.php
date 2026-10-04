@@ -173,7 +173,7 @@ final class Review {
 					?>
 				</p>
 				<p class="mailspur-review-actions">
-					<a class="button button-primary" href="<?php echo esc_url( $action( 'rate' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Rate Mailspur ★★★★★', 'mailspur-email-log' ); ?></a>
+					<a class="button button-primary" href="<?php echo esc_url( $action( 'rate' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Rate Mailspur on WordPress.org', 'mailspur-email-log' ); ?></a>
 					<a class="button" href="<?php echo esc_url( $action( 'later' ) ); ?>"><?php esc_html_e( 'Maybe later', 'mailspur-email-log' ); ?></a>
 					<a class="button-link" href="<?php echo esc_url( $action( 'done' ) ); ?>"><?php esc_html_e( 'I already did', 'mailspur-email-log' ); ?></a>
 				</p>
@@ -214,7 +214,7 @@ final class Review {
 			/* translators: 1: author link, 2: review link */
 			esc_html__( 'Mailspur is made by %1$s. Enjoying it? %2$s', 'mailspur-email-log' ),
 			'<a href="' . esc_url( self::AUTHOR_URL ) . '" target="_blank" rel="noopener">Lucas Wille</a>',
-			'<a href="' . esc_url( self::URL ) . '" target="_blank" rel="noopener">' . esc_html__( 'Leave a ★★★★★ review', 'mailspur-email-log' ) . '</a>'
+			'<a href="' . esc_url( self::URL ) . '" target="_blank" rel="noopener">' . esc_html__( 'Leave a review', 'mailspur-email-log' ) . '</a>'
 		);
 	}
 
@@ -227,7 +227,7 @@ final class Review {
 	 */
 	public static function row_meta( $meta, $file ) {
 		if ( is_array( $meta ) && plugin_basename( FILE ) === $file ) {
-			$meta[] = '<a href="' . esc_url( self::URL ) . '" target="_blank" rel="noopener" aria-label="' . esc_attr__( 'Rate Mailspur on WordPress.org', 'mailspur-email-log' ) . '">★★★★★</a>';
+			$meta[] = '<a href="' . esc_url( self::URL ) . '" target="_blank" rel="noopener">' . esc_html__( 'Leave a review', 'mailspur-email-log' ) . '</a>';
 		}
 		return $meta;
 	}

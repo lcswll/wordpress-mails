@@ -65,7 +65,7 @@ final class ReviewTest extends TestCase {
 				'esc_url'         => static function ( $url ) {
 					return $url;
 				},
-				'esc_attr__'      => static function ( $text ) {
+				'esc_html__'      => static function ( $text ) {
 					return $text;
 				},
 			)
@@ -73,6 +73,7 @@ final class ReviewTest extends TestCase {
 		$meta = Review::row_meta( array( 'Version 1.0.0' ), 'mailspur-email-log/mailspur-email-log.php' );
 		$this->assertCount( 2, $meta );
 		$this->assertStringContainsString( 'reviews/#new-post', $meta[1] );
+		$this->assertStringContainsString( '>Leave a review</a>', $meta[1] );
 		$this->assertSame( array( 'x' ), Review::row_meta( array( 'x' ), 'other/other.php' ) );
 	}
 }

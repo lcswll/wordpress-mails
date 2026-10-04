@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Mailspur – Email Log
  * Plugin URI:        https://github.com/lcswll/wordpress-mails
- * Description:       Logs every outgoing email, maps every type of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics.
+ * Description:       Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics.
  * Version:           1.0.0
  * Requires at least: 6.5
  * Requires PHP:      7.4

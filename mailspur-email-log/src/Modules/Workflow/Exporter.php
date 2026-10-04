@@ -91,7 +91,7 @@ final class Exporter {
 		foreach ( $this->rows( $filters, $bodies, $limit ) as $row ) {
 			$entry = self::entry( $row, $bodies );
 			if ( $json ) {
-				$write( ( $count ? ",\n" : "\n" ) . wp_json_encode( $entry, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) );
+				$write( ( $count ? ",\n" : "\n" ) . wp_json_encode( $entry ) );
 			} else {
 				$entry['attachments'] = implode( ', ', (array) $entry['attachments'] );
 				$write( self::csv_line( $entry ) );

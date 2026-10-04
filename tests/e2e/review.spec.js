@@ -1,4 +1,4 @@
-// Author credit and review request in a real browser: plugin list (author link, ★★★★★ meta), footer credit on
+// Author credit and review request in a real browser: plugin list (author link, review link), footer credit on
 // Mailspur's page, and the review card (due only after 14 days with delivered emails; "Maybe later" snoozes it).
 import { expect, test } from '@playwright/test';
 
@@ -10,7 +10,7 @@ test('plugin list names the author and links to the reviews', async ({ page }) =
 	await page.goto('/wp-admin/plugins.php');
 	const row = page.locator('tr[data-slug="mailspur-email-log"]').first();
 	await expect(row.getByRole('link', { name: 'Lucas Wille' })).toHaveAttribute('href', 'https://lucaswille.de/');
-	await expect(row.getByRole('link', { name: 'Rate Mailspur on WordPress.org' })).toHaveAttribute('href', /wordpress\.org\/support\/plugin\/mailspur-email-log\/reviews/);
+	await expect(row.getByRole('link', { name: 'Leave a review' })).toHaveAttribute('href', /wordpress\.org\/support\/plugin\/mailspur-email-log\/reviews/);
 });
 
 test('footer credit only on Mailspur pages', async ({ page }) => {
@@ -34,7 +34,7 @@ test('review request appears when it goes well and can be snoozed', async ({ pag
 	await expect(card).toBeVisible();
 	await expect(card).toContainText('Is Mailspur helping you?');
 	await expect(card).toContainText(/has logged \d+ delivered emails/);
-	await expect(card.getByRole('link', { name: 'Rate Mailspur ★★★★★' })).toHaveAttribute('target', '_blank');
+	await expect(card.getByRole('link', { name: 'Rate Mailspur on WordPress.org' })).toHaveAttribute('target', '_blank');
 
 	// Not on other admin pages.
 	await page.goto('/wp-admin/index.php');

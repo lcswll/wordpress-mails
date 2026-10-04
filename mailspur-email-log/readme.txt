@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Logs every email WordPress sends, knows every type of email your site sends and alerts you when one stops. Safe preview, diagnostics, private.
+Logs the emails WordPress sends, maps the types of email your site sends and alerts you when one stops. Safe preview, diagnostics, private.
 
 == Description ==
 
@@ -16,12 +16,12 @@ Did the order confirmation go out? Why did the password reset never arrive? Mail
 
 = What makes it different =
 
-* **It knows every email your site sends – and notices when one stops.** Mailspur builds a map of all email types on its own (order confirmation, password reset, contact form …), learns how often each one goes out and tells you when a type that normally runs daily or weekly suddenly falls silent – naming the plugin update that happened in between. As far as we know, no other email log plugin does this.
-* **Logged emails cannot attack you.** HTML emails are shown in a sandboxed frame with an opaque origin: injected scripts, phishing forms and tracking pixels in a logged email stay inert, and remote content is not even requested until you allow it.
-* **The log cannot be used to take over accounts.** One-time secrets in links (password resets, activation keys, order keys) are masked *before* they are written to the database.
+* **It maps the emails your site sends – and notices when one stops.** Mailspur builds a map of all email types on its own (order confirmation, password reset, contact form …), learns how often each one goes out and tells you when a type that normally runs daily or weekly suddenly falls silent – naming the plugin update that happened in between.
+* **Safe preview of logged emails.** HTML emails are shown in a sandboxed frame with an opaque origin, so scripts and forms in a logged email do not run, and remote content such as tracking pixels is only loaded when you allow it.
+* **Secrets in links are masked.** One-time secrets in links (password resets, activation keys, order keys) are masked *before* they are written to the database, so the log does not contain working reset links.
 * **It explains problems instead of just listing them.** Every email is checked for issues that keep it from arriving or displaying correctly, and failed emails come with a plain-language explanation and concrete steps.
 * **It records what was actually sent** – the final body after template plugins, the real sender, the SMTP server or API plugin that delivered it, and the exact code that called `wp_mail()`.
-* **Built for large logs:** an indexed table, live search, two small queries per email. No upsells, no external services, no tracking.
+* **Built for large logs:** an indexed table, live search, two small queries per email. No upsells, no tracking, no external service required.
 
 = Email types: the map of your site's emails =
 
@@ -83,6 +83,8 @@ Mailspur works without any external service. There is exactly one optional excep
 * **Alert webhook (off by default).** If you enable monitoring alerts and enter a webhook URL, your site sends a short JSON POST to exactly that URL when an alert fires (or when you click "Send test alert"): site name, site URL, the alert text, a link to the log and a timestamp – never email contents or recipient addresses. For a stopped email type the alert text names the sending plugin, the subject pattern with placeholders (e.g. "Your order #… has been received") and recently updated plugins. Where the data goes depends on the URL you enter. For Slack see the [terms](https://slack.com/terms-of-service) and [privacy policy](https://slack.com/privacy-policy), for Discord the [terms](https://discord.com/terms) and [privacy policy](https://discord.com/privacy).
 
 The sender check (SPF/DKIM/DMARC/MX) and the recipient-domain check only ask your server's own DNS resolver, on demand, and contact no third-party service.
+
+Remote images in a logged email are blocked in the preview. Only when you click "Load remote content" (or enable "Always load remote images") does your browser request them from the servers named in that email, just as a mail program would. The plugin itself sends nothing to these servers.
 
 = For developers =
 

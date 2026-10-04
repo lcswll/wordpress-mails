@@ -809,8 +809,8 @@ msgstr "Letzte Seite"
 msgid "Last sent"
 msgstr "Zuletzt versendet"
 
-msgid "Leave a ★★★★★ review"
-msgstr "Gib eine ★★★★★-Bewertung ab"
+msgid "Leave a review"
+msgstr "Hinterlasse eine Bewertung"
 
 msgid "Link text shows %1$s but leads to %2$s"
 msgstr "Linktext zeigt %1$s, führt aber zu %2$s"
@@ -1195,9 +1195,6 @@ msgstr "Selten"
 
 msgid "Rate Mailspur on WordPress.org"
 msgstr "Mailspur auf WordPress.org bewerten"
-
-msgid "Rate Mailspur ★★★★★"
-msgstr "Mailspur bewerten ★★★★★"
 
 msgid "Raw source"
 msgstr "Rohquelltext"
