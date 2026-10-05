@@ -65,10 +65,12 @@ final class Controller {
 
 	public function index(): WP_REST_Response {
 		$this->indexer->run( Module::INDEX_ON_VIEW );
-		$items = Report::current( $this->store, time() );
-		$out   = array();
+		$items     = Report::current( $this->store, time() );
+		$templates = ( new Templates() )->for_items( $items );
+		$out       = array();
 		foreach ( $items as $item ) {
-			$out[] = array(
+			$template = $templates[ $item['id'] ] ?? array();
+			$out[]    = array(
 				'id'        => $item['id'],
 				'source'    => $item['source'],
 				'sender'    => Report::source_label( $item['source'] ),
@@ -103,6 +105,11 @@ final class Controller {
 				),
 				'cron'      => $item['cron'],
 				'cause'     => $item['cause'],
+				'template'  => array(
+					'url'  => (string) ( $template['url'] ?? '' ),
+					'hint' => (string) ( $template['hint'] ?? '' ),
+				),
+				'probe'     => (string) ( $template['probe'] ?? '' ),
 			);
 		}
 		$response = new WP_REST_Response(

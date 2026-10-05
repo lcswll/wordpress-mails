@@ -27,6 +27,9 @@ final class Page {
 	/** @var Indexer */
 	private $indexer;
 
+	/** @var array<int,array{url:string,hint:string,probe:string}> "Edit template" and probe per type id (render()). */
+	private $templates = array();
+
 	public function __construct( Store $store, Indexer $indexer ) {
 		$this->store   = $store;
 		$this->indexer = $indexer;
@@ -116,7 +119,7 @@ final class Page {
 	}
 
 	/**
-	 * Config of types-tab.js (Compare, Send latest to me).
+	 * Config of types-tab.js (Compare, Send latest to me, Trigger to me).
 	 *
 	 * @return array<string,mixed>
 	 */
@@ -152,6 +155,25 @@ final class Page {
 				'failed'       => __( 'Request failed: %s', 'mailspur-email-log' ),
 				/* translators: %s: comma-separated file names */
 				'missingFiles' => __( 'Attachments no longer available: %s', 'mailspur-email-log' ),
+				'probe'        => array(
+					/* translators: %s: email address */
+					Probe::PASSWORD_RESET => __( 'Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it.', 'mailspur-email-log' ),
+					/* translators: %s: email address */
+					Probe::NEW_USER       => __( 'Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them.', 'mailspur-email-log' ),
+				),
+				'trigger'      => __( 'Trigger', 'mailspur-email-log' ),
+				'triggering'   => __( 'Triggering…', 'mailspur-email-log' ),
+				'status'       => array(
+					'sent'    => __( 'Sent', 'mailspur-email-log' ),
+					'failed'  => __( 'Failed', 'mailspur-email-log' ),
+					'held'    => __( 'Held', 'mailspur-email-log' ),
+					'pending' => __( 'Unknown', 'mailspur-email-log' ),
+				),
+				/* translators: %s: duration in seconds */
+				'seconds'      => __( '%s s', 'mailspur-email-log' ),
+				/* translators: %s: number of notes */
+				'notes'        => __( 'Notes: %s', 'mailspur-email-log' ),
+				'openLog'      => __( 'Open in log', 'mailspur-email-log' ),
 			),
 		);
 	}
@@ -206,8 +228,9 @@ final class Page {
 				return array( $priority[ $b['state'] ] ?? 0, $b['total'] ) <=> array( $priority[ $a['state'] ] ?? 0, $a['total'] );
 			}
 		);
-		$available = $this->available( $items );
-		$groups    = array();
+		$available       = $this->available( $items );
+		$this->templates = ( new Templates() )->for_items( $items );
+		$groups          = array();
 		foreach ( $items as $item ) {
 			if ( $attention && ! in_array( $item['state'], array( 'silent', 'failing' ), true ) ) {
 				continue;
@@ -423,11 +446,32 @@ final class Page {
 							<?php if ( $admin ) : ?>
 								<button type="button" class="button-link mst-send" data-mail="<?php echo esc_attr( (string) $item['last_id'] ); ?>" hidden><?php esc_html_e( 'Send latest to me', 'mailspur-email-log' ); ?></button>
 							<?php endif; ?>
+							<?php $this->template( (int) $item['id'] ); ?>
 						</div>
 					</details>
 				<?php endif; ?>
 			</td>
 		</tr>
+		<?php
+	}
+
+	/**
+	 * "Edit template" (link or core hint) and "Trigger to me" in the "…" menu of a type.
+	 */
+	private function template( int $id ): void {
+		$template = $this->templates[ $id ] ?? null;
+		if ( null === $template ) {
+			return;
+		}
+		?>
+		<?php if ( '' !== $template['url'] ) : ?>
+			<a href="<?php echo esc_url( $template['url'] ); ?>" class="mst-edit"><?php esc_html_e( 'Edit template', 'mailspur-email-log' ); ?></a>
+		<?php elseif ( '' !== $template['hint'] ) : ?>
+			<span class="mst-menu-note"><?php echo esc_html( $template['hint'] ); ?></span>
+		<?php endif; ?>
+		<?php if ( '' !== $template['probe'] ) : ?>
+			<button type="button" class="button-link mst-probe" data-kind="<?php echo esc_attr( $template['probe'] ); ?>" hidden><?php esc_html_e( 'Trigger to me', 'mailspur-email-log' ); ?></button>
+		<?php endif; ?>
 		<?php
 	}
 

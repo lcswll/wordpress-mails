@@ -3,7 +3,7 @@
  * Email types integration test inside real WordPress (Playground, SQLite): tables, incremental indexing with
  * placeholder and name merging, held/failed counters, the in-flight guard, rhythm-based silence with plugin
  * updates, the REST route and permissions, the type line in the log detail, the "type stopped" alert through
- * the real alert channel, retention pruning and rebuild.
+ * the real alert channel, retention pruning and rebuild, probe emails ("Trigger to me") and the core hint.
  *
  * Uses its own sender ("plugin:e2e-types-shop") and removes everything it created.
  * Writes /e2e-out/features/types.json.
@@ -374,6 +374,60 @@ try {
 	types_check( false, 'exception (before/after, cron)', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
 }
 
+// Probe emails ("Trigger to me"): real core emails for the administrator's own account, sent only to them.
+$probe_ids = array();
+try {
+	global $wpdb;
+	$probe_sent = array();
+	$probe_trap = static function ( $short, $atts ) use ( &$probe_sent ) {
+		$probe_sent[] = $atts;
+		return true;
+	};
+	add_filter( 'pre_wp_mail', $probe_trap, PHP_INT_MIN, 2 );
+	$admins = get_users(
+		array(
+			'role'   => 'administrator',
+			'number' => 1,
+		)
+	);
+	$admin  = $admins ? $admins[0] : wp_get_current_user();
+	wp_set_current_user( $admin->ID );
+
+	$request = new WP_REST_Request( 'POST', '/mailspur-email-log/v1/types/probe' );
+	$request->set_param( 'kind', 'password-reset' );
+	$response  = rest_do_request( $request );
+	$mails     = (array) ( $response->get_data()['mails'] ?? array() );
+	$probe_ids = array_map( 'intval', array_column( $mails, 'id' ) );
+	$row       = $probe_ids ? (array) $wpdb->get_row( $wpdb->prepare( 'SELECT recipients, source, meta FROM %i WHERE id = %d', Repository::table(), $probe_ids[0] ), ARRAY_A ) : array();
+	types_check( 200 === $response->get_status() && 1 === count( $mails ) && 'sent' === ( $mails[0]['status'] ?? '' ) && false !== strpos( (string) ( $mails[0]['url'] ?? '' ), 'mail=' . $probe_ids[0] ), 'probe: password reset is sent and links its log entry', $response->get_data() );
+	types_check( ( $row['recipients'] ?? '' ) === $admin->user_email && 'core' === ( $row['source'] ?? '' ) && false !== strpos( (string) ( $row['meta'] ?? '' ), '"probe":"password-reset"' ), 'probe: logged as core email to the administrator, marked as probe', $row );
+
+	$request->set_param( 'kind', 'new-user' );
+	$mails     = (array) ( rest_do_request( $request )->get_data()['mails'] ?? array() );
+	$probe_ids = array_merge( $probe_ids, array_map( 'intval', array_column( $mails, 'id' ) ) );
+	$to        = array_unique( array_map( 'wp_json_encode', array_column( $probe_sent, 'to' ) ) );
+	types_check( 2 === count( $mails ) && 3 === count( $probe_sent ) && array( wp_json_encode( array( $admin->user_email ) ) ) === array_values( $to ), 'probe: new user notifications reach only the administrator', array( $mails, $to ) );
+
+	// The type of the probed email offers the probe again; core types explain that they have no editor.
+	( new Indexer( new Store() ) )->run( 100000 );
+	$types = (array) ( rest_do_request( new WP_REST_Request( 'GET', '/mailspur-email-log/v1/types' ) )->get_data()['types'] ?? array() );
+	$reset = array();
+	foreach ( $types as $type ) {
+		if ( 'core' === $type['source'] && 'password-reset' === $type['probe'] ) {
+			$reset = $type;
+		}
+	}
+	types_check( $reset && '' === $reset['template']['url'] && '' !== $reset['template']['hint'], 'REST /types: core type has a hint and its probe', $reset );
+
+	wp_set_current_user( 0 );
+	$denied = rest_do_request( $request );
+	types_check( in_array( $denied->get_status(), array( 401, 403 ), true ), 'probe needs manage_options', $denied->get_status() );
+	wp_set_current_user( $admin->ID );
+	remove_filter( 'pre_wp_mail', $probe_trap, PHP_INT_MIN );
+} catch ( Throwable $e ) {
+	types_check( false, 'exception (probe)', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
+}
+
 try {
 	global $wpdb;
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source IN ( %s, %s ) OR subject = %s OR ( source = %s AND recipients = %s )', Repository::table(), 'plugin:e2e-types-news', 'plugin:e2e-types-cron', 'E2E cron trace', 'mailspur:resend', 'me@example.com' ) );
@@ -381,6 +435,9 @@ try {
 	delete_option( Report::SEEN );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source = %s OR ( source = %s AND subject = %s )', Repository::table(), 'plugin:e2e-types-shop', 'mailspur:resend', 'Order #1 confirmed' ) );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source = %s AND recipients = %s', Repository::table(), Stats::ALERT_SOURCE, 'ops@example.com' ) );
+	foreach ( $probe_ids as $probe_id ) {
+		$wpdb->delete( Repository::table(), array( 'id' => $probe_id ) );
+	}
 	( new Indexer( new Store() ) )->rebuild();
 	update_option( 'mailspur_settings', $types_settings );
 	foreach ( array( Updates::OPTION, Monitor::STATE, Alerts::LOG_OPTION, Alerts::STATE_OPTION ) as $option ) {

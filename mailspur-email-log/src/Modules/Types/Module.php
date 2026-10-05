@@ -41,7 +41,9 @@ final class Module implements \Mailspur\Module {
 		$indexer    = new Indexer( $store );
 		$page       = new Page( $store, $indexer );
 		$repository = $this->repository;
+		$probe      = new Probe();
 
+		( new Templates() )->register();
 		add_action( 'admin_init', array( Store::class, 'maybe_install' ) );
 		add_action( 'admin_init', array( self::class, 'schedule' ) );
 
@@ -58,11 +60,15 @@ final class Module implements \Mailspur\Module {
 
 		add_action(
 			'rest_api_init',
-			static function () use ( $store, $indexer, $repository ): void {
+			static function () use ( $store, $indexer, $repository, $probe ): void {
 				Store::maybe_install();
 				( new Controller( $store, $indexer, $repository ) )->register_routes();
+				$probe->register_routes();
 			}
 		);
+		if ( defined( 'WP_CLI' ) && WP_CLI && class_exists( '\WP_CLI' ) ) {
+			\WP_CLI::add_command( 'mailspur probe', new ProbeCli( $probe ) );
+		}
 
 		$cron = static function () use ( $store, $indexer ): void {
 			Store::maybe_install();

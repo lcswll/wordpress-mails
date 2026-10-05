@@ -77,6 +77,9 @@ msgstr "%s Hinweise"
 msgid "%s of all emails"
 msgstr "%s aller E-Mails"
 
+msgid "%s s"
+msgstr "%s s"
+
 msgid "%s selected"
 msgstr "%s ausgewählt"
 
@@ -529,6 +532,9 @@ msgstr "Die Einträge zu den aktuellen Filtern als %s herunterladen"
 
 msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
 msgstr "Jede E-Mail wird einmal beim Protokollieren oder Importieren geprüft (ohne externe Anfragen). Änderungen hier wirken nur für danach protokollierte E-Mails; ältere Einträge werden nicht erneut geprüft. DNS- und Mehrfachversand-Prüfungen laufen, wenn du einen Eintrag öffnest."
+
+msgid "Edit template"
+msgstr "Vorlage bearbeiten"
 
 msgid "Editors and above"
 msgstr "Redakteure und höher"
@@ -1217,6 +1223,9 @@ msgstr "Hinweise in der letzten E-Mail: %s"
 msgid "Notes: %1$s. %2$s"
 msgstr "Hinweise: %1$s. %2$s"
 
+msgid "Notes: %s"
+msgstr "Hinweise: %s"
+
 msgid "Number of failed emails"
 msgstr "Anzahl fehlgeschlagener E-Mails"
 
@@ -1255,6 +1264,9 @@ msgstr "Nur zurückgehaltene E-Mails können freigegeben werden."
 
 msgid "Open distribution list: %1$s external recipients see each other's addresses"
 msgstr "Offener Verteiler: %1$s externe Empfänger sehen gegenseitig ihre Adressen"
+
+msgid "Open in log"
+msgstr "Im Protokoll öffnen"
 
 msgid "Open latest"
 msgstr "Neueste öffnen"
@@ -1366,6 +1378,9 @@ msgstr "Datenschutz"
 
 msgid "Privacy & security"
 msgstr "Datenschutz & Sicherheit"
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Test-E-Mails werden nur an Administratoren gesendet."
 
 msgid "Problem"
 msgstr "Problem"
@@ -2087,6 +2102,21 @@ msgstr "Protokoll kopiert."
 msgid "Transport"
 msgstr "Transport"
 
+msgid "Trigger"
+msgstr "Auslösen"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Eine echte E-Mail zum Zurücksetzen des Passworts für dein eigenes Konto auslösen? WordPress erstellt dafür einen neuen Link, frühere Links zum Zurücksetzen werden ungültig; dein Passwort bleibt unverändert. Nur %s erhält sie."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Die Benachrichtigungen für neue Benutzer für dein eigenes Konto auslösen (Hinweis an den Administrator und Zugangsdaten)? WordPress erstellt dafür einen neuen Passwort-Link, frühere Links werden ungültig. Es wird kein Benutzer angelegt; nur %s erhält sie."
+
+msgid "Trigger to me"
+msgstr "Test an mich auslösen"
+
+msgid "Triggering…"
+msgstr "Wird ausgelöst…"
+
 msgid "Tuesday"
 msgstr "Dienstag"
 
@@ -2110,6 +2140,9 @@ msgstr "Deinstallation"
 
 msgid "Unknown"
 msgstr "Unbekannt"
+
+msgid "Unknown probe."
+msgstr "Unbekannte Test-E-Mail."
 
 msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
 msgstr "Unbekannt: Es wurde kein Zustellergebnis gemeldet (ersetzte wp_mail()-Funktion?)."
@@ -2245,6 +2278,12 @@ msgstr "WooCommerce-E-Mail"
 
 msgid "WordPress"
 msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "E-Mails des WordPress-Kerns haben keinen Editor; sie lassen sich mit Filtern ändern."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress hat keine E-Mail gesendet – vielleicht hat ein Plugin diese E-Mail abgeschaltet."
 
 msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
 msgstr "WordPress versendet standardmäßig über die PHP-Funktion mail(). Auf diesem Server ist sie deaktiviert oder es ist kein Mailprogramm (sendmail) installiert – üblich bei lokalen Umgebungen, Docker und vielen Managed Hostern."

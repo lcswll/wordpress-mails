@@ -158,3 +158,20 @@ test('shortcuts: open the latest email and send it to me', async ({ page }) => {
 	await expect(confirm.locator('[role="status"]')).toHaveText(/^Sent to .+@.+\.$/);
 	expect(errors).toEqual([]);
 });
+
+test('shortcuts: core emails explain they have no editor and offer a probe', async ({ page }) => {
+	const errors = watchErrors(page);
+	await page.goto(TYPES);
+	const reset = typeRow(page, 'Password reset');
+	await reset.locator('.mst-more summary').click();
+	await expect(reset.getByRole('link', { name: 'Edit template' })).toHaveCount(0);
+	await expect(reset.locator('.mst-menu-note')).toHaveText('WordPress core emails have no editor; they can be changed with filters.');
+	// Only the confirmation: triggering would add log entries other specs count.
+	await reset.getByRole('button', { name: 'Trigger to me' }).click();
+	const confirm = reset.locator('.mst-confirm');
+	await expect(confirm).toContainText(/new reset link .+ Only .+@.+ receives it\./);
+	await confirm.getByRole('button', { name: 'Cancel' }).click();
+	await expect(confirm).toHaveCount(0);
+	await expect(reset.getByRole('button', { name: 'Trigger to me' })).toBeFocused();
+	expect(errors).toEqual([]);
+});
