@@ -171,6 +171,17 @@ try {
 	$row10 = notes_row( $s10 );
 	notes_check( array() === array_intersect( array( 'secret_password', 'secret_card', 'secret_key' ), notes_codes( $row10 ) ) && false !== strpos( (string) $row10['message'], 'DE89 3704' ), 'password hints, masked values and IBANs are no secrets', array( notes_codes( $row10 ), $row10['message'] ) );
 
+	// ------------------------------------------------- open distribution list and spam signs.
+	$s12 = "$notes_prefix: open list";
+	wp_mail( array( 'ida@gmail.com', 'jan@web.de' ), $s12, 'See https://bit.ly/abc', array( 'From: Shop <shop@example.com>' ) );
+	$codes = notes_codes( notes_row( $s12 ) );
+	notes_check( in_array( 'open_recipients', $codes, true ) && in_array( 'link_shortener', $codes, true ), 'open distribution list and URL shortener are noted', $codes );
+
+	$s13 = "$notes_prefix: team list";
+	wp_mail( array( 'ida@gmail.com', 'office@example.com' ), $s13, 'Hello', array( 'From: Shop <shop@example.com>', 'Bcc: jan@web.de' ) );
+	$codes = notes_codes( notes_row( $s13 ) );
+	notes_check( ! in_array( 'open_recipients', $codes, true ), 'own domain and Bcc recipients are no open distribution list', $codes );
+
 	// ------------------------------------------------- dead links to the own site.
 	$page_id = wp_insert_post(
 		array(

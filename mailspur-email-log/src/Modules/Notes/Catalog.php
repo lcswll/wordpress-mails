@@ -143,6 +143,34 @@ final class Catalog {
 				'text'  => __( 'The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless "Redact secrets" is on.', 'mailspur-email-log' ),
 				'fix'   => __( 'Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email.', 'mailspur-email-log' ),
 			),
+			'open_recipients'      => array(
+				/* translators: %s: number of recipients outside the site's domain */
+				'title' => __( 'Open distribution list: %1$s external recipients see each other\'s addresses', 'mailspur-email-log' ),
+				'text'  => __( 'The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach.', 'mailspur-email-log' ),
+				'fix'   => __( 'Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers\' addresses were disclosed, check with your data protection officer whether the incident has to be reported.', 'mailspur-email-log' ),
+			),
+			'subject_caps'         => array(
+				'title' => __( 'Subject mostly in capital letters', 'mailspur-email-log' ),
+				'text'  => __( 'Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse.', 'mailspur-email-log' ),
+				'fix'   => __( 'Write the subject in normal upper and lower case and emphasize at most a single word.', 'mailspur-email-log' ),
+			),
+			'subject_exclamations' => array(
+				/* translators: %s: number of exclamation marks */
+				'title' => __( 'Many exclamation marks in the subject (%1$s)', 'mailspur-email-log' ),
+				'text'  => __( 'Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse.', 'mailspur-email-log' ),
+				'fix'   => __( 'Use one exclamation mark at most.', 'mailspur-email-log' ),
+			),
+			'image_only'           => array(
+				'title' => __( 'Email consists almost only of images', 'mailspur-email-log' ),
+				'text'  => __( 'The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email.', 'mailspur-email-log' ),
+				'fix'   => __( 'Put the important content into real text and use images only in addition to it.', 'mailspur-email-log' ),
+			),
+			'link_shortener'       => array(
+				/* translators: %s: shortener domain, e.g. "bit.ly" */
+				'title' => __( 'Link via a URL shortener: %1$s', 'mailspur-email-log' ),
+				'text'  => __( 'Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse.', 'mailspur-email-log' ),
+				'fix'   => __( 'Link to the full address directly. For click tracking, use UTM parameters on your own domain instead.', 'mailspur-email-log' ),
+			),
 			'dead_link'            => array(
 				/* translators: %s: path of the link, e.g. "/old-page/" */
 				'title' => __( 'Link to a page that does not exist on your site: %1$s', 'mailspur-email-log' ),

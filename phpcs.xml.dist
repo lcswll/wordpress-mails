@@ -67,6 +67,10 @@
 	<rule ref="WordPress.NamingConventions.ValidFunctionName.MethodNameInvalid">
 		<exclude-pattern>tests/*</exclude-pattern>
 	</rule>
+	<!-- Fake keys in tests are split ("sk_" . "live_…") so secret scanners do not flag the test data. -->
+	<rule ref="Generic.Strings.UnnecessaryStringConcat">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
 	<!-- Tests swap $wpdb for a recording fake. -->
 	<rule ref="WordPress.WP.GlobalVariablesOverride">
 		<exclude-pattern>tests/*</exclude-pattern>

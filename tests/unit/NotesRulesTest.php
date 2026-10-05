@@ -259,7 +259,7 @@ final class NotesRulesTest extends TestCase {
 	}
 
 	public function test_recipient_typos(): void {
-		$notes = Engine::analyze( $this->row( array( 'recipients' => 'anna@gmial.com, Bob <bob@web.dee>, carl@gmx.de' ) ), self::SITE );
+		$notes = Engine::analyze( $this->row( array( 'recipients' => 'anna@gmial.com, Bob <bob@web.dee>, carl@gmx.de' ) ), self::SITE, array( 'open_recipients' ) );
 		$this->assertSame( array( 'recipient_typo', 'recipient_typo' ), array_column( $notes, 'code' ) );
 		$this->assertSame( array( 'gmial.com', 'gmail.com' ), $notes[0]['params'] );
 		$this->assertSame( array( 'web.dee', 'web.de' ), $notes[1]['params'] );
@@ -287,10 +287,131 @@ final class NotesRulesTest extends TestCase {
 
 	public function test_images_without_alt_but_not_tracking_pixels(): void {
 		$row   = $this->row( array( 'message' => '<img src="https://shop.example.de/a.png"><img src="https://shop.example.de/b.png" alt=""><img src="https://t.example/p.gif" width="1" height="1">' ) );
-		$notes = Engine::analyze( $row, self::SITE );
+		$notes = Engine::analyze( $row, self::SITE, array( 'image_only' ) );
 		$this->assertSame( array( 'img_no_alt' ), array_column( $notes, 'code' ) );
 		$this->assertSame( array( '1' ), $notes[0]['params'] );
 		$this->assertSame( 'info', $notes[0]['severity'] );
+	}
+
+	public function test_open_distribution_list(): void {
+		$notes = Engine::analyze( $this->row( array( 'recipients' => 'anna@gmail.com, Ben <ben@web.de>' ) ), self::SITE );
+		$this->assertSame( array( 'open_recipients' ), array_column( $notes, 'code' ) );
+		$this->assertSame( 'warning', $notes[0]['severity'] );
+		$this->assertSame( array( '2' ), $notes[0]['params'] );
+
+		// Cc is visible too; two mailboxes at the same provider are two people.
+		$this->assertContains( 'open_recipients', $this->codes( $this->row( array( 'headers' => "Content-Type: text/html\nCc: carl@kunde-a.de, dora@kunde-b.de" ) ) ) );
+		$this->assertContains( 'open_recipients', $this->codes( $this->row( array( 'recipients' => 'anna@gmail.com, ben@gmail.com' ) ) ) );
+	}
+
+	public function test_team_and_bcc_recipients_are_no_open_distribution_list(): void {
+		$quiet = array(
+			'own domain + customer'   => array( 'recipients' => 'shop@example.de, anna@gmail.com' ),
+			'subdomain of the site'   => array( 'recipients' => 'anna@gmail.com, info@shop.example.de, team@mail.example.de' ),
+			'colleagues at one firm'  => array( 'recipients' => 'anna@kunde.de, ben@kunde.de, carl@sales.kunde.de' ),
+			'others only in Bcc'      => array( 'headers' => "Content-Type: text/html\nBcc: ben@web.de, carl@gmx.de" ),
+			'single recipient'        => array( 'recipients' => 'Anna <anna@gmail.com>' ),
+			'test addresses'          => array( 'recipients' => 'anna@gmail.com, bob@example.org, carl@shop.test' ),
+			'duplicated address'      => array(
+				'recipients' => 'anna@gmail.com',
+				'headers'    => "Content-Type: text/html\nCc: Anna@Gmail.com",
+			),
+			'sender domain is a team' => array(
+				'recipients' => 'anna@gmail.com, office@agency.com',
+				'sender'     => 'Agency <hello@agency.com>',
+			),
+		);
+		foreach ( $quiet as $case => $overrides ) {
+			$this->assertNotContains( 'open_recipients', $this->codes( $this->row( $overrides ) ), $case );
+		}
+
+		// A free mailer as sender is no team: its other users are still strangers.
+		$this->assertContains(
+			'open_recipients',
+			$this->codes(
+				$this->row(
+					array(
+						'recipients' => 'anna@gmail.com, ben@gmail.com',
+						'sender'     => 'shop@gmail.com',
+					)
+				)
+			)
+		);
+	}
+
+	/**
+	 * @return array<string,array{0:string,1:bool}>
+	 */
+	public function caps_subjects(): array {
+		return array(
+			'shouting'            => array( 'GROSSER SOMMERSCHLUSSVERKAUF HEUTE', true ),
+			'umlauts count'       => array( 'ÄRGER ÜBER ÖL', true ), // 8 letters without the umlauts.
+			'lower-case umlauts'  => array( 'Grüße aus München – Änderung', false ),
+			'short acronym'       => array( 'FYI', false ),
+			'ok'                  => array( 'OK', false ),
+			'short caps'          => array( 'NEW ORDER', false ),
+			'normal with acronym' => array( '[Example Shop] New order #1234 – PDF invoice', false ),
+			'title case'          => array( 'Your Order Has Been Received', false ),
+			'digits only'         => array( '#1234 – 2026-10-05', false ),
+		);
+	}
+
+	/**
+	 * @dataProvider caps_subjects
+	 */
+	public function test_subject_in_capitals( string $subject, bool $expected ): void {
+		$this->assertSame( $expected, in_array( 'subject_caps', $this->codes( $this->row( array( 'subject' => $subject ) ) ), true ) );
+	}
+
+	public function test_exclamation_marks_in_the_subject(): void {
+		$notes = Engine::analyze( $this->row( array( 'subject' => 'Only today!!! Free shipping!' ) ), self::SITE );
+		$this->assertSame( array( 'subject_exclamations' ), array_column( $notes, 'code' ) );
+		$this->assertSame( array( '4' ), $notes[0]['params'] );
+		$this->assertSame( 'info', $notes[0]['severity'] );
+
+		$this->assertNotContains( 'subject_exclamations', $this->codes( $this->row( array( 'subject' => 'Thanks, Anna! Your order is here!' ) ) ) );
+	}
+
+	public function test_email_that_is_only_an_image(): void {
+		$banner = '<html><body><a href="https://shop.example.de/sale/"><img src="https://shop.example.de/sale.jpg" alt="Big summer sale – 50% off everything in the shop"></a><p>Unsubscribe</p></body></html>';
+		$this->assertSame( array( 'image_only' ), $this->codes( $this->row( array( 'message' => $banner ) ) ) );
+
+		// Real text, plain text mails, HTML without images and tracking pixels alone are fine.
+		$pixel = '<p>Hi</p><img src="https://t.example/p.gif" width="1" height="1">';
+		$this->assertNotContains( 'image_only', $this->codes( $this->row() ) );
+		$this->assertNotContains( 'image_only', $this->codes( $this->row( array( 'message' => $pixel ) ) ) );
+		$this->assertNotContains( 'image_only', $this->codes( $this->row( array( 'message' => '<p>Hi</p>' ) ) ) );
+		$this->assertNotContains(
+			'image_only',
+			$this->codes(
+				$this->row(
+					array(
+						'message'      => 'See <img src="x.png">',
+						'content_type' => 'text/plain',
+						'headers'      => '',
+					)
+				)
+			)
+		);
+	}
+
+	public function test_links_via_url_shorteners(): void {
+		$notes = Engine::analyze( $this->row( array( 'message' => '<p>Your tracking link: <a href="https://bit.ly/3xYz">track parcel</a></p>' ) ), self::SITE );
+		$this->assertSame( array( 'link_shortener' ), array_column( $notes, 'code' ) );
+		$this->assertSame( array( 'bit.ly' ), $notes[0]['params'] );
+
+		$plain = $this->row(
+			array(
+				'message'      => "Read more: HTTPS://T.CO/abc\n",
+				'content_type' => 'text/plain',
+				'headers'      => '',
+			)
+		);
+		$this->assertContains( 'link_shortener', $this->codes( $plain ) );
+
+		// Look-alike hosts and the shortener's name in text are fine.
+		$ok = '<p><a href="https://t.com/x">t.com</a> <a href="https://bit.ly.example.de/">x</a> <a href="https://notbit.ly/x">y</a> Use bit.ly for short links.</p>';
+		$this->assertNotContains( 'link_shortener', $this->codes( $this->row( array( 'message' => $ok ) ) ) );
 	}
 
 	public function test_notes_are_sorted_by_severity_and_ignored_codes_dropped(): void {
@@ -448,7 +569,7 @@ final class NotesRulesTest extends TestCase {
 
 	public function test_every_built_in_code_has_texts(): void {
 		$texts = Catalog::texts();
-		foreach ( array( 'html_in_plain', 'gmail_clip', 'relative_urls', 'dev_url', 'foreign_wp_host', 'placeholder', 'mojibake', 'no_from', 'from_localhost', 'from_free_mailer', 'from_domain_mismatch', 'bulk_no_unsubscribe', 'recipient_typo', 'link_mismatch', 'subject_empty', 'subject_long', 'img_no_alt', 'secret_password', 'secret_key', 'secret_card', 'no_mx', 'null_mx', 'duplicate', 'dead_link' ) as $code ) {
+		foreach ( array( 'html_in_plain', 'gmail_clip', 'relative_urls', 'dev_url', 'foreign_wp_host', 'placeholder', 'mojibake', 'no_from', 'from_localhost', 'from_free_mailer', 'from_domain_mismatch', 'bulk_no_unsubscribe', 'recipient_typo', 'link_mismatch', 'subject_empty', 'subject_long', 'img_no_alt', 'secret_password', 'secret_key', 'secret_card', 'open_recipients', 'subject_caps', 'subject_exclamations', 'image_only', 'link_shortener', 'no_mx', 'null_mx', 'duplicate', 'dead_link' ) as $code ) {
 			$this->assertArrayHasKey( $code, $texts, $code );
 			$this->assertNotSame( '', $texts[ $code ]['text'], $code );
 			$this->assertNotSame( '', $texts[ $code ]['fix'], $code );

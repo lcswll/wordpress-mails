@@ -60,6 +60,8 @@ Most email problems are not failures but emails that are never triggered: a plug
 = Notes: problems found in your emails =
 
 * HTML sent as plain text, Gmail clipping (> 102 KB), relative links and images, development or staging URLs, unreplaced placeholders like `{first_name}` or `%s`, broken encoding (Ã¤), risky sender addresses (wordpress@localhost, gmail.com sent from your server), bulk mail without `List-Unsubscribe`, typos in recipient domains (gmial.com), misleading link texts and more – shown as a badge in the list.
+* **Open distribution lists:** warns when several outside recipients in To or Cc can see each other's addresses (a typical GDPR data breach). Your own domain and Bcc do not count.
+* **Spam signs:** a subject in capitals or with many exclamation marks, an email that is almost only an image, links via URL shorteners (bit.ly …) – hints that can make delivery worse, not a spam score.
 * **Secrets in plain text:** warns when a plugin emails a password, API key, private key or card number – and masks the value in the log, together with the secrets in links.
 * When you open an entry: whether the recipient domain can receive email at all (MX lookup), whether the same email was sent several times within minutes and whether links to your own site lead to a page that no longer exists (404).
 * **Error messages explained:** PHPMailer errors, SMTP reply codes (421, 450, 535, 550, 554 …), Gmail and Microsoft 365 login problems and API mailer errors (invalid key, unverified domain, quota) with step-by-step fixes.

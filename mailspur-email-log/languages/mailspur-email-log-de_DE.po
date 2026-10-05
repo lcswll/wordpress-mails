@@ -533,6 +533,9 @@ msgstr "Jede E-Mail wird einmal beim Protokollieren oder Importieren geprüft (o
 msgid "Editors and above"
 msgstr "Redakteure und höher"
 
+msgid "Email consists almost only of images"
+msgstr "E-Mail besteht fast nur aus Bildern"
+
 msgid "Email failure spike"
 msgstr "Häufung fehlgeschlagener E-Mails"
 
@@ -947,6 +950,12 @@ msgstr "Link auf eine Entwicklungsadresse: %1$s"
 msgid "Link to a page that does not exist on your site: %1$s"
 msgstr "Link auf eine Seite, die es auf deiner Website nicht gibt: %1$s"
 
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Verlinke direkt die vollständige Adresse. Für Klick-Tracking nutze stattdessen UTM-Parameter auf deiner eigenen Domain."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Link über einen URL-Kürzer: %1$s"
+
 msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
 msgstr "Links und Bilder, die mit „/“ beginnen, funktionieren nur auf der Website. Im Mailprogramm fehlt die Website-Adresse zum Ergänzen – Bilder bleiben leer und Links führen ins Leere."
 
@@ -1027,6 +1036,9 @@ msgstr "Stell sicher, dass die E-Mail mit „charset=UTF-8“ gesendet wird, Tem
 
 msgid "Make sure the encryption setting matches the port."
 msgstr "Stell sicher, dass die Verschlüsselung zum Port passt."
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Viele Ausrufezeichen im Betreff (%1$s)"
 
 msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
 msgstr "Viele Mailprogramme blockieren Bilder, bis der Leser sie erlaubt. Ohne Alternativtext sieht er nur leere Kästen; Screenreader lesen nichts Sinnvolles vor."
@@ -1241,6 +1253,9 @@ msgstr "Benachrichtigt nur, wenn die letzten 14 Tage zeigen, dass in diesem Zeit
 msgid "Only held emails can be released."
 msgstr "Nur zurückgehaltene E-Mails können freigegeben werden."
 
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Offener Verteiler: %1$s externe Empfänger sehen gegenseitig ihre Adressen"
+
 msgid "Open latest"
 msgstr "Neueste öffnen"
 
@@ -1360,6 +1375,9 @@ msgstr "Schützt deine Domain, wenn weit mehr E-Mails als üblich versendet werd
 
 msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
 msgstr "Anbieter wie %2$s veröffentlichen eine strenge DMARC-Richtlinie. Eine E-Mail „von“ ihrer Domain, die dein Webserver verschickt, fällt durch diese Prüfung und wird abgelehnt oder landet im Spam."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Schreib die wichtigen Inhalte als echten Text und setze Bilder nur ergänzend ein."
 
 msgid "Put the important information first and keep the subject under about 80 characters."
 msgstr "Stell das Wichtigste an den Anfang und halte den Betreff unter etwa 80 Zeichen."
@@ -1595,6 +1613,9 @@ msgstr "Versende Newsletter mit einem Newsletter-Plugin oder -Dienst, der die He
 msgid "Send now"
 msgstr "Jetzt senden"
 
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Schick solche E-Mails einzeln an jeden Empfänger oder setze die Empfänger in Bcc. Für Newsletter nimm ein Newsletter-Plugin, das pro Empfänger eine eigene E-Mail verschickt. Wurden Kundenadressen offengelegt, kläre mit deinem Datenschutzbeauftragten, ob der Vorfall gemeldet werden muss."
+
 msgid "Send test alert"
 msgstr "Test-Benachrichtigung senden"
 
@@ -1697,6 +1718,9 @@ msgstr "Staging-Modus einrichten"
 msgid "Settings"
 msgstr "Einstellungen"
 
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Mehrere Ausrufezeichen sind typisch für Werbe-Spam. Spamfilter können das negativ werten, was die Zustellung verschlechtern kann."
+
 msgid "Several of the latest emails of this type failed."
 msgstr "Mehrere der letzten E-Mails dieses Typs sind fehlgeschlagen."
 
@@ -1705,6 +1729,9 @@ msgstr "Anteil fehlgeschlagener E-Mails pro Tag (bei langen Zeiträumen pro Woch
 
 msgid "Shop managers and above"
 msgstr "Shop-Manager und höher"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Gekürzte Links verbergen, wohin sie führen. Spammer nutzen sie häufig, deshalb können Spamfilter sie negativ werten, was die Zustellung verschlechtern kann."
 
 msgid "Show all in Mail Log"
 msgstr "Alle im Mail-Log anzeigen"
@@ -1787,6 +1814,12 @@ msgstr "Den exakten MIME-Rohquelltext jeder E-Mail speichern"
 msgid "Subject"
 msgstr "Betreff"
 
+msgid "Subject mostly in capital letters"
+msgstr "Betreff überwiegend in Großbuchstaben"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Betreffzeilen in Großbuchstaben wirken wie Schreien und sind in Spam verbreitet. Spamfilter können das negativ werten, was die Zustellung verschlechtern kann."
+
 msgid "Subjects often contain names or order numbers."
 msgstr "Betreffzeilen enthalten oft Namen oder Bestellnummern."
 
@@ -1819,6 +1852,9 @@ msgstr "Das ist in Ordnung, wenn dein Mailserver für diese Domain senden darf. 
 
 msgid "The API key was rejected"
 msgstr "Der API-Schlüssel wurde abgelehnt"
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "Die HTML-E-Mail enthält Bilder, aber kaum Text. Spamfilter können Bilder nicht lesen und misstrauen solchen E-Mails, was die Zustellung verschlechtern kann. Blockiert das Mailprogramm Bilder, sieht der Leser eine fast leere E-Mail."
 
 msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
 msgstr "Das SMTP-Konto darf nur mit seiner eigenen Adresse (oder verifizierten Aliassen) senden. WordPress oder ein Plugin hat eine andere Absenderadresse verwendet."
@@ -1873,6 +1909,9 @@ msgstr "Die E-Mail verlinkt eine Adresse dieser Website, die mit „Seite nicht 
 
 msgid "The email types are being rebuilt from the log."
 msgstr "Die E-Mail-Typen werden aus dem Protokoll neu aufgebaut."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "Die E-Mail ging in An oder Cc an mehrere Personen außerhalb deiner Domain. Jeder Empfänger sieht alle anderen Adressen. Bei Kunden oder Mitgliedern gibst du so personenbezogene Daten an Fremde weiter – nach DSGVO in der Regel eine Datenpanne."
 
 msgid "The emergency brake holds outgoing emails until you release or discard them."
 msgstr "Die Versand-Notbremse hält ausgehende E-Mails zurück, bis du sie freigibst oder verwirfst."
@@ -2111,6 +2150,9 @@ msgstr "Verwende absolute URLs mit https:// und Domain, z. B. mit home_url() ode
 msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
 msgstr "Verwende genau den Hostnamen, für den das Zertifikat ausgestellt ist (z. B. den smtp.…-Host des Anbieters statt einer IP oder deiner eigenen Domain)."
 
+msgid "Use one exclamation mark at most."
+msgstr "Verwende höchstens ein Ausrufezeichen."
+
 msgid "Use the arrow keys to move between cells."
 msgstr "Mit den Pfeiltasten zwischen den Feldern wechseln."
 
@@ -2206,6 +2248,9 @@ msgstr "WordPress"
 
 msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
 msgstr "WordPress versendet standardmäßig über die PHP-Funktion mail(). Auf diesem Server ist sie deaktiviert oder es ist kein Mailprogramm (sendmail) installiert – üblich bei lokalen Umgebungen, Docker und vielen Managed Hostern."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Schreib den Betreff in normaler Groß- und Kleinschreibung und hebe höchstens ein einzelnes Wort hervor."
 
 msgid "XML-RPC"
 msgstr "XML-RPC"

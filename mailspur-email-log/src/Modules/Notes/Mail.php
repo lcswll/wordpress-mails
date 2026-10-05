@@ -41,6 +41,9 @@ final class Mail {
 	/** @var string[] Lower-cased Cc and Bcc addresses. */
 	public $copies;
 
+	/** @var string[] Lower-cased Cc addresses (visible to every recipient, unlike Bcc). */
+	public $cc;
+
 	/** @var int Number of Bcc addresses. */
 	public $bcc;
 
@@ -75,6 +78,7 @@ final class Mail {
 
 		$this->headers = array();
 		$copies        = '';
+		$cc            = '';
 		$bcc           = '';
 		foreach ( explode( "\n", str_replace( "\r\n", "\n", (string) ( $row['headers'] ?? '' ) ) ) as $line ) {
 			$pos = strpos( $line, ':' );
@@ -86,6 +90,7 @@ final class Mail {
 			$this->headers[ $name ] = $value;
 			if ( 'cc' === $name ) {
 				$copies .= ',' . $value;
+				$cc     .= ',' . $value;
 			} elseif ( 'bcc' === $name ) {
 				$copies .= ',' . $value;
 				$bcc    .= ',' . $value;
@@ -122,6 +127,7 @@ final class Mail {
 
 		$this->to     = self::emails( (string) ( $row['recipients'] ?? '' ) );
 		$this->copies = self::emails( $copies );
+		$this->cc     = self::emails( $cc );
 		$this->bcc    = count( self::emails( $bcc ) );
 	}
 

@@ -33,6 +33,24 @@ final class Rules {
 	/** Bcc addresses from which a mail counts as bulk. */
 	const BULK_BCC = 10;
 
+	/** Outside parties in To/Cc from which recipients reveal each other's addresses. */
+	const OPEN_PARTIES = 2;
+
+	/** Letters a subject needs before "mostly capitals" counts ("OK", "FYI" never do). */
+	const CAPS_MIN_LETTERS = 10;
+
+	/** Share of capital letters from which a subject counts as written in capitals. */
+	const CAPS_RATIO = 0.8;
+
+	/** Exclamation marks in the subject from which it looks like advertising. */
+	const SUBJECT_EXCLAMATIONS = 3;
+
+	/** Visible letters below which an HTML email with images counts as "only an image". */
+	const IMAGE_ONLY_LETTERS = 40;
+
+	/** Public URL shorteners: they hide the link target, so spam filters distrust them. */
+	const SHORTENERS = array( 'bit.ly', 'tinyurl.com', 't.co', 'goo.gl', 'ow.ly', 'is.gd', 'buff.ly', 'rebrand.ly', 'cutt.ly', 'shorturl.at', 'tiny.cc', 'rb.gy', 't.ly', 'v.gd', 'bl.ink', 'lnkd.in', 's.id' );
+
 	/**
 	 * Built-in rules, keyed by id.
 	 *
@@ -53,6 +71,8 @@ final class Rules {
 			'subject'          => array( self::class, 'subject' ),
 			'img_alt'          => array( self::class, 'img_alt' ),
 			'secrets'          => array( self::class, 'secrets' ),
+			'open_recipients'  => array( self::class, 'open_recipients' ),
+			'spam_signs'       => array( self::class, 'spam_signs' ),
 		);
 	}
 
@@ -336,6 +356,95 @@ final class Rules {
 			$notes[ $code . "\0" . implode( '', $params ) ] = self::note( $code, $severity, $params );
 		}
 		return array_slice( array_values( $notes ), 0, 3 );
+	}
+
+	/**
+	 * Several outside recipients in To/Cc see each other's addresses – with customers a data breach
+	 * (GDPR). Addresses on the site's domain and the sender's domain are the team and do not count.
+	 * A party is a company domain or a single mailbox at a public provider (two gmail.com addresses are
+	 * two people, two colleagues at customer.de are one party). Bcc is invisible and never counts.
+	 *
+	 * @return array<int,array{code:string,severity:string,params:array<int,string>}>
+	 */
+	public static function open_recipients( Mail $mail ): array {
+		$visible = array_values( array_unique( array_merge( $mail->to, $mail->cc ) ) );
+		if ( count( $visible ) < self::OPEN_PARTIES ) {
+			return array();
+		}
+		$own  = array( self::bare_host( $mail->site['home'] ) );
+		$from = Mail::domain( $mail->from );
+		if ( '' !== $from && ! Domains::is_free_mailer( $from ) ) {
+			$own[] = $from; // A free mailer as sender is no team domain: its users are strangers.
+		}
+
+		$external = 0;
+		$parties  = array();
+		foreach ( array_slice( $visible, 0, 500 ) as $email ) {
+			$domain = Mail::domain( $email );
+			if ( Domains::is_reserved( $domain ) ) {
+				continue; // Test addresses (example.com, *.test, localhost) belong to nobody.
+			}
+			foreach ( $own as $host ) {
+				if ( '' !== $host && self::same_site( $host, $domain ) ) {
+					continue 2;
+				}
+			}
+			++$external;
+			if ( in_array( $domain, Domains::PROVIDERS, true ) ) {
+				$parties[ $email ] = true;
+				continue;
+			}
+			foreach ( array_keys( $parties ) as $party ) {
+				if ( false === strpos( (string) $party, '@' ) && self::same_site( (string) $party, $domain ) ) {
+					continue 2; // sales.customer.de belongs to customer.de.
+				}
+			}
+			$parties[ $domain ] = true;
+		}
+		return count( $parties ) >= self::OPEN_PARTIES ? array( self::note( 'open_recipients', self::WARNING, array( $external ) ) ) : array();
+	}
+
+	/**
+	 * Cheap local signs that spam filters may count against a mail: a subject in capitals or with many
+	 * exclamation marks, an HTML mail that is little more than an image, links via URL shorteners.
+	 * No score – each sign is a hint of its own.
+	 *
+	 * @return array<int,array{code:string,severity:string,params:array<int,string>}>
+	 */
+	public static function spam_signs( Mail $mail ): array {
+		$notes = array();
+
+		// \p{Lu}/\p{Ll} include umlauts and other scripts; invalid UTF-8 counts as no letters at all.
+		$upper = (int) preg_match_all( '/\p{Lu}/u', $mail->subject );
+		$lower = (int) preg_match_all( '/\p{Ll}/u', $mail->subject );
+		if ( $upper + $lower >= self::CAPS_MIN_LETTERS && $upper >= self::CAPS_RATIO * ( $upper + $lower ) ) {
+			$notes[] = self::note( 'subject_caps', self::INFO );
+		}
+
+		$exclamations = substr_count( $mail->subject, '!' );
+		if ( $exclamations >= self::SUBJECT_EXCLAMATIONS ) {
+			$notes[] = self::note( 'subject_exclamations', self::INFO, array( $exclamations ) );
+		}
+
+		$text = $mail->text();
+		if ( $mail->is_html && preg_match_all( '#<img\b[^>]*>#i', $text, $m ) ) {
+			$images = 0;
+			foreach ( $m[0] as $tag ) {
+				if ( ! preg_match( '/\s(?:width|height)\s*=\s*["\']?[01]\b/i', $tag ) ) {
+					++$images; // Tracking pixels do not count.
+				}
+			}
+			$visible = html_entity_decode( (string) preg_replace( '/<[^>]+>/', ' ', $text ), ENT_QUOTES, 'UTF-8' );
+			if ( $images > 0 && (int) preg_match_all( '/\p{L}/u', $visible ) < self::IMAGE_ONLY_LETTERS ) {
+				$notes[] = self::note( 'image_only', self::INFO );
+			}
+		}
+
+		$hosts = implode( '|', array_map( 'preg_quote', self::SHORTENERS ) );
+		if ( preg_match( '#\bhttps?://(?:www\.)?(' . $hosts . ')(?=[/?\#:\s"\'<>]|$)#i', $text, $short ) ) {
+			$notes[] = self::note( 'link_shortener', self::INFO, array( strtolower( $short[1] ) ) );
+		}
+		return $notes;
 	}
 
 	/** Host without "www." and port, lower-cased. */
