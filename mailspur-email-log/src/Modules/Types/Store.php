@@ -2,8 +2,9 @@
 /**
  * The two tables behind the email types: one row per type and one counter row per type and day.
  *
- * Only counters, subject patterns and a small state per type (log ids, body fingerprints, cron hook – see
- * Indexer) are stored – no recipients, no contents. Day rows follow the log
+ * Only counters, subject patterns and a small state per type (log ids, body fingerprints, cron hook, emails to
+ * administrators per day, the latest waiting times, the sending function – see Indexer) are stored – no
+ * recipients, no contents. Day rows follow the log
  * retention (at most a year), and a type disappears with its last day row.
  *
  * Direct queries: the module's own tables.

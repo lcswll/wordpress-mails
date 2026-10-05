@@ -1,7 +1,8 @@
 <?php
 /**
- * Email types ("Mail Map"): an automatic inventory of every kind of email the site sends, with health per type
- * and an alert when a type that is sent regularly stops.
+ * Email types ("Mail Map"): an automatic inventory of every kind of email the site sends, with health per type,
+ * an alert when a type that is sent regularly stops, types that flood the administrators' inbox, slow types and
+ * new senders.
  *
  * Nothing runs while an email is sent: the log is read afterwards (hourly cron, or when the tab is opened).
  *
@@ -57,6 +58,8 @@ final class Module implements \Mailspur\Module {
 		add_action( 'admin_post_mailspur_types_mute', array( $page, 'mute' ) );
 		add_action( 'admin_post_mailspur_types_rebuild', array( $page, 'rebuild' ) );
 		add_action( 'admin_post_mailspur_types_seen', array( $page, 'seen' ) );
+		add_action( 'admin_post_mailspur_types_quiet', array( Quiet::class, 'handle' ) );
+		Quiet::register();
 
 		add_action(
 			'rest_api_init',
@@ -75,6 +78,10 @@ final class Module implements \Mailspur\Module {
 			$indexer->cron();
 			if ( class_exists( Alerts::class ) ) {
 				( new Monitor( $store, array( new Alerts(), 'dispatch' ) ) )->run();
+				$settings = Settings::all();
+				if ( ! empty( $settings['alert_types'] ) && Alerts::has_channel( $settings ) ) {
+					( new Senders() )->check( array( new Alerts(), 'dispatch' ), $settings );
+				}
 			}
 		};
 		add_action( self::HOOK, $cron );

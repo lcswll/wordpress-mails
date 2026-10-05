@@ -3,8 +3,9 @@
  * Sorts logged emails into email types – incrementally and never while an email is being sent.
  *
  * Reads the log after a cursor (log id) in small keyset batches: id, date, status, source, subject and the notes
- * count, then – in smaller chunks – the start of each body (content fingerprint, see Content) and the meta (was
- * the email sent by WP-Cron, from which hook). Runs hourly via WP-Cron and briefly when the "Email types" tab is
+ * count, then – in smaller chunks – the start of each body (content fingerprint, see Content), the recipients
+ * (only compared with the administrators' addresses, see Noise) and the meta (was the email sent by WP-Cron,
+ * from which hook, how long it took – see Speed). New senders are remembered (Senders). Runs hourly via WP-Cron and briefly when the "Email types" tab is
  * opened, so sending an email costs nothing extra. Imported emails are picked up the same way.
  *
  * Direct queries: the plugin's own table.
@@ -50,9 +51,17 @@ final class Indexer {
 	/** @var array<string,int[]> Type ids by source. */
 	private $by_source = array();
 
-	public function __construct( Store $store, ?callable $now = null ) {
-		$this->store = $store;
-		$this->now   = $now ?? 'time';
+	/** @var string[]|null Administrators' addresses (lower-cased), looked up once per run. */
+	private $admins;
+
+	/**
+	 * @param (callable():int)|null $now    Clock.
+	 * @param string[]|null         $admins Administrators' addresses (default: Noise::addresses()).
+	 */
+	public function __construct( Store $store, ?callable $now = null, ?array $admins = null ) {
+		$this->store  = $store;
+		$this->now    = $now ?? 'time';
+		$this->admins = $admins;
 	}
 
 	/** Cron callback. */
@@ -99,8 +108,16 @@ final class Indexer {
 		}
 
 		$this->load();
-		$settle = gmdate( 'Y-m-d H:i:s', $now - self::SETTLE );
-		$read   = 0;
+		$settle  = gmdate( 'Y-m-d H:i:s', $now - self::SETTLE );
+		$read    = 0;
+		$senders = Senders::state();
+		$before  = $senders;
+		if ( $senders['since'] <= 0 ) {
+			// First run: senders already in the types (e.g. before an update) are known, not new.
+			foreach ( $this->types as $type ) {
+				$senders = Senders::observe( $senders, (string) $type['source'], (int) strtotime( $type['first_seen'] . ' UTC' ), $now );
+			}
+		}
 
 		while ( $read < $limit ) {
 			$rows = (array) $wpdb->get_results(
@@ -164,7 +181,8 @@ final class Indexer {
 				}
 				unset( $type );
 				$touched[ $id ]            = true;
-				$mails[ (int) $row['id'] ] = array( $id, $time );
+				$mails[ (int) $row['id'] ] = array( $id, $time, $day );
+				$senders                   = Senders::observe( $senders, $source, $time, $now );
 			}
 
 			$this->contents( $mails );
@@ -178,20 +196,24 @@ final class Indexer {
 				break;
 			}
 		}
+		if ( $senders !== $before ) {
+			Senders::save( $senders );
+		}
 		return $read;
 	}
 
 	/**
-	 * Content fingerprints, cron origin and latest log id per type, in log order.
+	 * Content fingerprints, cron origin, emails to administrators, waiting times and latest log id per type, in
+	 * log order.
 	 *
-	 * @param array<int,array{0:int,1:int}> $mails Type id and unix time by log id.
+	 * @param array<int,array{0:int,1:int,2:string}> $mails Type id, unix time and site-local day by log id.
 	 */
 	private function contents( array $mails ): void {
 		global $wpdb;
 		foreach ( array_chunk( array_keys( $mails ), self::BODY_BATCH ) as $ids ) {
 			$rows = (array) $wpdb->get_results(
 				$wpdb->prepare(
-					'SELECT id, content_type, SUBSTR(message, 1, %d) AS body, meta FROM %i WHERE id IN (' . implode( ',', array_fill( 0, count( $ids ), '%d' ) ) . ') ORDER BY id ASC',
+					'SELECT id, content_type, recipients, SUBSTR(message, 1, %d) AS body, meta FROM %i WHERE id IN (' . implode( ',', array_fill( 0, count( $ids ), '%d' ) ) . ') ORDER BY id ASC',
 					array_merge( array( Content::MAX_BODY, Repository::table() ), $ids )
 				),
 				ARRAY_A
@@ -201,15 +223,28 @@ final class Indexer {
 				if ( ! isset( $mails[ $log_id ] ) ) {
 					continue;
 				}
-				list( $id, $time ) = $mails[ $log_id ];
-				$extra             = (array) ( $this->types[ $id ]['extra'] ?? array() );
-				$body              = (string) $row['body'];
+				list( $id, $time, $day ) = $mails[ $log_id ];
+				$extra                   = (array) ( $this->types[ $id ]['extra'] ?? array() );
+				$body                    = (string) $row['body'];
 
 				$extra['lid']     = max( (int) ( $extra['lid'] ?? 0 ), $log_id );
 				$content          = (array) ( $extra['content'] ?? array() );
 				$extra['content'] = Content::observe( $content, Content::hash( $body, Content::is_html( (string) $row['content_type'], $body ) ), $log_id, $time );
 
-				$cron = self::cron_hook( (string) $row['meta'] );
+				if ( Noise::to_admin( (string) $row['recipients'], $this->admins() ) ) {
+					$extra = Noise::observe( $extra, $day );
+				}
+
+				$trace = self::trace( (string) $row['meta'] );
+				if ( null !== $trace ) {
+					$extra  = Speed::observe( $extra, $trace );
+					$origin = isset( $trace['origin']['function'] ) && is_string( $trace['origin']['function'] ) ? $trace['origin']['function'] : '';
+					if ( '' !== $origin ) {
+						$extra['fn'] = substr( $origin, 0, 100 ); // Where the type is sent from (switch-off links).
+					}
+				}
+
+				$cron = null === $trace ? null : self::cron_of_trace( $trace );
 				if ( null !== $cron ) {
 					// Majority of the emails with a trace: "mostly sent by WP-Cron" plus the latest cron hook.
 					$extra['traced'] = (int) ( $extra['traced'] ?? 0 ) + 1;
@@ -232,15 +267,32 @@ final class Indexer {
 	 * @return string|false|null
 	 */
 	public static function cron_hook( string $meta ) {
+		$trace = self::trace( $meta );
+		return null === $trace ? null : self::cron_of_trace( $trace );
+	}
+
+	/**
+	 * The trace of a log row's meta, when it has a request context.
+	 *
+	 * @return array<string,mixed>|null
+	 */
+	public static function trace( string $meta ): ?array {
 		if ( '' === $meta || false === strpos( $meta, '"request"' ) ) {
 			return null;
 		}
-		$data    = json_decode( $meta, true );
-		$trace   = is_array( $data ) && isset( $data['trace'] ) && is_array( $data['trace'] ) ? $data['trace'] : array();
-		$request = isset( $trace['request'] ) && is_array( $trace['request'] ) ? $trace['request'] : null;
-		if ( null === $request ) {
-			return null;
-		}
+		$data  = json_decode( $meta, true );
+		$trace = is_array( $data ) && isset( $data['trace'] ) && is_array( $data['trace'] ) ? $data['trace'] : array();
+		return isset( $trace['request'] ) && is_array( $trace['request'] ) ? $trace : null;
+	}
+
+	/**
+	 * Cron origin of a trace with a request context.
+	 *
+	 * @param array<string,mixed> $trace
+	 * @return string|false
+	 */
+	private static function cron_of_trace( array $trace ) {
+		$request = (array) $trace['request'];
 		if ( 'cron' !== ( $request['type'] ?? '' ) ) {
 			return false;
 		}
@@ -335,6 +387,14 @@ final class Indexer {
 			}
 		}
 		return null;
+	}
+
+	/** @return string[] */
+	private function admins(): array {
+		if ( null === $this->admins ) {
+			$this->admins = Noise::addresses();
+		}
+		return $this->admins;
 	}
 
 	/** Starts over: clears the types and re-reads the whole log on the next runs. */

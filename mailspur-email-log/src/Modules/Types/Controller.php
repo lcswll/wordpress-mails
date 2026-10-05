@@ -110,6 +110,10 @@ final class Controller {
 					'hint' => (string) ( $template['hint'] ?? '' ),
 				),
 				'probe'     => (string) ( $template['probe'] ?? '' ),
+				'toAdmins'  => $item['admin'],
+				'noise'     => $item['noise'],
+				'slow'      => $item['slow'],
+				'newSender' => $item['new_sender'],
 			);
 		}
 		$response = new WP_REST_Response(

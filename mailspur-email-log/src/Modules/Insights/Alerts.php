@@ -384,7 +384,7 @@ final class Alerts {
 		);
 		$site    = wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES );
 		$title   = self::title( $type, $kind );
-		$link    = Admin::url( 'failures' === $type ? array( 'status' => 'failed' ) : ( 'type' === $type ? array( 'tab' => 'types' ) : array() ) );
+		$link    = Admin::url( 'failures' === $type ? array( 'status' => 'failed' ) : ( in_array( $type, array( 'type', 'sender' ), true ) ? array( 'tab' => 'types' ) : array() ) );
 
 		$to = (string) ( $settings['alert_email'] ?? '' );
 		if ( '' !== $to ) {
@@ -426,6 +426,9 @@ final class Alerts {
 		}
 		if ( 'type' === $type ) {
 			return 'recovery' === $kind ? __( 'Email type is sent again', 'mailspur-email-log' ) : __( 'Email type stopped', 'mailspur-email-log' );
+		}
+		if ( 'sender' === $type ) {
+			return __( 'New sender writes to many addresses', 'mailspur-email-log' );
 		}
 		if ( 'brake' === $type ) {
 			return 'recovery' === $kind ? __( 'Email volume back to normal', 'mailspur-email-log' ) : __( 'Emergency brake: unusual email flood', 'mailspur-email-log' );

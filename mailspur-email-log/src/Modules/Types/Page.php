@@ -1,7 +1,8 @@
 <?php
 /**
  * "Email types" tab (server-rendered, works without JavaScript), its settings row and form actions
- * (ignore a type, rebuild), plus the "Email type" line in the log's detail view.
+ * (ignore a type, rebuild), plus the "Email type" line in the log's detail view. Admin noise, slow types and
+ * new senders appear as counts in the summary and as small markers on the rows.
  *
  * @package Mailspur
  */
@@ -260,6 +261,15 @@ final class Page {
 				<?php if ( $sum['new'] ) : ?>
 					<li class="is-new"><strong><?php echo esc_html( number_format_i18n( $sum['new'] ) ); ?></strong> <?php esc_html_e( 'new this week', 'mailspur-email-log' ); ?></li>
 				<?php endif; ?>
+				<?php if ( $sum['fresh'] ) : ?>
+					<li class="is-fresh"><strong><?php echo esc_html( number_format_i18n( $sum['fresh'] ) ); ?></strong> <?php esc_html_e( 'from a new sender', 'mailspur-email-log' ); ?></li>
+				<?php endif; ?>
+				<?php if ( $sum['noise'] ) : ?>
+					<li class="is-noise"><strong><?php echo esc_html( number_format_i18n( $sum['noise'] ) ); ?></strong> <?php esc_html_e( 'often to administrators', 'mailspur-email-log' ); ?></li>
+				<?php endif; ?>
+				<?php if ( $sum['slow'] ) : ?>
+					<li class="is-slow"><strong><?php echo esc_html( number_format_i18n( $sum['slow'] ) ); ?></strong> <?php esc_html_e( 'slow to send', 'mailspur-email-log' ); ?></li>
+				<?php endif; ?>
 			</ul>
 
 			<nav class="mst-views" aria-label="<?php esc_attr_e( 'Filter email types', 'mailspur-email-log' ); ?>">
@@ -304,6 +314,9 @@ final class Page {
 					<h2 id="mst-group-<?php echo esc_attr( md5( (string) $source ) ); ?>">
 						<?php echo esc_html( Report::source_label( (string) $source ) ); ?>
 						<span class="mst-count"><?php echo esc_html( number_format_i18n( count( $list ) ) ); ?></span>
+						<?php if ( ! empty( $list[0]['new_sender'] ) ) : ?>
+							<span class="mst-flag is-fresh" title="<?php echo esc_attr( self::fresh_title( $list ) ); ?>"><?php esc_html_e( 'New sender', 'mailspur-email-log' ); ?></span>
+						<?php endif; ?>
 					</h2>
 					<div class="mst-table-wrap">
 						<table class="widefat mst-table">
@@ -371,6 +384,7 @@ final class Page {
 					?>
 				</span>
 				<?php $this->change( $item, $admin, $available ); ?>
+				<?php $this->hints( $item, $admin ); ?>
 			</td>
 			<td class="mst-col-volume">
 				<?php echo wp_kses( self::sparkline( (array) $item['series'] ), self::svg_tags() ); ?>
@@ -512,6 +526,133 @@ final class Page {
 				</form>
 			<?php endif; ?>
 		</span>
+		<?php
+	}
+
+	/**
+	 * Tooltip of the "New sender" marker.
+	 *
+	 * @param array<int,array<string,mixed>> $items Report items of one sender.
+	 */
+	private static function fresh_title( array $items ): string {
+		$first = time();
+		foreach ( $items as $item ) {
+			$first = min( $first, (int) $item['first_seen'] );
+		}
+		return sprintf(
+			/* translators: %s: date */
+			__( 'First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses.', 'mailspur-email-log' ),
+			(string) wp_date( (string) get_option( 'date_format' ), $first )
+		);
+	}
+
+	/**
+	 * Markers for admin noise (with where to switch it off) and slow sending (with tips), as small disclosures.
+	 *
+	 * @param array<string,mixed> $item Report item.
+	 */
+	private function hints( array $item, bool $admin ): void {
+		$fix   = Noise::fix( (string) $item['origin'], (string) $item['source'] );
+		$quiet = isset( $fix['quiet'] ) && in_array( $fix['quiet'], Quiet::active(), true ) ? (string) $fix['quiet'] : '';
+		$slow  = is_array( $item['slow'] ) ? $item['slow'] : null;
+		if ( empty( $item['noise'] ) && null === $slow && '' === $quiet ) {
+			return;
+		}
+		?>
+		<span class="mst-hints">
+			<?php if ( '' !== $quiet ) : ?>
+				<span class="mst-hint is-quiet">
+					<?php esc_html_e( 'Stopped by Mailspur.', 'mailspur-email-log' ); ?>
+					<?php if ( $admin ) : ?>
+						<?php self::quiet_form( $quiet, false, (int) $item['id'], __( 'Send again', 'mailspur-email-log' ) ); ?>
+					<?php endif; ?>
+				</span>
+			<?php elseif ( ! empty( $item['noise'] ) ) : ?>
+				<details class="mst-hint is-noise">
+					<summary>
+						<?php
+						/* translators: %s: number of emails */
+						printf( esc_html__( '%s to administrators in 30 days', 'mailspur-email-log' ), esc_html( number_format_i18n( (int) $item['admin'] ) ) );
+						?>
+					</summary>
+					<div class="mst-hint-body">
+						<?php if ( isset( $fix['url'], $fix['label'], $fix['hint'] ) ) : ?>
+							<p>
+								<?php
+								printf(
+									/* translators: 1: link to a settings screen, 2: name of the setting */
+									esc_html__( 'Switch it off under %1$s: “%2$s”.', 'mailspur-email-log' ),
+									'<a href="' . esc_url( (string) $fix['url'] ) . '">' . esc_html( (string) $fix['label'] ) . '</a>',
+									esc_html( (string) $fix['hint'] )
+								);
+								?>
+							</p>
+						<?php elseif ( isset( $fix['quiet'] ) ) : ?>
+							<p>
+								<?php
+								if ( Quiet::UPDATES === $fix['quiet'] ) {
+									esc_html_e( 'WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive.', 'mailspur-email-log' );
+								} else {
+									esc_html_e( 'WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email.', 'mailspur-email-log' );
+								}
+								?>
+							</p>
+							<?php if ( $admin ) : ?>
+								<?php self::quiet_form( (string) $fix['quiet'], true, (int) $item['id'], __( 'Stop these emails', 'mailspur-email-log' ) ); ?>
+							<?php endif; ?>
+						<?php else : ?>
+							<p>
+								<?php
+								/* translators: %s: plugin/theme name */
+								printf( esc_html__( 'Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here.', 'mailspur-email-log' ), esc_html( Report::source_label( (string) $item['source'] ) ) );
+								?>
+							</p>
+						<?php endif; ?>
+					</div>
+				</details>
+			<?php endif; ?>
+			<?php if ( null !== $slow ) : ?>
+				<details class="mst-hint is-slow">
+					<summary>
+						<?php
+						/* translators: %s: seconds, e.g. "2.4" */
+						printf( esc_html__( 'Waits %s s for the mail server', 'mailspur-email-log' ), esc_html( number_format_i18n( $slow['median'] / 1000, 1 ) ) );
+						?>
+					</summary>
+					<div class="mst-hint-body">
+						<p>
+							<?php
+							printf(
+								/* translators: 1: number of emails, 2: seconds, 3: seconds */
+								esc_html__( 'Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s).', 'mailspur-email-log' ),
+								esc_html( number_format_i18n( (int) $slow['n'] ) ),
+								esc_html( number_format_i18n( $slow['median'] / 1000, 1 ) ),
+								esc_html( number_format_i18n( $slow['average'] / 1000, 1 ) )
+							);
+							?>
+						</p>
+						<ul>
+							<?php foreach ( Speed::tips( (string) $slow['mailer'] ) as $tip ) : ?>
+								<li><?php echo esc_html( $tip ); ?></li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				</details>
+			<?php endif; ?>
+		</span>
+		<?php
+	}
+
+	private static function quiet_form( string $key, bool $on, int $id, string $label ): void {
+		?>
+		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+			<input type="hidden" name="action" value="mailspur_types_quiet">
+			<input type="hidden" name="quiet" value="<?php echo esc_attr( $key ); ?>">
+			<input type="hidden" name="on" value="<?php echo esc_attr( $on ? '1' : '0' ); ?>">
+			<input type="hidden" name="type" value="<?php echo esc_attr( (string) $id ); ?>">
+			<?php wp_nonce_field( Quiet::NONCE, '_wpnonce', false ); ?>
+			<button type="submit" class="button-link"><?php echo esc_html( $label ); ?></button>
+		</form>
 		<?php
 	}
 
@@ -663,6 +804,8 @@ final class Page {
 			'muted'   => __( 'This email type is ignored now: no status, no alerts.', 'mailspur-email-log' ),
 			'watched' => __( 'This email type is monitored again.', 'mailspur-email-log' ),
 			'seen'    => __( 'Content change marked as seen.', 'mailspur-email-log' ),
+			'quiet'   => __( 'Mailspur stops these emails now; their email type is ignored.', 'mailspur-email-log' ),
+			'loud'    => __( 'These emails are sent again; their email type is monitored again.', 'mailspur-email-log' ),
 		);
 		if ( isset( $text[ $done ] ) ) {
 			printf( '<div class="notice notice-success inline is-dismissible"><p>%s</p></div>', esc_html( $text[ $done ] ) );
@@ -749,6 +892,7 @@ final class Page {
 				<td>
 					<label><input type="checkbox" name="<?php echo esc_attr( $name ); ?>[alert_types]" value="1" <?php checked( ! empty( $s['alert_types'] ) ); ?>> <?php esc_html_e( 'Alert when an email type that is sent regularly stops', 'mailspur-email-log' ); ?></label>
 					<p class="description"><?php esc_html_e( 'Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert.', 'mailspur-email-log' ); ?></p>
+						<p class="description"><?php esc_html_e( 'Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline.', 'mailspur-email-log' ); ?></p>
 				</td>
 			</tr>
 		</table>

@@ -1,7 +1,7 @@
 <?php
 /**
- * Health of every email type: volume of the last 30 days, failures, rhythm, silence and what changed on the
- * site since the type was last sent. Pure (input: stored types and day counters), used by the tab, REST and
+ * Health of every email type: volume of the last 30 days, failures, rhythm, silence, what changed on the
+ * site since the type was last sent, emails to administrators (Noise) and waiting time (Speed). Pure (input: stored types and day counters), used by the tab, REST and
  * the alert check.
  *
  * @package Mailspur
@@ -96,6 +96,7 @@ final class Report {
 			}
 
 			$extra   = (array) ( $type['extra'] ?? array() );
+			$admin   = Noise::count( $extra, $range[0] );
 			$items[] = array(
 				'id'         => (int) $id,
 				'source'     => (string) $type['source'],
@@ -118,6 +119,11 @@ final class Report {
 				'change'     => self::change( $extra, $updates, (int) ( $seen[ $id ] ?? 0 ) ),
 				'cron'       => Indexer::cron_of( $extra ),
 				'cause'      => null,
+				'admin'      => $admin,
+				'noise'      => ! $type['muted'] && $admin >= Noise::THRESHOLD,
+				'origin'     => (string) ( $extra['fn'] ?? '' ),
+				'slow'       => $type['muted'] ? null : Speed::of( $extra ),
+				'new_sender' => false,
 			);
 		}
 
@@ -142,7 +148,9 @@ final class Report {
 		$one   = null !== $types && 1 === count( $types ) ? (int) key( $types ) : 0;
 		$seen  = get_option( self::SEEN, array() );
 		$items = self::build( $types ?? $store->types(), $store->days_since( $since, $one ), $today, $now, Updates::all(), is_array( $seen ) ? $seen : array() );
+		$fresh = Senders::fresh( Senders::state(), $now );
 		foreach ( $items as $i => $item ) {
+			$items[ $i ]['new_sender'] = isset( $fresh[ $item['source'] ] );
 			if ( 'silent' === $item['state'] && null !== $item['cron'] ) {
 				$items[ $i ]['cause'] = Cron::current( (string) $item['cron'], $now );
 			}
@@ -236,11 +244,17 @@ final class Report {
 			'silent'  => 0,
 			'failing' => 0,
 			'new'     => 0,
+			'noise'   => 0,
+			'slow'    => 0,
+			'fresh'   => 0,
 		);
 		foreach ( $items as $item ) {
 			if ( isset( $out[ $item['state'] ] ) ) {
 				++$out[ $item['state'] ];
 			}
+			$out['noise'] += empty( $item['noise'] ) ? 0 : 1;
+			$out['slow']  += empty( $item['slow'] ) ? 0 : 1;
+			$out['fresh'] += empty( $item['new_sender'] ) ? 0 : 1;
 		}
 		return $out;
 	}
