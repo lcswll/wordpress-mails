@@ -54,6 +54,13 @@ final class Mail {
 	public $site;
 
 	/**
+	 * Secrets found in the mail as it was sent, before the log masked them (see Module::meta()).
+	 *
+	 * @var array<int,array{kind:string,hint:string}>
+	 */
+	public $secrets = array();
+
+	/**
 	 * @param array<string,mixed>                                     $row  Log row (message, subject, recipients, headers, content_type, sender, source).
 	 * @param array{home:string,environment:string,multisite:bool} $site Lower-cased home host, wp_get_environment_type(), is_multisite().
 	 */
@@ -100,6 +107,18 @@ final class Mail {
 		}
 		$from       = self::emails( $sender );
 		$this->from = $from ? $from[0] : '';
+
+		$meta = $row['meta'] ?? null;
+		if ( is_array( $meta ) && isset( $meta[ Module::SECRETS_META ] ) && is_array( $meta[ Module::SECRETS_META ] ) ) {
+			foreach ( $meta[ Module::SECRETS_META ] as $secret ) {
+				if ( is_array( $secret ) && isset( $secret['kind'] ) && is_string( $secret['kind'] ) ) {
+					$this->secrets[] = array(
+						'kind' => $secret['kind'],
+						'hint' => is_string( $secret['hint'] ?? null ) ? $secret['hint'] : '',
+					);
+				}
+			}
+		}
 
 		$this->to     = self::emails( (string) ( $row['recipients'] ?? '' ) );
 		$this->copies = self::emails( $copies );

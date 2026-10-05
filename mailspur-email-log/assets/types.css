@@ -1,6 +1,7 @@
 /* Mailspur – Email Log: "Email types" tab and the type line in the log dialog. */
 
 .mailspur-types,
+.mst-dialog,
 .mailspur-type-dd {
 	--mst-surface: #fff;
 	--mst-border: var(--ms-line, #dcdcde);
@@ -270,5 +271,254 @@
 @media (max-width: 782px) {
 	.mst-col-type {
 		min-width: 180px;
+	}
+}
+
+/* ---------------------------------------------------------------- content change, cron cause */
+
+.mst-change {
+	display: block;
+	margin-top: 4px;
+	padding: 2px 8px;
+	border-left: 3px solid #9ec2e6;
+	background: #f0f6fc;
+	font-size: 12px;
+}
+
+.mst-change form {
+	display: inline;
+}
+
+.mst-change .button-link,
+.mst-change .mst-gone {
+	margin-left: 6px;
+	font-size: 12px;
+}
+
+.mst-change .mst-gone {
+	color: var(--mst-muted);
+}
+
+.mst-cause {
+	color: var(--mst-ink);
+}
+
+/* ---------------------------------------------------------------- "…" menu */
+
+.mst-more {
+	display: inline-block;
+	margin-left: 8px;
+}
+
+.mst-more summary {
+	padding: 0 6px;
+	border-radius: 4px;
+	color: var(--wp-admin-theme-color, #2271b1);
+	cursor: pointer;
+	list-style: none;
+}
+
+.mst-more summary::-webkit-details-marker {
+	display: none;
+}
+
+.mst-more summary:hover,
+.mst-more[open] summary {
+	background: #f0f0f1;
+}
+
+/* Opens inside the cell (the table clips overflowing content). */
+.mst-more[open] {
+	display: block;
+	margin: 4px 0 0;
+}
+
+.mst-more[open] summary {
+	display: inline-block;
+}
+
+.mst-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6px;
+	max-width: 240px;
+	margin-top: 4px;
+	padding: 8px 10px;
+	border: 1px solid var(--mst-border);
+	border-radius: 6px;
+	background: var(--mst-surface);
+	white-space: normal;
+}
+
+.mst-confirm p {
+	margin: 0 0 6px;
+}
+
+.mst-confirm .is-error {
+	color: var(--mst-failed);
+}
+
+/* ---------------------------------------------------------------- compare dialog */
+
+.mst-dialog {
+	width: min(1100px, calc(100vw - 32px));
+	max-height: calc(100vh - 64px);
+	padding: 0;
+	border: 0;
+	border-radius: var(--mst-radius);
+	color: var(--mst-ink);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.mst-dialog::backdrop {
+	background: rgba(0, 0, 0, 0.45);
+}
+
+.mst-dialog-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 20px;
+	border-bottom: 1px solid var(--mst-border);
+}
+
+.mst-dialog-head h2 {
+	margin: 0;
+	font-size: 16px;
+}
+
+.mst-dialog-close {
+	font-size: 22px;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.mst-dialog-body {
+	padding: 12px 20px 20px;
+}
+
+.mst-dialog-dates {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	color: var(--mst-muted);
+}
+
+.mst-dialog-dates .is-del::before,
+.mst-dialog-dates .is-add::before {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 6px;
+	border-radius: 2px;
+	content: "";
+}
+
+.mst-dialog-dates .is-del::before {
+	background: #f6d4d4;
+}
+
+.mst-dialog-dates .is-add::before {
+	background: #cfe9d4;
+}
+
+.mst-dialog-tabs {
+	display: flex;
+	gap: 4px;
+	margin-bottom: 8px;
+	border-bottom: 1px solid var(--mst-border);
+}
+
+.mst-dialog-tab {
+	margin-bottom: -1px;
+	padding: 6px 12px;
+	border: 1px solid transparent;
+	border-radius: 6px 6px 0 0;
+	background: none;
+	color: var(--mst-muted);
+	cursor: pointer;
+}
+
+.mst-dialog-tab[aria-selected="true"] {
+	border-color: var(--mst-border);
+	border-bottom-color: var(--mst-surface);
+	background: var(--mst-surface);
+	color: var(--mst-ink);
+}
+
+.mst-diff {
+	margin: 0;
+	padding: 0;
+	font: 12px/1.6 Consolas, Monaco, monospace;
+	list-style: none;
+}
+
+.mst-diff li {
+	display: flex;
+	gap: 8px;
+	margin: 0;
+	padding: 1px 8px;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.mst-diff .is-add {
+	background: #edf8ef;
+}
+
+.mst-diff .is-del {
+	background: #fcf0f1;
+	text-decoration: line-through;
+	text-decoration-color: rgba(208, 59, 59, 0.5);
+}
+
+.mst-diff-sign {
+	flex: 0 0 1ch;
+	color: var(--mst-muted);
+}
+
+.mst-diff .mst-diff-skip {
+	color: var(--mst-muted);
+	font-style: italic;
+}
+
+.mst-previews {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+}
+
+.mst-preview {
+	margin: 0;
+}
+
+.mst-preview figcaption {
+	margin-bottom: 4px;
+	color: var(--mst-muted);
+	font-size: 12px;
+}
+
+.mst-frame,
+.mst-pre {
+	box-sizing: border-box;
+	width: 100%;
+	height: 60vh;
+	margin: 0;
+	border: 1px solid var(--mst-border);
+	border-radius: 6px;
+	background: #fff;
+}
+
+.mst-pre {
+	overflow: auto;
+	padding: 12px;
+	white-space: pre-wrap;
+}
+
+@media (max-width: 782px) {
+	.mst-previews {
+		grid-template-columns: 1fr;
 	}
 }

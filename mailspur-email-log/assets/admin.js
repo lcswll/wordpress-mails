@@ -100,6 +100,10 @@
 	let current = null; // Mail shown in the dialog.
 	let view = 'preview';
 	let allowRemote = !! cfg.remoteImages;
+	// How the HTML preview is shown: width (desktop/phone/text) × colour scheme (light/dark/forced).
+	const LOOKS = { width: [ 'desktop', 'phone', 'text' ], scheme: [ 'light', 'dark', 'forced' ] };
+	const look = readLook();
+	let lookBar = null;
 
 	/* ------------------------------------------------------------ module API */
 
@@ -123,6 +127,8 @@
 		endpoint: ( ...args ) => endpoint( ...args ),
 		toast: ( ...args ) => toast( ...args ),
 		reload: () => load(),
+		/** Opens a log entry in the dialog by id. */
+		open: ( id ) => openMail( id ),
 		/** Current list filters, sorting and paging (a copy), e.g. for exports. */
 		state: () => Object.assign( {}, state ),
 		/** Mail shown in the dialog (detail payload incl. meta), or null. */
@@ -178,6 +184,22 @@
 		} catch ( e ) {
 			return 25;
 		}
+	}
+
+	function readLook() {
+		const out = { width: 'desktop', scheme: 'light' };
+		try {
+			const [ width, scheme ] = String( localStorage.getItem( 'mailspur.previewLook' ) || '' ).split( '/' );
+			if ( LOOKS.width.includes( width ) ) {
+				out.width = width;
+			}
+			if ( LOOKS.scheme.includes( scheme ) ) {
+				out.scheme = scheme;
+			}
+		} catch ( e ) {
+			// Storage unavailable – start with the defaults.
+		}
+		return out;
 	}
 
 	/* -------------------------------------------------------------------- api */
@@ -521,12 +543,14 @@
 		} );
 		el.dBody.setAttribute( 'aria-labelledby', 'mailspur-tab-' + view );
 
-		const showRemote = 'preview' === view && current.is_html && REMOTE_RE.test( current.message );
+		const html = 'preview' === view && current.is_html;
+		const showRemote = html && 'text' !== look.width && REMOTE_RE.test( current.message );
 		el.dRemote.hidden = ! showRemote;
 		if ( showRemote ) {
 			el.dRemoteText.textContent = allowRemote ? t.remoteLoaded : t.remoteBlocked;
 			el.dRemoteToggle.textContent = allowRemote ? t.blockRemote : t.loadRemote;
 		}
+		el.dBody.classList.toggle( 'has-looks', html );
 
 		const moduleTab = registry.tabs.find( ( def ) => def.id === view );
 		if ( moduleTab ) {
@@ -536,20 +560,189 @@
 			return;
 		}
 
-		if ( 'preview' === view && current.is_html ) {
-			const frame = node( 'iframe', 'mailspur-frame' );
-			// Unique opaque origin: no scripts, forms, storage or access to wp-admin.
-			frame.setAttribute( 'sandbox', 'allow-popups allow-popups-to-escape-sandbox' );
-			frame.setAttribute( 'referrerpolicy', 'no-referrer' );
-			frame.title = current.subject || t.noSubject;
-			frame.srcdoc = previewDocument( current.message, allowRemote );
-			el.dBody.replaceChildren( frame );
+		if ( html ) {
+			renderLook();
 			return;
 		}
 
 		const text = 'headers' === view ? current.headers : current.message;
 		const pre = node( 'pre', 'mailspur-pre', text );
 		el.dBody.replaceChildren( pre );
+	}
+
+	/* ------------------------------------------------------ preview looks */
+
+	/**
+	 * HTML preview with the look switcher (desktop / phone / plain text × light / dark / forced dark).
+	 * The bar stays in place while switching, so keyboard focus is kept.
+	 */
+	function renderLook() {
+		if ( ! lookBar ) {
+			lookBar = buildLookBar();
+		}
+		lookBar.querySelectorAll( '[data-look]' ).forEach( ( btn ) => {
+			btn.setAttribute( 'aria-pressed', String( look[ btn.dataset.look ] === btn.dataset.value ) );
+		} );
+		const text = 'text' === look.width;
+		lookBar.querySelector( '[data-group="scheme"]' ).hidden = text;
+
+		const ownDark = DARK_CSS_RE.test( current.message );
+		const hints = [];
+		if ( text ) {
+			const flag = current.meta ? current.meta.plain_text : undefined;
+			hints.push( true === flag ? t.hintTextOwn : false === flag ? t.hintTextNone : t.hintText );
+		} else {
+			if ( 'phone' === look.width ) {
+				hints.push( t.hintPhone );
+			}
+			if ( 'dark' === look.scheme ) {
+				hints.push( ownDark ? t.hintDark : t.hintNoDark );
+			} else if ( 'forced' === look.scheme ) {
+				hints.push( t.hintForced );
+			}
+		}
+		lookBar.querySelector( '.mailspur-look-hint' ).textContent = hints.join( ' ' );
+
+		// Without dark styles of its own the email stays light (as in most apps); the hint says so.
+		const scheme = 'dark' === look.scheme && ! ownDark ? 'light' : look.scheme;
+		const stage = node( 'div', 'mailspur-stage is-' + look.width + ( text ? '' : ' is-' + scheme ) );
+		if ( text ) {
+			stage.append( node( 'pre', 'mailspur-pre', htmlToText( current.message ) || t.noText ) );
+		} else {
+			const frame = node( 'iframe', 'mailspur-frame' );
+			// Unique opaque origin: no scripts, forms, storage or access to wp-admin.
+			frame.setAttribute( 'sandbox', 'allow-popups allow-popups-to-escape-sandbox' );
+			frame.setAttribute( 'referrerpolicy', 'no-referrer' );
+			frame.title = current.subject || t.noSubject;
+			frame.srcdoc = previewDocument( current.message, allowRemote, scheme );
+			stage.append( frame );
+		}
+
+		if ( lookBar.parentNode === el.dBody ) {
+			[ ...el.dBody.children ].forEach( ( child ) => child !== lookBar && child.remove() );
+			el.dBody.append( stage );
+		} else {
+			el.dBody.replaceChildren( lookBar, stage );
+		}
+	}
+
+	function buildLookBar() {
+		const bar = node( 'div', 'mailspur-looks' );
+		const groups = [
+			[ 'width', t.viewAs, [ [ 'desktop', t.viewDesktop ], [ 'phone', t.viewPhone ], [ 'text', t.viewText ] ] ],
+			[ 'scheme', t.scheme, [ [ 'light', t.schemeLight ], [ 'dark', t.schemeDark ], [ 'forced', t.schemeForced ] ] ],
+		];
+		groups.forEach( ( [ key, label, options ] ) => {
+			const group = node( 'div', 'mailspur-segmented' );
+			group.setAttribute( 'role', 'group' );
+			group.setAttribute( 'aria-label', label );
+			group.dataset.group = key;
+			options.forEach( ( [ value, text ] ) => {
+				const btn = node( 'button', '', text );
+				btn.type = 'button';
+				btn.dataset.look = key;
+				btn.dataset.value = value;
+				group.append( btn );
+			} );
+			bar.append( group );
+		} );
+		const hint = node( 'p', 'mailspur-look-hint' );
+		hint.setAttribute( 'aria-live', 'polite' );
+		bar.append( hint );
+		return bar;
+	}
+
+	function setLook( key, value ) {
+		if ( ! LOOKS[ key ] || ! LOOKS[ key ].includes( value ) || look[ key ] === value ) {
+			return;
+		}
+		look[ key ] = value;
+		try {
+			localStorage.setItem( 'mailspur.previewLook', look.width + '/' + look.scheme );
+		} catch ( e ) {
+			// Storage unavailable (private mode) – keep the in-memory choice.
+		}
+		renderView();
+	}
+
+	// The email ships its own dark-mode styles (media query or color-scheme declaration).
+	const DARK_CSS_RE = /prefers-color-scheme\s*:\s*dark|color-scheme\s*(?::|["']?\s+content\s*=\s*["'])[^;}"'>]*\bdark\b/i;
+
+	/**
+	 * Renders the email's dark-mode styles without scripts: media features asking for the colour scheme are
+	 * replaced by conditions that are always true (dark) or always false (light) – in <style>, media
+	 * attributes and nested queries alike, so "not" and "and" keep their meaning.
+	 */
+	function forceDarkQueries( html ) {
+		return html
+			.replace( /\(\s*prefers-color-scheme\s*:\s*dark\s*\)/gi, '(min-width:0px)' )
+			.replace( /\(\s*prefers-color-scheme\s*:\s*light\s*\)/gi, '(max-width:0px)' );
+	}
+
+	/**
+	 * Plain-text rendering of an HTML body, roughly as mail clients and html2text tools produce it.
+	 * DOMParser documents are inert: no scripts run and nothing is fetched. Only text is read back.
+	 */
+	function htmlToText( html ) {
+		const doc = new window.DOMParser().parseFromString( html, 'text/html' );
+		const SKIP = /^(HEAD|STYLE|SCRIPT|TITLE|TEMPLATE|NOSCRIPT|META|LINK|BUTTON|INPUT|SELECT|TEXTAREA)$/;
+		const BLOCK = /^(ADDRESS|ARTICLE|ASIDE|BLOCKQUOTE|CENTER|DD|DIV|DL|DT|FIELDSET|FIGCAPTION|FIGURE|FOOTER|FORM|H[1-6]|HEADER|MAIN|NAV|OL|P|SECTION|TABLE|TBODY|THEAD|TFOOT|TR|UL)$/;
+		const PARAGRAPH = /^(BLOCKQUOTE|H[1-6]|OL|P|TABLE|UL)$/;
+		const out = [];
+		const walk = ( n, pre ) => {
+			if ( 3 === n.nodeType ) {
+				out.push( pre ? n.nodeValue : n.nodeValue.replace( /\s+/g, ' ' ) );
+				return;
+			}
+			if ( 1 !== n.nodeType ) {
+				return;
+			}
+			const tag = n.tagName;
+			const style = ( n.getAttribute( 'style' ) || '' ).toLowerCase().replace( /\s+/g, '' );
+			// Hidden preheaders and Outlook-only blocks are not part of the readable text.
+			if ( SKIP.test( tag ) || n.hasAttribute( 'hidden' ) || /display:none|mso-hide:all/.test( style ) ) {
+				return;
+			}
+			if ( 'BR' === tag ) {
+				out.push( '\n' );
+				return;
+			}
+			if ( 'HR' === tag ) {
+				out.push( '\n\n----------\n\n' );
+				return;
+			}
+			if ( 'IMG' === tag ) {
+				const alt = ( n.getAttribute( 'alt' ) || '' ).trim();
+				if ( alt ) {
+					out.push( '[' + alt + ']' );
+				}
+				return;
+			}
+			const sep = PARAGRAPH.test( tag ) ? '\n\n' : BLOCK.test( tag ) ? '\n' : '';
+			out.push( sep );
+			if ( 'LI' === tag ) {
+				out.push( '\n- ' );
+			}
+			const start = out.length;
+			n.childNodes.forEach( ( child ) => walk( child, pre || 'PRE' === tag ) );
+			if ( 'A' === tag ) {
+				const href = ( n.getAttribute( 'href' ) || '' ).trim();
+				const label = out.slice( start ).join( '' ).trim();
+				if ( /^(https?:|mailto:)/i.test( href ) && label !== href && label !== href.replace( /^mailto:/i, '' ) ) {
+					out.push( ' (' + href.replace( /^mailto:/i, '' ) + ')' );
+				}
+			} else if ( 'TD' === tag || 'TH' === tag ) {
+				out.push( '  ' );
+			}
+			out.push( sep );
+		};
+		walk( doc.body, false );
+		return out
+			.join( '' )
+			.replace( /[^\S\n]+\n/g, '\n' )
+			.replace( /\n[^\S\n]+/g, '\n' )
+			.replace( /\n{3,}/g, '\n\n' )
+			.trim();
 	}
 
 	/**
@@ -565,9 +758,25 @@
 			.replace( new RegExp( '@import\\s+(["\'])\\s*' + remote, 'gi' ), '@import $1data:,' );
 	}
 
-	function previewDocument( html, remote ) {
+	// Colour scheme of the preview document. Dark: the email's own dark styles (see forceDarkQueries()).
+	// Forced: inverts the whole page like apps that force dark mode; images and backgrounds are inverted back.
+	const INVERT = 'filter:invert(1) hue-rotate(180deg)!important';
+	const SCHEMES = {
+		light: 'html{color-scheme:light}',
+		dark: 'html{color-scheme:dark}',
+		forced:
+			// The filter also covers the canvas (the email's page background); an unset one shows the dark frame.
+			'html{color-scheme:light;' + INVERT + '}' +
+			'img,picture,video,svg,[background],[style*="background-image"],[style*="url("]{' + INVERT + '}' +
+			':is([background],[style*="background-image"],[style*="url("]) :is(img,picture,video,svg){filter:none!important}',
+	};
+
+	function previewDocument( html, remote, scheme ) {
 		if ( ! remote ) {
 			html = defuseRemote( html );
+		}
+		if ( 'dark' === scheme ) {
+			html = forceDarkQueries( html );
 		}
 		const ext = remote ? ' https: http:' : '';
 		const csp = [
@@ -583,7 +792,7 @@
 			'<meta http-equiv="Content-Security-Policy" content="' + csp + '">' +
 			'<meta name="referrer" content="no-referrer">' +
 			'<base target="_blank">' +
-			'<style>html{color-scheme:light}body{margin:0;padding:16px;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;word-wrap:break-word}img{max-width:100%;height:auto}</style>' +
+			'<style>' + ( SCHEMES[ scheme ] || SCHEMES.light ) + 'body{margin:0;padding:16px;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;word-wrap:break-word}img{max-width:100%;height:auto}</style>' +
 			'</head><body>' + html + '</body></html>'
 		);
 	}
@@ -601,6 +810,11 @@
 	el.dialog.addEventListener( 'click', async ( e ) => {
 		if ( e.target === el.dialog ) {
 			el.dialog.close(); // Backdrop click.
+			return;
+		}
+		const lookBtn = e.target.closest( '[data-look]' );
+		if ( lookBtn ) {
+			setLook( lookBtn.dataset.look, lookBtn.dataset.value );
 			return;
 		}
 		const tab = e.target.closest( '[role="tab"]' );
@@ -885,7 +1099,18 @@
 			btn.append( def.label );
 			close.parentNode.insertBefore( btn, close );
 		} );
+
+		// Deep link ?mail=ID (Email types, order box, user profile): open that entry once, then drop the parameter.
+		const url = new URL( location.href );
+		const deepLink = parseInt( url.searchParams.get( 'mail' ) || '', 10 );
+		if ( deepLink > 0 ) {
+			url.searchParams.delete( 'mail' );
+			history.replaceState( null, '', url );
+		}
 		load();
+		if ( deepLink > 0 ) {
+			openMail( deepLink );
+		}
 	}
 
 	// Deferred module scripts run after this one but before DOMContentLoaded.

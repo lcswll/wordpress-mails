@@ -86,3 +86,75 @@ test('log dialog names the email type', async ({ page }) => {
 	await expect(dialog.locator('.mailspur-type-rhythm')).toHaveText('usually sent: Rarely');
 	expect(errors).toEqual([]);
 });
+
+// The tests below add their own rows (?mailspur-e2e-seed=types) and remove them again afterwards.
+test.afterAll(async ({ browser }) => {
+	const page = await browser.newPage();
+	await page.goto('/wp-admin/?mailspur-e2e-seed=types-cleanup');
+	await page.close();
+});
+
+test('content change: marker, compare view and "Seen"', async ({ page }) => {
+	const errors = watchErrors(page);
+	await page.goto('/wp-admin/?mailspur-e2e-seed=types');
+	await expect(page).toHaveURL(/tab=types/);
+
+	const digest = typeRow(page, '[Types test] Weekly digest');
+	await expect(digest).toHaveCount(1);
+	const marker = digest.locator('.mst-change');
+	await expect(marker).toContainText(/Content changed on .+, after the E2E Digest 2\.0 update\./);
+
+	await marker.getByRole('button', { name: 'Compare' }).click();
+	const dialog = page.locator('dialog.mst-dialog');
+	await expect(dialog).toBeVisible();
+	await expect(dialog.locator('h2')).toHaveText('[Types test] Weekly digest #…');
+	await expect(dialog.locator('.mst-diff .is-del')).toHaveCount(1);
+	await expect(dialog.locator('.mst-diff .is-del')).toContainText('Read online [https://news.example/read/87/]');
+	await expect(dialog.locator('.mst-diff .is-add')).toHaveCount(0);
+	await expect(dialog.locator('.mst-diff')).not.toContainText('token=');
+
+	await dialog.getByRole('tab', { name: 'Previews' }).click();
+	const frames = dialog.locator('iframe.mst-frame');
+	await expect(frames).toHaveCount(2);
+	await expect(frames.first()).toHaveAttribute('sandbox', 'allow-popups allow-popups-to-escape-sandbox');
+	await expect(dialog.locator('figcaption').first()).toContainText('Last email before the change');
+	await expect(page.frameLocator('iframe.mst-frame').first().getByRole('link', { name: 'Read online' })).toBeVisible();
+	await expect(page.frameLocator('iframe.mst-frame').nth(1).getByRole('link', { name: 'Read online' })).toHaveCount(0);
+	await dialog.getByRole('button', { name: 'Close' }).click();
+	await expect(dialog).toBeHidden();
+
+	await marker.getByRole('button', { name: 'Seen' }).click();
+	await expect(page.locator('.notice-success')).toContainText('Content change marked as seen.');
+	await expect(typeRow(page, '[Types test] Weekly digest').locator('.mst-change')).toHaveCount(0);
+	expect(errors).toEqual([]);
+});
+
+test('stopped cron type names its cause', async ({ page }) => {
+	await page.goto(TYPES);
+	const reminder = typeRow(page, '[Types test] Daily reminder');
+	await expect(reminder.locator('.mst-state')).toHaveText('Stopped');
+	await expect(reminder.locator('.mst-cause')).toHaveText('Sent by the cron event mailspur_e2e_ui_reminder – this event is no longer scheduled.');
+});
+
+test('shortcuts: open the latest email and send it to me', async ({ page }) => {
+	const errors = watchErrors(page);
+	await page.goto(TYPES);
+	let digest = typeRow(page, '[Types test] Weekly digest');
+	await digest.locator('.mst-more summary').click();
+	const open = digest.getByRole('link', { name: 'Open latest' });
+	await expect(open).toHaveAttribute('href', /mail=\d+/);
+	await open.click();
+	await expect(page.locator('#mailspur-dialog')).toBeVisible();
+	await expect(page.locator('#mailspur-d-subject')).toHaveText('[Types test] Weekly digest #89');
+	await expect(page).not.toHaveURL(/mail=/);
+
+	await page.goto(TYPES);
+	digest = typeRow(page, '[Types test] Weekly digest');
+	await digest.locator('.mst-more summary').click();
+	await digest.getByRole('button', { name: 'Send latest to me' }).click();
+	const confirm = digest.locator('.mst-confirm');
+	await expect(confirm).toContainText(/Send the latest email of this type to .+@.+\?/);
+	await confirm.getByRole('button', { name: 'Send' }).click();
+	await expect(confirm.locator('[role="status"]')).toHaveText(/^Sent to .+@.+\.$/);
+	expect(errors).toEqual([]);
+});

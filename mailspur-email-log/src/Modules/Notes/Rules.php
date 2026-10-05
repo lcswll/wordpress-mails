@@ -11,6 +11,8 @@
 
 namespace Mailspur\Modules\Notes;
 
+use Mailspur\Secrets;
+
 defined( 'ABSPATH' ) || exit;
 
 final class Rules {
@@ -50,6 +52,7 @@ final class Rules {
 			'link_mismatch'    => array( self::class, 'link_mismatch' ),
 			'subject'          => array( self::class, 'subject' ),
 			'img_alt'          => array( self::class, 'img_alt' ),
+			'secrets'          => array( self::class, 'secrets' ),
 		);
 	}
 
@@ -306,6 +309,33 @@ final class Rules {
 			++$missing;
 		}
 		return $missing ? array( self::note( 'img_no_alt', self::INFO, array( $missing ) ) ) : array();
+	}
+
+	/**
+	 * Passwords, API keys, private keys or card numbers in plain text. Looks at the body and at what was
+	 * found before the log masked the body (Mail::$secrets). Notes carry a masked hint at most.
+	 *
+	 * @return array<int,array{code:string,severity:string,params:array<int,string>}>
+	 */
+	public static function secrets( Mail $mail ): array {
+		$codes = array(
+			Secrets::PASSWORD    => array( 'secret_password', self::ERROR ),
+			Secrets::PRIVATE_KEY => array( 'secret_key', self::ERROR ),
+			Secrets::API_KEY     => array( 'secret_key', self::WARNING ),
+			Secrets::CARD        => array( 'secret_card', self::ERROR ),
+		);
+		$notes = array();
+		foreach ( array_merge( $mail->secrets, Secrets::find( $mail->body ) ) as $secret ) {
+			if ( ! isset( $codes[ $secret['kind'] ] ) ) {
+				continue;
+			}
+			list( $code, $severity ) = $codes[ $secret['kind'] ];
+
+			$params = Secrets::PASSWORD === $secret['kind'] ? array() : array( self::clip( $secret['hint'], 60 ) );
+
+			$notes[ $code . "\0" . implode( '', $params ) ] = self::note( $code, $severity, $params );
+		}
+		return array_slice( array_values( $notes ), 0, 3 );
 	}
 
 	/** Host without "www." and port, lower-cased. */

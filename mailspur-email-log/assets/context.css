@@ -1,0 +1,132 @@
+/* Mailspur – Email Log: "Emails" box on the order screen and "Emails to this user" on the profile. Scoped to .mailspur-ctx. */
+
+.mailspur-ctx {
+	--msc-line: #dcdcde;
+	--msc-muted: #646970;
+	--msc-sent-bg: #e6f4ea;
+	--msc-sent: #116329;
+	--msc-failed-bg: #fcebea;
+	--msc-failed: #b32d2e;
+	--msc-held-bg: #f0f0f1;
+	--msc-held: #50575e;
+	--msc-pending-bg: #fcf3e3;
+	--msc-pending: #8a5a00;
+	--msc-accent: #5b3ff0;
+}
+
+.mailspur-ctx-profile {
+	max-width: 960px;
+	margin: 24px 0;
+}
+
+.mailspur-ctx .mailspur-ctx-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.mailspur-ctx .mailspur-ctx-table th,
+.mailspur-ctx .mailspur-ctx-table td {
+	padding: 6px 8px;
+	border-bottom: 1px solid var(--msc-line);
+	text-align: left;
+	vertical-align: top;
+}
+
+.mailspur-ctx .mailspur-ctx-table th {
+	color: var(--msc-muted);
+	font-weight: 600;
+}
+
+.mailspur-ctx .mailspur-ctx-date {
+	white-space: nowrap;
+	color: var(--msc-muted);
+}
+
+.mailspur-ctx .mailspur-ctx-subject {
+	word-break: break-word;
+}
+
+.mailspur-ctx .mailspur-ctx-actions {
+	white-space: nowrap;
+	text-align: right;
+}
+
+.mailspur-ctx .mailspur-ctx-actions .button-link {
+	margin-left: 8px;
+}
+
+.mailspur-ctx .mailspur-ctx-pill {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 999px;
+	font-size: 12px;
+	line-height: 1.6;
+	white-space: nowrap;
+	background: var(--msc-pending-bg);
+	color: var(--msc-pending);
+}
+
+.mailspur-ctx .mailspur-ctx-pill.is-sent {
+	background: var(--msc-sent-bg);
+	color: var(--msc-sent);
+}
+
+.mailspur-ctx .mailspur-ctx-pill.is-failed {
+	background: var(--msc-failed-bg);
+	color: var(--msc-failed);
+}
+
+.mailspur-ctx .mailspur-ctx-pill.is-held {
+	background: var(--msc-held-bg);
+	color: var(--msc-held);
+}
+
+.mailspur-ctx .mailspur-ctx-tag {
+	display: inline-block;
+	margin-left: 4px;
+	padding: 0 6px;
+	border: 1px solid var(--msc-line);
+	border-radius: 4px;
+	font-size: 11px;
+	line-height: 1.6;
+	color: var(--msc-muted);
+}
+
+.mailspur-ctx .mailspur-ctx-tag.is-notes {
+	border-color: var(--msc-accent);
+	color: var(--msc-accent);
+}
+
+.mailspur-ctx .mailspur-ctx-empty {
+	color: var(--msc-muted);
+}
+
+.mailspur-ctx .mailspur-ctx-message:empty {
+	display: none;
+}
+
+.mailspur-ctx .mailspur-ctx-message.is-error {
+	color: var(--msc-failed);
+}
+
+@media screen and (max-width: 782px) {
+	.mailspur-ctx .mailspur-ctx-table thead {
+		display: none;
+	}
+
+	.mailspur-ctx .mailspur-ctx-table tr {
+		display: block;
+		padding: 6px 0;
+		border-bottom: 1px solid var(--msc-line);
+	}
+
+	.mailspur-ctx .mailspur-ctx-table td {
+		display: inline-block;
+		border: 0;
+		padding: 2px 8px 2px 0;
+	}
+
+	.mailspur-ctx .mailspur-ctx-subject {
+		display: block;
+	}
+}

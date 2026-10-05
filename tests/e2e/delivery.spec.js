@@ -128,6 +128,67 @@ test('redirect mode without a valid address falls back to holding', async ({ pag
 	await expect(page.locator('.mailspur-staging-notice')).toContainText('all emails are redirected to dev@example.net');
 });
 
+/** Saves the emergency brake settings (staging mode off). */
+async function setBrake(page, mode, threshold) {
+	await page.goto(SETTINGS);
+	await page.locator('input[name="mailspur_settings[staging_mode]"][value="off"]').check();
+	await page.locator(`input[name="mailspur_settings[brake_mode]"][value="${mode}"]`).check();
+	await page.locator('#mailspur-brake-threshold').fill(threshold);
+	await page.getByRole('button', { name: 'Save Changes' }).click();
+	await expect(page.locator('#setting-error-settings_updated')).toBeVisible();
+}
+
+test('emergency brake holds a flood and releases it in batches', async ({ page }) => {
+	const errors = watch(page);
+	await setBrake(page, 'hold', '1');
+	await expect(page.locator('#mailspur-brake-threshold')).toHaveValue('1');
+
+	// A new user gets two notifications (admin + user): the second one exceeds the threshold of 1 per hour.
+	await page.goto('/wp-admin/user-new.php');
+	await page.locator('#user_login').fill('brakeflood');
+	await page.locator('#email').fill('brakeflood@example.com');
+	await page.locator('#createusersub').click();
+	await page.waitForURL(/users.php/);
+	await expect(page.locator('#wp-admin-bar-mailspur-brake')).toContainText('Mailspur: emails held');
+
+	await page.goto(LOG);
+	const notice = page.locator('#mailspur-brake-notice');
+	await expect(notice).toContainText('Emergency brake:');
+	await expect(notice).toContainText('emails are held by the emergency brake.');
+	await expect(notice).toContainText('Main source:');
+
+	await page.goto(`${LOG}&s=brakeflood%40&status=held`);
+	await expect(rows(page)).toHaveCount(1);
+	await rows(page).first().locator('.mailspur-open').click();
+	await expect(page.locator('#mailspur-d-meta')).toContainText('Held by emergency brake – not delivered.');
+	await page.keyboard.press('Escape');
+
+	await notice.locator('[data-mailspur-brake="release"]').click();
+	await expect(notice.locator('.mailspur-brake-progress')).toHaveText(/^Done: \d+ emails sent, \d+ failed\.$/);
+	await expect(notice).toHaveClass(/notice-success/);
+
+	await page.reload();
+	await expect(page.locator('#mailspur-brake-notice')).toHaveCount(0);
+	await expect(page.locator('#wp-admin-bar-mailspur-brake')).toHaveCount(0);
+	await rows(page).first().locator('.mailspur-open').click();
+	await expect(page.locator('#mailspur-d-meta')).toContainText('Held by emergency brake – released later.');
+	await expect(page.locator('[data-module-action="delivery-release"]')).toBeHidden();
+	await page.keyboard.press('Escape');
+
+	// Clean up: user and settings (log entries are removed in afterAll).
+	await page.evaluate(async () => {
+		const cfg = window.mailspurConfig;
+		const users = cfg.restUrl.replace('mailspur-email-log/v1', 'wp/v2/users');
+		const join = users.includes('?') ? '&' : '?';
+		const found = await (await fetch(users + join + 'search=brakeflood', { headers: { 'X-WP-Nonce': cfg.nonce } })).json();
+		for (const user of found) {
+			await fetch(users.replace('wp/v2/users', 'wp/v2/users/' + user.id) + join + 'force=true&reassign=1', { method: 'DELETE', headers: { 'X-WP-Nonce': cfg.nonce } });
+		}
+	});
+	await setBrake(page, 'alert', '');
+	expect(errors).toEqual([]);
+});
+
 test('sender check runs on demand and shows a traffic light per record', async ({ page }) => {
 	const errors = watch(page);
 	await page.goto(SETTINGS);

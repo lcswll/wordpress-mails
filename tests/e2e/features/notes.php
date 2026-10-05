@@ -146,6 +146,91 @@ try {
 	notes_check( isset( $info[ $s2 ] ) && null === $info[ $s2 ][0], 'clean rows carry no notes info', $info[ $s2 ] ?? $info );
 	notes_check( isset( $info[ $s4 ] ) && 'The server cannot send email with PHP mail()' === $info[ $s4 ][1], 'failed rows carry a short error hint', $info[ $s4 ] ?? $info );
 
+	// ------------------------------------------------- secrets in plain text.
+	add_filter( 'pre_wp_mail', '__return_true' );
+	$s8 = "$notes_prefix: secrets";
+	wp_mail( 'hank@example.org', $s8, "Username: hank\nPassword: Xy7!kq99e2e\nCard: 4111 1111 1111 1111\n", array( 'From: Shop <shop@example.com>' ) );
+	$row8  = notes_row( $s8 );
+	$codes = notes_codes( $row8 );
+	$meta8 = json_decode( (string) $row8['meta'], true );
+	notes_check( in_array( 'secret_password', $codes, true ) && in_array( 'secret_card', $codes, true ), 'plain-text password and card number are noted', $codes );
+	notes_check( false === strpos( (string) $row8['message'], 'Xy7!kq99e2e' ) && false === strpos( (string) $row8['message'], '4111 1111' ) && 2 === substr_count( (string) $row8['message'], '[redacted]' ), 'secrets are masked in the stored body', $row8['message'] );
+	notes_check( is_array( $meta8 ) && ! isset( $meta8['notes_secrets'] ) && false === strpos( (string) $row8['meta'], 'Xy7' ), 'meta keeps no secret and no helper key', $row8['meta'] );
+	$item = notes_rest( 'GET', '/mails/' . (int) $row8['id'] );
+	notes_check( in_array( 'Payment card number in plain text: …1111', wp_list_pluck( $item['notes_list'] ?? array(), 'title' ), true ), 'card note shows the last four digits only', $item['notes_list'] ?? $item );
+
+	notes_settings( array( 'redact_secrets' => false ) );
+	$s9 = "$notes_prefix: secrets unmasked";
+	wp_mail( 'hank@example.org', $s9, "Password: Xy7!kq99e2e\n", array( 'From: Shop <shop@example.com>' ) );
+	$row9 = notes_row( $s9 );
+	notes_check( false !== strpos( (string) $row9['message'], 'Xy7!kq99e2e' ) && in_array( 'secret_password', notes_codes( $row9 ), true ), 'without redaction the body is kept and the note still recorded', array( $row9['message'], notes_codes( $row9 ) ) );
+	notes_settings( array( 'redact_secrets' => true ) );
+
+	$s10 = "$notes_prefix: no secrets";
+	wp_mail( 'hank@example.org', $s10, "Forgot your password? Set a new one here: https://example.org/wp-login.php?action=lostpassword\nPassword: ********\nIBAN: DE89 3704 0044 0532 0130 00\n", array( 'From: Shop <shop@example.com>' ) );
+	$row10 = notes_row( $s10 );
+	notes_check( array() === array_intersect( array( 'secret_password', 'secret_card', 'secret_key' ), notes_codes( $row10 ) ) && false !== strpos( (string) $row10['message'], 'DE89 3704' ), 'password hints, masked values and IBANs are no secrets', array( notes_codes( $row10 ), $row10['message'] ) );
+
+	// ------------------------------------------------- dead links to the own site.
+	$page_id = wp_insert_post(
+		array(
+			'post_title'  => 'Notes e2e live page',
+			'post_name'   => 'notes-e2e-live-page',
+			'post_type'   => 'page',
+			'post_status' => 'publish',
+		)
+	);
+	$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\\_transient\\_%mailspur\\_notes\\_l%' OR option_name LIKE '\\_transient\\_timeout\\_%mailspur\\_notes\\_l%'" );
+	wp_cache_flush();
+	$home      = home_url( '/' );
+	$dead_url  = home_url( '/notes-e2e-renamed-page/' );
+	$requested = array();
+	// No real loopback in Playground: answer requests here, and record every host the check contacts.
+	$notes_http = static function ( $pre, $args, $url ) use ( &$requested, $dead_url ) {
+		$requested[] = $url;
+		return array(
+			'headers'  => array(),
+			'body'     => '',
+			'response' => array(
+				'code'    => $url === $dead_url ? 404 : 200,
+				'message' => '',
+			),
+			'cookies'  => array(),
+		);
+	};
+	add_filter( 'pre_http_request', $notes_http, 10, 3 );
+
+	$s11 = "$notes_prefix: links";
+	wp_mail(
+		'ida@example.org',
+		$s11,
+		'<p><a href="' . esc_url( $dead_url ) . '">Your account</a> · <a href="' . esc_url( get_permalink( $page_id ) ) . '">Live page</a> · <a href="' . esc_url( home_url( '/notes-e2e-other/' ) ) . '">Other</a>'
+			. ' · <a href="https://www.wordpress.org/notes-e2e-foreign/">Foreign</a> · <a href="' . esc_url( wp_login_url() ) . '">Login</a> · <a href="' . esc_url( home_url( '/?add-to-cart=12' ) ) . '">Cart</a></p>',
+		array( 'Content-Type: text/html; charset=UTF-8', 'From: Shop <shop@example.com>' )
+	);
+	remove_filter( 'pre_wp_mail', '__return_true' );
+	$row11 = notes_row( $s11 );
+	$item  = notes_rest( 'GET', '/mails/' . (int) $row11['id'] );
+	$dead  = array();
+	foreach ( $item['notes_list'] ?? array() as $note ) {
+		if ( 'dead_link' === $note['code'] ) {
+			$dead[] = $note;
+		}
+	}
+	notes_check( 1 === count( $dead ) && $dead[0]['dynamic'] && 'Link to a page that does not exist on your site: /notes-e2e-renamed-page/' === $dead[0]['title'], 'dead link to the own site is reported when the entry is opened', $item['notes_list'] ?? $item );
+	$hosts = array_unique( array_map( 'wp_parse_url', $requested, array_fill( 0, count( $requested ), PHP_URL_HOST ) ) );
+	notes_check( array( wp_parse_url( $home, PHP_URL_HOST ) ) === array_values( $hosts ) && 2 === count( $requested ), 'only the own site is requested, published pages need no request', $requested );
+	notes_check( ! in_array( 'dead_link', notes_codes( $row11 ), true ), 'dead links are not stored with the mail', notes_codes( $row11 ) );
+
+	$requested = array();
+	notes_rest( 'GET', '/mails/' . (int) $row11['id'] );
+	notes_check( array() === $requested, 'link results are cached', $requested );
+
+	remove_filter( 'pre_http_request', $notes_http, 10 );
+	wp_delete_post( $page_id, true );
+	$wpdb->query( "DELETE FROM {$wpdb->options} WHERE option_name LIKE '\\_transient\\_%mailspur\\_notes\\_l%' OR option_name LIKE '\\_transient\\_timeout\\_%mailspur\\_notes\\_l%'" );
+	wp_cache_flush();
+
 	// ------------------------------------------------------------------- settings.
 	$clean = Settings::sanitize(
 		array(
@@ -187,7 +272,7 @@ try {
 			'time'               => time() - 3600,
 			'email_to'           => 'gus@hotmial.com',
 			'subject'            => $s7,
-			'message'            => 'Hello',
+			'message'            => "Hello\nPassword: Imp0rt!pw77\n",
 			'backtrace_segment'  => '{}',
 			'status'             => 0,
 			'error'              => 'SMTP Error: Could not authenticate.',
@@ -205,6 +290,7 @@ try {
 	} while ( is_array( $step ) && empty( $step['done'] ) && $calls < 20 );
 	$row7 = notes_row( $s7 );
 	notes_check( $row7 && in_array( 'recipient_typo', notes_codes( $row7 ), true ) && (int) $row7['notes'] >= 1, 'imported mails are checked too', $row7 ? array( $row7['notes'], notes_codes( $row7 ) ) : $step );
+	notes_check( $row7 && in_array( 'secret_password', notes_codes( $row7 ), true ) && false === strpos( (string) $row7['message'], 'Imp0rt' ) && false !== strpos( (string) $row7['message'], 'Password: [redacted]' ), 'imported passwords are noted and masked', $row7 ? array( $row7['message'], notes_codes( $row7 ) ) : null );
 	if ( $row7 ) {
 		$item = notes_rest( 'GET', '/mails/' . (int) $row7['id'] );
 		notes_check( isset( $item['error_help']['key'] ) && 'smtp_auth' === $item['error_help']['key'], 'imported errors are explained', $item['error_help'] ?? $item );

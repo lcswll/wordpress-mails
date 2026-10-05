@@ -5,6 +5,10 @@
  *   POST /delivery/check         run the sender check (DNS)
  *   POST /mails/{id}/release     send a held mail now, bypassing staging mode once
  *   POST /delivery/hint          dismiss the "enable staging mode" suggestion
+ *   GET  /delivery/brake         emergency brake status
+ *   POST /delivery/brake/release send the next batch of mails held by the emergency brake
+ *   POST /delivery/brake/discard discard all mails held by the emergency brake
+ *   POST /delivery/brake/reset   end the incident ("this is fine"), held mails stay held
  *
  * @package Mailspur
  */
@@ -83,6 +87,32 @@ final class Controller {
 
 		register_rest_route(
 			Rest::NS,
+			'/delivery/brake',
+			array(
+				'methods'             => WP_REST_Server::READABLE,
+				'callback'            => array( $this, 'brake_status' ),
+				'permission_callback' => array( $this, 'is_admin' ),
+			)
+		);
+		register_rest_route(
+			Rest::NS,
+			'/delivery/brake/(?P<action>release|discard|reset)',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'brake_action' ),
+				'permission_callback' => array( $this, 'is_admin' ),
+				'args'                => array(
+					'action' => array(
+						'type'     => 'string',
+						'enum'     => array( 'release', 'discard', 'reset' ),
+						'required' => true,
+					),
+				),
+			)
+		);
+
+		register_rest_route(
+			Rest::NS,
 			'/delivery/hint',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
@@ -129,7 +159,28 @@ final class Controller {
 		} finally {
 			Staging::$release = 0;
 		}
+		Brake::released( $row );
 		return rest_ensure_response( $response );
+	}
+
+	public function brake_status(): WP_REST_Response {
+		return self::no_store( new WP_REST_Response( ( new Brake() )->status() ) );
+	}
+
+	public function brake_action( WP_REST_Request $request ): WP_REST_Response {
+		$brake = new Brake();
+		switch ( (string) $request['action'] ) {
+			case 'release':
+				$data = $brake->release_batch();
+				break;
+			case 'discard':
+				$data = array( 'discarded' => $brake->discard() );
+				break;
+			default:
+				$brake->reset();
+				$data = array( 'reset' => true );
+		}
+		return self::no_store( new WP_REST_Response( $data ) );
 	}
 
 	public function dismiss_hint(): WP_REST_Response {

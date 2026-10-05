@@ -29,18 +29,18 @@ final class Module implements \Mailspur\Module {
 	/** Day counters are never kept longer than this, even with unlimited log retention. */
 	const MAX_DAYS = 365;
 
-	/**
-	 * Reads the log through its own keyset queries (see Indexer), not through the repository.
-	 *
-	 * @param Repository $repository Unused.
-	 */
-	public function __construct( Repository $repository ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.Found -- interface of all modules.
+	/** @var Repository Single emails (compare view); the index reads the log through its own keyset queries. */
+	private $repository;
+
+	public function __construct( Repository $repository ) {
+		$this->repository = $repository;
 	}
 
 	public function register(): void {
-		$store   = new Store();
-		$indexer = new Indexer( $store );
-		$page    = new Page( $store, $indexer );
+		$store      = new Store();
+		$indexer    = new Indexer( $store );
+		$page       = new Page( $store, $indexer );
+		$repository = $this->repository;
 
 		add_action( 'admin_init', array( Store::class, 'maybe_install' ) );
 		add_action( 'admin_init', array( self::class, 'schedule' ) );
@@ -54,12 +54,13 @@ final class Module implements \Mailspur\Module {
 		add_filter( 'mailspur_rest_item', array( $page, 'rest_item' ), 10, 2 );
 		add_action( 'admin_post_mailspur_types_mute', array( $page, 'mute' ) );
 		add_action( 'admin_post_mailspur_types_rebuild', array( $page, 'rebuild' ) );
+		add_action( 'admin_post_mailspur_types_seen', array( $page, 'seen' ) );
 
 		add_action(
 			'rest_api_init',
-			static function () use ( $store, $indexer ): void {
+			static function () use ( $store, $indexer, $repository ): void {
 				Store::maybe_install();
-				( new Controller( $store, $indexer ) )->register_routes();
+				( new Controller( $store, $indexer, $repository ) )->register_routes();
 			}
 		);
 

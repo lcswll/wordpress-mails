@@ -55,7 +55,7 @@ final class Module implements \Mailspur\Module {
 
 | Hook | Type | Use |
 | --- | --- | --- |
-| `mailspur_meta( array $meta, string $phase, mixed $context )` | filter | Collect per-mail data. Phases: `capture` (context: `wp_mail()` args, before sending), `phpmailer` (context: the `PHPMailer` instance in `phpmailer_init` – not fired for API mailers using `pre_wp_mail`), `result` (context: `['status' => int\|null, 'error' => string]`), `import` (context: the mapped row of an imported mail). Return the meta array; store your data under your module key, e.g. `$meta['trace'] = …`. |
+| `mailspur_meta( array $meta, string $phase, mixed $context )` | filter | Collect per-mail data. Phases: `capture` (context: `wp_mail()` args, before sending), `phpmailer` (context: the `PHPMailer` instance in `phpmailer_init` – not fired for API mailers using `pre_wp_mail`), `result` (context: `['status' => int\|null, 'error' => string]`), `import` (context: the mapped row of an imported mail). The contexts carry the mail as sent; the stored row (and `mailspur_finalize_row`) has secrets masked (`Redactor`, setting `redact_secrets`). Never copy secrets from a context into the meta. Return the meta array; store your data under your module key, e.g. `$meta['trace'] = …`. |
 | `mailspur_finalize_row( array $data, array $row )` | filter | Last step before the final UPDATE (and for every imported row). `$row` is the complete row incl. `message`, `headers`, `meta` (array). Set columns in `$data`, e.g. `$data['notes'] = 3;` or change `$data['meta']` / `$data['status']`. |
 | `mailspur_logged( int $id, array $row )` | action | After the final UPDATE of a logged mail (not for imports). For counters/alerts – keep it cheap. |
 | `mailspur_should_log( bool $log, array $atts )` | filter | Skip logging a mail. |
@@ -94,7 +94,7 @@ m.registerDetail( ( dl, mail ) => { /* append <dt>/<dd> */ } );
 m.registerAction( { id: 'foo', label: 'Foo', icon: 'download', visible: ( mail ) => true, run: async ( mail ) => {} } );
 m.onList( ( data ) => {} );
 m.state(); // copy of the list state: filters (search, status, source, format …), sorting, page
-m.api( 'mails/1' ); m.toast( 'Done' ); m.reload(); m.current(); m.fmt( '%s of %s', 1, 2 ); m.node( 'span', 'cls', 'text' );
+m.api( 'mails/1' ); m.toast( 'Done' ); m.reload(); m.current(); m.open( 42 ); m.fmt( '%s of %s', 1, 2 ); m.node( 'span', 'cls', 'text' );
 ```
 
 Register synchronously when your script runs (scripts are deferred; the list renders on `DOMContentLoaded`).

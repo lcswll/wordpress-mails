@@ -2,9 +2,10 @@
 /**
  * Sorts logged emails into email types – incrementally and never while an email is being sent.
  *
- * Reads the log after a cursor (log id) in small keyset batches: only id, date, status, source, subject and
- * the notes count. Runs hourly via WP-Cron and briefly when the "Email types" tab is opened, so sending an
- * email costs nothing extra. Imported emails are picked up the same way.
+ * Reads the log after a cursor (log id) in small keyset batches: id, date, status, source, subject and the notes
+ * count, then – in smaller chunks – the start of each body (content fingerprint, see Content) and the meta (was
+ * the email sent by WP-Cron, from which hook). Runs hourly via WP-Cron and briefly when the "Email types" tab is
+ * opened, so sending an email costs nothing extra. Imported emails are picked up the same way.
  *
  * Direct queries: the plugin's own table.
  * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
@@ -24,6 +25,9 @@ final class Indexer {
 	const CURSOR = 'mailspur_types_cursor';
 	const LOCK   = 'mailspur_types_lock';
 	const BATCH  = 500;
+
+	/** Rows whose body and meta are read in one query. */
+	const BODY_BATCH = 100;
 
 	/** New types per sender; beyond that, further subjects of that sender share one catch-all type. */
 	const MAX_PER_SOURCE = 150;
@@ -114,6 +118,7 @@ final class Indexer {
 
 			$counts  = array();
 			$touched = array();
+			$mails   = array();
 			$stop    = false;
 			foreach ( $rows as $row ) {
 				$status = (int) $row['status'];
@@ -158,9 +163,11 @@ final class Indexer {
 					$type['first_seen'] = (string) $row['created_at'];
 				}
 				unset( $type );
-				$touched[ $id ] = true;
+				$touched[ $id ]            = true;
+				$mails[ (int) $row['id'] ] = array( $id, $time );
 			}
 
+			$this->contents( $mails );
 			$this->store->add_days( $counts );
 			foreach ( array_keys( $touched ) as $id ) {
 				$this->store->save( (array) $this->types[ $id ] );
@@ -172,6 +179,92 @@ final class Indexer {
 			}
 		}
 		return $read;
+	}
+
+	/**
+	 * Content fingerprints, cron origin and latest log id per type, in log order.
+	 *
+	 * @param array<int,array{0:int,1:int}> $mails Type id and unix time by log id.
+	 */
+	private function contents( array $mails ): void {
+		global $wpdb;
+		foreach ( array_chunk( array_keys( $mails ), self::BODY_BATCH ) as $ids ) {
+			$rows = (array) $wpdb->get_results(
+				$wpdb->prepare(
+					'SELECT id, content_type, SUBSTR(message, 1, %d) AS body, meta FROM %i WHERE id IN (' . implode( ',', array_fill( 0, count( $ids ), '%d' ) ) . ') ORDER BY id ASC',
+					array_merge( array( Content::MAX_BODY, Repository::table() ), $ids )
+				),
+				ARRAY_A
+			);
+			foreach ( $rows as $row ) {
+				$log_id = (int) $row['id'];
+				if ( ! isset( $mails[ $log_id ] ) ) {
+					continue;
+				}
+				list( $id, $time ) = $mails[ $log_id ];
+				$extra             = (array) ( $this->types[ $id ]['extra'] ?? array() );
+				$body              = (string) $row['body'];
+
+				$extra['lid']     = max( (int) ( $extra['lid'] ?? 0 ), $log_id );
+				$content          = (array) ( $extra['content'] ?? array() );
+				$extra['content'] = Content::observe( $content, Content::hash( $body, Content::is_html( (string) $row['content_type'], $body ) ), $log_id, $time );
+
+				$cron = self::cron_hook( (string) $row['meta'] );
+				if ( null !== $cron ) {
+					// Majority of the emails with a trace: "mostly sent by WP-Cron" plus the latest cron hook.
+					$extra['traced'] = (int) ( $extra['traced'] ?? 0 ) + 1;
+					if ( false !== $cron ) {
+						$extra['cron_n'] = (int) ( $extra['cron_n'] ?? 0 ) + 1;
+						if ( '' !== $cron || ! isset( $extra['cron_hook'] ) ) {
+							$extra['cron_hook'] = $cron;
+						}
+					}
+				}
+				$this->types[ $id ]['extra'] = $extra;
+			}
+		}
+	}
+
+	/**
+	 * Cron origin from a log row's meta (trace): the hook (or '' when unknown), false for other requests, null
+	 * when the email has no trace (imported, anonymised, trace module off).
+	 *
+	 * @return string|false|null
+	 */
+	public static function cron_hook( string $meta ) {
+		if ( '' === $meta || false === strpos( $meta, '"request"' ) ) {
+			return null;
+		}
+		$data    = json_decode( $meta, true );
+		$trace   = is_array( $data ) && isset( $data['trace'] ) && is_array( $data['trace'] ) ? $data['trace'] : array();
+		$request = isset( $trace['request'] ) && is_array( $trace['request'] ) ? $trace['request'] : null;
+		if ( null === $request ) {
+			return null;
+		}
+		if ( 'cron' !== ( $request['type'] ?? '' ) ) {
+			return false;
+		}
+		if ( isset( $request['hook'] ) && is_string( $request['hook'] ) ) {
+			return substr( $request['hook'], 0, 100 );
+		}
+		// Older traces: the outermost hook on the stack is the cron event.
+		$hooks = isset( $trace['hooks'] ) && is_array( $trace['hooks'] ) ? array_values( $trace['hooks'] ) : array();
+		return isset( $hooks[0] ) && is_string( $hooks[0] ) ? substr( $hooks[0], 0, 100 ) : '';
+	}
+
+	/**
+	 * Whether a type's emails come from WP-Cron (most of the traced ones), and from which hook.
+	 *
+	 * @param array<string,mixed> $extra Type state.
+	 * @return string|null Cron hook ('' = unknown hook), null when the type is not sent by cron.
+	 */
+	public static function cron_of( array $extra ): ?string {
+		$traced = (int) ( $extra['traced'] ?? 0 );
+		$cron   = (int) ( $extra['cron_n'] ?? 0 );
+		if ( $traced < 1 || $cron * 2 <= $traced ) {
+			return null;
+		}
+		return (string) ( $extra['cron_hook'] ?? '' );
 	}
 
 	/** Resends and Mailspur's own alert emails are copies or meta mails, not types of the site. */
@@ -221,6 +314,7 @@ final class Indexer {
 				'last_status' => 0,
 				'last_notes'  => 0,
 				'muted'       => false,
+				'extra'       => array(),
 			);
 			$this->by_source[ $source ][] = $id;
 		}

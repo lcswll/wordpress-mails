@@ -1,7 +1,7 @@
 <?php
 /**
- * Delivery module: sender DNS check (SPF/DKIM/DMARC/MX), staging mode (hold or redirect all mails) and
- * "send to another address" / "send now" actions in the log dialog.
+ * Delivery module: sender DNS check (SPF/DKIM/DMARC/MX), staging mode (hold or redirect all mails), the emergency
+ * brake for mail floods and "send to another address" / "send now" actions in the log dialog.
  *
  * @package Mailspur
  */
@@ -9,6 +9,7 @@
 namespace Mailspur\Modules\Delivery;
 
 use Mailspur\Admin;
+use Mailspur\Modules\Insights\Stats;
 use Mailspur\Repository;
 use Mailspur\Rest;
 use Mailspur\Settings;
@@ -26,6 +27,7 @@ final class Module implements \Mailspur\Module {
 
 	public function register(): void {
 		( new Staging() )->register();
+		( new Brake() )->register();
 
 		add_filter( 'mailspur_settings_defaults', array( $this, 'defaults' ) );
 		add_filter( 'mailspur_settings_sanitize', array( $this, 'sanitize' ), 10, 2 );
@@ -33,6 +35,7 @@ final class Module implements \Mailspur\Module {
 		add_action( 'mailspur_settings_after', array( $this, 'render_sender_check' ) );
 		add_action( 'mailspur_admin_enqueue', array( $this, 'enqueue' ), 10, 2 );
 		add_action( 'admin_notices', array( $this, 'notices' ) );
+		add_action( 'admin_notices', array( $this, 'brake_notice' ), 5 );
 		add_action( 'admin_bar_menu', array( $this, 'admin_bar' ), 100 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'admin_bar_style' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_bar_style' ) );
@@ -42,6 +45,9 @@ final class Module implements \Mailspur\Module {
 				( new Controller( $this->repository ) )->register_routes();
 			}
 		);
+		if ( defined( 'WP_CLI' ) && WP_CLI && class_exists( '\WP_CLI' ) ) {
+			\WP_CLI::add_command( 'mailspur brake', new BrakeCli( new Brake() ) );
+		}
 	}
 
 	/**
@@ -52,6 +58,8 @@ final class Module implements \Mailspur\Module {
 		$defaults                        = (array) $defaults;
 		$defaults['staging_mode']        = Staging::OFF;
 		$defaults['staging_redirect_to'] = '';
+		$defaults['brake_mode']          = Brake::ALERT;
+		$defaults['brake_threshold']     = 0;
 		return $defaults;
 	}
 
@@ -67,6 +75,11 @@ final class Module implements \Mailspur\Module {
 
 		$clean['staging_mode']        = in_array( $mode, Staging::MODES, true ) ? $mode : Staging::OFF;
 		$clean['staging_redirect_to'] = implode( ', ', Staging::parse_addresses( isset( $input['staging_redirect_to'] ) && is_string( $input['staging_redirect_to'] ) ? $input['staging_redirect_to'] : '' ) );
+
+		$brake                    = isset( $input['brake_mode'] ) ? sanitize_key( (string) $input['brake_mode'] ) : Brake::ALERT;
+		$clean['brake_mode']      = in_array( $brake, Brake::MODES, true ) ? $brake : Brake::ALERT;
+		$threshold                = isset( $input['brake_threshold'] ) && is_scalar( $input['brake_threshold'] ) ? (int) $input['brake_threshold'] : 0;
+		$clean['brake_threshold'] = max( 0, min( 1000000, $threshold ) );
 		return $clean;
 	}
 
@@ -100,6 +113,55 @@ final class Module implements \Mailspur\Module {
 				<td>
 					<input type="text" class="regular-text" id="mailspur-staging-redirect" name="<?php echo esc_attr( $name ); ?>[staging_redirect_to]" value="<?php echo esc_attr( (string) ( $settings['staging_redirect_to'] ?? '' ) ); ?>" placeholder="dev@example.com" autocomplete="off">
 					<p class="description"><?php esc_html_e( 'Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead.', 'mailspur-email-log' ); ?></p>
+				</td>
+			</tr>
+		</table>
+		<?php
+		$this->render_brake_settings( $settings, $name );
+	}
+
+	/**
+	 * @param array<string,mixed> $settings
+	 */
+	private function render_brake_settings( $settings, string $name ): void {
+		$mode      = in_array( $settings['brake_mode'] ?? '', Brake::MODES, true ) ? (string) $settings['brake_mode'] : Brake::ALERT;
+		$threshold = (int) ( $settings['brake_threshold'] ?? 0 );
+		$labels    = array(
+			Brake::OFF   => __( 'Off', 'mailspur-email-log' ),
+			Brake::ALERT => __( 'Alert only', 'mailspur-email-log' ),
+			Brake::HOLD  => __( 'Alert and hold further emails', 'mailspur-email-log' ),
+		);
+		$auto      = 0;
+		try {
+			$auto = Brake::automatic( ( new Brake() )->baseline() );
+		} catch ( \Throwable $e ) {
+			$auto = Brake::FLOOR;
+		}
+		?>
+		<h2 id="mailspur-brake"><?php esc_html_e( 'Emergency brake', 'mailspur-email-log' ); ?></h2>
+		<p class="description"><?php esc_html_e( 'Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held.', 'mailspur-email-log' ); ?></p>
+		<table class="form-table" role="presentation">
+			<tr>
+				<th scope="row"><?php esc_html_e( 'Emergency brake', 'mailspur-email-log' ); ?></th>
+				<td>
+					<fieldset class="mailspur-brake-modes">
+						<?php foreach ( $labels as $value => $label ) : ?>
+							<label><input type="radio" name="<?php echo esc_attr( $name ); ?>[brake_mode]" value="<?php echo esc_attr( $value ); ?>" <?php checked( $mode, $value ); ?>> <?php echo esc_html( $label ); ?></label><br>
+						<?php endforeach; ?>
+					</fieldset>
+					<p>
+						<label for="mailspur-brake-threshold"><?php esc_html_e( 'Threshold (emails per hour)', 'mailspur-email-log' ); ?></label>
+						<input type="number" class="small-text" id="mailspur-brake-threshold" min="0" max="1000000" name="<?php echo esc_attr( $name ); ?>[brake_threshold]" value="<?php echo esc_attr( $threshold > 0 ? (string) $threshold : '' ); ?>" placeholder="<?php echo esc_attr( (string) $auto ); ?>">
+					</p>
+					<p class="description">
+						<?php
+						printf(
+							/* translators: %s: number of emails per hour */
+							esc_html__( 'Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s.', 'mailspur-email-log' ),
+							esc_html( number_format_i18n( $auto ) )
+						);
+						?>
+					</p>
 				</td>
 			</tr>
 		</table>
@@ -186,6 +248,22 @@ final class Module implements \Mailspur\Module {
 				'statusBad'       => __( 'Problem', 'mailspur-email-log' ),
 				'statusUnknown'   => __( 'Unknown', 'mailspur-email-log' ),
 				'invalidSelector' => __( 'A DKIM selector may only contain letters, digits, dots, hyphens and underscores.', 'mailspur-email-log' ),
+				'brake'           => __( 'Emergency brake', 'mailspur-email-log' ),
+				'heldBrake'       => __( 'Held by emergency brake – not delivered.', 'mailspur-email-log' ),
+				'brakeReleased'   => __( 'Held by emergency brake – released later.', 'mailspur-email-log' ),
+				'brakeDiscarded'  => __( 'Held by emergency brake – discarded.', 'mailspur-email-log' ),
+				/* translators: %s: log entry number */
+				'releasedBrake'   => __( 'Released from the emergency brake (held entry #%s).', 'mailspur-email-log' ),
+				/* translators: %s: number of emails */
+				'confirmBrake'    => __( 'Send all %s held emails to their original recipients now?', 'mailspur-email-log' ),
+				'confirmDiscard'  => __( 'Discard all held emails? They stay in the log but are not sent.', 'mailspur-email-log' ),
+				/* translators: 1: number of emails sent, 2: number of emails still held */
+				'brakeProgress'   => __( '%1$s sent, %2$s still held …', 'mailspur-email-log' ),
+				/* translators: 1: number of emails sent, 2: number of failed emails */
+				'brakeDone'       => __( 'Done: %1$s emails sent, %2$s failed.', 'mailspur-email-log' ),
+				/* translators: %s: number of emails */
+				'discarded'       => __( '%s held emails discarded.', 'mailspur-email-log' ),
+				'brakeReset'      => __( 'Emergency brake reset.', 'mailspur-email-log' ),
 			),
 		);
 		wp_add_inline_script( 'mailspur-delivery', 'window.mailspurDelivery = ' . wp_json_encode( $config ) . ';', 'before' );
@@ -245,6 +323,79 @@ final class Module implements \Mailspur\Module {
 		<?php
 	}
 
+	/** Emergency brake on the Mail Log screen only: incident with count, main source and the release/discard buttons. */
+	public function brake_notice(): void {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only detects the current admin screen.
+		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+		if ( Admin::SLUG !== $page || ! Settings::current_user_can_view() ) {
+			return;
+		}
+		$state = Brake::state();
+		if ( empty( $state['active'] ) && empty( $state['holding'] ) ) {
+			return;
+		}
+		try {
+			$status = ( new Brake() )->status();
+		} catch ( \Throwable $e ) {
+			return;
+		}
+		if ( ! $status['active'] && ! $status['held'] ) {
+			return;
+		}
+
+		$lines = array();
+		if ( $status['active'] ) {
+			$lines[] = sprintf(
+				/* translators: 1: number of emails, 2: number of emails per hour */
+				__( 'Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour).', 'mailspur-email-log' ),
+				number_format_i18n( (int) $status['count'] ),
+				number_format_i18n( (int) $status['threshold'] )
+			);
+			$lines[] = Brake::HOLD === $status['mode']
+				? __( 'New emails are held until you release or discard them. Password reset emails still go out.', 'mailspur-email-log' )
+				: __( 'Emails are still being sent. Check the main source; switch the emergency brake to "Alert and hold further emails" to stop them.', 'mailspur-email-log' );
+		}
+		if ( $status['held'] ) {
+			/* translators: %s: number of emails */
+			$lines[] = sprintf( __( '%s emails are held by the emergency brake.', 'mailspur-email-log' ), number_format_i18n( (int) $status['held'] ) );
+		}
+
+		$details = array();
+		if ( ! empty( $status['sources'][0] ) ) {
+			$top = $status['sources'][0];
+			/* translators: 1: plugin or theme name, 2: number of emails */
+			$details[] = sprintf( __( 'Main source: %1$s (%2$s emails).', 'mailspur-email-log' ), Stats::source_label( (string) $top['value'] ), number_format_i18n( (int) $top['count'] ) );
+		}
+		$recipients = array();
+		foreach ( (array) $status['recipients'] as $item ) {
+			$recipients[] = sprintf( '%s (%s)', $item['value'], number_format_i18n( (int) $item['count'] ) );
+		}
+		if ( $recipients ) {
+			/* translators: %s: list of recipients with counts */
+			$details[] = sprintf( __( 'Top recipients: %s', 'mailspur-email-log' ), implode( ', ', $recipients ) );
+		}
+		?>
+		<div class="notice notice-error mailspur-brake-notice" id="mailspur-brake-notice">
+			<p><strong><?php echo esc_html( implode( ' ', $lines ) ); ?></strong></p>
+			<?php if ( $details ) : ?>
+				<p class="mailspur-brake-details"><?php echo esc_html( implode( ' ', $details ) ); ?></p>
+			<?php endif; ?>
+			<?php if ( current_user_can( 'manage_options' ) ) : ?>
+				<p class="mailspur-brake-actions">
+					<?php if ( $status['held'] ) : ?>
+						<button type="button" class="button button-primary" data-mailspur-brake="release" data-held="<?php echo esc_attr( (string) $status['held'] ); ?>"><?php esc_html_e( 'Release held emails', 'mailspur-email-log' ); ?></button>
+						<button type="button" class="button" data-mailspur-brake="discard"><?php esc_html_e( 'Discard held emails', 'mailspur-email-log' ); ?></button>
+						<a href="<?php echo esc_url( Admin::url( array( 'status' => 'held' ) ) ); ?>"><?php esc_html_e( 'Review held emails', 'mailspur-email-log' ); ?></a>
+					<?php else : ?>
+						<button type="button" class="button" data-mailspur-brake="reset"><?php esc_html_e( 'Mark as resolved', 'mailspur-email-log' ); ?></button>
+					<?php endif; ?>
+					<span class="mailspur-brake-progress" aria-live="polite"></span>
+				</p>
+			<?php endif; ?>
+		</div>
+		<?php
+	}
+
 	/** Non-production site, staging mode off, suggestion not dismissed, user may change settings. */
 	public static function suggest_staging(): bool {
 		return 'production' !== self::environment()
@@ -262,9 +413,23 @@ final class Module implements \Mailspur\Module {
 		return (string) apply_filters( 'mailspur_environment_type', wp_get_environment_type() );
 	}
 
-	/** Warning in the admin bar while staging mode is active (administrators only). */
+	/** Warning in the admin bar while staging mode is active or the emergency brake holds emails (administrators only). */
 	public function admin_bar( \WP_Admin_Bar $bar ): void {
-		if ( ! Staging::active() || ! current_user_can( 'manage_options' ) ) {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+		if ( Brake::holding() ) {
+			$bar->add_node(
+				array(
+					'id'     => 'mailspur-brake',
+					'parent' => 'top-secondary',
+					'title'  => esc_html__( 'Mailspur: emails held', 'mailspur-email-log' ),
+					'href'   => Admin::url(),
+					'meta'   => array( 'title' => __( 'The emergency brake holds outgoing emails until you release or discard them.', 'mailspur-email-log' ) ),
+				)
+			);
+		}
+		if ( ! Staging::active() ) {
 			return;
 		}
 		$bar->add_node(
@@ -283,8 +448,8 @@ final class Module implements \Mailspur\Module {
 	}
 
 	public function admin_bar_style(): void {
-		if ( Staging::active() && is_admin_bar_showing() && current_user_can( 'manage_options' ) ) {
-			wp_add_inline_style( 'admin-bar', '#wpadminbar #wp-admin-bar-mailspur-staging > .ab-item{background:#b32d2e;color:#fff}' );
+		if ( ( Staging::active() || Brake::holding() ) && is_admin_bar_showing() && current_user_can( 'manage_options' ) ) {
+			wp_add_inline_style( 'admin-bar', '#wpadminbar #wp-admin-bar-mailspur-staging > .ab-item,#wpadminbar #wp-admin-bar-mailspur-brake > .ab-item{background:#b32d2e;color:#fff}' );
 		}
 	}
 }

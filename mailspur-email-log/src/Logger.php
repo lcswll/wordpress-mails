@@ -127,6 +127,10 @@ final class Logger {
 		}
 
 		$this->stack[ $key ]['data'] = $data;
+		// Only whether an HTML mail carries a plain-text alternative (PHPMailer AltBody) – the part itself is not stored.
+		if ( false !== stripos( $data['content_type'], 'html' ) ) {
+			$this->stack[ $key ]['meta']['plain_text'] = '' !== trim( (string) $mailer->AltBody ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+		}
 		$this->stack[ $key ]['meta'] = (array) apply_filters( 'mailspur_meta', $this->stack[ $key ]['meta'], 'phpmailer', $mailer );
 	}
 

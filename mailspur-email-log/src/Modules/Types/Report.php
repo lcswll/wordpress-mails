@@ -20,15 +20,19 @@ final class Report {
 	/** Days a type counts as new. */
 	const NEW_DAYS = 7;
 
+	/** Content changes marked as seen: type id => log id of the first email after the change. */
+	const SEEN = 'mailspur_types_seen';
+
 	/**
 	 * @param array<int,array<string,mixed>>                                   $types   Store::types().
 	 * @param array<int,array<string,array{total:int,failed:int,held:int}>>    $days    Store::days_since().
 	 * @param string                                                           $today   Site-local "Y-m-d".
 	 * @param int                                                              $now     Unix time.
 	 * @param array<int,array{time:int,label:string,slug:string}>              $updates Updates::all().
+	 * @param array<int|string,int>                                            $seen    Dismissed content changes (option SEEN).
 	 * @return array<int,array<string,mixed>> Items, most emails in 30 days first.
 	 */
-	public static function build( array $types, array $days, string $today, int $now, array $updates = array() ): array {
+	public static function build( array $types, array $days, string $today, int $now, array $updates = array(), array $seen = array() ): array {
 		$midnight = (int) strtotime( $today . ' 00:00:00 UTC' );
 		$range    = array();
 		for ( $i = self::DAYS - 1; $i >= 0; $i-- ) {
@@ -91,6 +95,7 @@ final class Report {
 				}
 			}
 
+			$extra   = (array) ( $type['extra'] ?? array() );
 			$items[] = array(
 				'id'         => (int) $id,
 				'source'     => (string) $type['source'],
@@ -109,6 +114,10 @@ final class Report {
 				'held'       => $held,
 				'rhythm'     => $rhythm,
 				'updates'    => $since,
+				'last_id'    => (int) ( $extra['lid'] ?? 0 ),
+				'change'     => self::change( $extra, $updates, (int) ( $seen[ $id ] ?? 0 ) ),
+				'cron'       => Indexer::cron_of( $extra ),
+				'cause'      => null,
 			);
 		}
 
@@ -131,7 +140,58 @@ final class Report {
 		$today = (string) wp_date( 'Y-m-d', $now );
 		$since = gmdate( 'Y-m-d', (int) strtotime( $today . ' 00:00:00 UTC' ) - Rhythm::WINDOW * DAY_IN_SECONDS );
 		$one   = null !== $types && 1 === count( $types ) ? (int) key( $types ) : 0;
-		return self::build( $types ?? $store->types(), $store->days_since( $since, $one ), $today, $now, Updates::all() );
+		$seen  = get_option( self::SEEN, array() );
+		$items = self::build( $types ?? $store->types(), $store->days_since( $since, $one ), $today, $now, Updates::all(), is_array( $seen ) ? $seen : array() );
+		foreach ( $items as $i => $item ) {
+			if ( 'silent' === $item['state'] && null !== $item['cron'] ) {
+				$items[ $i ]['cause'] = Cron::current( (string) $item['cron'], $now );
+			}
+		}
+		return $items;
+	}
+
+	/**
+	 * Latest content change of a type that was not marked as seen, with the updates installed between the last
+	 * email before and the first email after it.
+	 *
+	 * @param array<string,mixed>                                 $extra   Type state (Indexer).
+	 * @param array<int,array{time:int,label:string,slug:string}> $updates Updates::all().
+	 * @param int                                                 $seen    Log id of the change marked as seen.
+	 * @return array{before:int,after:int,before_at:int,after_at:int,updates:string[]}|null
+	 */
+	public static function change( array $extra, array $updates, int $seen ): ?array {
+		$content = isset( $extra['content'] ) && is_array( $extra['content'] ) ? $extra['content'] : array();
+		$change  = isset( $content['c'] ) && is_array( $content['c'] ) ? $content['c'] : null;
+		if ( null === $change || ! empty( $content['var'] ) || (int) $change['after'] === $seen ) {
+			return null;
+		}
+		$between = array();
+		foreach ( $updates as $update ) {
+			if ( (int) $update['time'] > (int) $change['before_at'] && (int) $update['time'] <= (int) $change['after_at'] ) {
+				$between[] = (string) $update['label'];
+			}
+		}
+		return array(
+			'before'    => (int) $change['before'],
+			'after'     => (int) $change['after'],
+			'before_at' => (int) $change['before_at'],
+			'after_at'  => (int) $change['after_at'],
+			'updates'   => array_values( array_unique( $between ) ),
+		);
+	}
+
+	/**
+	 * Marks the current content change of a type as seen (the marker disappears until the next change).
+	 *
+	 * @param array<int,mixed> $existing All types by id (entries of types that no longer exist are dropped).
+	 */
+	public static function mark_seen( int $id, int $after, array $existing ): void {
+		$seen = get_option( self::SEEN, array() );
+		$seen = is_array( $seen ) ? array_intersect_key( $seen, $existing ) : array();
+		if ( $after > 0 ) {
+			$seen[ $id ] = $after;
+		}
+		update_option( self::SEEN, $seen, false );
 	}
 
 	/**

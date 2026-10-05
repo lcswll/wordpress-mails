@@ -20,6 +20,7 @@ use Mailspur\Modules\Insights\Stats;
 use Mailspur\Modules\Types\Indexer;
 use Mailspur\Modules\Types\Module;
 use Mailspur\Modules\Types\Monitor;
+use Mailspur\Modules\Types\Page;
 use Mailspur\Modules\Types\Report;
 use Mailspur\Modules\Types\Store;
 use Mailspur\Modules\Types\Updates;
@@ -42,7 +43,7 @@ function types_check( $ok, $name, $detail = null ) {
 }
 
 /** Inserts a log row at a UTC time. */
-function types_row( $utc, $status, $subject, $source = 'plugin:e2e-types-shop' ) {
+function types_row( $utc, $status, $subject, $source = 'plugin:e2e-types-shop', $message = 'x', $meta = '' ) {
 	global $wpdb;
 	$wpdb->insert(
 		Repository::table(),
@@ -51,12 +52,12 @@ function types_row( $utc, $status, $subject, $source = 'plugin:e2e-types-shop' )
 			'status'      => $status,
 			'recipients'  => 'customer@example.com',
 			'subject'     => $subject,
-			'message'     => 'x',
+			'message'     => $message,
 			'headers'     => '',
 			'attachments' => '',
 			'source'      => $source,
 			'error'       => '',
-			'meta'        => '',
+			'meta'        => $meta,
 			'raw'         => '',
 		)
 	);
@@ -237,8 +238,147 @@ try {
 	types_check( false, 'exception', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
 }
 
+// Before/after content changes, the cron cause of a stopped type and the "send latest to me" shortcut.
 try {
 	global $wpdb;
+	$store   = new Store();
+	$indexer = new Indexer( $store );
+	$indexer->rebuild();
+	$now = time();
+	wp_clear_scheduled_hook( 'mailspur_e2e_reminder' );
+
+	$digest = static function ( $n, $link ) {
+		return '<html><head><style>p{margin:0}</style></head><body><p>Hi Anna,</p><p>Here is your digest number ' . $n . ' with ' . ( $n * 3 ) . ' new posts.</p>'
+			. ( $link ? '<p><a href="https://news.example/read/' . $n . '/?token=e2e-secret">Read online</a></p>' : '' )
+			. '<p>Unsubscribe any time.</p></body></html>';
+	};
+	$news   = array();
+	for ( $d = 20; $d >= 11; $d-- ) {
+		$news[] = types_row( gmdate( 'Y-m-d 08:00:00', $now - $d * DAY_IN_SECONDS ), 1, 'Your digest #' . ( 100 - $d ), 'plugin:e2e-types-news', $digest( 100 - $d, $d > 12 ), '' );
+	}
+	update_option(
+		Updates::OPTION,
+		array(
+			array(
+				'time'  => (int) strtotime( gmdate( 'Y-m-d 20:00:00', $now - 13 * DAY_IN_SECONDS ) . ' UTC' ), // Between the two emails.
+				'label' => 'E2E News 3.0',
+				'slug'  => 'plugin:e2e-types-news',
+			),
+		),
+		false
+	);
+
+	$cron_meta = (string) wp_json_encode(
+		array(
+			'trace' => array(
+				'request' => array(
+					'type' => 'cron',
+					'hook' => 'mailspur_e2e_reminder',
+				),
+			),
+		)
+	);
+	for ( $d = 33; $d >= 4; $d-- ) {
+		types_row( gmdate( 'Y-m-d 06:00:00', $now - $d * DAY_IN_SECONDS ), 1, 'Daily reminder', 'plugin:e2e-types-cron', 'Your reminder for today.', $cron_meta );
+	}
+
+	$indexer->run( 100000 );
+	$by_source = array();
+	foreach ( Report::current( $store, time() ) as $item ) {
+		$by_source[ $item['source'] ] = $item;
+	}
+	$digest_item = $by_source['plugin:e2e-types-news'] ?? array();
+	$change      = $digest_item['change'] ?? null;
+	types_check( is_array( $change ) && $news[8] === $change['after'] && $news[7] === $change['before'], 'content change points at the last email before and the first after it', $change );
+	types_check( array( 'E2E News 3.0' ) === ( $change['updates'] ?? null ), 'content change names the update in between', $change );
+	$latest = (int) ( $digest_item['last_id'] ?? 0 );
+	types_check( $news[9] === $latest && false !== strpos( Page::log_url( $digest_item, true ), 'mail=' . $news[9] ), '"Open latest" links to the latest email', $latest );
+
+	$compare = rest_do_request( new WP_REST_Request( 'GET', '/mailspur-email-log/v1/types/' . (int) ( $digest_item['id'] ?? 0 ) . '/compare' ) );
+	$cdata   = (array) $compare->get_data();
+	$removed = array();
+	foreach ( (array) ( $cdata['diff'] ?? array() ) as $op ) {
+		if ( '-' === $op[0] ) {
+			$removed[] = $op[1];
+		}
+	}
+	types_check( 200 === $compare->get_status() && true === ( $cdata['available'] ?? null ) && array( 'Read online [https://news.example/read/87/]' ) === $removed, 'compare: line diff shows only the removed link', array( $compare->get_status(), $cdata['diff'] ?? $cdata ) );
+	types_check( ! empty( $cdata['before']['isHtml'] ) && false === strpos( (string) wp_json_encode( $cdata['diff'] ?? array() ), 'e2e-secret' ), 'compare: previews are HTML, diff has no query strings', null );
+
+	wp_set_current_user( 0 );
+	$denied = rest_do_request( new WP_REST_Request( 'GET', '/mailspur-email-log/v1/types/' . (int) ( $digest_item['id'] ?? 0 ) . '/compare' ) );
+	types_check( in_array( $denied->get_status(), array( 401, 403 ), true ), 'compare needs the log capability', $denied->get_status() );
+	$admins = get_users(
+		array(
+			'role'   => 'administrator',
+			'number' => 1,
+		)
+	);
+	wp_set_current_user( $admins ? $admins[0]->ID : 1 );
+
+	Report::mark_seen( (int) $digest_item['id'], (int) $change['after'], $store->types() );
+	$seen = null;
+	foreach ( Report::current( $store, time() ) as $item ) {
+		if ( 'plugin:e2e-types-news' === $item['source'] ) {
+			$seen = $item;
+		}
+	}
+	types_check( is_array( $seen ) && array_key_exists( 'change', $seen ) && null === $seen['change'], '"Seen" clears the marker', $seen );
+
+	$wpdb->update(
+		Repository::table(),
+		array(
+			'message' => '',
+			'meta'    => '{"anonymised":{"at":1}}',
+		),
+		array( 'id' => $news[7] )
+	);
+	$gone = (array) rest_do_request( new WP_REST_Request( 'GET', '/mailspur-email-log/v1/types/' . (int) ( $digest_item['id'] ?? 0 ) . '/compare' ) )->get_data();
+	types_check( false === ( $gone['available'] ?? null ) && ! isset( $gone['diff'] ) && '' !== (string) ( $gone['reason'] ?? '' ), 'compare is unavailable once an email was anonymised', $gone );
+
+	// Cron diagnosis.
+	$cron_item = $by_source['plugin:e2e-types-cron'] ?? array();
+	types_check( 'silent' === ( $cron_item['state'] ?? '' ) && 'mailspur_e2e_reminder' === ( $cron_item['cron'] ?? null ), 'cron type learnt from the trace', array( $cron_item['state'] ?? null, $cron_item['cron'] ?? null ) );
+	types_check( 'unscheduled' === ( $cron_item['cause']['code'] ?? '' ) && false !== strpos( Monitor::message( $cron_item, time() ), 'mailspur_e2e_reminder – this event is no longer scheduled' ), 'unscheduled cron event is the cause, also in the alert text', $cron_item['cause'] ?? null );
+	wp_schedule_event( time() + HOUR_IN_SECONDS, 'daily', 'mailspur_e2e_reminder' );
+	$cause = null;
+	foreach ( Report::current( $store, time() ) as $item ) {
+		if ( 'plugin:e2e-types-cron' === $item['source'] ) {
+			$cause = $item['cause'];
+		}
+	}
+	types_check( in_array( $cause['code'] ?? '', array( 'running', 'stalled' ), true ) && false !== strpos( (string) ( $cause['text'] ?? '' ), 'mailspur_e2e_reminder' ), 'scheduled again: cause names the event and the cron state', $cause );
+	wp_clear_scheduled_hook( 'mailspur_e2e_reminder' );
+
+	// A real email from a cron request records its cron hook in the trace.
+	add_filter( 'wp_doing_cron', '__return_true' );
+	add_action(
+		'mailspur_e2e_cron_send',
+		static function () {
+			wp_mail( 'cron@example.com', 'E2E cron trace', 'Sent from cron.' );
+		}
+	);
+	do_action( 'mailspur_e2e_cron_send' );
+	remove_filter( 'wp_doing_cron', '__return_true' );
+	$traced = (string) $wpdb->get_var( $wpdb->prepare( 'SELECT meta FROM %i WHERE subject = %s ORDER BY id DESC LIMIT 1', Repository::table(), 'E2E cron trace' ) );
+	types_check( 'mailspur_e2e_cron_send' === Indexer::cron_hook( $traced ), 'trace stores the cron hook of the request', $traced );
+
+	// "Send latest to me": the core resend route with the current user's address.
+	$before_count = count( $types_captured );
+	$resend       = new WP_REST_Request( 'POST', '/mailspur-email-log/v1/mails/' . $news[9] . '/resend' );
+	$resend->set_param( 'to', array( 'me@example.com' ) );
+	$sent = (array) rest_do_request( $resend )->get_data();
+	$last = $types_captured[ count( $types_captured ) - 1 ] ?? array();
+	types_check( ! empty( $sent['sent'] ) && count( $types_captured ) === $before_count + 1 && array( 'me@example.com' ) === (array) ( $last['to'] ?? array() ), 'latest email of a type is sent to one address', array( $sent, $last['to'] ?? null ) );
+} catch ( Throwable $e ) {
+	types_check( false, 'exception (before/after, cron)', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
+}
+
+try {
+	global $wpdb;
+	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source IN ( %s, %s ) OR subject = %s OR ( source = %s AND recipients = %s )', Repository::table(), 'plugin:e2e-types-news', 'plugin:e2e-types-cron', 'E2E cron trace', 'mailspur:resend', 'me@example.com' ) );
+	wp_clear_scheduled_hook( 'mailspur_e2e_reminder' );
+	delete_option( Report::SEEN );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source = %s OR ( source = %s AND subject = %s )', Repository::table(), 'plugin:e2e-types-shop', 'mailspur:resend', 'Order #1 confirmed' ) );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source = %s AND recipients = %s', Repository::table(), Stats::ALERT_SOURCE, 'ops@example.com' ) );
 	( new Indexer( new Store() ) )->rebuild();

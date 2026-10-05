@@ -103,6 +103,22 @@ final class LoggerTest extends TestCase {
 		$this->assertStringContainsString( '&amp;key=[redacted]"', $message );
 	}
 
+	public function test_plain_text_secrets_are_masked_but_modules_see_the_mail_as_sent(): void {
+		$seen = '';
+		Filters\expectApplied( 'mailspur_meta' )->andReturnUsing(
+			static function ( $meta, $phase, $context ) use ( &$seen ) {
+				if ( 'capture' === $phase ) {
+					$seen = $context['message'];
+				}
+				return $meta;
+			}
+		);
+		$this->logger->capture( $this->atts( array( 'message' => "Username: anna\nPassword: Xy7!kq99\nCard: 4111 1111 1111 1111" ) ) );
+
+		$this->assertSame( "Username: anna\nPassword: [redacted]\nCard: [redacted]", $this->writes( 'insert' )[0][2]['message'] );
+		$this->assertStringContainsString( 'Xy7!kq99', $seen );
+	}
+
 	public function test_redaction_can_be_disabled(): void {
 		$this->settings = array( 'redact_secrets' => false );
 		$this->logger->capture( $this->atts( array( 'message' => '?key=AbC123' ) ) );
@@ -129,12 +145,32 @@ final class LoggerTest extends TestCase {
 				'sender'       => 'Shop <shop@example.com>',
 				'message'      => '<p>Wrapped by a template plugin</p>',
 				'status'       => Repository::STATUS_SENT,
-				'meta'         => '',
+				'meta'         => '{"plain_text":false}',
 				'size'         => 35,
 			),
 			$updates[0][2]
 		);
 		$this->assertSame( array( 'id' => 1 ), $updates[0][3] );
+	}
+
+	public function test_records_whether_an_html_mail_has_a_plain_text_alternative_without_storing_it(): void {
+		$this->logger->capture( $this->atts() );
+		$mailer              = new PHPMailer();
+		$mailer->ContentType = 'text/html'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->Body        = 'Body'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->AltBody     = 'Secret plain text'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->logger->enrich( $mailer );
+		$this->logger->succeeded();
+
+		$update = $this->writes( 'update' )[0][2];
+		$this->assertSame( '{"plain_text":true}', $update['meta'] );
+		$this->assertStringNotContainsString( 'Secret plain text', (string) wp_json_encode( $update ) );
+
+		// Plain-text mails do not get the flag.
+		$this->logger->capture( $this->atts() );
+		$this->logger->enrich( new PHPMailer() );
+		$this->logger->succeeded();
+		$this->assertSame( '', $this->writes( 'update' )[1][2]['meta'] );
 	}
 
 	public function test_modules_collect_meta_in_three_phases_and_set_columns(): void {

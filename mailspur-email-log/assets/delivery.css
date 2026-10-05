@@ -121,3 +121,18 @@
 .mailspur-delivery-note.is-bad {
 	border-left-color: var(--ob-failed, #d63638);
 }
+
+.mailspur-brake-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.mailspur-brake-progress {
+	color: var(--ob-muted, #646970);
+}
+
+.mailspur-brake-details {
+	overflow-wrap: anywhere;
+}

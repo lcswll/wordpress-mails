@@ -1,7 +1,8 @@
 <?php
 /**
- * Masks one-time secrets in links (password reset / activation keys, order keys) so the log
- * cannot be used to take over accounts. Used for logged and for imported mails.
+ * Masks one-time secrets in links (password reset / activation keys, order keys) and secrets sent in
+ * plain text (passwords, API keys, private keys, card numbers – see Secrets) so the log cannot be used
+ * to take over accounts. Used for logged and for imported mails.
  *
  * @package Mailspur
  */
@@ -27,6 +28,6 @@ final class Redactor {
 			)
 		);
 		$result = preg_replace( '/([?&](?:amp;)?(?:' . $params . ')=)[^&\s"\'<>]+/i', '$1[redacted]', $text );
-		return null === $result ? $text : $result;
+		return Secrets::mask( null === $result ? $text : $result );
 	}
 }

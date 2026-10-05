@@ -30,6 +30,9 @@ Most email problems are not failures but emails that are never triggered: a plug
 * **Every kind of email, found automatically.** Grouped by the plugin that sends it and by subject – order numbers, dates, addresses and even customer names become placeholders, so "Welcome, Anna!" and "Welcome, Ben!" are one type, while "Your order is complete" and "Your order is cancelled" stay two.
 * **Health per type:** emails and failures of the last 30 days as a small chart, the rhythm ("daily", "every 3 days", "weekly"), when it was last sent and notes found in its latest email.
 * **"This email type stopped":** Mailspur learns each type's rhythm from its own last 8 weeks – a daily order confirmation is overdue after 2 days, one that pauses on weekends after 4, a weekly report after 2 weeks. Overdue types are marked, and with alerts enabled you get one email or webhook message – including the plugins, themes or WordPress updates installed since the type was last sent – and another one when it is back.
+* **Content changes after updates:** when the text of a type changes – e.g. the order confirmation after a plugin update – the type is marked ("Content changed on 3 Oct, after the WooCommerce 9.4 update") and "Compare" shows the text changes and both previews side by side. Names, numbers, dates and amounts are ignored, so only real template changes count.
+* **Why a type stopped:** for emails sent by WP-Cron (reminders, renewals, reports), Mailspur names the likely cause – the cron event is no longer scheduled, WP-Cron has not run for days or the event is overdue – in the tab and in the alert.
+* **Shortcuts per type:** open the latest email of a type or send it to yourself with one click.
 * **Built for privacy and speed:** sorting happens afterwards (hourly and when you open the tab), never while an email is sent. Only counters and subject patterns are stored – never recipients or contents – and they follow the retention period of the log. Types you do not care about can be ignored.
 
 = Find any email in seconds =
@@ -39,16 +42,26 @@ Most email problems are not failures but emails that are never triggered: a plug
 * Keyboard friendly: `/` jumps to the search, `j`/`k` move between emails, `Esc` closes the preview.
 * Export the current view as CSV (Excel-ready, safe against formula injection) or JSON.
 
+= Emails right where you need them =
+
+"Did the customer get her invoice?" Mailspur links emails to what they belong to:
+
+* **WooCommerce orders** (HPOS and classic) get an "Emails" box with every email sent for that order – status, notes, a link to the log entry and a resend button. Emails to the billing address around the order date that are not linked, such as older or imported entries, are marked "same recipient".
+* **User profiles** show the latest emails to that user, including notices sent to a previous address.
+* In the log, an email shows the order or user it belongs to. Only people who can view the log and edit that order or user see these links.
+
 = The trail of every email =
 
 * **Trace:** how long sending took, which mailer and SMTP server (host, port, encryption, masked username) or which API plugin delivered it, the file, line and function that called `wp_mail()`, the active hooks and the request (cron, REST, Ajax, admin, front end, CLI – no IP addresses, no query strings).
 * **SMTP transcript** for failed emails (optional for all): the conversation with the SMTP server, with login data and message content always masked.
 * **Download as .eml** to open any logged email in your mail program.
+* **See how an email really looks:** switch the preview to phone width, dark mode (using the email's own dark-mode styles), a forced-dark simulation like in apps that invert colours, or plain text. Scripts, forms and remote content stay blocked in every view.
 
 = Notes: problems found in your emails =
 
 * HTML sent as plain text, Gmail clipping (> 102 KB), relative links and images, development or staging URLs, unreplaced placeholders like `{first_name}` or `%s`, broken encoding (Ã¤), risky sender addresses (wordpress@localhost, gmail.com sent from your server), bulk mail without `List-Unsubscribe`, typos in recipient domains (gmial.com), misleading link texts and more – shown as a badge in the list.
-* When you open an entry: whether the recipient domain can receive email at all (MX lookup) and whether the same email was sent several times within minutes.
+* **Secrets in plain text:** warns when a plugin emails a password, API key, private key or card number – and masks the value in the log, together with the secrets in links.
+* When you open an entry: whether the recipient domain can receive email at all (MX lookup), whether the same email was sent several times within minutes and whether links to your own site lead to a page that no longer exists (404).
 * **Error messages explained:** PHPMailer errors, SMTP reply codes (421, 450, 535, 550, 554 …), Gmail and Microsoft 365 login problems and API mailer errors (invalid key, unverified domain, quota) with step-by-step fixes.
 
 = Statistics, charts and alerts =
@@ -61,6 +74,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 
 * **Sender check:** SPF, DKIM, DMARC and MX of the domains your site sends from, with a traffic light per record and ready-to-paste record suggestions.
 * **Staging mode:** hold every email (log only) or redirect all emails to test addresses on staging and development copies – a clear warning shows while it is active, held emails can be sent one by one.
+* **Emergency brake for mail floods:** Mailspur learns your site's normal email volume and alerts you when far more emails leave than usual, e.g. because spam bots abuse a contact form. Optionally it holds further emails until you release or discard them, so your domain does not end up on blocklists. Password reset emails always go out.
 * **Send to another address**, e.g. to forward a lost order confirmation, or resend the original.
 
 = Bring your old log along =
@@ -84,13 +98,15 @@ Mailspur works without any external service. There is exactly one optional excep
 
 The sender check (SPF/DKIM/DMARC/MX) and the recipient-domain check only ask your server's own DNS resolver, on demand, and contact no third-party service.
 
+The dead-link check only looks at links to your own site: first internally, otherwise with one short request to your own site (like WordPress' Site Health does). Links to other websites are never requested.
+
 Remote images in a logged email are blocked in the preview. Only when you click "Load remote content" (or enable "Always load remote images") does your browser request them from the servers named in that email, just as a mail program would. The plugin itself sends nothing to these servers.
 
 = For developers =
 
-* WP-CLI: `wp mailspur list|show|resend|stats|purge|export|import`.
+* WP-CLI: `wp mailspur list|show|resend|stats|purge|export|import` and `wp mailspur brake status|release|discard|reset`.
 * REST: `GET /wp-json/mailspur-email-log/v1/types` lists every email type with its health.
-* Filters: `mailspur_should_log` (skip logging an email), `mailspur_redact_params` (masked URL parameters), `mailspur_import_duplicate_window` (seconds), `mailspur_note_rules` and `mailspur_note_texts` (own checks), `mailspur_staging_subject`.
+* Filters: `mailspur_should_log` (skip logging an email), `mailspur_redact_params` (masked URL parameters), `mailspur_import_duplicate_window` (seconds), `mailspur_note_rules` and `mailspur_note_texts` (own checks), `mailspur_staging_subject`, `mailspur_brake_exempt` (never hold an email).
 
 = Source code =
 
@@ -128,6 +144,10 @@ Hints about problems found in that email, e.g. links that only work on your webs
 
 No. Emails are checked with simple text rules when they are logged, without network requests or extra queries. The DNS lookup of recipient domains and the check for repeated sending only run when you open an entry.
 
+= Which secrets are masked besides reset links? =
+
+Passwords written into an email ("Password: …"), API keys with well-known prefixes, private keys and payment card numbers. The email gets a note explaining the risk, and the value is stored as [redacted]. Both follow the setting "Redact secrets" (on by default).
+
 = Does the SMTP transcript contain my SMTP password? =
 
 No. Everything sent after "AUTH" (usernames, passwords, OAuth tokens) and the server's login challenges are replaced with [hidden], and the message content is omitted.
@@ -140,6 +160,14 @@ By default the .eml file is rebuilt from the logged data: secrets such as passwo
 
 "Log only" logs every email but delivers none (status "Held"). "Redirect" delivers every email to the addresses you enter instead of the real recipients; Cc and Bcc are removed and the subject shows the original recipients. Held emails can be sent individually with "Send now". On sites whose environment type is not "production", Mailspur suggests turning it on.
 
+= What does the emergency brake do? =
+
+Mailspur remembers the busiest hour of the last 14 days. If more than three times that many emails (at least 50) leave within one hour, it sends one alert through your monitoring alert channels and shows a notice with the main source. In "Alert and hold" mode, further emails are held until you release them (sent in small batches) or discard them; password reset emails and Mailspur's own alerts are never held. You can also set a fixed threshold or switch the brake off.
+
+= How accurate is the dark-mode preview? =
+
+It is a simulation. "Dark" applies the email's own dark-mode styles, as Apple Mail and other clients that support them do. "Forced dark" inverts the colours roughly the way some phone apps do. Test important templates in the real apps too.
+
 = Does the sender check contact an external service? =
 
 No. It only asks your server's own DNS resolver for the SPF, DMARC, DKIM and MX records of your sender domains, and only when an administrator clicks "Check sender domains". If no DKIM key is found although your emails are signed, enter your selector (the s= value of the DKIM-Signature header) and check again.
@@ -151,6 +179,10 @@ It only alerts when the last 14 days show that your site normally sends emails i
 = How does Mailspur know that an email type stopped? =
 
 From the type's own history, without any setting to tune: a type sent on at least 6 of the last 56 days is "regular", and it is overdue once the time since its last email exceeds twice its typical gap or its longest gap so far plus one day. Rare or irregular types never alert. Turn the alert on under Settings → "Stopped email types"; it uses the email addresses and webhook of the monitoring alerts.
+
+= Does Mailspur store email contents for the before/after comparison? =
+
+No. Per type it stores only a short fingerprint and the IDs of the two log entries. The comparison reads the log entries themselves and is no longer available once they are deleted or anonymised.
 
 = Why are two of my emails shown as one type, or one email as two types? =
 
@@ -174,7 +206,7 @@ No. Only the file names are logged. When you resend an email, attachments are re
 
 = Does it slow down my site? =
 
-No. Nothing runs on normal page views. Each sent email costs two small database queries; statistics are computed only when you open them and are cached.
+No. Nothing runs on normal page views. Each sent email costs a few small database queries; statistics, email types and link checks are computed only when you open them (or hourly in the background) and are cached.
 
 = What happens when I delete the plugin? =
 

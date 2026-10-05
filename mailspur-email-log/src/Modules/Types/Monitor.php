@@ -91,7 +91,8 @@ final class Monitor {
 	}
 
 	/**
-	 * Alert text: names the type, its sender and rhythm and what was updated since – never recipients or contents.
+	 * Alert text: names the type, its sender and rhythm, what was updated since and – for types sent by WP-Cron –
+	 * the state of their cron event. Never recipients or contents.
 	 *
 	 * @param array<string,mixed> $item Report item.
 	 */
@@ -108,6 +109,9 @@ final class Monitor {
 		if ( $updates ) {
 			/* translators: %s: comma-separated list of updated plugins/themes */
 			$text .= ' ' . sprintf( __( 'Updated since then: %s.', 'mailspur-email-log' ), implode( ', ', array_unique( $updates ) ) );
+		}
+		if ( isset( $item['cause']['text'] ) && '' !== (string) $item['cause']['text'] ) {
+			$text .= ' ' . (string) $item['cause']['text'];
 		}
 		return $text;
 	}

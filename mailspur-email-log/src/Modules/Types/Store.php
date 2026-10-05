@@ -2,7 +2,8 @@
 /**
  * The two tables behind the email types: one row per type and one counter row per type and day.
  *
- * Only counters and subject patterns are stored – no recipients, no contents. Day rows follow the log
+ * Only counters, subject patterns and a small state per type (log ids, body fingerprints, cron hook – see
+ * Indexer) are stored – no recipients, no contents. Day rows follow the log
  * retention (at most a year), and a type disappears with its last day row.
  *
  * Direct queries: the module's own tables.
@@ -17,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 
 final class Store {
 
-	const DB_VERSION = 1;
+	const DB_VERSION = 2;
 	const DB_OPTION  = 'mailspur_types_db';
 
 	public static function types_table(): string {
@@ -54,6 +55,7 @@ last_seen datetime NOT NULL,
 last_status tinyint(1) unsigned NOT NULL DEFAULT 0,
 last_notes smallint(5) unsigned NOT NULL DEFAULT 0,
 muted tinyint(1) unsigned NOT NULL DEFAULT 0,
+extra text NULL,
 PRIMARY KEY  (id),
 KEY source (source)
 ) {$charset};"
@@ -75,7 +77,7 @@ KEY day (day)
 	/**
 	 * All types.
 	 *
-	 * @return array<int,array{id:int,source:string,pattern:string[],first_seen:string,last_seen:string,last_status:int,last_notes:int,muted:bool}> By id.
+	 * @return array<int,array{id:int,source:string,pattern:string[],first_seen:string,last_seen:string,last_status:int,last_notes:int,muted:bool,extra:array<string,mixed>}> By id.
 	 */
 	public function types(): array {
 		global $wpdb;
@@ -92,6 +94,7 @@ KEY day (day)
 				'last_status' => (int) $row['last_status'],
 				'last_notes'  => (int) $row['last_notes'],
 				'muted'       => (bool) $row['muted'],
+				'extra'       => self::decode_extra( (string) ( $row['extra'] ?? '' ) ),
 			);
 		}
 		return $out;
@@ -128,9 +131,10 @@ KEY day (day)
 				'last_seen'   => (string) $type['last_seen'],
 				'last_status' => (int) $type['last_status'],
 				'last_notes'  => min( 65535, (int) $type['last_notes'] ),
+				'extra'       => (string) wp_json_encode( (array) ( $type['extra'] ?? array() ) ),
 			),
 			array( 'id' => (int) $type['id'] ),
-			array( '%s', '%s', '%s', '%d', '%d' ),
+			array( '%s', '%s', '%s', '%d', '%d', '%s' ),
 			array( '%d' )
 		);
 	}
@@ -246,6 +250,14 @@ KEY day (day)
 	public static function encode( array $pattern ): string {
 		$text = implode( ' ', $pattern );
 		return function_exists( 'mb_substr' ) ? mb_substr( $text, 0, 500, 'UTF-8' ) : substr( $text, 0, 500 );
+	}
+
+	/**
+	 * @return array<string,mixed>
+	 */
+	public static function decode_extra( string $json ): array {
+		$extra = '' === $json ? array() : json_decode( $json, true );
+		return is_array( $extra ) ? $extra : array();
 	}
 
 	/**

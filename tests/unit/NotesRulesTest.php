@@ -359,9 +359,96 @@ final class NotesRulesTest extends TestCase {
 		$this->assertSame( array(), Engine::prepare( 'not an array' ) );
 	}
 
+	public function test_password_in_the_body_is_an_error_without_the_password_in_the_note(): void {
+		$row   = $this->row(
+			array(
+				'message' => '<p>Welcome, Anna!</p><p>Username: anna<br>Password: <strong>Xy7!kq99</strong></p>',
+			)
+		);
+		$notes = Engine::analyze( $row, self::SITE );
+		$this->assertSame(
+			array(
+				array(
+					'code'     => 'secret_password',
+					'severity' => 'error',
+					'params'   => array(),
+				),
+			),
+			$notes
+		);
+		$this->assertStringNotContainsString( 'Xy7', (string) wp_json_encode( $notes ) );
+	}
+
+	public function test_secrets_found_before_masking_are_noted_with_masked_hints(): void {
+		$row   = $this->row(
+			array(
+				'message' => "Password: [redacted]\nCard: [redacted]\nKey: [redacted]",
+				'meta'    => array(
+					'notes_secrets' => array(
+						array(
+							'kind' => 'password',
+							'hint' => '',
+						),
+						array(
+							'kind' => 'card',
+							'hint' => '…1111',
+						),
+						array(
+							'kind' => 'api_key',
+							'hint' => 'sk_' . 'live_…4f2a',
+						),
+						array( 'kind' => 'bogus' ),
+						'junk',
+					),
+				),
+			)
+		);
+		$notes = Engine::analyze( $row, self::SITE );
+		$this->assertSame(
+			array(
+				array( 'secret_password', 'error', array() ),
+				array( 'secret_card', 'error', array( '…1111' ) ),
+				array( 'secret_key', 'warning', array( 'sk_' . 'live_…4f2a' ) ),
+			),
+			array_map(
+				static function ( array $note ): array {
+					return array( $note['code'], $note['severity'], $note['params'] );
+				},
+				$notes
+			)
+		);
+	}
+
+	public function test_private_key_is_an_error_and_api_key_a_warning(): void {
+		$key  = "-----BEGIN OPENSSH PRIVATE KEY-----\n" . str_repeat( 'b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQ', 3 ) . "\n-----END OPENSSH PRIVATE KEY-----";
+		$rows = array(
+			'error'   => $this->row( array( 'message' => '<pre>' . $key . '</pre>' ) ),
+			'warning' => $this->row( array( 'message' => '<p>Your token: ghp' . '_abcdefghijklmnopqrstuvwxyz0123456789</p>' ) ),
+		);
+		foreach ( $rows as $severity => $row ) {
+			$notes = Engine::analyze( $row, self::SITE );
+			$this->assertSame( array( 'secret_key' ), array_column( $notes, 'code' ), $severity );
+			$this->assertSame( $severity, $notes[0]['severity'] );
+		}
+		$this->assertSame( array( '-----BEGIN OPENSSH PRIVATE KEY-----' ), Engine::analyze( $rows['error'], self::SITE )[0]['params'] );
+	}
+
+	public function test_secrets_rule_stays_quiet_for_ordinary_account_mails(): void {
+		$mails = array(
+			"Username: anna\n\nTo set your password, visit the following address:\n\nhttps://shop.example.de/wp-login.php?action=rp&key=[redacted]&login=anna\n\nhttps://shop.example.de/wp-login.php\n",
+			'<p>Hi Anna, your password was changed.</p><p>If you did not change your password, please <a href="https://shop.example.de/my-account/lost-password/">reset it</a>.</p>',
+			'<p>Thanks for creating an account. Your username is <strong>anna</strong>. You can access your account area to view orders, change your password and more at: <a href="https://shop.example.de/my-account/">My account</a></p>',
+			'<table><tr><td>IBAN</td><td>DE89 3704 0044 0532 0130 00</td></tr><tr><td>Order</td><td>4111111111111111</td></tr></table>',
+		);
+		foreach ( $mails as $message ) {
+			$this->assertNotContains( 'secret_password', $this->codes( $this->row( array( 'message' => $message ) ) ), $message );
+			$this->assertSame( array(), Rules::secrets( new Mail( $this->row( array( 'message' => $message ) ), self::SITE ) ), $message );
+		}
+	}
+
 	public function test_every_built_in_code_has_texts(): void {
 		$texts = Catalog::texts();
-		foreach ( array( 'html_in_plain', 'gmail_clip', 'relative_urls', 'dev_url', 'foreign_wp_host', 'placeholder', 'mojibake', 'no_from', 'from_localhost', 'from_free_mailer', 'from_domain_mismatch', 'bulk_no_unsubscribe', 'recipient_typo', 'link_mismatch', 'subject_empty', 'subject_long', 'img_no_alt', 'no_mx', 'null_mx', 'duplicate' ) as $code ) {
+		foreach ( array( 'html_in_plain', 'gmail_clip', 'relative_urls', 'dev_url', 'foreign_wp_host', 'placeholder', 'mojibake', 'no_from', 'from_localhost', 'from_free_mailer', 'from_domain_mismatch', 'bulk_no_unsubscribe', 'recipient_typo', 'link_mismatch', 'subject_empty', 'subject_long', 'img_no_alt', 'secret_password', 'secret_key', 'secret_card', 'no_mx', 'null_mx', 'duplicate', 'dead_link' ) as $code ) {
 			$this->assertArrayHasKey( $code, $texts, $code );
 			$this->assertNotSame( '', $texts[ $code ]['text'], $code );
 			$this->assertNotSame( '', $texts[ $code ]['fix'], $code );

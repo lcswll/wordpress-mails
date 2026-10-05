@@ -175,6 +175,22 @@ final class Admin {
 				'remoteLoaded'  => __( 'Remote content is loaded.', 'mailspur-email-log' ),
 				'loadRemote'    => __( 'Load remote content', 'mailspur-email-log' ),
 				'blockRemote'   => __( 'Block again', 'mailspur-email-log' ),
+				'viewAs'        => __( 'Show as', 'mailspur-email-log' ),
+				'viewDesktop'   => __( 'Desktop', 'mailspur-email-log' ),
+				'viewPhone'     => __( 'Phone', 'mailspur-email-log' ),
+				'viewText'      => __( 'Plain text', 'mailspur-email-log' ),
+				'scheme'        => __( 'Colour scheme', 'mailspur-email-log' ),
+				'schemeLight'   => __( 'Light', 'mailspur-email-log' ),
+				'schemeDark'    => __( 'Dark', 'mailspur-email-log' ),
+				'schemeForced'  => __( 'Forced dark', 'mailspur-email-log' ),
+				'hintPhone'     => __( 'Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens.', 'mailspur-email-log' ),
+				'hintDark'      => __( 'Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently.', 'mailspur-email-log' ),
+				'hintNoDark'    => __( 'This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark.', 'mailspur-email-log' ),
+				'hintForced'    => __( 'Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail.', 'mailspur-email-log' ),
+				'hintTextOwn'   => __( 'This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML.', 'mailspur-email-log' ),
+				'hintTextNone'  => __( 'This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML.', 'mailspur-email-log' ),
+				'hintText'      => __( 'Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded.', 'mailspur-email-log' ),
+				'noText'        => __( '(no text content)', 'mailspur-email-log' ),
 				/* translators: %s: total number of pages */
 				'pageOf'        => __( 'of %s', 'mailspur-email-log' ),
 			),
@@ -442,8 +458,8 @@ final class Admin {
 				<tr>
 					<th scope="row"><?php esc_html_e( 'Redact secrets', 'mailspur-email-log' ); ?></th>
 					<td>
-						<label><input type="checkbox" name="<?php echo esc_attr( $name ); ?>[redact_secrets]" value="1" <?php checked( $s['redact_secrets'] ); ?>> <?php esc_html_e( 'Mask password-reset, activation and access keys in logged links', 'mailspur-email-log' ); ?></label>
-						<p class="description"><?php esc_html_e( 'Recommended. Otherwise anyone with log access could use a logged reset link to take over an account. Resending such an email sends the masked version.', 'mailspur-email-log' ); ?></p>
+						<label><input type="checkbox" name="<?php echo esc_attr( $name ); ?>[redact_secrets]" value="1" <?php checked( $s['redact_secrets'] ); ?>> <?php esc_html_e( 'Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text', 'mailspur-email-log' ); ?></label>
+						<p class="description"><?php esc_html_e( 'Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version.', 'mailspur-email-log' ); ?></p>
 					</td>
 				</tr>
 				<tr>

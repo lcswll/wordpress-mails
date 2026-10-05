@@ -18,5 +18,7 @@ class PHPMailer {
 	public $FromName = '';
 	/** @var string */
 	public $Body = '';
+	/** @var string */
+	public $AltBody = '';
 	// phpcs:enable
 }

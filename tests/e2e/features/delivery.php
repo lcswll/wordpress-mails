@@ -13,6 +13,7 @@
 
 require '/wordpress/wp-load.php';
 
+use Mailspur\Modules\Delivery\Brake;
 use Mailspur\Modules\Delivery\Module;
 use Mailspur\Modules\Delivery\SenderCheck;
 use Mailspur\Repository;
@@ -188,6 +189,108 @@ try {
 	delivery_rest( 'POST', '/mails/' . $held['id'] . '/resend' );
 	delivery_check( 'customer@example.com' === delivery_last_row()['recipients'], 'resend without "to" keeps the original recipients' );
 
+	// ---------------------------------------------------------- emergency brake.
+	delete_option( Brake::STATE_OPTION );
+	delete_option( Brake::COUNTER_OPTION );
+	delivery_settings(
+		array(
+			'staging_mode'    => 'off',
+			'brake_mode'      => 'hold',
+			'brake_threshold' => 3,
+			'alert_email'     => 'ops@example.com',
+			'alert_recovery'  => true,
+		)
+	);
+	$held_status = (int) Repository::STATUS_HELD;
+	$brake_held  = static function ( $row ) use ( $held_status ) {
+		return $held_status === (int) $row['status'] && Brake::HELD === ( $row['meta']['delivery']['held'] ?? '' );
+	};
+	for ( $i = 1; $i <= 3; $i++ ) {
+		wp_mail( "flood{$i}@example.com", 'Brake test ' . $i, 'Body' );
+	}
+	$row = delivery_last_row();
+	delivery_check( $held_status !== (int) $row['status'] && ! Brake::active(), 'brake: mails up to the threshold are delivered', $row );
+
+	wp_mail( 'flood4@example.com', 'Brake test 4', 'Body' );
+	$first_held = delivery_last_row();
+	delivery_check( Brake::active() && $brake_held( $first_held ), 'brake: the mail above the threshold starts an incident and is held', array( Brake::state(), $first_held ) );
+	wp_mail( 'flood5@example.com', 'Brake test 5', 'Body' );
+	delivery_check( $brake_held( delivery_last_row() ), 'brake: further mails are held' );
+
+	apply_filters( 'retrieve_password_message', 'Reset', 'key', 'user', null );
+	wp_mail( 'admin@example.com', 'Brake password reset', 'Reset' );
+	delivery_check( Repository::STATUS_HELD !== (int) delivery_last_row()['status'], 'brake: password reset mails still go out' );
+
+	$alert_log = get_option( 'mailspur_insights_alert_log' );
+	do_action( Brake::HOOK );
+	$alert = delivery_last_row();
+	delivery_check( 'mailspur:alert' === $alert['source'] && $held_status !== (int) $alert['status'] && false !== strpos( $alert['subject'], 'Emergency brake' ), 'brake: alert mail sent from cron and not held', $alert );
+	delivery_check( false === strpos( $alert['message'], 'flood' ), 'brake: alert names no recipients', $alert['message'] );
+	do_action( Brake::HOOK );
+	delivery_check( (int) delivery_last_row()['id'] === (int) $alert['id'], 'brake: only one alert per incident' );
+
+	$_GET['page'] = 'mailspur-email-log';
+	$notice       = (string) delivery_call( 'admin_notices', 'brake_notice' );
+	delivery_check( false !== strpos( $notice, 'Emergency brake:' ) && false !== strpos( $notice, '2 emails are held by the emergency brake.' ) && false !== strpos( $notice, 'data-mailspur-brake="release"' ), 'brake: notice with count and release button', $notice );
+	$_GET['page'] = 'other';
+	delivery_check( '' === delivery_call( 'admin_notices', 'brake_notice' ), 'brake: no notice on other screens' );
+	$bar = new WP_Admin_Bar();
+	delivery_call( 'admin_bar_menu', 'admin_bar', $bar );
+	delivery_check( null !== $bar->get_node( 'mailspur-brake' ), 'brake: admin bar warning while emails are held' );
+
+	$status = delivery_rest( 'GET', '/delivery/brake' )->get_data();
+	delivery_check( ! empty( $status['active'] ) && 2 === $status['held'] && 3 === $status['threshold'] && ! empty( $status['sources'] ), 'brake: status route', $status );
+
+	$sent  = 0;
+	$guard = 0;
+	do {
+		$res   = delivery_rest( 'POST', '/delivery/brake/release' )->get_data();
+		$sent += (int) ( $res['sent'] ?? 0 ) + (int) ( $res['failed'] ?? 0 );
+	} while ( ! empty( $res['remaining'] ) && ++$guard < 10 );
+	delivery_check( 2 === $sent && 0 === (int) $res['remaining'] && ! Brake::active() && ! Brake::holding(), 'brake: release sends every held mail and ends the incident', array( $res, Brake::state() ) );
+	$first = ( new Repository() )->find( (int) $first_held['id'] );
+	delivery_check( false !== strpos( (string) $first['meta'], '"held":"brake_released"' ), 'brake: released entries are marked', $first );
+	$released = (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i WHERE id > %d AND meta LIKE %s', Repository::table(), (int) $first_held['id'], '%"released_by":"brake"%' ) );
+	delivery_check( 2 === $released, 'brake: released copies logged as new entries', $released );
+	wp_mail( 'flood6@example.com', 'Brake test 6', 'Body' );
+	delivery_check( Repository::STATUS_HELD !== (int) delivery_last_row()['status'], 'brake: paused after the release' );
+
+	// Discard: a new incident.
+	delete_option( Brake::STATE_OPTION );
+	delete_option( Brake::COUNTER_OPTION );
+	for ( $i = 1; $i <= 5; $i++ ) {
+		wp_mail( "flood{$i}@example.com", 'Brake discard ' . $i, 'Body' );
+	}
+	$last = delivery_last_row();
+	$res  = delivery_rest( 'POST', '/delivery/brake/discard' )->get_data();
+	$last = ( new Repository() )->find( (int) $last['id'] );
+	delivery_check( 2 === (int) ( $res['discarded'] ?? 0 ) && false !== strpos( (string) $last['meta'], '"held":"brake_discarded"' ) && ! Brake::holding(), 'brake: discard keeps the entries but marks them', array( $res, $last ) );
+
+	// Alert only: delivered, notice offers "Mark as resolved".
+	delete_option( Brake::STATE_OPTION );
+	delete_option( Brake::COUNTER_OPTION );
+	delivery_settings( array( 'brake_mode' => 'alert' ) );
+	for ( $i = 1; $i <= 5; $i++ ) {
+		wp_mail( "flood{$i}@example.com", 'Brake alert ' . $i, 'Body' );
+	}
+	delivery_check( Brake::active() && Repository::STATUS_HELD !== (int) delivery_last_row()['status'], 'brake: alert-only mode delivers' );
+	$_GET['page'] = 'mailspur-email-log';
+	delivery_check( false !== strpos( (string) delivery_call( 'admin_notices', 'brake_notice' ), 'data-mailspur-brake="reset"' ), 'brake: alert-only notice offers "Mark as resolved"' );
+	delivery_rest( 'POST', '/delivery/brake/reset' );
+	delivery_check( ! Brake::active() && (int) ( Brake::state()['paused'] ?? 0 ) > time(), 'brake: reset ends and pauses' );
+	unset( $_GET['page'] );
+	delivery_settings(
+		array(
+			'brake_mode'      => 'alert',
+			'brake_threshold' => 0,
+		)
+	);
+	if ( false === $alert_log ) {
+		delete_option( 'mailspur_insights_alert_log' );
+	} else {
+		update_option( 'mailspur_insights_alert_log', $alert_log, false );
+	}
+
 	// Editors with log access may resend, but not to other addresses.
 	$editor = wp_insert_user(
 		array(
@@ -204,6 +307,7 @@ try {
 		delivery_check( 403 === delivery_rest( 'POST', '/mails/' . $held['id'] . '/resend', array( 'to' => 'x@example.com' ) )->get_status(), 'send to: administrators only' );
 		delivery_check( 403 === delivery_rest( 'POST', '/mails/' . $held['id'] . '/release' )->get_status(), 'release: administrators only' );
 		delivery_check( 403 === delivery_rest( 'POST', '/delivery/check' )->get_status(), 'sender check: administrators only' );
+		delivery_check( 403 === delivery_rest( 'POST', '/delivery/brake/release' )->get_status() && 403 === delivery_rest( 'GET', '/delivery/brake' )->get_status(), 'emergency brake: administrators only' );
 		wp_set_current_user( 1 );
 		require_once ABSPATH . 'wp-admin/includes/user.php';
 		wp_delete_user( $editor );
@@ -256,6 +360,10 @@ try {
 		update_option( Settings::OPTION, $delivery_before );
 	}
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE option_name LIKE %s', $wpdb->options, '%mailspur_delivery_check_%' ) );
+	delete_option( Brake::STATE_OPTION );
+	delete_option( Brake::COUNTER_OPTION );
+	delete_transient( Brake::BASELINE_TRANSIENT );
+	wp_clear_scheduled_hook( Brake::HOOK );
 	unset( $_GET['page'] );
 } catch ( Throwable $e ) {
 	delivery_check( false, 'cleanup ' . get_class( $e ), $e->getMessage() );

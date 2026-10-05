@@ -8,7 +8,7 @@
  * - Entries older than the retention period are skipped (the daily cleanup would delete them anyway).
  * - Mails already in the log from another source (Mailspur itself or another import) are skipped as
  *   duplicates, see Duplicates.
- * - Secrets in links are redacted like for logged mails.
+ * - Secrets (in links and in plain text) are redacted like for logged mails.
  *
  * @package Mailspur
  */
@@ -116,8 +116,7 @@ final class Importer {
 					++$dupes;
 					continue;
 				}
-				$row['message'] = Redactor::redact( (string) $row['message'] );
-				$insert[]       = self::finalize( $row, $source );
+				$insert[] = self::finalize( $row, $source );
 			}
 
 			// Several smaller INSERTs keep each statement well below max_allowed_packet with large bodies.
@@ -143,16 +142,19 @@ final class Importer {
 	}
 
 	/**
-	 * Lets modules add their data to an imported row (same filter as for logged mails).
+	 * Redacts the message and lets modules add their data to an imported row (same filters as for
+	 * logged mails: mailspur_meta sees the message as sent, mailspur_finalize_row the redacted row).
 	 *
 	 * @param array<string,string|int> $row
 	 * @return array<string,string|int>
 	 */
 	private static function finalize( array $row, Source $source ): array {
-		$data         = $row;
-		$data['meta'] = (array) apply_filters( 'mailspur_meta', array( 'import' => $source->id() ), 'import', $row );
-		$data         = (array) apply_filters( 'mailspur_finalize_row', $data, $data );
-		$data['meta'] = is_array( $data['meta'] ) ? \Mailspur\Logger::encode( $data['meta'] ) : (string) $data['meta'];
+		$meta           = (array) apply_filters( 'mailspur_meta', array( 'import' => $source->id() ), 'import', $row );
+		$row['message'] = Redactor::redact( (string) $row['message'] );
+		$data           = $row;
+		$data['meta']   = $meta;
+		$data           = (array) apply_filters( 'mailspur_finalize_row', $data, $data );
+		$data['meta']   = is_array( $data['meta'] ) ? \Mailspur\Logger::encode( $data['meta'] ) : (string) $data['meta'];
 		return array_merge( $row, $data );
 	}
 

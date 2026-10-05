@@ -126,6 +126,29 @@ final class Catalog {
 				'text'  => __( 'Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful.', 'mailspur-email-log' ),
 				'fix'   => __( 'Add a short alt attribute to every image in the template, e.g. alt="Logo Example Shop".', 'mailspur-email-log' ),
 			),
+			'secret_password'      => array(
+				'title' => __( 'Password sent in plain text', 'mailspur-email-log' ),
+				'text'  => __( 'The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless "Redact secrets" is on (then the log keeps a masked copy, but the recipient still got the password).', 'mailspur-email-log' ),
+				'fix'   => __( 'Send a link where the user sets a password instead – WordPress core\'s new-user email does exactly that. Look for an option such as "Send password by email" or "Include password" in the plugin that sent this email and turn it off.', 'mailspur-email-log' ),
+			),
+			'secret_key'           => array(
+				/* translators: %s: masked key, e.g. "sk_live_…4f2a" */
+				'title' => __( 'API key or private key in plain text: %1$s', 'mailspur-email-log' ),
+				'text'  => __( 'The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless "Redact secrets" is on.', 'mailspur-email-log' ),
+				'fix'   => __( 'Revoke the key in the service\'s dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that.', 'mailspur-email-log' ),
+			),
+			'secret_card'          => array(
+				/* translators: %s: last four digits, e.g. "…1111" */
+				'title' => __( 'Payment card number in plain text: %1$s', 'mailspur-email-log' ),
+				'text'  => __( 'The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless "Redact secrets" is on.', 'mailspur-email-log' ),
+				'fix'   => __( 'Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email.', 'mailspur-email-log' ),
+			),
+			'dead_link'            => array(
+				/* translators: %s: path of the link, e.g. "/old-page/" */
+				'title' => __( 'Link to a page that does not exist on your site: %1$s', 'mailspur-email-log' ),
+				'text'  => __( 'The email links to an address on this site that answers "page not found" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page.', 'mailspur-email-log' ),
+				'fix'   => __( 'Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin).', 'mailspur-email-log' ),
+			),
 			'no_mx'                => array(
 				/* translators: %s: domain */
 				'title' => __( 'Recipient domain cannot receive email: %1$s', 'mailspur-email-log' ),

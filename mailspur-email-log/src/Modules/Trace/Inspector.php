@@ -114,6 +114,11 @@ final class Inspector {
 
 		$out = array( 'type' => $type );
 
+		// The cron event that is running: the outermost hook (wp-cron.php fires each event at the top level).
+		if ( 'cron' === $type && ! empty( $GLOBALS['wp_current_filter'] ) && is_array( $GLOBALS['wp_current_filter'] ) ) {
+			$out['hook'] = substr( (string) reset( $GLOBALS['wp_current_filter'] ), 0, 100 );
+		}
+
 		if ( 'cli' !== $type && isset( $_SERVER['REQUEST_METHOD'] ) ) {
 			$method = strtoupper( (string) preg_replace( '/[^A-Za-z]/', '', sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) ) );
 			if ( '' !== $method ) {

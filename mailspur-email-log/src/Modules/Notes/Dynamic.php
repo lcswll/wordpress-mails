@@ -1,7 +1,8 @@
 <?php
 /**
- * Dynamic notes: need DNS or the database, so they never run while a mail is sent. They are computed
- * when an entry is opened in the log (REST detail payload); DNS results are cached per domain for a day.
+ * Dynamic notes: need DNS, the database or a request to the own site, so they never run while a mail
+ * is sent. They are computed when an entry is opened in the log (REST detail payload); DNS results are
+ * cached per domain and link checks (Links) per URL for a day.
  *
  * @package Mailspur
  */
@@ -49,6 +50,11 @@ final class Dynamic {
 		$repeats = self::repeats( $row );
 		if ( $repeats > 0 ) {
 			$notes[] = Rules::note( 'duplicate', Rules::WARNING, array( $repeats, (int) ( self::DUPLICATE_WINDOW / 60 ) ) );
+		}
+
+		// Loopback requests are skipped entirely when the admin ignores this note.
+		if ( ! in_array( 'dead_link', Engine::ignored(), true ) ) {
+			$notes = array_merge( $notes, Links::notes( $mail ) );
 		}
 		return $notes;
 	}

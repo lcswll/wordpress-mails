@@ -427,6 +427,9 @@ final class Alerts {
 		if ( 'type' === $type ) {
 			return 'recovery' === $kind ? __( 'Email type is sent again', 'mailspur-email-log' ) : __( 'Email type stopped', 'mailspur-email-log' );
 		}
+		if ( 'brake' === $type ) {
+			return 'recovery' === $kind ? __( 'Email volume back to normal', 'mailspur-email-log' ) : __( 'Emergency brake: unusual email flood', 'mailspur-email-log' );
+		}
 		if ( 'recovery' === $kind ) {
 			return 'failures' === $type ? __( 'Email failures resolved', 'mailspur-email-log' ) : __( 'Emails are flowing again', 'mailspur-email-log' );
 		}

@@ -64,6 +64,67 @@
 		}
 	} );
 
+	/* -------------------------------------------------- emergency brake */
+
+	const brake = document.getElementById( 'mailspur-brake-notice' );
+	if ( brake ) {
+		const progress = brake.querySelector( '.mailspur-brake-progress' );
+		const buttons = () => brake.querySelectorAll( '[data-mailspur-brake]' );
+		const busy = ( on ) => {
+			buttons().forEach( ( b ) => ( b.disabled = on ) );
+			brake.setAttribute( 'aria-busy', on ? 'true' : 'false' );
+		};
+		const finish = ( text ) => {
+			progress.textContent = text;
+			brake.classList.replace( 'notice-error', 'notice-success' );
+			brake.querySelectorAll( '[data-mailspur-brake], .mailspur-brake-actions a' ).forEach( ( el ) => el.remove() );
+			if ( window.mailspur ) {
+				window.mailspur.reload();
+			}
+		};
+
+		brake.addEventListener( 'click', async ( e ) => {
+			const button = e.target.closest( '[data-mailspur-brake]' );
+			if ( ! button ) {
+				return;
+			}
+			const action = button.dataset.mailspurBrake;
+			if ( 'release' === action && ! window.confirm( fmt( t.confirmBrake, button.dataset.held || '' ) ) ) {
+				return;
+			}
+			if ( 'discard' === action && ! window.confirm( t.confirmDiscard ) ) {
+				return;
+			}
+			busy( true );
+			try {
+				if ( 'release' === action ) {
+					// Batches of a few emails per request: no timeout, visible progress, can be resumed after a reload.
+					let sent = 0;
+					let failed = 0;
+					for ( ;; ) {
+						const res = await request( 'delivery/brake/release', 'POST' );
+						sent += res.sent;
+						failed += res.failed;
+						progress.textContent = fmt( t.brakeProgress, sent, res.remaining );
+						if ( ! res.remaining || ! ( res.sent + res.failed ) ) {
+							break;
+						}
+					}
+					finish( fmt( t.brakeDone, sent, failed ) );
+				} else if ( 'discard' === action ) {
+					const res = await request( 'delivery/brake/discard', 'POST' );
+					finish( fmt( t.discarded, res.discarded ) );
+				} else {
+					await request( 'delivery/brake/reset', 'POST' );
+					finish( t.brakeReset );
+				}
+			} catch ( err ) {
+				progress.textContent = fmt( t.requestFailed, err.message );
+				busy( false );
+			}
+		} );
+	}
+
 	/* ------------------------------------------------------- log dialog */
 
 	const m = window.mailspur;
@@ -84,14 +145,19 @@
 			add( t.originalTo, list( d.original_to ) );
 			add( t.originalCc, list( d.original_cc ) );
 			add( t.originalBcc, list( d.original_bcc ) );
-			if ( 'no_redirect_address' === d.held ) {
+			const brakeHeld = { brake: t.heldBrake, brake_released: t.brakeReleased, brake_discarded: t.brakeDiscarded };
+			if ( brakeHeld[ d.held ] ) {
+				add( t.brake, brakeHeld[ d.held ] );
+			} else if ( 'no_redirect_address' === d.held ) {
 				add( t.staging, t.heldNoAddress );
 			} else if ( d.held ) {
 				add( t.staging, t.heldStaging );
 			} else if ( d.redirected ) {
 				add( t.staging, t.redirected );
 			}
-			if ( d.released_from ) {
+			if ( d.released_from && 'brake' === d.released_by ) {
+				add( t.brake, fmt( t.releasedBrake, d.released_from ) );
+			} else if ( d.released_from ) {
 				add( t.staging, fmt( t.releasedFrom, d.released_from ) );
 			}
 		} );
@@ -125,7 +191,8 @@
 				id: 'delivery-release',
 				label: t.release,
 				icon: 'unlock',
-				visible: ( mail ) => 'held' === mail.status,
+				// Not for mails the emergency brake already released in bulk.
+				visible: ( mail ) => 'held' === mail.status && ! ( delivery( mail ) && 'brake_released' === delivery( mail ).held ),
 				run: async ( mail ) => {
 					if ( ! window.confirm( fmt( t.confirmRelease, mail.to ) ) ) {
 						return;

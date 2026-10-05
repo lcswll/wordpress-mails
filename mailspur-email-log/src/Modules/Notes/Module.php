@@ -15,11 +15,19 @@ namespace Mailspur\Modules\Notes;
 
 use Mailspur\Repository;
 use Mailspur\Rest;
+use Mailspur\Secrets;
 use Mailspur\Settings;
 
 defined( 'ABSPATH' ) || exit;
 
 final class Module implements \Mailspur\Module {
+
+	/**
+	 * Meta key for secrets found in the mail as sent (kinds and masked hints only). The log masks them
+	 * in the stored body ("Redact secrets"), so the rules would not see them any more; removed again
+	 * in finalize_row().
+	 */
+	const SECRETS_META = 'notes_secrets';
 
 	/**
 	 * The module reads the log table only for its two lookups (list severities, repeated sending)
@@ -31,6 +39,7 @@ final class Module implements \Mailspur\Module {
 		add_filter( 'mailspur_settings_defaults', array( $this, 'defaults' ) );
 		add_filter( 'mailspur_settings_sanitize', array( $this, 'sanitize' ), 10, 2 );
 		add_action( 'mailspur_settings_sections', array( $this, 'settings' ), 10, 2 );
+		add_filter( 'mailspur_meta', array( $this, 'meta' ), 10, 3 );
 		add_filter( 'mailspur_finalize_row', array( $this, 'finalize_row' ), 10, 2 );
 		add_filter( 'mailspur_rest_summary', array( $this, 'summary' ), 10, 2 );
 		add_filter( 'mailspur_rest_item', array( $this, 'item' ), 10, 2 );
@@ -104,6 +113,45 @@ final class Module implements \Mailspur\Module {
 	}
 
 	/**
+	 * Filter mailspur_meta: looks for secrets in the mail as sent – the wp_mail() message, the body
+	 * PHPMailer sends, an imported message – because the stored body has them masked already.
+	 * Only kinds and masked hints are kept; finalize_row() turns them into notes and drops the key.
+	 *
+	 * @param mixed $meta
+	 * @param mixed $phase
+	 * @param mixed $context
+	 * @return mixed
+	 */
+	public function meta( $meta, $phase = '', $context = null ) {
+		if ( ! is_array( $meta ) || ! Settings::get( 'redact_secrets' ) || ! Engine::enabled() ) {
+			return $meta;
+		}
+		try {
+			if ( ( 'capture' === $phase || 'import' === $phase ) && is_array( $context ) ) {
+				$text = (string) ( $context['message'] ?? '' );
+			} elseif ( 'phpmailer' === $phase && $context instanceof \PHPMailer\PHPMailer\PHPMailer ) {
+				$text = (string) $context->Body; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+			} else {
+				return $meta;
+			}
+			$found = Secrets::find( $text );
+			if ( $found ) {
+				$known = isset( $meta[ self::SECRETS_META ] ) && is_array( $meta[ self::SECRETS_META ] ) ? $meta[ self::SECRETS_META ] : array();
+				$all   = array();
+				foreach ( array_merge( $known, $found ) as $secret ) {
+					if ( is_array( $secret ) && isset( $secret['kind'] ) ) {
+						$all[ $secret['kind'] . "\0" . ( $secret['hint'] ?? '' ) ] = $secret;
+					}
+				}
+				$meta[ self::SECRETS_META ] = array_slice( array_values( $all ), 0, 10 );
+			}
+		} catch ( \Throwable $e ) { // Never lose the rest of the meta.
+			unset( $e );
+		}
+		return $meta;
+	}
+
+	/**
 	 * Runs the static rules (logged and imported mails) and stores codes + count.
 	 *
 	 * @param mixed $data Columns of the final UPDATE / imported row.
@@ -111,7 +159,11 @@ final class Module implements \Mailspur\Module {
 	 * @return mixed
 	 */
 	public function finalize_row( $data, $row ) {
-		if ( ! is_array( $data ) || ! is_array( $row ) || ! isset( $data['meta'] ) || ! is_array( $data['meta'] ) || ! Engine::enabled() ) {
+		if ( ! is_array( $data ) || ! is_array( $row ) || ! isset( $data['meta'] ) || ! is_array( $data['meta'] ) ) {
+			return $data;
+		}
+		unset( $data['meta'][ self::SECRETS_META ] );
+		if ( ! Engine::enabled() ) {
 			return $data;
 		}
 		try {

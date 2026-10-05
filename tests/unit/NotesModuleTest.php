@@ -13,6 +13,7 @@ use Mailspur\Modules\Notes\Catalog;
 use Mailspur\Modules\Notes\Dynamic;
 use Mailspur\Modules\Notes\Module;
 use Mailspur\Repository;
+use PHPMailer\PHPMailer\PHPMailer;
 use WP_REST_Request;
 use WP_REST_Response;
 
@@ -122,6 +123,75 @@ final class NotesModuleTest extends TestCase {
 		$this->settings = array( 'notes_enabled' => false );
 		$untouched      = array( 'meta' => array() );
 		$this->assertSame( $untouched, $this->module->finalize_row( $untouched, $this->row() ) );
+	}
+
+	public function test_meta_records_secrets_of_the_mail_as_sent_without_the_secret(): void {
+		$meta = $this->module->meta( array( 'trace' => 'x' ), 'capture', array( 'message' => "Password: Xy7!kq99\nCard: 4111 1111 1111 1111" ) );
+		$this->assertSame(
+			array(
+				'trace'              => 'x',
+				Module::SECRETS_META => array(
+					array(
+						'kind' => 'password',
+						'hint' => '',
+					),
+					array(
+						'kind' => 'card',
+						'hint' => '…1111',
+					),
+				),
+			),
+			$meta
+		);
+		$this->assertStringNotContainsString( 'Xy7', (string) wp_json_encode( $meta ) );
+
+		// A template plugin wrapped the body: the PHPMailer phase adds what is new, without duplicates.
+		$mailer       = new PHPMailer();
+		$mailer->Body = '<p>Password: Xy7!kq99</p><p>sk_' . 'live_51HxYzAbCdEfGhIjKlMn4f2a</p>'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$meta         = $this->module->meta( $meta, 'phpmailer', $mailer );
+		$this->assertSame( array( 'password', 'card', 'api_key' ), array_column( $meta[ Module::SECRETS_META ], 'kind' ) );
+
+		// Imported mails: the importer passes the unredacted row.
+		$meta = $this->module->meta( array( 'import' => 'x' ), 'import', array( 'message' => 'Passwort: Ab3$xyz9' ) );
+		$this->assertSame( array( 'password' ), array_column( $meta[ Module::SECRETS_META ], 'kind' ) );
+	}
+
+	public function test_meta_stays_untouched_without_secrets_or_when_switched_off(): void {
+		$this->assertSame( array( 'a' => 1 ), $this->module->meta( array( 'a' => 1 ), 'capture', array( 'message' => 'Hello Anna' ) ) );
+		$this->assertSame( array( 'a' => 1 ), $this->module->meta( array( 'a' => 1 ), 'result', array( 'status' => 1 ) ) );
+		$this->assertSame( 'x', $this->module->meta( 'x', 'capture', array( 'message' => 'Password: Xy7!kq99' ) ) );
+
+		// Without masking the rules see the secret in the stored body anyway.
+		$this->settings = array( 'redact_secrets' => false );
+		$this->assertSame( array(), $this->module->meta( array(), 'capture', array( 'message' => 'Password: Xy7!kq99' ) ) );
+
+		$this->settings = array( 'notes_enabled' => false );
+		$this->assertSame( array(), $this->module->meta( array(), 'capture', array( 'message' => 'Password: Xy7!kq99' ) ) );
+	}
+
+	public function test_finalize_row_turns_recorded_secrets_into_notes_and_drops_the_key(): void {
+		$secrets = array(
+			array(
+				'kind' => 'password',
+				'hint' => '',
+			),
+		);
+		$row     = $this->row(
+			array(
+				'recipients' => 'anna@gmail.com',
+				'subject'    => 'Welcome',
+				'message'    => 'Password: [redacted]',
+				'meta'       => array( Module::SECRETS_META => $secrets ),
+			)
+		);
+		$data    = $this->module->finalize_row( array( 'meta' => array( Module::SECRETS_META => $secrets ) ), $row );
+		$this->assertSame( 1, $data['notes'] );
+		$this->assertSame( 'secret_password', $data['meta']['notes'][0]['code'] );
+		$this->assertArrayNotHasKey( Module::SECRETS_META, $data['meta'] );
+
+		$this->settings = array( 'notes_enabled' => false );
+		$data           = $this->module->finalize_row( array( 'meta' => array( Module::SECRETS_META => $secrets ) ), $row );
+		$this->assertSame( array( 'meta' => array() ), $data );
 	}
 
 	public function test_finalize_row_leaves_unexpected_input_alone(): void {

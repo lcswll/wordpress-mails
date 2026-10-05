@@ -14,4 +14,5 @@ return array(
 	Mailspur\Modules\Insights\Module::class,
 	Mailspur\Modules\Workflow\Module::class,
 	Mailspur\Modules\Types\Module::class,
+	Mailspur\Modules\Context\Module::class,
 );

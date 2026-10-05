@@ -10,6 +10,7 @@ namespace Mailspur\Modules\Types;
 
 use Mailspur\Admin;
 use Mailspur\Repository;
+use Mailspur\Rest;
 use Mailspur\Settings;
 use const Mailspur\VERSION;
 
@@ -58,6 +59,17 @@ final class Page {
 	public function enqueue( $tab, $base ): void {
 		if ( self::TAB === $tab ) {
 			wp_enqueue_style( 'mailspur-types', $base . 'types.css', array(), VERSION );
+			wp_enqueue_script(
+				'mailspur-types-tab',
+				$base . 'types-tab.js',
+				array(),
+				VERSION,
+				array(
+					'in_footer' => true,
+					'strategy'  => 'defer',
+				)
+			);
+			wp_add_inline_script( 'mailspur-types-tab', 'window.mailspurTypesTab = ' . wp_json_encode( self::script_config() ) . ';', 'before' );
 		} elseif ( 'log' === $tab ) {
 			wp_enqueue_style( 'mailspur-types', $base . 'types.css', array(), VERSION );
 			wp_enqueue_script(
@@ -92,12 +104,56 @@ final class Page {
 	 *
 	 * @param array<string,mixed> $item Report item.
 	 */
-	public static function log_url( array $item ): string {
+	public static function log_url( array $item, bool $latest = false ): string {
 		$args = array( 'source' => (string) $item['source'] );
 		if ( empty( $item['other'] ) && '' !== (string) $item['search'] ) {
 			$args['s'] = (string) $item['search'];
 		}
+		if ( $latest && ! empty( $item['last_id'] ) ) {
+			$args['mail'] = (string) (int) $item['last_id']; // Opened in the dialog by types.js.
+		}
 		return Admin::url( $args );
+	}
+
+	/**
+	 * Config of types-tab.js (Compare, Send latest to me).
+	 *
+	 * @return array<string,mixed>
+	 */
+	private static function script_config(): array {
+		$user = wp_get_current_user();
+		return array(
+			'restUrl' => esc_url_raw( rest_url( Rest::NS ) ),
+			'nonce'   => wp_create_nonce( 'wp_rest' ),
+			'email'   => current_user_can( 'manage_options' ) ? (string) $user->user_email : '',
+			'i18n'    => array(
+				'close'        => __( 'Close', 'mailspur-email-log' ),
+				'loading'      => __( 'Loading…', 'mailspur-email-log' ),
+				'textChanges'  => __( 'Text changes', 'mailspur-email-log' ),
+				'previews'     => __( 'Previews', 'mailspur-email-log' ),
+				'before'       => __( 'Last email before the change', 'mailspur-email-log' ),
+				'after'        => __( 'First email after the change', 'mailspur-email-log' ),
+				/* translators: %s: comma-separated list of updated plugins/themes */
+				'updated'      => __( 'Updated in between: %s', 'mailspur-email-log' ),
+				'noDiff'       => __( 'The text is the same; only the layout changed. Compare the previews.', 'mailspur-email-log' ),
+				/* translators: %s: number of lines */
+				'unchanged'    => __( '%s unchanged lines', 'mailspur-email-log' ),
+				'added'        => __( 'Added:', 'mailspur-email-log' ),
+				'removed'      => __( 'Removed:', 'mailspur-email-log' ),
+				/* translators: %s: email address */
+				'confirmSend'  => __( 'Send the latest email of this type to %s?', 'mailspur-email-log' ),
+				'send'         => __( 'Send', 'mailspur-email-log' ),
+				'cancel'       => __( 'Cancel', 'mailspur-email-log' ),
+				'sending'      => __( 'Sending…', 'mailspur-email-log' ),
+				/* translators: %s: email address */
+				'sent'         => __( 'Sent to %s.', 'mailspur-email-log' ),
+				'notSent'      => __( 'Sending failed – see the log.', 'mailspur-email-log' ),
+				/* translators: %s: error message */
+				'failed'       => __( 'Request failed: %s', 'mailspur-email-log' ),
+				/* translators: %s: comma-separated file names */
+				'missingFiles' => __( 'Attachments no longer available: %s', 'mailspur-email-log' ),
+			),
+		);
 	}
 
 	/**
@@ -150,7 +206,8 @@ final class Page {
 				return array( $priority[ $b['state'] ] ?? 0, $b['total'] ) <=> array( $priority[ $a['state'] ] ?? 0, $a['total'] );
 			}
 		);
-		$groups = array();
+		$available = $this->available( $items );
+		$groups    = array();
 		foreach ( $items as $item ) {
 			if ( $attention && ! in_array( $item['state'], array( 'silent', 'failing' ), true ) ) {
 				continue;
@@ -239,7 +296,7 @@ final class Page {
 							</thead>
 							<tbody>
 								<?php foreach ( $list as $item ) : ?>
-									<?php $this->row( $item, $now, $admin ); ?>
+									<?php $this->row( $item, $now, $admin, $available ); ?>
 								<?php endforeach; ?>
 							</tbody>
 						</table>
@@ -252,7 +309,7 @@ final class Page {
 					<input type="hidden" name="action" value="mailspur_types_rebuild">
 					<?php wp_nonce_field( self::NONCE ); ?>
 					<p class="description">
-						<?php esc_html_e( 'Types are updated hourly and whenever you open this page. Only counters and subject patterns are stored, and they follow the retention period of the log.', 'mailspur-email-log' ); ?>
+						<?php esc_html_e( 'Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log.', 'mailspur-email-log' ); ?>
 						<button type="submit" class="button-link"><?php esc_html_e( 'Rebuild from the log', 'mailspur-email-log' ); ?></button>
 					</p>
 				</form>
@@ -262,9 +319,10 @@ final class Page {
 	}
 
 	/**
-	 * @param array<string,mixed> $item Report item.
+	 * @param array<string,mixed> $item      Report item.
+	 * @param array<int,bool>     $available Log ids that still have content.
 	 */
-	private function row( array $item, int $now, bool $admin ): void {
+	private function row( array $item, int $now, bool $admin, array $available ): void {
 		$state  = (string) $item['state'];
 		$labels = array(
 			'silent'  => __( 'Stopped', 'mailspur-email-log' ),
@@ -289,6 +347,7 @@ final class Page {
 					}
 					?>
 				</span>
+				<?php $this->change( $item, $admin, $available ); ?>
 			</td>
 			<td class="mst-col-volume">
 				<?php echo wp_kses( self::sparkline( (array) $item['series'] ), self::svg_tags() ); ?>
@@ -338,6 +397,9 @@ final class Page {
 							?>
 						</span>
 					<?php endif; ?>
+					<?php if ( ! empty( $item['cause']['text'] ) ) : ?>
+						<span class="mst-why mst-cause is-<?php echo esc_attr( (string) $item['cause']['code'] ); ?>"><?php echo esc_html( (string) $item['cause']['text'] ); ?></span>
+					<?php endif; ?>
 				<?php elseif ( 'failing' === $state ) : ?>
 					<span class="mst-why"><?php esc_html_e( 'Several of the latest emails of this type failed.', 'mailspur-email-log' ); ?></span>
 				<?php endif; ?>
@@ -353,9 +415,89 @@ final class Page {
 						<button type="submit" class="button-link"><?php echo esc_html( $item['muted'] ? __( 'Monitor again', 'mailspur-email-log' ) : __( 'Ignore', 'mailspur-email-log' ) ); ?></button>
 					</form>
 				<?php endif; ?>
+				<?php if ( ! empty( $item['last_id'] ) ) : ?>
+					<details class="mst-more">
+						<summary><span aria-hidden="true">…</span><span class="screen-reader-text"><?php esc_html_e( 'More actions', 'mailspur-email-log' ); ?></span></summary>
+						<div class="mst-menu">
+							<a href="<?php echo esc_url( self::log_url( $item, true ) ); ?>"><?php esc_html_e( 'Open latest', 'mailspur-email-log' ); ?></a>
+							<?php if ( $admin ) : ?>
+								<button type="button" class="button-link mst-send" data-mail="<?php echo esc_attr( (string) $item['last_id'] ); ?>" hidden><?php esc_html_e( 'Send latest to me', 'mailspur-email-log' ); ?></button>
+							<?php endif; ?>
+						</div>
+					</details>
+				<?php endif; ?>
 			</td>
 		</tr>
 		<?php
+	}
+
+	/**
+	 * "Content changed on 3 Oct, after the WooCommerce 9.4 update" with Compare (JS) and Seen.
+	 *
+	 * @param array<string,mixed> $item      Report item.
+	 * @param array<int,bool>     $available Log ids that still have content.
+	 */
+	private function change( array $item, bool $admin, array $available ): void {
+		$change = $item['change'] ?? null;
+		if ( ! is_array( $change ) ) {
+			return;
+		}
+		$date = (string) wp_date( (string) get_option( 'date_format' ), (int) $change['after_at'] );
+		?>
+		<span class="mst-change">
+			<?php
+			if ( $change['updates'] ) {
+				/* translators: 1: date, 2: updated plugins/themes, e.g. "WooCommerce 9.4" */
+				printf( esc_html__( 'Content changed on %1$s, after the %2$s update.', 'mailspur-email-log' ), esc_html( $date ), esc_html( implode( ', ', (array) $change['updates'] ) ) );
+			} else {
+				/* translators: %s: date */
+				printf( esc_html__( 'Content changed on %s.', 'mailspur-email-log' ), esc_html( $date ) );
+			}
+			?>
+			<?php if ( isset( $available[ (int) $change['before'] ], $available[ (int) $change['after'] ] ) ) : ?>
+				<button type="button" class="button-link mst-compare" data-type="<?php echo esc_attr( (string) $item['id'] ); ?>" hidden><?php esc_html_e( 'Compare', 'mailspur-email-log' ); ?></button>
+			<?php else : ?>
+				<span class="mst-gone"><?php esc_html_e( '(the emails are no longer in the log)', 'mailspur-email-log' ); ?></span>
+			<?php endif; ?>
+			<?php if ( $admin ) : ?>
+				<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+					<input type="hidden" name="action" value="mailspur_types_seen">
+					<input type="hidden" name="type" value="<?php echo esc_attr( (string) $item['id'] ); ?>">
+					<?php wp_nonce_field( self::NONCE, '_wpnonce', false ); ?>
+					<button type="submit" class="button-link"><?php esc_html_e( 'Seen', 'mailspur-email-log' ); ?></button>
+				</form>
+			<?php endif; ?>
+		</span>
+		<?php
+	}
+
+	/**
+	 * Log ids of the content changes that still have their content (not deleted or anonymised).
+	 *
+	 * @param array<int,array<string,mixed>> $items Report items.
+	 * @return array<int,bool>
+	 */
+	private function available( array $items ): array {
+		global $wpdb;
+		$ids = array();
+		foreach ( $items as $item ) {
+			if ( is_array( $item['change'] ?? null ) ) {
+				$ids[] = (int) $item['change']['before'];
+				$ids[] = (int) $item['change']['after'];
+			}
+		}
+		$ids = array_values( array_unique( array_filter( $ids ) ) );
+		if ( ! $ids ) {
+			return array();
+		}
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table, primary keys.
+		$found = (array) $wpdb->get_col(
+			$wpdb->prepare(
+				'SELECT id FROM %i WHERE id IN (' . implode( ',', array_fill( 0, count( $ids ), '%d' ) ) . ") AND message <> ''",
+				array_merge( array( Repository::table() ), $ids )
+			)
+		);
+		return array_fill_keys( array_map( 'intval', $found ), true );
 	}
 
 	/**
@@ -476,6 +618,7 @@ final class Page {
 			'rebuilt' => __( 'The email types are being rebuilt from the log.', 'mailspur-email-log' ),
 			'muted'   => __( 'This email type is ignored now: no status, no alerts.', 'mailspur-email-log' ),
 			'watched' => __( 'This email type is monitored again.', 'mailspur-email-log' ),
+			'seen'    => __( 'Content change marked as seen.', 'mailspur-email-log' ),
 		);
 		if ( isset( $text[ $done ] ) ) {
 			printf( '<div class="notice notice-success inline is-dismissible"><p>%s</p></div>', esc_html( $text[ $done ] ) );
@@ -497,6 +640,27 @@ final class Page {
 				array(
 					'tab'        => self::TAB,
 					'types-done' => $muted ? 'muted' : 'watched',
+				)
+			) . '#mailspur-type-' . $id
+		);
+		exit;
+	}
+
+	/** admin-post.php?action=mailspur_types_seen – hides the content change marker until the next change. */
+	public function seen(): void {
+		$this->guard();
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified in guard().
+		$id    = isset( $_POST['type'] ) ? absint( $_POST['type'] ) : 0;
+		$types = $this->store->types();
+		if ( isset( $types[ $id ] ) ) {
+			$change = $types[ $id ]['extra']['content']['c'] ?? null;
+			Report::mark_seen( $id, is_array( $change ) ? (int) ( $change['after'] ?? 0 ) : 0, $types );
+		}
+		wp_safe_redirect(
+			Admin::url(
+				array(
+					'tab'        => self::TAB,
+					'types-done' => 'seen',
 				)
 			) . '#mailspur-type-' . $id
 		);
