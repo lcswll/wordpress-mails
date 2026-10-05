@@ -1,7 +1,7 @@
 <?php
 /**
  * Workflow module: source/format/attachment/notes filters (sources endpoint), CSV/JSON export,
- * WP-CLI commands and anonymisation of old entries.
+ * WP-CLI commands, anonymisation of old entries and the "Copy for support" sentence.
  *
  * @package Mailspur
  */
@@ -27,6 +27,7 @@ final class Module implements \Mailspur\Module {
 
 		$exporter = new Exporter( $this->repository );
 		add_action( 'admin_post_' . Exporter::ACTION, array( $exporter, 'download' ) );
+		add_filter( 'mailspur_rest_item', array( Support::class, 'rest_item' ), 10, 2 );
 
 		add_action(
 			'rest_api_init',
@@ -76,6 +77,10 @@ final class Module implements \Mailspur\Module {
 				'removedAfter'  => __( 'Content removed after %s days', 'mailspur-email-log' ),
 				'removed'       => __( 'Content removed', 'mailspur-email-log' ),
 				'anonymisedTip' => __( 'Content, headers and attachments were removed and the addresses masked by the anonymisation setting.', 'mailspur-email-log' ),
+				'support'       => __( 'Copy for support', 'mailspur-email-log' ),
+				'supportTip'    => __( 'Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details.', 'mailspur-email-log' ),
+				'copied'        => __( 'Copied – paste it into your reply.', 'mailspur-email-log' ),
+				'copyFailed'    => __( 'Copying is not possible in this browser. Select the text and copy it:', 'mailspur-email-log' ),
 			),
 		);
 		wp_add_inline_script( 'mailspur-workflow', 'window.mailspurWorkflow = ' . wp_json_encode( $config ) . ';', 'before' );

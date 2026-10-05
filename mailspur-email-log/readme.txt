@@ -33,6 +33,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * **Content changes after updates:** when the text of a type changes – e.g. the order confirmation after a plugin update – the type is marked ("Content changed on 3 Oct, after the WooCommerce 9.4 update") and "Compare" shows the text changes and both previews side by side. Names, numbers, dates and amounts are ignored, so only real template changes count.
 * **Why a type stopped:** for emails sent by WP-Cron (reminders, renewals, reports), Mailspur names the likely cause – the cron event is no longer scheduled, WP-Cron has not run for days or the event is overdue – in the tab and in the alert.
 * **Shortcuts per type:** open the latest email of a type or send it to yourself with one click.
+* **Email inventory:** export all types as CSV or a printable page – subject pattern, sending plugin, recipient group (administrators, registered users, other recipients), rhythm, last sent, retention in the log and the categories of personal data found in the latest email (email address, postal address, phone number, order data, free text from forms). Useful for a record of processing activities or a handover; it contains no email contents or addresses.
 * **Built for privacy and speed:** sorting happens afterwards (hourly and when you open the tab), never while an email is sent. Only counters and subject patterns are stored – never recipients or contents – and they follow the retention period of the log. Types you do not care about can be ignored.
 
 = Find any email in seconds =
@@ -41,6 +42,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * Status tabs with counts (sent, failed, held, unknown), date range, sorting, and filters for the sending plugin or theme, HTML/plain text, attachments and notes. Every filter is part of the URL, so a filtered view can be bookmarked.
 * Keyboard friendly: `/` jumps to the search, `j`/`k` move between emails, `Esc` closes the preview.
 * Export the current view as CSV (Excel-ready, safe against formula injection) or JSON.
+* **Copy for support:** one click in the email view copies a ready-to-paste sentence for a customer, in the site language – e.g. "The email “Your invoice #1042” was sent to anna@example.com on 3 October at 14:02 and accepted by the mail server. Please also check your spam folder." – without technical details.
 
 = Emails right where you need them =
 
@@ -69,6 +71,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * Emails over time (sent / failed / held), failure rate, a weekday × hour heatmap and the top senders, recipient domains and subjects – click any bar to open those emails. Accessible charts (keyboard, data tables), no external libraries.
 * Dashboard widget with the last 7 days.
 * **Monitoring alerts (opt-in):** get notified by email or webhook (Slack, Discord or any JSON endpoint) when emails fail repeatedly or when your site unexpectedly stops sending emails.
+* **Weekly report (opt-in):** a short email every Monday to the alert addresses, only when there is something to report – number of emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents.
 
 = Deliverability and staging =
 

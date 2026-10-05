@@ -26,9 +26,13 @@ final class Controller {
 	/** @var Alerts */
 	private $alerts;
 
-	public function __construct( Stats $stats, Alerts $alerts ) {
+	/** @var Weekly */
+	private $weekly;
+
+	public function __construct( Stats $stats, Alerts $alerts, ?Weekly $weekly = null ) {
 		$this->stats  = $stats;
 		$this->alerts = $alerts;
+		$this->weekly = $weekly ?? new Weekly();
 	}
 
 	public function register_routes(): void {
@@ -58,6 +62,18 @@ final class Controller {
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
 				'callback'            => array( $this, 'test_alert' ),
+				'permission_callback' => static function (): bool {
+					return current_user_can( 'manage_options' );
+				},
+			)
+		);
+
+		register_rest_route(
+			Rest::NS,
+			'/alerts/report',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'send_report' ),
 				'permission_callback' => static function (): bool {
 					return current_user_can( 'manage_options' );
 				},
@@ -112,5 +128,17 @@ final class Controller {
 			return new WP_Error( 'mailspur_no_channel', __( 'Enter an email address or a webhook URL and save the settings first.', 'mailspur-email-log' ), array( 'status' => 400 ) );
 		}
 		return new WP_REST_Response( $this->alerts->test() );
+	}
+
+	/**
+	 * "Send report now": the weekly report of the last 7 days, also when there is nothing to report.
+	 *
+	 * @return WP_REST_Response|WP_Error
+	 */
+	public function send_report() {
+		if ( '' === (string) Settings::get( 'alert_email' ) ) {
+			return new WP_Error( 'mailspur_no_channel', __( 'Enter an email address under “Send alerts by email to” and save the settings first.', 'mailspur-email-log' ), array( 'status' => 400 ) );
+		}
+		return new WP_REST_Response( array( 'sent' => (bool) $this->weekly->send( true ) ) );
 	}
 }

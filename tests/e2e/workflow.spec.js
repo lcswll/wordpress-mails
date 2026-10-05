@@ -1,5 +1,5 @@
 // Workflow module in a real browser: "More filters" (source, format, attachments, notes) incl. URL state,
-// CSV/JSON export of the current filter and anonymised entries. Own rows ("[WF]"), seeded lazily via
+// CSV/JSON export of the current filter, anonymised entries and "Copy for support". Own rows ("[WF]"), seeded lazily via
 // tests/e2e/workflow-seed.php so the other specs' counts are untouched.
 import fs from 'node:fs';
 import { expect, test } from '@playwright/test';
@@ -139,6 +139,26 @@ test('anonymised entries are marked and cannot be resent', async ({ page }) => {
 	await page.goto(`${WF}&status=held`);
 	await rows(page).first().locator('.mailspur-open').click();
 	await expect(page.locator('#mailspur-dialog [data-action="resend"]')).toBeVisible();
+	await page.keyboard.press('Escape');
+	expect(errors).toEqual([]);
+});
+
+test('copy for support: plain sentence in the clipboard, keyboard accessible', async ({ page, context }) => {
+	const errors = watch(page);
+	await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+	await page.goto(`${WF}&status=failed`);
+	await rows(page).first().locator('.mailspur-open').click();
+
+	const copy = page.locator('#mailspur-dialog [data-module-action="support"]');
+	await expect(copy).toBeVisible();
+	await expect(copy).toHaveText('Copy for support');
+	await copy.focus();
+	await page.keyboard.press('Enter');
+	await expect(page.locator('#mailspur-toast')).toContainText('Copied');
+
+	const text = await page.evaluate(() => navigator.clipboard.readText());
+	expect(text).toMatch(/^The email “\[WF\] Failed with notes” to wf@example\.com on .+ at .+ could not be delivered\. We will send it again\.$/);
+	expect(text).not.toContain('SMTP');
 	await page.keyboard.press('Escape');
 	expect(errors).toEqual([]);
 });

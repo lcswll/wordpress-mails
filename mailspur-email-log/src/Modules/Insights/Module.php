@@ -1,6 +1,6 @@
 <?php
 /**
- * Insights: statistics tab with charts, REST /stats, dashboard widget and monitoring alerts.
+ * Insights: statistics tab with charts, REST /stats, dashboard widget, monitoring alerts and the weekly report.
  *
  * @package Mailspur
  */
@@ -25,6 +25,7 @@ final class Module implements \Mailspur\Module {
 	public function register(): void {
 		$stats  = new Stats( $this->repository );
 		$alerts = new Alerts();
+		$weekly = new Weekly();
 		$page   = new Page();
 
 		add_filter( 'mailspur_admin_tabs', array( $page, 'tabs' ) );
@@ -36,8 +37,8 @@ final class Module implements \Mailspur\Module {
 
 		add_action(
 			'rest_api_init',
-			static function () use ( $stats, $alerts ): void {
-				( new Controller( $stats, $alerts ) )->register_routes();
+			static function () use ( $stats, $alerts, $weekly ): void {
+				( new Controller( $stats, $alerts, $weekly ) )->register_routes();
 			}
 		);
 		add_action( 'wp_dashboard_setup', array( new Dashboard( $stats ), 'setup' ) );
@@ -51,6 +52,12 @@ final class Module implements \Mailspur\Module {
 		add_action( 'update_option_mailspur_settings', array( Alerts::class, 'sync_schedule' ) );
 		add_action( 'add_option_mailspur_settings', array( Alerts::class, 'sync_schedule' ) );
 
+		// Weekly report (opt-in): Monday morning, site time.
+		add_action( Weekly::HOOK, array( $weekly, 'run' ) );
+		add_action( 'admin_init', array( Weekly::class, 'sync_schedule' ) );
+		add_action( 'update_option_mailspur_settings', array( Weekly::class, 'sync_schedule' ) );
+		add_action( 'add_option_mailspur_settings', array( Weekly::class, 'sync_schedule' ) );
+
 		// Cached statistics become stale when entries are deleted or imported.
 		add_action( Cleanup::HOOK, array( Stats::class, 'flush' ), 20 );
 		add_filter( 'rest_request_after_callbacks', array( self::class, 'flush_after_change' ), 10, 3 );
@@ -61,7 +68,7 @@ final class Module implements \Mailspur\Module {
 	 * @return array<string,string|int|bool>
 	 */
 	public static function defaults( $defaults ): array {
-		return array_merge( is_array( $defaults ) ? $defaults : array(), Alerts::defaults() );
+		return array_merge( is_array( $defaults ) ? $defaults : array(), Alerts::defaults(), array( 'weekly_report' => false ) );
 	}
 
 	/**
@@ -78,6 +85,10 @@ final class Module implements \Mailspur\Module {
 		}
 		if ( ( $alert['alert_failures'] || $alert['alert_silence'] ) && ! Alerts::has_channel( $alert ) ) {
 			self::notice( 'mailspur_alert_channel', __( 'Alerts are enabled but have no channel: enter an email address or a webhook URL.', 'mailspur-email-log' ), 'warning' );
+		}
+		$alert['weekly_report'] = ! empty( $input['weekly_report'] );
+		if ( $alert['weekly_report'] && '' === $alert['alert_email'] ) {
+			self::notice( 'mailspur_weekly_email', __( 'The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”.', 'mailspur-email-log' ), 'warning' );
 		}
 		return array_merge( is_array( $clean ) ? $clean : array(), $alert );
 	}

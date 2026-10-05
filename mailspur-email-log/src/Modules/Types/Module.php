@@ -55,6 +55,7 @@ final class Module implements \Mailspur\Module {
 		add_action( 'admin_post_mailspur_types_mute', array( $page, 'mute' ) );
 		add_action( 'admin_post_mailspur_types_rebuild', array( $page, 'rebuild' ) );
 		add_action( 'admin_post_mailspur_types_seen', array( $page, 'seen' ) );
+		add_action( 'admin_post_' . Inventory::ACTION, array( new Inventory( $store, $repository ), 'download' ) );
 
 		add_action(
 			'rest_api_init',

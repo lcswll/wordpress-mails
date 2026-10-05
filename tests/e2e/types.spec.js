@@ -74,6 +74,23 @@ test('settings offer the stopped-type alert', async ({ page }) => {
 	await expect(page.locator('input[name="mailspur_settings[alert_types]"]')).not.toBeChecked();
 });
 
+test('email inventory opens as a printable page with a CSV download', async ({ page }) => {
+	const errors = watchErrors(page);
+	await page.goto(TYPES);
+	const link = page.locator('a.mst-export');
+	await expect(link).toHaveText('Email inventory');
+	await page.goto(await link.getAttribute('href'));
+	await expect(page.locator('h1')).toHaveText('Email inventory');
+	const orders = page.locator('tbody tr').filter({ hasText: '[Example Shop] Your order #… has been received' });
+	await expect(orders).toHaveCount(1);
+	await expect(orders).toContainText('Email address');
+	await expect(page.locator('img')).toHaveCount(0);
+
+	const [csv] = await Promise.all([page.waitForEvent('download'), page.getByRole('link', { name: 'Download as CSV' }).click()]);
+	expect(csv.suggestedFilename()).toMatch(/^email-inventory-\d{4}-\d{2}-\d{2}\.csv$/);
+	expect(errors).toEqual([]);
+});
+
 test('log dialog names the email type', async ({ page }) => {
 	const errors = watchErrors(page);
 	await page.goto(LOG);

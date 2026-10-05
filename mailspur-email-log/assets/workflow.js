@@ -1,6 +1,6 @@
 /**
  * Mailspur – Workflow module (log tab): source filter options, CSV/JSON export of the current
- * filter, and the "anonymised" badge / dialog note.
+ * filter, the "anonymised" badge / dialog note and "Copy for support" in the dialog.
  *
  * Uses window.mailspur (admin.js). Text only via textContent.
  */
@@ -138,6 +138,59 @@
 		}
 		const text = marker.days ? m.fmt( t.removedAfter, m.num( marker.days ) ) : t.removed;
 		dl.append( m.node( 'dt', 'is-anonymised', t.privacy ), m.node( 'dd', 'is-anonymised', text + ' – ' + t.anonymisedTip ) );
+	} );
+
+	/* ---------------------------------------------------- copy for support */
+
+	/** Clipboard API, then the selection fallback (inside the modal dialog, everything else is inert). */
+	async function copyText( text ) {
+		try {
+			if ( window.isSecureContext && navigator.clipboard ) {
+				await navigator.clipboard.writeText( text );
+				return true;
+			}
+		} catch ( err ) {
+			// Permission denied or not focused: try the fallback.
+		}
+		const host = document.getElementById( 'mailspur-dialog' ) || document.body;
+		const active = document.activeElement;
+		const area = m.node( 'textarea', 'screen-reader-text' );
+		area.value = text;
+		area.setAttribute( 'readonly', '' );
+		host.append( area );
+		area.select();
+		let ok;
+		try {
+			ok = document.execCommand( 'copy' );
+		} catch ( err ) {
+			ok = false;
+		}
+		area.remove();
+		if ( active && active.focus ) {
+			active.focus();
+		}
+		return ok;
+	}
+
+	m.registerAction( {
+		id: 'support',
+		label: t.support,
+		icon: 'clipboard',
+		visible: ( mail ) => !! mail.support,
+		run: async ( mail ) => {
+			if ( await copyText( mail.support ) ) {
+				m.toast( t.copied );
+			} else {
+				window.prompt( t.copyFailed, mail.support );
+			}
+		},
+	} );
+
+	m.registerDetail( () => {
+		const button = document.querySelector( '#mailspur-dialog [data-module-action="support"]' );
+		if ( button && ! button.title ) {
+			button.title = t.supportTip;
+		}
 	} );
 
 	loadSources();

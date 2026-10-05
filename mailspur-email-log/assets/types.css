@@ -522,3 +522,10 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+/* ---------------------------------------------------------------- inventory export */
+
+.mst-export {
+	float: right;
+	margin-left: 16px;
+}

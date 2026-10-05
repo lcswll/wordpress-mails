@@ -239,6 +239,7 @@ final class Page {
 				<?php endif; ?>
 			</ul>
 
+			<?php Inventory::link(); ?>
 			<nav class="mst-views" aria-label="<?php esc_attr_e( 'Filter email types', 'mailspur-email-log' ); ?>">
 				<a href="<?php echo esc_url( Admin::url( array( 'tab' => self::TAB ) ) ); ?>" aria-current="<?php echo esc_attr( $attention ? 'false' : 'page' ); ?>"><?php esc_html_e( 'All', 'mailspur-email-log' ); ?></a>
 				<a href="

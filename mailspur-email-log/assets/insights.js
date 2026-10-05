@@ -1,5 +1,5 @@
 /**
- * Mailspur – Email Log: statistics tab (charts) and the "Send test alert" button in the settings.
+ * Mailspur – Email Log: statistics tab (charts) and the "Send test alert" / "Send report now" buttons in the settings.
  *
  * Dependency-free, hand-rolled inline SVG. All data goes into the DOM via textContent / attribute setters.
  * Every chart has a keyboard path (focus + arrow keys, Enter opens the log) and a table view.
@@ -144,6 +144,28 @@
 				result.classList.add( 'is-error' );
 			} finally {
 				testButton.disabled = false;
+			}
+		} );
+	}
+
+	/* --------------------------------------------------------- weekly report */
+
+	const reportButton = document.getElementById( 'mailspur-send-report' );
+	if ( reportButton ) {
+		const result = document.getElementById( 'mailspur-report-result' );
+		reportButton.addEventListener( 'click', async () => {
+			reportButton.disabled = true;
+			result.classList.remove( 'is-error' );
+			result.textContent = t.reportSending;
+			try {
+				const res = await api( 'alerts/report', { method: 'POST' } );
+				result.textContent = res.sent ? t.testEmailOk : t.testEmailFail;
+				result.classList.toggle( 'is-error', ! res.sent );
+			} catch ( err ) {
+				result.textContent = fmt( t.requestFailed, err.message );
+				result.classList.add( 'is-error' );
+			} finally {
+				reportButton.disabled = false;
 			}
 		} );
 	}
