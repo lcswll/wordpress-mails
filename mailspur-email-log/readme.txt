@@ -36,6 +36,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * **Emails to administrators:** types that reach the admin address or an administrator at least 30 times in 30 days are marked ("340 to administrators in 30 days") with where to switch them off – Settings › Discussion for comment notices, WooCommerce › Settings › Emails, and an opt-in switch for WordPress emails without a setting (success notices of automatic updates, the new-user notice to administrators).
 * **Slow emails:** for emails sent while someone waits for the page (front end, Ajax, REST, admin – not WP-Cron), Mailspur keeps the latest send durations per type. If half of them take 1.5 seconds or longer, the type shows how long and what usually helps.
 * **New senders:** a plugin or theme that sends its first email is marked "New sender" for a week. With type alerts on, you get one alert when a new sender writes to many different external addresses within a day. The first two weeks after installing Mailspur are the baseline, so existing and imported senders are never new.
+* **Email inventory:** export all types as CSV or a printable page – subject pattern, sending plugin, recipient group (administrators, registered users, other recipients), rhythm, last sent, retention in the log and the categories of personal data found in the latest email (email address, postal address, phone number, order data, free text from forms). Useful for a record of processing activities or a handover; it contains no email contents or addresses.
 * **Built for privacy and speed:** sorting happens afterwards (hourly and when you open the tab), never while an email is sent. Only counters, subject patterns and send durations are stored – never recipients or contents – and they follow the retention period of the log. Types you do not care about can be ignored.
 
 = Find any email in seconds =
@@ -44,6 +45,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * Status tabs with counts (sent, failed, held, unknown), date range, sorting, and filters for the sending plugin or theme, HTML/plain text, attachments and notes. Every filter is part of the URL, so a filtered view can be bookmarked.
 * Keyboard friendly: `/` jumps to the search, `j`/`k` move between emails, `Esc` closes the preview.
 * Export the current view as CSV (Excel-ready, safe against formula injection) or JSON.
+* **Copy for support:** one click in the email view copies a ready-to-paste sentence for a customer, in the site language – e.g. "The email “Your invoice #1042” was sent to anna@example.com on 3 October at 14:02 and accepted by the mail server. Please also check your spam folder." – without technical details.
 
 = Emails right where you need them =
 
@@ -74,6 +76,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * Emails over time (sent / failed / held), failure rate, a weekday × hour heatmap and the top senders, recipient domains and subjects – click any bar to open those emails. Accessible charts (keyboard, data tables), no external libraries.
 * Dashboard widget with the last 7 days.
 * **Monitoring alerts (opt-in):** get notified by email or webhook (Slack, Discord or any JSON endpoint) when emails fail repeatedly or when your site unexpectedly stops sending emails.
+* **Weekly report (opt-in):** a short email every Monday to the alert addresses, only when there is something to report – number of emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents.
 
 = Deliverability and staging =
 

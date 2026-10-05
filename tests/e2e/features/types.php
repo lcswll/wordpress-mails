@@ -3,7 +3,8 @@
  * Email types integration test inside real WordPress (Playground, SQLite): tables, incremental indexing with
  * placeholder and name merging, held/failed counters, the in-flight guard, rhythm-based silence with plugin
  * updates, the REST route and permissions, the type line in the log detail, the "type stopped" alert through
- * the real alert channel, retention pruning and rebuild, probe emails ("Trigger to me") and the core hint.
+ * the real alert channel, the email inventory export, retention pruning and rebuild, probe emails ("Trigger to me")
+ * and the core hint.
  *
  * Uses its own sender ("plugin:e2e-types-shop") and removes everything it created.
  * Writes /e2e-out/features/types.json.
@@ -18,6 +19,7 @@ require '/wordpress/wp-load.php';
 use Mailspur\Modules\Insights\Alerts;
 use Mailspur\Modules\Insights\Stats;
 use Mailspur\Modules\Types\Indexer;
+use Mailspur\Modules\Types\Inventory;
 use Mailspur\Modules\Types\Module;
 use Mailspur\Modules\Types\Monitor;
 use Mailspur\Modules\Types\Noise;
@@ -171,6 +173,17 @@ try {
 	// Detail view of a logged email names its type.
 	$detail = rest_do_request( new WP_REST_Request( 'GET', '/mailspur-email-log/v1/mails/' . $in_flight ) )->get_data();
 	types_check( 'Order #… confirmed' === ( $detail['mailtype']['label'] ?? '' ) && 'Daily' === ( $detail['mailtype']['rhythm'] ?? '' ), 'log detail shows the email type', $detail['mailtype'] ?? null );
+
+	// Email inventory: recipient group and data categories without addresses or contents.
+	$inventory = array();
+	foreach ( ( new Inventory( $store ) )->rows( time() ) as $row ) {
+		$inventory[ $row['type'] ] = $row;
+	}
+	$inv_order = $inventory['Order #… confirmed'] ?? array();
+	types_check( 'Other recipients (e.g. guests)' === ( $inv_order['recipients'] ?? '' ) && 'Email address, Order data' === ( $inv_order['data'] ?? '' ) && 'Daily' === ( $inv_order['rhythm'] ?? '' ), 'inventory row: recipients, data categories, rhythm', $inv_order );
+	$inv_csv = Inventory::csv( array_values( $inventory ) );
+	types_check( false !== strpos( $inv_csv, '"Email type","Sent by"' ) && false === strpos( $inv_csv, 'customer@example.com' ), 'inventory CSV has no addresses', substr( $inv_csv, 0, 300 ) );
+	types_check( false !== has_action( 'admin_post_' . Inventory::ACTION ), 'inventory download action registered', null );
 
 	// Alert through the real alert channel (captured email).
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source = %s AND subject IN ( %s, %s )', Repository::table(), 'plugin:e2e-types-shop', 'Order #9999 confirmed', 'Order #9998 confirmed' ) );

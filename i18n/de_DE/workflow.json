@@ -24,5 +24,15 @@
 	"Privacy": "Datenschutz",
 	"Content removed after %s days": "Inhalt nach %s Tagen entfernt",
 	"Content removed": "Inhalt entfernt",
-	"Content, headers and attachments were removed and the addresses masked by the anonymisation setting.": "Inhalt, Header und Anhänge wurden durch die Anonymisierung entfernt und die Adressen maskiert."
+	"Content, headers and attachments were removed and the addresses masked by the anonymisation setting.": "Inhalt, Header und Anhänge wurden durch die Anonymisierung entfernt und die Adressen maskiert.",
+	"Copied – paste it into your reply.": "Kopiert – füge den Text in deine Antwort ein.",
+	"Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details.": "Kopiert einen kurzen Satz für die Antwort an den Kunden: wann die E-Mail an wen ging und ob sie angekommen ist – ohne technische Details.",
+	"Copy for support": "Für Support kopieren",
+	"Copying is not possible in this browser. Select the text and copy it:": "Kopieren ist in diesem Browser nicht möglich. Markiere den Text und kopiere ihn:",
+	"The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder.": "Die E-Mail „%1$s“ an %2$s vom %3$s um %4$s wurde von einer Sicherheitsprüfung auf unserer Seite kurz zurückgehalten und danach versendet. Bitte prüfen Sie auch Ihren Spam-Ordner.",
+	"The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again.": "Die E-Mail „%1$s“ an %2$s vom %3$s um %4$s wurde von einer Sicherheitsprüfung auf unserer Seite zurückgehalten und nicht versendet. Wir senden sie Ihnen erneut zu.",
+	"The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again.": "Die E-Mail „%1$s“ an %2$s vom %3$s um %4$s wurde nicht versendet, weil der E-Mail-Versand auf unserer Seite zu diesem Zeitpunkt pausiert war. Wir senden sie Ihnen erneut zu.",
+	"The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again.": "Die E-Mail „%1$s“ an %2$s vom %3$s um %4$s konnte nicht zugestellt werden. Wir senden sie Ihnen erneut zu.",
+	"The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed.": "Die E-Mail „%1$s“ an %2$s wurde am %3$s um %4$s erstellt, wir können aber nicht bestätigen, ob sie zugestellt wurde. Wir prüfen das und senden sie Ihnen bei Bedarf erneut zu.",
+	"The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder.": "Die E-Mail „%1$s“ wurde am %3$s um %4$s an %2$s gesendet und vom Mailserver angenommen. Bitte prüfen Sie auch Ihren Spam-Ordner."
 }

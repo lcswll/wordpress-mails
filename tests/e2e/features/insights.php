@@ -2,7 +2,7 @@
 /**
  * Insights integration test inside real WordPress (Playground, SQLite):
  * statistics over a DST switch (Europe/Berlin), top lists, cache invalidation, permissions, dashboard widget,
- * alert evaluation incl. the alert mail itself, webhook payload, silence baseline and the cron schedule.
+ * alert evaluation incl. the alert mail itself, webhook payload, silence baseline, the cron schedule and the weekly report.
  *
  * Works on a past date range (2024) with its own rows, so the rest of the log does not interfere,
  * and removes everything it created. Writes /e2e-out/features/insights.json.
@@ -17,6 +17,7 @@ require '/wordpress/wp-load.php';
 use Mailspur\Modules\Insights\Alerts;
 use Mailspur\Modules\Insights\Dashboard;
 use Mailspur\Modules\Insights\Stats;
+use Mailspur\Modules\Insights\Weekly;
 use Mailspur\Repository;
 
 $insights_results = array();
@@ -352,9 +353,40 @@ try {
 	$result = ( new Alerts( $clock ) )->check();
 	insights_check( array( 'silence' => true ) === $result && 'silence' === Alerts::history()[0]['type'], 'silence alert sent', array( $result, Alerts::history()[0] ) );
 
+	// Weekly report: scheduled for Monday morning, HTML email to the alert address, at most once a week.
+	update_option(
+		'mailspur_settings',
+		array_merge(
+			$insights_settings,
+			array(
+				'weekly_report' => true,
+				'alert_email'   => 'ops@example.com',
+			)
+		)
+	);
+	$weekly_next = wp_next_scheduled( Weekly::HOOK );
+	insights_check( false !== $weekly_next && 'weekly' === wp_get_schedule( Weekly::HOOK ) && '1' === wp_date( 'N', (int) $weekly_next ), 'weekly report scheduled for Monday', array( $weekly_next, wp_get_schedule( Weekly::HOOK ) ) );
+	$weekly_clock = static function () {
+		return (int) strtotime( '2024-04-22 06:00:00 UTC' );
+	};
+	$weekly       = new Weekly( $weekly_clock );
+	$weekly_count = static function () use ( $wpdb, $table ) {
+		return (int) $wpdb->get_var( $wpdb->prepare( 'SELECT COUNT(*) FROM %i WHERE source = %s AND subject LIKE %s', $table, Stats::ALERT_SOURCE, '%Weekly email report%' ) );
+	};
+	$weekly_data  = $weekly->collect();
+	insights_check( $weekly_data['week']['total'] > 0 && $weekly_data['previous']['total'] > 0, 'weekly report counts this and the previous week', $weekly_data );
+	insights_check( true === $weekly->send( true ) && 1 === $weekly_count(), '"Send report now" sends the report', $weekly_count() );
+	$weekly_row = $wpdb->get_row( $wpdb->prepare( 'SELECT recipients, content_type, message FROM %i WHERE source = %s AND subject LIKE %s ORDER BY id DESC LIMIT 1', $table, Stats::ALERT_SOURCE, '%Weekly email report%' ), ARRAY_A );
+	insights_check( 'ops@example.com' === ( $weekly_row['recipients'] ?? '' ) && false !== strpos( (string) ( $weekly_row['content_type'] ?? '' ), 'html' ) && false !== strpos( (string) ( $weekly_row['message'] ?? '' ), 'previous week' ), 'weekly report is an HTML email to the alert address', $weekly_row );
+	$weekly->run();
+	$weekly->run();
+	insights_check( 2 === $weekly_count() && (int) get_option( Weekly::SENT_OPTION ) === $weekly_clock(), 'cron sends the report once a week', array( $weekly_count(), get_option( Weekly::SENT_OPTION ) ) );
+	delete_option( Weekly::SENT_OPTION );
+
 	// Disabling alerts removes the cron event.
 	update_option( 'mailspur_settings', $insights_settings );
 	insights_check( false === wp_next_scheduled( Alerts::HOOK ), 'disabling alerts unschedules the check' );
+	insights_check( false === wp_next_scheduled( Weekly::HOOK ), 'disabling the weekly report unschedules it' );
 
 	remove_filter( 'pre_wp_mail', $deliver, 10 );
 } catch ( Throwable $e ) {
@@ -379,6 +411,8 @@ try {
 	}
 	wp_clear_scheduled_hook( Alerts::HOOK );
 	wp_clear_scheduled_hook( Alerts::HOOK_NOW );
+	wp_clear_scheduled_hook( Weekly::HOOK );
+	delete_option( Weekly::SENT_OPTION );
 	Stats::flush();
 } catch ( Throwable $e ) {
 	insights_check( false, 'cleanup failed', $e->getMessage() );

@@ -115,6 +115,7 @@ final class Page {
 				'testSending'   => __( 'Sending test alert …', 'mailspur-email-log' ),
 				'testEmailOk'   => __( 'Email: sent', 'mailspur-email-log' ),
 				'testEmailFail' => __( 'Email: failed – see the log', 'mailspur-email-log' ),
+				'reportSending' => __( 'Sending report …', 'mailspur-email-log' ),
 				/* translators: %s: HTTP status code or error message */
 				'testWebhook'   => __( 'Webhook: %s', 'mailspur-email-log' ),
 				'chartLabel'    => __( 'Use the arrow keys to move between values, Enter to open them in the log.', 'mailspur-email-log' ),
@@ -397,6 +398,17 @@ final class Page {
 				<th scope="row"><?php esc_html_e( 'Recovery', 'mailspur-email-log' ); ?></th>
 				<td>
 					<label><input type="checkbox" name="<?php echo esc_attr( $name ); ?>[alert_recovery]" value="1" <?php checked( ! empty( $s['alert_recovery'] ) ); ?>> <?php esc_html_e( 'Send a message when the problem is resolved', 'mailspur-email-log' ); ?></label>
+				</td>
+			</tr>
+			<tr>
+				<th scope="row"><?php esc_html_e( 'Weekly report', 'mailspur-email-log' ); ?></th>
+				<td>
+					<label><input type="checkbox" name="<?php echo esc_attr( $name ); ?>[weekly_report]" value="1" <?php checked( ! empty( $s['weekly_report'] ) ); ?>> <?php esc_html_e( 'Send a weekly email report to the addresses above', 'mailspur-email-log' ); ?></label>
+					<p class="description">
+						<?php esc_html_e( 'Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only.', 'mailspur-email-log' ); ?>
+						<button type="button" class="button-link" id="mailspur-send-report"><?php esc_html_e( 'Send report now', 'mailspur-email-log' ); ?></button>
+						<span class="mailspur-test-result" id="mailspur-report-result" role="status" aria-live="polite"></span>
+					</p>
 				</td>
 			</tr>
 			<tr>
