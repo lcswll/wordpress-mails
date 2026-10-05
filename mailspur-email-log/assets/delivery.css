@@ -136,3 +136,26 @@
 .mailspur-brake-details {
 	overflow-wrap: anywhere;
 }
+
+/* Provider status and problem recipients (dialog, settings). */
+.mailspur-feedback.is-delivered {
+	color: var(--ob-sent, #00a32a);
+}
+
+.mailspur-feedback.is-bounced,
+.mailspur-feedback.is-complaint {
+	color: var(--ob-failed, #d63638);
+}
+
+.mailspur-problems {
+	max-width: 960px;
+	margin-top: 8px;
+}
+
+.mailspur-problems td {
+	overflow-wrap: anywhere;
+}
+
+#mailspur-feedback-url {
+	max-width: 760px;
+}

@@ -46,6 +46,30 @@ class WP_REST_Request implements ArrayAccess {
 		$this->params[ $key ] = $value;
 	}
 
+	/** @var string */
+	private $body = '';
+
+	/** @var array<string,mixed> */
+	private $url_params = array();
+
+	public function get_body(): string {
+		return $this->body;
+	}
+
+	public function set_body( string $body ): void {
+		$this->body = $body;
+	}
+
+	/** @return array<string,mixed> */
+	public function get_url_params(): array {
+		return $this->url_params;
+	}
+
+	/** @param array<string,mixed> $params */
+	public function set_url_params( array $params ): void {
+		$this->url_params = $params;
+	}
+
 	/** @param mixed $offset */
 	public function offsetExists( $offset ): bool {
 		return isset( $this->params[ $offset ] );

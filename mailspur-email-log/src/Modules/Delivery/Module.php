@@ -1,7 +1,8 @@
 <?php
 /**
  * Delivery module: sender DNS check (SPF/DKIM/DMARC/MX), staging mode (hold or redirect all mails), the emergency
- * brake for mail floods and "send to another address" / "send now" actions in the log dialog.
+ * brake for mail floods, problem recipients, the delivery status reported by the email provider (webhooks) and
+ * "send to another address" / "send now" actions in the log dialog.
  *
  * @package Mailspur
  */
@@ -28,6 +29,8 @@ final class Module implements \Mailspur\Module {
 	public function register(): void {
 		( new Staging() )->register();
 		( new Brake() )->register();
+		( new Problems() )->register(); // After the brake: staging mode and the brake decide first.
+		( new Feedback() )->register();
 
 		add_filter( 'mailspur_settings_defaults', array( $this, 'defaults' ) );
 		add_filter( 'mailspur_settings_sanitize', array( $this, 'sanitize' ), 10, 2 );
@@ -55,11 +58,14 @@ final class Module implements \Mailspur\Module {
 	 * @return array<string,string|int|bool>
 	 */
 	public function defaults( $defaults ) {
-		$defaults                        = (array) $defaults;
-		$defaults['staging_mode']        = Staging::OFF;
-		$defaults['staging_redirect_to'] = '';
-		$defaults['brake_mode']          = Brake::ALERT;
-		$defaults['brake_threshold']     = 0;
+		$defaults                         = (array) $defaults;
+		$defaults['staging_mode']         = Staging::OFF;
+		$defaults['staging_redirect_to']  = '';
+		$defaults['brake_mode']           = Brake::ALERT;
+		$defaults['brake_threshold']      = 0;
+		$defaults['problem_hold']         = false;
+		$defaults['feedback_provider']    = '';
+		$defaults['feedback_signing_key'] = '';
 		return $defaults;
 	}
 
@@ -80,6 +86,13 @@ final class Module implements \Mailspur\Module {
 		$clean['brake_mode']      = in_array( $brake, Brake::MODES, true ) ? $brake : Brake::ALERT;
 		$threshold                = isset( $input['brake_threshold'] ) && is_scalar( $input['brake_threshold'] ) ? (int) $input['brake_threshold'] : 0;
 		$clean['brake_threshold'] = max( 0, min( 1000000, $threshold ) );
+
+		$clean['problem_hold']      = ! empty( $input['problem_hold'] );
+		$provider                   = isset( $input['feedback_provider'] ) && is_string( $input['feedback_provider'] ) ? sanitize_key( $input['feedback_provider'] ) : '';
+		$clean['feedback_provider'] = in_array( $provider, Feedback::PROVIDERS, true ) ? $provider : '';
+		// Never shown again after saving: an empty field keeps the saved key.
+		$key                           = isset( $input['feedback_signing_key'] ) && is_string( $input['feedback_signing_key'] ) ? (string) preg_replace( '/[^A-Za-z0-9_\-]/', '', $input['feedback_signing_key'] ) : '';
+		$clean['feedback_signing_key'] = '' !== $key ? substr( $key, 0, 200 ) : (string) Settings::get( 'feedback_signing_key' );
 		return $clean;
 	}
 
@@ -118,6 +131,127 @@ final class Module implements \Mailspur\Module {
 		</table>
 		<?php
 		$this->render_brake_settings( $settings, $name );
+		$this->render_problem_settings( $settings, $name );
+		$this->render_feedback_settings( $settings, $name );
+	}
+
+	/**
+	 * @param array<string,mixed> $settings
+	 */
+	private function render_problem_settings( $settings, string $name ): void {
+		$problems = Problems::problems();
+		?>
+		<h2 id="mailspur-problems"><?php esc_html_e( 'Problem recipients', 'mailspur-email-log' ); ?></h2>
+		<p class="description">
+			<?php
+			printf(
+				/* translators: %s: number of failures */
+				esc_html__( 'Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log.', 'mailspur-email-log' ),
+				esc_html( number_format_i18n( Problems::THRESHOLD ) )
+			);
+			?>
+		</p>
+		<table class="form-table" role="presentation">
+			<tr>
+				<th scope="row"><?php esc_html_e( 'Problem recipients', 'mailspur-email-log' ); ?></th>
+				<td>
+					<label><input type="checkbox" name="<?php echo esc_attr( $name ); ?>[problem_hold]" value="1" <?php checked( ! empty( $settings['problem_hold'] ) ); ?>> <?php esc_html_e( 'Hold further emails to problem recipients', 'mailspur-email-log' ); ?></label>
+					<p class="description"><?php esc_html_e( 'Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log ("Send now").', 'mailspur-email-log' ); ?></p>
+					<?php if ( ! $problems ) : ?>
+						<p class="mailspur-problems-empty"><?php esc_html_e( 'No problem recipients.', 'mailspur-email-log' ); ?></p>
+					<?php else : ?>
+						<table class="widefat striped mailspur-problems" id="mailspur-problems-list">
+							<thead>
+								<tr>
+									<th scope="col"><?php esc_html_e( 'Recipient', 'mailspur-email-log' ); ?></th>
+									<th scope="col"><?php esc_html_e( 'Hard failures', 'mailspur-email-log' ); ?></th>
+									<th scope="col"><?php esc_html_e( 'Last failure', 'mailspur-email-log' ); ?></th>
+									<th scope="col"><?php esc_html_e( 'Reason', 'mailspur-email-log' ); ?></th>
+									<td></td>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ( array_slice( $problems, 0, 100 ) as $problem ) : ?>
+									<tr>
+										<td><?php echo esc_html( $problem['email'] ); ?></td>
+										<td><?php echo esc_html( number_format_i18n( $problem['count'] ) ); ?></td>
+										<td><?php echo esc_html( (string) wp_date( (string) get_option( 'date_format' ), $problem['last'] ) ); ?></td>
+										<td><?php echo esc_html( Problems::reason_label( $problem['why'] ) ); ?></td>
+										<td><button type="button" class="button button-small" data-mailspur-allow="<?php echo esc_attr( $problem['email'] ); ?>"><?php esc_html_e( 'Allow again', 'mailspur-email-log' ); ?></button></td>
+									</tr>
+								<?php endforeach; ?>
+							</tbody>
+						</table>
+					<?php endif; ?>
+				</td>
+			</tr>
+		</table>
+		<?php
+	}
+
+	/**
+	 * @param array<string,mixed> $settings
+	 */
+	private function render_feedback_settings( $settings, string $name ): void {
+		$provider = in_array( $settings['feedback_provider'] ?? '', Feedback::PROVIDERS, true ) ? (string) $settings['feedback_provider'] : '';
+		$labels   = array_merge( array( '' => __( 'Off', 'mailspur-email-log' ) ), self::provider_labels() );
+		$hints    = array(
+			'postmark' => __( 'In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint.', 'mailspur-email-log' ),
+			'mailgun'  => __( 'In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below.', 'mailspur-email-log' ),
+			'brevo'    => __( 'In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint.', 'mailspur-email-log' ),
+			'ses'      => __( 'In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically.', 'mailspur-email-log' ),
+		);
+		$urls     = array();
+		foreach ( Feedback::PROVIDERS as $key ) {
+			$urls[ $key ] = Feedback::url( $key );
+		}
+		$has_key = '' !== (string) ( $settings['feedback_signing_key'] ?? '' );
+		?>
+		<h2 id="mailspur-feedback"><?php esc_html_e( 'Delivery status from your email provider', 'mailspur-email-log' ); ?></h2>
+		<p class="description"><?php esc_html_e( 'Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails.', 'mailspur-email-log' ); ?></p>
+		<table class="form-table mailspur-feedback" role="presentation" id="mailspur-feedback-settings">
+			<tr>
+				<th scope="row"><label for="mailspur-feedback-provider"><?php esc_html_e( 'Email provider', 'mailspur-email-log' ); ?></label></th>
+				<td>
+					<select id="mailspur-feedback-provider" name="<?php echo esc_attr( $name ); ?>[feedback_provider]" data-urls="<?php echo esc_attr( (string) wp_json_encode( $urls ) ); ?>">
+						<?php foreach ( $labels as $value => $label ) : ?>
+							<option value="<?php echo esc_attr( (string) $value ); ?>" <?php selected( $provider, (string) $value ); ?>><?php echo esc_html( $label ); ?></option>
+						<?php endforeach; ?>
+					</select>
+				</td>
+			</tr>
+			<tr data-feedback-row="url" <?php echo '' === $provider ? 'hidden' : ''; ?>>
+				<th scope="row"><label for="mailspur-feedback-url"><?php esc_html_e( 'Webhook URL', 'mailspur-email-log' ); ?></label></th>
+				<td>
+					<input type="text" readonly class="large-text code" id="mailspur-feedback-url" value="<?php echo esc_attr( '' !== $provider ? $urls[ $provider ] : '' ); ?>">
+					<button type="button" class="button" id="mailspur-feedback-copy"><?php esc_html_e( 'Copy', 'mailspur-email-log' ); ?></button>
+					<?php foreach ( $hints as $key => $hint ) : ?>
+						<p class="description" data-feedback-hint="<?php echo esc_attr( $key ); ?>" <?php echo $key !== $provider ? 'hidden' : ''; ?>><?php echo esc_html( $hint ); ?></p>
+					<?php endforeach; ?>
+					<p class="description"><?php esc_html_e( 'Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook.', 'mailspur-email-log' ); ?></p>
+				</td>
+			</tr>
+			<tr data-feedback-row="mailgun" <?php echo 'mailgun' !== $provider ? 'hidden' : ''; ?>>
+				<th scope="row"><label for="mailspur-feedback-key"><?php esc_html_e( 'Webhook signing key', 'mailspur-email-log' ); ?></label></th>
+				<td>
+					<input type="password" class="regular-text" id="mailspur-feedback-key" name="<?php echo esc_attr( $name ); ?>[feedback_signing_key]" value="" autocomplete="off" spellcheck="false" placeholder="<?php echo esc_attr( $has_key ? __( 'Saved – leave empty to keep it', 'mailspur-email-log' ) : '' ); ?>">
+					<p class="description"><?php esc_html_e( 'Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected.', 'mailspur-email-log' ); ?></p>
+				</td>
+			</tr>
+		</table>
+		<?php
+	}
+
+	/**
+	 * @return array<string,string>
+	 */
+	public static function provider_labels(): array {
+		return array(
+			'postmark' => 'Postmark',
+			'mailgun'  => 'Mailgun',
+			'brevo'    => 'Brevo',
+			'ses'      => __( 'Amazon SES (via SNS)', 'mailspur-email-log' ),
+		);
 	}
 
 	/**
@@ -202,11 +336,11 @@ final class Module implements \Mailspur\Module {
 		);
 
 		$config = array(
-			'restUrl' => esc_url_raw( rest_url( Rest::NS ) ),
-			'nonce'   => wp_create_nonce( 'wp_rest' ),
-			'isAdmin' => current_user_can( 'manage_options' ),
-			'tab'     => $tab,
-			'i18n'    => array(
+			'restUrl'   => esc_url_raw( rest_url( Rest::NS ) ),
+			'nonce'     => wp_create_nonce( 'wp_rest' ),
+			'isAdmin'   => current_user_can( 'manage_options' ),
+			'tab'       => $tab,
+			'i18n'      => array(
 				'sendTo'          => __( 'Send to…', 'mailspur-email-log' ),
 				'sendToPrompt'    => __( 'Send this email to (up to 10 addresses, separated by commas):', 'mailspur-email-log' ),
 				'invalidAddress'  => __( 'Please enter valid email addresses.', 'mailspur-email-log' ),
@@ -264,7 +398,21 @@ final class Module implements \Mailspur\Module {
 				/* translators: %s: number of emails */
 				'discarded'       => __( '%s held emails discarded.', 'mailspur-email-log' ),
 				'brakeReset'      => __( 'Emergency brake reset.', 'mailspur-email-log' ),
+				'problems'        => __( 'Problem recipients', 'mailspur-email-log' ),
+				'heldProblem'     => __( 'Held: every recipient failed hard before (problem recipients).', 'mailspur-email-log' ),
+				/* translators: %s: email address(es) */
+				'problemNote'     => __( 'Earlier emails to %s failed hard more than once.', 'mailspur-email-log' ),
+				'allowed'         => __( 'Allowed again.', 'mailspur-email-log' ),
+				'providerStatus'  => __( 'Provider status', 'mailspur-email-log' ),
+				'delivered'       => __( 'Delivered', 'mailspur-email-log' ),
+				'bouncedHard'     => __( 'Bounced (permanent)', 'mailspur-email-log' ),
+				'bouncedSoft'     => __( 'Bounced (temporary)', 'mailspur-email-log' ),
+				'complaint'       => __( 'Marked as spam by the recipient', 'mailspur-email-log' ),
+				/* translators: 1: delivery status, 2: email provider, 3: date and time */
+				'reportedBy'      => __( '%1$s – reported by %2$s, %3$s', 'mailspur-email-log' ),
+				'copied'          => __( 'Copied', 'mailspur-email-log' ),
 			),
+			'providers' => self::provider_labels(),
 		);
 		wp_add_inline_script( 'mailspur-delivery', 'window.mailspurDelivery = ' . wp_json_encode( $config ) . ';', 'before' );
 	}

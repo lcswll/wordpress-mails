@@ -41,6 +41,9 @@ msgstr "%1$s gesendet, %2$s noch zurückgehalten …"
 msgid "%1$s vs. %2$s – %3$s"
 msgstr "%1$s ggü. %2$s – %3$s"
 
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – gemeldet von %2$s, %3$s"
+
 msgid "%1$s, %2$s"
 msgstr "%1$s, %2$s"
 
@@ -155,6 +158,9 @@ msgstr "Trage deinen Mailserver bzw. Maildienst im SPF-Eintrag der Absenderdomai
 msgid "Added:"
 msgstr "Hinzugefügt:"
 
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Adressen mit mindestens %s harten Fehlern: Der empfangende Server hat das Postfach abgelehnt, die Domain hat keinen Mailserver oder dein E-Mail-Dienst hat einen Hard Bounce gemeldet. Einträge verfallen mit der Aufbewahrungsdauer des Protokolls."
+
 msgid "Admin screen"
 msgstr "Admin-Bereich"
 
@@ -203,6 +209,12 @@ msgstr "Alle E-Mails werden an Testadressen umgeleitet."
 msgid "All sources"
 msgstr "Alle Quellen"
 
+msgid "Allow again"
+msgstr "Wieder zulassen"
+
+msgid "Allowed again."
+msgstr "Wieder zugelassen."
+
 msgid "Also remove the subject when anonymising"
 msgstr "Beim Anonymisieren auch den Betreff entfernen"
 
@@ -214,6 +226,9 @@ msgstr "Alternativ bitte deinen Hoster, mail() / sendmail für diese Website zu 
 
 msgid "Always load remote images and fonts in the preview"
 msgstr "Externe Bilder und Schriften in der Vorschau immer laden"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (über SNS)"
 
 msgid "Anonymisation"
 msgstr "Anonymisierung"
@@ -274,6 +289,12 @@ msgstr "Wieder blockieren"
 
 msgid "Blocked as spam or by a blocklist"
 msgstr "Als Spam oder durch eine Blocklist abgewiesen"
+
+msgid "Bounced (permanent)"
+msgstr "Unzustellbar (dauerhaft)"
+
+msgid "Bounced (temporary)"
+msgstr "Unzustellbar (vorübergehend)"
 
 msgid "Broken characters (encoding): %1$s"
 msgstr "Kaputte Zeichen (Kodierung): %1$s"
@@ -407,6 +428,9 @@ msgstr "Inhalt nach %s Tagen entfernt"
 msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
 msgstr "Inhalt, Header und Anhänge wurden durch die Anonymisierung entfernt und die Adressen maskiert."
 
+msgid "Copied"
+msgstr "Kopiert"
+
 msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
 msgstr "Übernimmt das vorhandene Protokoll eines anderen Mail-Log-Plugins in Mailspur, damit alte E-Mails hier durchsucht und angesehen werden können. Das andere Plugin und seine Daten bleiben unverändert; ein erneuter Import übernimmt nur neue Einträge."
 
@@ -491,6 +515,9 @@ msgstr "Diesen Protokolleintrag löschen?"
 msgid "Deleted."
 msgstr "Gelöscht."
 
+msgid "Delivered"
+msgstr "Zugestellt"
+
 msgid "Delivered by %s (API)"
 msgstr "Zugestellt von %s (API)"
 
@@ -499,6 +526,9 @@ msgstr "Zugestellt von Code, der sich in pre_wp_mail einklinkt (API)"
 
 msgid "Delivery"
 msgstr "Zustellung"
+
+msgid "Delivery status from your email provider"
+msgstr "Zustellstatus von deinem E-Mail-Dienst"
 
 msgid "Desktop"
 msgstr "Desktop"
@@ -530,6 +560,9 @@ msgstr "Die Einträge zu den aktuellen Filtern als %s herunterladen"
 msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
 msgstr "Jede E-Mail wird einmal beim Protokollieren oder Importieren geprüft (ohne externe Anfragen). Änderungen hier wirken nur für danach protokollierte E-Mails; ältere Einträge werden nicht erneut geprüft. DNS- und Mehrfachversand-Prüfungen laufen, wenn du einen Eintrag öffnest."
 
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Frühere E-Mails an %s sind mehrmals hart fehlgeschlagen."
+
 msgid "Editors and above"
 msgstr "Redakteure und höher"
 
@@ -541,6 +574,12 @@ msgstr "E-Mail-Fehler behoben"
 
 msgid "Email log"
 msgstr "E-Mail-Protokoll"
+
+msgid "Email log: problem recipients"
+msgstr "E-Mail-Protokoll: Problem-Empfänger"
+
+msgid "Email provider"
+msgstr "E-Mail-Dienst"
 
 msgid "Email sent again."
 msgstr "E-Mail wurde erneut gesendet."
@@ -782,6 +821,12 @@ msgstr "HTML als reiner Text gesendet"
 msgid "Handler"
 msgstr "Handler"
 
+msgid "Hard bounce reported by your email provider"
+msgstr "Hard Bounce, gemeldet von deinem E-Mail-Dienst"
+
+msgid "Hard failures"
+msgstr "Harte Fehler"
+
 msgid "Headers"
 msgstr "Header"
 
@@ -806,11 +851,17 @@ msgstr "Zurückgehaltene E-Mail gesendet. Sie wird als neuer Eintrag protokollie
 msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
 msgstr "Zurückgehaltene E-Mails bekommen den Status „Zurückgehalten“ und können im Protokoll einzeln doch noch gesendet werden („Jetzt senden“)."
 
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Zurückgehalten: Alle Empfänger sind zuvor hart fehlgeschlagen (Problem-Empfänger)."
+
 msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
 msgstr "Zurückgehalten: Der Staging-Modus steht auf Umleiten, aber es ist keine gültige Umleitungsadresse eingetragen."
 
 msgid "Hints about problems that can keep this email from arriving or displaying correctly."
 msgstr "Hinweise auf Probleme, durch die diese E-Mail nicht ankommt oder falsch angezeigt wird."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Weitere E-Mails an Problem-Empfänger zurückhalten"
 
 msgid "Hooks"
 msgstr "Hooks"
@@ -878,6 +929,18 @@ msgstr "Importierte Einträge haben keine Spur: Das andere Plugin hat diese Deta
 msgid "Imported from %s"
 msgstr "Importiert aus %s"
 
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "Abonniere in Amazon SNS die URL (Protokoll HTTPS) für das Topic, das die Delivery-, Bounce- und Complaint-Benachrichtigungen von Amazon SES erhält. Mailspur bestätigt das Abonnement automatisch."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "Öffne in Brevo Transactional → Settings → Webhook, füge die URL hinzu und wähle Delivered, Hard bounce, Soft bounce, Invalid email und Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "Öffne in Mailgun Sending → Webhooks, füge die URL für Delivered, Permanent failure, Temporary failure und Spam complaints hinzu und trage unten den HTTP webhook signing key ein."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "Öffne in Postmark deinen Server → Webhooks → Add webhook, füge die URL ein und wähle Delivery, Bounce und Spam complaint."
+
 msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
 msgstr "Öffne im Microsoft 365 Admin Center den Benutzer → E-Mail → E-Mail-Apps verwalten und aktiviere „Authentifiziertes SMTP“."
 
@@ -917,6 +980,9 @@ msgstr "JSON"
 msgid "Keep at most"
 msgstr "Höchstens behalten"
 
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Halte diese URL geheim: Sie enthält einen geheimen Schlüssel dieser Website. Speichere die Einstellungen, bevor du den Webhook testest."
+
 msgid "Key figures"
 msgstr "Kennzahlen"
 
@@ -925,6 +991,9 @@ msgstr "Letzte 30 Tage"
 
 msgid "Last email before the change"
 msgstr "Letzte E-Mail vor der Änderung"
+
+msgid "Last failure"
+msgstr "Letzter Fehler"
 
 msgid "Last page"
 msgstr "Letzte Seite"
@@ -992,8 +1061,14 @@ msgstr "Mail-Log-Bereiche"
 msgid "Mail servers for replies and bounces are set up."
 msgstr "Mailserver für Antworten und Bounces sind eingerichtet."
 
+msgid "Mailbox unknown or unavailable"
+msgstr "Postfach unbekannt oder nicht verfügbar"
+
 msgid "Mailer"
 msgstr "Versandart"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun signiert jeden Webhook mit diesem Schlüssel (Sending → Webhooks → HTTP webhook signing key); Meldungen ohne gültige Signatur werden abgewiesen."
 
 msgid "Mailspur alerts"
 msgstr "Mailspur-Benachrichtigungen"
@@ -1033,6 +1108,9 @@ msgstr "Viele Mailprogramme blockieren Bilder, bis der Leser sie erlaubt. Ohne A
 
 msgid "Mark as resolved"
 msgstr "Als erledigt markieren"
+
+msgid "Marked as spam by the recipient"
+msgstr "Vom Empfänger als Spam markiert"
 
 msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
 msgstr "Passwort-Reset-, Aktivierungs- und Zugriffsschlüssel in protokollierten Links sowie im Klartext gesendete Passwörter, API-Schlüssel und Kartennummern maskieren"
@@ -1160,6 +1238,9 @@ msgstr "Auf dieser Website wurde kein Protokoll eines anderen Mail-Log-Plugins g
 msgid "No log of this plugin was found on this site."
 msgstr "Auf dieser Website wurde kein Protokoll dieses Plugins gefunden."
 
+msgid "No problem recipients."
+msgstr "Keine Problem-Empfänger."
+
 msgid "No problems found in this email."
 msgstr "Keine Probleme in dieser E-Mail gefunden."
 
@@ -1237,6 +1318,9 @@ msgstr "Nur Administratoren können E-Mails an andere Adressen senden."
 
 msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
 msgstr "Benachrichtigt nur, wenn die letzten 14 Tage zeigen, dass in diesem Zeitfenster normalerweise E-Mails gesendet werden (an mindestens 10 von 14 Tagen, einschließlich desselben Wochentags) – ruhige Nächte oder Wochenenden lösen also nichts aus."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Nur E-Mails, deren Empfänger alle Problem-Empfänger sind. E-Mails zum Zurücksetzen des Passworts werden immer versendet; zurückgehaltene E-Mails können weiterhin aus dem Protokoll gesendet werden („Jetzt senden“)."
 
 msgid "Only held emails can be released."
 msgstr "Nur zurückgehaltene E-Mails können freigegeben werden."
@@ -1328,6 +1412,9 @@ msgstr "Auf Probleme hinweisen, durch die E-Mails nicht ankommen oder falsch ang
 msgid "Port"
 msgstr "Port"
 
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo oder Amazon SES können dieser Website melden, ob eine E-Mail zugestellt wurde, unzustellbar war oder als Spam markiert wurde. Der Status wird bei der protokollierten E-Mail angezeigt, und Hard Bounces zählen für die Problem-Empfänger. Damit die Meldungen zugeordnet werden können, fügt Mailspur ausgehenden E-Mails einen Referenz-Header hinzu."
+
 msgid "Preparation"
 msgstr "Vorbereitung"
 
@@ -1355,8 +1442,14 @@ msgstr "Datenschutz & Sicherheit"
 msgid "Problem"
 msgstr "Problem"
 
+msgid "Problem recipients"
+msgstr "Problem-Empfänger"
+
 msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
 msgstr "Schützt deine Domain, wenn weit mehr E-Mails als üblich versendet werden, z. B. weil Spam-Bots ein Kontaktformular missbrauchen. Benachrichtigungen nutzen die Kanäle der Überwachungs-Benachrichtigungen; E-Mails zum Zurücksetzen des Passworts werden nie zurückgehalten."
+
+msgid "Provider status"
+msgstr "Status beim E-Mail-Dienst"
 
 msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
 msgstr "Anbieter wie %2$s veröffentlichen eine strenge DMARC-Richtlinie. Eine E-Mail „von“ ihrer Domain, die dein Webserver verschickt, fällt durch diese Prüfung und wird abgelehnt oder landet im Spam."
@@ -1378,6 +1471,9 @@ msgstr "Mailspur auf WordPress.org bewerten"
 
 msgid "Raw source"
 msgstr "Rohquelltext"
+
+msgid "Reason"
+msgstr "Grund"
 
 msgid "Rebuild from the log"
 msgstr "Aus dem Protokoll neu aufbauen"
@@ -1546,6 +1642,9 @@ msgstr "Der SPF-Eintrag hat keinen „all“-Abschluss, daher werden E-Mails and
 
 msgid "Saturday"
 msgstr "Samstag"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Gespeichert – leer lassen, um ihn zu behalten"
 
 msgid "Search recipient or subject"
 msgstr "Empfänger oder Betreff suchen"
@@ -1922,6 +2021,12 @@ msgstr "Der empfangende Server hat die E-Mail wegen ihres Inhalts abgelehnt oder
 msgid "The recipient address was rejected"
 msgstr "Die Empfängeradresse wurde abgelehnt"
 
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Die Empfängerdomain nimmt keine E-Mails an (Null-MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Die Empfängerdomain hat keinen Mailserver"
+
 msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
 msgstr "Die Empfängerdomain sieht aus wie ein Tippfehler eines bekannten E-Mail-Anbieters. Solche E-Mails kommen zurück – oder erreichen einen Fremden, der die Tippfehler-Domain registriert hat."
 
@@ -2161,6 +2266,9 @@ msgstr "Warnungen"
 
 msgid "Webhook URL"
 msgstr "Webhook-URL"
+
+msgid "Webhook signing key"
+msgstr "Webhook-Signaturschlüssel"
 
 msgid "Webhook: %s"
 msgstr "Webhook: %s"

@@ -21,4 +21,24 @@ class PHPMailer {
 	/** @var string */
 	public $AltBody = '';
 	// phpcs:enable
+
+	/** @var string Message-ID of the last mail sent (PHPMailer sets it while building the headers). */
+	public $last_message_id = '';
+
+	/** @var array<int,array{0:string,1:string}> */
+	private $custom_headers = array();
+
+	public function addCustomHeader( string $name, ?string $value = null ): bool {
+		$this->custom_headers[] = array( $name, (string) $value );
+		return true;
+	}
+
+	/** @return array<int,array{0:string,1:string}> */
+	public function getCustomHeaders(): array {
+		return $this->custom_headers;
+	}
+
+	public function getLastMessageID(): string {
+		return $this->last_message_id;
+	}
 }
