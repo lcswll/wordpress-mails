@@ -299,6 +299,85 @@
 	color: var(--mst-muted);
 }
 
+/* ---------------------------------------------------------------- admin noise, slow types, new senders */
+
+.mst-summary .is-fresh,
+.mst-summary .is-noise,
+.mst-summary .is-slow {
+	border-color: #c5c0e0;
+	background: #f6f4fd;
+}
+
+.mst-flag {
+	padding: 0 8px;
+	border-radius: 10px;
+	background: #f6f4fd;
+	color: #3c2a9c;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 20px;
+}
+
+.mst-hints {
+	display: block;
+	margin-top: 4px;
+	font-size: 12px;
+}
+
+.mst-hint {
+	display: block;
+	margin-top: 2px;
+}
+
+.mst-hint summary {
+	display: inline;
+	color: #3c2a9c;
+	cursor: pointer;
+}
+
+.mst-hint summary::-webkit-details-marker {
+	display: none;
+}
+
+.mst-hint summary::before {
+	content: "\25B8\00a0";
+}
+
+.mst-hint[open] summary::before {
+	content: "\25BE\00a0";
+}
+
+.mst-hint-body {
+	margin: 4px 0 0;
+	padding: 4px 8px;
+	border-left: 3px solid #c5c0e0;
+	background: #f6f4fd;
+	white-space: normal;
+}
+
+.mst-hint-body p,
+.mst-hint-body ul {
+	margin: 2px 0;
+}
+
+.mst-hint-body ul {
+	padding-left: 16px;
+	list-style: disc;
+}
+
+.mst-hint form {
+	display: inline;
+	margin-left: 6px;
+}
+
+.mst-hint .button-link {
+	font-size: 12px;
+}
+
+.mst-hint.is-quiet {
+	color: var(--mst-muted);
+}
+
 .mst-cause {
 	color: var(--mst-ink);
 }

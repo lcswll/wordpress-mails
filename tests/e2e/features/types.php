@@ -20,8 +20,11 @@ use Mailspur\Modules\Insights\Stats;
 use Mailspur\Modules\Types\Indexer;
 use Mailspur\Modules\Types\Module;
 use Mailspur\Modules\Types\Monitor;
+use Mailspur\Modules\Types\Noise;
 use Mailspur\Modules\Types\Page;
+use Mailspur\Modules\Types\Quiet;
 use Mailspur\Modules\Types\Report;
+use Mailspur\Modules\Types\Senders;
 use Mailspur\Modules\Types\Store;
 use Mailspur\Modules\Types\Updates;
 use Mailspur\Repository;
@@ -374,8 +377,103 @@ try {
 	types_check( false, 'exception (before/after, cron)', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
 }
 
+// Admin noise, slow types, new senders and the quiet switch.
 try {
 	global $wpdb;
+	$store   = new Store();
+	$indexer = new Indexer( $store );
+	$indexer->rebuild();
+	$now = time();
+	// Mailspur watches since 30 days: a sender first seen 20 days ago is still baseline, one from today is new.
+	// Senders already in the log (seed, other features) are old acquaintances.
+	update_option(
+		Senders::OPTION,
+		array(
+			'since'   => $now - 30 * DAY_IN_SECONDS,
+			'known'   => array_fill_keys( array_map( 'strval', (array) $wpdb->get_col( $wpdb->prepare( 'SELECT DISTINCT source FROM %i', Repository::table() ) ) ), $now - 60 * DAY_IN_SECONDS ),
+			'alerted' => array(),
+		),
+		false
+	);
+	$slow_meta   = static function ( $type, $origin ) {
+		return (string) wp_json_encode(
+			array(
+				'trace' => array(
+					'origin'    => array( 'function' => $origin ),
+					'request'   => array( 'type' => $type ),
+					'transport' => array( 'mailer' => 'smtp' ),
+					'total_ms'  => 2400.5,
+				),
+			)
+		);
+	};
+	$admin_email = (string) get_option( 'admin_email' );
+	for ( $i = 0; $i < 34; $i++ ) {
+		$id = types_row( gmdate( 'Y-m-d H:i:s', $now - ( 20 * DAY_IN_SECONDS ) + $i * 12 * HOUR_IN_SECONDS ), 1, 'Please moderate: "Post ' . $i . '"', 'plugin:e2e-types-noise', 'x', $i < 8 ? $slow_meta( 'frontend', 'wp_notify_moderator' ) : $slow_meta( 'cron', 'wp_notify_moderator' ) );
+		$wpdb->update( Repository::table(), array( 'recipients' => 'Admin <' . strtoupper( $admin_email ) . '>' ), array( 'id' => $id ) );
+	}
+	for ( $i = 0; $i < 30; $i++ ) {
+		$id = types_row( gmdate( 'Y-m-d H:i:s', $now - HOUR_IN_SECONDS + $i * 60 ), 1, 'Special offer ' . $i, 'plugin:e2e-types-fresh' );
+		$wpdb->update( Repository::table(), array( 'recipients' => 'person' . $i . '@e2e-recipients.test' ), array( 'id' => $id ) );
+	}
+	types_row( gmdate( 'Y-m-d H:i:s', $now - 2 * HOUR_IN_SECONDS ), 1, '[Site] Some plugins were automatically updated', 'plugin:e2e-types-updates', 'x', $slow_meta( 'cron', 'WP_Automatic_Updater::send_plugin_theme_email' ) );
+	$indexer->run( 100000 );
+
+	$by_source = array();
+	foreach ( Report::current( $store, time() ) as $item ) {
+		$by_source[ $item['source'] ] = $item;
+	}
+	$noisy = $by_source['plugin:e2e-types-noise'] ?? array();
+	types_check( 34 === ( $noisy['admin'] ?? null ) && true === ( $noisy['noise'] ?? null ), 'emails to the admin address are counted, type is noise', array( $noisy['admin'] ?? null, $noisy['noise'] ?? null ) );
+	types_check( 'wp_notify_moderator' === ( $noisy['origin'] ?? '' ) && false !== strpos( (string) ( Noise::fix( $noisy['origin'], $noisy['source'] )['url'] ?? '' ), 'options-discussion.php' ), 'moderation emails link to Settings › Discussion', $noisy['origin'] ?? null );
+	types_check( 2401 === ( $noisy['slow']['median'] ?? null ) && 8 === ( $noisy['slow']['n'] ?? null ), 'only emails someone waited for count as slow', $noisy['slow'] ?? null );
+	types_check( false === ( $by_source['plugin:e2e-types-fresh']['noise'] ?? null ) && array_key_exists( 'slow', $by_source['plugin:e2e-types-fresh'] ?? array() ) && null === $by_source['plugin:e2e-types-fresh']['slow'], 'no noise or slowness without a reason', $by_source['plugin:e2e-types-fresh'] ?? null );
+	types_check( true === ( $by_source['plugin:e2e-types-fresh']['new_sender'] ?? null ) && false === ( $noisy['new_sender'] ?? null ), 'new sender after the baseline, not during it', array( $by_source['plugin:e2e-types-fresh']['new_sender'] ?? null, $noisy['new_sender'] ?? null ) );
+	$stored = implode( ' ', array_map( 'strval', (array) $wpdb->get_col( $wpdb->prepare( 'SELECT extra FROM %i', Store::types_table() ) ) ) );
+	types_check( '' !== $stored && false === stripos( $stored, $admin_email ) && false === strpos( $stored, 'e2e-recipients' ), 'type state stores no addresses', null );
+
+	$sent    = array();
+	$senders = new Senders();
+	$alerted = $senders->check(
+		static function ( $type, $kind, $message ) use ( &$sent ) {
+			$sent[] = array( $type, $kind, $message );
+			return array();
+		},
+		array()
+	);
+	types_check( array( 'plugin:e2e-types-fresh' ) === $alerted && 'sender' === ( $sent[0][0] ?? '' ) && false !== strpos( (string) ( $sent[0][2] ?? '' ), '30 different external addresses' ) && false === strpos( (string) ( $sent[0][2] ?? '' ), '@' ), 'new sender writing to many external addresses alerts, without addresses', $sent );
+	types_check( array() === $senders->check( '__return_empty_array', array() ), 'the new-sender alert is sent once', null );
+	types_check( 'New sender writes to many addresses' === Alerts::title( 'sender', 'alert' ), 'alert title for new senders', null );
+
+	// Page: summary counts and row markers.
+	ob_start();
+	( new Page( $store, $indexer ) )->render();
+	$html = (string) ob_get_clean();
+	types_check( false !== strpos( $html, 'often to administrators' ) && false !== strpos( $html, '34 to administrators in 30 days' ) && false !== strpos( $html, 'Waits 2.4 s for the mail server' ) && false !== strpos( $html, 'mst-flag is-fresh' ), 'tab shows noise, slow and new-sender markers', null );
+
+	// Quiet switch: stops the success notices and ignores the matching type.
+	$updates_id = (int) ( $by_source['plugin:e2e-types-updates']['id'] ?? 0 );
+	Quiet::set( $store, Quiet::UPDATES, true );
+	$types = $store->types();
+	types_check( array( Quiet::UPDATES ) === Quiet::active() && ! empty( $types[ $updates_id ]['muted'] ), 'quiet switch is stored and ignores the type', Quiet::active() );
+	Quiet::register();
+	$ok = (object) array( 'result' => true );
+	types_check( false === apply_filters( 'auto_plugin_update_send_email', true, array( $ok ) ) && true === apply_filters( 'auto_plugin_update_send_email', true, array( (object) array( 'result' => false ) ) ) && false === apply_filters( 'auto_core_update_send_email', true, 'success' ), 'core filters drop only success notices', null );
+	remove_filter( 'auto_plugin_update_send_email', array( Quiet::class, 'plugin_theme_email' ) );
+	remove_filter( 'auto_theme_update_send_email', array( Quiet::class, 'plugin_theme_email' ) );
+	remove_filter( 'auto_core_update_send_email', array( Quiet::class, 'core_email' ) );
+	Quiet::set( $store, Quiet::UPDATES, false );
+	$types = $store->types();
+	types_check( array() === Quiet::active() && empty( $types[ $updates_id ]['muted'] ), 'quiet switch can be turned off again', Quiet::active() );
+} catch ( Throwable $e ) {
+	types_check( false, 'exception (noise, speed, senders)', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
+}
+
+try {
+	global $wpdb;
+	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source IN ( %s, %s, %s )', Repository::table(), 'plugin:e2e-types-noise', 'plugin:e2e-types-fresh', 'plugin:e2e-types-updates' ) );
+	delete_option( Senders::OPTION );
+	delete_option( Quiet::OPTION );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source IN ( %s, %s ) OR subject = %s OR ( source = %s AND recipients = %s )', Repository::table(), 'plugin:e2e-types-news', 'plugin:e2e-types-cron', 'E2E cron trace', 'mailspur:resend', 'me@example.com' ) );
 	wp_clear_scheduled_hook( 'mailspur_e2e_reminder' );
 	delete_option( Report::SEEN );

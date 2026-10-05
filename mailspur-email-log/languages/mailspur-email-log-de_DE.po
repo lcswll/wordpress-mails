@@ -35,6 +35,9 @@ msgstr "%1$s von %2$s Einträgen verarbeitet …"
 msgid "%1$s pp vs. %2$s – %3$s"
 msgstr "%1$s Prozentpunkte ggü. %2$s – %3$s"
 
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s hat am %2$s die erste E-Mail versendet und in den letzten 24 Stunden an %3$s verschiedene externe Adressen geschrieben. Wenn du nichts installiert oder eingerichtet hast, das solche E-Mails versendet, prüfe die Website: Ein neuer Absender kann ein Zeichen für eine gehackte Website sein."
+
 msgid "%1$s sent, %2$s still held …"
 msgstr "%1$s gesendet, %2$s noch zurückgehalten …"
 
@@ -79,6 +82,9 @@ msgstr "%s aller E-Mails"
 
 msgid "%s selected"
 msgstr "%s ausgewählt"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s an Administratoren in 30 Tagen"
 
 msgid "%s unchanged lines"
 msgstr "%s unveränderte Zeilen"
@@ -203,6 +209,9 @@ msgstr "Alle E-Mails werden an Testadressen umgeleitet."
 msgid "All sources"
 msgstr "Alle Quellen"
 
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Benachrichtigt außerdem einmal, wenn ein Plugin oder Theme, das noch nie eine E-Mail versendet hat, innerhalb eines Tages an viele verschiedene externe Adressen schreibt – ein mögliches Zeichen für eine gehackte Website. Die ersten zwei Wochen nach der Installation von Mailspur gelten als Vergleichszeitraum."
+
 msgid "Also remove the subject when anonymising"
 msgstr "Beim Anonymisieren auch den Betreff entfernen"
 
@@ -214,6 +223,9 @@ msgstr "Alternativ bitte deinen Hoster, mail() / sendmail für diese Website zu 
 
 msgid "Always load remote images and fonts in the preview"
 msgstr "Externe Bilder und Schriften in der Vorschau immer laden"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Ein E-Mail-Anbieter mit HTTP-API statt SMTP braucht weniger Hin und Her pro E-Mail."
 
 msgid "Anonymisation"
 msgstr "Anonymisierung"
@@ -313,6 +325,9 @@ msgstr "Prüfe, ob die Verschlüsselung zum Port passt: TLS für 587, SSL für 4
 
 msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
 msgstr "Prüfe, ob der Schlüssel zur richtigen Region bzw. zum richtigen Konto gehört (z. B. EU- statt US-Endpunkt)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Prüfe SMTP-Host und Port: Ein falscher Port oder eine blockierte Verbindung endet oft erst in einer Zeitüberschreitung, bevor ein Ausweichweg greift."
 
 msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
 msgstr "Prüfe die SPF-, DKIM- und DMARC-Einträge der Absenderdomain oder nutze eine Absenderadresse der Domain, über die du versendest."
@@ -503,6 +518,9 @@ msgstr "Zustellung"
 msgid "Desktop"
 msgstr "Desktop"
 
+msgid "Disable the email or change its recipient"
+msgstr "Die E-Mail deaktivieren oder ihren Empfänger ändern"
+
 msgid "Discard all held emails? They stay in the log but are not sent."
 msgstr "Alle zurückgehaltenen E-Mails verwerfen? Sie bleiben im Protokoll, werden aber nicht gesendet."
 
@@ -541,6 +559,12 @@ msgstr "E-Mail-Fehler behoben"
 
 msgid "Email log"
 msgstr "E-Mail-Protokoll"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Mir eine E-Mail senden, wenn ein Kommentar auf Moderation wartet"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Mir eine E-Mail senden, wenn jemand einen Kommentar schreibt"
 
 msgid "Email sent again."
 msgstr "E-Mail wurde erneut gesendet."
@@ -727,6 +751,9 @@ msgstr "E-Mail-Typen filtern"
 
 msgid "First email after the change"
 msgstr "Erste E-Mail nach der Änderung"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Erste E-Mail dieses Absenders am %s. Mit aktivierten Typ-Benachrichtigungen meldet sich Mailspur, wenn ein neuer Absender an viele externe Adressen schreibt."
 
 msgid "First page"
 msgstr "Erste Seite"
@@ -977,6 +1004,9 @@ msgstr "Protokollierte E-Mails können personenbezogene Daten enthalten. Vergib 
 msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
 msgstr "Anmeldung und Empfänger wurden akzeptiert, die E-Mail selbst aber abgelehnt – meist wegen Spamfilter, Versandlimit oder einer Richtlinie des Anbieters (Antwortcode 554)."
 
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Suche in den E-Mail-Einstellungen von %s nach einer Option zum Abschalten oder zum Ändern des Empfängers – oder ignoriere den Typ hier."
+
 msgid "Look for the server reply in the error message; it usually names the reason."
 msgstr "Suche die Serverantwort in der Fehlermeldung; sie nennt meist den Grund."
 
@@ -1006,6 +1036,9 @@ msgstr "Mailspur wird von %1$s entwickelt. Gefällt es dir? %2$s"
 
 msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
 msgstr "Mailspur lernt den Rhythmus jedes E-Mail-Typs aus den letzten 8 Wochen – eine tägliche Bestellbestätigung ist nach 2 Tagen überfällig, ein wöchentlicher Bericht nach 2 Wochen. Die Benachrichtigung nennt den Typ, seinen Absender und die seit seiner letzten E-Mail aktualisierten Plugins. Nutzt die Kanäle oben; ignorierte Typen lösen nie aus."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur stoppt diese E-Mails jetzt; ihr E-Mail-Typ wird ignoriert."
 
 msgid "Mailspur – Email Log"
 msgstr "Mailspur – E-Mail-Log"
@@ -1093,6 +1126,12 @@ msgstr "Neu"
 
 msgid "New emails are held until you release or discard them. Password reset emails still go out."
 msgstr "Neue E-Mails werden zurückgehalten, bis du sie freigibst oder verwirfst. E-Mails zum Zurücksetzen des Passworts werden weiterhin versendet."
+
+msgid "New sender"
+msgstr "Neuer Absender"
+
+msgid "New sender writes to many addresses"
+msgstr "Neuer Absender schreibt an viele Adressen"
 
 msgid "Next email"
 msgstr "Nächste E-Mail"
@@ -1213,6 +1252,9 @@ msgstr "Zahlen werden ignoriert, „Bestellung #123“ und „Bestellung #124“
 
 msgid "OK"
 msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Von den letzten %1$s E-Mails, auf die jemand beim Seitenaufruf gewartet hat, dauerte die Hälfte länger als %2$s s (Durchschnitt %3$s s)."
 
 msgid "Off"
 msgstr "Aus"
@@ -1577,6 +1619,9 @@ msgstr "Eine Nachricht senden, wenn das Problem behoben ist"
 msgid "Send a test email from the mailer plugin's settings."
 msgstr "Sende eine Test-E-Mail aus den Einstellungen des Mailer-Plugins."
 
+msgid "Send again"
+msgstr "Wieder senden"
+
 msgid "Send alerts by email to"
 msgstr "Benachrichtigungen per E-Mail an"
 
@@ -1637,6 +1682,9 @@ msgstr "Senden fehlgeschlagen – siehe Protokoll."
 msgid "Sending failed – see the new log entry for details."
 msgstr "Senden fehlgeschlagen – Details im neuen Protokolleintrag."
 
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Versand im Hintergrund (ein Mailer-Plugin mit Warteschlange) lässt die Seite fertig laden, ohne zu warten."
+
 msgid "Sending limit or quota reached"
 msgstr "Versandlimit oder Kontingent erreicht"
 
@@ -1696,6 +1744,9 @@ msgstr "Staging-Modus einrichten"
 
 msgid "Settings"
 msgstr "Einstellungen"
+
+msgid "Settings › Discussion"
+msgstr "Einstellungen › Diskussion"
 
 msgid "Several of the latest emails of this type failed."
 msgstr "Mehrere der letzten E-Mails dieses Typs sind fehlgeschlagen."
@@ -1775,8 +1826,14 @@ msgstr "Status"
 msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
 msgstr "Sortiere im Hintergrund noch %s ältere E-Mails in Typen ein. Lade die Seite in einer Minute neu."
 
+msgid "Stop these emails"
+msgstr "Diese E-Mails stoppen"
+
 msgid "Stopped"
 msgstr "Ausgeblieben"
+
+msgid "Stopped by Mailspur."
+msgstr "Von Mailspur gestoppt."
 
 msgid "Stopped email types"
 msgstr "Ausbleibende E-Mail-Typen"
@@ -1798,6 +1855,9 @@ msgstr "Sonntag"
 
 msgid "Supported: %s."
 msgstr "Unterstützt: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Abschalten unter %1$s: „%2$s“."
 
 msgid "Temporary rejection – try again later"
 msgstr "Vorübergehend abgelehnt – später erneut versuchen"
@@ -1849,6 +1909,9 @@ msgstr "Die Domain hat im DNS weder einen MX- noch einen A-Eintrag. E-Mails dort
 
 msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
 msgstr "Die Domain veröffentlicht einen „Null-MX“-Eintrag und erklärt damit ausdrücklich, dass sie keine E-Mails empfängt. Jede E-Mail dorthin kommt zurück."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "Die E-Mail-API antwortet langsam: Prüfe die Region oder den Endpunkt in deinem Mailer-Plugin."
 
 msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
 msgstr "Die E-Mail enthält ein Passwort in lesbarer Form. E-Mails liegen jahrelang in Postfächern, Backups und weitergeleiteten Verläufen – wer eine davon in die Hände bekommt, kann sich anmelden. Auch das E-Mail-Log speichert es, außer „Geheimnisse schwärzen“ ist aktiv (dann behält das Log eine maskierte Kopie, der Empfänger hat das Passwort aber trotzdem erhalten)."
@@ -1952,6 +2015,9 @@ msgstr "Der Server nimmt E-Mails nur nach einer Anmeldung oder nach dem Wechsel 
 msgid "The server rejected the content"
 msgstr "Der Server hat den Inhalt abgelehnt"
 
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Das lokale Mailprogramm des Servers antwortet langsam: Ein SMTP- oder API-Mailer-Plugin übergibt E-Mails stattdessen an einen Anbieter."
+
 msgid "The start date must not be after the end date."
 msgstr "Das Startdatum darf nicht nach dem Enddatum liegen."
 
@@ -1966,6 +2032,9 @@ msgstr "Der Benutzername ist meist die vollständige E-Mail-Adresse. Achte auf m
 
 msgid "The webhook URL was removed: only valid https URLs are allowed."
 msgstr "Die Webhook-URL wurde entfernt: Nur gültige https-URLs sind erlaubt."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Diese E-Mails werden wieder versendet; ihr E-Mail-Typ wird wieder überwacht."
 
 msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
 msgstr "Diese E-Mail hat eine eigene Nur-Text-Fassung, die das Protokoll aber nicht speichert. Hier zu sehen: eine aus dem HTML abgeleitete Textfassung."
@@ -2156,6 +2225,9 @@ msgstr "WP-Cron ist seit %s nicht gelaufen – es läuft nur, wenn die Website b
 msgid "WP-Cron runs normally."
 msgstr "WP-Cron läuft normal."
 
+msgid "Waits %s s for the mail server"
+msgstr "Wartet %s s auf den Mailserver"
+
 msgid "Warnings"
 msgstr "Warnungen"
 
@@ -2201,8 +2273,17 @@ msgstr "Mit Hinweisen"
 msgid "WooCommerce email"
 msgstr "WooCommerce-E-Mail"
 
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Einstellungen › E-Mails"
+
 msgid "WordPress"
 msgstr "WordPress"
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress hat für diese E-Mail keine Einstellung. Mailspur kann die Benachrichtigung an Administratoren stoppen; der neue Benutzer erhält seine eigene E-Mail weiterhin."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress hat für diese E-Mail keine Einstellung. Mailspur kann die Erfolgsmeldungen automatischer Updates stoppen; Meldungen über fehlgeschlagene Updates kommen weiterhin."
 
 msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
 msgstr "WordPress versendet standardmäßig über die PHP-Funktion mail(). Auf diesem Server ist sie deaktiviert oder es ist kein Mailprogramm (sendmail) installiert – üblich bei lokalen Umgebungen, Docker und vielen Managed Hostern."
@@ -2240,6 +2321,9 @@ msgstr "Fehlerhäufungen"
 msgid "first seen %s"
 msgstr "zuerst gesehen am %s"
 
+msgid "from a new sender"
+msgstr "von einem neuen Absender"
+
 msgid "link"
 msgstr "Link"
 
@@ -2267,8 +2351,14 @@ msgstr "Zahl"
 msgid "of %s"
 msgstr "von %s"
 
+msgid "often to administrators"
+msgstr "häufig an Administratoren"
+
 msgid "same recipient"
 msgstr "gleicher Empfänger"
+
+msgid "slow to send"
+msgstr "langsam im Versand"
 
 msgid "stopped"
 msgstr "ausgeblieben"

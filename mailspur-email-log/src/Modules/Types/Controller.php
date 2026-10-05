@@ -103,6 +103,10 @@ final class Controller {
 				),
 				'cron'      => $item['cron'],
 				'cause'     => $item['cause'],
+				'toAdmins'  => $item['admin'],
+				'noise'     => $item['noise'],
+				'slow'      => $item['slow'],
+				'newSender' => $item['new_sender'],
 			);
 		}
 		$response = new WP_REST_Response(
