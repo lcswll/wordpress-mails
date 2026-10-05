@@ -14,7 +14,9 @@
 require '/wordpress/wp-load.php';
 
 use Mailspur\Modules\Delivery\Brake;
+use Mailspur\Modules\Delivery\Feedback;
 use Mailspur\Modules\Delivery\Module;
+use Mailspur\Modules\Delivery\Problems;
 use Mailspur\Modules\Delivery\SenderCheck;
 use Mailspur\Repository;
 use Mailspur\Settings;
@@ -326,6 +328,120 @@ try {
 	remove_filter( 'mailspur_environment_type', $env );
 	delete_option( 'mailspur_delivery_hint_dismissed' );
 
+	// ------------------------------------------- provider status + problem recipients.
+	delete_option( Brake::STATE_OPTION );
+	delete_option( Brake::COUNTER_OPTION );
+	delete_option( Problems::OPTION );
+	delivery_settings(
+		array(
+			'staging_mode'      => 'off',
+			'brake_mode'        => 'off',
+			'feedback_provider' => 'postmark',
+			'problem_hold'      => true,
+		)
+	);
+	$feedback_entry = static function ( $ref ) {
+		return ( new Repository() )->insert(
+			array(
+				'created_at'   => current_time( 'mysql', true ),
+				'status'       => Repository::STATUS_SENT,
+				'recipients'   => 'bounce-me@example.com',
+				'subject'      => 'Feedback test',
+				'message'      => 'Body',
+				'headers'      => '',
+				'attachments'  => '',
+				'content_type' => 'text/plain',
+				'sender'       => '',
+				'source'       => 'core',
+				'error'        => '',
+				'meta'         => wp_json_encode( array( 'feedback' => array( 'ref' => $ref ) ) ),
+				'notes'        => 0,
+				'size'         => 4,
+				'raw'          => '',
+			)
+		);
+	};
+	// Webhooks arrive without a logged-in user.
+	$webhook = static function ( $key, $payload, $provider = 'postmark' ) {
+		wp_set_current_user( 0 );
+		$request = new WP_REST_Request( 'POST', '/mailspur-email-log/v1/delivery/webhook/' . $provider . '/' . $key );
+		$request->set_header( 'content-type', 'application/json' );
+		$request->set_body( wp_json_encode( $payload ) );
+		$response = rest_ensure_response( rest_do_request( $request ) );
+		wp_set_current_user( 1 );
+		return $response;
+	};
+	$url     = Feedback::url( 'postmark' );
+	$key     = Feedback::secret();
+	delivery_check( false !== strpos( $url, '/delivery/webhook/postmark/' . $key ), 'webhook URL contains provider and secret', $url );
+
+	$first = $feedback_entry( 'aaaaaaaaaaaa0001' );
+	$res   = $webhook(
+		$key,
+		array(
+			'RecordType' => 'Delivery',
+			'MessageID'  => 'e2e-1',
+			'Recipient'  => 'bounce-me@example.com',
+			'Metadata'   => array( 'mailspur' => 'aaaaaaaaaaaa0001' ),
+		)
+	);
+	$item  = delivery_rest( 'GET', '/mails/' . $first )->get_data();
+	delivery_check( 200 === $res->get_status() && 1 === ( $res->get_data()['matched'] ?? 0 ), 'webhook: delivery accepted and matched', $res->get_data() );
+	delivery_check( 'delivered' === ( $item['meta']['feedback']['event'] ?? '' ) && 'postmark' === ( $item['meta']['feedback']['via'] ?? '' ), 'webhook: status on the log entry', $item['meta'] ?? null );
+
+	$bounce = array(
+		'RecordType' => 'Bounce',
+		'ID'         => 1,
+		'Type'       => 'HardBounce',
+		'MessageID'  => 'e2e-1',
+		'Email'      => 'bounce-me@example.com',
+		'Metadata'   => array( 'mailspur' => 'aaaaaaaaaaaa0001' ),
+	);
+	$res    = $webhook( str_repeat( 'x', 32 ), $bounce );
+	delivery_check( in_array( $res->get_status(), array( 401, 403 ), true ), 'webhook: wrong secret rejected', $res->get_status() );
+	$res = $webhook( $key, $bounce, 'mailgun' );
+	delivery_check( in_array( $res->get_status(), array( 401, 403 ), true ), 'webhook: other provider rejected', $res->get_status() );
+
+	$webhook( $key, $bounce );
+	$item = delivery_rest( 'GET', '/mails/' . $first )->get_data();
+	delivery_check( 'bounced' === ( $item['meta']['feedback']['event'] ?? '' ) && true === ( $item['meta']['feedback']['hard'] ?? null ), 'webhook: hard bounce wins over delivery', $item['meta'] ?? null );
+	delivery_check( ! Problems::is_problem( 'bounce-me@example.com' ), 'problem recipients: one hard failure is not enough' );
+	$res = $webhook( $key, $bounce );
+	delivery_check( 0 === ( $res->get_data()['matched'] ?? -1 ), 'webhook: replayed event ignored', $res->get_data() );
+
+	$second             = $feedback_entry( 'aaaaaaaaaaaa0002' );
+	$bounce['ID']       = 2;
+	$bounce['Metadata'] = array( 'mailspur' => 'aaaaaaaaaaaa0002' );
+	$webhook( $key, $bounce );
+	delivery_check( Problems::is_problem( 'bounce-me@example.com' ), 'problem recipients: listed after the second hard bounce', Problems::all() );
+	$item = delivery_rest( 'GET', '/mails/' . $second )->get_data();
+	delivery_check( array( 'bounce-me@example.com' ) === ( $item['problem_recipients'] ?? null ), 'problem recipients: marked in the dialog', $item['problem_recipients'] ?? null );
+
+	wp_mail( 'bounce-me@example.com', 'Problem hold test', 'Body' );
+	$row = delivery_last_row();
+	delivery_check( Repository::STATUS_HELD === (int) $row['status'] && Problems::HELD === ( $row['meta']['delivery']['held'] ?? '' ), 'problem recipients: further mails held', $row );
+	delivery_check( 1 === preg_match( '/^[a-f0-9]{16}$/', (string) ( $row['meta']['feedback']['ref'] ?? '' ) ), 'provider status: reference stored for new mails', $row['meta'] );
+	apply_filters( 'retrieve_password_message', 'Reset', 'key', 'user', null );
+	wp_mail( 'bounce-me@example.com', 'Problem password reset', 'Reset' );
+	delivery_check( Repository::STATUS_HELD !== (int) delivery_last_row()['status'], 'problem recipients: password reset mails still go out' );
+
+	$settings_html = delivery_call( 'mailspur_settings_sections', 'render_settings', Settings::all(), Settings::OPTION );
+	delivery_check( false !== strpos( (string) $settings_html, 'data-mailspur-allow="bounce-me@example.com"' ) && false !== strpos( (string) $settings_html, $key ), 'settings: problem list and webhook URL' );
+
+	$exporters = apply_filters( 'wp_privacy_personal_data_exporters', array() );
+	$export    = call_user_func( $exporters['mailspur-problem-recipients']['callback'], 'bounce-me@example.com', 1 );
+	delivery_check( 1 === count( $export['data'] ), 'privacy: problem recipient exported', $export );
+
+	$res = delivery_rest( 'DELETE', '/delivery/problems', array( 'email' => 'bounce-me@example.com' ) );
+	delivery_check( true === ( $res->get_data()['allowed'] ?? null ) && ! Problems::is_problem( 'bounce-me@example.com' ), 'problem recipients: allow again', $res->get_data() );
+	delivery_settings(
+		array(
+			'feedback_provider' => '',
+			'problem_hold'      => false,
+		)
+	);
+	delivery_check( in_array( $webhook( $key, $bounce )->get_status(), array( 401, 403 ), true ), 'webhook: closed when the feature is off' );
+
 	// --------------------------------------------------------------- sender check.
 	$res  = delivery_rest( 'POST', '/delivery/check', array( 'force' => true ) );
 	$data = $res->get_data();
@@ -363,6 +479,9 @@ try {
 	delete_option( Brake::STATE_OPTION );
 	delete_option( Brake::COUNTER_OPTION );
 	delete_transient( Brake::BASELINE_TRANSIENT );
+	delete_option( Problems::OPTION );
+	delete_option( Feedback::SECRET_OPTION );
+	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE option_name LIKE %s', $wpdb->options, '%' . Feedback::SEEN_PREFIX . '%' ) );
 	wp_clear_scheduled_hook( Brake::HOOK );
 	unset( $_GET['page'] );
 } catch ( Throwable $e ) {

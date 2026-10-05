@@ -9,6 +9,10 @@
  *   POST /delivery/brake/release send the next batch of mails held by the emergency brake
  *   POST /delivery/brake/discard discard all mails held by the emergency brake
  *   POST /delivery/brake/reset   end the incident ("this is fine"), held mails stay held
+ *   DELETE /delivery/problems    "Allow again": forget a problem recipient (address in the body)
+ *
+ * Public (secret in the URL, see Feedback::authorize()):
+ *   POST /delivery/webhook/{provider}/{key}  delivery status reported by the email provider
  *
  * @package Mailspur
  */
@@ -113,6 +117,46 @@ final class Controller {
 
 		register_rest_route(
 			Rest::NS,
+			'/delivery/problems',
+			array(
+				'methods'             => WP_REST_Server::DELETABLE,
+				'callback'            => array( $this, 'allow_recipient' ),
+				'permission_callback' => array( $this, 'is_admin' ),
+				'args'                => array(
+					'email' => array(
+						'type'      => 'string',
+						'maxLength' => 254,
+						'required'  => true,
+					),
+				),
+			)
+		);
+
+		$feedback = new Feedback();
+		register_rest_route(
+			Rest::NS,
+			'/delivery/webhook/(?P<provider>' . implode( '|', Feedback::PROVIDERS ) . ')/(?P<key>[A-Za-z0-9]{32})',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $feedback, 'receive' ),
+				'permission_callback' => array( $feedback, 'authorize' ),
+				'args'                => array(
+					'provider' => array(
+						'type'     => 'string',
+						'enum'     => Feedback::PROVIDERS,
+						'required' => true,
+					),
+					'key'      => array(
+						'type'     => 'string',
+						'pattern'  => '^[A-Za-z0-9]{32}$',
+						'required' => true,
+					),
+				),
+			)
+		);
+
+		register_rest_route(
+			Rest::NS,
 			'/delivery/hint',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
@@ -181,6 +225,10 @@ final class Controller {
 				$data = array( 'reset' => true );
 		}
 		return self::no_store( new WP_REST_Response( $data ) );
+	}
+
+	public function allow_recipient( WP_REST_Request $request ): WP_REST_Response {
+		return self::no_store( new WP_REST_Response( array( 'allowed' => Problems::allow( (string) $request['email'] ) ) ) );
 	}
 
 	public function dismiss_hint(): WP_REST_Response {

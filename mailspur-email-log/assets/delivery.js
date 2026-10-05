@@ -1,6 +1,7 @@
 /**
- * Mailspur – delivery module: "Send to…" / "Send now" dialog actions, staging details, sender check UI
- * and the dismissible staging suggestion. Dependency-free; text only via textContent.
+ * Mailspur – delivery module: "Send to…" / "Send now" dialog actions, staging details, provider status and
+ * problem recipients in the dialog, sender check UI, provider webhook settings and the dismissible staging
+ * suggestion. Dependency-free; text only via textContent.
  */
 ( function () {
 	'use strict';
@@ -132,15 +133,26 @@
 		const delivery = ( mail ) => ( mail && mail.meta && mail.meta.delivery ) || null;
 
 		m.registerDetail( ( dl, mail ) => {
+			const add = ( label, value, className ) => {
+				if ( value ) {
+					dl.append( node( 'dt', 'mailspur-delivery-dt', label ), node( 'dd', 'mailspur-delivery-dd' + ( className ? ' ' + className : '' ), value ) );
+				}
+			};
+			// Delivery status reported by the email provider (webhook).
+			const fb = mail && mail.meta && mail.meta.feedback;
+			if ( fb && fb.event ) {
+				const labels = { delivered: t.delivered, complaint: t.complaint, bounced: fb.hard ? t.bouncedHard : t.bouncedSoft };
+				const when = fb.at ? new Date( fb.at * 1000 ).toLocaleString( document.documentElement.lang || undefined ) : '';
+				const provider = ( cfg.providers && cfg.providers[ fb.via ] ) || fb.via || '';
+				add( t.providerStatus, fmt( t.reportedBy, labels[ fb.event ] || fb.event, provider, when ), 'mailspur-feedback is-' + fb.event );
+			}
+			if ( mail && Array.isArray( mail.problem_recipients ) && mail.problem_recipients.length ) {
+				add( t.problems, fmt( t.problemNote, mail.problem_recipients.join( ', ' ) ), 'mailspur-feedback is-bounced' );
+			}
 			const d = delivery( mail );
 			if ( ! d ) {
 				return;
 			}
-			const add = ( label, value ) => {
-				if ( value ) {
-					dl.append( node( 'dt', 'mailspur-delivery-dt', label ), node( 'dd', 'mailspur-delivery-dd', value ) );
-				}
-			};
 			const list = ( value ) => ( Array.isArray( value ) ? value.join( ', ' ) : '' );
 			add( t.originalTo, list( d.original_to ) );
 			add( t.originalCc, list( d.original_cc ) );
@@ -148,6 +160,8 @@
 			const brakeHeld = { brake: t.heldBrake, brake_released: t.brakeReleased, brake_discarded: t.brakeDiscarded };
 			if ( brakeHeld[ d.held ] ) {
 				add( t.brake, brakeHeld[ d.held ] );
+			} else if ( 'problem_recipient' === d.held ) {
+				add( t.problems, t.heldProblem );
 			} else if ( 'no_redirect_address' === d.held ) {
 				add( t.staging, t.heldNoAddress );
 			} else if ( d.held ) {
@@ -208,6 +222,55 @@
 			} );
 		}
 	}
+
+	/* ------------------------------------------ provider webhook settings */
+
+	const provider = document.getElementById( 'mailspur-feedback-provider' );
+	if ( provider ) {
+		const settings = document.getElementById( 'mailspur-feedback-settings' );
+		const url = document.getElementById( 'mailspur-feedback-url' );
+		const copy = document.getElementById( 'mailspur-feedback-copy' );
+		let urls = {};
+		try {
+			urls = JSON.parse( provider.dataset.urls || '{}' );
+		} catch ( e ) {
+			// Keep the server-rendered URL.
+		}
+		const sync = () => {
+			const value = provider.value;
+			url.value = urls[ value ] || '';
+			settings.querySelector( '[data-feedback-row="url"]' ).hidden = ! value;
+			settings.querySelector( '[data-feedback-row="mailgun"]' ).hidden = 'mailgun' !== value;
+			settings.querySelectorAll( '[data-feedback-hint]' ).forEach( ( p ) => ( p.hidden = p.dataset.feedbackHint !== value ) );
+		};
+		provider.addEventListener( 'change', sync );
+		copy.addEventListener( 'click', async () => {
+			url.select();
+			try {
+				await navigator.clipboard.writeText( url.value );
+				copy.textContent = t.copied;
+			} catch ( e ) {
+				// Clipboard blocked (insecure context): the URL stays selected for Ctrl+C.
+			}
+		} );
+	}
+
+	document.addEventListener( 'click', async ( e ) => {
+		const button = e.target.closest( '[data-mailspur-allow]' );
+		if ( ! button ) {
+			return;
+		}
+		button.disabled = true;
+		try {
+			await request( 'delivery/problems', 'DELETE', { email: button.dataset.mailspurAllow } );
+			const row = button.closest( 'tr' );
+			row.replaceChildren( node( 'td', '', button.dataset.mailspurAllow ), node( 'td', '', t.allowed ) );
+			row.lastChild.colSpan = 4;
+		} catch ( err ) {
+			button.disabled = false;
+			button.after( node( 'span', 'mailspur-delivery-hint', ' ' + fmt( t.requestFailed, err.message ) ) );
+		}
+	} );
 
 	/* ------------------------------------------------------ sender check */
 

@@ -80,6 +80,8 @@ Most email problems are not failures but emails that are never triggered: a plug
 * **Sender check:** SPF, DKIM, DMARC and MX of the domains your site sends from, with a traffic light per record and ready-to-paste record suggestions.
 * **Staging mode:** hold every email (log only) or redirect all emails to test addresses on staging and development copies – a clear warning shows while it is active, held emails can be sent one by one.
 * **Emergency brake for mail floods:** Mailspur learns your site's normal email volume and alerts you when far more emails leave than usual, e.g. because spam bots abuse a contact form. Optionally it holds further emails until you release or discard them, so your domain does not end up on blocklists. Password reset emails always go out.
+* **Problem recipients:** addresses that failed hard twice – mailbox unknown ("550 user unknown"), a domain without mail server or a hard bounce reported by your email provider – are listed under Settings with "Allow again". Optionally further emails to them are held instead of sent (off by default; password reset emails always go out).
+* **Delivery status from your email provider (opt-in):** Postmark, Mailgun, Brevo or Amazon SES can report deliveries, bounces and spam complaints to a webhook URL of your site. The logged email then shows "Delivered", "Bounced" or "Marked as spam".
 * **Send to another address**, e.g. to forward a lost order confirmation, or resend the original.
 
 = Bring your old log along =
@@ -93,13 +95,17 @@ The log contains personal data (recipients and content of emails). Mailspur:
 * deletes entries automatically after a configurable retention period (default: 90 days) and/or above a maximum number of entries – or anonymises them first, keeping only what the statistics need,
 * integrates with the WordPress personal data export and erasure tools,
 * suggests a paragraph for your privacy policy,
-* contacts no external service. The only exception is a webhook URL you enter yourself for monitoring alerts (off by default), which receives a short alert text – never email contents or recipients.
+* keeps problem recipients only until the retention period of the log ends, and includes them in the personal data export and erasure,
+* contacts no external service by default. The optional exceptions (an alert webhook you enter yourself, and the certificate and subscription requests of Amazon SNS when you choose Amazon SES as your email provider) are listed under "External services".
 
 = External services =
 
-Mailspur works without any external service. There is exactly one optional exception:
+Mailspur works without any external service. All of the following are optional and off by default:
 
 * **Alert webhook (off by default).** If you enable monitoring alerts and enter a webhook URL, your site sends a short JSON POST to exactly that URL when an alert fires (or when you click "Send test alert"): site name, site URL, the alert text, a link to the log and a timestamp – never email contents or recipient addresses. For a stopped email type the alert text names the sending plugin, the subject pattern with placeholders (e.g. "Your order #… has been received") and recently updated plugins. Where the data goes depends on the URL you enter. For Slack see the [terms](https://slack.com/terms-of-service) and [privacy policy](https://slack.com/privacy-policy), for Discord the [terms](https://discord.com/terms) and [privacy policy](https://discord.com/privacy).
+
+* **Delivery status from your email provider (off by default).** If you choose Postmark, Mailgun, Brevo or Amazon SES under Settings → "Delivery status from your email provider", that provider sends webhook requests to a URL of your site that contains a random secret key. Your site receives the recipient address, the kind of event (delivered, bounced, spam complaint) and identifiers of the email; it stores only the status on the matching log entry and, for hard bounces, the address as a problem recipient. To match the reports, outgoing emails get one additional header with a random reference (e.g. `X-PM-Metadata-mailspur`, `X-Mailgun-Variables`, `X-Mailin-custom` or `X-SES-MESSAGE-TAGS`), which your provider receives together with the email. Your site sends nothing to Postmark, Mailgun or Brevo. Postmark: [terms](https://postmarkapp.com/terms-of-service), [privacy policy](https://postmarkapp.com/privacy-policy). Mailgun: [terms](https://www.mailgun.com/legal/terms/), [privacy policy](https://www.mailgun.com/legal/privacy-policy/). Brevo: [terms](https://www.brevo.com/legal/termsofuse/), [privacy policy](https://www.brevo.com/legal/privacypolicy/).
+* **Amazon SNS (only with Amazon SES as the email provider).** Amazon SES reports through Amazon SNS. To verify each message, your site downloads the SNS signing certificate from `https://sns.<region>.amazonaws.com/` (only that host, cached for a day), and to confirm the subscription it requests the confirmation link SNS sends (again only `sns.<region>.amazonaws.com`). These requests contain no email data. Amazon Web Services: [service terms](https://aws.amazon.com/service-terms/), [privacy notice](https://aws.amazon.com/privacy/).
 
 The sender check (SPF/DKIM/DMARC/MX) and the recipient-domain check only ask your server's own DNS resolver, on demand, and contact no third-party service.
 
@@ -111,7 +117,7 @@ Remote images in a logged email are blocked in the preview. Only when you click 
 
 * WP-CLI: `wp mailspur list|show|resend|stats|purge|export|import`, `wp mailspur brake status|release|discard|reset` and `wp mailspur probe [--type=password-reset|new-user|all] [--to=<admin email>]` (triggers the core emails for an administrator's own account; exits with an error code when one fails, e.g. in deploy scripts).
 * REST: `GET /wp-json/mailspur-email-log/v1/types` lists every email type with its health.
-* Filters: `mailspur_should_log` (skip logging an email), `mailspur_redact_params` (masked URL parameters), `mailspur_import_duplicate_window` (seconds), `mailspur_note_rules` and `mailspur_note_texts` (own checks), `mailspur_staging_subject`, `mailspur_brake_exempt` (never hold an email).
+* Filters: `mailspur_should_log` (skip logging an email), `mailspur_redact_params` (masked URL parameters), `mailspur_import_duplicate_window` (seconds), `mailspur_note_rules` and `mailspur_note_texts` (own checks), `mailspur_staging_subject`, `mailspur_brake_exempt` (never hold an email, also for problem recipients).
 
 = Source code =
 
@@ -168,6 +174,14 @@ By default the .eml file is rebuilt from the logged data: secrets such as passwo
 = What does the emergency brake do? =
 
 Mailspur remembers the busiest hour of the last 14 days. If more than three times that many emails (at least 50) leave within one hour, it sends one alert through your monitoring alert channels and shows a notice with the main source. In "Alert and hold" mode, further emails are held until you release them (sent in small batches) or discard them; password reset emails and Mailspur's own alerts are never held. You can also set a fixed threshold or switch the brake off.
+
+= Can I see whether an email reached the inbox? =
+
+Only your email provider knows that. If you send through Postmark, Mailgun, Brevo or Amazon SES, choose it under Settings → "Delivery status from your email provider" and paste the webhook URL shown there into your provider's webhook settings. Reports are matched by a reference header, the Message-ID or – as a fallback – the recipient and time, and appear in the email's details. Without it, "Sent" means that your server or provider accepted the email.
+
+= What are problem recipients? =
+
+Addresses that failed hard at least twice: the receiving server rejected the mailbox (e.g. "550 user unknown"), the recipient domain has no mail server, or your email provider reported a hard bounce. Temporary errors and problems on the sender's side do not count. You find them under Settings → "Problem recipients", where each one can be allowed again. Entries expire with the retention period of the log.
 
 = How accurate is the dark-mode preview? =
 
