@@ -9,7 +9,7 @@
  */
 
 if ( ! class_exists( 'WP_User' ) ) {
-	/** User with ID, address and name. */
+	/** User with ID, address and name (also the login). */
 	class WP_User {
 		/** @var int */
 		public $ID = 0;
@@ -17,11 +17,18 @@ if ( ! class_exists( 'WP_User' ) ) {
 		public $user_email = '';
 		/** @var string */
 		public $display_name = '';
+		/** @var string */
+		public $user_login = '';
 
 		public function __construct( int $id = 0, string $email = '', string $name = '' ) {
 			$this->ID           = $id;
 			$this->user_email   = $email;
 			$this->display_name = $name;
+			$this->user_login   = $name;
+		}
+
+		public function exists(): bool {
+			return $this->ID > 0;
 		}
 	}
 }

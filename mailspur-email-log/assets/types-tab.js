@@ -1,5 +1,6 @@
 /**
- * Mailspur – "Email types" tab: the "Compare" view of a content change and "Send latest to me".
+ * Mailspur – "Email types" tab: the "Compare" view of a content change, "Send latest to me" and "Trigger to me"
+ * (probe email for core types).
  *
  * The tab itself is server-rendered and works without JavaScript; this script only reveals and drives the two
  * actions that need it. Dependency-free; mail data only via textContent / attribute setters. HTML previews use
@@ -278,11 +279,76 @@
 		} );
 	}
 
+	/* --------------------------------------------------------- trigger to me */
+
+	/** One result line per email: status, duration, notes and a link to the new log entry. */
+	function probeLine( mail ) {
+		const li = node( 'li', 'is-' + mail.status );
+		const parts = [ t.status[ mail.status ] || mail.status ];
+		if ( mail.duration ) {
+			parts.push( fmt( t.seconds, ( mail.duration / 1000 ).toFixed( 1 ) ) );
+		}
+		parts.push( fmt( t.notes, mail.notes ) );
+		li.append( node( 'span', '', parts.join( ' · ' ) ) );
+		if ( mail.error ) {
+			li.append( ' ', node( 'span', 'mst-probe-error', mail.error ) );
+		}
+		if ( mail.url ) {
+			const link = node( 'a', '', t.openLog );
+			link.href = mail.url;
+			li.append( ' ', link );
+		}
+		return li;
+	}
+
+	function confirmProbe( trigger ) {
+		const menu = trigger.closest( '.mst-menu' );
+		if ( ! menu || menu.querySelector( '.mst-confirm' ) ) {
+			return;
+		}
+		const box = node( 'div', 'mst-confirm' );
+		const status = node( 'div', 'mst-confirm-text', fmt( t.probe[ trigger.dataset.kind ] || '', cfg.email ) );
+		status.setAttribute( 'role', 'status' );
+		const run = button( 'button button-small button-primary', t.trigger );
+		const cancel = button( 'button button-small', t.cancel );
+		const actions = node( 'p', 'mst-confirm-actions' );
+		actions.append( run, ' ', cancel );
+		box.append( status, actions );
+		trigger.hidden = true;
+		menu.append( box );
+		run.focus();
+
+		cancel.addEventListener( 'click', () => {
+			box.remove();
+			trigger.hidden = false;
+			trigger.focus();
+		} );
+		run.addEventListener( 'click', async () => {
+			run.disabled = true;
+			cancel.disabled = true;
+			status.textContent = t.triggering;
+			try {
+				const res = await request( 'types/probe', 'POST', { kind: trigger.dataset.kind } );
+				const list = node( 'ul', 'mst-probe-result' );
+				res.mails.forEach( ( mail ) => list.append( probeLine( mail ) ) );
+				status.replaceChildren( list );
+				status.classList.toggle( 'is-error', res.mails.some( ( mail ) => 'sent' !== mail.status ) );
+			} catch ( err ) {
+				status.textContent = fmt( t.failed, err.message );
+				status.classList.add( 'is-error' );
+			}
+			actions.replaceChildren( cancel );
+			cancel.disabled = false;
+			cancel.textContent = t.close;
+			cancel.focus();
+		} );
+	}
+
 	/* ------------------------------------------------------------------ wire */
 
 	root.querySelectorAll( '.mst-compare' ).forEach( ( b ) => ( b.hidden = false ) );
 	if ( cfg.email ) {
-		root.querySelectorAll( '.mst-send' ).forEach( ( b ) => ( b.hidden = false ) );
+		root.querySelectorAll( '.mst-send, .mst-probe' ).forEach( ( b ) => ( b.hidden = false ) );
 	}
 	root.addEventListener( 'click', ( e ) => {
 		const cmp = e.target.closest( '.mst-compare' );
@@ -293,6 +359,11 @@
 		const send = e.target.closest( '.mst-send' );
 		if ( send ) {
 			confirmSend( send );
+			return;
+		}
+		const probe = e.target.closest( '.mst-probe' );
+		if ( probe ) {
+			confirmProbe( probe );
 		}
 	} );
 }() );

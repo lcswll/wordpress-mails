@@ -351,11 +351,31 @@
 	white-space: normal;
 }
 
-.mst-confirm p {
+.mst-confirm p,
+.mst-confirm .mst-confirm-text {
 	margin: 0 0 6px;
 }
 
 .mst-confirm .is-error {
+	color: var(--mst-failed);
+}
+
+.mst-menu-note {
+	color: var(--mst-muted);
+	font-size: 12px;
+}
+
+.mst-probe-result {
+	margin: 0;
+	list-style: none;
+}
+
+.mst-probe-result li {
+	margin: 0 0 4px;
+}
+
+.mst-probe-result .is-failed,
+.mst-probe-error {
 	color: var(--mst-failed);
 }
 

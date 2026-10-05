@@ -32,7 +32,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * **"This email type stopped":** Mailspur learns each type's rhythm from its own last 8 weeks – a daily order confirmation is overdue after 2 days, one that pauses on weekends after 4, a weekly report after 2 weeks. Overdue types are marked, and with alerts enabled you get one email or webhook message – including the plugins, themes or WordPress updates installed since the type was last sent – and another one when it is back.
 * **Content changes after updates:** when the text of a type changes – e.g. the order confirmation after a plugin update – the type is marked ("Content changed on 3 Oct, after the WooCommerce 9.4 update") and "Compare" shows the text changes and both previews side by side. Names, numbers, dates and amounts are ignored, so only real template changes count.
 * **Why a type stopped:** for emails sent by WP-Cron (reminders, renewals, reports), Mailspur names the likely cause – the cron event is no longer scheduled, WP-Cron has not run for days or the event is overdue – in the tab and in the alert.
-* **Shortcuts per type:** open the latest email of a type or send it to yourself with one click.
+* **Shortcuts per type:** open the latest email of a type or send it to yourself with one click, and jump to where its text is edited (WooCommerce email settings, the form in Contact Form 7, WPForms, Gravity Forms or Fluent Forms, or the plugin's settings page). For WordPress password reset and new user emails, "Trigger to me" has WordPress generate the email for your own account and send it only to you, then shows whether it was sent, how long it took and the notes found.
 * **Built for privacy and speed:** sorting happens afterwards (hourly and when you open the tab), never while an email is sent. Only counters and subject patterns are stored – never recipients or contents – and they follow the retention period of the log. Types you do not care about can be ignored.
 
 = Find any email in seconds =
@@ -104,7 +104,7 @@ Remote images in a logged email are blocked in the preview. Only when you click 
 
 = For developers =
 
-* WP-CLI: `wp mailspur list|show|resend|stats|purge|export|import` and `wp mailspur brake status|release|discard|reset`.
+* WP-CLI: `wp mailspur list|show|resend|stats|purge|export|import`, `wp mailspur brake status|release|discard|reset` and `wp mailspur probe [--type=password-reset|new-user|all] [--to=<admin email>]` (triggers the core emails for an administrator's own account; exits with an error code when one fails, e.g. in deploy scripts).
 * REST: `GET /wp-json/mailspur-email-log/v1/types` lists every email type with its health.
 * Filters: `mailspur_should_log` (skip logging an email), `mailspur_redact_params` (masked URL parameters), `mailspur_import_duplicate_window` (seconds), `mailspur_note_rules` and `mailspur_note_texts` (own checks), `mailspur_staging_subject`, `mailspur_brake_exempt` (never hold an email).
 
