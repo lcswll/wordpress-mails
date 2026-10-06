@@ -171,6 +171,12 @@ final class Catalog {
 				'text'  => __( 'Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse.', 'mailspur-email-log' ),
 				'fix'   => __( 'Link to the full address directly. For click tracking, use UTM parameters on your own domain instead.', 'mailspur-email-log' ),
 			),
+			'no_reply_to'          => array(
+				/* translators: %s: sender address, e.g. "noreply@example.com" */
+				'title' => __( 'Replies cannot reach you: sent from %1$s without Reply-To', 'mailspur-email-log' ),
+				'text'  => __( 'The email comes from a no-reply address and has no Reply-To header. When a customer clicks "Reply", the answer goes to an address nobody reads, or it bounces.', 'mailspur-email-log' ),
+				'fix'   => __( 'Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies.', 'mailspur-email-log' ),
+			),
 			'dead_link'            => array(
 				/* translators: %s: path of the link, e.g. "/old-page/" */
 				'title' => __( 'Link to a page that does not exist on your site: %1$s', 'mailspur-email-log' ),

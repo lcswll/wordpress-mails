@@ -11,6 +11,7 @@ use Brain\Monkey\Filters;
 use Brain\Monkey\Functions;
 use Mailspur\Modules\Notes\Catalog;
 use Mailspur\Modules\Notes\Dynamic;
+use Mailspur\Modules\Notes\Engine;
 use Mailspur\Modules\Notes\Module;
 use Mailspur\Repository;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -30,6 +31,7 @@ final class NotesModuleTest extends TestCase {
 		parent::setUp();
 		Functions\stubTranslationFunctions();
 		Catalog::reset();
+		Engine::reset();
 		$this->transients = array();
 
 		Functions\stubs(
@@ -192,6 +194,31 @@ final class NotesModuleTest extends TestCase {
 		$this->settings = array( 'notes_enabled' => false );
 		$data           = $this->module->finalize_row( array( 'meta' => array( Module::SECRETS_META => $secrets ) ), $row );
 		$this->assertSame( array( 'meta' => array() ), $data );
+	}
+
+	public function test_reply_to_set_on_phpmailer_silences_the_no_reply_note_and_is_not_stored(): void {
+		$mailer = new PHPMailer();
+		$this->assertSame( array( 'a' => 1 ), $this->module->meta( array( 'a' => 1 ), 'phpmailer', $mailer ) );
+
+		$mailer->addReplyTo( 'help@example.de' );
+		$meta = $this->module->meta( array( 'a' => 1 ), 'phpmailer', $mailer );
+		$this->assertTrue( $meta[ Module::REPLY_TO_META ] );
+
+		$row  = $this->row(
+			array(
+				'recipients' => 'anna@gmail.com',
+				'subject'    => 'Your order',
+				'sender'     => 'noreply@example.de',
+			)
+		);
+		$data = $this->module->finalize_row( array( 'meta' => $meta ), array_merge( $row, array( 'meta' => $meta ) ) );
+		$this->assertSame( 0, $data['notes'] );
+		$this->assertSame( array( 'a' => 1 ), $data['meta'] );
+
+		Functions\when( 'get_current_blog_id' )->justReturn( 1 );
+		Functions\when( 'get_users' )->justReturn( array() );
+		$data = $this->module->finalize_row( array( 'meta' => array() ), $row );
+		$this->assertSame( 'no_reply_to', $data['meta']['notes'][0]['code'] );
 	}
 
 	public function test_finalize_row_leaves_unexpected_input_alone(): void {

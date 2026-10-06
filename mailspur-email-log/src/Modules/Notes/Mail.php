@@ -53,7 +53,7 @@ final class Mail {
 	/** @var string Source, e.g. "plugin:woocommerce" or "import:wp-mail-logging". */
 	public $source;
 
-	/** @var array{home:string,environment:string,multisite:bool} Site context (no I/O to compute). */
+	/** @var array{home:string,environment:string,multisite:bool,admins?:string[]} Site context (no I/O to compute; admins see admins()). */
 	public $site;
 
 	/**
@@ -63,9 +63,12 @@ final class Mail {
 	 */
 	public $secrets = array();
 
+	/** @var bool A Reply-To was set: as a header, or by a plugin on PHPMailer (see Module::meta()). */
+	public $reply_to;
+
 	/**
 	 * @param array<string,mixed>                                     $row  Log row (message, subject, recipients, headers, content_type, sender, source).
-	 * @param array{home:string,environment:string,multisite:bool} $site Lower-cased home host, wp_get_environment_type(), is_multisite().
+	 * @param array{home:string,environment:string,multisite:bool,admins?:string[]} $site Lower-cased home host, wp_get_environment_type(), is_multisite(), optionally the administrators' addresses.
 	 */
 	public function __construct( array $row, array $site ) {
 		$message    = (string) ( $row['message'] ?? '' );
@@ -113,7 +116,12 @@ final class Mail {
 		$from       = self::emails( $sender );
 		$this->from = $from ? $from[0] : '';
 
+		$this->reply_to = '' !== trim( $this->headers['reply-to'] ?? '' );
+
 		$meta = $row['meta'] ?? null;
+		if ( is_array( $meta ) && ! empty( $meta[ Module::REPLY_TO_META ] ) ) {
+			$this->reply_to = true;
+		}
 		if ( is_array( $meta ) && isset( $meta[ Module::SECRETS_META ] ) && is_array( $meta[ Module::SECRETS_META ] ) ) {
 			foreach ( $meta[ Module::SECRETS_META ] as $secret ) {
 				if ( is_array( $secret ) && isset( $secret['kind'] ) && is_string( $secret['kind'] ) ) {
@@ -137,6 +145,18 @@ final class Mail {
 	public static function domain( string $email ): string {
 		$at = strrpos( $email, '@' );
 		return false === $at ? '' : rtrim( strtolower( substr( $email, $at + 1 ) ), '.' );
+	}
+
+	/**
+	 * Lower-cased addresses of the site's administrators: from the site context, otherwise looked up once.
+	 *
+	 * @return string[]
+	 */
+	public function admins(): array {
+		if ( ! isset( $this->site['admins'] ) ) {
+			$this->site['admins'] = Engine::admins();
+		}
+		return $this->site['admins'];
 	}
 
 	/**

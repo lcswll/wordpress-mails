@@ -182,6 +182,35 @@ try {
 	$codes = notes_codes( notes_row( $s13 ) );
 	notes_check( ! in_array( 'open_recipients', $codes, true ), 'own domain and Bcc recipients are no open distribution list', $codes );
 
+	// ------------------------------------------------- no-reply sender without Reply-To.
+	$s14 = "$notes_prefix: no reply";
+	wp_mail( 'ida@gmail.com', $s14, 'Your order', array( 'From: Shop <noreply@example.com>' ) );
+	$codes = notes_codes( notes_row( $s14 ) );
+	notes_check( in_array( 'no_reply_to', $codes, true ), 'no-reply sender without Reply-To is noted', $codes );
+
+	$s15 = "$notes_prefix: no reply with Reply-To";
+	wp_mail( 'ida@gmail.com', $s15, 'Your order', array( 'From: Shop <do-not-reply@example.com>', 'Reply-To: Shop <help@example.com>' ) );
+	$codes = notes_codes( notes_row( $s15 ) );
+	notes_check( ! in_array( 'no_reply_to', $codes, true ), 'Reply-To header: no note', $codes );
+
+	$reply_to = static function ( $mailer ) {
+		$mailer->addReplyTo( 'help@example.com' );
+	};
+	// Through PHPMailer this time (no API mailer), so phpmailer_init runs; the result of sending does not matter.
+	remove_filter( 'pre_wp_mail', '__return_true' );
+	add_action( 'phpmailer_init', $reply_to );
+	$s16 = "$notes_prefix: no reply with Reply-To by a plugin";
+	wp_mail( 'ida@gmail.com', $s16, 'Your order', array( 'From: Shop <noreply@example.com>' ) );
+	remove_action( 'phpmailer_init', $reply_to );
+	add_filter( 'pre_wp_mail', '__return_true' );
+	$row16 = notes_row( $s16 );
+	notes_check( ! in_array( 'no_reply_to', notes_codes( $row16 ), true ) && false === strpos( (string) $row16['meta'], 'notes_reply_to' ), 'Reply-To set on PHPMailer: no note and no helper key', $row16['meta'] );
+
+	$s17 = "$notes_prefix: no reply to the admin";
+	wp_mail( get_option( 'admin_email' ), $s17, 'New order', array( 'From: Shop <noreply@example.com>' ) );
+	$codes = notes_codes( notes_row( $s17 ) );
+	notes_check( ! in_array( 'no_reply_to', $codes, true ), 'emails to administrators only: no note', $codes );
+
 	// ------------------------------------------------- dead links to the own site.
 	$page_id = wp_insert_post(
 		array(

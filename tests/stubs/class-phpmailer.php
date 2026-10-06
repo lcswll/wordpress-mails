@@ -38,6 +38,19 @@ class PHPMailer {
 		return $this->custom_headers;
 	}
 
+	/** @var array<string,array{0:string,1:string}> */
+	private $reply_to = array();
+
+	public function addReplyTo( string $address, string $name = '' ): bool {
+		$this->reply_to[ strtolower( $address ) ] = array( $address, $name );
+		return true;
+	}
+
+	/** @return array<string,array{0:string,1:string}> */
+	public function getReplyToAddresses(): array {
+		return $this->reply_to;
+	}
+
 	public function getLastMessageID(): string {
 		return $this->last_message_id;
 	}

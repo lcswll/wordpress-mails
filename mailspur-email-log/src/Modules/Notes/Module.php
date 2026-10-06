@@ -30,6 +30,12 @@ final class Module implements \Mailspur\Module {
 	const SECRETS_META = 'notes_secrets';
 
 	/**
+	 * Meta flag: a plugin set a Reply-To on PHPMailer (e.g. an SMTP plugin's "Reply-To" setting), which the logged
+	 * headers do not show. Read by Mail, removed again in finalize_row().
+	 */
+	const REPLY_TO_META = 'notes_reply_to';
+
+	/**
 	 * The module reads the log table only for its two lookups (list severities, repeated sending)
 	 * that the Repository has no method for; it does not need the instance.
 	 */
@@ -113,7 +119,7 @@ final class Module implements \Mailspur\Module {
 	}
 
 	/**
-	 * Filter mailspur_meta: looks for secrets in the mail as sent – the wp_mail() message, the body
+	 * Filter mailspur_meta: notes a Reply-To set on PHPMailer, and looks for secrets in the mail as sent – the wp_mail() message, the body
 	 * PHPMailer sends, an imported message – because the stored body has them masked already.
 	 * Only kinds and masked hints are kept; finalize_row() turns them into notes and drops the key.
 	 *
@@ -123,7 +129,13 @@ final class Module implements \Mailspur\Module {
 	 * @return mixed
 	 */
 	public function meta( $meta, $phase = '', $context = null ) {
-		if ( ! is_array( $meta ) || ! Settings::get( 'redact_secrets' ) || ! Engine::enabled() ) {
+		if ( ! is_array( $meta ) || ! Engine::enabled() ) {
+			return $meta;
+		}
+		if ( 'phpmailer' === $phase && $context instanceof \PHPMailer\PHPMailer\PHPMailer && $context->getReplyToAddresses() ) {
+			$meta[ self::REPLY_TO_META ] = true;
+		}
+		if ( ! Settings::get( 'redact_secrets' ) ) {
 			return $meta;
 		}
 		try {
@@ -162,7 +174,7 @@ final class Module implements \Mailspur\Module {
 		if ( ! is_array( $data ) || ! is_array( $row ) || ! isset( $data['meta'] ) || ! is_array( $data['meta'] ) ) {
 			return $data;
 		}
-		unset( $data['meta'][ self::SECRETS_META ] );
+		unset( $data['meta'][ self::SECRETS_META ], $data['meta'][ self::REPLY_TO_META ] );
 		if ( ! Engine::enabled() ) {
 			return $data;
 		}

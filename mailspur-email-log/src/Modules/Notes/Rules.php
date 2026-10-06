@@ -1,7 +1,8 @@
 <?php
 /**
  * Built-in static rules. They run while a mail is logged (and for imported mails), so they are pure:
- * no network, no database, only string checks on the (capped) mail – keep every rule cheap.
+ * no network, no database, only string checks on the (capped) mail – keep every rule cheap. The one exception is
+ * Mail::admins(), a lookup cached per request that no_reply_to() only asks for as its last step.
  *
  * A rule is any callable( Mail $mail ): array returning zero or more notes created with Rules::note().
  * Add your own via the mailspur_note_rules filter (see Engine::rules()).
@@ -49,6 +50,10 @@ final class Rules {
 	const IMAGE_ONLY_LETTERS = 40;
 
 	/** Public URL shorteners: they hide the link target, so spam filters distrust them. */
+	/** Local parts of sender addresses that do not accept replies (noreply, no-reply, do_not_reply, mailer-daemon …). */
+	const NO_REPLY = '/^(?:no|do[-_.]?not|dont)[-_.]?reply(?:[-_.+].*)?$|^mailer[-_.]?daemon$/';
+
+	/** Public URL shorteners: they hide the link target, so spam filters distrust them. */
 	const SHORTENERS = array( 'bit.ly', 'tinyurl.com', 't.co', 'goo.gl', 'ow.ly', 'is.gd', 'buff.ly', 'rebrand.ly', 'cutt.ly', 'shorturl.at', 'tiny.cc', 'rb.gy', 't.ly', 'v.gd', 'bl.ink', 'lnkd.in', 's.id' );
 
 	/**
@@ -73,6 +78,7 @@ final class Rules {
 			'secrets'          => array( self::class, 'secrets' ),
 			'open_recipients'  => array( self::class, 'open_recipients' ),
 			'spam_signs'       => array( self::class, 'spam_signs' ),
+			'no_reply_to'      => array( self::class, 'no_reply_to' ),
 		);
 	}
 
@@ -445,6 +451,23 @@ final class Rules {
 			$notes[] = self::note( 'link_shortener', self::INFO, array( strtolower( $short[1] ) ) );
 		}
 		return $notes;
+	}
+
+	/**
+	 * Sent from a no-reply address without Reply-To: a customer's answer goes nowhere. Emails that only reach the
+	 * site's administrators and Mailspur's own emails do not count. The administrators are looked up (once per
+	 * request) only when everything else points to a note.
+	 *
+	 * @return array<int,array{code:string,severity:string,params:array<int,string>}>
+	 */
+	public static function no_reply_to( Mail $mail ): array {
+		$at = strrpos( $mail->from, '@' );
+		if ( $mail->reply_to || false === $at || ! $mail->to || 0 === strpos( $mail->source, 'mailspur:' )
+			|| ! preg_match( self::NO_REPLY, substr( $mail->from, 0, $at ) ) ) {
+			return array();
+		}
+		$outside = array_diff( array_merge( $mail->to, $mail->copies ), $mail->admins() );
+		return $outside ? array( self::note( 'no_reply_to', self::INFO, array( $mail->from ) ) ) : array();
 	}
 
 	/** Host without "www." and port, lower-cased. */

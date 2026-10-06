@@ -32,6 +32,9 @@ msgstr "%1$s Einträge, %2$s"
 msgid "%1$s imported, %2$s duplicates, %3$s too old"
 msgstr "%1$s importiert, %2$s Duplikate, %3$s zu alt"
 
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "%1$s von %2$s E-Mails der letzten %3$s Tage konnten nicht versendet werden."
+
 msgid "%1$s of %2$s entries processed …"
 msgstr "%1$s von %2$s Einträgen verarbeitet …"
 
@@ -68,8 +71,14 @@ msgstr "%s (Theme)"
 msgid "%s ago"
 msgstr "vor %s"
 
+msgid "%s days"
+msgstr "%s Tage"
+
 msgid "%s emails are held by the emergency brake."
 msgstr "%s E-Mails werden von der Versand-Notbremse zurückgehalten."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s E-Mails warten und wurden nicht zugestellt."
 
 msgid "%s entries"
 msgstr "%s Einträge"
@@ -85,6 +94,9 @@ msgstr "%s importierte Einträge entfernt."
 
 msgid "%s in 30 days"
 msgstr "%s in 30 Tagen"
+
+msgid "%s more on the Email types page."
+msgstr "%s weitere auf der Seite „E-Mail-Typen“."
 
 msgid "%s notes"
 msgstr "%s Hinweise"
@@ -223,6 +235,9 @@ msgstr "Alle E-Mail-Typen sehen gesund aus."
 
 msgid "All emails are redirected to test addresses."
 msgstr "Alle E-Mails werden an Testadressen umgeleitet."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Alle E-Mails gehen an Testadressen statt an die echten Empfänger."
 
 msgid "All sources"
 msgstr "Alle Quellen"
@@ -635,6 +650,9 @@ msgstr "E-Mail besteht fast nur aus Bildern"
 msgid "Email failure spike"
 msgstr "Häufung fehlgeschlagener E-Mails"
 
+msgid "Email failures"
+msgstr "Fehlgeschlagene E-Mails"
+
 msgid "Email failures resolved"
 msgstr "E-Mail-Fehler behoben"
 
@@ -695,6 +713,9 @@ msgstr "E-Mails"
 msgid "Emails are being logged again."
 msgstr "Es werden wieder E-Mails protokolliert."
 
+msgid "Emails are delivered to their recipients."
+msgstr "E-Mails werden an ihre Empfänger zugestellt."
+
 msgid "Emails are flowing again"
 msgstr "E-Mails werden wieder gesendet"
 
@@ -722,6 +743,9 @@ msgstr "E-Mails pro Wochentag und Stunde (Zeitzone der Website)."
 msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
 msgstr "E-Mails, die bereits im Protokoll stehen – von Mailspur selbst protokolliert oder aus einem anderen Plugin importiert –, werden an Empfängern, Betreff und Versandzeit erkannt und als Duplikat übersprungen."
 
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Regelmäßig versendete E-Mails sind ausgeblieben (%s)"
+
 msgid "Emails to this user"
 msgstr "E-Mails an diesen Benutzer"
 
@@ -739,6 +763,9 @@ msgstr "Versand-Notbremse"
 
 msgid "Emergency brake reset."
 msgstr "Versand-Notbremse zurückgesetzt."
+
+msgid "Emergency brake settings"
+msgstr "Einstellungen der Versand-Notbremse"
 
 msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
 msgstr "Versand-Notbremse: %1$s E-Mails in der letzten Stunde – weit mehr als üblich (Schwelle: %2$s pro Stunde)."
@@ -841,6 +868,12 @@ msgstr "Fehlerquote"
 
 msgid "Failure spike"
 msgstr "Fehlerhäufung"
+
+msgid "Far more emails than usual were sent"
+msgstr "Es wurden weit mehr E-Mails als üblich versendet"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Es wurden weit mehr E-Mails als üblich versendet, deshalb hält Mailspur weitere E-Mails zurück, bis du sie freigibst oder verwirfst."
 
 msgid "Fewer"
 msgstr "Weniger"
@@ -1145,6 +1178,12 @@ msgstr "Protokolleintrag nicht gefunden."
 msgid "Log only – do not send any email"
 msgstr "Nur protokollieren – keine E-Mail senden"
 
+msgid "Log size"
+msgstr "Größe des Logs"
+
+msgid "Logged emails"
+msgstr "Protokollierte E-Mails"
+
 msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
 msgstr "Protokollierte E-Mails können personenbezogene Daten enthalten. Vergib den Zugriff so eng wie möglich. Die Einstellungen erfordern immer Administratorrechte."
 
@@ -1169,6 +1208,9 @@ msgstr "Mail-Log-Bereiche"
 msgid "Mail servers for replies and bounces are set up."
 msgstr "Mailserver für Antworten und Bounces sind eingerichtet."
 
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "E-Mail-Anbieter können prüfen, dass deine Website E-Mails für diese Domain versenden darf. Die vollständige Absenderprüfung schaut auch auf DKIM."
+
 msgid "Mailbox unknown or unavailable"
 msgstr "Postfach unbekannt oder nicht verfügbar"
 
@@ -1181,11 +1223,17 @@ msgstr "Mailgun signiert jeden Webhook mit diesem Schlüssel (Sending → Webhoo
 msgid "Mailspur alerts"
 msgstr "Mailspur-Benachrichtigungen"
 
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur prüft das Log auf E-Mails, die nicht versendet werden konnten."
+
 msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
 msgstr "Mailspur hat auf dieser Website bisher %s zugestellte E-Mails protokolliert. Wenn es dir Zeit spart, würde mir eine kurze Bewertung auf WordPress.org viel bedeuten – sie hilft anderen, das Plugin zu finden, und hält es kostenlos."
 
 msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
 msgstr "Mailspur wird von %1$s entwickelt. Gefällt es dir? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur lernt, wie oft jede Art von E-Mail versendet wird, z. B. Bestellbestätigungen, und meldet sich hier, wenn eine ausbleibt."
 
 msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
 msgstr "Mailspur lernt den Rhythmus jedes E-Mail-Typs aus den letzten 8 Wochen – eine tägliche Bestellbestätigung ist nach 2 Tagen überfällig, ein wöchentlicher Bericht nach 2 Wochen. Die Benachrichtigung nennt den Typ, seinen Absender und die seit seiner letzten E-Mail aktualisierten Plugins. Nutzt die Kanäle oben; ignorierte Typen lösen nie aus."
@@ -1213,6 +1261,9 @@ msgstr "Stell sicher, dass die E-Mail mit „charset=UTF-8“ gesendet wird, Tem
 
 msgid "Make sure the encryption setting matches the port."
 msgstr "Stell sicher, dass die Verschlüsselung zum Port passt."
+
+msgid "Many emails could not be sent recently"
+msgstr "Viele E-Mails konnten zuletzt nicht versendet werden"
 
 msgid "Many exclamation marks in the subject (%1$s)"
 msgstr "Viele Ausrufezeichen im Betreff (%1$s)"
@@ -1280,6 +1331,9 @@ msgstr "Prüfen"
 msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
 msgstr "Weder ein From-Header noch ein Absender wurde erfasst. Der Mailer nutzt seine Voreinstellung, oft wordpress@deinedomain."
 
+msgid "Never"
+msgstr "Nie"
+
 msgid "New"
 msgstr "Neu"
 
@@ -1307,6 +1361,9 @@ msgstr "Nächste Seite"
 msgid "No DKIM key found under the common selectors."
 msgstr "Unter den gängigen Selektoren wurde kein DKIM-Schlüssel gefunden."
 
+msgid "No DMARC record for the sender domain %s"
+msgstr "Kein DMARC-Eintrag für die Absenderdomain %s"
+
 msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
 msgstr "Kein DMARC-Eintrag gefunden. Große Postfach-Anbieter erwarten einen, und ohne ihn kann jeder diese Domain unbemerkt fälschen."
 
@@ -1315,6 +1372,12 @@ msgstr "Kein MX-Eintrag: Diese Domain kann keine Antworten oder Bounces empfange
 
 msgid "No SMTP transcript for this email."
 msgstr "Für diese E-Mail gibt es kein SMTP-Protokoll."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Kein SPF- und kein DMARC-Eintrag für die Absenderdomain %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Kein SPF-Eintrag für die Absenderdomain %s"
 
 msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
 msgstr "Kein SPF-Eintrag gefunden. Empfänger können nicht erkennen, welche Server für diese Domain senden dürfen."
@@ -1358,6 +1421,9 @@ msgstr "Keine E-Mails an diesen Benutzer im Protokoll."
 msgid "No emails were logged in the last two weeks."
 msgstr "In den letzten zwei Wochen wurden keine E-Mails protokolliert."
 
+msgid "No limit"
+msgstr "Keine Begrenzung"
+
 msgid "No log of another mail logging plugin was found on this site."
 msgstr "Auf dieser Website wurde kein Protokoll eines anderen Mail-Log-Plugins gefunden."
 
@@ -1373,6 +1439,12 @@ msgstr "Keine Probleme in dieser E-Mail gefunden."
 msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
 msgstr "Keine öffentliche Absender-Domain gefunden (die Website-Adresse ist kein Domainname und das Protokoll enthält noch keine Absender)."
 
+msgid "No public sender domain to check"
+msgstr "Keine öffentliche Absenderdomain zu prüfen"
+
+msgid "No regularly sent email has stopped"
+msgstr "Keine regelmäßig versendete E-Mail ist ausgeblieben"
+
 msgid "No report address (rua) – you will not see who sends in your name."
 msgstr "Keine Berichtsadresse (rua) – du siehst nicht, wer in deinem Namen sendet."
 
@@ -1381,6 +1453,9 @@ msgstr "Keine Absenderadresse erfasst"
 
 msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
 msgstr "Für diesen Eintrag ist keine Spur vorhanden. Er wurde protokolliert, bevor es die Spur gab, oder von einer Version ohne sie."
+
+msgid "No unusual email failures"
+msgstr "Keine ungewöhnlichen E-Mail-Fehler"
 
 msgid "None"
 msgstr "Keine"
@@ -1399,6 +1474,9 @@ msgstr "Nicht aufgezeichnet: Das SMTP-Protokoll ist in den Einstellungen ausgesc
 
 msgid "Not recorded: this email was not sent via SMTP."
 msgstr "Nicht aufgezeichnet: Diese E-Mail wurde nicht per SMTP verschickt."
+
+msgid "Not set up"
+msgstr "Nicht eingerichtet"
 
 msgid "Not stored: transcripts are only kept for failed emails."
 msgstr "Nicht gespeichert: Protokolle werden nur für fehlgeschlagene E-Mails behalten."
@@ -1468,6 +1546,9 @@ msgstr "Neueste öffnen"
 
 msgid "Open the email types"
 msgstr "E-Mail-Typen öffnen"
+
+msgid "Open the log"
+msgstr "Log öffnen"
 
 msgid "Open the log or debug view of your mailer plugin for the exact error."
 msgstr "Öffne das Protokoll oder die Debug-Ansicht deines Mailer-Plugins, um den genauen Fehler zu sehen."
@@ -1679,6 +1760,9 @@ msgstr "Alle E-Mails an die folgenden Adressen umleiten"
 msgid "Redirect to"
 msgstr "Umleiten an"
 
+msgid "Redirect to test addresses"
+msgstr "An Testadressen umleiten"
+
 msgid "Redirected by staging mode."
 msgstr "Vom Staging-Modus umgeleitet."
 
@@ -1726,6 +1810,9 @@ msgstr "Entfernt:"
 
 msgid "Repeat alerts after"
 msgstr "Benachrichtigung wiederholen nach"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Antworten erreichen dich nicht: gesendet von %1$s ohne Reply-To"
 
 msgid "Request"
 msgstr "Anfrage"
@@ -1783,6 +1870,9 @@ msgstr "Rhythmus"
 
 msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
 msgstr "Führe ein Suchen & Ersetzen der alten Domain in der Datenbank aus und prüfe fest eingetragene URLs in E-Mail-Templates und Plugin-Einstellungen."
+
+msgid "Run the full sender check"
+msgstr "Vollständige Absenderprüfung starten"
 
 msgid "SMTP AUTH is disabled in Microsoft 365"
 msgstr "SMTP AUTH ist in Microsoft 365 deaktiviert"
@@ -1910,6 +2000,9 @@ msgstr "Absenderprüfung (SPF, DKIM, DMARC)"
 msgid "Sender domain %1$s differs from the site (%2$s)"
 msgstr "Absenderdomain %1$s weicht von der Website ab (%2$s)"
 
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Absenderdomain (SPF und DMARC)"
+
 msgid "Sender domain or address not verified"
 msgstr "Absenderdomain oder -adresse nicht verifiziert"
 
@@ -1973,6 +2066,9 @@ msgstr "An %s gesendet."
 msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
 msgstr "An dieselbe Adresse um das Bestelldatum herum gesendet, aber nicht mit dieser Bestellung verknüpft (zum Beispiel protokolliert, bevor es die Verknüpfung gab, oder importiert)."
 
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Lege eine Reply-To-Adresse fest, die jemand liest, z. B. unter WooCommerce → Einstellungen → E-Mails oder in den E-Mail-Einstellungen deines Formular-Plugins. Oder sende von einer Adresse, die Antworten empfangen kann."
+
 msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
 msgstr "Lege in deinem SMTP-Plugin oder über den Filter wp_mail_from eine Absenderadresse deiner Domain fest."
 
@@ -2018,11 +2114,17 @@ msgstr "Anzeigen als"
 msgid "Show data as table"
 msgstr "Daten als Tabelle anzeigen"
 
+msgid "Show email types"
+msgstr "E-Mail-Typen anzeigen"
+
 msgid "Show emails"
 msgstr "E-Mails anzeigen"
 
 msgid "Show emails for %s in the log"
 msgstr "E-Mails für %s im Protokoll anzeigen"
+
+msgid "Show failed emails"
+msgstr "Fehlgeschlagene E-Mails anzeigen"
 
 msgid "Silence"
 msgstr "Stille"
@@ -2035,6 +2137,12 @@ msgstr "Simulation von Apps, die den Dunkelmodus durch Umkehren der Farben erzwi
 
 msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
 msgstr "Seit 2024 verlangen Gmail und Yahoo für Massen-E-Mails eine Ein-Klick-Abmeldung (Header List-Unsubscribe). Ohne sie werden Newsletter eher abgelehnt oder aussortiert."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Einzelne Fehler, z. B. wegen einer vertippten Adresse, sind normal."
+
+msgid "Some emails could not be sent recently"
+msgstr "Einige E-Mails konnten zuletzt nicht versendet werden"
 
 msgid "Some lookups were skipped because DNS answered too slowly."
 msgstr "Einige Abfragen wurden übersprungen, weil DNS zu langsam geantwortet hat."
@@ -2065,6 +2173,18 @@ msgstr "Der Staging-Modus ist aktiv: E-Mails werden protokolliert, aber nicht zu
 
 msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
 msgstr "Der Staging-Modus ist aktiv: E-Mails sollen umgeleitet werden, aber es ist keine gültige Umleitungsadresse eingetragen – alle E-Mails werden zurückgehalten und nicht zugestellt."
+
+msgid "Staging mode is off"
+msgstr "Der Staging-Modus ist aus"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Der Staging-Modus ist an, obwohl dies eine Live-Website ist"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Der Staging-Modus ist für diese Staging-Website an"
+
+msgid "Staging mode settings"
+msgstr "Einstellungen des Staging-Modus"
 
 msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
 msgstr "Beginne mit p=none, um Berichte zu erhalten, und verschärfe auf quarantine oder reject, sobald SPF und DKIM bestehen."
@@ -2135,8 +2255,14 @@ msgstr "Aus dem HTML abgeleitete Textfassung. Ob die E-Mail auch eine eigene Nur
 msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
 msgstr "Das ist in Ordnung, wenn dein Mailserver für diese Domain senden darf. Sonst schlagen SPF und DMARC fehl und die E-Mail landet im Spam."
 
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Das ist für eine Testkopie richtig, aber auf einer Live-Website erhalten Kunden keine Bestellbestätigungen, Passwort-Links oder Antworten auf ihre Formulare. Schalte den Staging-Modus aus, wenn dies die Live-Website ist."
+
 msgid "The API key was rejected"
 msgstr "Der API-Schlüssel wurde abgelehnt"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "Die DNS-Abfrage ist fehlgeschlagen oder hat zu lange gedauert. Starte die Absenderprüfung später noch einmal."
 
 msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
 msgstr "Die HTML-E-Mail enthält Bilder, aber kaum Text. Spamfilter können Bilder nicht lesen und misstrauen solchen E-Mails, was die Zustellung verschlechtern kann. Blockiert das Mailprogramm Bilder, sieht der Leser eine fast leere E-Mail."
@@ -2165,6 +2291,9 @@ msgstr "Der Inhalt enthält HTML-Tags, die E-Mail wurde aber als text/plain gese
 msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
 msgstr "Verbindung oder Übertragung hat zu lange gedauert. Meist verwirft eine Firewall die Verbindung stillschweigend, oder Host und Port sind falsch."
 
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Die Standard-Absenderadresse hat keine öffentliche Domain, oder dieser Server kann keine DNS-Einträge abfragen."
+
 msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
 msgstr "Die Domain hat im DNS weder einen MX- noch einen A-Eintrag. E-Mails dorthin kommen zurück. Meist ist die Adresse falsch geschrieben oder die Domain existiert nicht mehr."
 
@@ -2173,6 +2302,9 @@ msgstr "Die Domain veröffentlicht einen „Null-MX“-Eintrag und erklärt dami
 
 msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
 msgstr "Die E-Mail-API antwortet langsam: Prüfe die Region oder den Endpunkt in deinem Mailer-Plugin."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "Die E-Mail kommt von einer No-Reply-Adresse und hat keinen Reply-To-Header. Klickt ein Kunde auf „Antworten“, geht die Antwort an eine Adresse, die niemand liest, oder sie kommt zurück."
 
 msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
 msgstr "Die E-Mail enthält ein Passwort in lesbarer Form. E-Mails liegen jahrelang in Postfächern, Backups und weitergeleiteten Verläufen – wer eine davon in die Hände bekommt, kann sich anmelden. Auch das E-Mail-Log speichert es, außer „Geheimnisse schwärzen“ ist aktiv (dann behält das Log eine maskierte Kopie, der Empfänger hat das Passwort aber trotzdem erhalten)."
@@ -2222,8 +2354,26 @@ msgstr "Die E-Mail „%1$s“ wurde am %3$s um %4$s an %2$s gesendet und vom Mai
 msgid "The emergency brake holds outgoing emails until you release or discard them."
 msgstr "Die Versand-Notbremse hält ausgehende E-Mails zurück, bis du sie freigibst oder verwirfst."
 
+msgid "The emergency brake is holding emails"
+msgstr "Die Versand-Notbremse hält E-Mails zurück"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Die Versand-Notbremse hält keine E-Mails zurück"
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Die Versand-Notbremse hat ungewöhnlich viele E-Mails innerhalb einer Stunde bemerkt. Möglicherweise wird ein Kontaktformular missbraucht. E-Mails werden weiterhin versendet."
+
 msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
 msgstr "Der exakte Rohquelltext ist gespeichert – „.eml herunterladen“ liefert ihn unverändert (nicht geschwärzt)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Die letzten %s E-Mails sind alle fehlgeschlagen. Der Versand dieser Website ist möglicherweise kaputt, z. B. wegen falscher SMTP-Zugangsdaten oder eines Maildienstes, der die Website ablehnt. Kunden erhalten dann womöglich keine Bestellbestätigungen oder Passwort-Links."
+
+msgid "The latest emails could not be sent"
+msgstr "Die letzten E-Mails konnten nicht versendet werden"
+
+msgid "The log shows the reason for each failed email."
+msgstr "Das Log zeigt für jede fehlgeschlagene E-Mail den Grund."
 
 msgid "The mail log requires JavaScript."
 msgstr "Das Mail-Log benötigt JavaScript."
@@ -2285,6 +2435,12 @@ msgstr "Die sichere Verbindung zum SMTP-Server kam nicht zustande: Das Zertifika
 msgid "The sender address is not allowed"
 msgstr "Die Absenderadresse ist nicht erlaubt"
 
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Die Absenderdomain %s hat SPF- und DMARC-Einträge"
+
+msgid "The sender domain could not be checked"
+msgstr "Die Absenderdomain konnte nicht geprüft werden"
+
 msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
 msgstr "Der Absender hat keine öffentliche Domain (z. B. wordpress@localhost). Die meisten Mailserver lehnen solche E-Mails ab oder stecken sie in den Spam."
 
@@ -2327,6 +2483,9 @@ msgstr "Der Wochenbericht ist aktiviert, hat aber keinen Empfänger: Trage unter
 msgid "These emails are sent again; their email type is monitored again."
 msgstr "Diese E-Mails werden wieder versendet; ihr E-Mail-Typ wird wieder überwacht."
 
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Diese Arten von E-Mails wurden länger als üblich nicht versendet. Ein Plugin-Update, eine geänderte Einstellung oder eine hängende geplante Aufgabe kann der Grund sein."
+
 msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
 msgstr "Diese E-Mail hat eine eigene Nur-Text-Fassung, die das Protokoll aber nicht speichert. Hier zu sehen: eine aus dem HTML abgeleitete Textfassung."
 
@@ -2359,6 +2518,9 @@ msgstr "Diese Live-Website hat einen Link auf eine lokale oder Test-Adresse vers
 
 msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
 msgstr "Diese Website protokolliert die von ihr versendeten E-Mails (Empfänger, Betreff, Inhalt und Zustellstatus), um die Zustellung zu prüfen und Fehler zu beheben. Protokolleinträge werden nach der eingestellten Aufbewahrungsdauer automatisch gelöscht."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Diese Website läuft als %s-Umgebung, und der Staging-Modus verhindert, dass ihre E-Mails echte Menschen erreichen."
 
 msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
 msgstr "Diese Website läuft als %s-Umgebung. Schalte den Staging-Modus ein, damit kein echter Kunde E-Mails von ihr bekommt."
@@ -2579,6 +2741,9 @@ msgstr "Was tun?"
 msgid "When emails are sent"
 msgstr "Wann E-Mails gesendet werden"
 
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Wenn weit mehr E-Mails als üblich versendet werden, warnt dich die Versand-Notbremse und kann weitere E-Mails zurückhalten."
+
 msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
 msgstr "Ist das aus, können Tracking-Pixel nicht erkennen, wann du einen Eintrag öffnest. Für einzelne E-Mails kannst du externe Inhalte trotzdem laden. Skripte und Formulare sind immer blockiert."
 
@@ -2590,6 +2755,9 @@ msgstr "Mit Anhängen"
 
 msgid "With notes"
 msgstr "Mit Hinweisen"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Ohne diese DNS-Einträge können E-Mail-Anbieter nicht prüfen, ob deine Website E-Mails für diese Domain versenden darf, deshalb landen E-Mails eher im Spam. Die Absenderprüfung schlägt Einträge vor, die du bei deinem Domain-Anbieter hinzufügen kannst."
 
 msgid "WooCommerce email"
 msgstr "WooCommerce-E-Mail"
@@ -2665,6 +2833,9 @@ msgstr "zuerst gesehen am %s"
 
 msgid "from a new sender"
 msgstr "von einem neuen Absender"
+
+msgid "holding emails right now"
+msgstr "hält gerade E-Mails zurück"
 
 msgid "kept until deleted manually"
 msgstr "aufbewahrt, bis sie manuell gelöscht werden"

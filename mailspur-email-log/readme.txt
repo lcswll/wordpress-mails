@@ -61,7 +61,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 
 = Notes: problems found in your emails =
 
-* HTML sent as plain text, Gmail clipping (> 102 KB), relative links and images, development or staging URLs, unreplaced placeholders like `{first_name}` or `%s`, broken encoding (Ã¤), risky sender addresses (wordpress@localhost, gmail.com sent from your server), bulk mail without `List-Unsubscribe`, typos in recipient domains (gmial.com), misleading link texts and more – shown as a badge in the list.
+* HTML sent as plain text, Gmail clipping (> 102 KB), relative links and images, development or staging URLs, unreplaced placeholders like `{first_name}` or `%s`, broken encoding (Ã¤), risky sender addresses (wordpress@localhost, gmail.com sent from your server), bulk mail without `List-Unsubscribe`, typos in recipient domains (gmial.com), misleading link texts, no-reply senders without Reply-To and more – shown as a badge in the list.
 * **Open distribution lists:** warns when several outside recipients in To or Cc can see each other's addresses (a typical GDPR data breach). Your own domain and Bcc do not count.
 * **Spam signs:** a subject in capitals or with many exclamation marks, an email that is almost only an image, links via URL shorteners (bit.ly …) – hints that can make delivery worse, not a spam score.
 * **Secrets in plain text:** warns when a plugin emails a password, API key, private key or card number – and masks the value in the log, together with the secrets in links.
@@ -74,6 +74,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * Dashboard widget with the last 7 days.
 * **Monitoring alerts (opt-in):** get notified by email or webhook (Slack, Discord or any JSON endpoint) when emails fail repeatedly or when your site unexpectedly stops sending emails.
 * **Weekly report (opt-in):** a short email every Monday to the alert addresses, only when there is something to report – number of emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents.
+* **Site Health:** tests for failed emails, stopped email types, held emails, staging mode on a live site and SPF/DMARC.
 
 = Deliverability and staging =
 

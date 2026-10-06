@@ -12,6 +12,7 @@ use Brain\Monkey\Functions;
 use Mailspur\Modules\Notes\Catalog;
 use Mailspur\Modules\Notes\Engine;
 use Mailspur\Modules\Notes\Mail;
+use Mailspur\Modules\Notes\Module;
 use Mailspur\Modules\Notes\Rules;
 
 final class NotesRulesTest extends TestCase {
@@ -26,6 +27,7 @@ final class NotesRulesTest extends TestCase {
 		parent::setUp();
 		Functions\stubTranslationFunctions();
 		Catalog::reset();
+		Engine::reset();
 	}
 
 	/**
@@ -218,8 +220,8 @@ final class NotesRulesTest extends TestCase {
 		$this->assertContains( 'from_free_mailer', $this->codes( $this->row( array( 'sender' => 'Shop <myshop@gmail.com>' ) ) ) );
 		$this->assertContains( 'from_domain_mismatch', $this->codes( $this->row( array( 'sender' => 'news@other-brand.com' ) ) ) );
 		// Subdomain / parent domain of the site is fine.
-		$this->assertSame( array(), $this->codes( $this->row( array( 'sender' => 'noreply@example.de' ) ) ) );
-		$this->assertSame( array(), $this->codes( $this->row( array( 'sender' => 'noreply@mail.shop.example.de' ) ) ) );
+		$this->assertSame( array(), $this->codes( $this->row( array( 'sender' => 'info@example.de' ) ) ) );
+		$this->assertSame( array(), $this->codes( $this->row( array( 'sender' => 'info@mail.shop.example.de' ) ) ) );
 		// A test site domain gives no mismatch noise.
 		$this->assertSame( array(), $this->codes( $this->row( array( 'sender' => 'news@other-brand.com' ) ), array( 'home' => '127.0.0.1' ) ) );
 
@@ -569,7 +571,7 @@ final class NotesRulesTest extends TestCase {
 
 	public function test_every_built_in_code_has_texts(): void {
 		$texts = Catalog::texts();
-		foreach ( array( 'html_in_plain', 'gmail_clip', 'relative_urls', 'dev_url', 'foreign_wp_host', 'placeholder', 'mojibake', 'no_from', 'from_localhost', 'from_free_mailer', 'from_domain_mismatch', 'bulk_no_unsubscribe', 'recipient_typo', 'link_mismatch', 'subject_empty', 'subject_long', 'img_no_alt', 'secret_password', 'secret_key', 'secret_card', 'open_recipients', 'subject_caps', 'subject_exclamations', 'image_only', 'link_shortener', 'no_mx', 'null_mx', 'duplicate', 'dead_link' ) as $code ) {
+		foreach ( array( 'html_in_plain', 'gmail_clip', 'relative_urls', 'dev_url', 'foreign_wp_host', 'placeholder', 'mojibake', 'no_from', 'from_localhost', 'from_free_mailer', 'from_domain_mismatch', 'bulk_no_unsubscribe', 'recipient_typo', 'link_mismatch', 'subject_empty', 'subject_long', 'img_no_alt', 'secret_password', 'secret_key', 'secret_card', 'open_recipients', 'subject_caps', 'subject_exclamations', 'image_only', 'link_shortener', 'no_mx', 'null_mx', 'duplicate', 'dead_link', 'no_reply_to' ) as $code ) {
 			$this->assertArrayHasKey( $code, $texts, $code );
 			$this->assertNotSame( '', $texts[ $code ]['text'], $code );
 			$this->assertNotSame( '', $texts[ $code ]['fix'], $code );
@@ -589,5 +591,88 @@ final class NotesRulesTest extends TestCase {
 		);
 		$this->assertSame( '100%  gmial.com gmail.com ', Catalog::render( $note )['title'] );
 		$this->assertSame( 'unknown_code', Catalog::render( Rules::note( 'unknown_code', 'info' ) )['title'] );
+	}
+
+	public function test_no_reply_sender_without_reply_to(): void {
+		$notes = Engine::analyze( $this->row( array( 'sender' => 'Example Shop <noreply@shop.example.de>' ) ), self::SITE + array( 'admins' => array() ) );
+		$this->assertSame( array( 'no_reply_to' ), array_column( $notes, 'code' ) );
+		$this->assertSame( 'info', $notes[0]['severity'] );
+		$this->assertSame( array( 'noreply@shop.example.de' ), $notes[0]['params'] );
+
+		foreach ( array( 'no-reply', 'no_reply', 'No.Reply', 'donotreply', 'do-not-reply', 'do_not_reply', 'dontreply', 'noreply+orders', 'no-reply-shop', 'mailer-daemon', 'MAILER_DAEMON' ) as $local ) {
+			$this->assertContains( 'no_reply_to', $this->codes( $this->row( array( 'sender' => $local . '@shop.example.de' ) ), array( 'admins' => array() ) ), $local );
+		}
+
+		// A customer next to an administrator (in To or Cc) still cannot reply.
+		$admins = array( 'admins' => array( 'owner@shop.example.de' ) );
+		$this->assertContains(
+			'no_reply_to',
+			$this->codes(
+				$this->row(
+					array(
+						'sender'     => 'noreply@shop.example.de',
+						'recipients' => 'owner@shop.example.de, anna@gmail.com',
+					)
+				),
+				$admins
+			)
+		);
+		$this->assertContains(
+			'no_reply_to',
+			$this->codes(
+				$this->row(
+					array(
+						'sender'     => 'noreply@shop.example.de',
+						'recipients' => 'owner@shop.example.de',
+						'headers'    => "Content-Type: text/html\nCc: anna@gmail.com",
+					)
+				),
+				$admins
+			)
+		);
+	}
+
+	public function test_no_reply_note_stays_quiet_where_replies_are_handled_or_not_expected(): void {
+		$admins = array( 'admins' => array( 'owner@shop.example.de', 'it@shop.example.de' ) );
+		$quiet  = array(
+			'Reply-To header'           => array( 'headers' => "Content-Type: text/html\nFrom: noreply@shop.example.de\nReply-To: Shop <help@shop.example.de>" ),
+			'lower-case header'         => array( 'headers' => "content-type: text/html\nreply-to: help@shop.example.de" ),
+			'Reply-To set on PHPMailer' => array( 'meta' => array( Module::REPLY_TO_META => true ) ),
+			'only administrators'       => array( 'recipients' => 'Owner <Owner@shop.example.de>, it@shop.example.de' ),
+			'Mailspur alert'            => array( 'source' => 'mailspur:alert' ),
+			'Mailspur resend'           => array( 'source' => 'mailspur:resend' ),
+			'no recipients'             => array( 'recipients' => '' ),
+			'replies welcome'           => array( 'sender' => 'reply@shop.example.de' ),
+			'a name starting with no'   => array( 'sender' => 'nora@shop.example.de' ),
+			'noreply in the domain'     => array( 'sender' => 'shop@noreply.example.de' ),
+			'a longer name'             => array( 'sender' => 'noreplyteam@shop.example.de' ),
+		);
+		foreach ( $quiet as $case => $overrides ) {
+			$row = $this->row( array_merge( array( 'sender' => 'noreply@shop.example.de' ), $overrides ) );
+			$this->assertNotContains( 'no_reply_to', $this->codes( $row, $admins ), $case );
+		}
+	}
+
+	public function test_administrators_are_only_looked_up_when_needed_and_once_per_request(): void {
+		Functions\when( 'get_current_blog_id' )->justReturn( 1 );
+		Functions\expect( 'get_users' )->once()->andReturn( array( 'Owner@Shop.example.de', 'it@shop.example.de' ) );
+
+		// Ordinary senders and a no-reply sender with Reply-To never trigger the lookup.
+		$this->assertSame( array(), $this->codes( $this->row() ) );
+		$replies = array(
+			'sender'  => 'noreply@shop.example.de',
+			'headers' => 'Reply-To: help@shop.example.de',
+		);
+		$this->assertSame( array(), $this->codes( $this->row( $replies ) ) );
+
+		$row = $this->row(
+			array(
+				'sender'     => 'noreply@shop.example.de',
+				'recipients' => 'owner@shop.example.de',
+			)
+		);
+		$this->assertNotContains( 'no_reply_to', $this->codes( $row ) );
+		$this->assertNotContains( 'no_reply_to', $this->codes( $row ) );
+		$this->assertContains( 'no_reply_to', $this->codes( array_merge( $row, array( 'recipients' => 'anna@gmail.com' ) ) ) );
 	}
 }

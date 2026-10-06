@@ -26,6 +26,12 @@ final class Engine {
 	/** Notes stored per mail at most. */
 	const MAX_NOTES = 20;
 
+	/** Administrator accounts looked up for admins(). */
+	const MAX_ADMINS = 50;
+
+	/** @var array<int,string[]> Administrators' addresses by blog id (see admins()). */
+	private static $admins = array();
+
 	/**
 	 * Active rules, keyed by id. Each rule is callable( Mail $mail ): array of notes (see Rules::note()).
 	 * Rules run while mails are sent: no network, no database queries, keep them fast.
@@ -51,7 +57,7 @@ final class Engine {
 	 * Runs every rule on the row. A failing rule is skipped, never breaks logging.
 	 *
 	 * @param array<string,mixed>                                    $row
-	 * @param array{home:string,environment:string,multisite:bool}|null $site Defaults to the current site.
+	 * @param array{home:string,environment:string,multisite:bool,admins?:string[]}|null $site Defaults to the current site.
 	 * @param string[]                                               $ignore Codes to drop.
 	 * @return array<int,array{code:string,severity:string,params:array<int,string>}>
 	 */
@@ -177,5 +183,35 @@ final class Engine {
 			'environment' => wp_get_environment_type(),
 			'multisite'   => is_multisite(),
 		);
+	}
+
+	/**
+	 * Lower-cased addresses that reach the site's administrators: the admin email and every administrator account.
+	 * One query per request and site, and only when a rule asks (Mail::admins()).
+	 *
+	 * @return string[]
+	 */
+	public static function admins(): array {
+		$blog = get_current_blog_id();
+		if ( ! isset( self::$admins[ $blog ] ) ) {
+			$out   = array( strtolower( (string) get_option( 'admin_email' ) ) );
+			$users = get_users(
+				array(
+					'role'   => 'administrator',
+					'number' => self::MAX_ADMINS,
+					'fields' => 'user_email',
+				)
+			);
+			foreach ( $users as $email ) {
+				$out[] = is_string( $email ) ? strtolower( $email ) : '';
+			}
+			self::$admins[ $blog ] = array_values( array_unique( array_filter( $out ) ) );
+		}
+		return self::$admins[ $blog ];
+	}
+
+	/** Test helper: forget the cached administrators. */
+	public static function reset(): void {
+		self::$admins = array();
 	}
 }
