@@ -158,5 +158,8 @@
 	"Retention in the log": "Aufbewahrung im Log",
 	"Sent by": "Versendet von",
 	"deleted after %s days": "nach %s Tagen gelöscht",
-	"kept until deleted manually": "aufbewahrt, bis sie manuell gelöscht werden"
+	"kept until deleted manually": "aufbewahrt, bis sie manuell gelöscht werden",
+	"%1$s of %2$s bounced (%3$s)": "%1$s von %2$s unzustellbar (%3$s)",
+	"%s marked as spam": "%s als Spam markiert",
+	"Reported by your email provider in the last 30 days; only emails it reported on count.": "Von deinem E-Mail-Dienst in den letzten 30 Tagen gemeldet; es zählen nur E-Mails, zu denen er etwas gemeldet hat."
 }

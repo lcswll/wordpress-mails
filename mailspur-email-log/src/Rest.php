@@ -172,6 +172,7 @@ final class Rest {
 				'format'      => (string) $request['format'],
 				'attachments' => (bool) $request['attachments'],
 				'notes'       => (bool) $request['notes'],
+				'delivery'    => (string) $request['delivery'],
 			)
 		);
 
@@ -447,6 +448,12 @@ final class Rest {
 			),
 			'attachments' => $flag,
 			'notes'       => $flag,
+			// Delivery status reported by the email provider (indexed).
+			'delivery'    => array(
+				'type'    => 'string',
+				'enum'    => array_merge( array( '' ), array_values( Repository::DELIVERY ) ),
+				'default' => '',
+			),
 		);
 	}
 }

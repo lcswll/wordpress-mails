@@ -116,7 +116,7 @@ final class Exporter {
 
 		list( $where, $params ) = $this->repository->filter( $filters );
 
-		$columns = 'id, created_at, status, recipients, subject, attachments, content_type, sender, source, error, notes, size'
+		$columns = 'id, created_at, status, delivery, recipients, subject, attachments, content_type, sender, source, error, notes, size'
 			. ( $bodies ? ', headers, message' : '' );
 		$batch   = $bodies ? self::BATCH_BODIES : self::BATCH;
 		$count   = 0;
@@ -151,7 +151,7 @@ final class Exporter {
 	 * @return string[] Column names of an exported entry.
 	 */
 	public static function columns( bool $bodies ): array {
-		$columns = array( 'id', 'date', 'date_utc', 'status', 'from', 'to', 'subject', 'source', 'content_type', 'attachments', 'error', 'notes', 'size' );
+		$columns = array( 'id', 'date', 'date_utc', 'status', 'delivery', 'from', 'to', 'subject', 'source', 'content_type', 'attachments', 'error', 'notes', 'size' );
 		return $bodies ? array_merge( $columns, array( 'headers', 'message' ) ) : $columns;
 	}
 
@@ -168,6 +168,7 @@ final class Exporter {
 			'date'         => self::local_date( $row['created_at'] ),
 			'date_utc'     => gmdate( 'Y-m-d\TH:i:s\Z', $time ),
 			'status'       => Repository::status_slug( (int) $row['status'] ),
+			'delivery'     => Repository::delivery_slug( (int) ( $row['delivery'] ?? 0 ) ), // Reported by the email provider.
 			'from'         => (string) ( $row['sender'] ?? '' ),
 			'to'           => (string) $row['recipients'],
 			'subject'      => (string) $row['subject'],

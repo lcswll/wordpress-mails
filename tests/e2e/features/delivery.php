@@ -310,6 +310,7 @@ try {
 		delivery_check( 403 === delivery_rest( 'POST', '/mails/' . $held['id'] . '/release' )->get_status(), 'release: administrators only' );
 		delivery_check( 403 === delivery_rest( 'POST', '/delivery/check' )->get_status(), 'sender check: administrators only' );
 		delivery_check( 403 === delivery_rest( 'POST', '/delivery/brake/release' )->get_status() && 403 === delivery_rest( 'GET', '/delivery/brake' )->get_status(), 'emergency brake: administrators only' );
+		delivery_check( 403 === delivery_rest( 'POST', '/delivery/webhook-secret' )->get_status(), 'webhook secret: administrators only' );
 		wp_set_current_user( 1 );
 		require_once ABSPATH . 'wp-admin/includes/user.php';
 		wp_delete_user( $editor );
@@ -425,8 +426,98 @@ try {
 	wp_mail( 'bounce-me@example.com', 'Problem password reset', 'Reset' );
 	delivery_check( Repository::STATUS_HELD !== (int) delivery_last_row()['status'], 'problem recipients: password reset mails still go out' );
 
+	// Provider status in the indexed column and the log filter (?delivery=… in the URL = this REST parameter).
+	$status_of = static function ( $id ) use ( $wpdb ) {
+		return (int) $wpdb->get_var( $wpdb->prepare( 'SELECT delivery FROM %i WHERE id = %d', Repository::table(), $id ) );
+	};
+	delivery_check( 3 === $status_of( $first ) && 3 === $status_of( $second ), 'provider status: bounced stored in the indexed column', array( $status_of( $first ), $status_of( $second ) ) );
+	$listed  = static function ( $status ) {
+		$res = delivery_rest(
+			'GET',
+			'/mails',
+			array(
+				'delivery' => $status,
+				'per_page' => 200,
+			)
+		);
+		return 200 === $res->get_status() ? array_map( 'intval', array_column( (array) $res->get_data()['items'], 'id' ) ) : null;
+	};
+	$bounced = $listed( 'bounced' );
+	delivery_check( is_array( $bounced ) && in_array( $first, $bounced, true ) && in_array( $second, $bounced, true ) && ! in_array( (int) $row['id'], $bounced, true ), 'log filter: only bounced entries', $bounced );
+	delivery_check( array() === array_intersect( (array) $listed( 'delivered' ), array( $first, $second ) ), 'log filter: delivered excludes them' );
+	delivery_check( null === $listed( 'opened' ), 'log filter: unknown status rejected' );
+	delivery_check( ( new Repository() )->has_delivery(), 'log filter: offered once statuses exist' );
+
+	// A hard bounce of a Cc recipient counts – it was a recipient of that email.
+	$cc_entry = $feedback_entry( 'aaaaaaaaaaaa0003' );
+	$wpdb->update(
+		Repository::table(),
+		array(
+			'recipients' => 'to-only@example.com',
+			'headers'    => "Cc: Copy <cc-person@example.com>\nBcc: hidden@example.com",
+		),
+		array( 'id' => $cc_entry )
+	);
+	foreach ( array( 'cc-person@example.com', 'hidden@example.com', 'not-in-mail@example.com' ) as $i => $email ) {
+		$webhook(
+			$key,
+			array(
+				'RecordType' => 'Bounce',
+				'ID'         => 30 + $i,
+				'Type'       => 'HardBounce',
+				'Email'      => $email,
+				'Metadata'   => array( 'mailspur' => 'aaaaaaaaaaaa0003' ),
+			)
+		);
+	}
+	$all = Problems::all();
+	delivery_check( array( (string) $cc_entry ) === ( $all['cc-person@example.com']['ids'] ?? null ) && isset( $all['hidden@example.com'] ) && ! isset( $all['not-in-mail@example.com'] ), 'problem recipients: hard bounces of Cc and Bcc recipients count', $all );
+
+	// Mailgun legacy webhooks: form-encoded, signature fields in the body.
+	delivery_settings(
+		array(
+			'feedback_provider'    => 'mailgun',
+			'feedback_signing_key' => 'e2e-' . 'signing-' . 'key',
+		)
+	);
+	$legacy_entry      = $feedback_entry( 'aaaaaaaaaaaa0004' );
+	$legacy            = static function ( $form ) use ( $key ) {
+		wp_set_current_user( 0 );
+		$request = new WP_REST_Request( 'POST', '/mailspur-email-log/v1/delivery/webhook/mailgun/' . $key );
+		$request->set_header( 'content-type', 'application/x-www-form-urlencoded' );
+		$request->set_body( http_build_query( $form ) );
+		$response = rest_ensure_response( rest_do_request( $request ) );
+		wp_set_current_user( 1 );
+		return $response;
+	};
+	$form              = array(
+		'event'      => 'delivered',
+		'recipient'  => 'bounce-me@example.com',
+		'Message-Id' => '<legacy@e2e.test>',
+		'mailspur'   => 'aaaaaaaaaaaa0004',
+		'timestamp'  => (string) time(),
+		'token'      => wp_generate_password( 50, false ),
+	);
+	$form['signature'] = hash_hmac( 'sha256', $form['timestamp'] . $form['token'], 'e2e-' . 'signing-' . 'key' );
+	$res               = $legacy( $form );
+	delivery_check( 200 === $res->get_status() && 1 === ( $res->get_data()['matched'] ?? 0 ) && 2 === $status_of( $legacy_entry ), 'Mailgun legacy webhook: form accepted and matched', $res->get_data() );
+	$form['signature'] = str_repeat( '0', 64 );
+	$form['token']     = wp_generate_password( 50, false );
+	delivery_check( 401 === $legacy( $form )->get_status(), 'Mailgun legacy webhook: bad signature rejected' );
+	delivery_settings( array( 'feedback_provider' => 'postmark' ) );
+
+	// A new secret: the old URL stops working at once, the new one works.
+	$res     = delivery_rest( 'POST', '/delivery/webhook-secret' );
+	$new_key = Feedback::secret();
+	delivery_check( 200 === $res->get_status() && $new_key !== $key && false !== strpos( (string) ( $res->get_data()['urls']['postmark'] ?? '' ), '/delivery/webhook/postmark/' . $new_key ), 'webhook secret: new URL returned', $res->get_data() );
+	$probe_bounce       = $bounce;
+	$probe_bounce['ID'] = 40;
+	delivery_check( in_array( $webhook( $key, $probe_bounce )->get_status(), array( 401, 403 ), true ), 'webhook secret: the old URL is rejected' );
+	delivery_check( 200 === $webhook( $new_key, $probe_bounce )->get_status(), 'webhook secret: the new URL is accepted' );
+	$key = $new_key;
+
 	$settings_html = delivery_call( 'mailspur_settings_sections', 'render_settings', Settings::all(), Settings::OPTION );
-	delivery_check( false !== strpos( (string) $settings_html, 'data-mailspur-allow="bounce-me@example.com"' ) && false !== strpos( (string) $settings_html, $key ), 'settings: problem list and webhook URL' );
+	delivery_check( false !== strpos( (string) $settings_html, 'data-mailspur-allow="bounce-me@example.com"' ) && false !== strpos( (string) $settings_html, $key ) && false !== strpos( (string) $settings_html, 'id="mailspur-feedback-renew"' ), 'settings: problem list, webhook URL and "Create new URL"' );
 
 	$exporters = apply_filters( 'wp_privacy_personal_data_exporters', array() );
 	$export    = call_user_func( $exporters['mailspur-problem-recipients']['callback'], 'bounce-me@example.com', 1 );

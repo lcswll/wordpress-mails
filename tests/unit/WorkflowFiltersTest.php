@@ -30,6 +30,7 @@ final class WorkflowFiltersTest extends TestCase {
 				'format'      => '',
 				'attachments' => false,
 				'notes'       => false,
+				'delivery'    => '',
 				'orderby'     => 'date',
 				'order'       => 'desc',
 			),
@@ -49,6 +50,7 @@ final class WorkflowFiltersTest extends TestCase {
 				'format'      => 'html',
 				'attachments' => '1',
 				'notes'       => 'false',
+				'delivery'    => 'opened',
 				'orderby'     => 'id; DROP',
 				'order'       => 'asc',
 				'page'        => 9,
@@ -63,6 +65,7 @@ final class WorkflowFiltersTest extends TestCase {
 		$this->assertSame( 'html', $clean['format'] );
 		$this->assertTrue( $clean['attachments'] );
 		$this->assertFalse( $clean['notes'] );
+		$this->assertSame( '', $clean['delivery'], 'only the provider statuses of the list' );
 		$this->assertSame( 'date', $clean['orderby'] );
 		$this->assertSame( 'asc', $clean['order'] );
 		$this->assertArrayNotHasKey( 'page', $clean );

@@ -161,7 +161,46 @@ final class TypesProbeTest extends TestCase {
 		$this->assertSame( array(), $this->hooks );
 	}
 
+	public function test_kind_of_translated_core_subjects(): void {
+		// German site, English administrator: the reset email in the user's language, the admin notice in German.
+		$german   = array(
+			'[%s] Password Reset'        => '[%s] Passwort zurücksetzen',
+			'[%s] New User Registration' => '[%s] Neue Benutzerregistrierung',
+			'[%s] Login Details'         => '[%1$s] Deine Zugangsdaten',
+		);
+		$switched = array();
+		Functions\when( 'determine_locale' )->justReturn( 'en_GB' );
+		Functions\when( 'get_locale' )->justReturn( 'de_DE' );
+		Functions\when( 'switch_to_locale' )->alias(
+			static function ( $locale ) use ( &$switched ) {
+				$switched[] = $locale;
+				return true;
+			}
+		);
+		Functions\when( 'restore_previous_locale' )->alias(
+			static function () use ( &$switched ) {
+				$switched[] = 'restored';
+				return true;
+			}
+		);
+		Functions\when( 'translate' )->alias(
+			static function ( $text ) use ( $german, &$switched ) {
+				return 'de_DE' === end( $switched ) ? ( $german[ $text ] ?? $text ) : $text;
+			}
+		);
+
+		$this->assertSame( 'password-reset', Probe::kind( '[{…}] Passwort zurücksetzen' ) );
+		$this->assertSame( 'new-user', Probe::kind( '[Meine Seite] Neue Benutzerregistrierung' ) );
+		$this->assertSame( 'new-user', Probe::kind( '[{…}] DEINE ZUGANGSDATEN' ), 'case-insensitive' );
+		$this->assertSame( 'password-reset', Probe::kind( '[{…}] Password Reset' ), 'English still works' );
+		$this->assertNull( Probe::kind( 'Passwort zurücksetzen' ), 'the whole subject is no ending of itself' );
+		$this->assertNull( Probe::kind( '[{…}] Passwort geändert' ) );
+		$this->assertSame( array( 'de_DE', 'restored' ), $switched, 'site language looked up once, then cached' );
+	}
+
 	public function test_kind_of_template_kinds_and_core_subjects(): void {
+		Functions\when( 'determine_locale' )->justReturn( 'en_US' );
+		Functions\when( 'get_locale' )->justReturn( 'en_US' );
 		$this->assertSame( 'password-reset', Probe::kind( 'password-reset' ) );
 		$this->assertSame( 'new-user', Probe::kind( 'new-user-admin' ) );
 		$this->assertSame( 'new-user', Probe::kind( '[{name}] New User Registration' ) );

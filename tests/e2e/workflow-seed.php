@@ -77,6 +77,29 @@ add_action(
 			$old  = array_merge( $old, $data, array( 'meta' => (string) wp_json_encode( $data['meta'] ) ) );
 			$repository->insert( $old );
 
+			// Provider statuses ("[WFD]", outside the "[WF]" search of the other tests).
+			foreach ( array( 'bounced', 'delivered' ) as $status ) {
+				$repository->insert(
+					array_merge(
+						$base,
+						array(
+							'subject'  => '[WFD] Invoice ' . $status,
+							'delivery' => Repository::delivery_code( $status ),
+							'meta'     => (string) wp_json_encode(
+								array(
+									'feedback' => array(
+										'event' => $status,
+										'hard'  => 'bounced' === $status,
+										'via'   => 'postmark',
+										'at'    => time(),
+									),
+								)
+							),
+						)
+					)
+				);
+			}
+
 			update_option( 'mailspur_e2e_workflow_seeded', 1, false );
 			delete_transient( 'mailspur_sources' );
 		}

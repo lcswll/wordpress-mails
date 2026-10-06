@@ -106,12 +106,16 @@ final class Page {
 	/**
 	 * Log link that lists the emails of a type: sender filter plus the longest literal part of the subject.
 	 *
-	 * @param array<string,mixed> $item Report item.
+	 * @param array<string,mixed> $item     Report item.
+	 * @param string              $delivery Only emails with this provider status (Repository::DELIVERY slug).
 	 */
-	public static function log_url( array $item, bool $latest = false ): string {
+	public static function log_url( array $item, bool $latest = false, string $delivery = '' ): string {
 		$args = array( 'source' => (string) $item['source'] );
 		if ( empty( $item['other'] ) && '' !== (string) $item['search'] ) {
 			$args['s'] = (string) $item['search'];
+		}
+		if ( '' !== $delivery ) {
+			$args['delivery'] = $delivery;
 		}
 		if ( $latest && ! empty( $item['last_id'] ) ) {
 			$args['mail'] = (string) (int) $item['last_id']; // Opened in the dialog by types.js.
@@ -401,6 +405,7 @@ final class Page {
 					}
 					?>
 				</span>
+				<?php self::bounces( $item ); ?>
 			</td>
 			<td><?php echo esc_html( self::rhythm_text( $item['rhythm'] ) ); ?></td>
 			<td class="mst-col-last">
@@ -467,6 +472,51 @@ final class Page {
 				<?php endif; ?>
 			</td>
 		</tr>
+		<?php
+	}
+
+	/**
+	 * "3 of 120 bounced (2.5 %)" – only when the email provider reported bounces or spam complaints for the type
+	 * (counters only), linked to those emails in the log.
+	 *
+	 * @param array<string,mixed> $item Report item.
+	 */
+	private static function bounces( array $item ): void {
+		$delivery = (array) ( $item['delivery'] ?? array() );
+		$reported = (int) ( $delivery['reported'] ?? 0 );
+		$bounced  = (int) ( $delivery['bounced'] ?? 0 );
+		$spam     = (int) ( $delivery['complaint'] ?? 0 );
+		if ( $reported < 1 || $bounced + $spam < 1 ) {
+			return;
+		}
+		$parts = array();
+		if ( $bounced ) {
+			$parts[] = sprintf(
+				'<a href="%s">%s</a>',
+				esc_url( self::log_url( $item, false, 'bounced' ) ),
+				esc_html(
+					sprintf(
+						/* translators: 1: number of bounced emails, 2: number of emails the provider reported on, 3: percentage, e.g. "2.5 %" */
+						__( '%1$s of %2$s bounced (%3$s)', 'mailspur-email-log' ),
+						number_format_i18n( $bounced ),
+						number_format_i18n( $reported ),
+						number_format_i18n( 100 * $bounced / $reported, 1 ) . ' %'
+					)
+				)
+			);
+		}
+		if ( $spam ) {
+			$parts[] = sprintf(
+				'<a href="%s">%s</a>',
+				esc_url( self::log_url( $item, false, 'complaint' ) ),
+				/* translators: %s: number of emails */
+				esc_html( sprintf( __( '%s marked as spam', 'mailspur-email-log' ), number_format_i18n( $spam ) ) )
+			);
+		}
+		?>
+		<span class="mst-bounces" title="<?php esc_attr_e( 'Reported by your email provider in the last 30 days; only emails it reported on count.', 'mailspur-email-log' ); ?>">
+			<?php echo wp_kses( implode( ' · ', $parts ), array( 'a' => array( 'href' => true ) ) ); ?>
+		</span>
 		<?php
 	}
 

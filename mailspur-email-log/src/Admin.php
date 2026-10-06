@@ -269,6 +269,13 @@ final class Admin {
 	}
 
 	private function render_log(): void {
+		/**
+		 * Whether to offer the provider status filter before any status arrived (the Delivery module: a provider
+		 * is configured). Otherwise it appears once an entry has a status.
+		 *
+		 * @param bool $show
+		 */
+		$delivery = (bool) apply_filters( 'mailspur_delivery_filter', false ) || $this->repository->has_delivery();
 		?>
 		<noscript><div class="notice notice-error"><p><?php esc_html_e( 'The mail log requires JavaScript.', 'mailspur-email-log' ); ?></p></div></noscript>
 
@@ -331,6 +338,16 @@ final class Admin {
 					</label>
 					<label class="mailspur-check"><input type="checkbox" id="mailspur-attachments"> <?php esc_html_e( 'With attachments', 'mailspur-email-log' ); ?></label>
 					<label class="mailspur-check"><input type="checkbox" id="mailspur-notes"> <?php esc_html_e( 'With notes', 'mailspur-email-log' ); ?></label>
+					<label class="mailspur-field" id="mailspur-delivery-field" <?php echo $delivery ? '' : 'hidden'; ?>>
+						<span><?php esc_html_e( 'Provider status', 'mailspur-email-log' ); ?></span>
+						<select id="mailspur-delivery">
+							<option value=""><?php esc_html_e( 'Any status', 'mailspur-email-log' ); ?></option>
+							<option value="delivered"><?php esc_html_e( 'Delivered', 'mailspur-email-log' ); ?></option>
+							<option value="bounced"><?php esc_html_e( 'Bounced (permanent)', 'mailspur-email-log' ); ?></option>
+							<option value="soft_bounce"><?php esc_html_e( 'Bounced (temporary)', 'mailspur-email-log' ); ?></option>
+							<option value="complaint"><?php esc_html_e( 'Marked as spam', 'mailspur-email-log' ); ?></option>
+						</select>
+					</label>
 				</div>
 			</div>
 

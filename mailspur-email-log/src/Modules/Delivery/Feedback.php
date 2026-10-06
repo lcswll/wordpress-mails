@@ -5,10 +5,13 @@
  * bounces count for the problem recipients.
  *
  * Endpoint (public, see Controller): POST /delivery/webhook/{provider}/{key}
- *   key       random secret of this site (constant-time comparison), only the configured provider is accepted
- *   Mailgun   additionally the HMAC signature with the signing key (replays rejected), SES the SNS signature
- * The payload is only trusted for the status: an event changes nothing but meta.feedback of the log entry it
- * matches, and a hard bounce counts only for a recipient of that entry.
+ *   key       random secret of this site (constant-time comparison), only the configured provider is accepted;
+ *             a new one can be created in the settings (the old URL stops working at once)
+ *   Mailgun   additionally the HMAC signature with the signing key (replays rejected), SES the SNS signature;
+ *             Mailgun's legacy webhooks (form-encoded, signature fields in the body) are accepted as well
+ * The payload is only trusted for the status: an event changes nothing but meta.feedback and the indexed
+ * "delivery" column of the log entry it matches (action mailspur_delivery_status), and a hard bounce counts only
+ * for a recipient of that entry (To, Cc or Bcc).
  *
  * Matching an event to a log entry:
  *   1. ref: a random reference stored in meta.feedback.ref and sent along in a header the provider echoes back
@@ -114,6 +117,25 @@ final class Feedback {
 		return $secret;
 	}
 
+	/** Replaces the secret: every webhook URL changes, the old ones are rejected from now on. */
+	public static function regenerate(): string {
+		delete_option( self::SECRET_OPTION );
+		return self::secret( true );
+	}
+
+	/**
+	 * Webhook URLs of all providers (settings UI).
+	 *
+	 * @return array<string,string>
+	 */
+	public static function urls(): array {
+		$urls = array();
+		foreach ( self::PROVIDERS as $provider ) {
+			$urls[ $provider ] = self::url( $provider );
+		}
+		return $urls;
+	}
+
 	/** Webhook URL to paste into the provider's settings. */
 	public static function url( string $provider ): string {
 		return rest_url( Rest::NS . '/delivery/webhook/' . $provider . '/' . self::secret( true ) );
@@ -212,6 +234,9 @@ final class Feedback {
 			return new WP_Error( 'mailspur_too_large', 'Payload too large.', array( 'status' => 413 ) );
 		}
 		$payload = json_decode( $body, true );
+		if ( ! is_array( $payload ) && 'mailgun' === $provider ) {
+			$payload = Webhooks::mailgun_legacy( $body );
+		}
 		if ( ! is_array( $payload ) ) {
 			return new WP_Error( 'mailspur_invalid', 'Invalid JSON.', array( 'status' => 400 ) );
 		}
@@ -291,13 +316,54 @@ final class Feedback {
 					'via'   => $provider,
 				)
 			);
-			( new Repository() )->update( (int) $row['id'], array( 'meta' => Logger::encode( $meta ) ) );
+			$code             = Repository::delivery_code( $event['event'], $event['hard'] );
+			$before           = isset( $current['event'] ) ? Repository::delivery_code( (string) $current['event'], ! empty( $current['hard'] ) ) : 0;
+			( new Repository() )->update(
+				(int) $row['id'],
+				array(
+					'meta'     => Logger::encode( $meta ),
+					'delivery' => $code,
+				)
+			);
+			if ( $code !== $before ) {
+				/**
+				 * The provider status of a log entry changed (per-type counters of the Types module).
+				 *
+				 * @param int                 $id     Log entry id.
+				 * @param string              $status New status (slug of Repository::DELIVERY).
+				 * @param string              $before Previous status, '' for none.
+				 * @param array<string,mixed> $row    id, created_at, source, subject.
+				 */
+				do_action(
+					'mailspur_delivery_status',
+					(int) $row['id'],
+					Repository::delivery_slug( $code ),
+					Repository::delivery_slug( $before ),
+					array_intersect_key( $row, array_flip( array( 'id', 'created_at', 'source', 'subject' ) ) )
+				);
+			}
 		}
-		// Only a recipient of the entry itself (To) – never an address that exists in the payload alone.
-		if ( $event['hard'] && in_array( $event['recipient'], Repository::extract_emails( (string) ( $row['recipients'] ?? '' ) ), true ) ) {
+		// Only a recipient of the entry itself (To, Cc, Bcc) – never an address that exists in the payload alone.
+		if ( $event['hard'] && in_array( $event['recipient'], self::recipients( $row ), true ) ) {
 			$this->problems->record( array( $event['recipient'] ), Problems::BOUNCE, (string) (int) $row['id'] );
 		}
 		return true;
+	}
+
+	/**
+	 * Every address a log entry was sent to: To plus the Cc and Bcc headers.
+	 *
+	 * @param array<string,mixed> $row
+	 * @return string[] Lower-cased.
+	 */
+	public static function recipients( array $row ): array {
+		$list = (string) ( $row['recipients'] ?? '' );
+		foreach ( explode( "\n", str_replace( "\r\n", "\n", (string) ( $row['headers'] ?? '' ) ) ) as $line ) {
+			if ( preg_match( '/^\s*b?cc\s*:(.*)$/i', $line, $m ) ) {
+				$list .= ',' . $m[1];
+			}
+		}
+		return array_values( array_unique( Repository::extract_emails( $list ) ) );
 	}
 
 	private static function rank( string $event, bool $hard ): int {
@@ -312,7 +378,7 @@ final class Feedback {
 	 * (whose To list must then contain the recipient; Cc/Bcc recipients are only matched by reference).
 	 *
 	 * @param array{event:string,hard:bool,recipient:string,ref:string,message_id:string,id:string} $event
-	 * @return array<string,mixed>|null id, recipients, meta.
+	 * @return array<string,mixed>|null id, created_at, source, subject, recipients, headers, meta.
 	 */
 	public function find( array $event ): ?array {
 		global $wpdb;
@@ -329,7 +395,7 @@ final class Feedback {
 		foreach ( $needles as $needle ) {
 			$rows = (array) $wpdb->get_results(
 				$wpdb->prepare(
-					'SELECT id, recipients, meta FROM %i WHERE created_at >= %s AND meta LIKE %s ORDER BY id DESC LIMIT 1',
+					'SELECT id, created_at, source, subject, recipients, headers, meta FROM %i WHERE created_at >= %s AND meta LIKE %s ORDER BY id DESC LIMIT 1',
 					Repository::table(),
 					$since,
 					'%' . $wpdb->esc_like( $needle ) . '%'
@@ -348,7 +414,7 @@ final class Feedback {
 		$window = Webhooks::DELIVERED === $event['event'] ? self::DELIVERED_WINDOW : self::BOUNCE_WINDOW;
 		$rows   = (array) $wpdb->get_results(
 			$wpdb->prepare(
-				'SELECT id, recipients, meta FROM %i WHERE created_at BETWEEN %s AND %s AND status IN ( %d, %d ) AND recipients LIKE %s ORDER BY created_at DESC, id DESC LIMIT 20',
+				'SELECT id, created_at, source, subject, recipients, headers, meta FROM %i WHERE created_at BETWEEN %s AND %s AND status IN ( %d, %d ) AND recipients LIKE %s ORDER BY created_at DESC, id DESC LIMIT 20',
 				Repository::table(),
 				gmdate( 'Y-m-d H:i:s', $now - $window ),
 				gmdate( 'Y-m-d H:i:s', $now + 300 ),

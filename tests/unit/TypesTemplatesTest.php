@@ -32,6 +32,8 @@ final class TypesTemplatesTest extends TestCase {
 					return is_array( $a[0] ) ? $a[1] . '?' . http_build_query( $a[0] ) : $a[2] . '?' . http_build_query( array( $a[0] => $a[1] ) );
 				},
 				'is_multisite'      => false,
+				'determine_locale'  => 'en_US',
+				'get_locale'        => 'en_US',
 				'wp_strip_all_tags' => static function ( $html ) {
 					return strip_tags( $html ); // phpcs:ignore WordPressVIPMinimum.Functions.StripTags.StripTagsOneParameter -- test stub.
 				},

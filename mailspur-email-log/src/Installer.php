@@ -55,6 +55,7 @@ final class Installer {
 
 		$table   = Repository::table();
 		$charset = $wpdb->get_charset_collate();
+		$from    = (int) get_option( self::DB_VERSION_OPTION );
 
 		// dbDelta is picky: two spaces after PRIMARY KEY, one column per line.
 		dbDelta(
@@ -75,12 +76,19 @@ meta longtext NOT NULL,
 notes smallint(5) unsigned NOT NULL DEFAULT 0,
 size int(10) unsigned NOT NULL DEFAULT 0,
 raw longtext NOT NULL,
+delivery tinyint(1) unsigned NOT NULL DEFAULT 0,
 PRIMARY KEY  (id),
 KEY created_at (created_at),
 KEY status_created (status,created_at),
-KEY source (source)
+KEY source (source),
+KEY delivery_created (delivery,created_at)
 ) {$charset};"
 		);
+
+		// 4: provider statuses received before the column existed (meta.feedback).
+		if ( $from > 0 && $from < 4 ) {
+			( new Repository() )->backfill_delivery();
+		}
 
 		update_option( self::DB_VERSION_OPTION, DB_VERSION, true );
 	}

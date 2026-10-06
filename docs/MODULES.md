@@ -36,7 +36,9 @@ final class Module implements \Mailspur\Module {
 - Prefix everything: hooks/options/transients/cron events `mailspur_`, extra tables `{$wpdb->prefix}mailspur_*`.
   Uninstall and deactivation clean these up generically – do not edit `uninstall.php`.
 - **No schema changes** to the log table. Store per-mail data in the `meta` JSON column (via `mailspur_meta`),
-  use `notes` (count of hints) and `size` (bytes) where they fit. Need something else? Ask in your report.
+  use `notes` (count of hints) and `size` (bytes) where they fit. The indexed `delivery` column holds the status
+  reported by the email provider (`Repository::DELIVERY`, written by the Delivery module only; list filter
+  `delivery`). Need something else? Ask in your report.
 - Logging must never slow down or break mail delivery: no network/DNS calls while a mail is being sent,
   everything wrapped defensively (the logger already catches exceptions from filters).
 - **No external services, CDNs or remote assets** (wordpress.org rule and the plugin's privacy promise).
@@ -59,6 +61,7 @@ final class Module implements \Mailspur\Module {
 | `mailspur_finalize_row( array $data, array $row )` | filter | Last step before the final UPDATE (and for every imported row). `$row` is the complete row incl. `message`, `headers`, `meta` (array). Set columns in `$data`, e.g. `$data['notes'] = 3;` or change `$data['meta']` / `$data['status']`. |
 | `mailspur_logged( int $id, array $row )` | action | After the final UPDATE of a logged mail (not for imports). For counters/alerts – keep it cheap. |
 | `mailspur_should_log( bool $log, array $atts )` | filter | Skip logging a mail. |
+| `mailspur_delivery_status( int $id, string $status, string $before, array $row )` | action | The provider status of a log entry changed (webhook; slugs of `Repository::DELIVERY`, `$before` '' = none; `$row`: id, created_at, source, subject). The Types module moves its per-type counters. |
 
 Statuses (`Repository::STATUS_*`): `PENDING` (0, unknown), `SENT` (1), `FAILED` (2), `HELD` (3 – deliberately
 not delivered, e.g. staging mode).
@@ -83,6 +86,7 @@ Own routes: `register_rest_route( \Mailspur\Rest::NS, '/foo', … )` on `rest_ap
 | `mailspur_settings_sanitize( array $clean, array $input )` | Sanitize your keys (missing checkbox = false). |
 | `mailspur_settings_sections( array $settings, string $option_name )` | Render `<h2>` + `<table class="form-table">` rows inside the settings form; inputs named `{$option_name}[key]`. |
 | `mailspur_settings_after()` | Content below the settings form (tools, checks; own forms/REST calls). |
+| `mailspur_delivery_filter( bool $show )` | Offer the log's "Provider status" filter although no entry has a status yet (Delivery: a provider is configured). |
 
 ### JavaScript API (`window.mailspur`, log tab)
 

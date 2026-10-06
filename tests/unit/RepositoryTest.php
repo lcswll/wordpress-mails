@@ -150,6 +150,48 @@ final class RepositoryTest extends TestCase {
 		$this->assertStringEndsWith( 'WHERE 1=1 GROUP BY status', $this->wpdb->prepared[2]['sql'] );
 	}
 
+	public function test_provider_status_filter_uses_the_indexed_column(): void {
+		$this->query( array( 'delivery' => 'bounced' ) );
+		$this->assertStringEndsWith( 'WHERE 1=1 AND delivery = %d GROUP BY status', $this->wpdb->prepared[0]['sql'] );
+		$this->assertSame( array( 'wp_mailspur', 3 ), $this->wpdb->prepared[0]['args'] );
+		$this->assertStringNotContainsString( 'meta LIKE', $this->wpdb->prepared[0]['sql'], 'no scan of the JSON column' );
+
+		$this->query( array( 'delivery' => "bounced' OR 1=1" ) );
+		$this->assertStringEndsWith( 'WHERE 1=1 GROUP BY status', $this->wpdb->prepared[2]['sql'], 'unknown statuses are ignored' );
+
+		$this->assertSame( 4, Repository::delivery_code( 'complaint' ) );
+		$this->assertSame( 3, Repository::delivery_code( 'bounced', true ) );
+		$this->assertSame( 1, Repository::delivery_code( 'bounced', false ) );
+		$this->assertSame( 0, Repository::delivery_code( 'opened' ) );
+		$this->assertSame( 'soft_bounce', Repository::delivery_slug( 1 ) );
+		$this->assertSame( '', Repository::delivery_slug( 0 ) );
+	}
+
+	public function test_backfill_reads_the_status_from_the_meta(): void {
+		$this->wpdb->results = array(
+			array(
+				array(
+					'id'   => '4',
+					'meta' => '{"feedback":{"ref":"abc","event":"bounced","hard":false}}',
+				),
+				array(
+					'id'   => '7',
+					'meta' => '{"feedback":{"event":"complaint"}}',
+				),
+				array(
+					'id'   => '8',
+					'meta' => '{"feedback":{"ref":"abc"},"x":{"event":"delivered"}}',
+				),
+			),
+		);
+		$this->assertSame( 2, $this->repository->backfill_delivery() );
+		$this->assertSame(
+			array( array( 'delivery' => 1 ), array( 'delivery' => 4 ) ),
+			array_column( $this->writes( 'update' ), 2 )
+		);
+		$this->assertSame( '%"feedback":{%"event":%', $this->wpdb->prepared[0]['args'][3] );
+	}
+
 	public function test_list_rows_carry_the_anonymised_flag(): void {
 		$this->query( array() );
 		$this->assertStringContainsString( "( meta LIKE '{\"anonymised\":%%' ) AS anonymised", $this->wpdb->prepared[1]['sql'] );

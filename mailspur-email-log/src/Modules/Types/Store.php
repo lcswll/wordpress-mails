@@ -4,8 +4,9 @@
  *
  * Only counters, subject patterns and a small state per type (log ids, body fingerprints, cron hook, emails to
  * administrators per day, the latest waiting times, the sending function – see Indexer) are stored – no
- * recipients, no contents. Day rows follow the log
- * retention (at most a year), and a type disappears with its last day row.
+ * recipients, no contents. Day rows also count the statuses reported by the email provider (emails with a status,
+ * permanent bounces, spam complaints). Day rows follow the log retention (at most a year), and a type disappears
+ * with its last day row.
  *
  * Direct queries: the module's own tables.
  * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
@@ -19,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 
 final class Store {
 
-	const DB_VERSION = 2;
+	const DB_VERSION = 3; // 3: provider statuses per day (reported, bounced, complaint).
 	const DB_OPTION  = 'mailspur_types_db';
 
 	public static function types_table(): string {
@@ -68,6 +69,9 @@ day date NOT NULL,
 total int(10) unsigned NOT NULL DEFAULT 0,
 failed int(10) unsigned NOT NULL DEFAULT 0,
 held int(10) unsigned NOT NULL DEFAULT 0,
+reported int(10) unsigned NOT NULL DEFAULT 0,
+bounced int(10) unsigned NOT NULL DEFAULT 0,
+complaint int(10) unsigned NOT NULL DEFAULT 0,
 PRIMARY KEY  (type_id,day),
 KEY day (day)
 ) {$charset};"
@@ -148,7 +152,7 @@ KEY day (day)
 	/**
 	 * Adds counters. Portable (MySQL, MariaDB, SQLite): look up existing rows, then update or insert.
 	 *
-	 * @param array<int,array<string,array{total:int,failed:int,held:int}>> $counts By type id and day.
+	 * @param array<int,array<string,array{total:int,failed:int,held:int,reported?:int,bounced?:int,complaint?:int}>> $counts By type id and day.
 	 */
 	public function add_days( array $counts ): void {
 		global $wpdb;
@@ -177,11 +181,14 @@ KEY day (day)
 				if ( isset( $existing[ $id . '|' . $day ] ) ) {
 					$wpdb->query(
 						$wpdb->prepare(
-							'UPDATE %i SET total = total + %d, failed = failed + %d, held = held + %d WHERE type_id = %d AND day = %s',
+							'UPDATE %i SET total = total + %d, failed = failed + %d, held = held + %d, reported = reported + %d, bounced = bounced + %d, complaint = complaint + %d WHERE type_id = %d AND day = %s',
 							self::days_table(),
 							$count['total'],
 							$count['failed'],
 							$count['held'],
+							$count['reported'] ?? 0,
+							$count['bounced'] ?? 0,
+							$count['complaint'] ?? 0,
 							$id,
 							$day
 						)
@@ -190,13 +197,16 @@ KEY day (day)
 					$wpdb->insert(
 						self::days_table(),
 						array(
-							'type_id' => $id,
-							'day'     => $day,
-							'total'   => $count['total'],
-							'failed'  => $count['failed'],
-							'held'    => $count['held'],
+							'type_id'   => $id,
+							'day'       => $day,
+							'total'     => $count['total'],
+							'failed'    => $count['failed'],
+							'held'      => $count['held'],
+							'reported'  => $count['reported'] ?? 0,
+							'bounced'   => $count['bounced'] ?? 0,
+							'complaint' => $count['complaint'] ?? 0,
 						),
-						array( '%d', '%s', '%d', '%d', '%d' )
+						array( '%d', '%s', '%d', '%d', '%d', '%d', '%d', '%d' )
 					);
 				}
 			}
@@ -204,29 +214,64 @@ KEY day (day)
 	}
 
 	/**
+	 * A provider status of an already counted email changed: moves it between the day's status counters.
+	 *
+	 * @param string $status New status (Repository::DELIVERY slug).
+	 * @param string $before Previous status, '' for none.
+	 */
+	public function delivery_changed( int $type, string $day, string $status, string $before ): void {
+		global $wpdb;
+		$bounced   = (int) ( 'bounced' === $status ) - (int) ( 'bounced' === $before );
+		$complaint = (int) ( 'complaint' === $status ) - (int) ( 'complaint' === $before );
+		$reported  = (int) ( '' === $before );
+		if ( ! $bounced && ! $complaint && ! $reported ) {
+			return;
+		}
+		// Unsigned counters: subtract only what is there, then add.
+		$wpdb->query(
+			$wpdb->prepare(
+				'UPDATE %i SET reported = reported + %d, bounced = CASE WHEN bounced >= %d THEN bounced - %d ELSE 0 END + %d, complaint = CASE WHEN complaint >= %d THEN complaint - %d ELSE 0 END + %d WHERE type_id = %d AND day = %s',
+				self::days_table(),
+				$reported,
+				max( 0, -$bounced ),
+				max( 0, -$bounced ),
+				max( 0, $bounced ),
+				max( 0, -$complaint ),
+				max( 0, -$complaint ),
+				max( 0, $complaint ),
+				$type,
+				$day
+			)
+		);
+	}
+
+	/**
 	 * Day counters since a date, of all types or one.
 	 *
-	 * @return array<int,array<string,array{total:int,failed:int,held:int}>> By type id and day.
+	 * @return array<int,array<string,array{total:int,failed:int,held:int,reported:int,bounced:int,complaint:int}>> By type id and day.
 	 */
 	public function days_since( string $day, int $type = 0 ): array {
 		global $wpdb;
 		if ( $type ) {
 			$rows = (array) $wpdb->get_results(
-				$wpdb->prepare( 'SELECT type_id, day, total, failed, held FROM %i WHERE type_id = %d AND day >= %s', self::days_table(), $type, $day ),
+				$wpdb->prepare( 'SELECT type_id, day, total, failed, held, reported, bounced, complaint FROM %i WHERE type_id = %d AND day >= %s', self::days_table(), $type, $day ),
 				ARRAY_A
 			);
 		} else {
 			$rows = (array) $wpdb->get_results(
-				$wpdb->prepare( 'SELECT type_id, day, total, failed, held FROM %i WHERE day >= %s', self::days_table(), $day ),
+				$wpdb->prepare( 'SELECT type_id, day, total, failed, held, reported, bounced, complaint FROM %i WHERE day >= %s', self::days_table(), $day ),
 				ARRAY_A
 			);
 		}
 		$out = array();
 		foreach ( $rows as $row ) {
 			$out[ (int) $row['type_id'] ][ substr( (string) $row['day'], 0, 10 ) ] = array(
-				'total'  => (int) $row['total'],
-				'failed' => (int) $row['failed'],
-				'held'   => (int) $row['held'],
+				'total'     => (int) $row['total'],
+				'failed'    => (int) $row['failed'],
+				'held'      => (int) $row['held'],
+				'reported'  => (int) ( $row['reported'] ?? 0 ),
+				'bounced'   => (int) ( $row['bounced'] ?? 0 ),
+				'complaint' => (int) ( $row['complaint'] ?? 0 ),
 			);
 		}
 		return $out;

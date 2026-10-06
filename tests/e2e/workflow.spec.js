@@ -1,4 +1,4 @@
-// Workflow module in a real browser: "More filters" (source, format, attachments, notes) incl. URL state,
+// Workflow module in a real browser: "More filters" (source, format, attachments, notes, provider status) incl. URL state,
 // CSV/JSON export of the current filter, anonymised entries and "Copy for support". Own rows ("[WF]"), seeded lazily via
 // tests/e2e/workflow-seed.php so the other specs' counts are untouched.
 import fs from 'node:fs';
@@ -82,6 +82,35 @@ test('more filters: source, format, attachments, notes – in the URL and combin
 	await expect(page.locator('#mailspur-source')).toHaveValue('');
 	await expect(page.locator('#mailspur-more-count')).toHaveText('');
 	await expect(page).not.toHaveURL(/source=|format=|att=|notes=/);
+	expect(errors).toEqual([]);
+});
+
+test('provider status filter: from the URL, in "More filters" and in the export', async ({ page }) => {
+	const errors = watch(page);
+	const WFD = `${LOG}&s=%5BWFD%5D`;
+	await page.goto(`${WFD}&delivery=bounced`);
+	await expect(rows(page)).toHaveCount(1);
+	await expect(rows(page).first()).toContainText('[WFD] Invoice bounced');
+	// Opened by itself, so nothing is filtered invisibly.
+	await expect(page.locator('#mailspur-more')).toBeVisible();
+	await expect(page.locator('#mailspur-delivery-field')).toBeVisible();
+	await expect(page.locator('#mailspur-delivery')).toHaveValue('bounced');
+	await expect(page.locator('#mailspur-more-count')).toHaveText('1');
+
+	await page.locator('#mailspur-delivery').selectOption('delivered');
+	await expect(rows(page)).toHaveCount(1);
+	await expect(rows(page).first()).toContainText('[WFD] Invoice delivered');
+	await expect(page).toHaveURL(/[?&]delivery=delivered/);
+
+	const [download] = await Promise.all([page.waitForEvent('download'), page.locator('.mailspur-export').getByRole('button', { name: 'CSV' }).click()]);
+	const lines = fs.readFileSync(await download.path(), 'utf8').trim().split('\r\n');
+	expect(lines).toHaveLength(2);
+	expect(lines[0]).toContain('"status","delivery"');
+	expect(lines[1]).toContain('"sent","delivered"');
+
+	await page.locator('#mailspur-delivery').selectOption('');
+	await expect(rows(page)).toHaveCount(2);
+	await expect(page).not.toHaveURL(/delivery=/);
 	expect(errors).toEqual([]);
 });
 

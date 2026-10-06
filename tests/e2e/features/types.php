@@ -16,6 +16,8 @@
 
 require '/wordpress/wp-load.php';
 
+use Mailspur\Modules\Delivery\Feedback;
+use Mailspur\Modules\Delivery\Problems;
 use Mailspur\Modules\Insights\Alerts;
 use Mailspur\Modules\Insights\Stats;
 use Mailspur\Modules\Types\Indexer;
@@ -28,6 +30,7 @@ use Mailspur\Modules\Types\Quiet;
 use Mailspur\Modules\Types\Report;
 use Mailspur\Modules\Types\Senders;
 use Mailspur\Modules\Types\Store;
+use Mailspur\Modules\Types\Templates;
 use Mailspur\Modules\Types\Updates;
 use Mailspur\Repository;
 
@@ -536,8 +539,133 @@ try {
 	types_check( false, 'exception (noise, speed, senders)', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
 }
 
+// Provider statuses per type ("2 of 5 bounced") and probes of core emails on a German site.
+$german_ids = array();
 try {
 	global $wpdb;
+	$store    = new Store();
+	$indexer  = new Indexer( $store );
+	$now      = time();
+	$problems = get_option( Problems::OPTION );
+	$bounce   = array();
+	for ( $i = 0; $i < 8; $i++ ) {
+		$bounce[] = types_row( gmdate( 'Y-m-d H:i:s', $now - DAY_IN_SECONDS - $i * HOUR_IN_SECONDS ), 1, 'Your invoice ' . ( 500 + $i ), 'plugin:e2e-types-bounce', 'x', (string) wp_json_encode( array( 'feedback' => array( 'ref' => 'bbbbbbbbbbbb000' . $i ) ) ) );
+	}
+	// Known before indexing: two deliveries and a bounce (column only, as left by earlier webhooks).
+	foreach ( array( 2, 2, 2, 3 ) as $n => $code ) {
+		$wpdb->update( Repository::table(), array( 'delivery' => $code ), array( 'id' => $bounce[ $n ] ) );
+	}
+	$indexer->run( 100000 );
+	// Reported after indexing, through the webhook handling: a complaint replaces a delivery, a new bounce.
+	$wpdb->update(
+		Repository::table(),
+		array(
+			'meta' => (string) wp_json_encode(
+				array(
+					'feedback' => array(
+						'ref'   => 'bbbbbbbbbbbb0002',
+						'event' => 'delivered',
+					),
+				)
+			),
+		),
+		array( 'id' => $bounce[2] )
+	);
+	$event    = static function ( $kind, $ref ) {
+		return array(
+			'event'      => $kind,
+			'hard'       => 'bounced' === $kind,
+			'recipient'  => 'customer@example.com',
+			'ref'        => $ref,
+			'message_id' => '',
+			'id'         => 'e2e-' . $ref,
+		);
+	};
+	$feedback = new Feedback();
+	$feedback->apply( $event( 'complaint', 'bbbbbbbbbbbb0002' ), 'postmark' );
+	$feedback->apply( $event( 'bounced', 'bbbbbbbbbbbb0004' ), 'postmark' );
+
+	$item = array();
+	foreach ( Report::current( $store, time() ) as $candidate ) {
+		if ( 'plugin:e2e-types-bounce' === $candidate['source'] ) {
+			$item = $candidate;
+		}
+	}
+	types_check(
+		array(
+			'reported'  => 5,
+			'bounced'   => 2,
+			'complaint' => 1,
+		) === ( $item['delivery'] ?? null ),
+		'provider statuses counted per type (index + later webhooks)',
+		$item['delivery'] ?? null
+	);
+	ob_start();
+	( new Page( $store, $indexer ) )->render();
+	$html = (string) ob_get_clean();
+	$row  = (string) strstr( (string) strstr( $html, 'id="mailspur-type-' . (int) ( $item['id'] ?? 0 ) . '"' ), '</tr>', true );
+	types_check( false !== strpos( $row, '2 of 5 bounced (40.0 %)' ) && false !== strpos( $row, '1 marked as spam' ), 'rate marker on the type row', $row );
+	$link = preg_match( '/class="mst-bounces"[^>]*>\s*<a href="([^"]+)"/', $row, $m ) ? html_entity_decode( $m[1] ) : '';
+	types_check( false !== strpos( $link, 'delivery=bounced' ) && 1 === preg_match( '/source=plugin(:|%3A)e2e-types-bounce/', $link ) && 1 === preg_match( '/[?&]s=Your(%20|\+| )invoice/', $link ), 'rate marker links to the log filtered by type and status', $link );
+	types_check( 1 === substr_count( $html, 'class="mst-bounces"' ), 'no marker on types without provider statuses', substr_count( $html, 'class="mst-bounces"' ) );
+	types_check( false === stripos( implode( ' ', array_map( 'strval', (array) $wpdb->get_col( $wpdb->prepare( 'SELECT extra FROM %i', Store::types_table() ) ) ) ), 'customer@example.com' ), 'per-type statuses store no recipients' );
+
+	// German site: older core emails without a template kind are recognised by the translated subject.
+	$admins = get_users(
+		array(
+			'role'   => 'administrator',
+			'number' => 1,
+		)
+	);
+	wp_set_current_user( $admins ? $admins[0]->ID : 1 );
+	$probe_of     = static function () use ( $store ) {
+		$items = array_values(
+			array_filter(
+				Report::current( $store, time() ),
+				static function ( $item ) {
+					return 'core' === $item['source'] && false !== strpos( implode( ' ', $item['pattern'] ), 'Passwort' );
+				}
+			)
+		);
+		return $items ? (string) ( ( new Templates() )->for_items( $items )[ $items[0]['id'] ]['probe'] ?? '' ) : 'no type';
+	};
+	$german_ids[] = types_row( gmdate( 'Y-m-d H:i:s', $now - 2 * DAY_IN_SECONDS ), 1, '[Meine Seite] Passwort zurücksetzen', 'core' );
+	$indexer->run( 100000 );
+	types_check( '' === $probe_of(), 'German core subject unknown without the German strings', $probe_of() );
+	$german = static function ( $translation, $text, $domain ) {
+		$de = array(
+			'[%s] Password Reset'        => '[%s] Passwort zurücksetzen',
+			'[%s] New User Registration' => '[%s] Neue Benutzerregistrierung',
+			'[%s] Login Details'         => '[%s] Zugangsdaten',
+		);
+		return 'default' === $domain && isset( $de[ $text ] ) ? $de[ $text ] : $translation;
+	};
+	$de_de  = static function () {
+		return 'de_DE';
+	};
+	add_filter( 'gettext', $german, 10, 3 );
+	add_filter( 'locale', $de_de );
+	add_filter( 'determine_locale', $de_de );
+	types_check( 'password-reset' === $probe_of(), 'probe offered for the German password reset type', $probe_of() );
+	remove_filter( 'gettext', $german, 10 );
+	remove_filter( 'locale', $de_de );
+	remove_filter( 'determine_locale', $de_de );
+
+	if ( false === $problems ) {
+		delete_option( Problems::OPTION );
+	} else {
+		update_option( Problems::OPTION, $problems, false );
+	}
+} catch ( Throwable $e ) {
+	types_check( false, 'exception (provider statuses, German probe)', $e->getMessage() . ' @ ' . $e->getFile() . ':' . $e->getLine() );
+}
+
+try {
+	global $wpdb;
+	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source = %s', Repository::table(), 'plugin:e2e-types-bounce' ) );
+	foreach ( $german_ids as $german_id ) {
+		$wpdb->delete( Repository::table(), array( 'id' => $german_id ) );
+	}
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE source IN ( %s, %s, %s )', Repository::table(), 'plugin:e2e-types-noise', 'plugin:e2e-types-fresh', 'plugin:e2e-types-updates' ) );
 	delete_option( Senders::OPTION );
 	delete_option( Quiet::OPTION );
