@@ -60,6 +60,10 @@ final class Dashboard {
 		$failed = (int) $totals['failed'];
 		?>
 		<div class="msi-widget">
+			<?php
+			/** Above the numbers: one line from other modules, e.g. the health sentence (Answers). */
+			do_action( 'mailspur_dashboard_widget_top' );
+			?>
 			<div class="msi-widget-kpis">
 				<p><span class="msi-widget-value"><?php echo esc_html( number_format_i18n( (int) $totals['all'] ) ); ?></span> <span class="msi-widget-label"><?php esc_html_e( 'Emails', 'mailspur-email-log' ); ?></span></p>
 				<p class="<?php echo esc_attr( $failed > 0 ? 'has-failures' : '' ); ?>">

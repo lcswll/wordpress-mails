@@ -22,8 +22,8 @@ test('tab lists every email type with volume, rhythm and status', async ({ page 
 	const errors = watchErrors(page);
 	await page.goto(TYPES);
 
-	// Second tab, right after the log.
-	await expect(page.locator('.mailspur-nav a').nth(1)).toHaveText('Email types');
+	// Right after the log (Overview, Log, Email types …).
+	await expect(page.locator('.mailspur-nav a').nth(2)).toHaveText('Email types');
 	await expect(page.locator('.mailspur-nav a.is-active')).toHaveText('Email types');
 
 	// 60 order confirmations with different numbers are one type, numbers shown as a placeholder chip.

@@ -1,0 +1,119 @@
+/*
+ * Mailspur – "Overview" tab (four questions with a short answer) and the health line of the dashboard widget.
+ * Uses the --ms-* / --ob-* tokens of admin.css with fallbacks, because the dashboard has no admin.css.
+ */
+
+.mailspur-answers {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+	margin-top: 16px;
+}
+
+.msa-card {
+	min-width: 0;
+	padding: 16px 20px;
+	border: 1px solid var(--ms-line, #e7e3f3);
+	border-radius: var(--ob-radius, 10px);
+	background: var(--ms-surface, #fff);
+	box-shadow: var(--ms-shadow, none);
+}
+
+.msa-card-wide {
+	grid-column: 1 / -1;
+}
+
+.mailspur .msa-question {
+	margin: 0 0 10px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.msa-form {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 0 0 4px;
+}
+
+.msa-form[hidden] {
+	display: none;
+}
+
+.msa-form input[type="search"] {
+	flex: 0 1 360px;
+	min-width: 0;
+}
+
+.msa-answer .msa-text {
+	margin: 10px 0 0;
+	font-size: 14px;
+	line-height: 1.55;
+}
+
+.msa-answer .msa-text:first-child {
+	margin-top: 0;
+}
+
+/* Tone: a small dot before the first sentence. */
+.msa-answer .msa-text:first-child::before,
+.msa-dashboard::before {
+	content: "";
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin-right: 8px;
+	border-radius: 50%;
+	background: var(--ob-pending, #8a5a00);
+	vertical-align: 1px;
+}
+
+.msa-answer.is-ok .msa-text:first-child::before,
+.msa-dashboard.is-ok::before {
+	background: var(--ob-sent, #0b8a5f);
+}
+
+.msa-answer.is-info .msa-text:first-child::before,
+.msa-dashboard.is-info::before {
+	background: var(--ob-muted, #625c78);
+}
+
+.msa-answer.is-bad .msa-text:first-child::before {
+	background: var(--ob-failed, #c8321f);
+}
+
+.msa-items {
+	margin: 6px 0 0 17px;
+	padding: 0;
+	list-style: disc;
+}
+
+.msa-items li {
+	margin: 4px 0;
+	line-height: 1.5;
+}
+
+.msa-item-link {
+	white-space: nowrap;
+}
+
+.msa-more {
+	margin: 12px 0 0;
+}
+
+.msa-loading {
+	margin: 0;
+	color: var(--ob-muted, #625c78);
+}
+
+/* Dashboard widget: one line above the numbers. */
+.msa-dashboard {
+	margin: 0 0 12px;
+	line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+	.mailspur-answers {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

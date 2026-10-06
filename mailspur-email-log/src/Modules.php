@@ -16,4 +16,5 @@ return array(
 	Mailspur\Modules\Types\Module::class,
 	Mailspur\Modules\Context\Module::class,
 	Mailspur\Modules\SiteHealth\Module::class,
+	Mailspur\Modules\Answers\Module::class,
 );
