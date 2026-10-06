@@ -16,12 +16,12 @@ Did the order confirmation go out? Why did the password reset never arrive? Mail
 
 = What makes it different =
 
-* **It maps the emails your site sends – and notices when one stops.** Mailspur builds a map of all email types on its own (order confirmation, password reset, contact form …), learns how often each one goes out and tells you when a type that normally runs daily or weekly suddenly falls silent – naming the plugin update that happened in between.
-* **Safe preview of logged emails.** HTML emails are shown in a sandboxed frame with an opaque origin, so scripts and forms in a logged email do not run, and remote content such as tracking pixels is only loaded when you allow it.
+* **It maps the emails your site sends – and notices when one stops.** Mailspur finds all email types on its own, learns how often each one goes out and tells you when one falls silent – naming the update that happened in between.
+* **Safe preview of logged emails.** HTML emails are shown in a sandboxed frame: scripts and forms do not run, and remote content such as tracking pixels only loads when you allow it.
 * **Secrets in links are masked.** One-time secrets in links (password resets, activation keys, order keys) are masked *before* they are written to the database, so the log does not contain working reset links.
 * **It answers everyday questions in plain words:** did my email arrive (by address or order number), is everything running, is an email missing, why did it fail – each in a sentence with a link to the details.
 * **It explains problems instead of just listing them.** Every email is checked for issues that keep it from arriving or displaying correctly, and failed emails come with a plain-language explanation and concrete steps.
-* **It records what was actually sent** – the final body after template plugins, the real sender, the SMTP server or API plugin that delivered it, and the exact code that called `wp_mail()`.
+* **It records what was actually sent** – the final body, the real sender, the server or API plugin that delivered it, and the code that called `wp_mail()`.
 * **Built for large logs:** an indexed table, live search, two small queries per email. No upsells, no tracking, no external service required.
 
 = Email types: the map of your site's emails =
@@ -81,7 +81,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 = Deliverability and staging =
 
 * **Sender check:** SPF, DKIM, DMARC and MX of the domains your site sends from, with a traffic light per record and ready-to-paste record suggestions.
-* **Staging mode:** hold every email (log only) or redirect all emails to test addresses on staging and development copies – a clear warning shows while it is active, held emails can be sent one by one.
+* **Staging mode:** hold every email (log only) or redirect all emails to test addresses on staging copies; a warning shows while it is active.
 * **Emergency brake for mail floods:** Mailspur learns your site's normal email volume and alerts you when far more emails leave than usual, e.g. when spam bots abuse a contact form. Optionally it holds further emails until you release or discard them. Password reset emails always go out.
 * **Problem recipients:** addresses that failed hard twice (unknown mailbox, domain without mail server, hard bounce) are listed with "Allow again". Optionally further emails to them are held (off by default; password resets always go out).
 * **Delivery status from your email provider (opt-in):** Postmark, Mailgun, Brevo or Amazon SES can report deliveries, bounces and spam complaints to a webhook URL of your site. The logged email then shows "Delivered", "Bounced" or "Marked as spam"; filter the log by it and see bounce rates per email type.
