@@ -19,6 +19,7 @@ Did the order confirmation go out? Why did the password reset never arrive? Mail
 * **It maps the emails your site sends – and notices when one stops.** Mailspur builds a map of all email types on its own (order confirmation, password reset, contact form …), learns how often each one goes out and tells you when a type that normally runs daily or weekly suddenly falls silent – naming the plugin update that happened in between.
 * **Safe preview of logged emails.** HTML emails are shown in a sandboxed frame with an opaque origin, so scripts and forms in a logged email do not run, and remote content such as tracking pixels is only loaded when you allow it.
 * **Secrets in links are masked.** One-time secrets in links (password resets, activation keys, order keys) are masked *before* they are written to the database, so the log does not contain working reset links.
+* **It answers everyday questions in plain words:** did my email arrive (by address or order number), is everything running, is an email missing, why did it fail – each in a sentence with a link to the details.
 * **It explains problems instead of just listing them.** Every email is checked for issues that keep it from arriving or displaying correctly, and failed emails come with a plain-language explanation and concrete steps.
 * **It records what was actually sent** – the final body after template plugins, the real sender, the SMTP server or API plugin that delivered it, and the exact code that called `wp_mail()`.
 * **Built for large logs:** an indexed table, live search, two small queries per email. No upsells, no tracking, no external service required.
@@ -178,6 +179,10 @@ Mailspur remembers the busiest hour of the last 14 days. If more than three time
 = Can I see whether an email reached the inbox? =
 
 Only your email provider knows that. If you send through Postmark, Mailgun, Brevo or Amazon SES, choose it under Settings → "Delivery status from your email provider" and paste the webhook URL shown there into your provider's webhook settings. Reports are matched by a reference header, the Message-ID or – as a fallback – the recipient and time, and appear in the email's details. Without it, "Sent" means that your server or provider accepted the email.
+
+= What does the Overview tab show? =
+
+Four everyday questions with a short answer each: did an email to an address or for an order number arrive (with the delivery status from your provider, if set up), is everything running, is an email missing or still due today, and why emails failed in the last 7 days. Every answer links to the details. The dashboard widget starts with the same health sentence. The answers only use what Mailspur already knows – no DNS lookups or external requests.
 
 = What are problem recipients? =
 

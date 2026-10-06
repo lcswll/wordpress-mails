@@ -44,8 +44,9 @@ final class Module implements \Mailspur\Module {
 - Escape all output, sanitize all input, check capabilities (`Settings::current_user_can_view()` to read the log,
   `manage_options` for anything that changes settings or sends mail). REST routes: namespace `Rest::NS`,
   `permission_callback` always set, args with schema.
-- Strings: `__( 'Literal', 'mailspur-email-log' )` & friends only with literal strings (no `_n`/`_x` – the
-  extractor does not support them). Add the German translation to `i18n/de_DE/foo.json`, run `npm run i18n`.
+- Strings: `__( 'Literal', 'mailspur-email-log' )` & friends only with literal strings; plurals with
+  `_n( 'Singular', 'Plural', $n, 'mailspur-email-log' )` (both texts are translated as two keys; no `_x` – the
+  extractor does not support it). Add the German translation to `i18n/de_DE/foo.json`, run `npm run i18n`.
 - Quality gate before you finish: `npm run verify` must be green (PHPCS WordPress-Extra, PHPStan level 8,
   PHPUnit, ESLint, readiness, translations, Plugin Check rules, e2e incl. browser tests, ZIP).
 
@@ -83,6 +84,7 @@ Own routes: `register_rest_route( \Mailspur\Rest::NS, '/foo', … )` on `rest_ap
 | `mailspur_settings_sanitize( array $clean, array $input )` | Sanitize your keys (missing checkbox = false). |
 | `mailspur_settings_sections( array $settings, string $option_name )` | Render `<h2>` + `<table class="form-table">` rows inside the settings form; inputs named `{$option_name}[key]`. |
 | `mailspur_settings_after()` | Content below the settings form (tools, checks; own forms/REST calls). |
+| `mailspur_dashboard_widget_top()` | One line on top of the dashboard widget (Insights), e.g. the health sentence (Answers). |
 
 ### JavaScript API (`window.mailspur`, log tab)
 
