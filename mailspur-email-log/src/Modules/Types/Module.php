@@ -2,9 +2,10 @@
 /**
  * Email types ("Mail Map"): an automatic inventory of every kind of email the site sends, with health per type,
  * an alert when a type that is sent regularly stops, types that flood the administrators' inbox, slow types and
- * new senders.
+ * new senders. Per type: bundle into one daily email (Bundle, Digest) and an own retention period (Retention).
  *
- * Nothing runs while an email is sent: the log is read afterwards (hourly cron, or when the tab is opened).
+ * Indexing never runs while an email is sent: the log is read afterwards (hourly cron, or when the tab is
+ * opened). Only bundled types are matched at send time, against one autoloaded option.
  *
  * @package Mailspur
  */
@@ -43,8 +44,11 @@ final class Module implements \Mailspur\Module {
 		$page       = new Page( $store, $indexer );
 		$repository = $this->repository;
 		$probe      = new Probe();
+		$digest     = new Digest( $store );
+		$retention  = new Retention( $store );
 
 		( new Templates() )->register();
+		( new Bundle() )->register();
 		add_action( 'admin_init', array( Store::class, 'maybe_install' ) );
 		add_action( 'admin_init', array( self::class, 'schedule' ) );
 
@@ -58,6 +62,10 @@ final class Module implements \Mailspur\Module {
 		add_action( 'admin_post_mailspur_types_mute', array( $page, 'mute' ) );
 		add_action( 'admin_post_mailspur_types_rebuild', array( $page, 'rebuild' ) );
 		add_action( 'admin_post_mailspur_types_seen', array( $page, 'seen' ) );
+		add_action( 'admin_post_' . Page::BUNDLE_ACTION, array( $page, 'bundle' ) );
+		add_action( 'admin_post_' . Retention::ACTION, array( $retention, 'handle' ) );
+		add_filter( 'mailspur_retention_rules', array( $retention, 'rules' ) );
+		add_action( Digest::HOOK, array( $digest, 'cron' ) );
 		add_action( 'admin_post_mailspur_types_quiet', array( Quiet::class, 'handle' ) );
 		Quiet::register();
 		add_action( 'admin_post_' . Inventory::ACTION, array( new Inventory( $store, $repository ), 'download' ) );
@@ -74,9 +82,11 @@ final class Module implements \Mailspur\Module {
 			\WP_CLI::add_command( 'mailspur probe', new ProbeCli( $probe ) );
 		}
 
-		$cron = static function () use ( $store, $indexer ): void {
+		$cron = static function () use ( $store, $indexer, $digest ): void {
 			Store::maybe_install();
 			$indexer->cron();
+			Bundle::sync( $store ); // Patterns widen while indexing; types disappear with the log retention.
+			$digest->overdue();
 			if ( class_exists( Alerts::class ) ) {
 				( new Monitor( $store, array( new Alerts(), 'dispatch' ) ) )->run();
 				$settings = Settings::all();
@@ -102,6 +112,7 @@ final class Module implements \Mailspur\Module {
 		if ( ! wp_next_scheduled( self::HOOK ) ) {
 			wp_schedule_event( time() + 10 * MINUTE_IN_SECONDS, 'hourly', self::HOOK );
 		}
+		Digest::schedule();
 	}
 
 	/** First day to keep: the log retention, capped at a year. */

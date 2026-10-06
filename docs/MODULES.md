@@ -59,9 +59,18 @@ final class Module implements \Mailspur\Module {
 | `mailspur_finalize_row( array $data, array $row )` | filter | Last step before the final UPDATE (and for every imported row). `$row` is the complete row incl. `message`, `headers`, `meta` (array). Set columns in `$data`, e.g. `$data['notes'] = 3;` or change `$data['meta']` / `$data['status']`. |
 | `mailspur_logged( int $id, array $row )` | action | After the final UPDATE of a logged mail (not for imports). For counters/alerts – keep it cheap. |
 | `mailspur_should_log( bool $log, array $atts )` | filter | Skip logging a mail. |
+| `Logger::$current_source` | static | Source of the mail captured last (`plugin:woocommerce`), for `pre_wp_mail` handlers that decide per sender (e.g. bundled email types). Read-only. |
 
 Statuses (`Repository::STATUS_*`): `PENDING` (0, unknown), `SENT` (1), `FAILED` (2), `HELD` (3 – deliberately
-not delivered, e.g. staging mode).
+not delivered, e.g. staging mode). The reason is in `meta.delivery.held` (`staging`, `brake`, `problem_recipient`,
+`bundled` …). When a held mail is sent on its own ("Send now"), the action `mailspur_held_released( array $row )` fires.
+
+### Retention (`Cleanup`)
+
+| Hook | Type | Use |
+| --- | --- | --- |
+| `mailspur_retention_rules( array $rules )` | filter | Own periods for single kinds of email: add `array( 'source' => 'plugin:x', 'days' => 7, 'match' => fn( string $subject ): bool )`; `days` = `Cleanup::UNTIL_LIMIT` keeps them until the maximum number of entries. Only senders with a rule are read entry by entry. |
+| `mailspur_retention_expire( int[] $ids )` | filter | Entries whose own (shorter) period ended, before deletion. Return the ids to delete (the anonymisation keeps them anonymised instead). |
 
 ### REST payloads (`Rest`)
 

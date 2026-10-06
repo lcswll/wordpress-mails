@@ -50,6 +50,9 @@ msgstr "%1$s gesendet, %2$s noch zurückgehalten …"
 msgid "%1$s vs. %2$s – %3$s"
 msgstr "%1$s ggü. %2$s – %3$s"
 
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · %2$s E-Mails gebündelt seit der letzten Sammel-E-Mail"
+
 msgid "%1$s · as of %2$s"
 msgstr "%1$s · Stand %2$s"
 
@@ -344,6 +347,15 @@ msgstr "Kaputte Zeichen (Kodierung): %1$s"
 msgid "Bulk email without unsubscribe header (%1$s recipients)"
 msgstr "Massen-E-Mail ohne Abmelde-Header (%1$s Empfänger)"
 
+msgid "Bundle into one daily email"
+msgstr "In einer täglichen E-Mail bündeln"
+
+msgid "Bundled into one daily email"
+msgstr "In einer täglichen E-Mail gebündelt"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Bündeln ist aus. Die wartenden E-Mails wurden jetzt in einer Sammel-E-Mail verschickt."
+
 msgid "Busiest day"
 msgstr "Stärkster Tag"
 
@@ -352,6 +364,9 @@ msgstr "CSV"
 
 msgid "Cancel"
 msgstr "Abbrechen"
+
+msgid "Change in the email types"
+msgstr "In den E-Mail-Typen ändern"
 
 msgid "Change staging mode"
 msgstr "Staging-Modus ändern"
@@ -545,11 +560,20 @@ msgstr "Benötigte DNS-Abfragen: etwa %1$s von %2$s erlaubten."
 msgid "Daily"
 msgstr "Täglich"
 
+msgid "Daily digest"
+msgstr "Tägliche Sammel-E-Mail"
+
 msgid "Dark"
 msgstr "Dunkel"
 
 msgid "Date"
 msgstr "Datum"
+
+msgid "Default (%s days)"
+msgstr "Standard (%s Tage)"
+
+msgid "Default (no time limit)"
+msgstr "Standard (ohne Zeitlimit)"
 
 msgid "Default sender"
 msgstr "Standard-Absender"
@@ -586,6 +610,9 @@ msgstr "Zugestellt von %s (API)"
 
 msgid "Delivered by code hooked into pre_wp_mail (API)"
 msgstr "Zugestellt von Code, der sich in pre_wp_mail einklinkt (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Am %s in der täglichen Sammel-E-Mail zugestellt."
 
 msgid "Delivery"
 msgstr "Zustellung"
@@ -730,6 +757,9 @@ msgstr "E-Mails werden weiterhin versendet. Prüfe die Hauptquelle; stelle die V
 
 msgid "Emails in 30 days"
 msgstr "E-Mails in 30 Tagen"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "E-Mails dieses Typs, die nur an Administratoren gehen, werden jetzt gesammelt und einmal am Tag in einer Sammel-E-Mail verschickt."
 
 msgid "Emails over time"
 msgstr "E-Mails im Zeitverlauf"
@@ -1109,8 +1139,14 @@ msgstr "JSON"
 msgid "Keep at most"
 msgstr "Höchstens behalten"
 
+msgid "Keep for"
+msgstr "Aufbewahren für"
+
 msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
 msgstr "Halte diese URL geheim: Sie enthält einen geheimen Schlüssel dieser Website. Speichere die Einstellungen, bevor du den Webhook testest."
+
+msgid "Kept: %s"
+msgstr "Aufbewahrt: %s"
 
 msgid "Key figures"
 msgstr "Kennzahlen"
@@ -1853,6 +1889,9 @@ msgstr "Aufbewahrung"
 msgid "Retention in the log"
 msgstr "Aufbewahrung im Log"
 
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Aufbewahrung dieses E-Mail-Typs gespeichert. Sie gilt ab der nächsten täglichen Bereinigung."
+
 msgid "Review held emails"
 msgstr "Zurückgehaltene E-Mails ansehen"
 
@@ -1906,6 +1945,9 @@ msgstr "Der SPF-Eintrag hat keinen „all“-Abschluss, daher werden E-Mails and
 
 msgid "Saturday"
 msgstr "Samstag"
+
+msgid "Save"
+msgstr "Speichern"
 
 msgid "Saved – leave empty to keep it"
 msgstr "Gespeichert – leer lassen, um ihn zu behalten"
@@ -2198,6 +2240,9 @@ msgstr "Status"
 msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
 msgstr "Sortiere im Hintergrund noch %s ältere E-Mails in Typen ein. Lade die Seite in einer Minute neu."
 
+msgid "Stop bundling (sends what waits now)"
+msgstr "Nicht mehr bündeln (verschickt Wartendes jetzt)"
+
 msgid "Stop these emails"
 msgstr "Diese E-Mails stoppen"
 
@@ -2236,6 +2281,9 @@ msgstr "Unterstützt: %s."
 
 msgid "Switch it off under %1$s: “%2$s”."
 msgstr "Abschalten unter %1$s: „%2$s“."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Aus der täglichen Sammel-E-Mail genommen und einzeln verschickt."
 
 msgid "Temporary rejection – try again later"
 msgstr "Vorübergehend abgelehnt – später erneut versuchen"
@@ -2540,6 +2588,9 @@ msgstr "An"
 msgid "To date"
 msgstr "Bis Datum"
 
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Wenn du sie behalten, aber nur eine E-Mail am Tag bekommen willst, wähle „In einer täglichen E-Mail bündeln“ im …-Menü des Typs."
+
 msgid "Top lists are based on the latest %s emails of this period."
 msgstr "Die Toplisten beruhen auf den neuesten %s E-Mails dieses Zeitraums."
 
@@ -2617,6 +2668,9 @@ msgstr "Unbekannt: Es wurde kein Zustellergebnis gemeldet (ersetzte wp_mail()-Fu
 
 msgid "Unreplaced placeholders: %1$s"
 msgstr "Nicht ersetzte Platzhalter: %1$s"
+
+msgid "Until the log limit"
+msgstr "Bis zum Log-Limit"
 
 msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
 msgstr "Bis zu 10 Adressen, durch Kommas getrennt. Cc und Bcc werden entfernt und der Betreff zeigt die ursprünglichen Empfänger. Ohne gültige Adresse werden E-Mails stattdessen zurückgehalten."
@@ -2698,6 +2752,9 @@ msgstr "WP-Cron ist seit %s nicht gelaufen – es läuft nur, wenn die Website b
 
 msgid "WP-Cron runs normally."
 msgstr "WP-Cron läuft normal."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Wartet auf die tägliche Sammel-E-Mail – wird nicht einzeln verschickt."
 
 msgid "Waits %s s for the mail server"
 msgstr "Wartet %s s auf den Mailserver"
@@ -2789,6 +2846,9 @@ msgstr "Schreib den Betreff in normaler Groß- und Kleinschreibung und hebe höc
 msgid "XML-RPC"
 msgstr "XML-RPC"
 
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Du bekommst diese Sammel-E-Mail, weil diese E-Mail-Typen in Mailspur in einer täglichen E-Mail gebündelt werden. Jede einzelne E-Mail bleibt im Log."
+
 msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
 msgstr "Du erhältst diese E-Mail, weil in den Mailspur-Einstellungen dieser Website Benachrichtigungen aktiviert sind."
 
@@ -2798,6 +2858,12 @@ msgstr "Du erhältst diese E-Mail, weil der Wochenbericht in den Mailspur-Einste
 msgid "Your DKIM selector (optional)"
 msgstr "Dein DKIM-Selektor (optional)"
 
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s Benachrichtigungen: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 Benachrichtigung: %2$s"
+
 msgid "[%1$s] Weekly email report %2$s"
 msgstr "[%1$s] Wöchentlicher E-Mail-Bericht %2$s"
 
@@ -2806,6 +2872,9 @@ msgstr "Adresse"
 
 msgid "and %s more"
 msgstr "und %s weitere"
+
+msgid "and %s more – see the log"
+msgstr "und %s weitere – siehe Log"
 
 msgid "code"
 msgstr "Code"

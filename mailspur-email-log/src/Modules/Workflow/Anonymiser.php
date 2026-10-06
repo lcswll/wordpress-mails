@@ -11,7 +11,9 @@
  *
  * Runs on the daily cleanup cron before the deletion (priority 5), in batches along the created_at
  * index with a persistent cursor. Imported entries that are already older than the limit are
- * anonymised while they are imported (mailspur_finalize_row).
+ * anonymised while they are imported (mailspur_finalize_row). While it is on, entries whose own,
+ * shorter retention period ended (e.g. "Keep for 7 days" of an email type) are anonymised instead of
+ * deleted and go with the general deletion period.
  *
  * Direct queries: the plugin's own table.
  * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
@@ -52,6 +54,7 @@ final class Anonymiser {
 		add_action( Cleanup::HOOK, array( $this, 'cron' ), 5 ); // Before the deletion (priority 10).
 		add_filter( 'mailspur_finalize_row', array( $this, 'finalize_row' ), PHP_INT_MAX, 2 );
 		add_filter( 'mailspur_rest_summary', array( $this, 'summary' ), 10, 2 );
+		add_filter( 'mailspur_retention_expire', array( $this, 'expire' ) );
 	}
 
 	/**
@@ -167,6 +170,32 @@ final class Anonymiser {
 			delete_transient( Sources::TRANSIENT );
 		}
 		return $done;
+	}
+
+	/**
+	 * Entries whose own retention period ended (Cleanup): anonymised instead of deleted while anonymisation is on.
+	 *
+	 * @param mixed $ids Log entry ids.
+	 * @return int[] Ids to delete.
+	 */
+	public function expire( $ids ): array {
+		$ids  = array_map( 'intval', is_array( $ids ) ? $ids : array() );
+		$days = (int) Settings::get( 'anonymise_days' );
+		if ( $days <= 0 ) {
+			return $ids;
+		}
+		$subject = (bool) Settings::get( 'anonymise_subject' );
+		foreach ( $ids as $id ) {
+			$row = $this->repository->find( $id );
+			if ( null === $row || self::is_anonymised( $row ) ) {
+				continue;
+			}
+			$data         = self::anonymise( $row, $days, $subject, time() );
+			$data['meta'] = Logger::encode( (array) $data['meta'] );
+			$this->repository->update( $id, $data );
+		}
+		delete_transient( Sources::TRANSIENT );
+		return array();
 	}
 
 	/**

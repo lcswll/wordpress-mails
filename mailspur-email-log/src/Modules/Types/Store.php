@@ -4,8 +4,9 @@
  *
  * Only counters, subject patterns and a small state per type (log ids, body fingerprints, cron hook, emails to
  * administrators per day, the latest waiting times, the sending function – see Indexer) are stored – no
- * recipients, no contents. Day rows follow the log
- * retention (at most a year), and a type disappears with its last day row.
+ * recipients, no contents. Two choices of an administrator live in own columns, so indexing never overwrites
+ * them: "bundle into one daily email" (Bundle) and the type's own retention period (keep_days, see Retention).
+ * Day rows follow the log retention (at most a year), and a type disappears with its last day row.
  *
  * Direct queries: the module's own tables.
  * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
@@ -19,8 +20,14 @@ defined( 'ABSPATH' ) || exit;
 
 final class Store {
 
-	const DB_VERSION = 2;
+	const DB_VERSION = 3;
 	const DB_OPTION  = 'mailspur_types_db';
+
+	/** Choices (bundle, own retention) of cleared types, restored when indexing finds the same type again. */
+	const CHOICES = 'mailspur_types_choices';
+
+	/** @var array<string,array{0:int,1:int}>|null Stashed choices by source and pattern (loaded once). */
+	private $choices;
 
 	public static function types_table(): string {
 		global $wpdb;
@@ -56,6 +63,8 @@ last_seen datetime NOT NULL,
 last_status tinyint(1) unsigned NOT NULL DEFAULT 0,
 last_notes smallint(5) unsigned NOT NULL DEFAULT 0,
 muted tinyint(1) unsigned NOT NULL DEFAULT 0,
+bundle tinyint(1) unsigned NOT NULL DEFAULT 0,
+keep_days int(11) NOT NULL DEFAULT 0,
 extra text NULL,
 PRIMARY KEY  (id),
 KEY source (source)
@@ -78,7 +87,7 @@ KEY day (day)
 	/**
 	 * All types.
 	 *
-	 * @return array<int,array{id:int,source:string,pattern:string[],first_seen:string,last_seen:string,last_status:int,last_notes:int,muted:bool,extra:array<string,mixed>}> By id.
+	 * @return array<int,array{id:int,source:string,pattern:string[],first_seen:string,last_seen:string,last_status:int,last_notes:int,muted:bool,bundle:bool,keep:int,extra:array<string,mixed>}> By id.
 	 */
 	public function types(): array {
 		global $wpdb;
@@ -95,6 +104,8 @@ KEY day (day)
 				'last_status' => (int) $row['last_status'],
 				'last_notes'  => (int) $row['last_notes'],
 				'muted'       => (bool) $row['muted'],
+				'bundle'      => ! empty( $row['bundle'] ),
+				'keep'        => (int) ( $row['keep_days'] ?? 0 ),
 				'extra'       => self::decode_extra( (string) ( $row['extra'] ?? '' ) ),
 			);
 		}
@@ -138,11 +149,84 @@ KEY day (day)
 			array( '%s', '%s', '%s', '%d', '%d', '%s' ),
 			array( '%d' )
 		);
+		$this->restore( (int) $type['id'], (string) ( $type['source'] ?? '' ), (array) $type['pattern'] );
+	}
+
+	/**
+	 * Gives a type found again after a rebuild the choices it had before.
+	 *
+	 * @param string[] $pattern
+	 */
+	private function restore( int $id, string $source, array $pattern ): void {
+		if ( null === $this->choices ) {
+			$stored        = get_option( self::CHOICES, array() );
+			$this->choices = is_array( $stored ) ? $stored : array();
+		}
+		$key = $source . '|' . self::encode( $pattern );
+		if ( ! isset( $this->choices[ $key ] ) ) {
+			return;
+		}
+		global $wpdb;
+		$wpdb->update(
+			self::types_table(),
+			array(
+				'bundle'    => (int) $this->choices[ $key ][0],
+				'keep_days' => (int) $this->choices[ $key ][1],
+			),
+			array( 'id' => $id ),
+			array( '%d', '%d' ),
+			array( '%d' )
+		);
+		unset( $this->choices[ $key ] );
+		if ( $this->choices ) {
+			update_option( self::CHOICES, $this->choices, false );
+		} else {
+			delete_option( self::CHOICES );
+		}
 	}
 
 	public function mute( int $id, bool $muted ): bool {
 		global $wpdb;
 		return false !== $wpdb->update( self::types_table(), array( 'muted' => $muted ? 1 : 0 ), array( 'id' => $id ), array( '%d' ), array( '%d' ) );
+	}
+
+	/** "Bundle into one daily email" on or off. */
+	public function bundle( int $id, bool $on ): bool {
+		global $wpdb;
+		return false !== $wpdb->update( self::types_table(), array( 'bundle' => $on ? 1 : 0 ), array( 'id' => $id ), array( '%d' ), array( '%d' ) );
+	}
+
+	/**
+	 * Own retention period of a type.
+	 *
+	 * @param int $days 0 = the log's period, Cleanup::UNTIL_LIMIT = until the maximum number of entries.
+	 */
+	public function keep( int $id, int $days ): bool {
+		global $wpdb;
+		return false !== $wpdb->update( self::types_table(), array( 'keep_days' => $days ), array( 'id' => $id ), array( '%d' ), array( '%d' ) );
+	}
+
+	/**
+	 * Held emails that went out later (in the daily digest): no longer counted as held.
+	 *
+	 * @param array<int,array<string,int>> $counts Emails by type id and (site-local) day.
+	 */
+	public function unhold( array $counts ): void {
+		global $wpdb;
+		foreach ( $counts as $id => $days ) {
+			foreach ( $days as $day => $n ) {
+				$wpdb->query(
+					$wpdb->prepare(
+						'UPDATE %i SET held = CASE WHEN held > %d THEN held - %d ELSE 0 END WHERE type_id = %d AND day = %s',
+						self::days_table(),
+						$n,
+						$n,
+						$id,
+						$day
+					)
+				);
+			}
+		}
 	}
 
 	/**
@@ -241,6 +325,16 @@ KEY day (day)
 
 	public function clear(): void {
 		global $wpdb;
+		$rows = (array) $wpdb->get_results( $wpdb->prepare( 'SELECT source, pattern, bundle, keep_days FROM %i WHERE bundle <> 0 OR keep_days <> 0', self::types_table() ), ARRAY_A );
+		if ( $rows ) {
+			$stored = get_option( self::CHOICES, array() );
+			$stored = is_array( $stored ) ? $stored : array();
+			foreach ( $rows as $row ) {
+				$stored[ $row['source'] . '|' . $row['pattern'] ] = array( (int) $row['bundle'], (int) $row['keep_days'] );
+			}
+			update_option( self::CHOICES, array_slice( $stored, -200, null, true ), false );
+			$this->choices = null;
+		}
 		$wpdb->query( $wpdb->prepare( 'DELETE FROM %i', self::days_table() ) );
 		$wpdb->query( $wpdb->prepare( 'DELETE FROM %i', self::types_table() ) );
 	}

@@ -3,8 +3,8 @@
  * Email inventory ("Mail-Verzeichnis"): every email type as a list for a record of processing activities or an
  * agency handover – as CSV and as a printable page.
  *
- * Per type: subject pattern, sending plugin, recipient group, rhythm, last sent, emails in 30 days, retention of
- * the log and the categories of personal data it contains. Nothing extra is stored and no contents or addresses
+ * Per type: subject pattern, sending plugin, recipient group, rhythm, last sent, emails in 30 days, retention in
+ * the log (the type's own period, see Retention) and the categories of personal data it contains. Nothing extra is stored and no contents or addresses
  * are exported:
  * - recipient groups (administrators / registered users / other recipients) are derived at export time from the
  *   latest SAMPLE emails of each sender – addresses are only compared with the site's users, never output;
@@ -108,7 +108,8 @@ final class Inventory {
 		$types      = $this->store->types();
 		$items      = Report::current( $this->store, $now, $types );
 		$recipients = $this->recipients( $types );
-		$retention  = self::retention( (int) Settings::get( 'retention_days' ), (int) Settings::get( 'anonymise_days' ) );
+		$days       = (int) Settings::get( 'retention_days' );
+		$anonymise  = (int) Settings::get( 'anonymise_days' );
 		$format     = (string) get_option( 'date_format' );
 
 		$rows = array();
@@ -121,7 +122,7 @@ final class Inventory {
 				'rhythm'         => Page::rhythm_text( $item['rhythm'] ),
 				'last_sent'      => (string) wp_date( $format, (int) $item['last_seen'] ),
 				'emails_30_days' => (int) $item['total'],
-				'retention'      => $retention,
+				'retention'      => self::retention( ...Retention::effective( (int) ( $types[ $id ]['keep'] ?? 0 ), $days, $anonymise ) ),
 				'data'           => self::categories_text( $this->categories( (int) $item['last_id'], ! empty( $types[ $id ]['extra']['content']['var'] ) ) ),
 			);
 		}

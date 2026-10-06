@@ -1,7 +1,8 @@
 /**
  * Mailspur – email types module (log tab).
  *
- * Dialog: an "Email type" line linking to the type on the "Email types" tab, with its rhythm.
+ * Dialog: an "Email type" line linking to the type on the "Email types" tab, with its rhythm, and a "Daily digest"
+ * line for bundled emails (waiting, sent on their own or delivered in the digest).
  *
  * Uses the window.mailspur module API; all text is inserted via textContent.
  */
@@ -30,5 +31,23 @@
 		}
 		dd.append( m.node( 'span', 'mailspur-type-rhythm', m.fmt( t.rhythm, type.rhythm ) ) );
 		dl.append( m.node( 'dt', '', t.type ), dd );
+	} );
+
+	m.registerDetail( ( dl, mail ) => {
+		const d = mail.meta && mail.meta.delivery;
+		if ( ! d || ! d.bundle ) {
+			return;
+		}
+		let text = '';
+		if ( 'bundled' === d.held ) {
+			text = t.bundled;
+		} else if ( 'bundle_released' === d.held ) {
+			text = t.bundleReleased;
+		} else if ( d.digest ) {
+			text = m.fmt( t.digested, new Date( d.digest * 1000 ).toLocaleString( document.documentElement.lang || undefined ) );
+		}
+		if ( text ) {
+			dl.append( m.node( 'dt', '', t.digest ), m.node( 'dd', '', text ) );
+		}
 	} );
 }() );

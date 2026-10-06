@@ -228,12 +228,17 @@ final class Repository {
 	 * Deletes every entry created before the given GMT datetime.
 	 *
 	 * By date, not by id: imported entries are old but get new ids.
+	 *
+	 * @param string[] $except_sources Sources left alone (they keep entries longer, see Cleanup).
 	 */
-	public function delete_before( string $gmt_datetime ): int {
+	public function delete_before( string $gmt_datetime, array $except_sources = array() ): int {
 		global $wpdb;
+		$except = array_values( array_unique( array_map( 'strval', $except_sources ) ) );
+		$sql    = 'DELETE FROM %i WHERE created_at < %s' . ( $except ? ' AND source NOT IN (' . implode( ',', array_fill( 0, count( $except ), '%s' ) ) . ')' : '' ) . ' LIMIT %d';
 		return $this->delete_in_batches(
-			static function ( int $batch ) use ( $wpdb, $gmt_datetime ): int {
-				return (int) $wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE created_at < %s LIMIT %d', self::table(), $gmt_datetime, $batch ) );
+			static function ( int $batch ) use ( $wpdb, $gmt_datetime, $except, $sql ): int {
+				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals and placeholders only.
+				return (int) $wpdb->query( $wpdb->prepare( $sql, array_merge( array( self::table(), $gmt_datetime ), $except, array( $batch ) ) ) );
 			}
 		);
 	}
