@@ -25,7 +25,7 @@ final class Report {
 
 	/**
 	 * @param array<int,array<string,mixed>>                                   $types   Store::types().
-	 * @param array<int,array<string,array{total:int,failed:int,held:int}>>    $days    Store::days_since().
+	 * @param array<int,array<string,array{total:int,failed:int,held:int,reported?:int,bounced?:int,complaint?:int}>> $days Store::days_since().
 	 * @param string                                                           $today   Site-local "Y-m-d".
 	 * @param int                                                              $now     Unix time.
 	 * @param array<int,array{time:int,label:string,slug:string}>              $updates Updates::all().
@@ -42,11 +42,16 @@ final class Report {
 
 		$items = array();
 		foreach ( $types as $id => $type ) {
-			$counts = $days[ $id ] ?? array();
-			$series = array();
-			$total  = 0;
-			$failed = 0;
-			$held   = 0;
+			$counts   = $days[ $id ] ?? array();
+			$series   = array();
+			$total    = 0;
+			$failed   = 0;
+			$held     = 0;
+			$delivery = array(
+				'reported'  => 0,
+				'bounced'   => 0,
+				'complaint' => 0,
+			);
 			foreach ( $range as $day ) {
 				$c        = $counts[ $day ] ?? array(
 					'total'  => 0,
@@ -57,6 +62,9 @@ final class Report {
 				$total   += $c['total'];
 				$failed  += $c['failed'];
 				$held    += $c['held'];
+				foreach ( $delivery as $key => $sum ) {
+					$delivery[ $key ] = $sum + (int) ( $c[ $key ] ?? 0 );
+				}
 			}
 			$week_total  = 0;
 			$week_failed = 0;
@@ -115,6 +123,7 @@ final class Report {
 				'total'      => $total,
 				'failed'     => $failed,
 				'held'       => $held,
+				'delivery'   => $delivery, // Provider statuses in 30 days: emails with a status, permanent bounces, complaints.
 				'rhythm'     => $rhythm,
 				'updates'    => $since,
 				'last_id'    => (int) ( $extra['lid'] ?? 0 ),

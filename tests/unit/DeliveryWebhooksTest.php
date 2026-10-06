@@ -88,6 +88,49 @@ final class DeliveryWebhooksTest extends TestCase {
 		$this->assertSame( array(), Webhooks::parse( 'mailgun', $this->mailgun( 'opened' ) ), 'opens and clicks are ignored' );
 	}
 
+	public function test_mailgun_legacy_form_webhooks(): void {
+		$form = static function ( string $event, array $more = array() ): string {
+			return http_build_query(
+				$more + array(
+					'event'      => $event,
+					'recipient'  => 'anna@example.com',
+					'Message-Id' => '<m1@site.test>',
+					'mailspur'   => 'abcdef0123456789', // X-Mailgun-Variables arrive as form fields.
+					'timestamp'  => (string) self::NOW,
+					'token'      => 'tok9',
+					'signature'  => hash_hmac( 'sha256', self::NOW . 'tok9', 'test-' . 'signing-' . 'key' ),
+				)
+			);
+		};
+
+		$payload = Webhooks::mailgun_legacy( $form( 'bounced', array( 'code' => '550' ) ) );
+		$this->assertIsArray( $payload );
+		$this->assertTrue( Webhooks::verify_mailgun( $payload, $this->key(), self::NOW ), 'signature fields taken from the form' );
+		$this->assertSame( 'tok9', Webhooks::mailgun_token( $payload ) );
+		$this->assertSame(
+			array(
+				array(
+					'event'      => 'bounced',
+					'hard'       => true,
+					'recipient'  => 'anna@example.com',
+					'ref'        => 'abcdef0123456789',
+					'message_id' => 'm1@site.test',
+					'id'         => 'mg-legacy-tok9',
+				),
+			),
+			Webhooks::parse( 'mailgun', $payload )
+		);
+
+		$this->assertSame( 'delivered', Webhooks::parse( 'mailgun', (array) Webhooks::mailgun_legacy( $form( 'delivered' ) ) )[0]['event'] );
+		$this->assertSame( 'complaint', Webhooks::parse( 'mailgun', (array) Webhooks::mailgun_legacy( $form( 'complained' ) ) )[0]['event'] );
+		$this->assertTrue( Webhooks::parse( 'mailgun', (array) Webhooks::mailgun_legacy( $form( 'dropped', array( 'reason' => 'hardfail' ) ) ) )[0]['hard'], 'dropped: bounced before' );
+		$this->assertFalse( Webhooks::parse( 'mailgun', (array) Webhooks::mailgun_legacy( $form( 'dropped', array( 'reason' => 'old' ) ) ) )[0]['hard'], 'dropped: retries given up' );
+		$this->assertSame( array(), Webhooks::parse( 'mailgun', (array) Webhooks::mailgun_legacy( $form( 'opened' ) ) ) );
+
+		$this->assertNull( Webhooks::mailgun_legacy( 'event=delivered&recipient=anna%40example.com' ), 'unsigned form' );
+		$this->assertNull( Webhooks::mailgun_legacy( 'not a form' ) );
+	}
+
 	public function test_postmark_events(): void {
 		$delivery = Webhooks::parse(
 			'postmark',

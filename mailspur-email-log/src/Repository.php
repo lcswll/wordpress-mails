@@ -30,6 +30,17 @@ final class Repository {
 		self::STATUS_HELD    => 'held',
 	);
 
+	/**
+	 * Delivery status reported by the email provider (column "delivery", see Modules\Delivery\Feedback),
+	 * 0 = no report. A higher code wins when several reports arrive for one email.
+	 */
+	const DELIVERY = array(
+		1 => 'soft_bounce',
+		2 => 'delivered',
+		3 => 'bounced',
+		4 => 'complaint',
+	);
+
 	const ORDER_COLUMNS = array(
 		'date'    => 'created_at', // Not the id: imported entries are old but get new ids.
 		'to'      => 'recipients',
@@ -43,6 +54,20 @@ final class Repository {
 
 	public static function status_slug( int $status ): string {
 		return self::STATUSES[ $status ] ?? 'pending';
+	}
+
+	/** Slug of a delivery code, '' for none. */
+	public static function delivery_slug( int $code ): string {
+		return self::DELIVERY[ $code ] ?? '';
+	}
+
+	/** Delivery code of a provider event ("bounced" + not permanent = soft bounce), 0 for none. */
+	public static function delivery_code( string $event, bool $hard = true ): int {
+		if ( 'bounced' === $event && ! $hard ) {
+			$event = 'soft_bounce';
+		}
+		$code = array_search( $event, self::DELIVERY, true );
+		return false === $code ? 0 : (int) $code;
 	}
 
 	/**
@@ -83,7 +108,8 @@ final class Repository {
 	 * with the table name (for the "FROM %i" every caller uses).
 	 *
 	 * @param array<string,mixed> $args       search, in_body, after, before (Y-m-d, site time), source,
-	 *                                        format (html|text), attachments, notes (bool), status (slug).
+	 *                                        format (html|text), attachments, notes (bool), delivery (slug of
+	 *                                        DELIVERY), status (slug).
 	 * @param bool                $with_status Whether to apply the status filter (the list needs counts across all statuses first).
 	 * @return array{0:string,1:array<int,mixed>} SQL condition and its params.
 	 */
@@ -135,6 +161,12 @@ final class Repository {
 			$where[] = 'notes > 0';
 		}
 
+		$delivery = array_search( (string) ( $args['delivery'] ?? '' ), self::DELIVERY, true );
+		if ( false !== $delivery ) {
+			$where[]  = 'delivery = %d'; // Indexed (delivery, created_at).
+			$params[] = $delivery;
+		}
+
 		if ( $with_status ) {
 			$code = array_search( (string) ( $args['status'] ?? 'all' ), self::STATUSES, true );
 			if ( false !== $code ) {
@@ -149,7 +181,7 @@ final class Repository {
 	/**
 	 * Paginated, filtered list plus per-status counts for the same filter.
 	 *
-	 * @param array{page?:int,per_page?:int,search?:string,in_body?:bool,status?:string,orderby?:string,order?:string,after?:string,before?:string,source?:string,format?:string,attachments?:bool,notes?:bool} $args
+	 * @param array{page?:int,per_page?:int,search?:string,in_body?:bool,status?:string,orderby?:string,order?:string,after?:string,before?:string,source?:string,format?:string,attachments?:bool,notes?:bool,delivery?:string} $args
 	 * @return array{items:array<int,array<string,string>>,total:int,counts:array<string,int>}
 	 */
 	public function query( array $args ): array {
@@ -203,6 +235,48 @@ final class Repository {
 			'total'  => $total,
 			'counts' => $counts,
 		);
+	}
+
+	/** Whether any entry has a delivery status from the email provider (one index lookup). */
+	public function has_delivery(): bool {
+		global $wpdb;
+		return (bool) $wpdb->get_var( $wpdb->prepare( 'SELECT 1 FROM %i WHERE delivery > %d LIMIT 1', self::table(), 0 ) );
+	}
+
+	/**
+	 * Fills the delivery column from meta.feedback (entries that got a provider status before the column existed).
+	 *
+	 * @return int Number of updated entries.
+	 */
+	public function backfill_delivery(): int {
+		global $wpdb;
+		$last    = 0;
+		$updated = 0;
+		do {
+			$rows = (array) $wpdb->get_results(
+				$wpdb->prepare(
+					'SELECT id, meta FROM %i WHERE id > %d AND delivery = %d AND meta LIKE %s ORDER BY id LIMIT %d',
+					self::table(),
+					$last,
+					0,
+					'%' . $wpdb->esc_like( '"feedback":{' ) . '%' . $wpdb->esc_like( '"event":' ) . '%',
+					500
+				),
+				ARRAY_A
+			);
+			$got  = count( $rows );
+			foreach ( $rows as $row ) {
+				$last     = (int) $row['id'];
+				$meta     = json_decode( (string) $row['meta'], true );
+				$feedback = is_array( $meta ) && isset( $meta['feedback'] ) && is_array( $meta['feedback'] ) ? $meta['feedback'] : array();
+				$code     = self::delivery_code( (string) ( $feedback['event'] ?? '' ), ! empty( $feedback['hard'] ) );
+				if ( $code ) {
+					$this->update( $last, array( 'delivery' => $code ) );
+					++$updated;
+				}
+			}
+		} while ( 500 === $got );
+		return $updated;
 	}
 
 	/**

@@ -113,6 +113,7 @@ final class Controller {
 				'toAdmins'  => $item['admin'],
 				'noise'     => $item['noise'],
 				'slow'      => $item['slow'],
+				'delivery'  => $item['delivery'],
 				'newSender' => $item['new_sender'],
 			);
 		}

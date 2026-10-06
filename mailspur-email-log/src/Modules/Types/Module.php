@@ -99,6 +99,7 @@ final class Module implements \Mailspur\Module {
 		add_action( self::HOOK_NOW, $cron );
 
 		add_action( 'upgrader_process_complete', array( Updates::class, 'record' ), 10, 2 );
+		add_action( 'mailspur_delivery_status', array( $indexer, 'delivery_changed' ), 10, 4 );
 		add_action(
 			Cleanup::HOOK,
 			static function () use ( $store ): void {

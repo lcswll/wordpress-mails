@@ -39,6 +39,7 @@ final class WorkflowExporterTest extends TestCase {
 			'id'           => (string) $id,
 			'created_at'   => '2026-09-30 10:00:0' . ( $id % 10 ),
 			'status'       => '1',
+			'delivery'     => '3',
 			'recipients'   => 'anna@example.com',
 			'subject'      => 'Order ' . $id . $extra,
 			'attachments'  => '[{"name":"invoice.pdf","path":"/srv/www/wp-content/uploads/secret/invoice.pdf"}]',
@@ -87,8 +88,8 @@ final class WorkflowExporterTest extends TestCase {
 
 		$csv = $this->export( 'csv' );
 
-		$this->assertStringStartsWith( "\xEF\xBB\xBF\"id\",\"date\",\"date_utc\",\"status\",\"from\",\"to\",\"subject\"", $csv );
-		$this->assertStringContainsString( '1,"2026-09-30 10:00:01","2026-09-30T10:00:01Z","sent","Shop <shop@example.com>","anna@example.com","Order 1, ""quoted""","plugin:woocommerce","text/html","invoice.pdf","",2,1234' . "\r\n", $csv );
+		$this->assertStringStartsWith( "\xEF\xBB\xBF\"id\",\"date\",\"date_utc\",\"status\",\"delivery\",\"from\",\"to\",\"subject\"", $csv );
+		$this->assertStringContainsString( '1,"2026-09-30 10:00:01","2026-09-30T10:00:01Z","sent","bounced","Shop <shop@example.com>","anna@example.com","Order 1, ""quoted""","plugin:woocommerce","text/html","invoice.pdf","",2,1234' . "\r\n", $csv );
 		$this->assertStringNotContainsString( '/srv/www', $csv );
 		$this->assertStringNotContainsString( '<p>Hi</p>', $csv, 'Bodies only on request.' );
 	}
@@ -111,7 +112,7 @@ final class WorkflowExporterTest extends TestCase {
 		$this->assertCount( 2, $data );
 		$this->assertSame( array( 'invoice.pdf' ), $data[0]['attachments'] );
 		$this->assertSame( 2, $data[1]['id'] );
-		$this->assertSame( array( 'id', 'date', 'date_utc', 'status', 'from', 'to', 'subject', 'source', 'content_type', 'attachments', 'error', 'notes', 'size' ), array_keys( $data[0] ) );
+		$this->assertSame( array( 'id', 'date', 'date_utc', 'status', 'delivery', 'from', 'to', 'subject', 'source', 'content_type', 'attachments', 'error', 'notes', 'size' ), array_keys( $data[0] ) );
 
 		$this->wpdb->results = array( array() );
 		$this->assertSame( array(), json_decode( $this->export( 'json' ), true ) );

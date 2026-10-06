@@ -83,7 +83,7 @@ Most email problems are not failures but emails that are never triggered: a plug
 * **Staging mode:** hold every email (log only) or redirect all emails to test addresses on staging and development copies – a clear warning shows while it is active, held emails can be sent one by one.
 * **Emergency brake for mail floods:** Mailspur learns your site's normal email volume and alerts you when far more emails leave than usual, e.g. when spam bots abuse a contact form. Optionally it holds further emails until you release or discard them. Password reset emails always go out.
 * **Problem recipients:** addresses that failed hard twice (unknown mailbox, domain without mail server, hard bounce) are listed with "Allow again". Optionally further emails to them are held (off by default; password resets always go out).
-* **Delivery status from your email provider (opt-in):** Postmark, Mailgun, Brevo or Amazon SES can report deliveries, bounces and spam complaints to a webhook URL of your site. The logged email then shows "Delivered", "Bounced" or "Marked as spam".
+* **Delivery status from your email provider (opt-in):** Postmark, Mailgun, Brevo or Amazon SES can report deliveries, bounces and spam complaints to a webhook URL of your site. The logged email then shows "Delivered", "Bounced" or "Marked as spam"; filter the log by it and see bounce rates per email type.
 * **Send to another address**, e.g. to forward a lost order confirmation, or resend the original.
 
 = Bring your old log along =
@@ -179,11 +179,11 @@ Mailspur remembers the busiest hour of the last 14 days. If more than three time
 
 = Can I see whether an email reached the inbox? =
 
-Only your email provider knows that. If you send through Postmark, Mailgun, Brevo or Amazon SES, choose it under Settings → "Delivery status from your email provider" and paste the webhook URL shown there into your provider's webhook settings. Reports are matched by a reference header, the Message-ID or – as a fallback – the recipient and time, and appear in the email's details. Without it, "Sent" means that your server or provider accepted the email.
+Only your email provider knows that. If you send through Postmark, Mailgun, Brevo or Amazon SES, choose it under Settings → "Delivery status from your email provider" and paste the webhook URL shown there into your provider's webhook settings. Reports are matched by a reference header, the Message-ID or – as a fallback – the recipient and time, and appear in the email's details and in the log filter "Provider status"; the Email types tab shows bounces and spam complaints per type. "Create new URL" replaces the secret key (the old URL stops working at once). Mailgun's legacy webhooks are accepted too. Without it, "Sent" means that your server or provider accepted the email.
 
 = What are problem recipients? =
 
-Addresses that failed hard at least twice: the receiving server rejected the mailbox (e.g. "550 user unknown"), the recipient domain has no mail server, or your email provider reported a hard bounce. Temporary errors and problems on the sender's side do not count. You find them under Settings → "Problem recipients", where each one can be allowed again. Entries expire with the retention period of the log.
+Addresses that failed hard at least twice: the receiving server rejected the mailbox (e.g. "550 user unknown"), the recipient domain has no mail server, or your email provider reported a hard bounce (also for Cc and Bcc recipients of the reported email). Temporary errors and problems on the sender's side do not count. You find them under Settings → "Problem recipients", where each one can be allowed again. Entries expire with the retention period of the log.
 
 = How accurate is the dark-mode preview? =
 

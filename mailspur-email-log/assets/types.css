@@ -183,6 +183,17 @@
 	color: var(--mst-failed);
 }
 
+/* Bounces and spam complaints reported by the email provider. */
+.mst-bounces {
+	display: block;
+	margin-top: 2px;
+	font-size: 12px;
+}
+
+.mst-bounces a {
+	color: var(--mst-failed);
+}
+
 /* ---------------------------------------------------------------- sparkline */
 
 .mst-spark {

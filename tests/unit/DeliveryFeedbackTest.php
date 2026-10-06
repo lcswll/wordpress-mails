@@ -9,6 +9,7 @@
 
 namespace Mailspur\Tests;
 
+use Brain\Monkey\Actions;
 use Brain\Monkey\Functions;
 use Mailspur\Modules\Delivery\Feedback;
 use Mailspur\Modules\Delivery\Problems;
@@ -161,7 +162,16 @@ final class DeliveryFeedbackTest extends TestCase {
 	}
 
 	public function test_hard_bounce_matched_by_reference(): void {
-		$this->wpdb->results = array( array( $this->row( 12, '{"feedback":{"ref":"' . self::REF . '"}}' ) ) );
+		Actions\expectDone( 'mailspur_delivery_status' )->once()->with(
+			12,
+			'bounced',
+			'',
+			array(
+				'id'      => 12,
+				'subject' => 'Your order',
+			)
+		);
+		$this->wpdb->results = array( array( $this->row( 12, '{"feedback":{"ref":"' . self::REF . '"}}' ) + array( 'subject' => 'Your order' ) ) );
 		$response            = $this->feedback->receive( $this->request( $this->bounce() ) );
 		$this->assertSame(
 			array(
@@ -174,6 +184,7 @@ final class DeliveryFeedbackTest extends TestCase {
 
 		$update = $this->writes( 'update' )[0];
 		$this->assertSame( array( 'id' => 12 ), $update[3] );
+		$this->assertSame( 3, $update[2]['delivery'], 'indexed status column: bounced' );
 		$meta = json_decode( $update[2]['meta'], true );
 		$this->assertSame(
 			array(
@@ -271,6 +282,58 @@ final class DeliveryFeedbackTest extends TestCase {
 		$this->feedback->receive( $this->request( $bounce ) );
 		$this->assertCount( 1, $this->writes( 'update' ), 'status of the entry' );
 		$this->assertSame( array(), Problems::all(), 'but no problem recipient from the payload alone' );
+	}
+
+	public function test_bounce_of_a_cc_or_bcc_recipient_counts(): void {
+		$row                 = $this->row( 12 ) + array( 'headers' => "From: Shop <shop@example.com>\nCc: Boss <boss@example.com>, x@example.com\nbcc: archive@example.com" );
+		$this->wpdb->results = array( array( $row ), array( $row ), array( $row ) );
+		foreach ( array( 'boss@example.com', 'archive@example.com', 'shop@example.com' ) as $i => $email ) {
+			$bounce          = $this->bounce( (string) ( $i + 1 ) );
+			$bounce['Email'] = $email;
+			$this->feedback->receive( $this->request( $bounce ) );
+		}
+		$this->assertSame( array( 'boss@example.com', 'archive@example.com' ), array_keys( Problems::all() ), 'Cc and Bcc count, other headers do not' );
+		$this->assertSame( array( 'anna@example.com', 'boss@example.com', 'x@example.com', 'archive@example.com' ), Feedback::recipients( $row ) );
+	}
+
+	public function test_new_secret_replaces_the_webhook_url(): void {
+		$old = Feedback::url( 'postmark' );
+		$this->assertTrue( $this->feedback->authorize( $this->request( array() ) ) );
+
+		Functions\when( 'wp_generate_password' )->justReturn( 'NewSecret' . 'AbcdefghijKlmnopqrstUvw' );
+		$this->assertSame( 'NewSecret' . 'AbcdefghijKlmnopqrstUvw', Feedback::regenerate() );
+		$this->assertFalse( $this->feedback->authorize( $this->request( array() ) ), 'the old URL is rejected' );
+		$this->assertTrue( $this->feedback->authorize( $this->request( array(), array( 'key' => 'NewSecret' . 'AbcdefghijKlmnopqrstUvw' ) ) ) );
+		$this->assertNotSame( $old, Feedback::urls()['postmark'] );
+		$this->assertCount( count( Feedback::PROVIDERS ), Feedback::urls() );
+	}
+
+	public function test_mailgun_legacy_form_webhook(): void {
+		$this->options['mailspur_settings'] = array(
+			'feedback_provider'    => 'mailgun',
+			'feedback_signing_key' => 'test-' . 'signing-' . 'key',
+		);
+		$form                               = array(
+			'event'     => 'bounced',
+			'recipient' => 'anna@example.com',
+			'mailspur'  => self::REF,
+			'timestamp' => (string) self::NOW,
+			'token'     => 'tok',
+			'signature' => hash_hmac( 'sha256', self::NOW . 'tok', 'test-' . 'signing-' . 'key' ),
+		);
+		$request                            = $this->request( array(), array( 'provider' => 'mailgun' ) );
+		$request->set_body( http_build_query( $form ) );
+		$this->wpdb->results = array( array( $this->row( 12 ) ) );
+		$response            = $this->feedback->receive( $request );
+		$this->assertSame( 1, $response->get_data()['matched'] );
+		$this->assertSame( array( '12' ), Problems::all()['anna@example.com']['ids'] );
+
+		$form['token'] = 'tok2'; // Same signature, other token: forged.
+		$request->set_body( http_build_query( $form ) );
+		$this->assertSame( 401, $this->feedback->receive( $request )->get_error_data()['status'] );
+
+		$this->options['mailspur_settings']['feedback_provider'] = 'postmark';
+		$this->assertSame( 400, $this->feedback->receive( $request )->get_error_data()['status'], 'forms only for Mailgun' );
 	}
 
 	public function test_invalid_bodies(): void {

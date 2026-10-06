@@ -14,7 +14,9 @@
  *
  * Formats:
  *   Postmark  one JSON object per request, RecordType Delivery | Bounce | SpamComplaint, Metadata.mailspur
- *   Mailgun   JSON {signature:{timestamp,token,signature}, event-data:{event,severity,recipient,user-variables,message}}
+ *   Mailgun   JSON {signature:{timestamp,token,signature}, event-data:{event,severity,recipient,user-variables,message}};
+ *             legacy webhooks post a form (event, recipient, Message-Id, timestamp, token, signature, custom
+ *             variables as fields), converted to that shape by mailgun_legacy()
  *   Brevo     one JSON object (or a list when batched), event delivered | hard_bounce | soft_bounce | …, X-Mailin-custom
  *   SES       the Message of an SNS notification: notificationType/eventType Delivery | Bounce | Complaint, mail.tags
  *
@@ -134,6 +136,44 @@ final class Webhooks {
 				return array( self::event( self::COMPLAINT, false, $to, $ref, $mid, $id ) );
 		}
 		return array();
+	}
+
+	/**
+	 * Mailgun's legacy webhooks (form-encoded body: signature fields, event fields and custom variables at the top
+	 * level) in the shape of the current JSON webhooks, or null when the body is no such form.
+	 *
+	 * @return array<string,mixed>|null
+	 */
+	public static function mailgun_legacy( string $body ): ?array {
+		parse_str( $body, $form );
+		if ( '' === self::str( $form, 'signature' ) || '' === self::str( $form, 'token' ) ) {
+			return null;
+		}
+		// Legacy event => current event and severity ("dropped" is permanent when the address bounced before).
+		$events = array(
+			'delivered'  => array( 'delivered', '' ),
+			'bounced'    => array( 'failed', 'permanent' ),
+			'dropped'    => array( 'failed', 'hardfail' === self::str( $form, 'reason' ) ? 'permanent' : 'temporary' ),
+			'complained' => array( 'complained', '' ),
+		);
+		$name   = self::str( $form, 'event' );
+		$event  = $events[ $name ] ?? array( $name, '' );
+		$mid    = self::str( $form, 'Message-Id' );
+		return array(
+			'signature'  => array(
+				'timestamp' => self::str( $form, 'timestamp' ),
+				'token'     => self::str( $form, 'token' ),
+				'signature' => self::str( $form, 'signature' ),
+			),
+			'event-data' => array(
+				'event'          => $event[0],
+				'severity'       => $event[1],
+				'recipient'      => self::str( $form, 'recipient' ),
+				'id'             => 'legacy-' . self::str( $form, 'token' ),
+				'user-variables' => array( self::KEY => self::str( $form, self::KEY ) ), // Custom variables are form fields.
+				'message'        => array( 'headers' => array( 'message-id' => '' !== $mid ? $mid : self::str( $form, 'message-id' ) ) ),
+			),
+		);
 	}
 
 	/**

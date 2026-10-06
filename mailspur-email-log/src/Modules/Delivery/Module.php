@@ -40,6 +40,12 @@ final class Module implements \Mailspur\Module {
 		add_action( 'admin_notices', array( $this, 'notices' ) );
 		add_action( 'admin_notices', array( $this, 'brake_notice' ), 5 );
 		add_action( 'admin_bar_menu', array( $this, 'admin_bar' ), 100 );
+		add_filter(
+			'mailspur_delivery_filter',
+			static function ( $show ): bool {
+				return (bool) $show || '' !== Feedback::provider(); // The log's provider status filter.
+			}
+		);
 		add_action( 'wp_enqueue_scripts', array( $this, 'admin_bar_style' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_bar_style' ) );
 		add_action(
@@ -201,11 +207,8 @@ final class Module implements \Mailspur\Module {
 			'brevo'    => __( 'In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint.', 'mailspur-email-log' ),
 			'ses'      => __( 'In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically.', 'mailspur-email-log' ),
 		);
-		$urls     = array();
-		foreach ( Feedback::PROVIDERS as $key ) {
-			$urls[ $key ] = Feedback::url( $key );
-		}
-		$has_key = '' !== (string) ( $settings['feedback_signing_key'] ?? '' );
+		$urls     = Feedback::urls();
+		$has_key  = '' !== (string) ( $settings['feedback_signing_key'] ?? '' );
 		?>
 		<h2 id="mailspur-feedback"><?php esc_html_e( 'Delivery status from your email provider', 'mailspur-email-log' ); ?></h2>
 		<p class="description"><?php esc_html_e( 'Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails.', 'mailspur-email-log' ); ?></p>
@@ -225,6 +228,10 @@ final class Module implements \Mailspur\Module {
 				<td>
 					<input type="text" readonly class="large-text code" id="mailspur-feedback-url" value="<?php echo esc_attr( '' !== $provider ? $urls[ $provider ] : '' ); ?>">
 					<button type="button" class="button" id="mailspur-feedback-copy"><?php esc_html_e( 'Copy', 'mailspur-email-log' ); ?></button>
+					<?php if ( current_user_can( 'manage_options' ) ) : ?>
+						<button type="button" class="button-link" id="mailspur-feedback-renew" hidden><?php esc_html_e( 'Create new URL', 'mailspur-email-log' ); ?></button>
+					<?php endif; ?>
+					<span class="mailspur-feedback-renewed" id="mailspur-feedback-renewed" aria-live="polite"></span>
 					<?php foreach ( $hints as $key => $hint ) : ?>
 						<p class="description" data-feedback-hint="<?php echo esc_attr( $key ); ?>" <?php echo $key !== $provider ? 'hidden' : ''; ?>><?php echo esc_html( $hint ); ?></p>
 					<?php endforeach; ?>
@@ -411,6 +418,8 @@ final class Module implements \Mailspur\Module {
 				/* translators: 1: delivery status, 2: email provider, 3: date and time */
 				'reportedBy'      => __( '%1$s – reported by %2$s, %3$s', 'mailspur-email-log' ),
 				'copied'          => __( 'Copied', 'mailspur-email-log' ),
+				'confirmRenew'    => __( 'Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider.', 'mailspur-email-log' ),
+				'renewed'         => __( 'New URL created. Update it at your email provider.', 'mailspur-email-log' ),
 			),
 			'providers' => self::provider_labels(),
 		);

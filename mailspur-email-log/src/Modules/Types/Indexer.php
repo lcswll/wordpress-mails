@@ -2,7 +2,7 @@
 /**
  * Sorts logged emails into email types – incrementally and never while an email is being sent.
  *
- * Reads the log after a cursor (log id) in small keyset batches: id, date, status, source, subject and the notes
+ * Reads the log after a cursor (log id) in small keyset batches: id, date, status, source, subject, the provider status and the notes
  * count, then – in smaller chunks – the start of each body (content fingerprint, see Content), the recipients
  * (only compared with the administrators' addresses, see Noise) and the meta (was the email sent by WP-Cron,
  * from which hook, how long it took – see Speed). New senders are remembered (Senders). Runs hourly via WP-Cron and briefly when the "Email types" tab is
@@ -122,7 +122,7 @@ final class Indexer {
 		while ( $read < $limit ) {
 			$rows = (array) $wpdb->get_results(
 				$wpdb->prepare(
-					'SELECT id, created_at, status, source, subject, notes FROM %i WHERE id > %d ORDER BY id ASC LIMIT %d',
+					'SELECT id, created_at, status, source, subject, notes, delivery FROM %i WHERE id > %d ORDER BY id ASC LIMIT %d',
 					$table,
 					$cursor,
 					min( self::BATCH, $limit - $read )
@@ -158,9 +158,12 @@ final class Indexer {
 				$day  = (string) wp_date( 'Y-m-d', $time );
 				if ( ! isset( $counts[ $id ][ $day ] ) ) {
 					$counts[ $id ][ $day ] = array(
-						'total'  => 0,
-						'failed' => 0,
-						'held'   => 0,
+						'total'     => 0,
+						'failed'    => 0,
+						'held'      => 0,
+						'reported'  => 0,
+						'bounced'   => 0,
+						'complaint' => 0,
 					);
 				}
 				++$counts[ $id ][ $day ]['total'];
@@ -168,6 +171,14 @@ final class Indexer {
 					++$counts[ $id ][ $day ]['failed'];
 				} elseif ( Repository::STATUS_HELD === $status ) {
 					++$counts[ $id ][ $day ]['held'];
+				}
+				// Provider status known by now; later changes arrive through delivery_changed().
+				$delivery = Repository::delivery_slug( (int) ( $row['delivery'] ?? 0 ) );
+				if ( '' !== $delivery ) {
+					++$counts[ $id ][ $day ]['reported'];
+					if ( 'bounced' === $delivery || 'complaint' === $delivery ) {
+						++$counts[ $id ][ $day ][ $delivery ];
+					}
 				}
 
 				$type = &$this->types[ $id ];
@@ -200,6 +211,35 @@ final class Indexer {
 			Senders::save( $senders );
 		}
 		return $read;
+	}
+
+	/**
+	 * Action mailspur_delivery_status: the provider reported on an email. Emails the index has already counted
+	 * move between the status counters of their type and day; newer ones are counted when they are indexed.
+	 *
+	 * @param mixed $id     Log entry id.
+	 * @param mixed $status New status (Repository::DELIVERY slug).
+	 * @param mixed $before Previous status, '' for none.
+	 * @param mixed $row    id, created_at, source, subject.
+	 */
+	public function delivery_changed( $id, $status, $before, $row ): void {
+		if ( ! is_array( $row ) || (int) $id <= 0 || (int) $id > (int) get_option( self::CURSOR, 0 ) || self::ignored( (string) ( $row['source'] ?? '' ) ) ) {
+			return;
+		}
+		$source = (string) ( $row['source'] ?? '' );
+		$type   = self::find(
+			array_filter(
+				$this->store->types(),
+				static function ( array $type ) use ( $source ): bool {
+					return $type['source'] === $source;
+				}
+			),
+			(string) ( $row['subject'] ?? '' )
+		);
+		if ( null !== $type ) {
+			$day = (string) wp_date( 'Y-m-d', (int) strtotime( (string) ( $row['created_at'] ?? '' ) . ' UTC' ) );
+			$this->store->delivery_changed( $type, $day, (string) $status, (string) $before );
+		}
 	}
 
 	/**

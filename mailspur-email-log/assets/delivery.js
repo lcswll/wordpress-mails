@@ -231,6 +231,7 @@
 		const settings = document.getElementById( 'mailspur-feedback-settings' );
 		const url = document.getElementById( 'mailspur-feedback-url' );
 		const copy = document.getElementById( 'mailspur-feedback-copy' );
+		const copyLabel = copy.textContent;
 		let urls = {};
 		try {
 			urls = JSON.parse( provider.dataset.urls || '{}' );
@@ -254,6 +255,31 @@
 				// Clipboard blocked (insecure context): the URL stays selected for Ctrl+C.
 			}
 		} );
+
+		// New secret: the old URL is rejected at once, so the provider has to get the new one.
+		const renew = document.getElementById( 'mailspur-feedback-renew' );
+		const renewed = document.getElementById( 'mailspur-feedback-renewed' );
+		if ( renew ) {
+			renew.hidden = false;
+			renew.addEventListener( 'click', async () => {
+				if ( ! window.confirm( t.confirmRenew ) ) {
+					return;
+				}
+				renew.disabled = true;
+				try {
+					const res = await request( 'delivery/webhook-secret', 'POST' );
+					urls = res.urls || {};
+					provider.dataset.urls = JSON.stringify( urls );
+					sync();
+					copy.textContent = copyLabel;
+					renewed.textContent = t.renewed;
+				} catch ( err ) {
+					renewed.textContent = fmt( t.requestFailed, err.message );
+				} finally {
+					renew.disabled = false;
+				}
+			} );
+		}
 	}
 
 	document.addEventListener( 'click', async ( e ) => {

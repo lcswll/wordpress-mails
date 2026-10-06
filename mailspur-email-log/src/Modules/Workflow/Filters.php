@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 final class Filters {
 
 	/** Filter keys shared with the list (Rest::list_args()); paging is not part of an export. */
-	const KEYS = array( 'search', 'in_body', 'status', 'after', 'before', 'source', 'format', 'attachments', 'notes', 'orderby', 'order' );
+	const KEYS = array( 'search', 'in_body', 'status', 'after', 'before', 'source', 'format', 'attachments', 'notes', 'delivery', 'orderby', 'order' );
 
 	/**
 	 * @param array<string,mixed> $input Raw values (already unslashed).

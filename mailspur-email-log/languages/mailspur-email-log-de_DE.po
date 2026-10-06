@@ -32,6 +32,9 @@ msgstr "%1$s Einträge, %2$s"
 msgid "%1$s imported, %2$s duplicates, %3$s too old"
 msgstr "%1$s importiert, %2$s Duplikate, %3$s zu alt"
 
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s von %2$s unzustellbar (%3$s)"
+
 msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
 msgstr "%1$s von %2$s E-Mails der letzten %3$s Tage konnten nicht versendet werden."
 
@@ -97,6 +100,9 @@ msgstr "%s importierte Einträge entfernt."
 
 msgid "%s in 30 days"
 msgstr "%s in 30 Tagen"
+
+msgid "%s marked as spam"
+msgstr "%s als Spam markiert"
 
 msgid "%s more on the Email types page."
 msgstr "%s weitere auf der Seite „E-Mail-Typen“."
@@ -283,6 +289,9 @@ msgstr "Anonymisiert"
 
 msgid "Any format"
 msgstr "Jedes Format"
+
+msgid "Any status"
+msgstr "Jeder Status"
 
 msgid "Apply"
 msgstr "Anwenden"
@@ -523,6 +532,12 @@ msgstr "Pro E-Mail einmal gezählt."
 
 msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
 msgstr "Erstelle bei deinem Maildienst einen neuen API-Schlüssel mit Sendeberechtigung und trage ihn im Mailer-Plugin ein."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Neue Webhook-URL erstellen? Die bisherige URL funktioniert dann sofort nicht mehr – füge die neue URL in die Webhook-Einstellungen deines E-Mail-Dienstes ein."
+
+msgid "Create new URL"
+msgstr "Neue URL erstellen"
 
 msgid "Current page"
 msgstr "Aktuelle Seite"
@@ -1310,6 +1325,9 @@ msgstr "Viele Mailprogramme blockieren Bilder, bis der Leser sie erlaubt. Ohne A
 msgid "Mark as resolved"
 msgstr "Als erledigt markieren"
 
+msgid "Marked as spam"
+msgstr "Als Spam markiert"
+
 msgid "Marked as spam by the recipient"
 msgstr "Vom Empfänger als Spam markiert"
 
@@ -1372,6 +1390,9 @@ msgstr "Nie"
 
 msgid "New"
 msgstr "Neu"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Neue URL erstellt. Trage sie bei deinem E-Mail-Dienst ein."
 
 msgid "New email types"
 msgstr "Neue E-Mail-Typen"
@@ -1849,6 +1870,9 @@ msgstr "Benachrichtigung wiederholen nach"
 
 msgid "Replies cannot reach you: sent from %1$s without Reply-To"
 msgstr "Antworten erreichen dich nicht: gesendet von %1$s ohne Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Von deinem E-Mail-Dienst in den letzten 30 Tagen gemeldet; es zählen nur E-Mails, zu denen er etwas gemeldet hat."
 
 msgid "Request"
 msgstr "Anfrage"

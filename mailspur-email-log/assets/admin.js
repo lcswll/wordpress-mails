@@ -38,6 +38,8 @@
 		format: $( 'mailspur-format' ),
 		attachments: $( 'mailspur-attachments' ),
 		notes: $( 'mailspur-notes' ),
+		delivery: $( 'mailspur-delivery' ),
+		deliveryField: $( 'mailspur-delivery-field' ),
 		perPage: $( 'mailspur-per-page' ),
 		page: $( 'mailspur-page' ),
 		pages: $( 'mailspur-pages' ),
@@ -71,6 +73,7 @@
 		format: '',
 		attachments: false,
 		notes: false,
+		delivery: '',
 	};
 	// URL keys (WordPress already owns "page").
 	const URL_KEYS = {
@@ -86,10 +89,11 @@
 		format: 'format',
 		attachments: 'att',
 		notes: 'notes',
+		delivery: 'delivery',
 	};
 	const FLAGS = [ 'in_body', 'attachments', 'notes' ];
 	// Filters behind the "More filters" toggle.
-	const MORE = [ 'source', 'format', 'attachments', 'notes' ];
+	const MORE = [ 'source', 'format', 'attachments', 'notes', 'delivery' ];
 	// Everything that narrows the list (not paging/sorting).
 	const FILTERS = [ 'search', 'after', 'before', 'status' ].concat( MORE );
 
@@ -290,6 +294,10 @@
 		el.format.value = state.format;
 		el.attachments.checked = state.attachments;
 		el.notes.checked = state.notes;
+		el.delivery.value = state.delivery;
+		if ( state.delivery ) {
+			el.deliveryField.hidden = false; // Offered only with provider statuses, but never filter invisibly.
+		}
 		const extra = MORE.filter( ( key ) => state[ key ] !== DEFAULTS[ key ] ).length;
 		el.moreCount.textContent = extra ? num( extra ) : '';
 
@@ -931,12 +939,13 @@
 	// Open on load when one of its filters is active, so nothing is filtered invisibly.
 	toggleMore( MORE.some( ( key ) => state[ key ] !== DEFAULTS[ key ] ) );
 
-	[ el.source, el.format, el.attachments, el.notes ].forEach( ( input ) =>
+	[ el.source, el.format, el.attachments, el.notes, el.delivery ].forEach( ( input ) =>
 		input.addEventListener( 'change', () => {
 			state.source = el.source.value;
 			state.format = el.format.value;
 			state.attachments = el.attachments.checked;
 			state.notes = el.notes.checked;
+			state.delivery = el.delivery.value;
 			state.page = 1;
 			load();
 		} )

@@ -10,6 +10,7 @@
  *   POST /delivery/brake/discard discard all mails held by the emergency brake
  *   POST /delivery/brake/reset   end the incident ("this is fine"), held mails stay held
  *   DELETE /delivery/problems    "Allow again": forget a problem recipient (address in the body)
+ *   POST /delivery/webhook-secret new secret for the provider webhook URL (the old URL stops working)
  *
  * Public (secret in the URL, see Feedback::authorize()):
  *   POST /delivery/webhook/{provider}/{key}  delivery status reported by the email provider
@@ -157,6 +158,16 @@ final class Controller {
 
 		register_rest_route(
 			Rest::NS,
+			'/delivery/webhook-secret',
+			array(
+				'methods'             => WP_REST_Server::CREATABLE,
+				'callback'            => array( $this, 'regenerate_secret' ),
+				'permission_callback' => array( $this, 'is_admin' ),
+			)
+		);
+
+		register_rest_route(
+			Rest::NS,
 			'/delivery/hint',
 			array(
 				'methods'             => WP_REST_Server::CREATABLE,
@@ -235,6 +246,11 @@ final class Controller {
 
 	public function allow_recipient( WP_REST_Request $request ): WP_REST_Response {
 		return self::no_store( new WP_REST_Response( array( 'allowed' => Problems::allow( (string) $request['email'] ) ) ) );
+	}
+
+	public function regenerate_secret(): WP_REST_Response {
+		Feedback::regenerate();
+		return self::no_store( new WP_REST_Response( array( 'urls' => Feedback::urls() ) ) );
 	}
 
 	public function dismiss_hint(): WP_REST_Response {

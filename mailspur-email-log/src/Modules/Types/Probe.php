@@ -51,8 +51,16 @@ final class Probe {
 	 */
 	private $mails = array();
 
+	/** @var array<string,string>|null Endings of the core subjects in the languages of this site => kind. */
+	private static $endings = null;
+
+	/** @var string Current and site locale the endings were built for. */
+	private static $endings_for = '';
+
 	/**
-	 * Probe kind of a template kind ("new-user-admin") or of an English core subject pattern, or null.
+	 * Probe kind of a template kind ("new-user-admin") or of a core subject pattern, or null. Core subjects are
+	 * recognised in English and in the language WordPress sends them in on this site (older emails have no
+	 * template kind yet).
 	 */
 	public static function kind( string $text ): ?string {
 		if ( in_array( $text, self::KINDS, true ) ) {
@@ -67,7 +75,62 @@ final class Probe {
 		if ( preg_match( '/\b(New User Registration|Login Details)$/i', $text ) ) {
 			return self::NEW_USER;
 		}
+		$lower = self::lower( $text );
+		foreach ( self::endings() as $ending => $kind ) {
+			if ( strlen( $lower ) > strlen( $ending ) && substr( $lower, -strlen( $ending ) ) === $ending ) {
+				return $kind;
+			}
+		}
 		return null;
+	}
+
+	/**
+	 * The text after the site name placeholder of each core subject ("] Passwort zurücksetzen"), translated into
+	 * the current language and the site language – the password reset goes out in the user's language, the
+	 * notice to the administrator in the site language.
+	 *
+	 * @return array<string,string> Lower-cased ending => kind.
+	 */
+	private static function endings(): array {
+		$locale = determine_locale();
+		$site   = get_locale();
+		if ( null !== self::$endings && self::$endings_for === $locale . '|' . $site ) {
+			return self::$endings;
+		}
+		$subjects = self::subjects();
+		if ( $site !== $locale && switch_to_locale( $site ) ) {
+			$subjects = array_merge( $subjects, self::subjects() );
+			restore_previous_locale();
+		}
+		self::$endings     = array();
+		self::$endings_for = $locale . '|' . $site;
+		foreach ( $subjects as $subject ) {
+			$parts  = (array) preg_split( '/%(?:\d+\$)?s/', $subject[0] );
+			$ending = self::lower( trim( (string) end( $parts ) ) );
+			if ( preg_match( '/\p{L}{3}/u', $ending ) ) { // Only a distinctive ending, not just "]".
+				self::$endings[ $ending ] = $subject[1];
+			}
+		}
+		return self::$endings;
+	}
+
+	/**
+	 * Core subjects in the current language (WordPress' own strings, default text domain).
+	 *
+	 * @return array<int,array{0:string,1:string}> Subject format and kind.
+	 */
+	private static function subjects(): array {
+		return array(
+			// phpcs:disable WordPress.WP.I18n.LowLevelTranslationFunction, WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.TextDomainMismatch -- WordPress' own subjects, only looked up (never output) to recognise core emails.
+			array( translate( '[%s] Password Reset', 'default' ), self::PASSWORD_RESET ),
+			array( translate( '[%s] New User Registration', 'default' ), self::NEW_USER ),
+			array( translate( '[%s] Login Details', 'default' ), self::NEW_USER ),
+			// phpcs:enable WordPress.WP.I18n.LowLevelTranslationFunction, WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.TextDomainMismatch
+		);
+	}
+
+	private static function lower( string $text ): string {
+		return function_exists( 'mb_strtolower' ) ? mb_strtolower( $text, 'UTF-8' ) : strtolower( $text );
 	}
 
 	public function register_routes(): void {
