@@ -192,3 +192,24 @@ test('shortcuts: core emails explain they have no editor and offer a probe', asy
 	await expect(reset.getByRole('button', { name: 'Trigger to me' })).toBeFocused();
 	expect(errors).toEqual([]);
 });
+
+test('"Keep for" in the menu sets a retention period per type', async ({ page }) => {
+	const errors = watchErrors(page);
+	await page.goto(TYPES);
+	let orders = typeRow(page, 'Your order');
+	await orders.locator('.mst-more summary').click();
+	const keep = orders.getByLabel('Keep for');
+	await expect(keep.locator('option')).toHaveText([/^Default \(\d+ days\)$/, '7 days', '30 days', '90 days', '365 days', 'Until the log limit']);
+	await keep.selectOption({ label: '365 days' });
+	await orders.locator('.mst-keep').getByRole('button', { name: 'Save' }).click();
+	await expect(page.locator('.notice-success')).toContainText('Retention of this email type saved.');
+	orders = typeRow(page, 'Your order');
+	await expect(orders.locator('.mst-kept')).toHaveText('Kept: 365 days');
+
+	// Back to the default, so the other specs see the seed unchanged.
+	await orders.locator('.mst-more summary').click();
+	await orders.getByLabel('Keep for').selectOption({ index: 0 });
+	await orders.locator('.mst-keep').getByRole('button', { name: 'Save' }).click();
+	await expect(typeRow(page, 'Your order').locator('.mst-kept')).toHaveCount(0);
+	expect(errors).toEqual([]);
+});

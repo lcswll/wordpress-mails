@@ -444,6 +444,18 @@
 	font-size: 12px;
 }
 
+/* "Bundle into one daily email" and "Keep for …" inside the menu. */
+.mst-menu form {
+	margin-left: 0;
+}
+
+.mst-keep select {
+	min-height: 26px;
+	margin: 0 4px;
+	padding: 0 24px 0 6px;
+	font-size: 12px;
+}
+
 .mst-probe-result {
 	margin: 0;
 	list-style: none;

@@ -164,7 +164,8 @@
 				add( t.problems, t.heldProblem );
 			} else if ( 'no_redirect_address' === d.held ) {
 				add( t.staging, t.heldNoAddress );
-			} else if ( d.held ) {
+			} else if ( d.held && 0 !== String( d.held ).indexOf( 'bundle' ) ) {
+				// "bundled" / "bundle_released": the daily digest of the email types module (types.js).
 				add( t.staging, t.heldStaging );
 			} else if ( d.redirected ) {
 				add( t.staging, t.redirected );

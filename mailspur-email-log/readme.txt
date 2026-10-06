@@ -33,8 +33,9 @@ Most email problems are not failures but emails that are never triggered: a plug
 * **Content changes after updates:** "Content changed on 3 Oct, after the WooCommerce 9.4 update" – "Compare" shows the text changes and both previews side by side. Names, numbers and dates are ignored.
 * **Shortcuts:** open the latest email, send it to yourself, or jump to where its text is edited (WooCommerce, Contact Form 7, WPForms, Gravity Forms, Fluent Forms or the plugin's settings). "Trigger to me" generates the WordPress password reset or new user email for your own account and shows the result.
 * **Hints where they help:** types that reach administrators 30+ times a month (with where to switch them off), types that keep visitors waiting 1.5 seconds or more for the mail server, and plugins that send their first email ("New sender", with an alert when one writes to many external addresses).
+* **Less inbox noise, per type:** bundle admin notifications into one daily email (each email listed with its first link), and keep each type as long as it needs – password resets 7 days, invoices a year.
 * **Email inventory:** export all types as CSV or a printable page with sending plugin, recipient group, rhythm, retention and the categories of personal data found – for a record of processing activities or a handover. No contents or addresses.
-* **Built for privacy and speed:** sorting happens afterwards, never while an email is sent. Only counters, subject patterns and send durations are stored – never recipients or contents.
+* **Built for privacy and speed:** sorting happens afterwards; while an email is sent, only bundled types are checked. Only counters, subject patterns and send durations are stored – never recipients or contents.
 
 = Find any email in seconds =
 
@@ -206,6 +207,14 @@ No. Per type it stores only a short fingerprint and the IDs of the two log entri
 = Why are two of my emails shown as one type, or one email as two types? =
 
 Numbers, dates, addresses, links and quoted text are always placeholders. Other words only merge when they look like names (capitalised in a normally written subject) and most of the subject stays the same – so different wording always stays apart. If a sender produces more than 150 different subjects, the rest is collected as "Other emails" of that sender.
+
+= What does "Bundle into one daily email" do? =
+
+Offered in the "…" menu of types that reach administrators. Emails of that type that go only to administrators (or the admin email) are logged and held; every day at 8:00 site time each administrator gets one email listing them with time, the start of the text, the first link and a link to the log. They then count as sent. Password resets, emails with other recipients, Cc/Bcc or attachments, and Mailspur's own emails are never bundled. If WP-Cron missed a day, the next hourly run sends the digest. Switching bundling off sends what is waiting in one digest right away. The digest is built from the log, so secrets masked there stay masked.
+
+= Can I keep some emails longer or shorter than others? =
+
+Yes. "Keep for" in the "…" menu of a type sets its own period: 7, 30, 90 or 365 days, or until the log limit (the maximum number of entries). The daily cleanup then deletes only that type's entries after its period. If anonymisation is on, a shorter period anonymises the entries instead, and they are deleted with the general period. The email inventory shows the period per type.
 
 = Can I keep my history when switching from WP Mail Logging or another log plugin? =
 

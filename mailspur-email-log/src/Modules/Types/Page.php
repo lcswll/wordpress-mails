@@ -1,7 +1,8 @@
 <?php
 /**
  * "Email types" tab (server-rendered, works without JavaScript), its settings row and form actions
- * (ignore a type, rebuild), plus the "Email type" line in the log's detail view. Admin noise, slow types and
+ * (ignore a type, rebuild, bundle into one daily email, keep for …), plus the "Email type" line in the log's
+ * detail view. Admin noise, slow types and
  * new senders appear as counts in the summary and as small markers on the rows.
  *
  * @package Mailspur
@@ -21,6 +22,8 @@ final class Page {
 
 	const TAB   = 'types';
 	const NONCE = 'mailspur_types';
+
+	const BUNDLE_ACTION = 'mailspur_types_bundle';
 
 	/** @var Store */
 	private $store;
@@ -91,10 +94,15 @@ final class Page {
 				'window.mailspurTypes = ' . wp_json_encode(
 					array(
 						'i18n' => array(
-							'type'    => __( 'Email type', 'mailspur-email-log' ),
+							'type'           => __( 'Email type', 'mailspur-email-log' ),
 							/* translators: %s: rhythm, e.g. "daily" */
-							'rhythm'  => __( 'usually sent: %s', 'mailspur-email-log' ),
-							'stopped' => __( 'stopped', 'mailspur-email-log' ),
+							'rhythm'         => __( 'usually sent: %s', 'mailspur-email-log' ),
+							'stopped'        => __( 'stopped', 'mailspur-email-log' ),
+							'digest'         => __( 'Daily digest', 'mailspur-email-log' ),
+							'bundled'        => __( 'Waiting for the daily digest – not sent on its own.', 'mailspur-email-log' ),
+							'bundleReleased' => __( 'Taken out of the daily digest and sent on its own.', 'mailspur-email-log' ),
+							/* translators: %s: date and time */
+							'digested'       => __( 'Delivered in the daily digest on %s.', 'mailspur-email-log' ),
 						),
 					)
 				) . ';',
@@ -382,6 +390,13 @@ final class Page {
 						printf( esc_html__( 'Notes in the latest email: %s', 'mailspur-email-log' ), esc_html( number_format_i18n( (int) $item['notes'] ) ) );
 						echo '</span>';
 					}
+					if ( ! empty( $item['bundle'] ) ) {
+						echo ' · <span class="mst-bundled">' . esc_html__( 'Bundled into one daily email', 'mailspur-email-log' ) . '</span>';
+					}
+					if ( ! empty( $item['keep'] ) ) {
+						/* translators: %s: retention period, e.g. "30 days" or "Until the log limit" */
+						echo ' · <span class="mst-kept">' . esc_html( sprintf( __( 'Kept: %s', 'mailspur-email-log' ), Retention::label( (int) $item['keep'] ) ) ) . '</span>';
+					}
 					?>
 				</span>
 				<?php $this->change( $item, $admin, $available ); ?>
@@ -462,6 +477,9 @@ final class Page {
 								<button type="button" class="button-link mst-send" data-mail="<?php echo esc_attr( (string) $item['last_id'] ); ?>" hidden><?php esc_html_e( 'Send latest to me', 'mailspur-email-log' ); ?></button>
 							<?php endif; ?>
 							<?php $this->template( (int) $item['id'] ); ?>
+							<?php if ( $admin && empty( $item['other'] ) ) : ?>
+								<?php $this->choices( $item ); ?>
+							<?php endif; ?>
 						</div>
 					</details>
 				<?php endif; ?>
@@ -487,6 +505,39 @@ final class Page {
 		<?php if ( '' !== $template['probe'] ) : ?>
 			<button type="button" class="button-link mst-probe" data-kind="<?php echo esc_attr( $template['probe'] ); ?>" hidden><?php esc_html_e( 'Trigger to me', 'mailspur-email-log' ); ?></button>
 		<?php endif; ?>
+		<?php
+	}
+
+	/**
+	 * "Bundle into one daily email" (types that reach administrators) and "Keep for …" in the "…" menu of a type.
+	 *
+	 * @param array<string,mixed> $item Report item.
+	 */
+	private function choices( array $item ): void {
+		$id   = (string) (int) $item['id'];
+		$keep = (int) $item['keep'];
+		?>
+		<?php if ( ! empty( $item['bundle'] ) || (int) $item['admin'] > 0 ) : ?>
+			<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="mst-bundle">
+				<input type="hidden" name="action" value="<?php echo esc_attr( self::BUNDLE_ACTION ); ?>">
+				<input type="hidden" name="type" value="<?php echo esc_attr( $id ); ?>">
+				<input type="hidden" name="bundle" value="<?php echo esc_attr( empty( $item['bundle'] ) ? '1' : '0' ); ?>">
+				<?php wp_nonce_field( self::NONCE, '_wpnonce', false ); ?>
+				<button type="submit" class="button-link"><?php echo esc_html( empty( $item['bundle'] ) ? __( 'Bundle into one daily email', 'mailspur-email-log' ) : __( 'Stop bundling (sends what waits now)', 'mailspur-email-log' ) ); ?></button>
+			</form>
+		<?php endif; ?>
+		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="mst-keep">
+			<input type="hidden" name="action" value="<?php echo esc_attr( Retention::ACTION ); ?>">
+			<input type="hidden" name="type" value="<?php echo esc_attr( $id ); ?>">
+			<?php wp_nonce_field( Retention::NONCE, '_wpnonce', false ); ?>
+			<label for="mst-keep-<?php echo esc_attr( $id ); ?>"><?php esc_html_e( 'Keep for', 'mailspur-email-log' ); ?></label>
+			<select id="mst-keep-<?php echo esc_attr( $id ); ?>" name="keep">
+				<?php foreach ( Retention::CHOICES as $days ) : ?>
+					<option value="<?php echo esc_attr( (string) $days ); ?>" <?php selected( $keep, $days ); ?>><?php echo esc_html( Retention::label( $days ) ); ?></option>
+				<?php endforeach; ?>
+			</select>
+			<button type="submit" class="button-link"><?php esc_html_e( 'Save', 'mailspur-email-log' ); ?></button>
+		</form>
 		<?php
 	}
 
@@ -608,6 +659,9 @@ final class Page {
 								printf( esc_html__( 'Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here.', 'mailspur-email-log' ), esc_html( Report::source_label( (string) $item['source'] ) ) );
 								?>
 							</p>
+						<?php endif; ?>
+						<?php if ( $admin && empty( $item['bundle'] ) && ! empty( $item['last_id'] ) ) : ?>
+							<p><?php esc_html_e( 'To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type.', 'mailspur-email-log' ); ?></p>
 						<?php endif; ?>
 					</div>
 				</details>
@@ -807,6 +861,9 @@ final class Page {
 			'seen'    => __( 'Content change marked as seen.', 'mailspur-email-log' ),
 			'quiet'   => __( 'Mailspur stops these emails now; their email type is ignored.', 'mailspur-email-log' ),
 			'loud'    => __( 'These emails are sent again; their email type is monitored again.', 'mailspur-email-log' ),
+			'bundled' => __( 'Emails of this type that go only to administrators are now collected and sent once a day in one digest.', 'mailspur-email-log' ),
+			'single'  => __( 'Bundling is off. Emails that were waiting went out in one digest now.', 'mailspur-email-log' ),
+			'kept'    => __( 'Retention of this email type saved. It applies with the next daily cleanup.', 'mailspur-email-log' ),
 		);
 		if ( isset( $text[ $done ] ) ) {
 			printf( '<div class="notice notice-success inline is-dismissible"><p>%s</p></div>', esc_html( $text[ $done ] ) );
@@ -828,6 +885,35 @@ final class Page {
 				array(
 					'tab'        => self::TAB,
 					'types-done' => $muted ? 'muted' : 'watched',
+				)
+			) . '#mailspur-type-' . $id
+		);
+		exit;
+	}
+
+	/**
+	 * admin-post.php?action=mailspur_types_bundle – switching it off sends what waits in one digest right away
+	 * (rather than many single emails at once).
+	 */
+	public function bundle(): void {
+		$this->guard();
+		// phpcs:disable WordPress.Security.NonceVerification.Missing -- verified in guard().
+		$id = isset( $_POST['type'] ) ? absint( $_POST['type'] ) : 0;
+		$on = ! empty( $_POST['bundle'] );
+		// phpcs:enable WordPress.Security.NonceVerification.Missing
+		if ( $id ) {
+			$this->store->bundle( $id, $on );
+			Bundle::sync( $this->store );
+			if ( ! $on ) {
+				( new Digest( $this->store ) )->run( $id );
+			}
+			Digest::schedule();
+		}
+		wp_safe_redirect(
+			Admin::url(
+				array(
+					'tab'        => self::TAB,
+					'types-done' => $on ? 'bundled' : 'single',
 				)
 			) . '#mailspur-type-' . $id
 		);

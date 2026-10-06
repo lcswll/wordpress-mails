@@ -108,6 +108,8 @@ final class Report {
 				'last_ok'    => 1 === (int) $type['last_status'],
 				'notes'      => (int) $type['last_notes'],
 				'muted'      => (bool) $type['muted'],
+				'bundle'     => ! empty( $type['bundle'] ),
+				'keep'       => (int) ( $type['keep'] ?? 0 ),
 				'state'      => $state,
 				'series'     => $series,
 				'total'      => $total,

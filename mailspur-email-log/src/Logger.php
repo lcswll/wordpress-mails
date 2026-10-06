@@ -30,6 +30,14 @@ final class Logger {
 	 */
 	public static $source_override = '';
 
+	/**
+	 * Source of the mail captured last ("plugin:woocommerce"), for pre_wp_mail handlers that decide per sender.
+	 * Read-only for modules; '' when the mail is not logged.
+	 *
+	 * @var string
+	 */
+	public static $current_source = '';
+
 	/** @var Repository */
 	private $repository;
 
@@ -70,13 +78,16 @@ final class Logger {
 		$row     = array();
 		$meta    = array();
 
+		self::$current_source = '';
+
 		// A skipped mail still gets a stack slot (id 0) so result hooks stay aligned.
 		if ( apply_filters( 'mailspur_should_log', true, $atts ) ) {
 			try {
-				$row         = $this->normalize( $atts, $message );
-				$meta        = (array) apply_filters( 'mailspur_meta', array(), 'capture', $atts );
-				$row['meta'] = self::encode( $meta );
-				$id          = $this->repository->insert( $row );
+				$row                  = $this->normalize( $atts, $message );
+				self::$current_source = (string) $row['source'];
+				$meta                 = (array) apply_filters( 'mailspur_meta', array(), 'capture', $atts );
+				$row['meta']          = self::encode( $meta );
+				$id                   = $this->repository->insert( $row );
 			} catch ( \Throwable $e ) { // Logging must never break mail delivery.
 				$id = 0;
 			}

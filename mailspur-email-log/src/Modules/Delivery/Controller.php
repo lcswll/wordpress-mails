@@ -204,6 +204,12 @@ final class Controller {
 			Staging::$release = 0;
 		}
 		Brake::released( $row );
+		/**
+		 * A held email was sent on its own ("Send now"), e.g. so the daily digest does not list it again.
+		 *
+		 * @param array<string,mixed> $row The held log row.
+		 */
+		do_action( 'mailspur_held_released', $row );
 		return rest_ensure_response( $response );
 	}
 
