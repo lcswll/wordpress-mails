@@ -11,6 +11,7 @@
  */
 
 use Mailspur\Repository;
+use Mailspur\Settings;
 
 add_action(
 	'admin_init',
@@ -18,6 +19,11 @@ add_action(
 		if ( ! isset( $_GET['mailspur-e2e-seed'] ) || 'views' !== $_GET['mailspur-e2e-seed'] || ! current_user_can( 'manage_options' ) || ! class_exists( Repository::class ) ) {
 			return;
 		}
+		// ui.spec.js switches "always load remote content" on; with it the pixel would be fetched on open.
+		$settings                  = (array) get_option( Settings::OPTION, array() );
+		$settings['remote_images'] = false;
+		update_option( Settings::OPTION, $settings );
+
 		$repository = new Repository();
 		$hostile    = '<img src="https://example.com/pv-pixel.gif" width="1" height="1" alt="">'
 			. '<script>window.top.pwned = 1;</script>'

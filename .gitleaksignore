@@ -2,3 +2,12 @@
 
 # Dummy SMTP password of a PHPMailer test double; the test asserts it is masked in the SMTP transcript.
 1c28dddb96b717cabe3a30886401136bf10da4ff:tests/unit/TraceMailer.php:generic-api-key:30
+
+# The private-key detector itself: a regex that matches PEM headers, not a key.
+475a6dab46493c8f4040ddf0f6a3f94a40a2bb9b:mailspur-email-log/src/Secrets.php:private-key:123
+
+# Fake PEM blocks (header + str_repeat filler) in unit tests; the tests assert they are detected and masked.
+475a6dab46493c8f4040ddf0f6a3f94a40a2bb9b:tests/unit/NotesRulesTest.php:private-key:423
+475a6dab46493c8f4040ddf0f6a3f94a40a2bb9b:tests/unit/SecretsTest.php:private-key:154
+475a6dab46493c8f4040ddf0f6a3f94a40a2bb9b:tests/unit/SecretsTest.php:private-key:167
+475a6dab46493c8f4040ddf0f6a3f94a40a2bb9b:tests/unit/SecretsTest.php:private-key:175

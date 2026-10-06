@@ -37,7 +37,7 @@ async function expectIsolated(page) {
 	return srcdoc;
 }
 
-/** Opens a seeded mail with remote content blocked (ui.spec.js may have switched "always load" on). */
+/** Opens a seeded mail with remote content blocked (the seed switches "always load" off again). */
 async function open(page, subject) {
 	await page.goto(SEARCH);
 	await rows(page).filter({ hasText: subject }).locator('.mailspur-open').click();
