@@ -7,8 +7,7 @@
  * - "Maybe later" snoozes for 30 days, "I already did" and the review link end it for good.
  * - Plus a credit line with a review link in the admin footer of Mailspur's page and in the plugin list.
  *
- * Direct queries: the plugin's own table, two counts, cached for a day.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table, two counts, cached for a day.
  *
  * @package Mailspur
  */

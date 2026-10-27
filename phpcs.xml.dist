@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="Mailspur Email Log">
-	<description>WordPress-Extra (security, DB, i18n, formatting), WordPress VIP security sniffs and PHPCompatibility for the plugin. New code, so no baseline: every finding fails the build.</description>
+	<description>WordPress-Extra (security, DB, i18n, formatting), WordPress VIP security sniffs and PHPCompatibility. No baseline, warnings fail the build, and inline phpcs:ignore/disable comments have no effect (scripts/phpcs-strict.mjs runs with --ignore-annotations). The only exceptions live in this file, scoped and explained.</description>
 
 	<file>mailspur-email-log</file>
 	<file>tests</file>
@@ -54,6 +54,68 @@
 	<rule ref="WordPressVIPMinimum.Classes.DeclarationCompatibility"/>
 	<rule ref="WordPressVIPMinimum.Files.IncludingNonPHPFile"/>
 
+	<!-- Applying hooks of WordPress core and WooCommerce on purpose, to get the value they would produce: the
+	     default From address (wp_mail_from), the loopback SSL setting (https_local_ssl_verify), a plugin's own
+	     "Settings" link (plugin_action_links_*), the order id behind a visible order number and WordPress' own
+	     translated email subjects (gettext, as translate() applies it). -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound">
+		<exclude-pattern>mailspur-email-log/src/Modules/Answers/Facts\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Delivery/SenderCheck\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Notes/Links\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/SiteHealth/Checks\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Types/Probe\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Types/Templates\.php</exclude-pattern>
+	</rule>
+
+	<!-- The capability for the log is a setting, validated against Settings::CAPABILITIES (core capabilities only). -->
+	<rule ref="WordPress.WP.Capabilities.Undetermined">
+		<exclude-pattern>mailspur-email-log/src/Admin\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Settings\.php</exclude-pattern>
+	</rule>
+	<!-- WooCommerce's capability for its order screens (the order meta box is shown only there). -->
+	<rule ref="WordPress.WP.Capabilities">
+		<properties>
+			<property name="custom_capabilities" type="array">
+				<element value="edit_shop_orders"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Not debug code: the backtrace is the only way to tell which plugin, theme and file called wp_mail()
+	     ("Source" and "Origin" in the log). Arguments are not collected and the depth is capped. -->
+	<rule ref="WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace">
+		<exclude-pattern>mailspur-email-log/src/Logger\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Trace/Inspector\.php</exclude-pattern>
+	</rule>
+	<!-- The alternative to the "@" operator: DNS lookups (timeouts, SERVFAIL) and truncated serialized data of other
+	     plugins raise warnings that are expected results here. The handler is scoped to the one call and restored. -->
+	<rule ref="WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler">
+		<exclude-pattern>mailspur-email-log/src/Import/Source\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Delivery/SenderCheck\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Notes/Dynamic\.php</exclude-pattern>
+	</rule>
+	<!-- Importing the logs of other mail plugins, which store serialized PHP arrays; objects are not allowed
+	     (allowed_classes = false). -->
+	<rule ref="WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize">
+		<exclude-pattern>mailspur-email-log/src/Import/Source\.php</exclude-pattern>
+	</rule>
+	<!-- Data formats, not obfuscation: Amazon SNS signatures are base64, an .eml file uses base64 transfer encoding
+	     and RFC 2047 encoded words, and the raw message is kept gzip-compressed in a text column. -->
+	<rule ref="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode">
+		<exclude-pattern>mailspur-email-log/src/Modules/Trace/Eml\.php</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode">
+		<exclude-pattern>mailspur-email-log/src/Modules/Delivery/Sns\.php</exclude-pattern>
+		<exclude-pattern>mailspur-email-log/src/Modules/Trace/Eml\.php</exclude-pattern>
+	</rule>
+
+	<!-- The WP-CLI command "wp mailspur export" with a file option streams the export chunk by chunk into the file the shell user names:
+	     WP_Filesystem can only write a file in one piece, and a complete export of a large log must not be held in
+	     memory. Plugin Check accepts file_put_contents() (its ruleset excludes this code). -->
+	<rule ref="WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents">
+		<exclude-pattern>mailspur-email-log/src/Modules/Workflow/Cli\.php</exclude-pattern>
+	</rule>
+
 	<!-- Tests run outside WordPress with Brain Monkey: no prefixes, escaping or i18n there. -->
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<exclude-pattern>tests/*</exclude-pattern>
@@ -74,5 +136,57 @@
 	<!-- Tests swap $wpdb for a recording fake. -->
 	<rule ref="WordPress.WP.GlobalVariablesOverride">
 		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<!-- Test harness and the WordPress stubs set up and inspect tables directly. -->
+	<rule ref="WordPress.DB.DirectDatabaseQuery">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<!-- Fixtures reproduce what other mail log plugins store (serialized PHP arrays) and what providers send (base64). -->
+	<rule ref="WordPress.PHP.DiscouragedPHPFunctions">
+		<exclude-pattern>tests/*</exclude-pattern>
+	</rule>
+	<rule ref="WordPressVIPMinimum.Functions.StripTags">
+		<exclude-pattern>tests/unit/*</exclude-pattern>
+	</rule>
+	<!-- Stubs mirror the signatures of WordPress, WP-CLI and wpdb, including parameters they do not use. -->
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter">
+		<exclude-pattern>tests/stubs/*</exclude-pattern>
+	</rule>
+	<!-- Stub files group several small fakes; e2e fixtures declare fake classes only when they are missing. -->
+	<rule ref="Generic.Files.OneObjectStructurePerFile">
+		<exclude-pattern>tests/stubs/*</exclude-pattern>
+		<exclude-pattern>tests/e2e/*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.Classes.DuplicateClassName">
+		<exclude-pattern>tests/e2e/*</exclude-pattern>
+	</rule>
+	<rule ref="Universal.Files.SeparateFunctionsFromOO">
+		<exclude-pattern>tests/e2e/*</exclude-pattern>
+	</rule>
+
+	<!-- PHPMailer's public API (the object behind phpmailer_init / wp_mail_failed) uses CamelCase property names; they cannot be renamed. -->
+	<rule ref="WordPress.NamingConventions.ValidVariableName">
+		<properties>
+			<property name="allowed_custom_properties" type="array">
+				<element value="AltBody"/>
+				<element value="Body"/>
+				<element value="CharSet"/>
+				<element value="ContentType"/>
+				<element value="Debugoutput"/>
+				<element value="From"/>
+				<element value="FromName"/>
+				<element value="Host"/>
+				<element value="Mailer"/>
+				<element value="MessageDate"/>
+				<element value="Password"/>
+				<element value="Port"/>
+				<element value="SMTPAuth"/>
+				<element value="SMTPAutoTLS"/>
+				<element value="SMTPDebug"/>
+				<element value="SMTPSecure"/>
+				<element value="Subject"/>
+				<element value="Username"/>
+			</property>
+		</properties>
 	</rule>
 </ruleset>

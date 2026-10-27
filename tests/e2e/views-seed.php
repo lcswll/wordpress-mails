@@ -5,8 +5,6 @@
  * dark-mode styles and a plain-text alternative, one without either. Both carry a script, a form and a
  * tracking pixel, so the sandbox can be checked in every look. The spec deletes them again.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.Security.NonceVerification.Recommended
- *
  * @package Mailspur
  */
 

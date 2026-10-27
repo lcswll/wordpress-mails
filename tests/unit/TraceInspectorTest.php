@@ -29,12 +29,15 @@ final class TraceInspectorTest extends TestCase {
 				'esc_url_raw'                => static function ( $value ) {
 					return (string) $value;
 				},
+				'wp_parse_url'               => static function ( $url, $component = -1 ) {
+					return parse_url( $url, $component );
+				},
 			)
 		);
 	}
 
 	protected function tearDown(): void {
-		unset( $_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI'], $_GET['rest_route'] );
+		unset( $_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI'] );
 		parent::tearDown();
 	}
 
@@ -135,7 +138,7 @@ final class TraceInspectorTest extends TestCase {
 	public function test_request_type_priorities(): void {
 		Functions\when( 'wp_is_serving_rest_request' )->justReturn( true );
 		Functions\when( 'is_admin' )->justReturn( true );
-		$_GET['rest_route'] = '/wc/v3/orders?x=1';
+		$_SERVER['REQUEST_URI'] = '/index.php?rest_route=/wc/v3/orders&x=1';
 
 		$request = Inspector::request();
 		$this->assertSame( 'rest', $request['type'] );
@@ -163,7 +166,7 @@ final class TraceInspectorTest extends TestCase {
 		);
 		$this->assertStringNotContainsString( 'S3cret', (string) json_encode( $t ) );
 
-		$mailer->Mailer = 'mail'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->Mailer = 'mail';
 		$this->assertSame( array( 'mailer' => 'mail' ), Inspector::transport( $mailer ) );
 	}
 

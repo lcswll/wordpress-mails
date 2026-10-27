@@ -5,8 +5,7 @@
  *
  * One GROUP BY over the indexed source column, cached for a few minutes in a transient.
  *
- * Direct query: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table.
  *
  * @package Mailspur
  */

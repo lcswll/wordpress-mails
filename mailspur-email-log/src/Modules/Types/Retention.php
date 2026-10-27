@@ -116,10 +116,8 @@ final class Retention {
 			wp_die( esc_html__( 'Sorry, you are not allowed to do that.', 'mailspur-email-log' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( self::NONCE );
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- verified above.
 		$id   = isset( $_POST['type'] ) ? absint( $_POST['type'] ) : 0;
 		$days = isset( $_POST['keep'] ) ? self::sanitize( (int) sanitize_text_field( wp_unslash( $_POST['keep'] ) ) ) : 0;
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
 		if ( $id ) {
 			$this->store->keep( $id, $days );
 		}

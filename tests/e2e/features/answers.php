@@ -8,8 +8,6 @@
  * Uses its own rows (source "e2e:answers") and email types, and removes everything it created.
  * Writes /e2e-out/features/answers.json.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 

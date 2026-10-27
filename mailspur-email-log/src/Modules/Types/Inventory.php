@@ -11,8 +11,7 @@
  * - data categories are detected in the latest email of each type (subject and text), only the category names
  *   are output.
  *
- * Direct queries: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table.
  *
  * @package Mailspur
  */
@@ -31,6 +30,33 @@ final class Inventory {
 
 	const ACTION = 'mailspur_types_inventory';
 	const NONCE  = 'mailspur_types_inventory';
+
+	/** Markup of the printable page (html()), for wp_kses() on output. */
+	const ALLOWED_HTML = array(
+		'html'   => array( 'lang' => true ),
+		'head'   => array(),
+		'meta'   => array(
+			'charset' => true,
+			'name'    => true,
+			'content' => true,
+		),
+		'title'  => array(),
+		'style'  => array(),
+		'body'   => array(),
+		'h1'     => array(),
+		'p'      => array( 'class' => true ),
+		'button' => array(
+			'type'    => true,
+			'onclick' => true,
+		),
+		'a'      => array( 'href' => true ),
+		'table'  => array(),
+		'thead'  => array(),
+		'tbody'  => array(),
+		'tr'     => array(),
+		'th'     => array( 'scope' => true ),
+		'td'     => array( 'colspan' => true ),
+	);
 
 	/** Latest emails per sender whose recipients are classified. */
 	const SAMPLE = 300;
@@ -79,7 +105,6 @@ final class Inventory {
 			wp_die( esc_html__( 'Sorry, you are not allowed to do that.', 'mailspur-email-log' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( self::NONCE );
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- verified just above.
 		$format = isset( $_GET['format'] ) && 'csv' === sanitize_key( wp_unslash( $_GET['format'] ) ) ? 'csv' : 'html';
 
 		$rows = $this->rows( time() );
@@ -91,10 +116,12 @@ final class Inventory {
 		if ( 'csv' === $format ) {
 			header( 'Content-Type: text/csv; charset=utf-8' );
 			header( 'Content-Disposition: attachment; filename="email-inventory-' . wp_date( 'Y-m-d' ) . '.csv"' );
-			echo self::csv( $rows ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- CSV file download, not HTML; served as attachment with nosniff, cells defused in csv().
+			// Raw CSV bytes of an attachment (nosniff), cells defused in csv(); never rendered as HTML.
+			file_put_contents( 'php://output', self::csv( $rows ) );
 		} else {
 			header( 'Content-Type: text/html; charset=utf-8' );
-			echo self::html( $rows, wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES ), (string) wp_date( (string) get_option( 'date_format' ) ), self::url( 'csv' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- every value is escaped in html().
+			echo '<!doctype html>';
+			echo wp_kses( self::html( $rows, wp_specialchars_decode( (string) get_bloginfo( 'name' ), ENT_QUOTES ), (string) wp_date( (string) get_option( 'date_format' ) ), self::url( 'csv' ) ), self::ALLOWED_HTML );
 		}
 		exit;
 	}
@@ -378,7 +405,7 @@ final class Inventory {
 		}
 		$title = __( 'Email inventory', 'mailspur-email-log' );
 
-		return '<!doctype html><html lang="' . esc_attr( str_replace( '_', '-', determine_locale() ) ) . '"><head><meta charset="utf-8">'
+		return '<html lang="' . esc_attr( str_replace( '_', '-', determine_locale() ) ) . '"><head><meta charset="utf-8">'
 			. '<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">'
 			. '<title>' . esc_html( $title . ' – ' . $site ) . '</title>'
 			. '<style>body{margin:24px;font:13px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1d2327}'

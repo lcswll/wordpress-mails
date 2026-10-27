@@ -44,7 +44,7 @@ final class Module implements \Mailspur\Module {
 		add_action( 'wp_dashboard_setup', array( new Dashboard( $stats ), 'setup' ) );
 
 		// Alerts: cheap counter at send time, evaluation in cron.
-		add_filter( 'cron_schedules', array( Alerts::class, 'cron_schedules' ) ); // phpcs:ignore WordPress.WP.CronInterval.ChangeDetected -- 15 minutes, see Alerts.
+		Alerts::add_schedule();
 		add_action( Alerts::HOOK, array( $alerts, 'run' ) );
 		add_action( Alerts::HOOK_NOW, array( $alerts, 'run' ) );
 		add_action( 'mailspur_logged', array( $alerts, 'on_logged' ), 10, 2 );

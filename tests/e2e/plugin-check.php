@@ -57,7 +57,7 @@ foreach ( array(
 	}
 }
 
-file_put_contents( // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- test harness output.
+file_put_contents(
 	'/e2e-out/plugin-check.json',
 	wp_json_encode(
 		array(

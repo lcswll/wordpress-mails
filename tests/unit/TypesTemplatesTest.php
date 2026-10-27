@@ -35,7 +35,7 @@ final class TypesTemplatesTest extends TestCase {
 				'determine_locale'  => 'en_US',
 				'get_locale'        => 'en_US',
 				'wp_strip_all_tags' => static function ( $html ) {
-					return strip_tags( $html ); // phpcs:ignore WordPressVIPMinimum.Functions.StripTags.StripTagsOneParameter -- test stub.
+					return strip_tags( $html );
 				},
 				'get_option'        => function ( $name, $fallback = false ) {
 					return 'active_plugins' === $name ? $this->active : $fallback;

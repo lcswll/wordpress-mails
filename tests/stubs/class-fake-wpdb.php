@@ -2,8 +2,6 @@
 /**
  * Recording $wpdb stand-in: writes and prepared queries are recorded, reads return queued results.
  *
- * phpcs:disable Generic.CodeAnalysis.UnusedFunctionParameter -- signatures mirror wpdb.
- *
  * @package Mailspur
  */
 

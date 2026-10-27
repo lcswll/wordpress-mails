@@ -118,7 +118,7 @@ final class Templates {
 	 * @param mixed $entry     Entry (unused).
 	 * @param mixed $form_data Form settings with "id".
 	 */
-	public function wpforms( $fields, $entry = null, $form_data = null ): void { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed -- hook signature.
+	public function wpforms( $fields, $entry = null, $form_data = null ): void {
 		$this->announce( 'wpforms', is_array( $form_data ) ? (int) ( $form_data['id'] ?? 0 ) : 0 );
 	}
 
@@ -137,7 +137,7 @@ final class Templates {
 	 * @param mixed $data      Submitted data (unused).
 	 * @param mixed $form      Form object with "id".
 	 */
-	public function fluentform( $insert_id, $data = null, $form = null ): void { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed -- hook signature.
+	public function fluentform( $insert_id, $data = null, $form = null ): void {
 		$this->announce( 'fluentform', is_object( $form ) && isset( $form->id ) ? (int) $form->id : 0 );
 	}
 
@@ -384,7 +384,7 @@ final class Templates {
 	 * The "Settings" link the plugin adds to its row on the Plugins screen – only when it points into wp-admin.
 	 */
 	private function settings( string $basename ): string {
-		$links = apply_filters( 'plugin_action_links_' . $basename, array(), $basename, array(), 'all' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter, read only.
+		$links = apply_filters( 'plugin_action_links_' . $basename, array(), $basename, array(), 'all' );
 		return self::settings_link( is_array( $links ) ? $links : array(), admin_url() );
 	}
 

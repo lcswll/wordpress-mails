@@ -188,6 +188,6 @@ final class Module implements \Mailspur\Module {
 				'rawReconstructed' => __( '"Download .eml" rebuilds the message from the logged, redacted data (without attachments).', 'mailspur-email-log' ),
 			),
 		);
-		wp_add_inline_script( 'mailspur-trace', 'window.mailspurTraceConfig = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-trace', 'window.mailspurTraceConfig = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 }

@@ -91,7 +91,7 @@ final class Capture {
 	 * @param mixed $user       WP_User.
 	 * @return mixed Unchanged.
 	 */
-	public function reset_password( $email, $key = null, $user_login = null, $user = null ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed, Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed -- hook signature.
+	public function reset_password( $email, $key = null, $user_login = null, $user = null ) {
 		return $this->user_object( $email, $user );
 	}
 

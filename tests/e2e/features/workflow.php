@@ -5,8 +5,6 @@
  *
  * Writes /e2e-out/features/workflow.json (evaluated by scripts/e2e.mjs). Never throws.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 

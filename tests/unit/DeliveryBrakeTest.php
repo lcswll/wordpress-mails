@@ -178,12 +178,18 @@ final class DeliveryBrakeTest extends TestCase {
 	public function test_baseline_is_queried_once_and_cached(): void {
 		unset( $this->transients[ Brake::BASELINE_TRANSIENT ] );
 		$this->wpdb->results[] = array(
-			'h' => '2026-09-30 10',
-			'n' => '40',
+			array(
+				'h' => '2026-09-30 09',
+				'n' => '12',
+			),
+			array(
+				'h' => '2026-09-30 10',
+				'n' => '40',
+			),
 		);
 		$this->assertSame( 120, $this->brake->threshold() );
 		$this->assertSame( 40, $this->transients[ Brake::BASELINE_TRANSIENT ] );
-		$this->assertStringContainsString( 'GROUP BY h ORDER BY n DESC LIMIT 1', $this->wpdb->prepared[0]['sql'] );
+		$this->assertStringEndsWith( 'GROUP BY h', $this->wpdb->prepared[0]['sql'] );
 		// Complete hours only: the current hour (the possible flood) is not part of the baseline.
 		$this->assertSame( gmdate( 'Y-m-d H:00:00', self::NOW ), $this->wpdb->prepared[0]['args'][2] );
 
@@ -193,9 +199,27 @@ final class DeliveryBrakeTest extends TestCase {
 
 	public function test_baseline_excludes_past_incidents(): void {
 		unset( $this->transients[ Brake::BASELINE_TRANSIENT ] );
-		$this->options[ Brake::STATE_OPTION ] = array( 'history' => array( array( self::NOW - 7200, self::NOW - 3600 ) ) );
-		$this->brake->baseline();
-		$this->assertStringContainsString( 'AND NOT ( created_at >= %s AND created_at <= %s )', $this->wpdb->prepared[0]['sql'] );
+		$hour                                 = self::NOW - self::NOW % 3600;
+		$this->options[ Brake::STATE_OPTION ] = array( 'history' => array( array( $hour - 7200 + 600, $hour - 3600 + 600 ) ) );
+		$this->wpdb->results[]                = array(
+			array(
+				'h' => gmdate( 'Y-m-d H', $hour - 5 * 3600 ),
+				'n' => '30',
+			),
+			array(
+				'h' => gmdate( 'Y-m-d H', $hour - 3 * 3600 ),
+				'n' => '90',
+			),
+			array(
+				'h' => gmdate( 'Y-m-d H', $hour - 2 * 3600 ),
+				'n' => '500',
+			),
+			array(
+				'h' => gmdate( 'Y-m-d H', $hour - 3600 ),
+				'n' => '400',
+			),
+		);
+		$this->assertSame( 30, $this->brake->baseline(), 'the incident hours and the hour before them are left out' );
 	}
 
 	/* ------------------------------------------------------------------ counter */

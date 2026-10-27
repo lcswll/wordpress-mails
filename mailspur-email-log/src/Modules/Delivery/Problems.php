@@ -551,7 +551,7 @@ final class Problems {
 	/**
 	 * @return array{items_removed:bool,items_retained:bool,messages:string[],done:bool}
 	 */
-	public function erase( string $email, int $page = 1 ): array { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed -- eraser signature.
+	public function erase( string $email ): array {
 		return array(
 			'items_removed'  => self::allow( $email ),
 			'items_retained' => false,

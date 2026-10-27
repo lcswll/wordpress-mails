@@ -30,6 +30,9 @@ final class WorkflowCommandsTest extends TestCase {
 				'sanitize_file_name' => static function ( $name ) {
 					return $name;
 				},
+				'esc_html'           => static function ( $text ) {
+					return htmlspecialchars( (string) $text, ENT_QUOTES );
+				},
 			)
 		);
 	}
@@ -82,7 +85,7 @@ final class WorkflowCommandsTest extends TestCase {
 		foreach ( array( array( 'status' => 'gone' ), array( 'content' => 'pdf' ), array( 'since' => 'not a date at all' ) ) as $assoc ) {
 			try {
 				Commands::filters( $assoc );
-				$this->fail( 'Expected an exception for ' . json_encode( $assoc ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode
+				$this->fail( 'Expected an exception for ' . json_encode( $assoc ) );
 			} catch ( InvalidArgumentException $e ) {
 				$this->assertNotSame( '', $e->getMessage() );
 			}
@@ -104,14 +107,33 @@ final class WorkflowCommandsTest extends TestCase {
 
 		$this->assertSame( Commands::PURGE_BATCH + 3, $this->commands->purge( $filters ) );
 		$this->assertCount( 2, $this->wpdb->prepared );
-		$this->assertSame( 'DELETE FROM %i WHERE 1=1 AND created_at <= %s AND status = %d LIMIT %d', $this->wpdb->prepared[0]['sql'] );
-		$this->assertSame( array( 'wp_mailspur', '2026-02-28 23:59:59', 1, Commands::PURGE_BATCH ), $this->wpdb->prepared[0]['args'] );
+		$this->assertSame( 'DELETE FROM %i ' . self::WHERE . ' LIMIT %d', $this->wpdb->prepared[0]['sql'] );
+		$where = self::where(
+			array(
+				'before_on' => 1,
+				'before'    => '2026-02-28 23:59:59',
+				'status_on' => 1,
+				'status'    => 1,
+			)
+		);
+		$this->assertSame( array_merge( array( 'wp_mailspur' ), $where, array( Commands::PURGE_BATCH ) ), $this->wpdb->prepared[0]['args'] );
 	}
 
 	public function test_count_and_list_use_the_filter(): void {
-		$this->wpdb->results = array( '12' );
+		$this->wpdb->results = array(
+			array(
+				array(
+					'status' => '3',
+					'n'      => '12',
+				),
+				array(
+					'status' => '1',
+					'n'      => '30',
+				),
+			),
+		);
 		$this->assertSame( 12, $this->commands->count( Commands::filters( array( 'status' => 'held' ) ) ) );
-		$this->assertSame( 'SELECT COUNT(*) FROM %i WHERE 1=1 AND status = %d', $this->wpdb->prepared[0]['sql'] );
+		$this->assertStringStartsWith( 'SELECT status, COUNT(*) AS n FROM %i ' . self::WHERE, $this->wpdb->prepared[0]['sql'] );
 
 		$this->wpdb->results = array( array( $this->row() ) );
 		$items               = $this->commands->items( Commands::filters( array() ), 10 );

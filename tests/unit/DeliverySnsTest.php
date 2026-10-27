@@ -105,7 +105,7 @@ final class DeliverySnsTest extends TestCase {
 			$fields
 		);
 		openssl_sign( Sns::string_to_sign( $message ), $signature, $this->key, '1' === $version ? OPENSSL_ALGO_SHA1 : OPENSSL_ALGO_SHA256 );
-		$message['Signature'] = base64_encode( $signature ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode -- SNS signatures are base64.
+		$message['Signature'] = base64_encode( $signature );
 		return $message;
 	}
 

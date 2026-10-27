@@ -32,7 +32,6 @@ final class Inspector {
 		 * Not debug code: the backtrace is the only way to tell which code called wp_mail(). Arguments are
 		 * not collected and the depth is capped, so it is cheap and never exposes data.
 		 */
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- feature, see above.
 		return self::origin_from( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 40 ) );
 	}
 
@@ -127,18 +126,19 @@ final class Inspector {
 		}
 
 		if ( 'cli' !== $type && isset( $_SERVER['REQUEST_URI'] ) ) {
-			$path = self::path_only( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ) );
+			$uri  = esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) );
+			$path = self::path_only( $uri );
 			if ( '' !== $path ) {
 				$out['path'] = $path;
 			}
-		}
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only the route name is read (sites without pretty permalinks).
-		if ( 'rest' === $type && isset( $_GET['rest_route'] ) && is_string( $_GET['rest_route'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- see above.
-			$route = self::path_only( sanitize_text_field( wp_unslash( $_GET['rest_route'] ) ) );
-			if ( '' !== $route ) {
-				$out['route'] = $route;
+			// Sites without pretty permalinks name the REST route in the query string; only the route is kept.
+			if ( 'rest' === $type ) {
+				parse_str( (string) wp_parse_url( $uri, PHP_URL_QUERY ), $query );
+				$route = isset( $query['rest_route'] ) && is_string( $query['rest_route'] ) ? self::path_only( sanitize_text_field( $query['rest_route'] ) ) : '';
+				if ( '' !== $route ) {
+					$out['route'] = $route;
+				}
 			}
 		}
 
@@ -166,7 +166,6 @@ final class Inspector {
 	 * @return array<string,string|int|bool>
 	 */
 	public static function transport( PHPMailer $mailer ): array {
-		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- PHPMailer API.
 		$out = array( 'mailer' => substr( strtolower( (string) $mailer->Mailer ), 0, 30 ) );
 		if ( 'smtp' === $out['mailer'] ) {
 			$out['host']     = substr( (string) $mailer->Host, 0, 200 );
@@ -178,7 +177,6 @@ final class Inspector {
 				$out['user'] = self::mask_user( (string) $mailer->Username );
 			}
 		}
-		// phpcs:enable
 		return $out;
 	}
 

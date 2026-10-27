@@ -8,8 +8,7 @@
  *   apostrophe (formula injection), UTF-8 BOM so Excel detects the encoding.
  * - Never exposes server paths: attachments are exported by file name only.
  *
- * Direct queries: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- keyset-paginated reads of the plugin's own table; caching an export makes no sense.
  *
  * @package Mailspur
  */
@@ -44,11 +43,16 @@ final class Exporter {
 		}
 		check_admin_referer( self::NONCE );
 
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- verified just above.
 		$format = isset( $_POST['file'] ) && 'json' === sanitize_key( wp_unslash( $_POST['file'] ) ) ? 'json' : 'csv';
 		$bodies = ! empty( $_POST['bodies'] );
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
-		$filters = Filters::from_post();
+		$input  = array();
+		foreach ( Filters::KEYS as $key ) {
+			if ( isset( $_POST[ $key ] ) && is_string( $_POST[ $key ] ) ) {
+				// Search terms are only used as prepared LIKE values; sanitize_text_field() keeps them readable.
+				$input[ $key ] = sanitize_text_field( wp_unslash( $_POST[ $key ] ) );
+			}
+		}
+		$filters = Filters::sanitize( $input );
 
 		while ( ob_get_level() > 0 ) {
 			ob_end_clean();
@@ -64,7 +68,8 @@ final class Exporter {
 			$format,
 			$bodies,
 			static function ( string $chunk ): void {
-				echo $chunk; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- CSV/JSON file download, not HTML; served as attachment with nosniff.
+				// Raw CSV/JSON bytes of an attachment (nosniff), never rendered as HTML.
+				file_put_contents( 'php://output', $chunk );
 			}
 		);
 		exit;
@@ -114,28 +119,51 @@ final class Exporter {
 	public function rows( array $filters, bool $bodies, int $limit = 0 ): \Generator {
 		global $wpdb;
 
-		list( $where, $params ) = $this->repository->filter( $filters );
-
-		$columns = 'id, created_at, status, delivery, recipients, subject, attachments, content_type, sender, source, error, notes, size'
-			. ( $bodies ? ', headers, message' : '' );
-		$batch   = $bodies ? self::BATCH_BODIES : self::BATCH;
-		$count   = 0;
-		$last    = null;
+		$f     = $this->repository->filter( $filters );
+		$batch = $bodies ? self::BATCH_BODIES : self::BATCH;
+		$count = 0;
+		$last  = null;
 
 		do {
 			$size = $limit > 0 ? min( $batch, $limit - $count ) : $batch;
-			$sql  = "SELECT {$columns} FROM %i WHERE {$where}";
-			$args = $params;
-			if ( null !== $last ) {
-				$sql   .= ' AND ( created_at < %s OR ( created_at = %s AND id < %d ) )';
-				$args[] = $last[0];
-				$args[] = $last[0];
-				$args[] = $last[1];
-			}
-			$sql   .= ' ORDER BY created_at DESC, id DESC LIMIT %d';
-			$args[] = $size;
 
-			$rows = (array) $wpdb->get_results( $wpdb->prepare( $sql, $args ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- columns are literals, $where comes from Repository::filter() (literals + placeholders).
+			// The list filter condition documented at Repository::filter(), then the keyset condition (switched off
+			// by its flag for the first batch). Headers and message only when asked for (they can be large).
+			$rows = (array) $wpdb->get_results(
+				$wpdb->prepare(
+					"SELECT id, created_at, status, delivery, recipients, subject, attachments, content_type, sender, source, error, notes, size, CASE WHEN 1 = %d THEN headers ELSE '' END AS headers, CASE WHEN 1 = %d THEN message ELSE '' END AS message FROM %i WHERE ( 0 = %d OR recipients LIKE %s OR subject LIKE %s OR ( 1 = %d AND message LIKE %s ) ) AND ( 0 = %d OR created_at >= %s ) AND ( 0 = %d OR created_at <= %s ) AND ( 0 = %d OR source = %s ) AND ( 0 = %d OR content_type LIKE %s ) AND ( 0 = %d OR content_type NOT LIKE %s ) AND ( 0 = %d OR attachments <> '' ) AND ( 0 = %d OR notes > 0 ) AND ( 0 = %d OR delivery = %d ) AND ( 0 = %d OR status = %d ) AND ( 0 = %d OR created_at < %s OR ( created_at = %s AND id < %d ) ) ORDER BY created_at DESC, id DESC LIMIT %d",
+					(int) $bodies,
+					(int) $bodies,
+					Repository::table(),
+					$f['search_on'],
+					$f['search'],
+					$f['search'],
+					$f['in_body'],
+					$f['search'],
+					$f['after_on'],
+					$f['after'],
+					$f['before_on'],
+					$f['before'],
+					$f['source_on'],
+					$f['source'],
+					$f['html'],
+					'%html%',
+					$f['text'],
+					'%html%',
+					$f['attachments'],
+					$f['notes'],
+					$f['delivery_on'],
+					$f['delivery'],
+					$f['status_on'],
+					$f['status'],
+					(int) ( null !== $last ),
+					$last[0] ?? '',
+					$last[0] ?? '',
+					$last[1] ?? 0,
+					$size
+				),
+				ARRAY_A
+			);
 			$got  = count( $rows );
 			foreach ( $rows as $row ) {
 				++$count;

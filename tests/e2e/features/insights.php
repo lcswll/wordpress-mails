@@ -7,8 +7,6 @@
  * Works on a past date range (2024) with its own rows, so the rest of the log does not interfere,
  * and removes everything it created. Writes /e2e-out/features/insights.json.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 

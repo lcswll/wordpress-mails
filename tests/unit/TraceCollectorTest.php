@@ -68,8 +68,8 @@ final class TraceCollectorTest extends TestCase {
 		$this->assertArrayHasKey( '_t0', $meta['trace'] );
 
 		$meta = $this->collector->meta( $meta, 'phpmailer', $mailer );
-		$this->assertSame( 3, $mailer->SMTPDebug, 'Transcript switched on.' ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$this->assertInstanceOf( \Closure::class, $mailer->Debugoutput ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->assertSame( 3, $mailer->SMTPDebug, 'Transcript switched on.' );
+		$this->assertInstanceOf( \Closure::class, $mailer->Debugoutput );
 
 		$mailer->debug( "CLIENT -> SERVER: AUTH LOGIN\r\n" );
 		$mailer->debug( "SERVER -> CLIENT: 334 VXNlcm5hbWU6\r\n" );
@@ -79,8 +79,8 @@ final class TraceCollectorTest extends TestCase {
 		$meta  = $this->result( $meta, Repository::STATUS_FAILED, 'SMTP Error: Could not authenticate.' );
 		$trace = $meta['trace'];
 
-		$this->assertSame( 0, $mailer->SMTPDebug, 'PHPMailer is handed back unchanged for the next mail.' ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$this->assertSame( 'echo', $mailer->Debugoutput ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->assertSame( 0, $mailer->SMTPDebug, 'PHPMailer is handed back unchanged for the next mail.' );
+		$this->assertSame( 'echo', $mailer->Debugoutput );
 
 		$this->assertSame( 'phpmailer', $trace['via'] );
 		$this->assertSame( 'smtp', $trace['transport']['mailer'] );
@@ -109,7 +109,7 @@ final class TraceCollectorTest extends TestCase {
 
 		$this->assertArrayNotHasKey( 'transcript', $trace );
 		$this->assertSame( 'not_failed', $trace['transcript_status'] );
-		$this->assertSame( 0, $mailer->SMTPDebug ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->assertSame( 0, $mailer->SMTPDebug );
 	}
 
 	public function test_always_mode_stores_successful_transcripts(): void {
@@ -127,15 +127,14 @@ final class TraceCollectorTest extends TestCase {
 		$mailer         = new TraceMailer();
 		$trace          = $this->collector->meta( $this->capture(), 'phpmailer', $mailer )['trace'];
 		$this->assertSame( 'off', $trace['transcript_status'] );
-		$this->assertSame( 0, $mailer->SMTPDebug ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$this->assertSame( 0, $mailer->SMTPDebug );
 
 		$this->settings = array();
-		$mailer->Mailer = 'mail'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->Mailer = 'mail';
 		$trace          = $this->collector->meta( $this->capture(), 'phpmailer', $mailer )['trace'];
 		$this->assertSame( 'not_smtp', $trace['transcript_status'] );
 
-		$other = static function (): void {};
-		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$other               = static function (): void {};
 		$mailer->Mailer      = 'smtp';
 		$mailer->SMTPDebug   = 2;
 		$mailer->Debugoutput = $other;
@@ -144,7 +143,6 @@ final class TraceCollectorTest extends TestCase {
 		$this->result( $meta, Repository::STATUS_FAILED );
 		$this->assertSame( 2, $mailer->SMTPDebug, "Other plugins' debugging is left alone." );
 		$this->assertSame( $other, $mailer->Debugoutput );
-		// phpcs:enable
 	}
 
 	public function test_pre_wp_mail_short_circuit_is_recorded_as_api_delivery(): void {
@@ -204,7 +202,7 @@ final class TraceCollectorTest extends TestCase {
 		$outer        = $this->collector->meta( $this->capture(), 'phpmailer', $outer_mailer );
 
 		$inner_mailer         = new TraceMailer();
-		$inner_mailer->Mailer = 'mail'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$inner_mailer->Mailer = 'mail';
 		$inner                = $this->collector->meta( $this->capture(), 'phpmailer', $inner_mailer );
 		$this->assertSame( 'phpmailer', $this->result( $inner, Repository::STATUS_SENT )['trace']['via'] );
 

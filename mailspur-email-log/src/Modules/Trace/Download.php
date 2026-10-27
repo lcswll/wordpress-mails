@@ -93,11 +93,11 @@ final class Download {
 		/*
 		 * Not HTML output: the body is a MIME message (.eml) served as a file download –
 		 * Content-Type message/rfc822, Content-Disposition attachment and X-Content-Type-Options: nosniff –
-		 * so browsers never render it. Escaping would corrupt the file. Only for this route, only after the
-		 * REST permission check (log viewers) and nonce passed.
+		 * so browsers never render it. Escaping would corrupt the file, so the bytes go to the output stream as they
+		 * are. Only for this route, only after the REST permission check (log viewers) and nonce passed.
 		 */
 		header( 'X-Content-Type-Options: nosniff' );
-		echo $result->get_data(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- file download, see above.
+		file_put_contents( 'php://output', $result->get_data() );
 		return true;
 	}
 }

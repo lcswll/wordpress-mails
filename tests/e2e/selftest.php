@@ -5,8 +5,6 @@
  *
  * Writes /e2e-out/selftest.json and fails the blueprint step (exit 255) on any failed assertion.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 
@@ -86,7 +84,7 @@ try {
 
 	// ------------------------------------- real PHPMailer path (no MTA → fails).
 	$template = static function ( $mailer ) {
-		$mailer->Body = '<div class="template">' . $mailer->Body . '</div>'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->Body = '<div class="template">' . $mailer->Body . '</div>';
 	};
 	add_action( 'phpmailer_init', $template );
 	$nested = static function () {

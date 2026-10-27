@@ -400,24 +400,20 @@ final class Cli {
 		$format  = 'json' === ( $assoc_args['format'] ?? 'csv' ) ? 'json' : 'csv';
 		$file    = (string) ( $assoc_args['file'] ?? '' );
 
-		// phpcs:disable WordPress.WP.AlternativeFunctions -- streaming CLI output to a user-chosen file; WP_Filesystem cannot append.
-		$handle = '' !== $file ? fopen( $file, 'wb' ) : null;
-		if ( false === $handle ) {
-			WP_CLI::error( sprintf( 'Cannot write to %s.', $file ) );
-		}
-		$write = static function ( string $chunk ) use ( $handle ): void {
-			if ( $handle ) {
-				fwrite( $handle, $chunk );
-			} else {
-				echo $chunk; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- CSV/JSON on standard output.
+		// Raw CSV/JSON, chunk by chunk: to the output stream, or appended to the file the shell user named
+		// (WP_Filesystem cannot append, and a complete export of a large log must not be held in memory).
+		$target = '' !== $file ? $file : 'php://output';
+		$first  = true;
+		$write  = static function ( string $chunk ) use ( $target, $file, &$first ): void {
+			if ( false === file_put_contents( $target, $chunk, $first ? 0 : FILE_APPEND ) ) {
+				WP_CLI::error( sprintf( 'Cannot write to %s.', $file ) );
 			}
+			$first = false;
 		};
-		$count = ( new Exporter( $this->commands->repository() ) )->stream( $filters, $format, ! empty( $assoc_args['body'] ), $write );
-		if ( $handle ) {
-			fclose( $handle );
+		$count  = ( new Exporter( $this->commands->repository() ) )->stream( $filters, $format, ! empty( $assoc_args['body'] ), $write );
+		if ( '' !== $file ) {
 			WP_CLI::success( sprintf( 'Exported %d log entries to %s.', $count, $file ) );
 		}
-		// phpcs:enable WordPress.WP.AlternativeFunctions
 	}
 
 	/**

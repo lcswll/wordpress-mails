@@ -134,12 +134,18 @@ final class Alerts {
 	 * @return array<string,array<int|string,int|string>>
 	 */
 	public static function cron_schedules( $schedules ): array {
+		// Registered by add_schedule().
 		$schedules                   = is_array( $schedules ) ? $schedules : array();
 		$schedules[ self::SCHEDULE ] = array(
 			'interval' => 15 * MINUTE_IN_SECONDS,
 			'display'  => __( 'Every 15 minutes (Mailspur alerts)', 'mailspur-email-log' ),
 		);
 		return $schedules;
+	}
+
+	/** Adds the 15-minute schedule (cron_schedules() above). */
+	public static function add_schedule(): void {
+		add_filter( 'cron_schedules', array( self::class, 'cron_schedules' ) );
 	}
 
 	/** Keeps the cron event in sync with the settings (runs in the admin and after saving the settings). */

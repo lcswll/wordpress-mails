@@ -17,7 +17,7 @@ final class DuplicatesTest extends TestCase {
 		parent::setUp();
 		Functions\when( 'wp_strip_all_tags' )->alias(
 			static function ( $text ) {
-				return trim( strip_tags( (string) $text ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.strip_tags_strip_tags, WordPressVIPMinimum.Functions.StripTags -- stub of wp_strip_all_tags().
+				return trim( strip_tags( (string) $text ) );
 			}
 		);
 	}

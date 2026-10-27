@@ -9,8 +9,6 @@
  * Delivery is captured by a fake API mailer on pre_wp_mail. Removes everything it created.
  * Writes /e2e-out/features/types-digest.json.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 

@@ -45,11 +45,11 @@ final class InsightsAlertsTest extends TestCase {
 					return (string) preg_replace( '/[^a-z0-9@._+-]/i', '', (string) $email );
 				},
 				'esc_url_raw'                      => static function ( $url, $protocols = null ) {
-					$scheme = strtolower( (string) parse_url( (string) $url, PHP_URL_SCHEME ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.parse_url_parse_url
+					$scheme = strtolower( (string) parse_url( (string) $url, PHP_URL_SCHEME ) );
 					return is_array( $protocols ) && ! in_array( $scheme, $protocols, true ) ? '' : (string) $url;
 				},
 				'wp_parse_url'                     => static function ( $url, $component = -1 ) {
-					return parse_url( (string) $url, $component ); // phpcs:ignore WordPress.WP.AlternativeFunctions.parse_url_parse_url
+					return parse_url( (string) $url, $component );
 				},
 				'get_bloginfo'                     => 'Example Shop',
 				'wp_specialchars_decode'           => static function ( $text ) {
@@ -189,7 +189,13 @@ final class InsightsAlertsTest extends TestCase {
 		$alerts = $this->alerts();
 
 		$alerts->on_logged( 1, array( 'status' => 1 ) ); // Sent: ignored.
-		$alerts->on_logged( 2, array( 'status' => 2, 'source' => Stats::ALERT_SOURCE ) ); // phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound -- own alert mail: ignored.
+		$alerts->on_logged(
+			2,
+			array(
+				'status' => 2,
+				'source' => Stats::ALERT_SOURCE,
+			)
+		);
 		$this->assertArrayNotHasKey( Alerts::FAILS_OPTION, $this->options );
 
 		$alerts->on_logged( 3, array( 'status' => 2 ) );

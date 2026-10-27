@@ -38,7 +38,7 @@ final class NotesModuleTest extends TestCase {
 			array(
 				'home_url'                => 'https://shop.example.de',
 				'wp_parse_url'            => static function ( $url, $component = -1 ) {
-					return parse_url( $url, $component ); // phpcs:ignore WordPress.WP.AlternativeFunctions.parse_url_parse_url
+					return parse_url( $url, $component );
 				},
 				'wp_get_environment_type' => 'production',
 				'is_multisite'            => false,
@@ -149,7 +149,7 @@ final class NotesModuleTest extends TestCase {
 
 		// A template plugin wrapped the body: the PHPMailer phase adds what is new, without duplicates.
 		$mailer       = new PHPMailer();
-		$mailer->Body = '<p>Password: Xy7!kq99</p><p>sk_' . 'live_51HxYzAbCdEfGhIjKlMn4f2a</p>'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->Body = '<p>Password: Xy7!kq99</p><p>sk_' . 'live_51HxYzAbCdEfGhIjKlMn4f2a</p>';
 		$meta         = $this->module->meta( $meta, 'phpmailer', $mailer );
 		$this->assertSame( array( 'password', 'card', 'api_key' ), array_column( $meta[ Module::SECRETS_META ], 'kind' ) );
 
@@ -256,7 +256,7 @@ final class NotesModuleTest extends TestCase {
 		Functions\when( 'checked' )->alias(
 			static function ( $checked, $current = true ): string {
 				$attr = (string) $checked === (string) $current ? ' checked="checked"' : '';
-				echo $attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- like WordPress' checked().
+				echo $attr;
 				return $attr;
 			}
 		);
@@ -438,10 +438,29 @@ final class NotesModuleTest extends TestCase {
 	}
 
 	public function test_list_response_ignores_other_routes(): void {
-		$response = new WP_REST_Response( array( 'items' => array( array( 'id' => 1, 'notes' => 1 ) ) ) ); // phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+		$response = new WP_REST_Response(
+			array(
+				'items' => array(
+					array(
+						'id'    => 1,
+						'notes' => 1,
+					),
+				),
+			)
+		);
 		$this->assertSame( $response, $this->module->list_response( $response, null, new WP_REST_Request( 'GET', '/mailspur-email-log/v1/mails/1' ) ) );
 		$this->assertSame( $response, $this->module->list_response( $response, null, new WP_REST_Request( 'DELETE', '/mailspur-email-log/v1/mails' ) ) );
-		$this->assertSame( array( 'items' => array( array( 'id' => 1, 'notes' => 1 ) ) ), $response->get_data() ); // phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+		$this->assertSame(
+			array(
+				'items' => array(
+					array(
+						'id'    => 1,
+						'notes' => 1,
+					),
+				),
+			),
+			$response->get_data()
+		);
 		$this->assertSame( array(), $this->wpdb->prepared );
 	}
 

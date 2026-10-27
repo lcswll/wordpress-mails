@@ -242,7 +242,7 @@ final class Links {
 					'timeout'     => self::TIMEOUT,
 					'redirection' => 0,
 					// Same as WordPress' own loopback requests (Site Health, cron): local certificates may be self-signed.
-					'sslverify'   => (bool) apply_filters( 'https_local_ssl_verify', false ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core filter.
+					'sslverify'   => (bool) apply_filters( 'https_local_ssl_verify', false ),
 					'user-agent'  => 'Mailspur link check; ' . home_url( '/' ),
 				)
 			);

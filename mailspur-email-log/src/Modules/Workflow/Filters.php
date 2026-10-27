@@ -47,21 +47,4 @@ final class Filters {
 		}
 		return $out;
 	}
-
-	/**
-	 * Reads the filters from the current POST request. The caller verifies the nonce.
-	 *
-	 * @return array<string,string|bool>
-	 */
-	public static function from_post(): array {
-		$input = array();
-		foreach ( self::KEYS as $key ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified by the caller (Exporter::download()).
-			if ( isset( $_POST[ $key ] ) && is_string( $_POST[ $key ] ) ) {
-				// Search terms are only used as prepared LIKE values; sanitize_text_field() keeps them readable.
-				$input[ $key ] = sanitize_text_field( wp_unslash( $_POST[ $key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- see above.
-			}
-		}
-		return self::sanitize( $input );
-	}
 }

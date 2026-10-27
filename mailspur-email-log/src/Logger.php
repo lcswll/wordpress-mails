@@ -128,11 +128,11 @@ final class Logger {
 		}
 
 		$data = array(
-			'content_type' => substr( (string) $mailer->ContentType, 0, 100 ), // phpcs:ignore WordPress.NamingConventions.ValidVariableName
-			'sender'       => substr( trim( $mailer->FromName ? sprintf( '%s <%s>', $mailer->FromName, $mailer->From ) : (string) $mailer->From ), 0, 255 ), // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+			'content_type' => substr( (string) $mailer->ContentType, 0, 100 ),
+			'sender'       => substr( trim( $mailer->FromName ? sprintf( '%s <%s>', $mailer->FromName, $mailer->From ) : (string) $mailer->From ), 0, 255 ),
 		);
 
-		$body = (string) $mailer->Body; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+		$body = (string) $mailer->Body;
 		if ( md5( $body ) !== $this->stack[ $key ]['hash'] ) {
 			$data['message'] = Redactor::redact( $body );
 		}
@@ -140,7 +140,7 @@ final class Logger {
 		$this->stack[ $key ]['data'] = $data;
 		// Only whether an HTML mail carries a plain-text alternative (PHPMailer AltBody) – the part itself is not stored.
 		if ( false !== stripos( $data['content_type'], 'html' ) ) {
-			$this->stack[ $key ]['meta']['plain_text'] = '' !== trim( (string) $mailer->AltBody ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+			$this->stack[ $key ]['meta']['plain_text'] = '' !== trim( (string) $mailer->AltBody );
 		}
 		$this->stack[ $key ]['meta'] = (array) apply_filters( 'mailspur_meta', $this->stack[ $key ]['meta'], 'phpmailer', $mailer );
 	}
@@ -301,7 +301,6 @@ final class Logger {
 		 * (shown as "Source" in the log). Arguments are not collected and the depth is capped,
 		 * so it is cheap and never exposes data; only the file paths of the frames are inspected.
 		 */
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- feature, see above.
 		foreach ( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 30 ) as $frame ) {
 			if ( empty( $frame['file'] ) ) {
 				continue;

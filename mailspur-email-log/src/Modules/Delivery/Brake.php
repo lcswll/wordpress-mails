@@ -321,20 +321,33 @@ final class Brake {
 		}
 
 		global $wpdb;
-		$now    = $this->now();
-		$until  = $now - $now % HOUR_IN_SECONDS;
-		$where  = 'created_at >= %s AND created_at < %s AND source NOT LIKE %s';
-		$params = array( Repository::table(), gmdate( 'Y-m-d H:i:s', $until - self::BASELINE_DAYS * DAY_IN_SECONDS ), gmdate( 'Y-m-d H:i:s', $until ), $wpdb->esc_like( 'mailspur:' ) . '%' );
-		foreach ( self::incidents() as $incident ) {
-			$where   .= ' AND NOT ( created_at >= %s AND created_at <= %s )';
-			$params[] = gmdate( 'Y-m-d H:i:s', $incident[0] - HOUR_IN_SECONDS );
-			$params[] = gmdate( 'Y-m-d H:i:s', $incident[1] );
-		}
+		$now   = $this->now();
+		$until = $now - $now % HOUR_IN_SECONDS;
 
-		// SUBSTR( created_at, 1, 13 ) = "Y-m-d H": the UTC hour, on MySQL/MariaDB and SQLite alike.
-		$sql  = 'SELECT SUBSTR( created_at, 1, 13 ) AS h, COUNT(*) AS n FROM %i WHERE ' . $where . ' GROUP BY h ORDER BY n DESC LIMIT 1';
-		$row  = $wpdb->get_row( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals only.
-		$peak = is_array( $row ) ? (int) ( $row['n'] ?? 0 ) : 0;
+		// SUBSTR( created_at, 1, 13 ) = "Y-m-d H": the UTC hour, on MySQL/MariaDB and SQLite alike (at most 336 rows).
+		$hours = (array) $wpdb->get_results(
+			$wpdb->prepare(
+				'SELECT SUBSTR( created_at, 1, 13 ) AS h, COUNT(*) AS n FROM %i WHERE created_at >= %s AND created_at < %s AND source NOT LIKE %s GROUP BY h',
+				Repository::table(),
+				gmdate( 'Y-m-d H:i:s', $until - self::BASELINE_DAYS * DAY_IN_SECONDS ),
+				gmdate( 'Y-m-d H:i:s', $until ),
+				$wpdb->esc_like( 'mailspur:' ) . '%'
+			),
+			ARRAY_A
+		);
+
+		$peak      = 0;
+		$incidents = self::incidents();
+		foreach ( $hours as $hour ) {
+			$start = (int) strtotime( $hour['h'] . ':00:00 UTC' );
+			foreach ( $incidents as $incident ) {
+				// Past incidents (and the hour before each) are no normal traffic.
+				if ( $start + HOUR_IN_SECONDS > $incident[0] - HOUR_IN_SECONDS && $start <= $incident[1] ) {
+					continue 2;
+				}
+			}
+			$peak = max( $peak, (int) $hour['n'] );
+		}
 
 		set_transient( self::BASELINE_TRANSIENT, $peak, 12 * HOUR_IN_SECONDS );
 		return $peak;

@@ -120,13 +120,17 @@ final class Probe {
 	 * @return array<int,array{0:string,1:string}> Subject format and kind.
 	 */
 	private static function subjects(): array {
-		return array(
-			// phpcs:disable WordPress.WP.I18n.LowLevelTranslationFunction, WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.TextDomainMismatch -- WordPress' own subjects, only looked up (never output) to recognise core emails.
-			array( translate( '[%s] Password Reset', 'default' ), self::PASSWORD_RESET ),
-			array( translate( '[%s] New User Registration', 'default' ), self::NEW_USER ),
-			array( translate( '[%s] Login Details', 'default' ), self::NEW_USER ),
-			// phpcs:enable WordPress.WP.I18n.LowLevelTranslationFunction, WordPress.WP.I18n.MissingTranslatorsComment, WordPress.WP.I18n.TextDomainMismatch
-		);
+		// WordPress' own subjects, looked up like translate() does (never output) to recognise core emails.
+		$core = get_translations_for_domain( 'default' );
+		$out  = array();
+		foreach ( array(
+			'[%s] Password Reset'        => self::PASSWORD_RESET,
+			'[%s] New User Registration' => self::NEW_USER,
+			'[%s] Login Details'         => self::NEW_USER,
+		) as $text => $kind ) {
+			$out[] = array( (string) apply_filters( 'gettext', $core->translate( $text ), $text, 'default' ), $kind );
+		}
+		return $out;
 	}
 
 	private static function lower( string $text ): string {

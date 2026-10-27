@@ -4,8 +4,6 @@
  * plausible shop traffic (orders following a weekday pattern, contact form mails, password resets, a weekly
  * newsletter, a few failures) so the statistics screenshot shows real-looking charts. Deterministic (seeded).
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.Security.NonceVerification.Recommended, WordPress.WP.AlternativeFunctions.rand_mt_rand, WordPress.WP.AlternativeFunctions.rand_seeding_mt_srand
- *
  * @package Mailspur
  */
 
@@ -141,7 +139,7 @@ function mailspur_e2e_seed_history(): void {
 	);
 	foreach ( $plugins as $slug => $name ) {
 		wp_mkdir_p( WP_PLUGIN_DIR . '/' . $slug );
-		file_put_contents( WP_PLUGIN_DIR . "/{$slug}/{$slug}.php", "<?php\n/*\nPlugin Name: {$name}\nVersion: 9.4.1\n*/\n" ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
+		file_put_contents( WP_PLUGIN_DIR . "/{$slug}/{$slug}.php", "<?php\n/*\nPlugin Name: {$name}\nVersion: 9.4.1\n*/\n" );
 	}
 	update_option(
 		'mailspur_types_updates',
@@ -159,9 +157,9 @@ function mailspur_e2e_seed_history(): void {
 	// emergency brake burst), with the orders under WooCommerce like the history, and index the email types now.
 	global $wpdb;
 	$table = \Mailspur\Repository::table();
-	$fresh = $wpdb->get_results( $wpdb->prepare( 'SELECT id, subject FROM %i WHERE created_at >= %s ORDER BY id DESC', $table, gmdate( 'Y-m-d H:i:s', time() - HOUR_IN_SECONDS ) ), ARRAY_A ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$fresh = $wpdb->get_results( $wpdb->prepare( 'SELECT id, subject FROM %i WHERE created_at >= %s ORDER BY id DESC', $table, gmdate( 'Y-m-d H:i:s', time() - HOUR_IN_SECONDS ) ), ARRAY_A );
 	foreach ( $fresh as $i => $mail ) {
-		$wpdb->update( // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		$wpdb->update(
 			$table,
 			array_merge(
 				array( 'created_at' => gmdate( 'Y-m-d H:i:s', time() - 60 - $i * 9 * MINUTE_IN_SECONDS - mt_rand( 0, 300 ) ) ),

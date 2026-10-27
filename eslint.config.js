@@ -7,6 +7,10 @@ export default [
 	{
 		ignores: ['node_modules/**', 'vendor/**', '.cache/**', 'dist/**', 'test-results/**', 'playwright-report/**'],
 	},
+	{
+		// Inline lint directives in comments are ignored and reported; rules change only here.
+		linterOptions: { noInlineConfig: true, reportUnusedDisableDirectives: 'error' },
+	},
 	js.configs.recommended,
 	{
 		files: ['mailspur-email-log/assets/**/*.js'],

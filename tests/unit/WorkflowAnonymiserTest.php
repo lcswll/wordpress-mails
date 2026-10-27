@@ -89,7 +89,7 @@ final class WorkflowAnonymiserTest extends TestCase {
 			),
 			$data['meta']
 		);
-		$this->assertStringStartsWith( Anonymiser::MARK, (string) json_encode( $data['meta'] ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode
+		$this->assertStringStartsWith( Anonymiser::MARK, (string) json_encode( $data['meta'] ) );
 	}
 
 	public function test_subject_is_cleared_on_request(): void {

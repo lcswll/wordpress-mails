@@ -4,8 +4,6 @@
  * 60 days of realistic history for the statistics screenshot. Only on demand, so the fixed counts of the
  * browser specs stay untouched.
  *
- * phpcs:disable WordPress.WP.AlternativeFunctions
- *
  * @package Mailspur
  */
 

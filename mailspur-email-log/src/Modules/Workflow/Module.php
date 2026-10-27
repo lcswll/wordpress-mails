@@ -83,7 +83,7 @@ final class Module implements \Mailspur\Module {
 				'copyFailed'    => __( 'Copying is not possible in this browser. Select the text and copy it:', 'mailspur-email-log' ),
 			),
 		);
-		wp_add_inline_script( 'mailspur-workflow', 'window.mailspurWorkflow = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-workflow', 'window.mailspurWorkflow = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	/** Who may export and use the source list: everyone who may read the log. */

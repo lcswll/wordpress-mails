@@ -11,7 +11,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 /** Transport properties the trace reads in phpmailer_init. */
 final class TraceMailer extends PHPMailer {
-	// phpcs:disable WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase
 	/** @var string */
 	public $Mailer = 'smtp';
 	/** @var string */
@@ -32,7 +31,6 @@ final class TraceMailer extends PHPMailer {
 	public $SMTPDebug = 0;
 	/** @var mixed */
 	public $Debugoutput = 'echo';
-	// phpcs:enable
 
 	/** @var string What getSentMIMEMessage() returns. */
 	public $mime = '';
@@ -43,9 +41,8 @@ final class TraceMailer extends PHPMailer {
 
 	/** Simulates PHPMailer's debug output. */
 	public function debug( string $line ): void {
-		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- PHPMailer API.
 		if ( is_callable( $this->Debugoutput ) && 'echo' !== $this->Debugoutput ) {
-			call_user_func( $this->Debugoutput, $line, 2 ); // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+			call_user_func( $this->Debugoutput, $line, 2 );
 		}
 	}
 }

@@ -51,7 +51,7 @@ final class Module implements \Mailspur\Module {
 	 * @param mixed $request  Request.
 	 * @return mixed Unchanged response.
 	 */
-	public static function flush_after_change( $response, $handler, $request ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundInMiddle -- hook signature.
+	public static function flush_after_change( $response, $handler, $request ) {
 		if ( $request instanceof \WP_REST_Request && 'GET' !== $request->get_method() ) {
 			$route = $request->get_route();
 			if ( 0 === strpos( $route, '/' . Rest::NS . '/mails' ) || 0 === strpos( $route, '/' . Rest::NS . '/import' ) ) {

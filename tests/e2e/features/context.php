@@ -17,8 +17,6 @@
  * Mails are short-circuited on pre_wp_mail (not delivered). Removes everything it created.
  * Writes /e2e-out/features/context.json.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery, Generic.Files.OneObjectStructurePerFile.MultipleFound, Generic.Classes.DuplicateClassName, Universal.Files.SeparateFunctionsFromOO, Squiz.Commenting
- *
  * @package Mailspur
  */
 

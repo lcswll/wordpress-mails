@@ -70,7 +70,7 @@ final class Page {
 				'requestFailed' => __( 'Request failed: %s', 'mailspur-email-log' ),
 			),
 		);
-		wp_add_inline_script( 'mailspur-answers', 'window.mailspurAnswers = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-answers', 'window.mailspurAnswers = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	public function render(): void {

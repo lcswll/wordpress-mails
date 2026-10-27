@@ -1,12 +1,9 @@
 <?php
 /**
  * Logic behind the WP-CLI commands (Cli), free of WP_CLI I/O so it can be tested directly.
- * Invalid input throws \InvalidArgumentException, failures \RuntimeException. Their messages are plain-text
- * CLI output, never HTML.
- * phpcs:disable WordPress.Security.EscapeOutput.ExceptionNotEscaped
+ * Invalid input throws \InvalidArgumentException, failures \RuntimeException; values in their messages are escaped.
  *
- * Direct queries: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- statistics and batched purges on the plugin's own table, run on demand from WP-CLI.
  *
  * @package Mailspur
  */
@@ -46,11 +43,11 @@ final class Commands {
 	public static function filters( array $assoc ): array {
 		$status = (string) ( $assoc['status'] ?? 'all' );
 		if ( 'all' !== $status && ! in_array( $status, Repository::STATUSES, true ) ) {
-			throw new InvalidArgumentException( sprintf( 'Unknown status "%s". Use one of: all, %s.', $status, implode( ', ', Repository::STATUSES ) ) );
+			throw new InvalidArgumentException( sprintf( 'Unknown status "%s". Use one of: all, %s.', esc_html( $status ), esc_html( implode( ', ', Repository::STATUSES ) ) ) );
 		}
 		$content = (string) ( $assoc['content'] ?? '' );
 		if ( '' !== $content && ! in_array( $content, Repository::FORMATS, true ) ) {
-			throw new InvalidArgumentException( sprintf( 'Unknown content type "%s". Use html or text.', $content ) );
+			throw new InvalidArgumentException( sprintf( 'Unknown content type "%s". Use html or text.', esc_html( $content ) ) );
 		}
 		return Filters::sanitize(
 			array(
@@ -77,7 +74,7 @@ final class Commands {
 		}
 		$time = strtotime( $value );
 		if ( false === $time || '' === $value ) {
-			throw new InvalidArgumentException( sprintf( 'Invalid date "%s". Use YYYY-MM-DD or e.g. "30 days ago".', $value ) );
+			throw new InvalidArgumentException( sprintf( 'Invalid date "%s". Use YYYY-MM-DD or e.g. "30 days ago".', esc_html( $value ) ) );
 		}
 		return (string) wp_date( 'Y-m-d', $time );
 	}
@@ -106,9 +103,8 @@ final class Commands {
 	 * @param array<string,mixed> $filters
 	 */
 	public function count( array $filters ): int {
-		global $wpdb;
-		list( $where, $params ) = $this->repository->filter( $filters );
-		return (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM %i WHERE {$where}", $params ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $where from Repository::filter().
+		$status = (string) ( $filters['status'] ?? 'all' );
+		return $this->repository->counts( $filters )[ in_array( $status, Repository::STATUSES, true ) ? $status : 'all' ];
 	}
 
 	/**
@@ -117,7 +113,7 @@ final class Commands {
 	public function show( int $id, bool $body ): array {
 		$row = $this->repository->find( $id );
 		if ( ! $row ) {
-			throw new RuntimeException( sprintf( 'Log entry %d not found.', $id ) );
+			throw new RuntimeException( sprintf( 'Log entry %d not found.', (int) $id ) );
 		}
 		$entry = array();
 		foreach ( Exporter::entry( $row, $body ) as $key => $value ) {
@@ -136,10 +132,10 @@ final class Commands {
 	public function resend( int $id, string $to = '' ): array {
 		$row = $this->repository->find( $id );
 		if ( ! $row ) {
-			throw new RuntimeException( sprintf( 'Log entry %d not found.', $id ) );
+			throw new RuntimeException( sprintf( 'Log entry %d not found.', (int) $id ) );
 		}
 		if ( Anonymiser::is_anonymised( $row ) ) {
-			throw new RuntimeException( sprintf( 'Log entry %d is anonymised; its content is gone.', $id ) );
+			throw new RuntimeException( sprintf( 'Log entry %d is anonymised; its content is gone.', (int) $id ) );
 		}
 
 		$recipients = $row['recipients'];
@@ -147,15 +143,17 @@ final class Commands {
 			$list = array_map( 'trim', explode( ',', $to ) );
 			foreach ( $list as $email ) {
 				if ( ! is_email( $email ) ) {
-					throw new InvalidArgumentException( sprintf( 'Invalid email address "%s".', $email ) );
+					throw new InvalidArgumentException( sprintf( 'Invalid email address "%s".', esc_html( $email ) ) );
 				}
 			}
 			$recipients = implode( ', ', $list );
 		}
 
-		$files   = array();
-		$missing = array();
-		foreach ( json_decode( (string) $row['attachments'], true ) ?: array() as $item ) { // phpcs:ignore Universal.Operators.DisallowShortTernary.Found -- invalid JSON = no attachments.
+		$files       = array();
+		$missing     = array();
+		$attachments = json_decode( (string) $row['attachments'], true );
+		// Invalid JSON = no attachments.
+		foreach ( is_array( $attachments ) ? $attachments : array() as $item ) {
 			if ( ! is_array( $item ) || ! isset( $item['name'], $item['path'] ) ) {
 				continue;
 			}
@@ -271,11 +269,38 @@ final class Commands {
 	 */
 	public function purge( array $filters ): int {
 		global $wpdb;
-		list( $where, $params ) = $this->repository->filter( $filters );
-		$params[]               = self::PURGE_BATCH;
-		$deleted                = 0;
+		$f       = $this->repository->filter( $filters );
+		$deleted = 0;
 		do {
-			$n        = (int) $wpdb->query( $wpdb->prepare( "DELETE FROM %i WHERE {$where} LIMIT %d", $params ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $where from Repository::filter(), params match it.
+			// The list filter condition documented at Repository::filter().
+			$n        = (int) $wpdb->query(
+				$wpdb->prepare(
+					"DELETE FROM %i WHERE ( 0 = %d OR recipients LIKE %s OR subject LIKE %s OR ( 1 = %d AND message LIKE %s ) ) AND ( 0 = %d OR created_at >= %s ) AND ( 0 = %d OR created_at <= %s ) AND ( 0 = %d OR source = %s ) AND ( 0 = %d OR content_type LIKE %s ) AND ( 0 = %d OR content_type NOT LIKE %s ) AND ( 0 = %d OR attachments <> '' ) AND ( 0 = %d OR notes > 0 ) AND ( 0 = %d OR delivery = %d ) AND ( 0 = %d OR status = %d ) LIMIT %d",
+					Repository::table(),
+					$f['search_on'],
+					$f['search'],
+					$f['search'],
+					$f['in_body'],
+					$f['search'],
+					$f['after_on'],
+					$f['after'],
+					$f['before_on'],
+					$f['before'],
+					$f['source_on'],
+					$f['source'],
+					$f['html'],
+					'%html%',
+					$f['text'],
+					'%html%',
+					$f['attachments'],
+					$f['notes'],
+					$f['delivery_on'],
+					$f['delivery'],
+					$f['status_on'],
+					$f['status'],
+					self::PURGE_BATCH
+				)
+			);
 			$deleted += $n;
 		} while ( self::PURGE_BATCH === $n );
 		delete_transient( Sources::TRANSIENT );
@@ -300,10 +325,10 @@ final class Commands {
 		} else {
 			$source = Importer::source( $id );
 			if ( ! $source ) {
-				throw new InvalidArgumentException( sprintf( 'Unknown source "%s". Supported: %s.', $id, implode( ', ', array_keys( Importer::sources() ) ) ) );
+				throw new InvalidArgumentException( sprintf( 'Unknown source "%s". Supported: %s.', esc_html( $id ), esc_html( implode( ', ', array_keys( Importer::sources() ) ) ) ) );
 			}
 			if ( ! $source->available() ) {
-				throw new RuntimeException( sprintf( 'No log of %s was found on this site.', $source->label() ) );
+				throw new RuntimeException( sprintf( 'No log of %s was found on this site.', esc_html( $source->label() ) ) );
 			}
 			$sources = array( $id => $source );
 		}
@@ -318,7 +343,7 @@ final class Commands {
 			do {
 				$batch = $importer->run( $source );
 				if ( null === $batch ) {
-					throw new RuntimeException( sprintf( 'An import of %s is already running.', $source->label() ) );
+					throw new RuntimeException( sprintf( 'An import of %s is already running.', esc_html( $source->label() ) ) );
 				}
 				$total['imported']   += $batch['imported'];
 				$total['skipped']    += $batch['skipped'];

@@ -9,8 +9,6 @@
  * Uses its own sender ("plugin:e2e-types-shop") and removes everything it created.
  * Writes /e2e-out/features/types.json.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 

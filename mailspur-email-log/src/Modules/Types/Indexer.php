@@ -8,8 +8,7 @@
  * from which hook, how long it took – see Speed). New senders are remembered (Senders). Runs hourly via WP-Cron and briefly when the "Email types" tab is
  * opened, so sending an email costs nothing extra. Imported emails are picked up the same way.
  *
- * Direct queries: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table.
  *
  * @package Mailspur
  */
