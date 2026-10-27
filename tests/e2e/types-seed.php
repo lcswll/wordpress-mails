@@ -7,8 +7,6 @@
  *   Subjects contain "[Types test]"; emails with that marker are "delivered" without a mail server.
  * - wp-admin/?mailspur-e2e-seed=types-cleanup: removes everything again (incl. resends).
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.Security.NonceVerification.Recommended, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 

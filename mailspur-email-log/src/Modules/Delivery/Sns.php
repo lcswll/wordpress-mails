@@ -103,7 +103,7 @@ final class Sns {
 		if ( false === $time || abs( $now - $time ) > self::TOLERANCE ) {
 			return false;
 		}
-		$signature = base64_decode( $m['Signature'], true ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode -- SNS signatures are base64.
+		$signature = base64_decode( $m['Signature'], true );
 		$string    = self::string_to_sign( $m );
 		$cert      = $this->certificate( $m['SigningCertURL'] );
 		if ( false === $signature || '' === $string || '' === $cert ) {

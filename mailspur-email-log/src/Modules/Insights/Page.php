@@ -49,7 +49,7 @@ final class Page {
 				'strategy'  => 'defer',
 			)
 		);
-		wp_add_inline_script( 'mailspur-insights', 'window.mailspurInsights = ' . wp_json_encode( $this->config() ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-insights', 'window.mailspurInsights = ' . wp_json_encode( $this->config(), JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	/**

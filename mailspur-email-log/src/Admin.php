@@ -196,7 +196,7 @@ final class Admin {
 			),
 		);
 
-		wp_add_inline_script( 'mailspur-email-log-admin', 'window.mailspurConfig = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-email-log-admin', 'window.mailspurConfig = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	/**
@@ -225,9 +225,22 @@ final class Admin {
 	}
 
 	private function current_tab(): string {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only tab switch.
-		$tab = isset( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : '';
+		$tab = self::query_arg( 'tab' );
 		return isset( $this->tabs()[ $tab ] ) ? $tab : 'log';
+	}
+
+	/**
+	 * A view parameter of the current admin URL (page, tab, filter, notice code), sanitized as a key.
+	 *
+	 * Only for what is displayed – never to change data, which always goes through a nonce-checked
+	 * admin-post/REST handler. Read from the request URI, so no form data is processed here.
+	 */
+	public static function query_arg( string $key ): string {
+		if ( ! isset( $_SERVER['REQUEST_URI'] ) ) {
+			return '';
+		}
+		parse_str( (string) wp_parse_url( esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) ), PHP_URL_QUERY ), $args );
+		return isset( $args[ $key ] ) && is_string( $args[ $key ] ) ? sanitize_key( $args[ $key ] ) : '';
 	}
 
 	public function render(): void {
@@ -577,7 +590,7 @@ final class Admin {
 				'failed'      => __( 'Import failed: %s', 'mailspur-email-log' ),
 			),
 		);
-		wp_add_inline_script( 'mailspur-import', 'window.mailspurImportConfig = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-import', 'window.mailspurImportConfig = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	private function render_import(): void {

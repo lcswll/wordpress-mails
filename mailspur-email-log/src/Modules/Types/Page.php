@@ -76,7 +76,7 @@ final class Page {
 					'strategy'  => 'defer',
 				)
 			);
-			wp_add_inline_script( 'mailspur-types-tab', 'window.mailspurTypesTab = ' . wp_json_encode( self::script_config() ) . ';', 'before' );
+			wp_add_inline_script( 'mailspur-types-tab', 'window.mailspurTypesTab = ' . wp_json_encode( self::script_config(), JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 		} elseif ( 'log' === $tab ) {
 			wp_enqueue_style( 'mailspur-types', $base . 'types.css', array(), VERSION );
 			wp_enqueue_script(
@@ -104,7 +104,8 @@ final class Page {
 							/* translators: %s: date and time */
 							'digested'       => __( 'Delivered in the daily digest on %s.', 'mailspur-email-log' ),
 						),
-					)
+					),
+					JSON_HEX_TAG | JSON_HEX_AMP
 				) . ';',
 				'before'
 			);
@@ -220,11 +221,10 @@ final class Page {
 			wp_schedule_single_event( time(), Module::HOOK_NOW );
 		}
 
-		$now   = time();
-		$items = Report::current( $this->store, $now );
-		$sum   = Report::summary( $items );
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only view switch.
-		$attention = isset( $_GET['show'] ) && 'attention' === sanitize_key( wp_unslash( $_GET['show'] ) );
+		$now       = time();
+		$items     = Report::current( $this->store, $now );
+		$sum       = Report::summary( $items );
+		$attention = 'attention' === Admin::query_arg( 'show' );
 		$admin     = current_user_can( 'manage_options' );
 
 		// Stopped first, then failing, new, fine, ignored – within a sender and across senders.
@@ -902,8 +902,7 @@ final class Page {
 	}
 
 	private function notice(): void {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display only, set by our own redirect.
-		$done = isset( $_GET['types-done'] ) ? sanitize_key( wp_unslash( $_GET['types-done'] ) ) : '';
+		$done = Admin::query_arg( 'types-done' );
 		$text = array(
 			'rebuilt' => __( 'The email types are being rebuilt from the log.', 'mailspur-email-log' ),
 			'muted'   => __( 'This email type is ignored now: no status, no alerts.', 'mailspur-email-log' ),
@@ -923,10 +922,9 @@ final class Page {
 	/** admin-post.php?action=mailspur_types_mute */
 	public function mute(): void {
 		$this->guard();
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- verified in guard().
+		check_admin_referer( self::NONCE );
 		$id    = isset( $_POST['type'] ) ? absint( $_POST['type'] ) : 0;
 		$muted = ! empty( $_POST['muted'] );
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
 		if ( $id ) {
 			$this->store->mute( $id, $muted );
 		}
@@ -947,10 +945,9 @@ final class Page {
 	 */
 	public function bundle(): void {
 		$this->guard();
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- verified in guard().
+		check_admin_referer( self::NONCE );
 		$id = isset( $_POST['type'] ) ? absint( $_POST['type'] ) : 0;
 		$on = ! empty( $_POST['bundle'] );
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
 		if ( $id ) {
 			$this->store->bundle( $id, $on );
 			Bundle::sync( $this->store );
@@ -973,7 +970,7 @@ final class Page {
 	/** admin-post.php?action=mailspur_types_seen – hides the content change marker until the next change. */
 	public function seen(): void {
 		$this->guard();
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified in guard().
+		check_admin_referer( self::NONCE );
 		$id    = isset( $_POST['type'] ) ? absint( $_POST['type'] ) : 0;
 		$types = $this->store->types();
 		if ( isset( $types[ $id ] ) ) {
@@ -994,6 +991,7 @@ final class Page {
 	/** admin-post.php?action=mailspur_types_rebuild */
 	public function rebuild(): void {
 		$this->guard();
+		check_admin_referer( self::NONCE );
 		$this->indexer->rebuild();
 		wp_safe_redirect(
 			Admin::url(
@@ -1010,7 +1008,6 @@ final class Page {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'Sorry, you are not allowed to do that.', 'mailspur-email-log' ), '', array( 'response' => 403 ) );
 		}
-		check_admin_referer( self::NONCE );
 	}
 
 	/**

@@ -5,9 +5,7 @@
  * Every value and identifier goes through $wpdb->prepare() (%i for the table
  * name and the whitelisted ORDER BY column, available since WordPress 6.2).
  *
- * Direct queries are intended: this is the plugin's own table, and object
- * caching would only serve stale data for a log that changes with every mail.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange -- the plugin's own table; object caching would only serve stale data for a log that changes with every mail.
  *
  * @package Mailspur
  */
@@ -102,80 +100,106 @@ final class Repository {
 	const FORMATS = array( 'html', 'text' );
 
 	/**
-	 * WHERE clause of a list filter, shared by the list, the export and WP-CLI.
+	 * Values of a list filter, shared by the list, the export and WP-CLI.
 	 *
-	 * Fragments are string literals only; every value is a placeholder. The returned params start
-	 * with the table name (for the "FROM %i" every caller uses).
+	 * Every filtered query spells out the same fixed condition as a string literal, so the complete SQL and every
+	 * value reach $wpdb->prepare() as written (tests/unit/RepositoryTest.php checks that every copy is identical):
+	 *
+	 *     ( 0 = %d OR recipients LIKE %s OR subject LIKE %s OR ( 1 = %d AND message LIKE %s ) )
+	 *     AND ( 0 = %d OR created_at >= %s ) AND ( 0 = %d OR created_at <= %s ) AND ( 0 = %d OR source = %s )
+	 *     AND ( 0 = %d OR content_type LIKE %s ) AND ( 0 = %d OR content_type NOT LIKE %s )
+	 *     AND ( 0 = %d OR attachments <> '' ) AND ( 0 = %d OR notes > 0 ) AND ( 0 = %d OR delivery = %d )
+	 *     AND ( 0 = %d OR status = %d )
+	 *
+	 * with the values search_on, search, search, in_body, search, after_on, after, before_on, before, source_on,
+	 * source, html, '%html%', text, '%html%', attachments, notes, delivery_on, delivery, status_on, status.
+	 * Each "( 0 = %d OR … )" is one filter with its on/off flag. The flags become constants in the prepared SQL,
+	 * which MySQL folds away before choosing an index (source, delivery, status, created_at stay indexed).
 	 *
 	 * @param array<string,mixed> $args       search, in_body, after, before (Y-m-d, site time), source,
 	 *                                        format (html|text), attachments, notes (bool), delivery (slug of
 	 *                                        DELIVERY), status (slug).
 	 * @param bool                $with_status Whether to apply the status filter (the list needs counts across all statuses first).
-	 * @return array{0:string,1:array<int,mixed>} SQL condition and its params.
+	 * @return array<string,string|int>
 	 */
 	public function filter( array $args, bool $with_status = true ): array {
 		global $wpdb;
 
-		$where  = array( '1=1' );
-		$params = array( self::table() );
-
 		$search = trim( (string) ( $args['search'] ?? '' ) );
-		if ( '' !== $search ) {
-			$like     = '%' . $wpdb->esc_like( $search ) . '%';
-			$fields   = array( 'recipients LIKE %s', 'subject LIKE %s' );
-			$params[] = $like;
-			$params[] = $like;
-			if ( ! empty( $args['in_body'] ) ) {
-				$fields[] = 'message LIKE %s';
-				$params[] = $like;
-			}
-			$where[] = '(' . implode( ' OR ', $fields ) . ')';
-		}
-
-		if ( ! empty( $args['after'] ) ) {
-			$where[]  = 'created_at >= %s';
-			$params[] = get_gmt_from_date( (string) $args['after'] . ' 00:00:00' );
-		}
-		if ( ! empty( $args['before'] ) ) {
-			$where[]  = 'created_at <= %s';
-			$params[] = get_gmt_from_date( (string) $args['before'] . ' 23:59:59' );
-		}
-
+		$after  = ! empty( $args['after'] ) ? get_gmt_from_date( (string) $args['after'] . ' 00:00:00' ) : '';
+		$before = ! empty( $args['before'] ) ? get_gmt_from_date( (string) $args['before'] . ' 23:59:59' ) : '';
 		$source = (string) ( $args['source'] ?? '' );
-		if ( '' !== $source ) {
-			$where[]  = 'source = %s'; // Indexed.
-			$params[] = $source;
-		}
-
-		$format = (string) ( $args['format'] ?? '' );
-		if ( in_array( $format, self::FORMATS, true ) ) {
-			// Unknown content types (pre_wp_mail mailers) count as plain text here.
-			$where[]  = 'html' === $format ? 'content_type LIKE %s' : 'content_type NOT LIKE %s';
-			$params[] = '%html%';
-		}
-
-		if ( ! empty( $args['attachments'] ) ) {
-			$where[] = "attachments <> ''";
-		}
-		if ( ! empty( $args['notes'] ) ) {
-			$where[] = 'notes > 0';
-		}
-
+		// Unknown content types (pre_wp_mail mailers) count as plain text here.
+		$format   = (string) ( $args['format'] ?? '' );
 		$delivery = array_search( (string) ( $args['delivery'] ?? '' ), self::DELIVERY, true );
-		if ( false !== $delivery ) {
-			$where[]  = 'delivery = %d'; // Indexed (delivery, created_at).
-			$params[] = $delivery;
-		}
+		$status   = $with_status ? array_search( (string) ( $args['status'] ?? 'all' ), self::STATUSES, true ) : false;
 
-		if ( $with_status ) {
-			$code = array_search( (string) ( $args['status'] ?? 'all' ), self::STATUSES, true );
-			if ( false !== $code ) {
-				$where[]  = 'status = %d';
-				$params[] = $code;
-			}
-		}
+		return array(
+			'search_on'   => (int) ( '' !== $search ),
+			'search'      => '' !== $search ? '%' . $wpdb->esc_like( $search ) . '%' : '',
+			'in_body'     => (int) ! empty( $args['in_body'] ),
+			'after_on'    => (int) ( '' !== $after ),
+			'after'       => $after,
+			'before_on'   => (int) ( '' !== $before ),
+			'before'      => $before,
+			'source_on'   => (int) ( '' !== $source ),
+			'source'      => $source,
+			'html'        => (int) ( 'html' === $format ),
+			'text'        => (int) ( 'text' === $format ),
+			'attachments' => (int) ! empty( $args['attachments'] ),
+			'notes'       => (int) ! empty( $args['notes'] ),
+			'delivery_on' => (int) ( false !== $delivery ),
+			'delivery'    => (int) $delivery,
+			'status_on'   => (int) ( false !== $status ),
+			'status'      => (int) $status,
+		);
+	}
 
-		return array( implode( ' AND ', $where ), $params );
+	/**
+	 * Number of entries per status (plus "all") for a list filter; its status is ignored.
+	 *
+	 * @param array<string,mixed> $args See filter().
+	 * @return array<string,int>
+	 */
+	public function counts( array $args ): array {
+		global $wpdb;
+
+		$f    = $this->filter( $args, false );
+		$rows = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT status, COUNT(*) AS n FROM %i WHERE ( 0 = %d OR recipients LIKE %s OR subject LIKE %s OR ( 1 = %d AND message LIKE %s ) ) AND ( 0 = %d OR created_at >= %s ) AND ( 0 = %d OR created_at <= %s ) AND ( 0 = %d OR source = %s ) AND ( 0 = %d OR content_type LIKE %s ) AND ( 0 = %d OR content_type NOT LIKE %s ) AND ( 0 = %d OR attachments <> '' ) AND ( 0 = %d OR notes > 0 ) AND ( 0 = %d OR delivery = %d ) AND ( 0 = %d OR status = %d ) GROUP BY status",
+				self::table(),
+				$f['search_on'],
+				$f['search'],
+				$f['search'],
+				$f['in_body'],
+				$f['search'],
+				$f['after_on'],
+				$f['after'],
+				$f['before_on'],
+				$f['before'],
+				$f['source_on'],
+				$f['source'],
+				$f['html'],
+				'%html%',
+				$f['text'],
+				'%html%',
+				$f['attachments'],
+				$f['notes'],
+				$f['delivery_on'],
+				$f['delivery'],
+				$f['status_on'],
+				$f['status']
+			),
+			ARRAY_A
+		);
+
+		$counts = array_fill_keys( array( 'all', 'sent', 'failed', 'pending', 'held' ), 0 );
+		foreach ( (array) $rows as $row ) {
+			$counts[ self::status_slug( (int) $row['status'] ) ] += (int) $row['n'];
+			$counts['all']                                       += (int) $row['n'];
+		}
+		return $counts;
 	}
 
 	/**
@@ -187,24 +211,10 @@ final class Repository {
 	public function query( array $args ): array {
 		global $wpdb;
 
-		list( $where, $params ) = $this->filter( $args, false );
-
 		// One grouped query yields the tab counts and the total for the active tab.
-		$sql  = 'SELECT status, COUNT(*) AS n FROM %i WHERE ' . $where . ' GROUP BY status';
-		$rows = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals in filter().
-
-		$counts = array_fill_keys( array( 'all', 'sent', 'failed', 'pending', 'held' ), 0 );
-		foreach ( (array) $rows as $row ) {
-			$counts[ self::status_slug( (int) $row['status'] ) ] += (int) $row['n'];
-			$counts['all']                                       += (int) $row['n'];
-		}
-
+		$counts = $this->counts( $args );
 		$status = (string) ( $args['status'] ?? 'all' );
-		$code   = array_search( $status, self::STATUSES, true );
-		if ( false !== $code ) {
-			$where   .= ' AND status = %d';
-			$params[] = $code;
-		} else {
+		if ( ! in_array( $status, self::STATUSES, true ) ) {
 			$status = 'all';
 		}
 
@@ -217,18 +227,81 @@ final class Repository {
 			);
 		}
 
-		$per_page = max( 1, (int) ( $args['per_page'] ?? 25 ) );
+		$f        = $this->filter( $args );
 		$column   = self::ORDER_COLUMNS[ $args['orderby'] ?? 'date' ] ?? 'created_at';
-		$order    = 'asc' === ( $args['order'] ?? 'desc' ) ? 'ASC' : 'DESC';
-		$params[] = $column;
-		$params[] = $per_page;
-		$params[] = ( max( 1, (int) ( $args['page'] ?? 1 ) ) - 1 ) * $per_page;
+		$per_page = max( 1, (int) ( $args['per_page'] ?? 25 ) );
+		$offset   = ( max( 1, (int) ( $args['page'] ?? 1 ) ) - 1 ) * $per_page;
+		// "anonymised": flag set by the anonymisation (Modules\Workflow), which always writes that key first.
+		$anonymised = $wpdb->esc_like( '{"anonymised":' ) . '%';
 
 		// Secondary sort on id keeps pagination stable for equal recipients/subjects.
-		// "anonymised": flag set by the anonymisation (Modules\Workflow), which always writes that key first.
-		$sql   = "SELECT id, created_at, status, recipients, subject, attachments, source, error, notes, size, ( meta LIKE '{\"anonymised\":%%' ) AS anonymised FROM %i WHERE "
-			. $where . " ORDER BY %i {$order}, id {$order} LIMIT %d OFFSET %d";
-		$items = $wpdb->get_results( $wpdb->prepare( $sql, $params ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals in filter(), $order is ASC|DESC.
+		if ( 'asc' === ( $args['order'] ?? 'desc' ) ) {
+			$items = $wpdb->get_results(
+				$wpdb->prepare(
+					"SELECT id, created_at, status, recipients, subject, attachments, source, error, notes, size, ( meta LIKE %s ) AS anonymised FROM %i WHERE ( 0 = %d OR recipients LIKE %s OR subject LIKE %s OR ( 1 = %d AND message LIKE %s ) ) AND ( 0 = %d OR created_at >= %s ) AND ( 0 = %d OR created_at <= %s ) AND ( 0 = %d OR source = %s ) AND ( 0 = %d OR content_type LIKE %s ) AND ( 0 = %d OR content_type NOT LIKE %s ) AND ( 0 = %d OR attachments <> '' ) AND ( 0 = %d OR notes > 0 ) AND ( 0 = %d OR delivery = %d ) AND ( 0 = %d OR status = %d ) ORDER BY %i ASC, id ASC LIMIT %d OFFSET %d",
+					$anonymised,
+					self::table(),
+					$f['search_on'],
+					$f['search'],
+					$f['search'],
+					$f['in_body'],
+					$f['search'],
+					$f['after_on'],
+					$f['after'],
+					$f['before_on'],
+					$f['before'],
+					$f['source_on'],
+					$f['source'],
+					$f['html'],
+					'%html%',
+					$f['text'],
+					'%html%',
+					$f['attachments'],
+					$f['notes'],
+					$f['delivery_on'],
+					$f['delivery'],
+					$f['status_on'],
+					$f['status'],
+					$column,
+					$per_page,
+					$offset
+				),
+				ARRAY_A
+			);
+		} else {
+			$items = $wpdb->get_results(
+				$wpdb->prepare(
+					"SELECT id, created_at, status, recipients, subject, attachments, source, error, notes, size, ( meta LIKE %s ) AS anonymised FROM %i WHERE ( 0 = %d OR recipients LIKE %s OR subject LIKE %s OR ( 1 = %d AND message LIKE %s ) ) AND ( 0 = %d OR created_at >= %s ) AND ( 0 = %d OR created_at <= %s ) AND ( 0 = %d OR source = %s ) AND ( 0 = %d OR content_type LIKE %s ) AND ( 0 = %d OR content_type NOT LIKE %s ) AND ( 0 = %d OR attachments <> '' ) AND ( 0 = %d OR notes > 0 ) AND ( 0 = %d OR delivery = %d ) AND ( 0 = %d OR status = %d ) ORDER BY %i DESC, id DESC LIMIT %d OFFSET %d",
+					$anonymised,
+					self::table(),
+					$f['search_on'],
+					$f['search'],
+					$f['search'],
+					$f['in_body'],
+					$f['search'],
+					$f['after_on'],
+					$f['after'],
+					$f['before_on'],
+					$f['before'],
+					$f['source_on'],
+					$f['source'],
+					$f['html'],
+					'%html%',
+					$f['text'],
+					'%html%',
+					$f['attachments'],
+					$f['notes'],
+					$f['delivery_on'],
+					$f['delivery'],
+					$f['status_on'],
+					$f['status'],
+					$column,
+					$per_page,
+					$offset
+				),
+				ARRAY_A
+			);
+		}
 
 		return array(
 			'items'  => (array) $items,
@@ -288,9 +361,7 @@ final class Repository {
 		if ( ! $ids ) {
 			return 0;
 		}
-		$placeholders = implode( ',', array_fill( 0, count( $ids ), '%d' ) );
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- one %d per id.
-		return (int) $wpdb->query( $wpdb->prepare( "DELETE FROM %i WHERE id IN ({$placeholders})", self::table(), ...$ids ) );
+		return (int) $wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE id IN (' . implode( ',', array_fill( 0, count( $ids ), '%d' ) ) . ')', array_merge( array( self::table() ), $ids ) ) );
 	}
 
 	public function delete_all(): void {
@@ -308,11 +379,16 @@ final class Repository {
 	public function delete_before( string $gmt_datetime, array $except_sources = array() ): int {
 		global $wpdb;
 		$except = array_values( array_unique( array_map( 'strval', $except_sources ) ) );
-		$sql    = 'DELETE FROM %i WHERE created_at < %s' . ( $except ? ' AND source NOT IN (' . implode( ',', array_fill( 0, count( $except ), '%s' ) ) . ')' : '' ) . ' LIMIT %d';
+		// "NOT IN ()" is invalid SQL: with nothing to keep, the condition is switched off by its flag.
+		$keep = $except ? $except : array( '' );
 		return $this->delete_in_batches(
-			static function ( int $batch ) use ( $wpdb, $gmt_datetime, $except, $sql ): int {
-				// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals and placeholders only.
-				return (int) $wpdb->query( $wpdb->prepare( $sql, array_merge( array( self::table(), $gmt_datetime ), $except, array( $batch ) ) ) );
+			static function ( int $batch ) use ( $wpdb, $gmt_datetime, $except, $keep ): int {
+				return (int) $wpdb->query(
+					$wpdb->prepare(
+						'DELETE FROM %i WHERE created_at < %s AND ( 0 = %d OR source NOT IN (' . implode( ',', array_fill( 0, count( $keep ), '%s' ) ) . ') ) LIMIT %d',
+						array_merge( array( self::table(), $gmt_datetime, (int) ( array() !== $except ) ), $keep, array( $batch ) )
+					)
+				);
 			}
 		);
 	}
@@ -379,16 +455,14 @@ final class Repository {
 	}
 
 	/**
-	 * Inserts many rows with one multi-row INSERT per call (used by the importer).
+	 * Inserts imported rows (used by the importer, which already runs one duplicate lookup per row).
 	 *
 	 * @param array<int,array<string,string|int>> $rows Rows in the format of Logger::normalize().
+	 * @return int Number of inserted rows.
 	 */
 	public function insert_many( array $rows ): int {
 		global $wpdb;
-		if ( ! $rows ) {
-			return 0;
-		}
-		$columns = array(
+		$formats  = array(
 			'created_at'   => '%s',
 			'status'       => '%d',
 			'recipients'   => '%s',
@@ -405,16 +479,15 @@ final class Repository {
 			'size'         => '%d',
 			'raw'          => '%s',
 		);
-		$tuple   = '(' . implode( ',', $columns ) . ')';
-		$values  = array( self::table() );
+		$inserted = 0;
 		foreach ( $rows as $row ) {
-			foreach ( array_keys( $columns ) as $column ) {
-				$values[] = $row[ $column ] ?? '';
+			$data = array();
+			foreach ( array_keys( $formats ) as $column ) {
+				$data[ $column ] = $row[ $column ] ?? '';
 			}
+			$inserted += (int) $wpdb->insert( self::table(), $data, array_values( $formats ) );
 		}
-		$sql = 'INSERT INTO %i (' . implode( ',', array_keys( $columns ) ) . ') VALUES ' . implode( ',', array_fill( 0, count( $rows ), $tuple ) );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literal column names and placeholders.
-		return (int) $wpdb->query( $wpdb->prepare( $sql, $values ) );
+		return $inserted;
 	}
 
 	/**

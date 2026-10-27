@@ -25,7 +25,6 @@ final class Eml {
 	 * Compresses a MIME message for the raw column.
 	 */
 	public static function pack( string $mime ): string {
-		// phpcs:disable WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode -- binary gzip data in a text column, not obfuscation.
 		if ( function_exists( 'gzencode' ) ) {
 			$gz = gzencode( $mime, 6 );
 			if ( false !== $gz ) {
@@ -33,14 +32,12 @@ final class Eml {
 			}
 		}
 		return 'b64:' . base64_encode( $mime );
-		// phpcs:enable
 	}
 
 	/**
 	 * @return string The MIME message, or '' when the column holds nothing usable.
 	 */
 	public static function unpack( string $raw ): string {
-		// phpcs:disable WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode -- see pack().
 		if ( 0 === strpos( $raw, 'gz:' ) && function_exists( 'gzdecode' ) ) {
 			$gz   = base64_decode( substr( $raw, 3 ), true );
 			$mime = false === $gz ? false : gzdecode( $gz );
@@ -49,7 +46,6 @@ final class Eml {
 		if ( 0 === strpos( $raw, 'b64:' ) ) {
 			return (string) base64_decode( substr( $raw, 4 ), true );
 		}
-		// phpcs:enable
 		return '';
 	}
 
@@ -77,7 +73,6 @@ final class Eml {
 			require_once ABSPATH . 'wp-includes/PHPMailer/Exception.php';
 		}
 
-		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- PHPMailer API.
 		$mail          = new PHPMailer( true );
 		$mail->CharSet = 'UTF-8';
 		$mail->Mailer  = 'smtp'; // Only so that To and Subject are part of the header; nothing is sent.
@@ -163,7 +158,6 @@ final class Eml {
 
 		$mail->preSend();
 		return $mail->getSentMIMEMessage();
-		// phpcs:enable
 	}
 
 	/**
@@ -221,7 +215,6 @@ final class Eml {
 
 	private static function encode_word( string $value ): string {
 		$value = self::header_value( $value );
-		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode -- RFC 2047 encoded-word.
 		return preg_match( '/[^\x20-\x7E]/', $value ) ? '=?UTF-8?B?' . base64_encode( $value ) . '?=' : $value;
 	}
 }

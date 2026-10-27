@@ -39,7 +39,7 @@ final class Module implements \Mailspur\Module {
 	 * The module reads the log table only for its two lookups (list severities, repeated sending)
 	 * that the Repository has no method for; it does not need the instance.
 	 */
-	public function __construct( Repository $repository ) {} // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.Found -- required by the Module interface.
+	public function __construct( Repository $repository ) {}
 
 	public function register(): void {
 		add_filter( 'mailspur_settings_defaults', array( $this, 'defaults' ) );
@@ -142,7 +142,7 @@ final class Module implements \Mailspur\Module {
 			if ( ( 'capture' === $phase || 'import' === $phase ) && is_array( $context ) ) {
 				$text = (string) ( $context['message'] ?? '' );
 			} elseif ( 'phpmailer' === $phase && $context instanceof \PHPMailer\PHPMailer\PHPMailer ) {
-				$text = (string) $context->Body; // phpcs:ignore WordPress.NamingConventions.ValidVariableName
+				$text = (string) $context->Body;
 			} else {
 				return $meta;
 			}
@@ -308,9 +308,8 @@ final class Module implements \Mailspur\Module {
 		if ( ! $ids ) {
 			return array();
 		}
-		$placeholders = implode( ',', array_fill( 0, count( $ids ), '%d' ) );
-		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- own log table, one %d per id.
-		$rows = (array) $wpdb->get_results( $wpdb->prepare( "SELECT id, meta FROM %i WHERE id IN ({$placeholders})", Repository::table(), ...$ids ), ARRAY_A );
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- own log table, primary keys.
+		$rows = (array) $wpdb->get_results( $wpdb->prepare( 'SELECT id, meta FROM %i WHERE id IN (' . implode( ',', array_fill( 0, count( $ids ), '%d' ) ) . ')', array_merge( array( Repository::table() ), $ids ) ), ARRAY_A );
 		$out  = array();
 		foreach ( $rows as $row ) {
 			if ( is_array( $row ) && isset( $row['id'] ) ) {
@@ -351,7 +350,7 @@ final class Module implements \Mailspur\Module {
 				'help'    => __( 'What to do', 'mailspur-email-log' ),
 			),
 		);
-		wp_add_inline_script( 'mailspur-notes', 'window.mailspurNotes = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-notes', 'window.mailspurNotes = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	/** Title of a code without its values, for the settings list. */

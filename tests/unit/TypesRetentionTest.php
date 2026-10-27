@@ -67,7 +67,7 @@ final class TypesRetentionTest extends TestCase {
 		( new Cleanup( new Repository() ) )->run( self::NOW );
 		$delete = $this->prepared( 'DELETE FROM %i WHERE created_at' );
 		$this->assertNotNull( $delete );
-		$this->assertStringNotContainsString( 'NOT IN', $delete['sql'] );
+		$this->assertSame( 0, $delete['args'][2], 'no source is kept longer' );
 		$this->assertSame( gmdate( 'Y-m-d H:i:s', self::NOW - 30 * DAY_IN_SECONDS ), $delete['args'][1] );
 		$this->assertNull( $this->prepared( 'SELECT id, created_at, subject' ), 'no entry is read' );
 	}
@@ -108,11 +108,11 @@ final class TypesRetentionTest extends TestCase {
 
 		$general = $this->prepared( 'source NOT IN (%s)' );
 		$this->assertNotNull( $general );
-		$this->assertSame( 'plugin:shop', $general['args'][2] );
+		$this->assertSame( array( 1, 'plugin:shop' ), array_slice( $general['args'], 2, 2 ) );
 
 		$sweep = $this->prepared( 'SELECT id, created_at, subject' );
 		$this->assertSame( array( 'plugin:shop', gmdate( 'Y-m-d H:i:s', self::NOW - 30 * DAY_IN_SECONDS ), 0 ), array_slice( $sweep['args'] ?? array(), 1, 3 ) );
-		$this->assertStringNotContainsString( 'anonymised', (string) ( $sweep['sql'] ?? '' ), 'the general period also deletes anonymised entries' );
+		$this->assertSame( 0, $sweep['args'][4] ?? null, 'the general period also deletes anonymised entries' );
 
 		$delete = $this->prepared( 'WHERE id IN' );
 		$this->assertSame( array( 2, 3 ), array_slice( $delete['args'] ?? array(), 1 ), 'other emails of the sender and invoices older than a year' );
@@ -186,7 +186,7 @@ final class TypesRetentionTest extends TestCase {
 		( new Cleanup( new Repository() ) )->run( self::NOW );
 
 		$sweep = $this->prepared( 'SELECT id, created_at, subject' );
-		$this->assertStringContainsString( 'meta NOT LIKE %s', (string) ( $sweep['sql'] ?? '' ), 'anonymised entries wait for the general period' );
+		$this->assertSame( 1, $sweep['args'][4] ?? null, 'anonymised entries wait for the general period' );
 		$this->assertSame( array( 'core', gmdate( 'Y-m-d H:i:s', self::NOW - 7 * DAY_IN_SECONDS ) ), array_slice( $sweep['args'] ?? array(), 1, 2 ) );
 		$delete = $this->prepared( 'WHERE id IN' );
 		$this->assertSame( array( 5 ), array_slice( $delete['args'] ?? array(), 1 ) );

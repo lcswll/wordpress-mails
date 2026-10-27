@@ -9,7 +9,6 @@ namespace PHPMailer\PHPMailer;
 
 /** Public properties the logger reads in phpmailer_init. */
 class PHPMailer {
-	// phpcs:disable WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase
 	/** @var string */
 	public $ContentType = 'text/plain';
 	/** @var string */
@@ -20,7 +19,6 @@ class PHPMailer {
 	public $Body = '';
 	/** @var string */
 	public $AltBody = '';
-	// phpcs:enable
 
 	/** @var string Message-ID of the last mail sent (PHPMailer sets it while building the headers). */
 	public $last_message_id = '';

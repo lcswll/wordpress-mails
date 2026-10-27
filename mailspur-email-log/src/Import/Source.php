@@ -6,8 +6,7 @@
  * from the current code of each plugin (time zones, separators, serialization) – see the
  * per-source docblocks.
  *
- * Direct queries are intended: foreign plugin tables have no API.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- foreign plugin tables have no API.
  *
  * @package Mailspur
  */
@@ -151,13 +150,12 @@ abstract class Source {
 			return null;
 		}
 		// Truncated data (e.g. old FluentSMTP columns) is expected: swallow the notice instead of logging it.
-		set_error_handler( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler -- scoped, restored below.
+		set_error_handler(
 			static function (): bool {
 				return true;
 			}
 		);
 		try {
-			// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.serialize_unserialize -- objects are disabled.
 			$data = unserialize( trim( $value ), array( 'allowed_classes' => false ) );
 		} finally {
 			restore_error_handler();

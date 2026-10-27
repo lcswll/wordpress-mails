@@ -423,13 +423,12 @@ final class Module implements \Mailspur\Module {
 			),
 			'providers' => self::provider_labels(),
 		);
-		wp_add_inline_script( 'mailspur-delivery', 'window.mailspurDelivery = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-delivery', 'window.mailspurDelivery = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	/** Notices on the Mail Log screen only: staging mode active, or a suggestion to enable it. */
 	public function notices(): void {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only detects the current admin screen.
-		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+		$page = Admin::query_arg( 'page' );
 		if ( Admin::SLUG !== $page || ! Settings::current_user_can_view() ) {
 			return;
 		}
@@ -482,8 +481,7 @@ final class Module implements \Mailspur\Module {
 
 	/** Emergency brake on the Mail Log screen only: incident with count, main source and the release/discard buttons. */
 	public function brake_notice(): void {
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- only detects the current admin screen.
-		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+		$page = Admin::query_arg( 'page' );
 		if ( Admin::SLUG !== $page || ! Settings::current_user_can_view() ) {
 			return;
 		}

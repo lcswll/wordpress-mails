@@ -76,7 +76,7 @@ const installed = [
 
 function phpcs(extra) {
 	const res = spawnSync(php, [
-		path.join(vendor, 'bin', 'phpcs'), '-q', '--report=json', '--no-cache', `--runtime-set`, 'installed_paths', installed,
+		path.join(vendor, 'bin', 'phpcs'), '-q', '--report=json', '--no-cache', '--severity=1', `--runtime-set`, 'installed_paths', installed,
 		'--runtime-set', 'text_domain', PLUGIN_SLUG, '--runtime-set', 'minimum_wp_version', '6.5',
 		'--ignore=*/languages/*', ...extra, pluginDir,
 	], { cwd: root, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });

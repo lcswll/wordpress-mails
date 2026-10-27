@@ -6,8 +6,6 @@
  *
  * Writes /e2e-out/features/delivery.json (evaluated by scripts/e2e.mjs). Never throws.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery, WordPress.Security.NonceVerification
- *
  * @package Mailspur
  */
 
@@ -101,10 +99,10 @@ try {
 	$node = $bar->get_node( 'mailspur-staging' );
 	delivery_check( $node && false !== strpos( (string) $node->title, 'staging mode' ), 'admin bar shows staging mode', $node );
 
-	$_GET['page'] = 'mailspur-email-log';
-	$notice       = delivery_call( 'admin_notices', 'notices' );
+	$_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=mailspur-email-log';
+	$notice                 = delivery_call( 'admin_notices', 'notices' );
 	delivery_check( false !== strpos( (string) $notice, 'Staging mode is active: emails are logged but not delivered.' ), 'notice on the Mail Log screen', $notice );
-	$_GET['page'] = 'other';
+	$_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=other';
 	delivery_check( '' === delivery_call( 'admin_notices', 'notices' ), 'no notice on other screens' );
 
 	// ------------------------------------------------------------------ release.
@@ -167,7 +165,7 @@ try {
 	$item = delivery_rest( 'GET', '/mails/' . $row['id'] )->get_data();
 	delivery_check( isset( $item['meta']['delivery']['original_to'] ), 'redirect: originals in the REST detail payload', $item['meta'] ?? null );
 
-	$_GET['page'] = 'mailspur-email-log';
+	$_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=mailspur-email-log';
 	delivery_check( false !== strpos( (string) delivery_call( 'admin_notices', 'notices' ), 'redirected to dev@example.net, qa@example.net' ), 'redirect notice names the targets' );
 
 	delivery_settings( array( 'staging_redirect_to' => '' ) );
@@ -231,10 +229,10 @@ try {
 	do_action( Brake::HOOK );
 	delivery_check( (int) delivery_last_row()['id'] === (int) $alert['id'], 'brake: only one alert per incident' );
 
-	$_GET['page'] = 'mailspur-email-log';
-	$notice       = (string) delivery_call( 'admin_notices', 'brake_notice' );
+	$_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=mailspur-email-log';
+	$notice                 = (string) delivery_call( 'admin_notices', 'brake_notice' );
 	delivery_check( false !== strpos( $notice, 'Emergency brake:' ) && false !== strpos( $notice, '2 emails are held by the emergency brake.' ) && false !== strpos( $notice, 'data-mailspur-brake="release"' ), 'brake: notice with count and release button', $notice );
-	$_GET['page'] = 'other';
+	$_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=other';
 	delivery_check( '' === delivery_call( 'admin_notices', 'brake_notice' ), 'brake: no notice on other screens' );
 	$bar = new WP_Admin_Bar();
 	delivery_call( 'admin_bar_menu', 'admin_bar', $bar );
@@ -276,11 +274,11 @@ try {
 		wp_mail( "flood{$i}@example.com", 'Brake alert ' . $i, 'Body' );
 	}
 	delivery_check( Brake::active() && Repository::STATUS_HELD !== (int) delivery_last_row()['status'], 'brake: alert-only mode delivers' );
-	$_GET['page'] = 'mailspur-email-log';
+	$_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=mailspur-email-log';
 	delivery_check( false !== strpos( (string) delivery_call( 'admin_notices', 'brake_notice' ), 'data-mailspur-brake="reset"' ), 'brake: alert-only notice offers "Mark as resolved"' );
 	delivery_rest( 'POST', '/delivery/brake/reset' );
 	delivery_check( ! Brake::active() && (int) ( Brake::state()['paused'] ?? 0 ) > time(), 'brake: reset ends and pauses' );
-	unset( $_GET['page'] );
+	unset( $_SERVER['REQUEST_URI'] );
 	delivery_settings(
 		array(
 			'brake_mode'      => 'alert',
@@ -322,7 +320,7 @@ try {
 		return 'staging';
 	};
 	add_filter( 'mailspur_environment_type', $env );
-	$_GET['page'] = 'mailspur-email-log';
+	$_SERVER['REQUEST_URI'] = '/wp-admin/admin.php?page=mailspur-email-log';
 	delivery_check( false !== strpos( (string) delivery_call( 'admin_notices', 'notices' ), 'data-mailspur-hint' ), 'staging environment: suggestion shown' );
 	delivery_rest( 'POST', '/delivery/hint' );
 	delivery_check( '' === delivery_call( 'admin_notices', 'notices' ), 'suggestion dismissed' );
@@ -574,7 +572,7 @@ try {
 	delete_option( Feedback::SECRET_OPTION );
 	$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE option_name LIKE %s', $wpdb->options, '%' . Feedback::SEEN_PREFIX . '%' ) );
 	wp_clear_scheduled_hook( Brake::HOOK );
-	unset( $_GET['page'] );
+	unset( $_SERVER['REQUEST_URI'] );
 } catch ( Throwable $e ) {
 	delivery_check( false, 'cleanup ' . get_class( $e ), $e->getMessage() );
 }

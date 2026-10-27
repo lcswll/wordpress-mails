@@ -4,8 +4,6 @@
  * changed after a plugin update and a stopped cron type; ?mailspur-e2e-seed=types-cleanup removes them again, so
  * the fixed counts of the other browser specs stay untouched. Only on demand.
  *
- * phpcs:disable WordPress.WP.AlternativeFunctions
- *
  * @package Mailspur
  */
 

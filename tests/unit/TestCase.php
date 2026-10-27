@@ -14,6 +14,41 @@ use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
 abstract class TestCase extends PHPUnitTestCase {
 
+	/** The list filter condition every filtered query repeats literally (see Repository::filter()). */
+	const WHERE = "WHERE ( 0 = %d OR recipients LIKE %s OR subject LIKE %s OR ( 1 = %d AND message LIKE %s ) ) AND ( 0 = %d OR created_at >= %s ) AND ( 0 = %d OR created_at <= %s ) AND ( 0 = %d OR source = %s ) AND ( 0 = %d OR content_type LIKE %s ) AND ( 0 = %d OR content_type NOT LIKE %s ) AND ( 0 = %d OR attachments <> '' ) AND ( 0 = %d OR notes > 0 ) AND ( 0 = %d OR delivery = %d ) AND ( 0 = %d OR status = %d )";
+
+	/**
+	 * The values for WHERE: every filter off, except the given ones.
+	 *
+	 * @param array<string,string|int> $on Keys of Repository::filter().
+	 * @return array<int,string|int>
+	 */
+	protected static function where( array $on = array() ): array {
+		$f = array_merge(
+			array(
+				'search_on'   => 0,
+				'search'      => '',
+				'in_body'     => 0,
+				'after_on'    => 0,
+				'after'       => '',
+				'before_on'   => 0,
+				'before'      => '',
+				'source_on'   => 0,
+				'source'      => '',
+				'html'        => 0,
+				'text'        => 0,
+				'attachments' => 0,
+				'notes'       => 0,
+				'delivery_on' => 0,
+				'delivery'    => 0,
+				'status_on'   => 0,
+				'status'      => 0,
+			),
+			$on
+		);
+		return array( $f['search_on'], $f['search'], $f['search'], $f['in_body'], $f['search'], $f['after_on'], $f['after'], $f['before_on'], $f['before'], $f['source_on'], $f['source'], $f['html'], '%html%', $f['text'], '%html%', $f['attachments'], $f['notes'], $f['delivery_on'], $f['delivery'], $f['status_on'], $f['status'] );
+	}
+
 	/** @var Fake_WPDB */
 	protected $wpdb;
 
@@ -29,34 +64,42 @@ abstract class TestCase extends PHPUnitTestCase {
 
 		Functions\stubs(
 			array(
-				'wp_json_encode'    => static function ( $data ) {
-					return json_encode( $data ); // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode
+				'wp_json_encode'              => static function ( $data ) {
+					return json_encode( $data );
 				},
-				'wp_basename'       => static function ( $path ) {
+				'wp_basename'                 => static function ( $path ) {
 					return basename( $path );
 				},
-				'wp_normalize_path' => static function ( $path ) {
+				'wp_normalize_path'           => static function ( $path ) {
 					return str_replace( '\\', '/', $path );
 				},
-				'get_theme_root'    => WP_CONTENT_DIR . '/themes',
-				'current_time'      => '2026-10-01 12:00:00',
-				'is_wp_error'       => static function ( $thing ) {
+				'get_theme_root'              => WP_CONTENT_DIR . '/themes',
+				'current_time'                => '2026-10-01 12:00:00',
+				'is_wp_error'                 => static function ( $thing ) {
 					return $thing instanceof \WP_Error;
 				},
-				'is_email'          => static function ( $email ) {
+				'is_email'                    => static function ( $email ) {
 					return false !== filter_var( $email, FILTER_VALIDATE_EMAIL );
 				},
-				'absint'            => static function ( $value ) {
+				'absint'                      => static function ( $value ) {
 					return abs( (int) $value );
 				},
-				'sanitize_key'      => static function ( $key ) {
+				'sanitize_key'                => static function ( $key ) {
 					return preg_replace( '/[^a-z0-9_\-]/', '', strtolower( (string) $key ) );
 				},
-				'get_gmt_from_date' => static function ( $date ) {
+				'get_gmt_from_date'           => static function ( $date ) {
 					return $date;
 				},
-				'get_option'        => function ( $name, $fallback = false ) {
+				'get_option'                  => function ( $name, $fallback = false ) {
 					return 'mailspur_settings' === $name ? $this->settings : $fallback;
+				},
+				// WordPress' own (English) strings.
+				'get_translations_for_domain' => static function () {
+					return new class() {
+						public function translate( string $text ): string {
+							return $text;
+						}
+					};
 				},
 			)
 		);

@@ -67,7 +67,7 @@ final class SiteHealthTest extends TestCase {
 				},
 				'network_home_url'        => 'https://www.shop.example.de',
 				'wp_parse_url'            => static function ( $url, $component = -1 ) {
-					return parse_url( $url, $component ); // phpcs:ignore WordPress.WP.AlternativeFunctions.parse_url_parse_url
+					return parse_url( $url, $component );
 				},
 				'wp_get_environment_type' => function () {
 					return $this->environment;

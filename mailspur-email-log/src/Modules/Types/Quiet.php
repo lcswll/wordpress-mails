@@ -96,11 +96,9 @@ final class Quiet {
 			wp_die( esc_html__( 'Sorry, you are not allowed to do that.', 'mailspur-email-log' ), '', array( 'response' => 403 ) );
 		}
 		check_admin_referer( self::NONCE );
-		// phpcs:disable WordPress.Security.NonceVerification.Missing -- verified above.
 		$key = isset( $_POST['quiet'] ) ? sanitize_key( wp_unslash( $_POST['quiet'] ) ) : '';
 		$on  = ! empty( $_POST['on'] );
 		$id  = isset( $_POST['type'] ) ? absint( $_POST['type'] ) : 0;
-		// phpcs:enable WordPress.Security.NonceVerification.Missing
 		self::set( new Store(), $key, $on );
 		wp_safe_redirect(
 			Admin::url(

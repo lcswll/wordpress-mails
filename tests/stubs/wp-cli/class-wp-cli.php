@@ -3,8 +3,6 @@
  * Minimal WP-CLI declarations for static analysis (PHPStan scanFiles) – only what the plugin uses.
  * Not loaded at runtime or in unit tests.
  *
- * phpcs:disable Generic.CodeAnalysis.UnusedFunctionParameter
- *
  * @package Mailspur
  */
 

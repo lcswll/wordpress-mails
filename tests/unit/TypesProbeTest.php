@@ -183,9 +183,22 @@ final class TypesProbeTest extends TestCase {
 				return true;
 			}
 		);
-		Functions\when( 'translate' )->alias(
-			static function ( $text ) use ( $german, &$switched ) {
-				return 'de_DE' === end( $switched ) ? ( $german[ $text ] ?? $text ) : $text;
+		Functions\when( 'get_translations_for_domain' )->alias(
+			function () use ( $german, &$switched ) {
+				$active = 'de_DE' === end( $switched ) ? $german : array();
+				return new class( $active ) {
+					/** @var array<string,string> */
+					private $strings;
+
+					/** @param array<string,string> $strings */
+					public function __construct( array $strings ) {
+						$this->strings = $strings;
+					}
+
+					public function translate( string $text ): string {
+						return $this->strings[ $text ] ?? $text;
+					}
+				};
 			}
 		);
 

@@ -119,10 +119,7 @@ final class Importer {
 				$insert[] = self::finalize( $row, $source );
 			}
 
-			// Several smaller INSERTs keep each statement well below max_allowed_packet with large bodies.
-			foreach ( array_chunk( $insert, 50 ) as $chunk ) {
-				$this->repository->insert_many( $chunk );
-			}
+			$this->repository->insert_many( $insert );
 
 			$state['imported']   += count( $insert );
 			$state['skipped']    += $skip;

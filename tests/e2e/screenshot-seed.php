@@ -4,8 +4,6 @@
  * plausible shop traffic (orders following a weekday pattern, contact form mails, password resets, a weekly
  * newsletter, a few failures) so the statistics screenshot shows real-looking charts. Deterministic (seeded).
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.Security.NonceVerification.Recommended, WordPress.WP.AlternativeFunctions.rand_mt_rand, WordPress.WP.AlternativeFunctions.rand_seeding_mt_srand
- *
  * @package Mailspur
  */
 
@@ -136,7 +134,7 @@ add_action(
 		);
 		foreach ( $plugins as $slug => $name ) {
 			wp_mkdir_p( WP_PLUGIN_DIR . '/' . $slug );
-			file_put_contents( WP_PLUGIN_DIR . "/{$slug}/{$slug}.php", "<?php\n/*\nPlugin Name: {$name}\nVersion: 9.4.1\n*/\n" ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
+			file_put_contents( WP_PLUGIN_DIR . "/{$slug}/{$slug}.php", "<?php\n/*\nPlugin Name: {$name}\nVersion: 9.4.1\n*/\n" );
 		}
 		update_option(
 			'mailspur_types_updates',

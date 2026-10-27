@@ -8,8 +8,6 @@
  *
  * Writes /e2e-out/import.json (evaluated by scripts/e2e.mjs).
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery, WordPress.PHP.DiscouragedPHPFunctions, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared -- fixture DDL
- *
  * @package Mailspur
  */
 
@@ -109,17 +107,12 @@ try {
 	remove_filter( 'pre_wp_mail', '__return_true' );
 
 	// ------------------------------------------- tables of the other plugins.
-	$ddl = array(
-		"CREATE TABLE {$p}check_email_log (id INTEGER PRIMARY KEY AUTO_INCREMENT, to_email VARCHAR(500) NOT NULL, subject VARCHAR(500) NOT NULL, message TEXT NOT NULL, backtrace_segment TEXT, headers TEXT NOT NULL, attachments TEXT NOT NULL, sent_date DATETIME NOT NULL, attachment_name VARCHAR(1000), ip_address VARCHAR(15), result TINYINT(1), error_message VARCHAR(1000))",
-		"CREATE TABLE {$p}fsmpt_email_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, site_id INT NULL, `to` TEXT NULL, `from` VARCHAR(255), subject VARCHAR(255), body LONGTEXT NULL, headers LONGTEXT NULL, attachments LONGTEXT NULL, status VARCHAR(20) DEFAULT 'pending', response TEXT NULL, extra TEXT NULL, retries INT NULL, resent_count INT NULL, source VARCHAR(255) NULL, created_at DATETIME NULL, updated_at DATETIME NULL)",
-		"CREATE TABLE {$p}post_smtp_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, solution LONGTEXT, success LONGTEXT, from_header LONGTEXT, to_header LONGTEXT, cc_header LONGTEXT, bcc_header LONGTEXT, reply_to_header LONGTEXT, transport_uri LONGTEXT, original_to LONGTEXT, original_subject LONGTEXT, original_message LONGTEXT, original_headers LONGTEXT, session_transcript LONGTEXT, time BIGINT)",
-		"CREATE TABLE {$p}suremails_email_log (id INTEGER PRIMARY KEY AUTO_INCREMENT, email_from VARCHAR(100) NOT NULL, email_to LONGTEXT NOT NULL, subject VARCHAR(255) NOT NULL, body LONGTEXT NOT NULL, headers LONGTEXT NOT NULL, attachments LONGTEXT NOT NULL, status VARCHAR(20) NOT NULL, response LONGTEXT NOT NULL, meta TEXT NULL, connection VARCHAR(255) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL)",
-		"CREATE TABLE {$p}mail_catcher_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, time INT NOT NULL, email_to TEXT, subject TEXT, message TEXT, backtrace_segment TEXT NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1, error TEXT, attachments TEXT, additional_headers TEXT, is_html TINYINT(1) DEFAULT 0)",
-		"CREATE TABLE {$p}wml_entries (id INTEGER PRIMARY KEY AUTO_INCREMENT, to_email VARCHAR(100) NOT NULL, subject VARCHAR(250) NOT NULL, message TEXT NOT NULL, headers TEXT NOT NULL, attachments VARCHAR(50) NOT NULL, sent_date VARCHAR(50) NOT NULL, captured_gmt VARCHAR(50) NOT NULL, attachments_file TEXT)",
-	);
-	foreach ( $ddl as $sql ) {
-		$wpdb->query( $sql );
-	}
+	$wpdb->query( "CREATE TABLE {$wpdb->prefix}check_email_log (id INTEGER PRIMARY KEY AUTO_INCREMENT, to_email VARCHAR(500) NOT NULL, subject VARCHAR(500) NOT NULL, message TEXT NOT NULL, backtrace_segment TEXT, headers TEXT NOT NULL, attachments TEXT NOT NULL, sent_date DATETIME NOT NULL, attachment_name VARCHAR(1000), ip_address VARCHAR(15), result TINYINT(1), error_message VARCHAR(1000))" );
+	$wpdb->query( "CREATE TABLE {$wpdb->prefix}fsmpt_email_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, site_id INT NULL, `to` TEXT NULL, `from` VARCHAR(255), subject VARCHAR(255), body LONGTEXT NULL, headers LONGTEXT NULL, attachments LONGTEXT NULL, status VARCHAR(20) DEFAULT 'pending', response TEXT NULL, extra TEXT NULL, retries INT NULL, resent_count INT NULL, source VARCHAR(255) NULL, created_at DATETIME NULL, updated_at DATETIME NULL)" );
+	$wpdb->query( "CREATE TABLE {$wpdb->prefix}post_smtp_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, solution LONGTEXT, success LONGTEXT, from_header LONGTEXT, to_header LONGTEXT, cc_header LONGTEXT, bcc_header LONGTEXT, reply_to_header LONGTEXT, transport_uri LONGTEXT, original_to LONGTEXT, original_subject LONGTEXT, original_message LONGTEXT, original_headers LONGTEXT, session_transcript LONGTEXT, time BIGINT)" );
+	$wpdb->query( "CREATE TABLE {$wpdb->prefix}suremails_email_log (id INTEGER PRIMARY KEY AUTO_INCREMENT, email_from VARCHAR(100) NOT NULL, email_to LONGTEXT NOT NULL, subject VARCHAR(255) NOT NULL, body LONGTEXT NOT NULL, headers LONGTEXT NOT NULL, attachments LONGTEXT NOT NULL, status VARCHAR(20) NOT NULL, response LONGTEXT NOT NULL, meta TEXT NULL, connection VARCHAR(255) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL)" );
+	$wpdb->query( "CREATE TABLE {$wpdb->prefix}mail_catcher_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, time INT NOT NULL, email_to TEXT, subject TEXT, message TEXT, backtrace_segment TEXT NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1, error TEXT, attachments TEXT, additional_headers TEXT, is_html TINYINT(1) DEFAULT 0)" );
+	$wpdb->query( "CREATE TABLE {$wpdb->prefix}wml_entries (id INTEGER PRIMARY KEY AUTO_INCREMENT, to_email VARCHAR(100) NOT NULL, subject VARCHAR(250) NOT NULL, message TEXT NOT NULL, headers TEXT NOT NULL, attachments VARCHAR(50) NOT NULL, sent_date VARCHAR(50) NOT NULL, captured_gmt VARCHAR(50) NOT NULL, attachments_file TEXT)" );
 
 	$wpdb->insert(
 		"{$p}check_email_log",

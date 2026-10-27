@@ -4,10 +4,10 @@ name: CI
 # calls it for tags. Every check blocks: the release ZIP is only built when all of them are green.
 #
 #   lint           php -l on every supported PHP version (7.4 – 8.5)
-#   phpcs          WordPress-Extra, VIP security sniffs, PHPCompatibility (no baseline) + composer audit
+#   phpcs          WordPress-Extra, VIP security sniffs, PHPCompatibility; inline annotations ignored + composer audit
 #   phpstan        level 8 against PHP 7.4 – 8.5, WordPress stubs, deprecation rules
 #   phpunit        unit tests (Brain Monkey) on the oldest and newest PHP
-#   js             ESLint incl. DOM-XSS rules (no-unsanitized) + npm audit
+#   js             no suppression comments (phpcs, PHPStan, ESLint) + ESLint incl. DOM-XSS rules (no-unsanitized) + npm audit
 #   wporg          wordpress.org readiness (readme/header/versions/assets), translations, Plugin Check PHPCS rules
 #   plugin-check   official Plugin Check action (what wordpress.org reviewers run) against the plugin folder
 #   e2e            real WordPress via Playground: integration self-test + browser tests, oldest and newest PHP/WP
@@ -91,11 +91,19 @@ jobs:
       - name: Known vulnerabilities in the dev tools
         run: composer audit --locked
 
-      - name: PHPCS (annotations in the PR diff)
+      # Pass 1 ignores every phpcs:ignore/disable comment; pass 2 (database sniffs only) honors justified ones.
+      # Same flags as scripts/phpcs-strict.mjs; checkstyle reports become annotations in the PR diff.
+      - name: PHPCS pass 1 – all sniffs, inline annotations have no effect
         shell: bash
         run: |
           set -o pipefail
-          vendor/bin/phpcs -q --report-full --report-checkstyle=phpcs.xml || { cs2pr phpcs.xml; exit 1; }
+          vendor/bin/phpcs -q -s --severity=1 --runtime-set ignore_warnings_on_exit 0 --ignore-annotations --exclude=WordPress.DB.DirectDatabaseQuery,WordPress.DB.SlowDBQuery --report-full --report-checkstyle=phpcs-1.xml || { cs2pr phpcs-1.xml; exit 1; }
+
+      - name: PHPCS pass 2 – database sniffs, justified annotations only
+        shell: bash
+        run: |
+          set -o pipefail
+          vendor/bin/phpcs -q -s --severity=1 --runtime-set ignore_warnings_on_exit 0 --sniffs=WordPress.DB.DirectDatabaseQuery,WordPress.DB.SlowDBQuery --report-full --report-checkstyle=phpcs-2.xml || { cs2pr phpcs-2.xml; exit 1; }
 
   phpstan:
     name: PHPStan (level 8)
@@ -159,6 +167,9 @@ jobs:
       - name: Install
         run: npm ci --ignore-scripts
 
+      - name: No suppression comments (phpcs, PHPStan, ESLint)
+        run: node scripts/suppressions.mjs
+
       - name: ESLint
         run: npx eslint --max-warnings=0 .
 
@@ -211,6 +222,13 @@ jobs:
           build-dir: ./mailspur-email-log
           slug: mailspur-email-log
           include-experimental: true
+          # Every finding fails the job – warnings and low-severity messages included.
+          strict: true
+          severity: '1'
+          # Justified uses of debug_backtrace() and set_error_handler() (see tests/e2e/plugin-check-allowlist.json).
+          ignore-codes: |
+            WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
+            WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler
           # Runtime/performance checks need a front end; the plugin has none (admin screen only).
           exclude-checks: |
             enqueued_scripts_size

@@ -4,8 +4,6 @@
  *
  * The site time zone is Europe/Berlin (UTC+2 in summer), so every local timestamp must come out 2 hours earlier.
  *
- * phpcs:disable WordPress.PHP.DiscouragedPHPFunctions.serialize_serialize, WordPress.WP.AlternativeFunctions.json_encode_json_encode
- *
  * @package Mailspur
  */
 

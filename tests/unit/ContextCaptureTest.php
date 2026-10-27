@@ -138,7 +138,7 @@ final class ContextCaptureTest extends TestCase {
 		$this->assertArrayNotHasKey( 'context', $this->send() );
 	}
 
-	public function test_logged_mirrors_the_relation_with_one_insert(): void {
+	public function test_logged_mirrors_the_relation_with_one_row_per_object(): void {
 		$this->capture->logged(
 			17,
 			array(
@@ -146,10 +146,31 @@ final class ContextCaptureTest extends TestCase {
 				'meta'       => '{"context":{"order":123,"user":45,"wc_email":"customer_invoice"}}',
 			)
 		);
-		$this->assertCount( 1, $this->wpdb->prepared );
-		$query = $this->wpdb->prepared[0];
-		$this->assertStringStartsWith( 'INSERT INTO %i (mail_id,created_at,object_type,object_id) VALUES (%d,%s,%s,%d),(%d,%s,%s,%d)', $query['sql'] );
-		$this->assertSame( array( 'wp_mailspur_context', 17, '2026-10-01 12:00:00', 'order', 123, 17, '2026-10-01 12:00:00', 'user', 45 ), $query['args'] );
+		$this->assertSame(
+			array(
+				array(
+					'insert',
+					'wp_mailspur_context',
+					array(
+						'mail_id'     => 17,
+						'created_at'  => '2026-10-01 12:00:00',
+						'object_type' => 'order',
+						'object_id'   => 123,
+					),
+				),
+				array(
+					'insert',
+					'wp_mailspur_context',
+					array(
+						'mail_id'     => 17,
+						'created_at'  => '2026-10-01 12:00:00',
+						'object_type' => 'user',
+						'object_id'   => 45,
+					),
+				),
+			),
+			$this->wpdb->writes
+		);
 	}
 
 	public function test_logged_without_relation_costs_nothing(): void {
@@ -157,5 +178,6 @@ final class ContextCaptureTest extends TestCase {
 		$this->capture->logged( 17, array( 'meta' => '{"context":{"wc_email":"low_stock"}}' ) );
 		$this->capture->logged( 17, 'broken' );
 		$this->assertSame( array(), $this->wpdb->prepared );
+		$this->assertSame( array(), $this->wpdb->writes );
 	}
 }

@@ -9,8 +9,7 @@
  * overwrites them: "bundle into one daily email" (Bundle) and the type's own retention period (keep_days, see
  * Retention). Day rows follow the log retention (at most a year), and a type disappears with its last day row.
  *
- * Direct queries: the module's own tables.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange -- the module's own tables.
  *
  * @package Mailspur
  */

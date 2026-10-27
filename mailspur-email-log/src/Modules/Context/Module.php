@@ -63,7 +63,7 @@ final class Module implements \Mailspur\Module {
 	 * @param mixed $request  WP_REST_Request.
 	 * @return mixed Unchanged.
 	 */
-	public function before_resend( $response, $handler = null, $request = null ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundBeforeLastUsed -- hook signature.
+	public function before_resend( $response, $handler = null, $request = null ) {
 		if ( null !== $response || ! $request instanceof \WP_REST_Request || 'POST' !== $request->get_method() || null === $this->capture ) {
 			return $response;
 		}
@@ -185,6 +185,6 @@ final class Module implements \Mailspur\Module {
 				'wcEmail' => __( 'WooCommerce email', 'mailspur-email-log' ),
 			),
 		);
-		wp_add_inline_script( 'mailspur-context', 'window.mailspurContext = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-context', 'window.mailspurContext = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 }

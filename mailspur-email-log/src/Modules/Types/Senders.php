@@ -9,8 +9,7 @@
  * senders already alerted. The first two weeks are the baseline – on a fresh install, after an import or an
  * update every sender is already "known", so nothing is new. Recipients are only counted, never stored.
  *
- * Direct queries: the plugin's own table, from cron only.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table, from cron only.
  *
  * @package Mailspur
  */

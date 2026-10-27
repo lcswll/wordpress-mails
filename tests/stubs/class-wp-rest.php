@@ -3,8 +3,6 @@
  * Minimal WP_REST_Request / WP_REST_Response stand-ins for unit tests – shared by all modules
  * (loaded by tests/bootstrap.php). Only what the plugin uses; extend here instead of adding copies.
  *
- * phpcs:disable Generic.Files.OneObjectStructurePerFile.MultipleFound, Generic.CodeAnalysis.UnusedFunctionParameter -- signatures mirror WordPress.
- *
  * @package Mailspur
  */
 

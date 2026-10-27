@@ -8,8 +8,6 @@
  *
  * Writes /e2e-out/features/trace.json (evaluated by scripts/e2e.mjs).
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery, WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
- *
  * @package Mailspur
  */
 

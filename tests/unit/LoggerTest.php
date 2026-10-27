@@ -130,10 +130,10 @@ final class LoggerTest extends TestCase {
 		$this->logger->capture( $this->atts() );
 
 		$mailer              = new PHPMailer();
-		$mailer->ContentType = 'text/html'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$mailer->From        = 'shop@example.com'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$mailer->FromName    = 'Shop'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$mailer->Body        = '<p>Wrapped by a template plugin</p>'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->ContentType = 'text/html';
+		$mailer->From        = 'shop@example.com';
+		$mailer->FromName    = 'Shop';
+		$mailer->Body        = '<p>Wrapped by a template plugin</p>';
 		$this->logger->enrich( $mailer );
 		$this->logger->succeeded();
 
@@ -156,9 +156,9 @@ final class LoggerTest extends TestCase {
 	public function test_records_whether_an_html_mail_has_a_plain_text_alternative_without_storing_it(): void {
 		$this->logger->capture( $this->atts() );
 		$mailer              = new PHPMailer();
-		$mailer->ContentType = 'text/html'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$mailer->Body        = 'Body'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
-		$mailer->AltBody     = 'Secret plain text'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->ContentType = 'text/html';
+		$mailer->Body        = 'Body';
+		$mailer->AltBody     = 'Secret plain text';
 		$this->logger->enrich( $mailer );
 		$this->logger->succeeded();
 
@@ -219,7 +219,7 @@ final class LoggerTest extends TestCase {
 	public function test_unchanged_body_is_not_written_again(): void {
 		$this->logger->capture( $this->atts() );
 		$mailer       = new PHPMailer();
-		$mailer->Body = 'Body'; // phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$mailer->Body = 'Body';
 		$this->logger->enrich( $mailer );
 		$this->logger->succeeded();
 

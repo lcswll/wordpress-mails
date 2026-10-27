@@ -27,7 +27,7 @@ $mailspur_uninstall = static function (): void {
 		return;
 	}
 
-	// phpcs:disable WordPress.DB.DirectDatabaseQuery
+	// phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange -- uninstall: drops the plugin's own tables and finds its options.
 	$tables = (array) $wpdb->get_col( $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $wpdb->prefix . 'mailspur' ) . '%' ) );
 	foreach ( $tables as $table ) {
 		// Only {prefix}mailspur and {prefix}mailspur_* – never another plugin's table that merely starts alike.

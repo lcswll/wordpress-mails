@@ -3,8 +3,6 @@
  * Must-use plugin (installed by seed.d/workflow.php) for the browser tests of the Workflow module:
  * wp-admin/?mailspur-e2e-seed=workflow inserts the module's test rows once (subjects contain "[WF]").
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.Security.NonceVerification.Recommended
- *
  * @package Mailspur
  */
 

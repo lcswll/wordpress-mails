@@ -2,8 +2,6 @@
 /**
  * Must-use plugin (installed by seed.d/review.php): wp-admin/?mailspur-e2e-seed=review makes the review request due.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.Security.NonceVerification.Recommended
- *
  * @package Mailspur
  */
 

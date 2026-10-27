@@ -176,7 +176,7 @@ final class Dynamic {
 	 * @return mixed
 	 */
 	private static function quietly( callable $lookup ) {
-		set_error_handler( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler -- swallow DNS warnings only for this call.
+		set_error_handler(
 			static function (): bool {
 				return true;
 			}

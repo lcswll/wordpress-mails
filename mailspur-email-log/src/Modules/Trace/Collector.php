@@ -127,7 +127,6 @@ final class Collector {
 		}
 		$this->mails[ $key ]['mailer'] = $mailer;
 
-		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- PHPMailer API.
 		if ( self::TRANSCRIPT_OFF === self::transcript_mode() ) {
 			$trace['transcript_status'] = 'off';
 		} elseif ( 'smtp' !== $trace['transport']['mailer'] ) {
@@ -151,7 +150,6 @@ final class Collector {
 			// The global PHPMailer still holds the previous message; only a changed source belongs to this mail.
 			$this->mails[ $key ]['mime_before'] = md5( $mailer->getSentMIMEMessage() );
 		}
-		// phpcs:enable
 
 		return $trace;
 	}
@@ -222,12 +220,10 @@ final class Collector {
 	 * @param mixed         $previous Debugoutput before the transcript started.
 	 */
 	private function stop_transcript( PHPMailer $mailer, ?\Closure $closure, $previous ): void {
-		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- PHPMailer API.
 		if ( null !== $closure && $mailer->Debugoutput === $closure ) {
 			$mailer->SMTPDebug   = 0;
 			$mailer->Debugoutput = $previous;
 		}
-		// phpcs:enable
 	}
 
 	public static function transcript_mode(): string {

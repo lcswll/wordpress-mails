@@ -62,7 +62,6 @@ final class SenderCheck {
 		if ( ! self::available() ) {
 			return null;
 		}
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler -- turns resolver warnings into a "lookup failed" result.
 		set_error_handler( '__return_true' );
 		try {
 			$records = dns_get_record( $host, 'MX' === $type ? DNS_MX : DNS_TXT );
@@ -86,7 +85,7 @@ final class SenderCheck {
 			$host = substr( $host, 4 );
 		}
 		// Same default and filter as wp_mail(), so plugins that change the sender are respected.
-		$from = (string) apply_filters( 'wp_mail_from', 'wordpress@' . $host ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- core hook.
+		$from = (string) apply_filters( 'wp_mail_from', 'wordpress@' . $host );
 
 		$out     = array();
 		$default = self::domain_of( $from );

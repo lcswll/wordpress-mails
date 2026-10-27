@@ -15,8 +15,7 @@
  * shorter retention period ended (e.g. "Keep for 7 days" of an email type) are anonymised instead of
  * deleted and go with the general deletion period.
  *
- * Direct queries: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table.
  *
  * @package Mailspur
  */

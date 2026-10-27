@@ -3,8 +3,6 @@
  * Seeds the log for the browser tests and screenshots: 60 HTML order mails (with a tracking
  * pixel, an injected script and a form), a password reset, a failed mail and an XSS subject.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals
- *
  * @package Mailspur
  */
 
@@ -64,9 +62,9 @@ wp_mail( 'x@example.com', '<img src=x onerror=alert(1)>XSS subject', '<b>plain?<
 
 // An old WP Mail Logging table in its own format (literal ",\n" lists, site-local time) for the import UI.
 global $wpdb;
-$wpdb->query( "CREATE TABLE {$wpdb->prefix}wpml_mails (mail_id INTEGER PRIMARY KEY AUTO_INCREMENT, timestamp DATETIME NOT NULL, host VARCHAR(200) NOT NULL DEFAULT '0', receiver VARCHAR(200) NOT NULL DEFAULT '0', subject VARCHAR(200) NOT NULL DEFAULT '0', message TEXT NULL, headers TEXT NULL, attachments VARCHAR(800) NOT NULL DEFAULT '0', error VARCHAR(400) NULL DEFAULT '', plugin_version VARCHAR(200) NOT NULL DEFAULT '0')" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+$wpdb->query( "CREATE TABLE {$wpdb->prefix}wpml_mails (mail_id INTEGER PRIMARY KEY AUTO_INCREMENT, timestamp DATETIME NOT NULL, host VARCHAR(200) NOT NULL DEFAULT '0', receiver VARCHAR(200) NOT NULL DEFAULT '0', subject VARCHAR(200) NOT NULL DEFAULT '0', message TEXT NULL, headers TEXT NULL, attachments VARCHAR(800) NOT NULL DEFAULT '0', error VARCHAR(400) NULL DEFAULT '', plugin_version VARCHAR(200) NOT NULL DEFAULT '0')" );
 foreach ( array( 'Old welcome mail', 'Old invoice', 'Old newsletter' ) as $i => $subject ) {
-	$wpdb->insert( // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	$wpdb->insert(
 		$wpdb->prefix . 'wpml_mails',
 		array(
 			'timestamp'   => gmdate( 'Y-m-d H:i:s', time() - ( 3 + $i ) * DAY_IN_SECONDS ),
@@ -87,5 +85,5 @@ foreach ( (array) glob( __DIR__ . '/seed.d/*.php' ) as $seed_file ) {
 
 // Tell tests/e2e/wait-for-wordpress.js that the blueprint has finished.
 if ( is_dir( '/e2e-out' ) ) {
-	file_put_contents( '/e2e-out/seeded', gmdate( 'c' ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents
+	file_put_contents( '/e2e-out/seeded', gmdate( 'c' ) );
 }

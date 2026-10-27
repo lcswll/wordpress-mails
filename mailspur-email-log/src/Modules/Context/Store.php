@@ -9,8 +9,7 @@
  * Rows are matched to the log by id AND send date, so ids reused after the log was emptied never point to a
  * different mail; orphans are removed with the daily cleanup.
  *
- * Direct queries: the module's own table and the plugin's log table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange -- the module's own table and the plugin's log table.
  *
  * @package Mailspur
  */
@@ -70,21 +69,26 @@ KEY object (object_type,object_id,created_at)
 	 */
 	public function insert( int $mail_id, string $created_at, array $context ): int {
 		global $wpdb;
-		$values = array( self::table() );
-		$tuples = array();
+		if ( $mail_id <= 0 ) {
+			return 0;
+		}
+		$rows = 0;
 		foreach ( self::TYPES as $type ) {
 			$object_id = isset( $context[ $type ] ) && is_numeric( $context[ $type ] ) ? (int) $context[ $type ] : 0;
 			if ( $object_id > 0 ) {
-				$tuples[] = '(%d,%s,%s,%d)';
-				array_push( $values, $mail_id, $created_at, $type, $object_id );
+				$rows += (int) $wpdb->insert(
+					self::table(),
+					array(
+						'mail_id'     => $mail_id,
+						'created_at'  => $created_at,
+						'object_type' => $type,
+						'object_id'   => $object_id,
+					),
+					array( '%d', '%s', '%s', '%d' )
+				);
 			}
 		}
-		if ( $mail_id <= 0 || ! $tuples ) {
-			return 0;
-		}
-		$sql = 'INSERT INTO %i (mail_id,created_at,object_type,object_id) VALUES ' . implode( ',', $tuples );
-		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literal placeholders.
-		return (int) $wpdb->query( $wpdb->prepare( $sql, $values ) );
+		return $rows;
 	}
 
 	/**

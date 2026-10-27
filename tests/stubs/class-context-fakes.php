@@ -3,8 +3,6 @@
  * Minimal WooCommerce / WordPress object stand-ins for the context module tests (loaded on demand by
  * tests/unit/Context*Test.php). WooCommerce is optional for the plugin, so only the getters it calls exist.
  *
- * phpcs:disable Generic.Files.OneObjectStructurePerFile.MultipleFound, Generic.Classes.DuplicateClassName -- stand-ins, also declared by tests/e2e/features/context.php.
- *
  * @package Mailspur
  */
 

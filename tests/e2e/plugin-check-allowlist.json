@@ -1,1 +1,4 @@
-{}
+{
+	"WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace": "Not debug code: Logger::source() and Trace\\Inspector::origin() read the backtrace of wp_mail() to tell which plugin, theme and file sent an email (Source and Origin in the log). DEBUG_BACKTRACE_IGNORE_ARGS, capped depth; only file paths and function names are kept.",
+	"WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler": "The alternative to the @ operator: DNS lookups (Delivery\\SenderCheck, Notes\\Dynamic) and truncated serialized data of other mail plugins (Import\\Source) raise warnings that are expected results. The handler wraps only that one call and is restored in finally."
+}

@@ -49,7 +49,7 @@ final class TypesInsightsTest extends TestCase {
 
 		$extra = Noise::observe( array(), $this->day( 0 ) );
 		$this->assertSame( array( $this->day( 0 ) => 1 ), $extra['adm'] );
-		$this->assertStringNotContainsString( '@', (string) json_encode( $extra ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.json_encode_json_encode
+		$this->assertStringNotContainsString( '@', (string) json_encode( $extra ) );
 	}
 
 	public function test_admin_counter_keeps_31_days_and_sums_a_range(): void {

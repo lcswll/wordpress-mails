@@ -100,7 +100,12 @@ final class WorkflowExporterTest extends TestCase {
 
 		$this->assertStringContainsString( '"headers","message"', $csv );
 		$this->assertStringContainsString( '"<p>Hi</p>"', $csv );
-		$this->assertStringContainsString( 'headers, message FROM', $this->wpdb->prepared[0]['sql'] );
+		$this->assertStringContainsString( "CASE WHEN 1 = %d THEN headers ELSE '' END AS headers, CASE WHEN 1 = %d THEN message ELSE '' END AS message FROM", $this->wpdb->prepared[0]['sql'] );
+		$this->assertSame( array( 1, 1 ), array_slice( $this->wpdb->prepared[0]['args'], 0, 2 ) );
+
+		$this->wpdb->results = array( array( $this->row( 1 ) ) );
+		$this->export( 'csv' );
+		$this->assertSame( array( 0, 0 ), array_slice( $this->wpdb->prepared[1]['args'], 0, 2 ), 'without bodies, headers and message are not read' );
 	}
 
 	public function test_json_is_valid_and_streams_rows(): void {
@@ -132,13 +137,18 @@ final class WorkflowExporterTest extends TestCase {
 
 		$this->assertSame( Exporter::BATCH + 1, $count );
 		$this->assertCount( 2, $this->wpdb->prepared );
-		$this->assertStringContainsString( 'WHERE 1=1 AND status = %d ORDER BY created_at DESC, id DESC LIMIT %d', $this->wpdb->prepared[0]['sql'] );
-		$this->assertStringNotContainsString( 'OFFSET', $this->wpdb->prepared[0]['sql'] );
-
-		$second = $this->wpdb->prepared[1];
-		$this->assertStringContainsString( 'AND ( created_at < %s OR ( created_at = %s AND id < %d ) )', $second['sql'] );
+		$this->assertStringEndsWith( ' FROM %i ' . self::WHERE . ' AND ( 0 = %d OR created_at < %s OR ( created_at = %s AND id < %d ) ) ORDER BY created_at DESC, id DESC LIMIT %d', $this->wpdb->prepared[0]['sql'] );
+		$this->assertSame( $this->wpdb->prepared[0]['sql'], $this->wpdb->prepared[1]['sql'] );
+		$where = self::where(
+			array(
+				'status_on' => 1,
+				'status'    => 2,
+			)
+		);
+		// First batch: keyset condition off.
+		$this->assertSame( array_merge( array( 0, 0, 'wp_mailspur' ), $where, array( 0, '', '', 0, Exporter::BATCH ) ), $this->wpdb->prepared[0]['args'] );
 		// Cursor = last row of the first batch (id 2).
-		$this->assertSame( array( 'wp_mailspur', 2, '2026-09-30 10:00:02', '2026-09-30 10:00:02', 2, Exporter::BATCH ), $second['args'] );
+		$this->assertSame( array_merge( array( 0, 0, 'wp_mailspur' ), $where, array( 1, '2026-09-30 10:00:02', '2026-09-30 10:00:02', 2, Exporter::BATCH ) ), $this->wpdb->prepared[1]['args'] );
 	}
 
 	public function test_limit_stops_early(): void {

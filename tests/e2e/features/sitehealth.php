@@ -6,8 +6,6 @@
  *
  * Writes /e2e-out/features/sitehealth.json (evaluated by scripts/e2e.mjs). Never throws; cleans up after itself.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery
- *
  * @package Mailspur
  */
 

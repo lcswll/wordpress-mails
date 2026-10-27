@@ -5,8 +5,6 @@
  *
  * Writes /e2e-out/features/notes.json (evaluated by scripts/e2e.mjs). Never throws; cleans up after itself.
  *
- * phpcs:disable WordPress.NamingConventions.PrefixAllGlobals, WordPress.WP.AlternativeFunctions, WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
- *
  * @package Mailspur
  */
 
@@ -304,7 +302,7 @@ try {
 
 	// --------------------------------------------------------------------- import.
 	$p = $wpdb->prefix;
-	$wpdb->query( "CREATE TABLE IF NOT EXISTS {$p}mail_catcher_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, time INT NOT NULL, email_to TEXT, subject TEXT, message TEXT, backtrace_segment TEXT NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1, error TEXT, attachments TEXT, additional_headers TEXT, is_html TINYINT(1) DEFAULT 0)" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.SchemaChange -- fixture.
+	$wpdb->query( "CREATE TABLE IF NOT EXISTS {$wpdb->prefix}mail_catcher_logs (id INTEGER PRIMARY KEY AUTO_INCREMENT, time INT NOT NULL, email_to TEXT, subject TEXT, message TEXT, backtrace_segment TEXT NOT NULL, status TINYINT(1) NOT NULL DEFAULT 1, error TEXT, attachments TEXT, additional_headers TEXT, is_html TINYINT(1) DEFAULT 0)" );
 	$s7 = "$notes_prefix: imported";
 	$wpdb->insert(
 		"{$p}mail_catcher_logs",

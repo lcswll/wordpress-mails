@@ -72,7 +72,17 @@ final class InsightsStatsTest extends TestCase {
 
 		$data = Stats::aggregate( $buckets, '2026-03-28', '2026-03-30', new DateTimeZone( 'Europe/Berlin' ) );
 
-		$this->assertSame( array( 'all' => 11, 'sent' => 7, 'failed' => 1, 'held' => 2, 'pending' => 1, 'rate' => 9.1 ), $data['totals'] ); // phpcs:ignore WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound
+		$this->assertSame(
+			array(
+				'all'     => 11,
+				'sent'    => 7,
+				'failed'  => 1,
+				'held'    => 2,
+				'pending' => 1,
+				'rate'    => 9.1,
+			),
+			$data['totals']
+		);
 		$this->assertSame( array( '2026-03-28', '2026-03-29', '2026-03-30' ), array_column( $data['days'], 'date' ) );
 		$this->assertSame( 3, $data['days'][0]['sent'] );
 		$this->assertSame( 4, $data['days'][1]['sent'] );

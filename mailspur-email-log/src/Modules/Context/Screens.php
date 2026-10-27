@@ -35,7 +35,7 @@ final class Screens {
 	}
 
 	public function register(): void {
-		add_action( 'add_meta_boxes', array( $this, 'meta_box' ), 10, 2 );
+		add_action( 'add_meta_boxes', array( $this, 'meta_box' ) );
 		add_action( 'show_user_profile', array( $this, 'profile' ) );
 		add_action( 'edit_user_profile', array( $this, 'profile' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'assets' ) );
@@ -47,14 +47,13 @@ final class Screens {
 
 	/** May the current user see the mails of orders? */
 	public static function can_view_orders(): bool {
-		return Settings::current_user_can_view() && current_user_can( 'edit_shop_orders' ); // phpcs:ignore WordPress.WP.Capabilities.Unknown -- WooCommerce capability (required by its order screens).
+		return Settings::current_user_can_view() && current_user_can( 'edit_shop_orders' );
 	}
 
 	/**
 	 * @param mixed $screen_id Post type (classic) or screen id (HPOS).
-	 * @param mixed $item      WP_Post or WC_Order.
 	 */
-	public function meta_box( $screen_id, $item = null ): void { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed -- hook signature.
+	public function meta_box( $screen_id ): void {
 		if ( ! function_exists( 'wc_get_order' ) || ! in_array( $screen_id, array( self::LEGACY_SCREEN, self::hpos_screen() ), true ) || ! self::can_view_orders() ) {
 			return;
 		}
@@ -191,7 +190,7 @@ final class Screens {
 				'requestFailed' => __( 'Request failed: %s', 'mailspur-email-log' ),
 			),
 		);
-		wp_add_inline_script( 'mailspur-context-box', 'window.mailspurContextBox = ' . wp_json_encode( $config ) . ';', 'before' );
+		wp_add_inline_script( 'mailspur-context-box', 'window.mailspurContextBox = ' . wp_json_encode( $config, JSON_HEX_TAG | JSON_HEX_AMP ) . ';', 'before' );
 	}
 
 	/**

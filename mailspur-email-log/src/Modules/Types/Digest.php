@@ -12,8 +12,7 @@
  * The digest is built from the log entries, so secrets masked in the log stay masked. It is logged with the
  * source of the alerts, so it is never bundled, held by the emergency brake or counted itself.
  *
- * Direct queries: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table.
  *
  * @package Mailspur
  */

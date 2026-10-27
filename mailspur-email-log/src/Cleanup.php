@@ -6,8 +6,7 @@
  * per email type). Only the entries of senders with such a rule are read – in small batches – and sorted by
  * subject; everything else is deleted by date as before.
  *
- * Direct queries: the plugin's own table.
- * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+ * phpcs:disable WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- the plugin's own table.
  *
  * @package Mailspur
  */
@@ -157,16 +156,21 @@ final class Cleanup {
 		global $wpdb;
 		$cursor  = 0;
 		$deleted = 0;
-		$sql     = 'SELECT id, created_at, subject FROM %i WHERE source = %s AND created_at < %s AND id > %d'
-			. ( $by_rule ? ' AND meta NOT LIKE %s' : '' ) . ' ORDER BY id ASC LIMIT %d';
 		do {
-			$args = array( Repository::table(), $source, $before, $cursor );
-			if ( $by_rule ) {
-				$args[] = $wpdb->esc_like( '{"anonymised":' ) . '%';
-			}
-			$args[] = self::BATCH;
-			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, PluginCheck.Security.DirectDB.UnescapedDBParameter -- $sql is built from literals and placeholders only.
-			$rows = (array) $wpdb->get_results( $wpdb->prepare( $sql, $args ), ARRAY_A );
+			// By rule: anonymised entries are skipped (their flag is the first key of meta).
+			$rows = (array) $wpdb->get_results(
+				$wpdb->prepare(
+					'SELECT id, created_at, subject FROM %i WHERE source = %s AND created_at < %s AND id > %d AND ( 0 = %d OR meta NOT LIKE %s ) ORDER BY id ASC LIMIT %d',
+					Repository::table(),
+					$source,
+					$before,
+					$cursor,
+					(int) $by_rule,
+					$wpdb->esc_like( '{"anonymised":' ) . '%',
+					self::BATCH
+				),
+				ARRAY_A
+			);
 			$read = count( $rows );
 			$ids  = array();
 			foreach ( $rows as $row ) {
