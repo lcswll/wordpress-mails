@@ -47,21 +47,5 @@ final class Plugin {
 			( new Admin( $repository ) )->register();
 			( new Review() )->register();
 		}
-
-		add_action( 'init', array( self::class, 'load_textdomain' ) );
-	}
-
-	/**
-	 * Bundled translations are only a fallback: language packs from
-	 * translate.wordpress.org (wp-content/languages/plugins) take precedence
-	 * and are loaded just in time by WordPress itself.
-	 */
-	public static function load_textdomain(): void {
-		$locale = determine_locale();
-		if ( file_exists( WP_LANG_DIR . "/plugins/mailspur-email-log-{$locale}.mo" ) || file_exists( WP_LANG_DIR . "/plugins/mailspur-email-log-{$locale}.l10n.php" ) ) {
-			return;
-		}
-		// WordPress 6.5+ prefers the .l10n.php variant of this path automatically.
-		load_textdomain( 'mailspur-email-log', dirname( FILE ) . "/languages/mailspur-email-log-{$locale}.mo", $locale );
 	}
 }

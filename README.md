@@ -29,7 +29,7 @@ npm run setup:php
 | `npm run playground` | WordPress mit Plugin und Beispiel-Mails auf http://127.0.0.1:9400 |
 | `npm run test:e2e -- --php 7.4 --wp 6.5` | Laufzeittests gegen eine bestimmte PHP-/WP-Version |
 | `npm run phpcs` / `npm run phpcbf` | Coding Standards prüfen / automatisch korrigieren |
-| `npm run i18n` | Übersetzungen aus `i18n/*.json` neu erzeugen |
+| `npm run i18n` | `languages/mailspur-email-log.pot` und `i18n/<locale>.po` aus dem Code und `i18n/<locale>/*.json` neu erzeugen (`-- --prune` entfernt ungenutzte Übersetzungen) |
 | `npm run build` | Release-ZIP nach `dist/` |
 | `node scripts/wporg-assets.mjs` | Icon, Banner und Screenshots für wordpress.org neu erzeugen |
 
@@ -77,7 +77,7 @@ Actions sind auf Commit-SHAs gepinnt, Werkzeuge werden mit fester Version und SH
 5. Nach der Freigabe: SVN-Passwort unter *Profil → Konto & Sicherheit* erzeugen, im GitHub-Repo die Secrets `SVN_USERNAME` und `SVN_PASSWORD` sowie die Variable `WPORG_DEPLOY=true` setzen. Optional die Umgebung `wordpress-org` mit Freigabe absichern.
 6. Ab dann veröffentlicht jeder Tag automatisch – inklusive Icon, Banner und Screenshots aus `.wordpress-org/`.
 
-Übersetzungen: wordpress.org baut Sprachpakete über translate.wordpress.org; die mitgelieferte deutsche Übersetzung ist nur der Fallback, solange es kein Sprachpaket gibt.
+Übersetzungen: wordpress.org baut Sprachpakete über translate.wordpress.org; das Plugin liefert selbst keine Übersetzungsdateien aus (nur die POT in `languages/`), WordPress lädt die Sprachpakete just in time. Quelle sind `i18n/<locale>/<modul>.json` (Schlüssel = englischer Text, Plugin-Header in `header.json`; bei `_n()` hält der Singular-Schlüssel Form 0 und der Plural-Schlüssel Form 1 – bzw. ein Array ab Form 1, wenn die Sprache drei oder mehr Formen hat). `npm run i18n` erzeugt daraus `i18n/<locale>.po`, die nach der Freischaltung auf translate.wordpress.org importiert werden (z. B. `de_DE` und `de_DE_formal`). Die CI meldet fehlende, leere und ungenutzte Übersetzungen, abweichende Platzhalter/Markup und für `de_*` Verstöße gegen den deutschen Styleguide.
 
 ## Lizenz
 

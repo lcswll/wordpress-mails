@@ -1,0 +1,3251 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr ""
+
+msgid "%1$s (previous week: %2$s)"
+msgstr ""
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr ""
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "%1$s email types from %2$s senders"
+msgstr ""
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr ""
+
+msgid "%1$s emails in %2$s days"
+msgstr ""
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr ""
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr ""
+
+msgid "%1$s entries, %2$s"
+msgstr ""
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr ""
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr ""
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr ""
+
+msgid "%1$s of %2$s entries processed …"
+msgstr ""
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr ""
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr ""
+
+msgid "%1$s sent, %2$s still held …"
+msgstr ""
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr ""
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr ""
+
+msgid "%1$s · as of %2$s"
+msgstr ""
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr ""
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr ""
+
+msgid "%1$s, %2$s"
+msgstr ""
+
+msgid "%s (must-use plugin)"
+msgstr ""
+
+msgid "%s (theme)"
+msgstr ""
+
+msgid "%s ago"
+msgstr ""
+
+msgid "%s days"
+msgstr ""
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "%s emails are held by the emergency brake."
+msgstr ""
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr ""
+
+msgid "%s entries"
+msgstr ""
+
+msgid "%s failed"
+msgstr ""
+
+msgid "%s held emails discarded."
+msgstr ""
+
+msgid "%s imported entries removed."
+msgstr ""
+
+msgid "%s in 30 days"
+msgstr ""
+
+msgid "%s marked as spam"
+msgstr ""
+
+msgid "%s more on the Email types page."
+msgstr ""
+
+msgid "%s notes"
+msgstr ""
+
+msgid "%s of all emails"
+msgstr ""
+
+msgid "%s of them in the last 24 hours."
+msgstr ""
+
+msgid "%s s"
+msgstr ""
+
+msgid "%s selected"
+msgstr ""
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "%s to administrators in 30 days"
+msgstr ""
+
+msgid "%s unchanged lines"
+msgstr ""
+
+msgid "(no subject)"
+msgstr ""
+
+msgid "(no text content)"
+msgstr ""
+
+msgid "(the emails are no longer in the log)"
+msgstr ""
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr ""
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr ""
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr ""
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr ""
+
+msgid "12 months"
+msgstr ""
+
+msgid "30 days"
+msgstr ""
+
+msgid "7 days"
+msgstr ""
+
+msgid "90 days"
+msgstr ""
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr ""
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr ""
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr ""
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr ""
+
+msgid "API key or private key in plain text: %1$s"
+msgstr ""
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr ""
+
+msgid "Access"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Active: alerts on %s."
+msgstr ""
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr ""
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr ""
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr ""
+
+msgid "Added:"
+msgstr ""
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr ""
+
+msgid "Admin screen"
+msgstr ""
+
+msgid "Administrators"
+msgstr ""
+
+msgid "Aggregate reports go to %s."
+msgstr ""
+
+msgid "Ajax"
+msgstr ""
+
+msgid "Alert"
+msgstr ""
+
+msgid "Alert and hold further emails"
+msgstr ""
+
+msgid "Alert only"
+msgstr ""
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr ""
+
+msgid "Alert when emails fail repeatedly"
+msgstr ""
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr ""
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr ""
+
+msgid "Alerts are off."
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "All email types look healthy."
+msgstr ""
+
+msgid "All emails are redirected to test addresses."
+msgstr ""
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr ""
+
+msgid "All sources"
+msgstr ""
+
+msgid "Allow again"
+msgstr ""
+
+msgid "Allowed again."
+msgstr ""
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr ""
+
+msgid "Also remove the subject when anonymising"
+msgstr ""
+
+msgid "Also search content"
+msgstr ""
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr ""
+
+msgid "Always load remote images and fonts in the preview"
+msgstr ""
+
+msgid "Amazon SES (via SNS)"
+msgstr ""
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr ""
+
+msgid "Anonymisation"
+msgstr ""
+
+msgid "Anonymise entries after"
+msgstr ""
+
+msgid "Anonymised"
+msgstr ""
+
+msgid "Any format"
+msgstr ""
+
+msgid "Any status"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Ask the recipient for a working address."
+msgstr ""
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr ""
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr ""
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr ""
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr ""
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr ""
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr ""
+
+msgid "Attachments"
+msgstr ""
+
+msgid "Attachments no longer available: %s"
+msgstr ""
+
+msgid "Authentication"
+msgstr ""
+
+msgid "Automatic TLS"
+msgstr ""
+
+msgid "Average per day"
+msgstr ""
+
+msgid "Back to the email types"
+msgstr ""
+
+msgid "Belongs to"
+msgstr ""
+
+msgid "Block again"
+msgstr ""
+
+msgid "Blocked as spam or by a blocklist"
+msgstr ""
+
+msgid "Bounced (permanent)"
+msgstr ""
+
+msgid "Bounced (temporary)"
+msgstr ""
+
+msgid "Broken characters (encoding): %1$s"
+msgstr ""
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr ""
+
+msgid "Bundle into one daily email"
+msgstr ""
+
+msgid "Bundled into one daily email"
+msgstr ""
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr ""
+
+msgid "Busiest day"
+msgstr ""
+
+msgid "CSV"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Careful: emails to this address failed several times before."
+msgstr ""
+
+msgid "Change in the email types"
+msgstr ""
+
+msgid "Change staging mode"
+msgstr ""
+
+msgid "Check"
+msgstr ""
+
+msgid "Check again"
+msgstr ""
+
+msgid "Check emails"
+msgstr ""
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr ""
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr ""
+
+msgid "Check sender domains"
+msgstr ""
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr ""
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr ""
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr ""
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr ""
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr ""
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr ""
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr ""
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr ""
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr ""
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr ""
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr ""
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr ""
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr ""
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr ""
+
+msgid "Checked %s."
+msgstr ""
+
+msgid "Checked just now"
+msgstr ""
+
+msgid "Checking DNS records …"
+msgstr ""
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr ""
+
+msgid "Choose a range of at most %s days."
+msgstr ""
+
+msgid "Clear selection"
+msgstr ""
+
+msgid "Click a bar to open these emails in the log."
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Close (Esc)"
+msgstr ""
+
+msgid "Colour scheme"
+msgstr ""
+
+msgid "Command line"
+msgstr ""
+
+msgid "Compare"
+msgstr ""
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr ""
+
+msgid "Component"
+msgstr ""
+
+msgid "Configure alerts"
+msgstr ""
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr ""
+
+msgid "Content change marked as seen."
+msgstr ""
+
+msgid "Content changed"
+msgstr ""
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr ""
+
+msgid "Content changed on %s."
+msgstr ""
+
+msgid "Content removed"
+msgstr ""
+
+msgid "Content removed after %s days"
+msgstr ""
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr ""
+
+msgid "Copied"
+msgstr ""
+
+msgid "Copied – paste it into your reply."
+msgstr ""
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr ""
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Copy for support"
+msgstr ""
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr ""
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr ""
+
+msgid "Counted once per email."
+msgstr ""
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr ""
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr ""
+
+msgid "Create new URL"
+msgstr ""
+
+msgid "Current page"
+msgstr ""
+
+msgid "Current record"
+msgstr ""
+
+msgid "Current size"
+msgstr ""
+
+msgid "Custom"
+msgstr ""
+
+msgid "DKIM key found (selector: %s)."
+msgstr ""
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr ""
+
+msgid "DMARC record found with policy p=%s."
+msgstr ""
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr ""
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr ""
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr ""
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr ""
+
+msgid "Daily"
+msgstr ""
+
+msgid "Daily digest"
+msgstr ""
+
+msgid "Dark"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Default (%s days)"
+msgstr ""
+
+msgid "Default (no time limit)"
+msgstr ""
+
+msgid "Default sender"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Delete %s selected log entries?"
+msgstr ""
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr ""
+
+msgid "Delete entries after"
+msgstr ""
+
+msgid "Delete selected"
+msgstr ""
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr ""
+
+msgid "Delete this log entry?"
+msgstr ""
+
+msgid "Deleted."
+msgstr ""
+
+msgid "Delivered"
+msgstr ""
+
+msgid "Delivered by %s (API)"
+msgstr ""
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr ""
+
+msgid "Delivered in the daily digest on %s."
+msgstr ""
+
+msgid "Delivery"
+msgstr ""
+
+msgid "Delivery status from your email provider"
+msgstr ""
+
+msgid "Desktop"
+msgstr ""
+
+msgid "Did my email arrive?"
+msgstr ""
+
+msgid "Disable the email or change its recipient"
+msgstr ""
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr ""
+
+msgid "Discard held emails"
+msgstr ""
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr ""
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr ""
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr ""
+
+msgid "Download .eml"
+msgstr ""
+
+msgid "Download as CSV"
+msgstr ""
+
+msgid "Download started."
+msgstr ""
+
+msgid "Download the entries matching the current filters as %s"
+msgstr ""
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr ""
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr ""
+
+msgid "Edit template"
+msgstr ""
+
+msgid "Editors and above"
+msgstr ""
+
+msgid "Email address"
+msgstr ""
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr ""
+
+msgid "Email address or order number"
+msgstr ""
+
+msgid "Email consists almost only of images"
+msgstr ""
+
+msgid "Email failure spike"
+msgstr ""
+
+msgid "Email failures"
+msgstr ""
+
+msgid "Email failures resolved"
+msgstr ""
+
+msgid "Email inventory"
+msgstr ""
+
+msgid "Email log"
+msgstr ""
+
+msgid "Email log: problem recipients"
+msgstr ""
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr ""
+
+msgid "Email me whenever anyone posts a comment"
+msgstr ""
+
+msgid "Email provider"
+msgstr ""
+
+msgid "Email sent again."
+msgstr ""
+
+msgid "Email sent to %s."
+msgstr ""
+
+msgid "Email type"
+msgstr ""
+
+msgid "Email type is sent again"
+msgstr ""
+
+msgid "Email type stopped"
+msgstr ""
+
+msgid "Email types"
+msgstr ""
+
+msgid "Email volume back to normal"
+msgstr ""
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr ""
+
+msgid "Email: failed"
+msgstr ""
+
+msgid "Email: failed – see the log"
+msgstr ""
+
+msgid "Email: sent"
+msgstr ""
+
+msgid "Emails"
+msgstr ""
+
+msgid "Emails are being logged again."
+msgstr ""
+
+msgid "Emails are delivered to their recipients."
+msgstr ""
+
+msgid "Emails are flowing again"
+msgstr ""
+
+msgid "Emails are logged but not delivered."
+msgstr ""
+
+msgid "Emails are still being sent."
+msgstr ""
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr ""
+
+msgid "Emails in 30 days"
+msgstr ""
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr ""
+
+msgid "Emails over time"
+msgstr ""
+
+msgid "Emails per day and status"
+msgstr ""
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr ""
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr ""
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr ""
+
+msgid "Emails to this user"
+msgstr ""
+
+msgid "Emails with notes"
+msgstr ""
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr ""
+
+msgid "Emails – last 7 days"
+msgstr ""
+
+msgid "Emergency brake"
+msgstr ""
+
+msgid "Emergency brake reset."
+msgstr ""
+
+msgid "Emergency brake settings"
+msgstr ""
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr ""
+
+msgid "Emergency brake: unusual email flood"
+msgstr ""
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr ""
+
+msgid "Empty log"
+msgstr ""
+
+msgid "Empty subject"
+msgstr ""
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr ""
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr ""
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr ""
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr ""
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr ""
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr ""
+
+msgid "Encryption"
+msgstr ""
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr ""
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr ""
+
+msgid "Enter an email address or an order number."
+msgstr ""
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr ""
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr ""
+
+msgid "Enter one or more email addresses."
+msgstr ""
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr ""
+
+msgid "Entries"
+msgstr ""
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "Errors"
+msgstr ""
+
+msgid "Every %s days"
+msgstr ""
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr ""
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr ""
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr ""
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr ""
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Expected today and not sent yet:"
+msgstr ""
+
+msgid "Export"
+msgstr ""
+
+msgid "Export started – your download begins shortly."
+msgstr ""
+
+msgid "Failed"
+msgstr ""
+
+msgid "Failed (%s %%)"
+msgstr ""
+
+msgid "Failing"
+msgstr ""
+
+msgid "Failure rate"
+msgstr ""
+
+msgid "Failure spike"
+msgstr ""
+
+msgid "Far more emails than usual were sent"
+msgstr ""
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr ""
+
+msgid "Fewer"
+msgstr ""
+
+msgid "File"
+msgstr ""
+
+msgid "Filter by status"
+msgstr ""
+
+msgid "Filter email types"
+msgstr ""
+
+msgid "First email after the change"
+msgstr ""
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr ""
+
+msgid "First page"
+msgstr ""
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr ""
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr ""
+
+msgid "Forced dark"
+msgstr ""
+
+msgid "Format"
+msgstr ""
+
+msgid "Free text from forms"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "From date"
+msgstr ""
+
+msgid "Front end"
+msgstr ""
+
+msgid "Function"
+msgstr ""
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr ""
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr ""
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr ""
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr ""
+
+msgid "Google rejected the login"
+msgstr ""
+
+msgid "HTML"
+msgstr ""
+
+msgid "HTML sent as plain text"
+msgstr ""
+
+msgid "Handler"
+msgstr ""
+
+msgid "Hard bounce reported by your email provider"
+msgstr ""
+
+msgid "Hard failures"
+msgstr ""
+
+msgid "Headers"
+msgstr ""
+
+msgid "Held"
+msgstr ""
+
+msgid "Held by emergency brake – discarded."
+msgstr ""
+
+msgid "Held by emergency brake – not delivered."
+msgstr ""
+
+msgid "Held by emergency brake – released later."
+msgstr ""
+
+msgid "Held by staging mode – not delivered."
+msgstr ""
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr ""
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr ""
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr ""
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr ""
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr ""
+
+msgid "Hold further emails to problem recipients"
+msgstr ""
+
+msgid "Hooks"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "How to fix:"
+msgstr ""
+
+msgid "I already did"
+msgstr ""
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr ""
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr ""
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr ""
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr ""
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr ""
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr ""
+
+msgid "Ignore"
+msgstr ""
+
+msgid "Ignored"
+msgstr ""
+
+msgid "Ignored notes"
+msgstr ""
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr ""
+
+msgid "Images without alt text (%1$s)"
+msgstr ""
+
+msgid "Import"
+msgstr ""
+
+msgid "Import failed: %s"
+msgstr ""
+
+msgid "Import from other plugins"
+msgstr ""
+
+msgid "Import new entries"
+msgstr ""
+
+msgid "Imported"
+msgstr ""
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr ""
+
+msgid "Imported from %s"
+msgstr ""
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr ""
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr ""
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr ""
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr ""
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr ""
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr ""
+
+msgid "Include content"
+msgstr ""
+
+msgid "Information"
+msgstr ""
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr ""
+
+msgid "Invalid date."
+msgstr ""
+
+msgid "Invalid email address"
+msgstr ""
+
+msgid "Invalid email address: %s"
+msgstr ""
+
+msgid "Invalid sender address: %1$s"
+msgstr ""
+
+msgid "Irregular"
+msgstr ""
+
+msgid "Is Mailspur helping you?"
+msgstr ""
+
+msgid "Is an email missing?"
+msgstr ""
+
+msgid "Is everything running?"
+msgstr ""
+
+msgid "JSON"
+msgstr ""
+
+msgid "Keep at most"
+msgstr ""
+
+msgid "Keep for"
+msgstr ""
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr ""
+
+msgid "Kept: %s"
+msgstr ""
+
+msgid "Key figures"
+msgstr ""
+
+msgid "Last 30 days"
+msgstr ""
+
+msgid "Last email before the change"
+msgstr ""
+
+msgid "Last failure"
+msgstr ""
+
+msgid "Last page"
+msgstr ""
+
+msgid "Last sent"
+msgstr ""
+
+msgid "Leave a review"
+msgstr ""
+
+msgid "Light"
+msgstr ""
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr ""
+
+msgid "Link to a development address: %1$s"
+msgstr ""
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr ""
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr ""
+
+msgid "Link via a URL shortener: %1$s"
+msgstr ""
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr ""
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr ""
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr ""
+
+msgid "Load remote content"
+msgstr ""
+
+msgid "Loading…"
+msgstr ""
+
+msgid "Log"
+msgstr ""
+
+msgid "Log entries %s"
+msgstr ""
+
+msgid "Log entry not found."
+msgstr ""
+
+msgid "Log only – do not send any email"
+msgstr ""
+
+msgid "Log size"
+msgstr ""
+
+msgid "Logged emails"
+msgstr ""
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr ""
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr ""
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr ""
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr ""
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr ""
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr ""
+
+msgid "Looking it up …"
+msgstr ""
+
+msgid "Lucas Wille"
+msgstr ""
+
+msgid "Mail Log"
+msgstr ""
+
+msgid "Mail Log sections"
+msgstr ""
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr ""
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr ""
+
+msgid "Mailbox unknown or unavailable"
+msgstr ""
+
+msgid "Mailer"
+msgstr ""
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr ""
+
+msgid "Mailspur alerts"
+msgstr ""
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr ""
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr ""
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr ""
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr ""
+
+msgid "Mailspur has no email to %s in the log."
+msgstr ""
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr ""
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr ""
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr ""
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr ""
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr ""
+
+msgid "Mailspur – Email Log"
+msgstr ""
+
+msgid "Mailspur: emails held"
+msgstr ""
+
+msgid "Mailspur: staging mode"
+msgstr ""
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr ""
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr ""
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr ""
+
+msgid "Make sure the encryption setting matches the port."
+msgstr ""
+
+msgid "Many emails could not be sent recently"
+msgstr ""
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr ""
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr ""
+
+msgid "Mark as resolved"
+msgstr ""
+
+msgid "Marked as spam"
+msgstr ""
+
+msgid "Marked as spam by the recipient"
+msgstr ""
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr ""
+
+msgid "Maybe later"
+msgstr ""
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr ""
+
+msgid "Menu position"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Method"
+msgstr ""
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
+
+msgid "Monitor again"
+msgstr ""
+
+msgid "Monitoring alerts"
+msgstr ""
+
+msgid "More"
+msgstr ""
+
+msgid "More actions"
+msgstr ""
+
+msgid "More filters"
+msgstr ""
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr ""
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr ""
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr ""
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr ""
+
+msgid "Needs attention"
+msgstr ""
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "New URL created. Update it at your email provider."
+msgstr ""
+
+msgid "New email types"
+msgstr ""
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr ""
+
+msgid "New sender"
+msgstr ""
+
+msgid "New sender writes to many addresses"
+msgstr ""
+
+msgid "Next email"
+msgstr ""
+
+msgid "Next email (j)"
+msgstr ""
+
+msgid "Next page"
+msgstr ""
+
+msgid "No DKIM key found under the common selectors."
+msgstr ""
+
+msgid "No DMARC record for the sender domain %s"
+msgstr ""
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr ""
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr ""
+
+msgid "No SMTP transcript for this email."
+msgstr ""
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr ""
+
+msgid "No SPF record for the sender domain %s"
+msgstr ""
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr ""
+
+msgid "No alerts sent yet."
+msgstr ""
+
+msgid "No connection to the SMTP server"
+msgstr ""
+
+msgid "No email logged for %s hours"
+msgstr ""
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr ""
+
+msgid "No emails"
+msgstr ""
+
+msgid "No emails found."
+msgstr ""
+
+msgid "No emails in this period."
+msgstr ""
+
+msgid "No emails logged for this order yet."
+msgstr ""
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr ""
+
+msgid "No emails match these filters."
+msgstr ""
+
+msgid "No emails sent"
+msgstr ""
+
+msgid "No emails to this user in the log."
+msgstr ""
+
+msgid "No emails were logged in the last two weeks."
+msgstr ""
+
+msgid "No limit"
+msgstr ""
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr ""
+
+msgid "No log of this plugin was found on this site."
+msgstr ""
+
+msgid "No problem recipients."
+msgstr ""
+
+msgid "No problems found in this email."
+msgstr ""
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr ""
+
+msgid "No public sender domain to check"
+msgstr ""
+
+msgid "No regularly sent email has stopped"
+msgstr ""
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr ""
+
+msgid "No sender address recorded"
+msgstr ""
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr ""
+
+msgid "No unusual email failures"
+msgstr ""
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr ""
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr ""
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr ""
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr ""
+
+msgid "Not all selectors could be checked in time."
+msgstr ""
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr ""
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr ""
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr ""
+
+msgid "Not set up"
+msgstr ""
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr ""
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr ""
+
+msgid "Notes"
+msgstr ""
+
+msgid "Notes in the latest email: %s"
+msgstr ""
+
+msgid "Notes: %1$s. %2$s"
+msgstr ""
+
+msgid "Notes: %s"
+msgstr ""
+
+msgid "Nothing else is expected today."
+msgstr ""
+
+msgid "Nothing failed in the last 7 days."
+msgstr ""
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr ""
+
+msgid "Number of failed emails"
+msgstr ""
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr ""
+
+msgid "OK"
+msgstr ""
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr ""
+
+msgid "Off"
+msgstr ""
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr ""
+
+msgid "Off – deliver emails normally"
+msgstr ""
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr ""
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr ""
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr ""
+
+msgid "Only administrators can empty the log."
+msgstr ""
+
+msgid "Only administrators can send emails to other addresses."
+msgstr ""
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr ""
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr ""
+
+msgid "Only held emails can be released."
+msgstr ""
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr ""
+
+msgid "Open in log"
+msgstr ""
+
+msgid "Open latest"
+msgstr ""
+
+msgid "Open staging mode"
+msgstr ""
+
+msgid "Open the email types"
+msgstr ""
+
+msgid "Open the emergency brake"
+msgstr ""
+
+msgid "Open the log"
+msgstr ""
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr ""
+
+msgid "Open the mail log"
+msgstr ""
+
+msgid "Open the sender check"
+msgstr ""
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr ""
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr ""
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr ""
+
+msgid "Order #%s"
+msgstr ""
+
+msgid "Order data"
+msgstr ""
+
+msgid "Origin"
+msgstr ""
+
+msgid "Original Bcc"
+msgstr ""
+
+msgid "Original Cc"
+msgstr ""
+
+msgid "Original recipients"
+msgstr ""
+
+msgid "Other emails"
+msgstr ""
+
+msgid "Other recipients (e.g. guests)"
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Own top-level menu item"
+msgstr ""
+
+msgid "PHP extension openssl is missing"
+msgstr ""
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr ""
+
+msgid "Pagination"
+msgstr ""
+
+msgid "Password sent in plain text"
+msgstr ""
+
+msgid "Path"
+msgstr ""
+
+msgid "Payment card number in plain text: %1$s"
+msgstr ""
+
+msgid "Per page"
+msgstr ""
+
+msgid "Period"
+msgstr ""
+
+msgid "Personal data"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Phone number"
+msgstr ""
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr ""
+
+msgid "Plain text"
+msgstr ""
+
+msgid "Please enter valid email addresses."
+msgstr ""
+
+msgid "Plugin"
+msgstr ""
+
+msgid "Plugin or theme that sent the email."
+msgstr ""
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "Postal address"
+msgstr ""
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr ""
+
+msgid "Preparation"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "Previews"
+msgstr ""
+
+msgid "Previous email"
+msgstr ""
+
+msgid "Previous email (k)"
+msgstr ""
+
+msgid "Previous page"
+msgstr ""
+
+msgid "Print"
+msgstr ""
+
+msgid "Privacy"
+msgstr ""
+
+msgid "Privacy & security"
+msgstr ""
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Probe emails are only sent to an administrator."
+msgstr ""
+
+msgid "Problem"
+msgstr ""
+
+msgid "Problem recipients"
+msgstr ""
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr ""
+
+msgid "Provider status"
+msgstr ""
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr ""
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr ""
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr ""
+
+msgid "REST API"
+msgstr ""
+
+msgid "REST route"
+msgstr ""
+
+msgid "Rarely"
+msgstr ""
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr ""
+
+msgid "Raw source"
+msgstr ""
+
+msgid "Reason"
+msgstr ""
+
+msgid "Rebuild from the log"
+msgstr ""
+
+msgid "Recipient"
+msgstr ""
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr ""
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr ""
+
+msgid "Recipients"
+msgstr ""
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr ""
+
+msgid "Record for every email"
+msgstr ""
+
+msgid "Record for failed emails only"
+msgstr ""
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr ""
+
+msgid "Recovery"
+msgstr ""
+
+msgid "Redact secrets"
+msgstr ""
+
+msgid "Redirect all emails to the addresses below"
+msgstr ""
+
+msgid "Redirect to"
+msgstr ""
+
+msgid "Redirect to test addresses"
+msgstr ""
+
+msgid "Redirected by staging mode."
+msgstr ""
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr ""
+
+msgid "Registered users"
+msgstr ""
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr ""
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr ""
+
+msgid "Release held emails"
+msgstr ""
+
+msgid "Released from staging (held entry #%s)."
+msgstr ""
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr ""
+
+msgid "Remote content"
+msgstr ""
+
+msgid "Remote content is loaded."
+msgstr ""
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr ""
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr ""
+
+msgid "Remove imported entries"
+msgstr ""
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr ""
+
+msgid "Removed:"
+msgstr ""
+
+msgid "Repeat alerts after"
+msgstr ""
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr ""
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr ""
+
+msgid "Request"
+msgstr ""
+
+msgid "Request failed: %s"
+msgstr ""
+
+msgid "Resend"
+msgstr ""
+
+msgid "Resend the email from the log in a few minutes."
+msgstr ""
+
+msgid "Resend the email from the log later."
+msgstr ""
+
+msgid "Resend the email from the log once delivery works."
+msgstr ""
+
+msgid "Resend the failed emails once the limit resets."
+msgstr ""
+
+msgid "Resent from log"
+msgstr ""
+
+msgid "Reset filters"
+msgstr ""
+
+msgid "Result"
+msgstr ""
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr ""
+
+msgid "Retention"
+msgstr ""
+
+msgid "Retention in the log"
+msgstr ""
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr ""
+
+msgid "Review held emails"
+msgstr ""
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr ""
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr ""
+
+msgid "Revoked keys (empty p=): %s."
+msgstr ""
+
+msgid "Rhythm"
+msgstr ""
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr ""
+
+msgid "Run the full sender check"
+msgstr ""
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr ""
+
+msgid "SMTP host"
+msgstr ""
+
+msgid "SMTP login failed"
+msgstr ""
+
+msgid "SMTP transcript"
+msgstr ""
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr ""
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr ""
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr ""
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr ""
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr ""
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Saved – leave empty to keep it"
+msgstr ""
+
+msgid "Scheduled for later today:"
+msgstr ""
+
+msgid "Search recipient or subject"
+msgstr ""
+
+msgid "Search recipient or subject …"
+msgstr ""
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr ""
+
+msgid "See why"
+msgstr ""
+
+msgid "Seen"
+msgstr ""
+
+msgid "Select all"
+msgstr ""
+
+msgid "Selector \"%s\" has no key either."
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr ""
+
+msgid "Send a message when the problem is resolved"
+msgstr ""
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr ""
+
+msgid "Send a weekly email report to the addresses above"
+msgstr ""
+
+msgid "Send again"
+msgstr ""
+
+msgid "Send alerts by email to"
+msgstr ""
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr ""
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr ""
+
+msgid "Send latest to me"
+msgstr ""
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr ""
+
+msgid "Send now"
+msgstr ""
+
+msgid "Send report now"
+msgstr ""
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr ""
+
+msgid "Send test alert"
+msgstr ""
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr ""
+
+msgid "Send the latest email of this type to %s?"
+msgstr ""
+
+msgid "Send this email again to %s?"
+msgstr ""
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr ""
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr ""
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr ""
+
+msgid "Send to…"
+msgstr ""
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr ""
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr ""
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr ""
+
+msgid "Sender domain or address not verified"
+msgstr ""
+
+msgid "Sender of %s of the last 200 emails"
+msgstr ""
+
+msgid "Sending failed – see the log."
+msgstr ""
+
+msgid "Sending failed – see the new log entry for details."
+msgstr ""
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr ""
+
+msgid "Sending limit or quota reached"
+msgstr ""
+
+msgid "Sending report …"
+msgstr ""
+
+msgid "Sending test alert …"
+msgstr ""
+
+msgid "Sending works again: no more failure spike."
+msgstr ""
+
+msgid "Sending…"
+msgstr ""
+
+msgid "Sent"
+msgstr ""
+
+msgid "Sent as a free mail address: %1$s"
+msgstr ""
+
+msgid "Sent by"
+msgstr ""
+
+msgid "Sent by WP-Cron."
+msgstr ""
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr ""
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr ""
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr ""
+
+msgid "Sent by the cron event %s."
+msgstr ""
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr ""
+
+msgid "Sent to %s."
+msgstr ""
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr ""
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr ""
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr ""
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr ""
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr ""
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr ""
+
+msgid "Set up staging mode"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Settings › Discussion"
+msgstr ""
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr ""
+
+msgid "Several of the latest emails of this type failed."
+msgstr ""
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr ""
+
+msgid "Shop managers and above"
+msgstr ""
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr ""
+
+msgid "Show all email types"
+msgstr ""
+
+msgid "Show all in Mail Log"
+msgstr ""
+
+msgid "Show as"
+msgstr ""
+
+msgid "Show data as table"
+msgstr ""
+
+msgid "Show email types"
+msgstr ""
+
+msgid "Show emails"
+msgstr ""
+
+msgid "Show emails for %s in the log"
+msgstr ""
+
+msgid "Show failed emails"
+msgstr ""
+
+msgid "Show held emails"
+msgstr ""
+
+msgid "Show these emails in the log"
+msgstr ""
+
+msgid "Silence"
+msgstr ""
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr ""
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr ""
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr ""
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr ""
+
+msgid "Some emails could not be sent recently"
+msgstr ""
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr ""
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr ""
+
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Staging"
+msgstr ""
+
+msgid "Staging mode"
+msgstr ""
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr ""
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr ""
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr ""
+
+msgid "Staging mode is off"
+msgstr ""
+
+msgid "Staging mode is on although this is a live site"
+msgstr ""
+
+msgid "Staging mode is on for this staging site"
+msgstr ""
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr ""
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr ""
+
+msgid "Staging mode settings"
+msgstr ""
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr ""
+
+msgid "Statistics"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr ""
+
+msgid "Stop bundling (sends what waits now)"
+msgstr ""
+
+msgid "Stop these emails"
+msgstr ""
+
+msgid "Stopped"
+msgstr ""
+
+msgid "Stopped by Mailspur."
+msgstr ""
+
+msgid "Stopped email types"
+msgstr ""
+
+msgid "Store the exact raw MIME source of every email"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Subject mostly in capital letters"
+msgstr ""
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr ""
+
+msgid "Subjects often contain names or order numbers."
+msgstr ""
+
+msgid "Suggested TXT record for %s"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
+msgid "Supported: %s."
+msgstr ""
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr ""
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr ""
+
+msgid "Temporary rejection – try again later"
+msgstr ""
+
+msgid "Test"
+msgstr ""
+
+msgid "Test alert"
+msgstr ""
+
+msgid "Text changes"
+msgstr ""
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr ""
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr ""
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr ""
+
+msgid "The API key was rejected"
+msgstr ""
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr ""
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr ""
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr ""
+
+msgid "The SMTP server conversation was empty."
+msgstr ""
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr ""
+
+msgid "The SMTP server refuses to relay"
+msgstr ""
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr ""
+
+msgid "The SMTP server requires a login or encryption"
+msgstr ""
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr ""
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr ""
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr ""
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr ""
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr ""
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr ""
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr ""
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr ""
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr ""
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr ""
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr ""
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr ""
+
+msgid "The email is too large"
+msgstr ""
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr ""
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr ""
+
+msgid "The email types are being rebuilt from the log."
+msgstr ""
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr ""
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr ""
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr ""
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr ""
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr ""
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr ""
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr ""
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr ""
+
+msgid "The emergency brake is holding emails"
+msgstr ""
+
+msgid "The emergency brake is not holding any emails"
+msgstr ""
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr ""
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr ""
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr ""
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr ""
+
+msgid "The latest emails could not be sent"
+msgstr ""
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "The log shows the reason for each failed email."
+msgstr ""
+
+msgid "The mail log requires JavaScript."
+msgstr ""
+
+msgid "The mail server did not answer in time"
+msgstr ""
+
+msgid "The mail server is temporarily unavailable"
+msgstr ""
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr ""
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr ""
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr ""
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr ""
+
+msgid "The mailer plugin reported a failure"
+msgstr ""
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr ""
+
+msgid "The reason: %s."
+msgstr ""
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr ""
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr ""
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr ""
+
+msgid "The receiving server may still accept it on a later try."
+msgstr ""
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr ""
+
+msgid "The recipient address was rejected"
+msgstr ""
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr ""
+
+msgid "The recipient domain has no mail server"
+msgstr ""
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr ""
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr ""
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr ""
+
+msgid "The sender address is not allowed"
+msgstr ""
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr ""
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr ""
+
+msgid "The sender domain could not be checked"
+msgstr ""
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr ""
+
+msgid "The server cannot send email with PHP mail()"
+msgstr ""
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr ""
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr ""
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr ""
+
+msgid "The server rejected the content"
+msgstr ""
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr ""
+
+msgid "The start date must not be after the end date."
+msgstr ""
+
+msgid "The statistics require JavaScript."
+msgstr ""
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr ""
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr ""
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr ""
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr ""
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr ""
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr ""
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr ""
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr ""
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr ""
+
+msgid "This email type has no content change."
+msgstr ""
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr ""
+
+msgid "This email type is monitored again."
+msgstr ""
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr ""
+
+msgid "This import is already running in another tab."
+msgstr ""
+
+msgid "This is a test alert. Your alert channels work."
+msgstr ""
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr ""
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr ""
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr ""
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr ""
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr ""
+
+msgid "Threshold (emails per hour)"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Timeline"
+msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "To date"
+msgstr ""
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr ""
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr ""
+
+msgid "Top recipient domains"
+msgstr ""
+
+msgid "Top recipients: %s"
+msgstr ""
+
+msgid "Top sources"
+msgstr ""
+
+msgid "Top subjects"
+msgstr ""
+
+msgid "Total"
+msgstr ""
+
+msgid "Total: %s ms"
+msgstr ""
+
+msgid "Trace"
+msgstr ""
+
+msgid "Transcript copied."
+msgstr ""
+
+msgid "Transport"
+msgstr ""
+
+msgid "Trigger"
+msgstr ""
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr ""
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr ""
+
+msgid "Trigger to me"
+msgstr ""
+
+msgid "Triggering…"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr ""
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr ""
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr ""
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr ""
+
+msgid "Under Tools"
+msgstr ""
+
+msgid "Uninstall"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Unknown probe."
+msgstr ""
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr ""
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr ""
+
+msgid "Until the log limit"
+msgstr ""
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr ""
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr ""
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr ""
+
+msgid "Updated in between: %s"
+msgstr ""
+
+msgid "Updated since the last one:"
+msgstr ""
+
+msgid "Updated since then: %s."
+msgstr ""
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr ""
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr ""
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr ""
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr ""
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr ""
+
+msgid "Use one exclamation mark at most."
+msgstr ""
+
+msgid "Use the arrow keys to move between cells."
+msgstr ""
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr ""
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "User: %s"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Uses the saved settings – save your changes first."
+msgstr ""
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr ""
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr ""
+
+msgid "Very long subject (%1$s characters)"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "View %s failed emails"
+msgstr ""
+
+msgid "WP-Cron"
+msgstr ""
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr ""
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr ""
+
+msgid "WP-Cron runs normally."
+msgstr ""
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr ""
+
+msgid "Waits %s s for the mail server"
+msgstr ""
+
+msgid "Warnings"
+msgstr ""
+
+msgid "Webhook URL"
+msgstr ""
+
+msgid "Webhook signing key"
+msgstr ""
+
+msgid "Webhook: %s"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "Week"
+msgstr ""
+
+msgid "Week of %s"
+msgstr ""
+
+msgid "Weekday"
+msgstr ""
+
+msgid "Weekly"
+msgstr ""
+
+msgid "Weekly email report"
+msgstr ""
+
+msgid "Weekly report"
+msgstr ""
+
+msgid "What to do"
+msgstr ""
+
+msgid "When emails are sent"
+msgstr ""
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr ""
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr ""
+
+msgid "Who can view the log"
+msgstr ""
+
+msgid "Why did an email fail?"
+msgstr ""
+
+msgid "With attachments"
+msgstr ""
+
+msgid "With notes"
+msgstr ""
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr ""
+
+msgid "WooCommerce email"
+msgstr ""
+
+msgid "WooCommerce › Settings › Emails"
+msgstr ""
+
+msgid "WordPress"
+msgstr ""
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr ""
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr ""
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr ""
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr ""
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr ""
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr ""
+
+msgid "XML-RPC"
+msgstr ""
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr ""
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr ""
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr ""
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr ""
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr ""
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr ""
+
+msgid "Your DKIM selector (optional)"
+msgstr ""
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr ""
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr ""
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr ""
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr ""
+
+msgid "address"
+msgstr ""
+
+msgid "and %s more"
+msgstr ""
+
+msgid "and %s more – see the log"
+msgstr ""
+
+msgid "another plugin stopped it"
+msgstr ""
+
+msgid "code"
+msgstr ""
+
+msgid "date"
+msgstr ""
+
+msgid "days"
+msgstr ""
+
+msgid "deleted after %s days"
+msgstr ""
+
+msgid "emails to this address failed several times before"
+msgstr ""
+
+msgid "entries"
+msgstr ""
+
+msgid "failing"
+msgstr ""
+
+msgid "failure spikes"
+msgstr ""
+
+msgid "first seen %s"
+msgstr ""
+
+msgid "from a new sender"
+msgstr ""
+
+msgid "holding emails right now"
+msgstr ""
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr ""
+
+msgid "https://lucaswille.de/"
+msgstr ""
+
+msgid "kept until deleted manually"
+msgstr ""
+
+msgid "link"
+msgstr ""
+
+msgid "minutes"
+msgstr ""
+
+msgid "name"
+msgstr ""
+
+msgid "new this week"
+msgstr ""
+
+msgid "no"
+msgstr ""
+
+msgid "none"
+msgstr ""
+
+msgid "none in %1$s – %2$s"
+msgstr ""
+
+msgid "number"
+msgstr ""
+
+msgid "of %s"
+msgstr ""
+
+msgid "often to administrators"
+msgstr ""
+
+msgid "on %1$s at %2$s"
+msgstr ""
+
+msgid "same recipient"
+msgstr ""
+
+msgid "slow to send"
+msgstr ""
+
+msgid "staging mode is on"
+msgstr ""
+
+msgid "stopped"
+msgstr ""
+
+msgid "stopped email types"
+msgstr ""
+
+msgid "text"
+msgstr ""
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr ""
+
+msgid "time"
+msgstr ""
+
+msgid "today at %s"
+msgstr ""
+
+msgid "triggered %s times"
+msgstr ""
+
+msgid "unchanged"
+msgstr ""
+
+msgid "unknown – the mailer gave no error message"
+msgstr ""
+
+msgid "unusual silence"
+msgstr ""
+
+msgid "usually sent: %s"
+msgstr ""
+
+msgid "wp_mail() called"
+msgstr ""
+
+msgid "yes"
+msgstr ""
+
+msgid "yesterday at %s"
+msgstr ""
+
+msgid "your email provider"
+msgstr ""
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr ""
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr ""
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr ""
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr ""
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr ""
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr ""
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr ""

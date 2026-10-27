@@ -18,8 +18,8 @@ import yauzl from 'yauzl';
 import yazl from 'yazl';
 import { PLUGIN_SLUG, pluginDir, root } from './lib/php.mjs';
 
-const TEXT = new Set(['.php', '.js', '.css', '.txt', '.po', '.json', '.svg', '.md']);
-const BINARY = new Set(['.png', '.jpg', '.jpeg', '.gif', '.webp', '.mo']);
+const TEXT = new Set(['.php', '.js', '.css', '.txt', '.pot', '.json', '.svg', '.md']);
+const BINARY = new Set(['.png', '.jpg', '.jpeg', '.gif', '.webp']);
 const MAX_BYTES = 10 * 1024 * 1024; // wordpress.org upload limit.
 
 const mainFile = path.join(pluginDir, `${PLUGIN_SLUG}.php`);
@@ -92,13 +92,14 @@ if (size > MAX_BYTES) problems.push(`ZIP is ${size} bytes – wordpress.org acce
 for (const name of entries.keys()) {
 	if (!name.startsWith(`${PLUGIN_SLUG}/`)) problems.push(`Entry outside the plugin folder: ${name}`);
 	if (/(^|\/)(node_modules|vendor|tests?|\.git)\//.test(name) || /\.(map|zip|log)$/.test(name)) problems.push(`Dev file in ZIP: ${name}`);
-	if (name.endsWith('.php') && !name.includes('/languages/')) {
+	if (/\.(po|mo)$|\.l10n\.php$/.test(name)) problems.push(`Translation file in ZIP (wordpress.org delivers language packs): ${name}`);
+	if (name.endsWith('.php')) {
 		const head = entries.get(name).toString('utf8').slice(0, 2000);
 		const guard = name.endsWith('/uninstall.php') ? /defined\(\s*'WP_UNINSTALL_PLUGIN'\s*\)\s*\|\|\s*exit/ : /defined\(\s*'ABSPATH'\s*\)\s*\|\|\s*exit/;
 		if (!guard.test(head)) problems.push(`Missing direct-access guard: ${name}`);
 	}
 }
-for (const required of [`${PLUGIN_SLUG}/${PLUGIN_SLUG}.php`, `${PLUGIN_SLUG}/readme.txt`, `${PLUGIN_SLUG}/uninstall.php`]) {
+for (const required of [`${PLUGIN_SLUG}/${PLUGIN_SLUG}.php`, `${PLUGIN_SLUG}/readme.txt`, `${PLUGIN_SLUG}/uninstall.php`, `${PLUGIN_SLUG}/languages/${PLUGIN_SLUG}.pot`]) {
 	if (!entries.has(required)) problems.push(`Missing in ZIP: ${required}`);
 }
 const zippedVersion = /^\s*\*\s*Version:\s*(\S+)/m.exec(entries.get(`${PLUGIN_SLUG}/${PLUGIN_SLUG}.php`)?.toString('utf8') ?? '')?.[1];
