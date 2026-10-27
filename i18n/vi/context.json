@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s ghi chú",
+	"Belongs to": "Thuộc về",
+	"Emails to this user": "Email gửi đến người dùng này",
+	"No emails logged for this order yet.": "Chưa có email nào được ghi nhật ký cho đơn hàng này.",
+	"No emails to this user in the log.": "Không có email nào gửi đến người dùng này trong nhật ký.",
+	"Order #%s": "Đơn hàng #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Được gửi đến cùng địa chỉ vào khoảng ngày đặt hàng, nhưng không được liên kết với đơn hàng này (ví dụ được ghi nhật ký trước khi có liên kết, hoặc được nhập).",
+	"Show all in Mail Log": "Hiển thị tất cả trong Nhật ký email",
+	"User: %s": "Người dùng: %s",
+	"WooCommerce email": "Email WooCommerce",
+	"same recipient": "cùng người nhận"
+}

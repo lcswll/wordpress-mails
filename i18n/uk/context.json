@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s приміток",
+	"Belongs to": "Належить до",
+	"Emails to this user": "Листи цьому користувачу",
+	"No emails logged for this order yet.": "Для цього замовлення ще не записано жодного листа.",
+	"No emails to this user in the log.": "У журналі немає листів цьому користувачу.",
+	"Order #%s": "Замовлення #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Надіслано на ту саму адресу приблизно в дату замовлення, але не пов'язано з цим замовленням (наприклад, записано до появи зв'язку або імпортовано).",
+	"Show all in Mail Log": "Показати всі в журналі листів",
+	"User: %s": "Користувач: %s",
+	"WooCommerce email": "Лист WooCommerce",
+	"same recipient": "той самий одержувач"
+}

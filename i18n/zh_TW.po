@@ -1,0 +1,3245 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "「下載 .eml」會根據已記錄、已遮蔽的資料重建郵件 (不含附件)。"
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (上週：%2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (排定於 %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s 種郵件類型已停止：%2$s。"
+
+msgid "%1$s email types from %2$s senders"
+msgstr "來自 %2$s 個寄件者的 %1$s 種郵件類型"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "過去 %2$s 分鐘內有 %1$s 封郵件傳送失敗。"
+
+msgid "%1$s emails in %2$s days"
+msgstr "%2$s 天內 %1$s 封郵件"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "過去 30 天內 %1$s 封郵件，%2$s 封失敗"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "一小時內寄出了 %1$s 封郵件，遠多於平常 (門檻：每小時 %2$s 封)。聯絡表單可能遭到濫用，或網站可能已遭入侵。"
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s 個項目，%2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "已匯入 %1$s 個，重複 %2$s 個，過舊 %3$s 個"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%2$s 封中有 %1$s 封退信 (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "過去 %3$s 天內的 %2$s 封郵件中，有 %1$s 封無法寄出。"
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "已處理 %1$s / %2$s 個項目…"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s 個百分點，相較於 %2$s - %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s 於 %2$s 寄出第一封郵件，並在過去 24 小時內寄信給 %3$s 個不同的外部地址。如果你沒有安裝或設定任何會寄送這類郵件的項目，請檢查網站：新的寄件者可能是網站遭駭的徵兆。"
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "已寄出 %1$s 封，仍有 %2$s 封遭暫扣…"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s，相較於 %2$s - %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · 自上次摘要以來合併了 %2$s 封郵件"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · 截至 %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s - 失敗率 %2$s %% (上週：%3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s - 由 %2$s 回報，%3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s，%2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (強制使用外掛)"
+
+msgid "%s (theme)"
+msgstr "%s (佈景主題)"
+
+msgid "%s ago"
+msgstr "%s 前"
+
+msgid "%s days"
+msgstr "%s 天"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "過去 7 天內有 %s 封郵件傳送失敗。"
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s 封郵件正在等待你的決定。"
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "過去 7 天內有 %s 封郵件遭暫扣，未傳送。"
+
+msgid "%s emails are held by the emergency brake."
+msgstr "緊急煞車暫扣了 %s 封郵件。"
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s 封郵件正在等待，尚未送達。"
+
+msgid "%s entries"
+msgstr "%s 個項目"
+
+msgid "%s failed"
+msgstr "%s 封失敗"
+
+msgid "%s held emails discarded."
+msgstr "已捨棄 %s 封遭暫扣的郵件。"
+
+msgid "%s imported entries removed."
+msgstr "已移除 %s 個匯入的項目。"
+
+msgid "%s in 30 days"
+msgstr "30 天內 %s"
+
+msgid "%s marked as spam"
+msgstr "%s 封標示為垃圾郵件"
+
+msgid "%s more on the Email types page."
+msgstr "郵件類型頁面上還有 %s 個。"
+
+msgid "%s notes"
+msgstr "%s 則提示"
+
+msgid "%s of all emails"
+msgstr "占全部郵件的 %s"
+
+msgid "%s of them in the last 24 hours."
+msgstr "其中 %s 封在過去 24 小時內。"
+
+msgid "%s s"
+msgstr "%s 秒"
+
+msgid "%s selected"
+msgstr "已選取 %s 個"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "有 %s 個項目需要注意："
+
+msgid "%s to administrators in 30 days"
+msgstr "30 天內寄給管理員 %s"
+
+msgid "%s unchanged lines"
+msgstr "%s 行未變更"
+
+msgid "(no subject)"
+msgstr "(無主旨)"
+
+msgid "(no text content)"
+msgstr "(無文字內容)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(這些郵件已不在記錄中)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all 較為嚴格；~all 很常見，搭配 DMARC 使用沒有問題。"
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "設為 0 會永久保留項目。清理作業每天執行一次。"
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 代表不限制。最舊的項目會最先移除。"
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "設為 0 即關閉。移除較舊項目的內容、標頭與附件，並遮蔽地址 (a***@example.com)。日期、狀態、來源、格式、大小與提示會保留供統計使用。此作業在每日清理時、刪除項目之前執行，因此只有比上方的刪除期限短時才會生效。"
+
+msgid "12 months"
+msgstr "12 個月"
+
+msgid "30 days"
+msgstr "30 天"
+
+msgid "7 days"
+msgstr "7 天"
+
+msgid "90 days"
+msgstr "90 天"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "DKIM 選擇器只能包含字母、數字、句點、連字號與底線。"
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "透過 API 寄信的郵件外掛接手了傳送，並回報寄送失敗，但沒有提供原因。"
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "已發布的金鑰並不代表你的郵件確實以它簽署，請在收到的郵件標頭中檢查 DKIM 結果。"
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "某個收件者或寄件地址不是有效的電子郵件地址，因此 PHPMailer 拒絕寄送。"
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "純文字的 API 金鑰或私密金鑰：%1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "評估這筆記錄約需 %1$s 次 DNS 查詢，超過允許的 %2$s 次，因此收件方可能會忽略它 (PermError)。請移除未使用的 include: 項目。"
+
+msgid "Access"
+msgstr "存取權限"
+
+msgid "Actions"
+msgstr "操作"
+
+msgid "Active: alerts on %s."
+msgstr "已啟用：針對%s發出警示。"
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "為範本中的每張圖片加上簡短的 alt 屬性，例如 alt=\"Logo Example Shop\"。"
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "如果你透過郵件服務供應商寄信，請加入其 include: (例如 include:_spf.google.com)。"
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "將你的郵件伺服器或郵件服務加入寄件網域的 SPF 記錄。"
+
+msgid "Added:"
+msgstr "新增："
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "至少有 %s 次永久失敗的地址：收件伺服器拒絕了該信箱、該網域沒有郵件伺服器，或你的郵件服務供應商回報了永久退信。項目會隨記錄的保留期限到期。"
+
+msgid "Admin screen"
+msgstr "管理畫面"
+
+msgid "Administrators"
+msgstr "管理員"
+
+msgid "Aggregate reports go to %s."
+msgstr "彙整報告寄送至 %s。"
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "警示"
+
+msgid "Alert and hold further emails"
+msgstr "發出警示並暫扣後續郵件"
+
+msgid "Alert only"
+msgstr "僅發出警示"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "定期寄送的郵件類型停止時發出警示"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "郵件重複傳送失敗時發出警示"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "網站意外停止寄送郵件時發出警示"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "警示已啟用，但沒有管道：請輸入電子郵件地址或 Webhook 網址。"
+
+msgid "Alerts are off."
+msgstr "警示已關閉。"
+
+msgid "All"
+msgstr "全部"
+
+msgid "All email types look healthy."
+msgstr "所有郵件類型都正常。"
+
+msgid "All emails are redirected to test addresses."
+msgstr "所有郵件都會重新導向至測試地址。"
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "所有郵件都寄到測試地址，而非實際收件者。"
+
+msgid "All sources"
+msgstr "全部來源"
+
+msgid "Allow again"
+msgstr "重新允許"
+
+msgid "Allowed again."
+msgstr "已重新允許。"
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "當從未寄過郵件的外掛或佈景主題在一天內寄信給許多不同的外部地址時，也會發出一次警示，這可能是網站遭駭的徵兆。安裝 Mailspur 後的前兩週作為基準。"
+
+msgid "Also remove the subject when anonymising"
+msgstr "匿名化時一併移除主旨"
+
+msgid "Also search content"
+msgstr "一併搜尋內容"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "或請主機商為這個網站啟用 mail() / sendmail。"
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "在預覽中一律載入遠端圖片與字型"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (透過 SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "使用 HTTP API 而非 SMTP 的郵件服務供應商，每封郵件所需的往返次數較少。"
+
+msgid "Anonymisation"
+msgstr "匿名化"
+
+msgid "Anonymise entries after"
+msgstr "項目匿名化期限"
+
+msgid "Anonymised"
+msgstr "已匿名化"
+
+msgid "Any format"
+msgstr "任何格式"
+
+msgid "Any status"
+msgstr "任何狀態"
+
+msgid "Apply"
+msgstr "套用"
+
+msgid "Ask the recipient for a working address."
+msgstr "請收件者提供可用的地址。"
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "請主機商啟用 openssl 擴充功能 (或在主機控制台的 PHP 設定中啟用)。"
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "請主機商更新伺服器的 CA 憑證與 OpenSSL。"
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "詢問主機商是否封鎖了對外的 SMTP 連線。"
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "詢問主機商是否允許連往該連接埠的對外連線 (防火牆)。"
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "%2$s 分鐘內至少 %1$s 封郵件傳送失敗"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "在這段時間內，每種類型最多只發出一次警示，即使問題持續存在。"
+
+msgid "Attachments"
+msgstr "附件"
+
+msgid "Attachments no longer available: %s"
+msgstr "附件已無法取得：%s"
+
+msgid "Authentication"
+msgstr "驗證"
+
+msgid "Automatic TLS"
+msgstr "自動 TLS"
+
+msgid "Average per day"
+msgstr "每日平均"
+
+msgid "Back to the email types"
+msgstr "返回郵件類型"
+
+msgid "Belongs to"
+msgstr "所屬項目"
+
+msgid "Block again"
+msgstr "重新封鎖"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "被視為垃圾郵件或遭封鎖清單攔截"
+
+msgid "Bounced (permanent)"
+msgstr "已退信 (永久)"
+
+msgid "Bounced (temporary)"
+msgstr "已退信 (暫時)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "字元損毀 (編碼)：%1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "大量郵件缺少取消訂閱標頭 (%1$s 位收件者)"
+
+msgid "Bundle into one daily email"
+msgstr "合併為每日一封摘要郵件"
+
+msgid "Bundled into one daily email"
+msgstr "已合併為每日一封摘要郵件"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "已關閉合併。原本等待中的郵件已透過一封摘要寄出。"
+
+msgid "Busiest day"
+msgstr "最繁忙的一天"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "注意：寄往這個地址的郵件先前已失敗多次。"
+
+msgid "Change in the email types"
+msgstr "郵件類型的變化"
+
+msgid "Change staging mode"
+msgstr "變更預備環境模式"
+
+msgid "Check"
+msgstr "檢查"
+
+msgid "Check again"
+msgstr "重新檢查"
+
+msgid "Check emails"
+msgstr "檢查郵件"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "檢查主機與連接埠；試著用 587 (TLS) 取代 465 (SSL)，或反過來。"
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "在 SMTP 外掛中檢查主機、連接埠、加密方式、使用者名稱與密碼，並從該處寄送測試郵件。"
+
+msgid "Check sender domains"
+msgstr "檢查寄件網域"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "檢查加密方式是否與連接埠相符：587 用 TLS，465 用 SSL。"
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "檢查金鑰是否屬於正確的區域 / 帳號 (例如 EU 與 US 端點)。"
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "檢查 SMTP 主機與連接埠：錯誤的連接埠或遭封鎖的連線，常在備援機制生效前就以逾時告終。"
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "檢查寄件網域的 SPF、DKIM 與 DMARC 記錄，或使用實際寄信網域下的寄件地址。"
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "請檢查地址是否有錯字，或者網站從未寄出這封郵件。"
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "向收件者確認地址，並在儲存位置 (使用者個人資料、訂單、表單填寫內容) 中更正。"
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "向收件者確認地址，並在儲存位置中更正。"
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "檢查主機名稱與連接埠：587 搭配 STARTTLS (TLS)，465 搭配 SSL。大多數主機商會封鎖連接埠 25。"
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "在郵件服務帳號中檢查上限與目前用量；必要時請升級方案。"
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "檢查這個項目的收件者地址是否有錯字、空白或缺漏。"
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "檢查 SMTP 外掛中的寄件地址與 wp_mail_from 篩選器。"
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "檢查郵件帳號的寄送上限與這封郵件的提示。"
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "在封鎖清單檢查工具查詢伺服器 IP，並申請移除。"
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "檢查範本中預留位置的拼寫，以及外掛是否在這種郵件類型中支援它。除非寄信外掛執行了 do_shortcode()，否則郵件中的短代碼不會被處理。"
+
+msgid "Checked %s."
+msgstr "檢查於 %s。"
+
+msgid "Checked just now"
+msgstr "剛剛已檢查"
+
+msgid "Checking DNS records …"
+msgstr "正在檢查 DNS 記錄…"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "檢查網站寄信所用網域的 DNS 記錄：預設寄件地址，以及記錄中最常見的寄件者。記錄缺漏或設定薄弱，是郵件被歸入垃圾郵件最常見的原因。僅使用伺服器本身的 DNS 解析器；結果會保留一小時。"
+
+msgid "Choose a range of at most %s days."
+msgstr "請選擇最多 %s 天的範圍。"
+
+msgid "Clear selection"
+msgstr "清除選取"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "按一下長條即可在記錄中開啟這些郵件。"
+
+msgid "Close"
+msgstr "關閉"
+
+msgid "Close (Esc)"
+msgstr "關閉 (Esc)"
+
+msgid "Colour scheme"
+msgstr "色彩配置"
+
+msgid "Command line"
+msgstr "命令列"
+
+msgid "Compare"
+msgstr "比較"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "比較這些項目的來源。檢查是否有兩個外掛寄送同一則通知，或某個掛鉤 (例如訂單狀態變更) 是否觸發了不止一次。"
+
+msgid "Component"
+msgstr "元件"
+
+msgid "Configure alerts"
+msgstr "設定警示"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "內容已於 %1$s 天後匿名化，%2$s"
+
+msgid "Content change marked as seen."
+msgstr "已將內容變更標示為已查看。"
+
+msgid "Content changed"
+msgstr "內容已變更"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "內容在 %2$s 更新後，於 %1$s 變更。"
+
+msgid "Content changed on %s."
+msgstr "內容於 %s 變更。"
+
+msgid "Content removed"
+msgstr "內容已移除"
+
+msgid "Content removed after %s days"
+msgstr "內容已於 %s 天後移除"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "依據匿名化設定，內容、標頭與附件已移除，地址也已遮蔽。"
+
+msgid "Copied"
+msgstr "已複製"
+
+msgid "Copied – paste it into your reply."
+msgstr "已複製，請貼到你的回覆中。"
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "複製一段用於回覆客戶的簡短文字：郵件何時寄給誰、是否已送達，不含技術細節。"
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "將另一個郵件記錄外掛的現有記錄複製到 Mailspur，讓舊郵件也能在這裡搜尋與預覽。另一個外掛及其資料都不會變動；再次執行匯入只會新增新的項目。"
+
+msgid "Copy"
+msgstr "複製"
+
+msgid "Copy for support"
+msgstr "複製給客服使用"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "這個瀏覽器無法複製。請選取文字後自行複製："
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "更正地址 (例如在使用者個人資料或訂單中)，並考慮在表單中加入電子郵件地址驗證。"
+
+msgid "Counted once per email."
+msgstr "每封郵件計算一次。"
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "在郵件服務中建立具有寄送權限的新 API 金鑰，並填入郵件外掛。"
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "確定要建立新的 Webhook 網址嗎？目前的網址會立即失效，請將新網址貼到郵件服務供應商的 Webhook 設定中。"
+
+msgid "Create new URL"
+msgstr "建立新網址"
+
+msgid "Current page"
+msgstr "目前頁面"
+
+msgid "Current record"
+msgstr "目前的記錄"
+
+msgid "Current size"
+msgstr "目前大小"
+
+msgid "Custom"
+msgstr "自訂"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "找到 DKIM 金鑰 (選擇器：%s)。"
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "找到 p=none 的 DMARC 記錄：僅回報，偽造郵件仍會送達。"
+
+msgid "DMARC record found with policy p=%s."
+msgstr "找到政策為 p=%s 的 DMARC 記錄。"
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "DMARC 記錄沒有有效的政策 (p=none、quarantine 或 reject)。"
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "DNS 查詢失敗或逾時。請稍後再試。"
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "這台伺服器無法進行 DNS 查詢 (dns_get_record() 已停用)，因此無法在此執行寄件者檢查。"
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "所需 DNS 查詢：約 %1$s 次，允許 %2$s 次。"
+
+msgid "Daily"
+msgstr "每天"
+
+msgid "Daily digest"
+msgstr "每日摘要"
+
+msgid "Dark"
+msgstr "深色"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Default (%s days)"
+msgstr "預設 (%s 天)"
+
+msgid "Default (no time limit)"
+msgstr "預設 (無時間限制)"
+
+msgid "Default sender"
+msgstr "預設寄件者"
+
+msgid "Delete"
+msgstr "刪除"
+
+msgid "Delete %s selected log entries?"
+msgstr "確定要刪除選取的 %s 個記錄項目嗎？"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "確定要刪除全部記錄項目嗎？這項操作無法復原。"
+
+msgid "Delete entries after"
+msgstr "項目刪除期限"
+
+msgid "Delete selected"
+msgstr "刪除選取項目"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "刪除外掛時一併刪除記錄資料表與設定"
+
+msgid "Delete this log entry?"
+msgstr "確定要刪除這個記錄項目嗎？"
+
+msgid "Deleted."
+msgstr "已刪除。"
+
+msgid "Delivered"
+msgstr "已送達"
+
+msgid "Delivered by %s (API)"
+msgstr "由 %s 送達 (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "由掛載至 pre_wp_mail 的程式碼送達 (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "已於 %s 透過每日摘要送出。"
+
+msgid "Delivery"
+msgstr "傳送"
+
+msgid "Delivery status from your email provider"
+msgstr "來自郵件服務供應商的傳送狀態"
+
+msgid "Desktop"
+msgstr "桌面"
+
+msgid "Did my email arrive?"
+msgstr "我的郵件寄到了嗎？"
+
+msgid "Disable the email or change its recipient"
+msgstr "停用郵件或變更其收件者"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "確定要捨棄所有遭暫扣的郵件嗎？它們會保留在記錄中，但不會寄出。"
+
+msgid "Discard held emails"
+msgstr "捨棄遭暫扣的郵件"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "不要透過自己的伺服器以免費信箱地址 (gmail.com、gmx.de …) 作為「寄件者」寄信。"
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "完成：已寄出 %1$s 封郵件，失敗 %2$s 封。"
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "完成：已匯入 %1$s 個，重複 %2$s 個，過舊 %3$s 個。"
+
+msgid "Download .eml"
+msgstr "下載 .eml"
+
+msgid "Download as CSV"
+msgstr "下載為 CSV"
+
+msgid "Download started."
+msgstr "已開始下載。"
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "以 %s 格式下載符合目前篩選條件的項目"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "每封郵件在記錄或匯入時檢查一次 (不發出外部要求)。此處的變更只會影響之後記錄的郵件；較舊的項目不會重新檢查。DNS 與重複寄送檢查會在開啟項目時執行。"
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "先前寄給 %s 的郵件已多次永久失敗。"
+
+msgid "Edit template"
+msgstr "編輯範本"
+
+msgid "Editors and above"
+msgstr "編輯以上"
+
+msgid "Email address"
+msgstr "電子郵件地址"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "電子郵件地址 (最新的郵件已不在記錄中)"
+
+msgid "Email address or order number"
+msgstr "電子郵件地址或訂單編號"
+
+msgid "Email consists almost only of images"
+msgstr "郵件幾乎全是圖片"
+
+msgid "Email failure spike"
+msgstr "郵件傳送失敗激增"
+
+msgid "Email failures"
+msgstr "郵件傳送失敗"
+
+msgid "Email failures resolved"
+msgstr "郵件傳送失敗已解決"
+
+msgid "Email inventory"
+msgstr "郵件清冊"
+
+msgid "Email log"
+msgstr "郵件記錄"
+
+msgid "Email log: problem recipients"
+msgstr "郵件記錄：問題收件者"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "有留言等待審核時以電子郵件通知我"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "有人發表留言時以電子郵件通知我"
+
+msgid "Email provider"
+msgstr "郵件服務供應商"
+
+msgid "Email sent again."
+msgstr "郵件已重新傳送。"
+
+msgid "Email sent to %s."
+msgstr "郵件已寄給 %s。"
+
+msgid "Email type"
+msgstr "郵件類型"
+
+msgid "Email type is sent again"
+msgstr "郵件類型已恢復寄送"
+
+msgid "Email type stopped"
+msgstr "郵件類型已停止"
+
+msgid "Email types"
+msgstr "郵件類型"
+
+msgid "Email volume back to normal"
+msgstr "郵件量已恢復正常"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "郵件量已恢復正常：緊急煞車已解除。"
+
+msgid "Email: failed"
+msgstr "郵件：失敗"
+
+msgid "Email: failed – see the log"
+msgstr "郵件：失敗，請查看記錄"
+
+msgid "Email: sent"
+msgstr "郵件：已寄出"
+
+msgid "Emails"
+msgstr "郵件"
+
+msgid "Emails are being logged again."
+msgstr "郵件已重新開始記錄。"
+
+msgid "Emails are delivered to their recipients."
+msgstr "郵件正在送達收件者。"
+
+msgid "Emails are flowing again"
+msgstr "郵件已恢復寄送"
+
+msgid "Emails are logged but not delivered."
+msgstr "郵件會加以記錄，但不會送出。"
+
+msgid "Emails are still being sent."
+msgstr "郵件仍在寄送中。"
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "郵件仍在寄送中。請檢查主要來源；如要停止寄送，請將緊急煞車切換為「發出警示並暫扣後續郵件」。"
+
+msgid "Emails in 30 days"
+msgstr "30 天內的郵件"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "這種類型中僅寄給管理員的郵件，現在會彙整後每天以一封摘要寄出一次。"
+
+msgid "Emails over time"
+msgstr "郵件隨時間變化"
+
+msgid "Emails per day and status"
+msgstr "依日期與狀態統計的郵件"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "依星期與時段統計的郵件 (網站時區)。"
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "記錄中已存在的郵件 (由 Mailspur 本身記錄或從其他外掛匯入) 會依收件者、主旨與傳送時間辨識，並視為重複而略過。"
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "定期寄送的郵件已停止 (%s)"
+
+msgid "Emails to this user"
+msgstr "寄給這位使用者的郵件"
+
+msgid "Emails with notes"
+msgstr "有提示的郵件"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "沒有主旨的郵件看起來像垃圾郵件，也很難在收件匣中找到。"
+
+msgid "Emails – last 7 days"
+msgstr "郵件 - 過去 7 天"
+
+msgid "Emergency brake"
+msgstr "緊急煞車"
+
+msgid "Emergency brake reset."
+msgstr "已重設緊急煞車。"
+
+msgid "Emergency brake settings"
+msgstr "緊急煞車設定"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "緊急煞車：過去一小時內 %1$s 封郵件，遠多於平常 (門檻：每小時 %2$s 封)。"
+
+msgid "Emergency brake: unusual email flood"
+msgstr "緊急煞車：異常的大量郵件"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "留空 = 自動：過去 14 天最繁忙一小時的三倍，至少 50，目前為 %s。"
+
+msgid "Empty log"
+msgstr "清空記錄"
+
+msgid "Empty subject"
+msgstr "主旨空白"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "為 Google 帳戶啟用兩步驟驗證並建立應用程式密碼 (Google 帳戶 → 安全性 → 應用程式密碼)。"
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "在郵件服務供應商或主機商啟用 DKIM 簽署，並發布其提供的金鑰。如果你已經在簽署，請輸入選擇器 (DKIM-Signature 標頭中 s= 的值) 後重新檢查。"
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "在郵件服務中啟用 DKIM 簽署並發布其 DNS 記錄。"
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "在 SMTP 外掛中啟用驗證，並輸入使用者名稱與密碼。"
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "在 SMTP 外掛中啟用驗證。"
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "加密的 SMTP 連線 (TLS/SSL) 需要 PHP 擴充功能 openssl，但這台伺服器未安裝或未啟用。"
+
+msgid "Encryption"
+msgstr "加密"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "加密 (TLS/SSL) 失敗"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "請先輸入電子郵件地址或 Webhook 網址並儲存設定。"
+
+msgid "Enter an email address or an order number."
+msgstr "請輸入電子郵件地址或訂單編號。"
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "請先在「透過電子郵件將警示寄送至」中輸入電子郵件地址並儲存設定。"
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "請輸入 1 到 10 個電子郵件地址。"
+
+msgid "Enter one or more email addresses."
+msgstr "請輸入一或多個電子郵件地址。"
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "在 SMTP 外掛中輸入應用程式密碼，或使用外掛的「使用 Google 帳戶登入」(OAuth) 連線。"
+
+msgid "Entries"
+msgstr "項目"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "早於 %s 天的項目會略過，因為保留期限設定終究會刪除它們。如要全部匯入，請先變更上方的保留期限。"
+
+msgid "Error"
+msgstr "錯誤"
+
+msgid "Errors"
+msgstr "錯誤"
+
+msgid "Every %s days"
+msgstr "每 %s 天"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "每 15 分鐘 (Mailspur 警示)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "每週一早上，僅在有事項需要回報時寄送：與上週相比的郵件數與失敗率、新增、停止與變更的郵件類型、有提示的郵件，以及緊急煞車事件。僅包含數量與主旨樣式。"
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "這個網站寄出的所有種類郵件，根據 Mailspur 郵件記錄產生，可用於處理活動記錄或工作交接等用途。收件者群組依各寄件者的最新郵件推斷，資料類別依各類型的最新郵件推斷。清冊不含郵件內容與地址。"
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "網站寄出的所有種類郵件，自動從記錄中找出：依寄送的外掛與主旨分組，數字、地址與姓名以預留位置表示。Mailspur 會學習每種類型的寄送頻率，並在其中一種停止時察覺，例如在外掛更新後。"
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "一切正常：過去 7 天內共 %s 封郵件，沒有錯誤。"
+
+msgid "Expected today and not sent yet:"
+msgstr "今天應寄出但尚未寄出："
+
+msgid "Export"
+msgstr "匯出"
+
+msgid "Export started – your download begins shortly."
+msgstr "已開始匯出，下載即將開始。"
+
+msgid "Failed"
+msgstr "失敗"
+
+msgid "Failed (%s %%)"
+msgstr "失敗 (%s %%)"
+
+msgid "Failing"
+msgstr "失敗中"
+
+msgid "Failure rate"
+msgstr "失敗率"
+
+msgid "Failure spike"
+msgstr "失敗激增"
+
+msgid "Far more emails than usual were sent"
+msgstr "寄出的郵件遠多於平常"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "寄出的郵件遠多於平常，因此 Mailspur 會暫扣後續郵件，直到你放行或捨棄為止。"
+
+msgid "Fewer"
+msgstr "較少"
+
+msgid "File"
+msgstr "檔案"
+
+msgid "Filter by status"
+msgstr "依狀態篩選"
+
+msgid "Filter email types"
+msgstr "篩選郵件類型"
+
+msgid "First email after the change"
+msgstr "變更後的第一封郵件"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "這個寄件者的第一封郵件寄出於 %s。開啟類型警示後，當新的寄件者寄信給許多外部地址時，Mailspur 會發出警示。"
+
+msgid "First page"
+msgstr "第一頁"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "附件較大時，傳輸過程中也可能逾時，請改寄較小的檔案或連結。"
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "適用於網站的預備環境與開發副本：確保客戶絕不會收到來自副本的郵件。所有郵件仍會加以記錄。"
+
+msgid "Forced dark"
+msgstr "強制深色"
+
+msgid "Format"
+msgstr "格式"
+
+msgid "Free text from forms"
+msgstr "表單中的自由輸入文字"
+
+msgid "Friday"
+msgstr "星期五"
+
+msgid "From"
+msgstr "寄件者"
+
+msgid "From date"
+msgstr "開始日期"
+
+msgid "Front end"
+msgstr "前台"
+
+msgid "Function"
+msgstr "函式"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "後續郵件會遭暫扣，直到管理員放行或捨棄為止。"
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail 與 Google Workspace 已不再接受以一般帳戶密碼進行 SMTP 登入。"
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail 會截斷大於 102 KB 的 HTML 郵件，並顯示「[訊息已截斷]」。截斷處之後的所有內容 (通常是頁尾、取消訂閱連結或法律聲明) 都會被隱藏。"
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail 會截斷這封郵件 (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google 拒絕了登入"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML 以純文字寄出"
+
+msgid "Handler"
+msgstr "處理常式"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "郵件服務供應商回報永久退信"
+
+msgid "Hard failures"
+msgstr "永久失敗"
+
+msgid "Headers"
+msgstr "標頭"
+
+msgid "Held"
+msgstr "已暫扣"
+
+msgid "Held by emergency brake – discarded."
+msgstr "遭緊急煞車暫扣，已捨棄。"
+
+msgid "Held by emergency brake – not delivered."
+msgstr "遭緊急煞車暫扣，未送出。"
+
+msgid "Held by emergency brake – released later."
+msgstr "遭緊急煞車暫扣，之後已放行。"
+
+msgid "Held by staging mode – not delivered."
+msgstr "遭預備環境模式暫扣，未送出。"
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "已寄出遭暫扣的郵件。它會記錄為新的項目。"
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "遭暫扣的郵件狀態為「已暫扣」，仍可從記錄中逐封寄出 (「立即傳送」)。"
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "已暫扣：所有收件者先前都曾永久失敗 (問題收件者)。"
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "已暫扣：預備環境模式設為重新導向，但未設定有效的重新導向地址。"
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "關於可能導致這封郵件無法送達或無法正確顯示的問題提示。"
+
+msgid "Hold further emails to problem recipients"
+msgstr "暫扣寄給問題收件者的後續郵件"
+
+msgid "Hooks"
+msgstr "掛鉤"
+
+msgid "Hours"
+msgstr "小時"
+
+msgid "How to fix:"
+msgstr "修正方式："
+
+msgid "I already did"
+msgstr "我已經評過了"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "我了解原始碼不會遮蔽，且每封郵件的儲存空間大約會加倍"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "如果經常發生，請檢查郵件服務供應商的寄送上限。"
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "如果持續發生，請減少一次寄出的郵件數，或改用具有佇列的郵件服務寄送。"
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "如果遭安全性預設值封鎖，請改用 SMTP 外掛的 Microsoft (OAuth / Graph API) 連線。"
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "如果多位收件者失敗，地址後方的伺服器回覆會說明原因。"
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "如果帳號使用雙重驗證，請建立應用程式密碼並改用它。"
+
+msgid "Ignore"
+msgstr "忽略"
+
+msgid "Ignored"
+msgstr "已忽略"
+
+msgid "Ignored notes"
+msgstr "已忽略的提示"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "已忽略的提示不會再為新郵件記錄，並會在現有項目中隱藏。"
+
+msgid "Images without alt text (%1$s)"
+msgstr "沒有替代文字的圖片 (%1$s)"
+
+msgid "Import"
+msgstr "匯入"
+
+msgid "Import failed: %s"
+msgstr "匯入失敗：%s"
+
+msgid "Import from other plugins"
+msgstr "從其他外掛匯入"
+
+msgid "Import new entries"
+msgstr "匯入新項目"
+
+msgid "Imported"
+msgstr "已匯入"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "匯入的項目沒有追蹤資訊：另一個外掛並未記錄這些詳細資料。"
+
+msgid "Imported from %s"
+msgstr "匯入自 %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "在 Amazon SNS 中，將這個網址 (通訊協定 HTTPS) 訂閱到接收 Amazon SES 之 Delivery、Bounce 與 Complaint 通知的主題。Mailspur 會自動確認訂閱。"
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "在 Brevo 中，開啟 Transactional → Settings → Webhook，新增這個網址並選取 Delivered、Hard bounce、Soft bounce、Invalid email 與 Complaint。"
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "在 Mailgun 中，開啟 Sending → Webhooks，為 Delivered、Permanent failure、Temporary failure 與 Spam complaints 新增這個網址，並將 HTTP webhook signing key 貼到下方。"
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "在 Postmark 中，開啟你的伺服器 → Webhooks → Add webhook，貼上這個網址並選取 Delivery、Bounce 與 Spam complaint。"
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "在 Microsoft 365 系統管理中心開啟使用者 → 郵件 → 管理電子郵件應用程式，並啟用「已驗證的 SMTP」。"
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "收件匣大約只顯示前 40–80 個字元，其餘會被截斷，手機上還會更早截斷。"
+
+msgid "Include content"
+msgstr "包含內容"
+
+msgid "Information"
+msgstr "資訊"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "安裝 SMTP 外掛，並透過網域下的實際信箱或郵件服務寄送。"
+
+msgid "Invalid date."
+msgstr "無效的日期。"
+
+msgid "Invalid email address"
+msgstr "無效的電子郵件地址"
+
+msgid "Invalid email address: %s"
+msgstr "無效的電子郵件地址：%s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "無效的寄件地址：%1$s"
+
+msgid "Irregular"
+msgstr "不規律"
+
+msgid "Is Mailspur helping you?"
+msgstr "Mailspur 對你有幫助嗎？"
+
+msgid "Is an email missing?"
+msgstr "有郵件遺失嗎？"
+
+msgid "Is everything running?"
+msgstr "一切都正常運作嗎？"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "最多保留"
+
+msgid "Keep for"
+msgstr "保留期限"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "請勿公開這個網址：其中包含這個網站的私密金鑰。測試 Webhook 前請先儲存設定。"
+
+msgid "Kept: %s"
+msgstr "保留：%s"
+
+msgid "Key figures"
+msgstr "重要數據"
+
+msgid "Last 30 days"
+msgstr "過去 30 天"
+
+msgid "Last email before the change"
+msgstr "變更前的最後一封郵件"
+
+msgid "Last failure"
+msgstr "最近一次失敗"
+
+msgid "Last page"
+msgstr "最後一頁"
+
+msgid "Last sent"
+msgstr "最後寄出"
+
+msgid "Leave a review"
+msgstr "撰寫評論"
+
+msgid "Light"
+msgstr "淺色"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "連結文字顯示 %1$s，但實際連到 %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "連到開發用地址的連結：%1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "連到網站上不存在頁面的連結：%1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "直接連結到完整地址。如需點擊追蹤，請改用自己網域上的 UTM 參數。"
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "透過縮網址服務的連結：%1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "以 \"/\" 開頭的連結與圖片只能在網站上運作。郵件用戶端沒有網站地址可以補全，因此圖片會空白，連結也無法連到任何地方。"
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "連到網站另一份副本的連結：%1$s (這個網站：%2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "顯示地址與實際目標不同的連結看起來像網路釣魚。垃圾郵件篩選器會因此扣分，部分郵件用戶端也會警告讀者。"
+
+msgid "Load remote content"
+msgstr "載入遠端內容"
+
+msgid "Loading…"
+msgstr "載入中…"
+
+msgid "Log"
+msgstr "記錄"
+
+msgid "Log entries %s"
+msgstr "記錄項目 %s"
+
+msgid "Log entry not found."
+msgstr "找不到記錄項目。"
+
+msgid "Log only – do not send any email"
+msgstr "僅記錄，不寄送任何郵件"
+
+msgid "Log size"
+msgstr "記錄大小"
+
+msgid "Logged emails"
+msgstr "已記錄的郵件"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "記錄的郵件可能包含個人資料。請盡可能限縮存取權限。設定一律需要管理員權限。"
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "登入與收件者都已接受，但郵件本身遭拒，通常是垃圾郵件過濾、寄送上限或供應商的政策所致 (回應碼 554)。"
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "記錄寄出的郵件，整理網站寄送的郵件類型，並在其中某種停止時通知你。安全預覽、傳送診斷、統計資料。"
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "在 %s 的郵件設定中尋找停用或變更收件者的選項，或在此忽略這種類型。"
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "在錯誤訊息中尋找伺服器回覆；通常會說明原因。"
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "在記錄中尋找非預期的大量寄送 (垃圾表單提交、迴圈)。"
+
+msgid "Looking it up …"
+msgstr "查詢中…"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "郵件記錄"
+
+msgid "Mail Log sections"
+msgstr "郵件記錄區段"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "已設定用於接收回覆與退信的郵件伺服器。"
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "信箱服務供應商可以驗證你的網站是否獲准以這個網域寄送郵件。完整的寄件者檢查也會檢查 DKIM。"
+
+msgid "Mailbox unknown or unavailable"
+msgstr "信箱不明或無法使用"
+
+msgid "Mailer"
+msgstr "郵件程式"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun 會以這把金鑰簽署每個 Webhook (Sending → Webhooks → HTTP webhook signing key)；沒有有效簽章的回報會遭拒絕。"
+
+msgid "Mailspur alerts"
+msgstr "Mailspur 警示"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur 會檢查記錄中是否有無法寄出的郵件。"
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur 在你的商店中找不到訂單 #%s。"
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur 至今已在這個網站記錄了 %s 封已送達的郵件。如果它幫你節省了時間，在 WordPress.org 留下簡短的評論對我們意義重大，這能幫助其他人找到這個外掛，也能讓它持續免費。"
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "記錄中沒有訂單 #%s 的郵件。"
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "記錄中沒有寄給 %s 的郵件。"
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur 由 %1$s 開發。喜歡嗎？%2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur 會學習每一種郵件 (例如訂單確認) 的寄送頻率，並在其中一種停止時於此回報。"
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur 會根據過去 8 週學習每種郵件類型的節奏：每天寄送的訂單確認在 2 天後視為逾期，每週報告則在 2 週後。警示會列出類型、其寄件者，以及自上一封郵件以來更新過的外掛。使用上方的管道；已忽略的類型絕不會發出警示。"
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur 只能看到網站已寄出郵件，看不到收件匣本身。如果收件匣裡沒有，請收件者檢查垃圾郵件匣。"
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur 現在會阻止這些郵件；其郵件類型已被忽略。"
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – 郵件記錄"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur：郵件已遭暫扣"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur：預備環境模式"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "主要來源：%1$s (%2$s 封郵件)。"
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "確認郵件外掛中的 From 地址與已驗證的網域相符。"
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "確認郵件以 \"charset=UTF-8\" 寄出、範本檔案以 UTF-8 儲存，且資料庫資料表使用 utf8mb4。修正已以損毀狀態儲存的文字。"
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "確認加密設定與連接埠相符。"
+
+msgid "Many emails could not be sent recently"
+msgstr "最近有許多郵件無法寄出"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "主旨中有許多驚嘆號 (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "許多郵件用戶端在讀者允許前會封鎖圖片。缺少替代文字，讀者只會看到空白方框；螢幕閱讀器也無法讀出有用的內容。"
+
+msgid "Mark as resolved"
+msgstr "標示為已解決"
+
+msgid "Marked as spam"
+msgstr "已標示為垃圾郵件"
+
+msgid "Marked as spam by the recipient"
+msgstr "收件者標示為垃圾郵件"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "遮蔽記錄連結中的密碼重設、啟用與存取金鑰，以及以純文字傳送的密碼、API 金鑰與信用卡號碼"
+
+msgid "Maybe later"
+msgstr "以後再說"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "這封郵件可能從未寄出，請檢查訂單狀態與商店的郵件設定。"
+
+msgid "Menu position"
+msgstr "選單位置"
+
+msgid "Message"
+msgstr "訊息"
+
+msgid "Method"
+msgstr "方法"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online 封鎖了這個信箱或整個組織的 SMTP 登入 (基本驗證)。"
+
+msgid "Minutes"
+msgstr "分鐘"
+
+msgid "Monday"
+msgstr "星期一"
+
+msgid "Monitor again"
+msgstr "重新監控"
+
+msgid "Monitoring alerts"
+msgstr "監控警示"
+
+msgid "More"
+msgstr "較多"
+
+msgid "More actions"
+msgstr "更多操作"
+
+msgid "More filters"
+msgstr "更多篩選條件"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "最常見的原因 (%1$s 封)：%2$s。"
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "大多數伺服器總共接受 10–25 MB。"
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "找到多筆 DMARC 記錄。這種情況下收件方會忽略 DMARC，請只保留一筆。"
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "找到多筆 SPF 記錄。收件方會將其視為錯誤 (PermError)，請合併為一筆記錄。"
+
+msgid "Needs attention"
+msgstr "需要注意"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "既沒有記錄 From 標頭，也沒有記錄寄件者。郵件程式會改用其預設值，通常是 wordpress@yourdomain。"
+
+msgid "Never"
+msgstr "從未"
+
+msgid "New"
+msgstr "新"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "已建立新網址。請在郵件服務供應商處更新。"
+
+msgid "New email types"
+msgstr "新的郵件類型"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "新郵件會遭暫扣，直到你放行或捨棄為止。密碼重設郵件仍會寄出。"
+
+msgid "New sender"
+msgstr "新的寄件者"
+
+msgid "New sender writes to many addresses"
+msgstr "新的寄件者寄信給許多地址"
+
+msgid "Next email"
+msgstr "下一封郵件"
+
+msgid "Next email (j)"
+msgstr "下一封郵件 (j)"
+
+msgid "Next page"
+msgstr "下一頁"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "在常見的選擇器下找不到 DKIM 金鑰。"
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "寄件網域 %s 沒有 DMARC 記錄"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "找不到 DMARC 記錄。大型信箱服務供應商都要求設定，缺少它，任何人都能在不被察覺的情況下偽造這個網域。"
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "沒有 MX 記錄：這個網域無法接收回覆或退信，部分收件方會拒絕這類寄件者。"
+
+msgid "No SMTP transcript for this email."
+msgstr "這封郵件沒有 SMTP 對話記錄。"
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "寄件網域 %s 既沒有 SPF 記錄也沒有 DMARC 記錄"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "寄件網域 %s 沒有 SPF 記錄"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "找不到 SPF 記錄。收件方無法判斷哪些伺服器可以代表這個網域寄信。"
+
+msgid "No alerts sent yet."
+msgstr "尚未發出任何警示。"
+
+msgid "No connection to the SMTP server"
+msgstr "無法連線至 SMTP 伺服器"
+
+msgid "No email logged for %s hours"
+msgstr "%s 小時內沒有記錄到郵件"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "過去 %1$s 小時內沒有記錄到任何郵件，但這個網站在過去 %3$s 天中有 %2$s 天在這個時段寄過郵件 (平均 %4$s 封)。"
+
+msgid "No emails"
+msgstr "沒有郵件"
+
+msgid "No emails found."
+msgstr "找不到郵件。"
+
+msgid "No emails in this period."
+msgstr "這段期間沒有郵件。"
+
+msgid "No emails logged for this order yet."
+msgstr "尚未記錄這筆訂單的郵件。"
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "尚未記錄任何郵件。網站一寄出郵件，郵件類型就會顯示在這裡。"
+
+msgid "No emails match these filters."
+msgstr "沒有符合這些篩選條件的郵件。"
+
+msgid "No emails sent"
+msgstr "沒有寄出郵件"
+
+msgid "No emails to this user in the log."
+msgstr "記錄中沒有寄給這位使用者的郵件。"
+
+msgid "No emails were logged in the last two weeks."
+msgstr "過去兩週沒有記錄到郵件。"
+
+msgid "No limit"
+msgstr "不限制"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "在這個網站上找不到其他郵件記錄外掛的記錄。"
+
+msgid "No log of this plugin was found on this site."
+msgstr "在這個網站上找不到這個外掛的記錄。"
+
+msgid "No problem recipients."
+msgstr "沒有問題收件者。"
+
+msgid "No problems found in this email."
+msgstr "這封郵件中沒有發現問題。"
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "找不到公開寄件網域 (網站地址不是網域名稱，且記錄中尚無寄件者)。"
+
+msgid "No public sender domain to check"
+msgstr "沒有可檢查的公開寄件網域"
+
+msgid "No regularly sent email has stopped"
+msgstr "沒有定期寄送的郵件停止"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "沒有報告地址 (rua)，你將無法得知誰以你的名義寄信。"
+
+msgid "No sender address recorded"
+msgstr "未記錄寄件地址"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "這個項目沒有可用的追蹤資訊。它是在追蹤功能推出前，或由不含此功能的版本所記錄。"
+
+msgid "No unusual email failures"
+msgstr "沒有異常的郵件傳送失敗"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "沒有，這是刻意的。寄給 %2$s 的「%1$s」已於 %3$s 遭暫扣，未傳送。原因：%4$s。"
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "沒有。所有定期寄送的郵件都已準時送達。"
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "沒有。寄給 %2$s 的「%1$s」於 %3$s 傳送失敗。原因：%4$s。"
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "沒有。寄給 %2$s 的「%1$s」已於 %3$s 從網站寄出，但 %4$s 回報收件伺服器拒收。"
+
+msgid "None"
+msgstr "無"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "通常至少每 %1$s 天寄出一次，目前已逾期 %2$s。"
+
+msgid "Not all selectors could be checked in time."
+msgstr "無法及時檢查所有選擇器。"
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "未記錄：另一個外掛開啟了 SMTP 偵錯。"
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "未記錄：設定中已關閉 SMTP 對話記錄。"
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "未記錄：這封郵件並非透過 SMTP 寄出。"
+
+msgid "Not set up"
+msgstr "尚未設定"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "未儲存：對話記錄只會為傳送失敗的郵件保留。"
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "還沒有。寄給 %2$s 的「%1$s」已於 %3$s 從網站寄出，但 %4$s 回報了暫時性問題。"
+
+msgid "Notes"
+msgstr "提示"
+
+msgid "Notes in the latest email: %s"
+msgstr "最新郵件中的提示：%s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "提示：%1$s。%2$s"
+
+msgid "Notes: %s"
+msgstr "提示：%s"
+
+msgid "Nothing else is expected today."
+msgstr "今天沒有其他預計寄出的郵件。"
+
+msgid "Nothing failed in the last 7 days."
+msgstr "過去 7 天內沒有傳送失敗的郵件。"
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "目前還無法比較：沒有寄送得夠規律的郵件，Mailspur 無法察覺中斷。"
+
+msgid "Number of failed emails"
+msgstr "傳送失敗的郵件數"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "數字會被忽略，因此「訂單 #123」與「訂單 #124」會合併計算。"
+
+msgid "OK"
+msgstr "確定"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "在有人等待頁面時寄出的最近 %1$s 封郵件中，有一半耗時超過 %2$s 秒 (平均 %3$s 秒)。"
+
+msgid "Off"
+msgstr "關閉"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "預設為關閉。關閉時，「下載 .eml」會根據已記錄 (已遮蔽) 的資料重建郵件。原始碼會原封不動地包含密碼重設連結與其他機密資訊，請只在需要時、勾選兩個核取方塊後啟用。"
+
+msgid "Off – deliver emails normally"
+msgstr "關閉：正常傳送郵件"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "排除原因後，即可從記錄重新傳送這封郵件。"
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "當報告顯示合法郵件都能通過後，請改為 p=quarantine (或 p=reject)。"
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "兩封郵件中有一封已依保留設定刪除或匿名化，因此無法再進行比較。"
+
+msgid "Only administrators can empty the log."
+msgstr "只有管理員可以清空記錄。"
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "只有管理員可以將郵件寄到其他地址。"
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "僅在過去 14 天顯示這個時段通常會寄出郵件時 (14 天中至少 10 天，且包含相同的星期) 才發出警示，因此安靜的夜晚或週末不會觸發。"
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "僅限所有收件者都是問題收件者的郵件。密碼重設郵件一律會寄出；遭暫扣的郵件仍可從記錄中寄出 (「立即傳送」)。"
+
+msgid "Only held emails can be released."
+msgstr "只能放行遭暫扣的郵件。"
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "公開的收件者清單：%1$s 位外部收件者可看到彼此的地址"
+
+msgid "Open in log"
+msgstr "在記錄中開啟"
+
+msgid "Open latest"
+msgstr "開啟最新一封"
+
+msgid "Open staging mode"
+msgstr "開啟預備環境模式"
+
+msgid "Open the email types"
+msgstr "開啟郵件類型"
+
+msgid "Open the emergency brake"
+msgstr "開啟緊急煞車"
+
+msgid "Open the log"
+msgstr "開啟記錄"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "請在郵件外掛的記錄或偵錯檢視中查看確切的錯誤。"
+
+msgid "Open the mail log"
+msgstr "開啟郵件記錄"
+
+msgid "Open the sender check"
+msgstr "開啟寄件者檢查"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "選用，預設為關閉。啟用後，Mailspur 會定期檢查記錄，並在傳送失敗激增、異常無郵件或郵件類型停止時通知你。警示只會寄到你在此輸入的地址與 Webhook，內容包含網站名稱、警示文字 (若為已停止的郵件類型：其寄件者與主旨樣式) 以及記錄連結，絕不包含郵件內容或收件者。"
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "選用，僅限 https。Slack 與 Discord 的 Webhook 網址會收到一則聊天訊息，其他網址則收到 JSON POST 要求。要求由你的伺服器直接傳送到這個網址，不經過任何其他服務。"
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "或在郵件服務供應商處將該地址新增為別名 /「代表傳送」權限。"
+
+msgid "Order #%s"
+msgstr "訂單 #%s"
+
+msgid "Order data"
+msgstr "訂單資料"
+
+msgid "Origin"
+msgstr "觸發位置"
+
+msgid "Original Bcc"
+msgstr "原始 Bcc"
+
+msgid "Original Cc"
+msgstr "原始 Cc"
+
+msgid "Original recipients"
+msgstr "原始收件者"
+
+msgid "Other emails"
+msgstr "其他郵件"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "其他收件者 (例如訪客)"
+
+msgid "Overview"
+msgstr "概覽"
+
+msgid "Own top-level menu item"
+msgstr "獨立的頂層選單項目"
+
+msgid "PHP extension openssl is missing"
+msgstr "缺少 PHP 擴充功能 openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer 已就緒 (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "分頁"
+
+msgid "Password sent in plain text"
+msgstr "以純文字傳送的密碼"
+
+msgid "Path"
+msgstr "路徑"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "純文字的付款卡號：%1$s"
+
+msgid "Per page"
+msgstr "每頁"
+
+msgid "Period"
+msgstr "期間"
+
+msgid "Personal data"
+msgstr "個人資料"
+
+msgid "Phone"
+msgstr "手機"
+
+msgid "Phone number"
+msgstr "電話號碼"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "手機寬度 (375 px)。如果可以橫向捲動，表示郵件比大多數手機螢幕還寬。"
+
+msgid "Plain text"
+msgstr "純文字"
+
+msgid "Please enter valid email addresses."
+msgstr "請輸入有效的電子郵件地址。"
+
+msgid "Plugin"
+msgstr "外掛"
+
+msgid "Plugin or theme that sent the email."
+msgstr "寄出這封郵件的外掛或佈景主題。"
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "指出導致郵件無法送達或無法正確顯示的問題"
+
+msgid "Port"
+msgstr "連接埠"
+
+msgid "Postal address"
+msgstr "郵寄地址"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark、Mailgun、Brevo 或 Amazon SES 可以向這個網站回報郵件是否已送達、退信或被標示為垃圾郵件。狀態會顯示在記錄的郵件上，永久退信會計入問題收件者。為了比對回報，Mailspur 會在寄出的郵件中加入一個參照標頭。"
+
+msgid "Preparation"
+msgstr "準備"
+
+msgid "Preview"
+msgstr "預覽"
+
+msgid "Previews"
+msgstr "預覽"
+
+msgid "Previous email"
+msgstr "上一封郵件"
+
+msgid "Previous email (k)"
+msgstr "上一封郵件 (k)"
+
+msgid "Previous page"
+msgstr "上一頁"
+
+msgid "Print"
+msgstr "列印"
+
+msgid "Privacy"
+msgstr "隱私"
+
+msgid "Privacy & security"
+msgstr "隱私與安全性"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "很可能是：%s 種郵件類型已停止。"
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "測試郵件只會寄給管理員。"
+
+msgid "Problem"
+msgstr "問題"
+
+msgid "Problem recipients"
+msgstr "問題收件者"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "當寄出的郵件遠多於平常時 (例如垃圾郵件機器人濫用聯絡表單)，保護你的網域。警示會使用監控警示的管道；密碼重設郵件絕不會遭暫扣。"
+
+msgid "Provider status"
+msgstr "供應商狀態"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "%2$s 等供應商發布了嚴格的 DMARC 政策。由你的網頁伺服器寄出、以其網域為「寄件者」的郵件無法通過該檢查，會遭拒收或被歸入垃圾郵件。"
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "將重要內容寫成實際的文字，圖片只作為輔助。"
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "把重要資訊放在前面，並將主旨控制在約 80 個字元以內。"
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "REST 路由"
+
+msgid "Rarely"
+msgstr "很少"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "在 WordPress.org 為 Mailspur 評分"
+
+msgid "Raw source"
+msgstr "原始碼"
+
+msgid "Reason"
+msgstr "原因"
+
+msgid "Rebuild from the log"
+msgstr "從記錄重建"
+
+msgid "Recipient"
+msgstr "收件者"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "收件網域無法接收郵件：%1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "收件網域不接受郵件：%1$s"
+
+msgid "Recipients"
+msgstr "收件者"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "建議啟用。否則任何能存取記錄的人，都可能利用記錄中的重設連結或密碼接管帳號。重新傳送這類郵件時，寄出的是已遮蔽的版本。"
+
+msgid "Record for every email"
+msgstr "為每封郵件記錄"
+
+msgid "Record for failed emails only"
+msgstr "僅為傳送失敗的郵件記錄"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "記錄與 SMTP 伺服器的對話 (僅限透過 SMTP 寄送郵件時)。絕不記錄登入資料與郵件內容。另一個外掛開啟 SMTP 偵錯期間會略過。"
+
+msgid "Recovery"
+msgstr "恢復"
+
+msgid "Redact secrets"
+msgstr "遮蔽機密資訊"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "將所有郵件重新導向至下列地址"
+
+msgid "Redirect to"
+msgstr "重新導向至"
+
+msgid "Redirect to test addresses"
+msgstr "重新導向至測試地址"
+
+msgid "Redirected by staging mode."
+msgstr "已由預備環境模式重新導向。"
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "精簡 HTML：移除未使用的 CSS、重複的行內樣式、註解與冗長的追蹤網址。圖片不列入計算，只計算 HTML 本身。"
+
+msgid "Registered users"
+msgstr "已註冊使用者"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "遭 SPF、DKIM 或 DMARC 拒絕"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "相對連結或圖片 (%1$s)，例如 %2$s"
+
+msgid "Release held emails"
+msgstr "放行遭暫扣的郵件"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "已從預備環境放行 (遭暫扣的項目 #%s)。"
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "已從緊急煞車放行 (遭暫扣的項目 #%s)。"
+
+msgid "Remote content"
+msgstr "遠端內容"
+
+msgid "Remote content is loaded."
+msgstr "已載入遠端內容。"
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "遠端圖片與字型已封鎖，寄件者無法追蹤你何時開啟這個項目。"
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "確定要移除所有從 %s 匯入的項目嗎？另一個外掛中的資料不受影響。"
+
+msgid "Remove imported entries"
+msgstr "移除匯入的項目"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "從寄出這封郵件的表單或外掛通知中移除信用卡欄位，卡片資料只應由金流服務商處理。最多只顯示末四碼。請收件者刪除這封郵件。"
+
+msgid "Removed:"
+msgstr "移除："
+
+msgid "Repeat alerts after"
+msgstr "重複警示的間隔"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "無法收到回覆：從 %1$s 寄出且沒有 Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "由郵件服務供應商在過去 30 天內回報；只計算有回報的郵件。"
+
+msgid "Request"
+msgstr "要求"
+
+msgid "Request failed: %s"
+msgstr "要求失敗：%s"
+
+msgid "Resend"
+msgstr "重新傳送"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "幾分鐘後從記錄重新傳送這封郵件。"
+
+msgid "Resend the email from the log later."
+msgstr "稍後從記錄重新傳送這封郵件。"
+
+msgid "Resend the email from the log once delivery works."
+msgstr "傳送恢復正常後，從記錄重新傳送這封郵件。"
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "上限重設後，重新傳送失敗的郵件。"
+
+msgid "Resent from log"
+msgstr "從記錄重新傳送"
+
+msgid "Reset filters"
+msgstr "重設篩選條件"
+
+msgid "Result"
+msgstr "結果"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "結果來自快取，變更 DNS 記錄後請使用「重新檢查」。"
+
+msgid "Retention"
+msgstr "保留期限"
+
+msgid "Retention in the log"
+msgstr "記錄中的保留期限"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "已儲存這種郵件類型的保留期限。將於下一次每日清理時生效。"
+
+msgid "Review held emails"
+msgstr "檢閱遭暫扣的郵件"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "檢閱這封郵件的提示 (連結、寄件者、預留位置)。"
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "在該服務的控制台中撤銷金鑰並建立新金鑰。接著查明它為何會出現在郵件中 (偵錯或錯誤報告、會回顯設定的表單) 並加以阻止。"
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "已撤銷的金鑰 (p= 為空)：%s。"
+
+msgid "Rhythm"
+msgstr "節奏"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "在資料庫中對舊網域執行搜尋與取代，並檢查郵件範本與外掛設定中寫死的網址。"
+
+msgid "Run the full sender check"
+msgstr "執行完整的寄件者檢查"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "Microsoft 365 已停用 SMTP AUTH"
+
+msgid "SMTP host"
+msgstr "SMTP 主機"
+
+msgid "SMTP login failed"
+msgstr "SMTP 登入失敗"
+
+msgid "SMTP transcript"
+msgstr "SMTP 對話記錄"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "SPF 記錄允許全世界的任何伺服器以這個網域寄信 (+all)。"
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "SPF 記錄以 ?all (中立) 結尾：無法保護網域免於偽造。"
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "找到 SPF 記錄 (redirect= 指向另一項政策)。"
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "找到 SPF 記錄。其他伺服器會被標示為可疑 (~all，softfail)。"
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "找到 SPF 記錄。其他伺服器會遭拒絕 (-all)。"
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "SPF 記錄沒有 \"all\" 項目，因此來自其他伺服器的郵件會視為中立。"
+
+msgid "Saturday"
+msgstr "星期六"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Saved – leave empty to keep it"
+msgstr "已儲存，留空即保留原值"
+
+msgid "Scheduled for later today:"
+msgstr "今天稍後排定寄出："
+
+msgid "Search recipient or subject"
+msgstr "搜尋收件者或主旨"
+
+msgid "Search recipient or subject …"
+msgstr "搜尋收件者或主旨…"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "在郵件範本、外掛設定與資料庫中尋找舊地址 (例如網站搬移後)，並以正式網域取代。"
+
+msgid "See why"
+msgstr "查看原因"
+
+msgid "Seen"
+msgstr "已查看"
+
+msgid "Select all"
+msgstr "全選"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "選擇器「%s」也沒有金鑰。"
+
+msgid "Send"
+msgstr "傳送"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "改為寄送讓使用者自行設定密碼的連結，WordPress 核心的新使用者郵件正是這麼做。在寄出這封郵件的外掛中尋找「以電子郵件傳送密碼」或「包含密碼」之類的選項並將其關閉。"
+
+msgid "Send a message when the problem is resolved"
+msgstr "問題解決時傳送訊息"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "從郵件外掛的設定寄送測試郵件。"
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "將每週郵件報告寄送至上方地址"
+
+msgid "Send again"
+msgstr "再次傳送"
+
+msgid "Send alerts by email to"
+msgstr "透過電子郵件將警示寄送至"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "確定要立即將全部 %s 封遭暫扣的郵件寄給原始收件者嗎？"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "大型檔案請以下載連結取代附件寄送。"
+
+msgid "Send latest to me"
+msgstr "將最新一封寄給我"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "請使用會加入 List-Unsubscribe 與 List-Unsubscribe-Post 標頭的電子報外掛或服務寄送電子報，且不要透過 Bcc 以一封郵件寄給許多人。"
+
+msgid "Send now"
+msgstr "立即傳送"
+
+msgid "Send report now"
+msgstr "立即寄送報告"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "這類郵件請分別寄給每位收件者，或將收件者放在 Bcc。電子報請使用為每位收件者各寄一封郵件的電子報外掛。如果客戶的地址已外洩，請與你的個資保護負責人確認此事件是否需要通報。"
+
+msgid "Send test alert"
+msgstr "傳送測試警示"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "以標頭 \"Content-Type: text/html; charset=UTF-8\" 寄送郵件，或透過 wp_mail_content_type 篩選器設定內容類型。許多表單與商店外掛都有「HTML 郵件」選項。"
+
+msgid "Send the latest email of this type to %s?"
+msgstr "確定要將這種類型的最新一封郵件寄給 %s 嗎？"
+
+msgid "Send this email again to %s?"
+msgstr "確定要將這封郵件重新傳送給 %s 嗎？"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "將這封郵件寄到 (最多 10 個地址，以逗號分隔)："
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "確定要立即將這封遭暫扣的郵件寄給 %s 嗎？僅這封郵件會略過預備環境模式。"
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "請透過信譽良好的 SMTP 服務寄送，而非透過網頁伺服器，特別是在共享主機上。"
+
+msgid "Send to…"
+msgstr "寄送至…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "寄件者檢查 (SPF、DKIM、DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "寄件網域 %1$s 與網站 (%2$s) 不同"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "寄件網域 (SPF 與 DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "寄件網域或地址未驗證"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "最近 200 封郵件中 %s 封的寄件者"
+
+msgid "Sending failed – see the log."
+msgstr "傳送失敗，請查看記錄。"
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "傳送失敗，詳細資訊請參閱新的記錄項目。"
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "在背景寄送 (使用具佇列的郵件外掛) 可讓頁面不必等待即可完成。"
+
+msgid "Sending limit or quota reached"
+msgstr "已達寄送上限或配額"
+
+msgid "Sending report …"
+msgstr "正在寄送報告…"
+
+msgid "Sending test alert …"
+msgstr "正在傳送測試警示…"
+
+msgid "Sending works again: no more failure spike."
+msgstr "寄送已恢復正常：不再有失敗激增。"
+
+msgid "Sending…"
+msgstr "傳送中…"
+
+msgid "Sent"
+msgstr "已傳送"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "以免費信箱地址寄出：%1$s"
+
+msgid "Sent by"
+msgstr "寄送者"
+
+msgid "Sent by WP-Cron."
+msgstr "由 WP-Cron 寄出。"
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "由 cron 事件 %1$s 寄出：WP-Cron 執行其他事件期間，它已逾期 %2$s；可能會因錯誤而失敗。"
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "由 cron 事件 %1$s 寄出：它已排程 (%2$s 後執行下一次) 且 WP-Cron 正在執行，因此這個事件已不再寄送這封郵件。"
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "由 cron 事件 %s 寄出：這個事件已不在排程中。"
+
+msgid "Sent by the cron event %s."
+msgstr "由 cron 事件 %s 寄出。"
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "重複寄送：%2$s 分鐘內又寄出 %1$s 封相同的郵件"
+
+msgid "Sent to %s."
+msgstr "寄給 %s。"
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "在訂購日期前後寄到同一個地址，但未與這筆訂單建立關聯 (例如在關聯功能推出前記錄，或是匯入的郵件)。"
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "設定一個有人會讀的 Reply-To 地址，例如在 WooCommerce → 設定 → 電子郵件，或表單外掛的郵件設定中。或從可以接收回覆的地址寄出。"
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "在 SMTP 外掛中或透過 wp_mail_from 篩選器，設定自己網域下的寄件地址。"
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "設定實際網域下的寄件地址 (例如在 SMTP 外掛中或透過 wp_mail_from 篩選器)，並在 [設定] → [一般] 中檢查網站地址。"
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "在寄信外掛的範本或表單設定中設定主旨。"
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "將 SMTP 外掛中的 From 地址設為你登入所用的信箱，並啟用「強制使用 From 地址」。"
+
+msgid "Set up staging mode"
+msgstr "設定預備環境模式"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Settings › Discussion"
+msgstr "設定 › 討論"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "多個驚嘆號是廣告垃圾郵件的典型特徵。垃圾郵件篩選器可能因此扣分，導致送達率變差。"
+
+msgid "Several of the latest emails of this type failed."
+msgstr "這種類型的最新幾封郵件中有多封傳送失敗。"
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "每天傳送失敗郵件的比例 (期間較長時改為每週)。"
+
+msgid "Shop managers and above"
+msgstr "商店經理以上"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "縮網址會隱藏實際的目的地。垃圾郵件發送者經常使用，因此垃圾郵件篩選器可能因此扣分，導致送達率變差。"
+
+msgid "Show all email types"
+msgstr "顯示全部郵件類型"
+
+msgid "Show all in Mail Log"
+msgstr "在郵件記錄中檢視全部"
+
+msgid "Show as"
+msgstr "顯示為"
+
+msgid "Show data as table"
+msgstr "以表格顯示資料"
+
+msgid "Show email types"
+msgstr "顯示郵件類型"
+
+msgid "Show emails"
+msgstr "顯示郵件"
+
+msgid "Show emails for %s in the log"
+msgstr "在記錄中顯示 %s 的郵件"
+
+msgid "Show failed emails"
+msgstr "顯示傳送失敗的郵件"
+
+msgid "Show held emails"
+msgstr "顯示遭暫扣的郵件"
+
+msgid "Show these emails in the log"
+msgstr "在記錄中顯示這些郵件"
+
+msgid "Silence"
+msgstr "無郵件"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "使用郵件本身的深色模式樣式模擬深色模式。每個郵件應用程式處理深色模式的方式都略有不同。"
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "模擬以反轉色彩強制使用深色模式的應用程式。圖片會保留原本的色彩；實際應用程式在細節上會有差異。"
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "自 2024 年起，Gmail 與 Yahoo 要求大量郵件提供一鍵取消訂閱 (List-Unsubscribe 標頭)。缺少它，電子報更容易遭拒收或過濾。"
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "個別失敗 (例如因地址輸入錯誤) 屬於正常情況。"
+
+msgid "Some emails could not be sent recently"
+msgstr "最近有部分郵件無法寄出"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "由於 DNS 回應太慢，部分查詢已略過。"
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "很抱歉，你沒有存取這個頁面的權限。"
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "很抱歉，你沒有執行這項操作的權限。"
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "很抱歉，你沒有匯出郵件記錄的權限。"
+
+msgid "Source"
+msgstr "來源"
+
+msgid "Staging"
+msgstr "預備環境"
+
+msgid "Staging mode"
+msgstr "預備環境模式"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "預備環境模式已啟用：所有郵件都會重新導向至 %s。"
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "預備環境模式已啟用：郵件會加以記錄，但不會送出。"
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "預備環境模式已啟用：郵件應重新導向，但未設定有效的重新導向地址，因此所有郵件都遭暫扣，不會送出。"
+
+msgid "Staging mode is off"
+msgstr "預備環境模式已關閉"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "這是正式網站，但預備環境模式已開啟"
+
+msgid "Staging mode is on for this staging site"
+msgstr "這個預備環境網站已開啟預備環境模式"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "預備環境模式已開啟：所有郵件都會寄到測試地址，而非實際收件者。"
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "預備環境模式已開啟：郵件會加以記錄，但不會寄出。"
+
+msgid "Staging mode settings"
+msgstr "預備環境模式設定"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "先以 p=none 開始接收報告，待 SPF 與 DKIM 通過後再收緊為 quarantine 或 reject。"
+
+msgid "Statistics"
+msgstr "統計"
+
+msgid "Status"
+msgstr "狀態"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "仍在背景將 %s 封較舊的郵件分類為各類型。請在一分鐘後重新載入頁面。"
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "停止合併 (立即寄出等待中的郵件)"
+
+msgid "Stop these emails"
+msgstr "阻止這些郵件"
+
+msgid "Stopped"
+msgstr "已停止"
+
+msgid "Stopped by Mailspur."
+msgstr "已由 Mailspur 阻止。"
+
+msgid "Stopped email types"
+msgstr "已停止的郵件類型"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "儲存每封郵件完整的原始 MIME 原始碼"
+
+msgid "Subject"
+msgstr "主旨"
+
+msgid "Subject mostly in capital letters"
+msgstr "主旨大多為大寫字母"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "全大寫的主旨讀起來像在大喊，在垃圾郵件中很常見。垃圾郵件篩選器可能因此扣分，導致送達率變差。"
+
+msgid "Subjects often contain names or order numbers."
+msgstr "主旨經常包含姓名或訂單編號。"
+
+msgid "Suggested TXT record for %s"
+msgstr "建議為 %s 新增的 TXT 記錄"
+
+msgid "Sunday"
+msgstr "星期日"
+
+msgid "Supported: %s."
+msgstr "支援：%s。"
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "在 %1$s 中停用：「%2$s」。"
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "已從每日摘要中移出並單獨寄出。"
+
+msgid "Temporary rejection – try again later"
+msgstr "暫時拒絕，請稍後再試"
+
+msgid "Test"
+msgstr "測試"
+
+msgid "Test alert"
+msgstr "測試警示"
+
+msgid "Text changes"
+msgstr "文字變化"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "由 HTML 產生的文字版本。郵件是否另有自己的純文字版本並未記錄。"
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "如果你的郵件伺服器獲准以該網域寄信，就沒有問題。否則 SPF 與 DMARC 會失敗，郵件會被歸入垃圾郵件。"
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "這對測試副本來說沒問題，但在正式網站上，客戶將收不到訂單確認、密碼重設或表單回覆。如果這是正式網站，請關閉預備環境模式。"
+
+msgid "The API key was rejected"
+msgstr "API 金鑰遭拒"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "DNS 查詢失敗或逾時。請稍後再執行一次寄件者檢查。"
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "這封 HTML 郵件含有圖片，但幾乎沒有文字。垃圾郵件篩選器無法讀取圖片，因此不信任這類郵件，可能導致送達率變差。如果郵件用戶端封鎖圖片，讀者只會看到幾乎空白的郵件。"
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "SMTP 帳號只能以自己的地址 (或已驗證的別名) 寄信。WordPress 或某個外掛使用了不同的 From 地址。"
+
+msgid "The SMTP server conversation was empty."
+msgstr "與 SMTP 伺服器的對話是空的。"
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "完全無法連線至 SMTP 伺服器：主機名稱或連接埠錯誤、伺服器停止運作，或主機商封鎖了對外的郵件連接埠。"
+
+msgid "The SMTP server refuses to relay"
+msgstr "SMTP 伺服器拒絕轉送"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "SMTP 伺服器拒絕了使用者名稱或密碼 (回應碼 535)。"
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "SMTP 伺服器要求登入或加密"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "這個地址似乎無效，請檢查是否有錯字，或請對方提供其他地址。"
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "內文含有 HTML 標籤，但郵件以 text/plain (WordPress 預設值) 寄出。收件者看到的是原始標籤，而非格式化的文字。"
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "連線或傳輸耗時過久。通常是防火牆悄悄中斷了連線，或主機與連接埠錯誤。"
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "預設寄件地址沒有公開網域，或這台伺服器無法查詢 DNS 記錄。"
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "這個網域在 DNS 中既沒有 MX 記錄也沒有 A 記錄。寄往該網域的郵件會退信。通常是地址拼錯，或網域已不存在。"
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "這個網域發布了「null MX」記錄，明確表示不接收郵件。寄往該網域的每封郵件都會退信。"
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "郵件 API 回應緩慢：請檢查郵件外掛中設定的區域或端點。"
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "這封郵件來自 no-reply 地址，且沒有 Reply-To 標頭。客戶按下「回覆」時，回覆會寄到沒人讀的地址，或被退回。"
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "這封郵件以可讀形式包含密碼。郵件會在收件匣、備份與轉寄的對話串中留存多年，任何人只要取得其中一份就能登入。除非開啟「遮蔽機密資訊」，否則郵件記錄也會儲存密碼 (開啟時記錄只保留遮蔽後的副本，但收件者已經收到密碼)。"
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "這封郵件包含存取金鑰 (例如 Stripe、GitHub、Slack、AWS、Google 或 SendGrid 的金鑰) 或私密金鑰。任何讀到這封郵件的人，無論是現在，還是多年後在收件匣或備份中，都能使用它。除非開啟「遮蔽機密資訊」，否則郵件記錄也會儲存它。"
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "這封郵件包含未填入值的範本變數。收件者會看到原始文字。"
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "這封郵件包含看似完整的付款卡號 (通過檢查碼驗證)。卡號絕不能以電子郵件寄送 (PCI DSS)：收件匣會保存多年。除非開啟「遮蔽機密資訊」，否則郵件記錄也會儲存它。"
+
+msgid "The email is too large"
+msgstr "郵件過大"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "這封郵件連到相關主機上的 WordPress 檔案。這通常發生在仍包含正式網站網址的預備環境副本上，或者反過來。"
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "這封郵件連到這個網站上一個回應「找不到頁面」(404) 的地址。這通常發生在頁面或商品重新命名或刪除之後：範本仍指向舊地址，每位收件者都會進入錯誤頁面。"
+
+msgid "The email types are being rebuilt from the log."
+msgstr "正在從記錄重建郵件類型。"
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "這封郵件透過收件者或副本寄給了網域外的多個人。每位收件者都能看到其他所有地址。對客戶或會員而言，這會向陌生人揭露個人資料，依 GDPR 通常屬於資料外洩。"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "%3$s %4$s 寄給 %2$s 的郵件「%1$s」曾因我方的安全檢查而短暫暫扣，之後已寄出。也請檢查你的垃圾郵件匣。"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "%3$s %4$s 寄給 %2$s 的郵件「%1$s」因我方的安全檢查而遭暫扣，尚未寄出。我們會重新寄送。"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "%3$s %4$s 寄給 %2$s 的郵件「%1$s」並未寄出，因為當時我方暫停了郵件寄送。我們會重新寄送。"
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "%3$s %4$s 寄給 %2$s 的郵件「%1$s」無法送達。我們會重新寄送。"
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "寄給 %2$s 的郵件「%1$s」建立於 %3$s %4$s，但我們無法確認是否已送達。我們會進行確認，必要時重新寄送。"
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "郵件「%1$s」已於 %3$s %4$s 寄給 %2$s，並已由郵件伺服器接收。也請檢查你的垃圾郵件匣。"
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "緊急煞車會暫扣寄出的郵件，直到你放行或捨棄為止。"
+
+msgid "The emergency brake is holding emails"
+msgstr "緊急煞車正在暫扣郵件"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "緊急煞車沒有暫扣任何郵件"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "緊急煞車已啟動：網站突然寄出遠多於平常的郵件。"
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "緊急煞車在一小時內偵測到異常數量的郵件。聯絡表單可能遭到濫用。郵件仍在寄送中。"
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "已儲存完整的原始碼，「下載 .eml」會原樣傳回 (未遮蔽)。"
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "最近 %s 封郵件全部失敗。這個網站的寄信功能可能已經故障，例如 SMTP 登入資訊錯誤，或郵件服務拒絕了這個網站。客戶可能收不到訂單確認或密碼重設郵件。"
+
+msgid "The latest emails could not be sent"
+msgstr "最近的郵件無法寄出"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "記錄會保留郵件 %s 天。"
+
+msgid "The log shows the reason for each failed email."
+msgstr "記錄中會顯示每封失敗郵件的原因。"
+
+msgid "The mail log requires JavaScript."
+msgstr "郵件記錄需要 JavaScript。"
+
+msgid "The mail server did not answer in time"
+msgstr "郵件伺服器未及時回應"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "郵件伺服器暫時無法使用"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "郵件伺服器拒絕了郵件大小 (回應碼 552)。附件經編碼後約會增加三分之一。"
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "郵件服務只會從你在該服務驗證過的網域或地址寄信。"
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "由於達到傳送速率限制、每日配額或方案上限，郵件服務或信箱拒絕了更多郵件。"
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "由於 API 金鑰錯誤、已過期、已撤銷或缺少寄送權限，郵件服務拒絕了要求。"
+
+msgid "The mailer plugin reported a failure"
+msgstr "郵件外掛回報失敗"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "此政策僅適用於 %s%% 的郵件 (pct)。"
+
+msgid "The reason: %s."
+msgstr "原因：%s。"
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "收件伺服器要求稍後重試 (回應碼 450/451/452)：灰名單、信箱已滿，或短時間內郵件過多。"
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "收件伺服器無法確認你的伺服器獲准以該寄件網域寄信。"
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "收件伺服器不認得這個信箱 (回應碼 550 / 5.1.1)，可能是地址拼錯或已不存在。"
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "收件伺服器可能會在之後重試時接受它。"
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "收件伺服器因內容問題，或因寄件伺服器的 IP 位址列於封鎖清單上，而拒收這封郵件。"
+
+msgid "The recipient address was rejected"
+msgstr "收件者地址遭拒"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "收件網域不接收郵件 (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "收件網域沒有郵件伺服器"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "收件網域看起來像是熱門郵件服務供應商網域的拼寫錯誤。這類郵件會被退回，或寄到註冊了這個錯誤網域的陌生人手中。"
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "同一主旨在短時間內多次寄給相同的收件者。常見原因包括訂單確認重複、表單重複提交、cron 工作平行執行，或外掛中的迴圈。"
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "無法與 SMTP 伺服器建立安全連線：憑證與主機名稱不符、已過期，或伺服器不支援所選的加密方式。"
+
+msgid "The sender address is not allowed"
+msgstr "寄件地址不被允許"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "寄件者檢查發現 %s 有問題。郵件可能會被歸入垃圾郵件。"
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "寄件網域 %s 已有 SPF 與 DMARC 記錄"
+
+msgid "The sender domain could not be checked"
+msgstr "無法檢查寄件網域"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "寄件者沒有公開網域 (例如 wordpress@localhost)。大多數郵件伺服器會拒收這類郵件，或將其歸入垃圾郵件。"
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "伺服器無法使用 PHP mail() 寄送郵件"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "伺服器關閉了連線 (回應碼 421)，原因可能是維護、負載過高，或來自你伺服器的連線過多。"
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "伺服器不會替你轉送郵件，通常是因為你沒有登入，或寄件地址不屬於該帳號。"
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "伺服器只在驗證後或切換為加密連線後才接受郵件 (回應碼 530)。"
+
+msgid "The server rejected the content"
+msgstr "伺服器拒絕了內容"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "伺服器的本機郵件程式回應緩慢：SMTP 或 API 郵件外掛會將郵件交由供應商寄送。"
+
+msgid "The start date must not be after the end date."
+msgstr "開始日期不得晚於結束日期。"
+
+msgid "The statistics require JavaScript."
+msgstr "統計需要 JavaScript。"
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "文字相同，只有版面配置變更。請比較預覽。"
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "使用者名稱通常是完整的電子郵件地址。注意不要連同密碼複製到多餘的空白。"
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "Webhook 網址已移除：僅允許有效的 https 網址。"
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "每週報告已啟用，但沒有收件者：請在「透過電子郵件將警示寄送至」中輸入電子郵件地址。"
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "這些郵件會再次寄出；其郵件類型會重新受到監控。"
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "這幾種郵件已比平常更久沒有寄出。原因可能是外掛更新、設定變更或卡住的排程工作。"
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "這封郵件有自己的純文字版本，但記錄並未儲存。此處顯示的是由 HTML 產生的文字版本。"
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "這封郵件沒有自己的深色模式樣式。有些應用程式會原樣顯示，有些則會重新上色，請參閱「強制深色」。"
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "這封郵件沒有純文字版本，部分郵件用戶端與垃圾郵件篩選器偏好有純文字版本的郵件。此處顯示的是由 HTML 產生的文字版本。"
+
+msgid "This email type has no content change."
+msgstr "這種郵件類型沒有內容變更。"
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "這種郵件類型現已忽略：沒有狀態，也沒有警示。"
+
+msgid "This email type is monitored again."
+msgstr "這種郵件類型已重新受到監控。"
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "這個項目已匿名化，其內容已無法再傳送。"
+
+msgid "This import is already running in another tab."
+msgstr "這項匯入已在另一個分頁中執行。"
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "這是一則測試警示。你的警示管道運作正常。"
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "這個正式網站寄出了連到本機或測試地址的連結。收件者無法開啟。"
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "這個問題需要 JavaScript。你也可以直接搜尋記錄。"
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "這個網站會保留所寄出郵件的記錄 (收件者、主旨、內容與傳送狀態)，以確認送達並排解問題。記錄項目會在設定的保留期限過後自動刪除。"
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "這個網站以 %s 環境執行，預備環境模式會避免郵件寄給真實的人。"
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "這個網站以 %s 環境執行。請開啟預備環境模式，以免真實客戶收到來自這個網站的郵件。"
+
+msgid "Threshold (emails per hour)"
+msgstr "門檻 (每小時郵件數)"
+
+msgid "Thursday"
+msgstr "星期四"
+
+msgid "Timeline"
+msgstr "時間軸"
+
+msgid "To"
+msgstr "收件者"
+
+msgid "To date"
+msgstr "結束日期"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "如果想保留這些郵件，但每天只收到一封，請在該類型的 … 選單中選擇「合併為每日一封摘要郵件」。"
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "排行依據這段期間最新的 %s 封郵件。"
+
+msgid "Top recipient domains"
+msgstr "收件網域排行"
+
+msgid "Top recipients: %s"
+msgstr "主要收件者：%s"
+
+msgid "Top sources"
+msgstr "來源排行"
+
+msgid "Top subjects"
+msgstr "主旨排行"
+
+msgid "Total"
+msgstr "總計"
+
+msgid "Total: %s ms"
+msgstr "總計：%s ms"
+
+msgid "Trace"
+msgstr "追蹤"
+
+msgid "Transcript copied."
+msgstr "已複製對話記錄。"
+
+msgid "Transport"
+msgstr "傳輸方式"
+
+msgid "Trigger"
+msgstr "觸發"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "確定要為你自己的帳號觸發一封真正的密碼重設郵件嗎？WordPress 會為你建立新的重設連結，因此先前的重設連結會失效；你的密碼不會改變。只有 %s 會收到。"
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "確定要為你自己的帳號觸發新使用者通知 (給管理員的通知與登入資料) 嗎？WordPress 會為你建立新的密碼連結，因此先前的連結會失效。不會建立任何使用者；只有 %s 會收到。"
+
+msgid "Trigger to me"
+msgstr "觸發並寄給我"
+
+msgid "Triggering…"
+msgstr "觸發中…"
+
+msgid "Tuesday"
+msgstr "星期二"
+
+msgid "Type"
+msgstr "類型"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "類型會每小時以及每次開啟此頁面時更新。只會儲存計數器、主旨樣式與內容指紋 (不含收件者與內容)，並依照記錄的保留期限處理。"
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "收件網域拼錯了？%1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "變音字母或引號顯示為 \"Ã¤\" 或 \"â€™\" 之類的亂碼。UTF-8 文字在傳遞過程中的某處 (範本、匯入或資料庫) 被當成其他字元集讀取。"
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "不確定。寄給 %2$s 的「%1$s」已於 %3$s 交付寄送，但 Mailspur 沒有收到結果。"
+
+msgid "Under Tools"
+msgstr "在 [工具] 下方"
+
+msgid "Uninstall"
+msgstr "解除安裝"
+
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Unknown probe."
+msgstr "不明的測試。"
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "不明：沒有回報傳送結果 (wp_mail() 函式被取代了嗎？)。"
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "未取代的預留位置：%1$s"
+
+msgid "Until the log limit"
+msgstr "直到記錄上限"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "最多 10 個地址，以逗號分隔。Cc 與 Bcc 會移除，主旨中會顯示原始收件者。沒有有效地址時，郵件會改為遭暫扣。"
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "最多 5 個地址，以逗號分隔。警示郵件會以來源「Mailspur 警示」出現在記錄中，本身絕不會觸發警示。"
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "在郵件範本或寄出這封郵件的外掛設定中更新連結，或新增從舊地址到新頁面的重新導向 (例如使用重新導向外掛)。"
+
+msgid "Updated in between: %s"
+msgstr "期間的更新：%s"
+
+msgid "Updated since the last one:"
+msgstr "自上次以來的更新："
+
+msgid "Updated since then: %s."
+msgstr "此後的更新：%s。"
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "在連接埠 587 使用 TLS，或在連接埠 465 使用 SSL。"
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "使用具描述性的連結文字 (例如 \"檢視訂單\")，或顯示連結實際前往的地址。"
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "使用自己網域下的寄件地址，並將免費信箱地址放在 Reply-To。只有在你確實透過該供應商本身的 SMTP 伺服器並以其登入資訊寄信時，這樣才沒有問題。"
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "使用包含 https:// 與網域的絕對網址，例如在範本中使用 home_url() 或 wp_get_attachment_url()。"
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "確實使用憑證核發時的主機名稱 (例如供應商的 smtp.… 主機，而非 IP 或你自己的網域)。"
+
+msgid "Use one exclamation mark at most."
+msgstr "最多只使用一個驚嘆號。"
+
+msgid "Use the arrow keys to move between cells."
+msgstr "使用方向鍵在儲存格之間移動。"
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "使用方向鍵在數值之間移動，按 Enter 鍵在記錄中開啟。"
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "使用 SMTP 帳號的信箱地址作為寄件者 (From)。"
+
+msgid "User"
+msgstr "使用者"
+
+msgid "User: %s"
+msgstr "使用者：%s"
+
+msgid "Username"
+msgstr "使用者名稱"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "使用已儲存的設定，請先儲存你的變更。"
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "在郵件服務中驗證寄件網域 (新增其 DNS 記錄)，或使用已驗證的寄件地址。"
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "很可能已送達。「%1$s」已於 %3$s 寄給 %2$s。"
+
+msgid "Very long subject (%1$s characters)"
+msgstr "主旨非常長 (%1$s 個字元)"
+
+msgid "View"
+msgstr "檢視"
+
+msgid "View %s failed emails"
+msgstr "檢視 %s 封傳送失敗的郵件"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron 已有 %s 未執行 (已設定 DISABLE_WP_CRON，請檢查伺服器的 cron 工作)。"
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron 已有 %s 未執行：它只會在網站有人造訪時執行，或執行時發生錯誤。"
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron 運作正常。"
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "等待每日摘要，不會單獨寄出。"
+
+msgid "Waits %s s for the mail server"
+msgstr "等待郵件伺服器 %s 秒"
+
+msgid "Warnings"
+msgstr "警告"
+
+msgid "Webhook URL"
+msgstr "Webhook 網址"
+
+msgid "Webhook signing key"
+msgstr "Webhook 簽署金鑰"
+
+msgid "Webhook: %s"
+msgstr "Webhook：%s"
+
+msgid "Wednesday"
+msgstr "星期三"
+
+msgid "Week"
+msgstr "週"
+
+msgid "Week of %s"
+msgstr "%s 當週"
+
+msgid "Weekday"
+msgstr "星期"
+
+msgid "Weekly"
+msgstr "每週"
+
+msgid "Weekly email report"
+msgstr "每週郵件報告"
+
+msgid "Weekly report"
+msgstr "每週報告"
+
+msgid "What to do"
+msgstr "處理方式"
+
+msgid "When emails are sent"
+msgstr "郵件寄送時段"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "寄出的郵件遠多於平常時，緊急煞車會發出警告，並可暫扣後續郵件。"
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "關閉時，追蹤像素無法得知你何時開啟項目。你仍可針對單封郵件載入遠端內容。指令碼與表單一律封鎖。"
+
+msgid "Who can view the log"
+msgstr "可檢視記錄的使用者"
+
+msgid "Why did an email fail?"
+msgstr "郵件為什麼傳送失敗？"
+
+msgid "With attachments"
+msgstr "有附件"
+
+msgid "With notes"
+msgstr "有提示"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "缺少這些 DNS 記錄，信箱服務供應商就無法驗證你的網站是否獲准以這個網域寄送郵件，郵件因此更容易被歸入垃圾郵件。寄件者檢查會建議可在網域服務商新增的記錄。"
+
+msgid "WooCommerce email"
+msgstr "WooCommerce 郵件"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › 設定 › 電子郵件"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "WordPress 核心郵件沒有編輯器；可透過篩選器變更。"
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress 沒有寄出郵件，可能是某個外掛停用了這封郵件。"
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress 沒有這封郵件的設定。Mailspur 可以阻止寄給管理員的通知；新使用者仍會收到自己的郵件。"
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress 沒有這封郵件的設定。Mailspur 可以阻止自動更新成功的通知；更新失敗的通知仍會送達。"
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress 預設透過 PHP mail() 函式寄信。這台伺服器上已停用此函式，或未安裝郵件程式 (sendmail)，這在本機環境、Docker 與許多代管主機上很常見。"
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "主旨請使用一般的大小寫，最多只強調一個字。"
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "已送達，但根據 %4$s 回報，寄給 %2$s 的「%1$s」(%3$s) 被收件者標示為垃圾郵件。"
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "是的。「%1$s」已於 %3$s 寄給 %2$s，%4$s 已確認送達。"
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "你仍可從記錄中寄出 (「立即傳送」)。"
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "你收到這封摘要，是因為在 Mailspur 中這些郵件類型已合併為每日一封摘要郵件。每封郵件都會保留在記錄中。"
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "你收到這封郵件，是因為這個網站的 Mailspur 設定中已啟用監控警示。"
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "你收到這封郵件，是因為這個網站的 Mailspur 設定中已啟用每週報告。報告僅包含數量與主旨樣式，不含郵件內容或收件者。"
+
+msgid "Your DKIM selector (optional)"
+msgstr "你的 DKIM 選擇器 (選填)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "過去 7 天內網站沒有寄出任何郵件。"
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s 則通知：%3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 則通知：%2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] 每週郵件報告 %2$s"
+
+msgid "address"
+msgstr "地址"
+
+msgid "and %s more"
+msgstr "以及其他 %s 個"
+
+msgid "and %s more – see the log"
+msgstr "以及其他 %s 個，請查看記錄"
+
+msgid "another plugin stopped it"
+msgstr "另一個外掛阻止了它"
+
+msgid "code"
+msgstr "代碼"
+
+msgid "date"
+msgstr "日期"
+
+msgid "days"
+msgstr "天"
+
+msgid "deleted after %s days"
+msgstr "%s 天後刪除"
+
+msgid "emails to this address failed several times before"
+msgstr "寄往這個地址的郵件先前已失敗多次"
+
+msgid "entries"
+msgstr "個項目"
+
+msgid "failing"
+msgstr "失敗中"
+
+msgid "failure spikes"
+msgstr "失敗激增"
+
+msgid "first seen %s"
+msgstr "首次發現於 %s"
+
+msgid "from a new sender"
+msgstr "來自新的寄件者"
+
+msgid "holding emails right now"
+msgstr "目前正在暫扣郵件"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "保留至手動刪除"
+
+msgid "link"
+msgstr "連結"
+
+msgid "minutes"
+msgstr "分鐘"
+
+msgid "name"
+msgstr "姓名"
+
+msgid "new this week"
+msgstr "本週新增"
+
+msgid "no"
+msgstr "否"
+
+msgid "none"
+msgstr "無"
+
+msgid "none in %1$s – %2$s"
+msgstr "%1$s – %2$s 期間沒有"
+
+msgid "number"
+msgstr "數字"
+
+msgid "of %s"
+msgstr "共 %s"
+
+msgid "often to administrators"
+msgstr "經常寄給管理員"
+
+msgid "on %1$s at %2$s"
+msgstr "%1$s %2$s"
+
+msgid "same recipient"
+msgstr "相同收件者"
+
+msgid "slow to send"
+msgstr "寄送緩慢"
+
+msgid "staging mode is on"
+msgstr "預備環境模式已開啟"
+
+msgid "stopped"
+msgstr "已停止"
+
+msgid "stopped email types"
+msgstr "已停止的郵件類型"
+
+msgid "text"
+msgstr "文字"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "緊急煞車攔下了大量郵件"
+
+msgid "time"
+msgstr "時間"
+
+msgid "today at %s"
+msgstr "今天 %s"
+
+msgid "triggered %s times"
+msgstr "觸發 %s 次"
+
+msgid "unchanged"
+msgstr "沒有變化"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "不明：郵件程式沒有提供錯誤訊息"
+
+msgid "unusual silence"
+msgstr "異常無郵件"
+
+msgid "usually sent: %s"
+msgstr "通常寄送：%s"
+
+msgid "wp_mail() called"
+msgstr "已呼叫 wp_mail()"
+
+msgid "yes"
+msgstr "是"
+
+msgid "yesterday at %s"
+msgstr "昨天 %s"
+
+msgid "your email provider"
+msgstr "你的郵件服務供應商"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "「%1$s」(%2$s) %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "「%1$s」(%2$s) 已恢復寄送。"
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "「%1$s」(%2$s) 通常至少每 %3$s 天寄送一次。上一封寄出於 %4$s 前。"
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "「%1$s」(%2$s) 上次寄出於 %3$s 前。在此之前，它至少每 %4$s 天寄出一次。"
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "「%1$s」(%2$s) - 通常每 %4$s 一次，上一封 %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "「%1$s」(%2$s) - 通常每天一次，上一封 %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "「%1$s」- %2$s - %3$s"

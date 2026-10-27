@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s नोट्स",
+	"Belongs to": "इससे संबंधित",
+	"Emails to this user": "इस उपयोगकर्ता को भेजे गए ईमेल",
+	"No emails logged for this order yet.": "इस ऑर्डर के लिए अभी तक कोई ईमेल लॉग नहीं हुआ है।",
+	"No emails to this user in the log.": "लॉग में इस उपयोगकर्ता को भेजा गया कोई ईमेल नहीं है।",
+	"Order #%s": "ऑर्डर #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "ऑर्डर की तारीख के आसपास उसी पते पर भेजा गया, लेकिन इस ऑर्डर से जुड़ा नहीं (उदाहरण के लिए, लिंक मौजूद होने से पहले लॉग हुआ या आयात किया गया)।",
+	"Show all in Mail Log": "ईमेल लॉग में सभी दिखाएँ",
+	"User: %s": "उपयोगकर्ता: %s",
+	"WooCommerce email": "WooCommerce ईमेल",
+	"same recipient": "वही प्राप्तकर्ता"
+}

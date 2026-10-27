@@ -1,0 +1,3245 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "\"ดาวน์โหลด .eml\" จะสร้างข้อความขึ้นใหม่จากข้อมูลที่บันทึกไว้และปกปิดแล้ว (ไม่รวมไฟล์แนบ)"
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (สัปดาห์ก่อน: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (กำหนดไว้ %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "ประเภทอีเมล %1$s ประเภทหยุดส่งแล้ว เช่น %2$s"
+
+msgid "%1$s email types from %2$s senders"
+msgstr "ประเภทอีเมล %1$s ประเภทจากผู้ส่ง %2$s ราย"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "อีเมล %1$s ฉบับส่งไม่สำเร็จภายใน %2$s นาทีที่ผ่านมา"
+
+msgid "%1$s emails in %2$s days"
+msgstr "อีเมล %1$s ฉบับใน %2$s วัน"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "อีเมล %1$s ฉบับใน 30 วันที่ผ่านมา ส่งไม่สำเร็จ %2$s ฉบับ"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "มีการส่งอีเมล %1$s ฉบับภายในหนึ่งชั่วโมง – มากกว่าปกติมาก (เกณฑ์: %2$s ต่อชั่วโมง) แบบฟอร์มติดต่ออาจถูกใช้ในทางที่ผิด หรือเว็บไซต์อาจถูกเจาะระบบ"
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s รายการ, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "นำเข้า %1$s, ซ้ำ %2$s, เก่าเกินไป %3$s"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "ตีกลับ %1$s จาก %2$s (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "อีเมล %1$s จาก %2$s ฉบับใน %3$s วันที่ผ่านมาส่งไม่สำเร็จ"
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "ประมวลผลแล้ว %1$s จาก %2$s รายการ …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s จุดเปอร์เซ็นต์ เทียบกับ %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s ส่งอีเมลฉบับแรกเมื่อ %2$s และส่งไปยังที่อยู่ภายนอกที่แตกต่างกัน %3$s ที่อยู่ภายใน 24 ชั่วโมงที่ผ่านมา หากคุณไม่ได้ติดตั้งหรือตั้งค่าสิ่งใดที่ส่งอีเมลลักษณะนี้ ให้ตรวจสอบเว็บไซต์: ผู้ส่งรายใหม่อาจเป็นสัญญาณว่าเว็บไซต์ถูกแฮ็ก"
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "ส่งแล้ว %1$s, ยังระงับไว้ %2$s …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s เทียบกับ %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · รวมอีเมล %2$s ฉบับตั้งแต่อีเมลสรุปครั้งล่าสุด"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · ณ วันที่ %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – อัตราการส่งไม่สำเร็จ %2$s %% (สัปดาห์ก่อน: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – รายงานโดย %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (ปลั๊กอิน must-use)"
+
+msgid "%s (theme)"
+msgstr "%s (ธีม)"
+
+msgid "%s ago"
+msgstr "%s ที่แล้ว"
+
+msgid "%s days"
+msgstr "%s วัน"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "มีอีเมล %s ฉบับที่ส่งไม่สำเร็จใน 7 วันที่ผ่านมา"
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "มีอีเมล %s ฉบับที่รอการตัดสินใจของคุณ"
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "มีอีเมล %s ฉบับที่ถูกระงับไว้และไม่ได้ส่งใน 7 วันที่ผ่านมา"
+
+msgid "%s emails are held by the emergency brake."
+msgstr "มีอีเมล %s ฉบับที่ถูกเบรกฉุกเฉินระงับไว้"
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "มีอีเมล %s ฉบับที่รออยู่และยังไม่ได้จัดส่ง"
+
+msgid "%s entries"
+msgstr "%s รายการ"
+
+msgid "%s failed"
+msgstr "ส่งไม่สำเร็จ %s"
+
+msgid "%s held emails discarded."
+msgstr "ทิ้งอีเมลที่ถูกระงับไว้ %s ฉบับแล้ว"
+
+msgid "%s imported entries removed."
+msgstr "ลบรายการที่นำเข้าแล้ว %s รายการ"
+
+msgid "%s in 30 days"
+msgstr "%s ใน 30 วัน"
+
+msgid "%s marked as spam"
+msgstr "ถูกทำเครื่องหมายเป็นสแปม %s"
+
+msgid "%s more on the Email types page."
+msgstr "อีก %s รายการในหน้าประเภทอีเมล"
+
+msgid "%s notes"
+msgstr "หมายเหตุ %s รายการ"
+
+msgid "%s of all emails"
+msgstr "%s ของอีเมลทั้งหมด"
+
+msgid "%s of them in the last 24 hours."
+msgstr "ในจำนวนนี้ %s ฉบับอยู่ใน 24 ชั่วโมงที่ผ่านมา"
+
+msgid "%s s"
+msgstr "%s วินาที"
+
+msgid "%s selected"
+msgstr "เลือกไว้ %s"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "มี %s เรื่องที่ต้องดูแล:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s ถึงผู้ดูแลระบบใน 30 วัน"
+
+msgid "%s unchanged lines"
+msgstr "%s บรรทัดที่ไม่เปลี่ยนแปลง"
+
+msgid "(no subject)"
+msgstr "(ไม่มีหัวเรื่อง)"
+
+msgid "(no text content)"
+msgstr "(ไม่มีเนื้อหาข้อความ)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(อีเมลไม่อยู่ในบันทึกแล้ว)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all เข้มงวดกว่า ส่วน ~all เป็นที่นิยมและใช้ได้ดีร่วมกับ DMARC"
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 คือเก็บรายการไว้ตลอดไป การล้างข้อมูลจะทำงานวันละครั้ง"
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 คือไม่จำกัด รายการที่เก่าที่สุดจะถูกลบก่อน"
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 คือปิดการทำงาน ลบเนื้อหา ส่วนหัว และไฟล์แนบของรายการเก่า และปกปิดที่อยู่อีเมล (a***@example.com) วันที่ สถานะ แหล่งที่มา รูปแบบ ขนาด และหมายเหตุยังคงเก็บไว้สำหรับสถิติ ทำงานพร้อมการล้างข้อมูลรายวันก่อนลบรายการ – จึงมีผลเฉพาะเมื่อระยะเวลานี้สั้นกว่าระยะเวลาการลบด้านบน"
+
+msgid "12 months"
+msgstr "12 เดือน"
+
+msgid "30 days"
+msgstr "30 วัน"
+
+msgid "7 days"
+msgstr "7 วัน"
+
+msgid "90 days"
+msgstr "90 วัน"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "ตัวเลือก DKIM (selector) ต้องมีเฉพาะตัวอักษร ตัวเลข จุด ขีดกลาง และขีดล่างเท่านั้น"
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "ปลั๊กอินส่งอีเมลที่ส่งผ่าน API รับหน้าที่จัดส่งแทนและรายงานว่าส่งไม่สำเร็จ โดยไม่ได้แจ้งสาเหตุ"
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "คีย์ที่เผยแพร่ไม่ได้พิสูจน์ว่าอีเมลของคุณถูกลงนามด้วยคีย์นั้น – ตรวจสอบผลลัพธ์ DKIM ในส่วนหัวของอีเมลที่ได้รับ"
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "ผู้รับหรือที่อยู่ผู้ส่งไม่ใช่ที่อยู่อีเมลที่ถูกต้อง PHPMailer จึงปฏิเสธการส่ง"
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "คีย์ API หรือคีย์ส่วนตัวเป็นข้อความธรรมดา: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "ต้องใช้การค้นหา DNS ประมาณ %1$s ครั้งเพื่อประเมินระเบียนนี้ – มากกว่าที่อนุญาต %2$s ครั้ง ผู้รับจึงอาจละเว้นระเบียนนี้ (PermError) ลบรายการ include: ที่ไม่ได้ใช้ออก"
+
+msgid "Access"
+msgstr "การเข้าถึง"
+
+msgid "Actions"
+msgstr "การกระทำ"
+
+msgid "Active: alerts on %s."
+msgstr "ใช้งานอยู่: แจ้งเตือนเมื่อเกิด%s"
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "เพิ่มแอตทริบิวต์ alt สั้นๆ ให้กับทุกรูปภาพในเทมเพลต เช่น alt=\"Logo Example Shop\""
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "เพิ่ม include: ของผู้ให้บริการอีเมลของคุณ (เช่น include:_spf.google.com) หากคุณส่งอีเมลผ่านผู้ให้บริการ"
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "เพิ่มเซิร์ฟเวอร์อีเมลหรือบริการอีเมลของคุณลงในระเบียน SPF ของโดเมนผู้ส่ง"
+
+msgid "Added:"
+msgstr "เพิ่ม:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "ที่อยู่ที่ส่งไม่สำเร็จแบบถาวรอย่างน้อย %s ครั้ง: เซิร์ฟเวอร์ปลายทางปฏิเสธกล่องจดหมาย โดเมนไม่มีเซิร์ฟเวอร์อีเมล หรือผู้ให้บริการอีเมลของคุณรายงานการตีกลับแบบถาวร รายการจะหมดอายุตามระยะเวลาเก็บรักษาของบันทึก"
+
+msgid "Admin screen"
+msgstr "หน้าผู้ดูแล"
+
+msgid "Administrators"
+msgstr "ผู้ดูแลระบบ"
+
+msgid "Aggregate reports go to %s."
+msgstr "รายงานสรุปจะส่งไปที่ %s"
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "การแจ้งเตือน"
+
+msgid "Alert and hold further emails"
+msgstr "แจ้งเตือนและระงับอีเมลถัดไป"
+
+msgid "Alert only"
+msgstr "แจ้งเตือนเท่านั้น"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "แจ้งเตือนเมื่อประเภทอีเมลที่ส่งเป็นประจำหยุดส่ง"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "แจ้งเตือนเมื่ออีเมลส่งไม่สำเร็จซ้ำๆ"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "แจ้งเตือนเมื่อเว็บไซต์หยุดส่งอีเมลโดยไม่คาดคิด"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "เปิดการแจ้งเตือนอยู่แต่ไม่มีช่องทาง: ป้อนที่อยู่อีเมลหรือ URL ของ webhook"
+
+msgid "Alerts are off."
+msgstr "การแจ้งเตือนปิดอยู่"
+
+msgid "All"
+msgstr "ทั้งหมด"
+
+msgid "All email types look healthy."
+msgstr "ประเภทอีเมลทั้งหมดดูปกติดี"
+
+msgid "All emails are redirected to test addresses."
+msgstr "อีเมลทั้งหมดถูกเปลี่ยนเส้นทางไปยังที่อยู่ทดสอบ"
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "อีเมลทั้งหมดจะส่งไปยังที่อยู่ทดสอบแทนผู้รับจริง"
+
+msgid "All sources"
+msgstr "ทุกแหล่งที่มา"
+
+msgid "Allow again"
+msgstr "อนุญาตอีกครั้ง"
+
+msgid "Allowed again."
+msgstr "อนุญาตอีกครั้งแล้ว"
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "แจ้งเตือนหนึ่งครั้งด้วยเมื่อปลั๊กอินหรือธีมที่ไม่เคยส่งอีเมลมาก่อนส่งไปยังที่อยู่ภายนอกที่แตกต่างกันจำนวนมากภายในหนึ่งวัน – ซึ่งอาจเป็นสัญญาณว่าเว็บไซต์ถูกแฮ็ก สองสัปดาห์แรกหลังติดตั้ง Mailspur จะใช้เป็นข้อมูลพื้นฐาน"
+
+msgid "Also remove the subject when anonymising"
+msgstr "ลบหัวเรื่องด้วยเมื่อทำให้เป็นข้อมูลนิรนาม"
+
+msgid "Also search content"
+msgstr "ค้นหาในเนื้อหาด้วย"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "หรือขอให้โฮสต์ของคุณเปิดใช้ mail() / sendmail สำหรับเว็บไซต์นี้"
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "โหลดรูปภาพและฟอนต์ภายนอกในตัวอย่างเสมอ"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (ผ่าน SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "ผู้ให้บริการอีเมลที่ใช้ HTTP API แทน SMTP ต้องติดต่อไปกลับน้อยกว่าต่ออีเมลหนึ่งฉบับ"
+
+msgid "Anonymisation"
+msgstr "การทำให้เป็นข้อมูลนิรนาม"
+
+msgid "Anonymise entries after"
+msgstr "ทำให้รายการเป็นข้อมูลนิรนามหลังจาก"
+
+msgid "Anonymised"
+msgstr "เป็นข้อมูลนิรนามแล้ว"
+
+msgid "Any format"
+msgstr "ทุกรูปแบบ"
+
+msgid "Any status"
+msgstr "ทุกสถานะ"
+
+msgid "Apply"
+msgstr "นำไปใช้"
+
+msgid "Ask the recipient for a working address."
+msgstr "ขอที่อยู่ที่ใช้งานได้จากผู้รับ"
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "ขอให้โฮสต์ของคุณเปิดใช้ส่วนขยาย openssl (หรือเปิดใช้ในการตั้งค่า PHP ของแผงควบคุมโฮสติ้ง)"
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "ขอให้โฮสต์ของคุณอัปเดตใบรับรอง CA และ OpenSSL ของเซิร์ฟเวอร์"
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "สอบถามโฮสต์ของคุณว่าการเชื่อมต่อ SMTP ขาออกถูกบล็อกหรือไม่"
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "สอบถามโฮสต์ของคุณว่าอนุญาตการเชื่อมต่อขาออกไปยังพอร์ตนั้นหรือไม่ (ไฟร์วอลล์)"
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "อีเมลที่ส่งไม่สำเร็จอย่างน้อย %1$s ฉบับภายใน %2$s นาที"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "แจ้งเตือนไม่เกินหนึ่งครั้งต่อประเภทในช่วงเวลานี้ แม้ปัญหายังคงอยู่"
+
+msgid "Attachments"
+msgstr "ไฟล์แนบ"
+
+msgid "Attachments no longer available: %s"
+msgstr "ไฟล์แนบไม่มีอยู่แล้ว: %s"
+
+msgid "Authentication"
+msgstr "การยืนยันตัวตน"
+
+msgid "Automatic TLS"
+msgstr "TLS อัตโนมัติ"
+
+msgid "Average per day"
+msgstr "เฉลี่ยต่อวัน"
+
+msgid "Back to the email types"
+msgstr "กลับไปที่ประเภทอีเมล"
+
+msgid "Belongs to"
+msgstr "เป็นของ"
+
+msgid "Block again"
+msgstr "บล็อกอีกครั้ง"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "ถูกบล็อกว่าเป็นสแปมหรือโดยรายการบล็อก"
+
+msgid "Bounced (permanent)"
+msgstr "ตีกลับ (ถาวร)"
+
+msgid "Bounced (temporary)"
+msgstr "ตีกลับ (ชั่วคราว)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "อักขระเสีย (การเข้ารหัสอักขระ): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "อีเมลจำนวนมากที่ไม่มีส่วนหัวยกเลิกการรับ (ผู้รับ %1$s ราย)"
+
+msgid "Bundle into one daily email"
+msgstr "รวมเป็นอีเมลเดียวต่อวัน"
+
+msgid "Bundled into one daily email"
+msgstr "รวมเป็นอีเมลเดียวต่อวันแล้ว"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "ปิดการรวมอีเมลแล้ว อีเมลที่รออยู่ถูกส่งออกไปในอีเมลสรุปฉบับเดียวแล้ว"
+
+msgid "Busiest day"
+msgstr "วันที่มีอีเมลมากที่สุด"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "โปรดระวัง: อีเมลถึงที่อยู่นี้เคยส่งไม่สำเร็จมาแล้วหลายครั้ง"
+
+msgid "Change in the email types"
+msgstr "เปลี่ยนในประเภทอีเมล"
+
+msgid "Change staging mode"
+msgstr "เปลี่ยนโหมด Staging"
+
+msgid "Check"
+msgstr "ตรวจสอบ"
+
+msgid "Check again"
+msgstr "ตรวจสอบอีกครั้ง"
+
+msgid "Check emails"
+msgstr "ตรวจสอบอีเมล"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "ตรวจสอบโฮสต์และพอร์ต ลองใช้ 587 (TLS) แทน 465 (SSL) หรือกลับกัน"
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "ตรวจสอบโฮสต์ พอร์ต การเข้ารหัส ชื่อผู้ใช้ และรหัสผ่านในปลั๊กอิน SMTP ของคุณ แล้วส่งอีเมลทดสอบจากที่นั่น"
+
+msgid "Check sender domains"
+msgstr "ตรวจสอบโดเมนผู้ส่ง"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "ตรวจสอบว่าการเข้ารหัสตรงกับพอร์ต: TLS สำหรับ 587, SSL สำหรับ 465"
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "ตรวจสอบว่าคีย์เป็นของภูมิภาค / บัญชีที่ถูกต้อง (เช่น ปลายทาง EU หรือ US)"
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "ตรวจสอบโฮสต์และพอร์ต SMTP: พอร์ตที่ผิดหรือการเชื่อมต่อที่ถูกบล็อกมักจบลงด้วยการหมดเวลาก่อนที่ทางเลือกสำรองจะทำงาน"
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "ตรวจสอบระเบียน SPF, DKIM และ DMARC ของโดเมนผู้ส่ง หรือใช้ที่อยู่ผู้ส่งบนโดเมนที่คุณใช้ส่ง"
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "ตรวจสอบว่าที่อยู่พิมพ์ผิดหรือไม่ – หรือเว็บไซต์ของคุณอาจไม่เคยส่งอีเมลนี้เลย"
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "ตรวจสอบที่อยู่กับผู้รับ แล้วแก้ไขในจุดที่จัดเก็บไว้ (โปรไฟล์ผู้ใช้ คำสั่งซื้อ ข้อมูลในแบบฟอร์ม)"
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "ตรวจสอบที่อยู่กับผู้รับ แล้วแก้ไขในจุดที่จัดเก็บไว้"
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "ตรวจสอบชื่อโฮสต์และพอร์ต: 587 กับ STARTTLS (TLS) หรือ 465 กับ SSL โฮสต์ส่วนใหญ่บล็อกพอร์ต 25"
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "ตรวจสอบขีดจำกัดและการใช้งานปัจจุบันในบัญชีบริการอีเมลของคุณ อัปเกรดแพ็กเกจหากจำเป็น"
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "ตรวจสอบที่อยู่ผู้รับของรายการนี้ว่ามีการพิมพ์ผิด ช่องว่าง หรือส่วนที่ขาดหายหรือไม่"
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "ตรวจสอบที่อยู่ผู้ส่งในปลั๊กอิน SMTP ของคุณและฟิลเตอร์ wp_mail_from"
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "ตรวจสอบขีดจำกัดการส่งของบัญชีอีเมลของคุณและหมายเหตุของอีเมลนี้"
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "ตรวจสอบ IP ของเซิร์ฟเวอร์ด้วยเครื่องมือตรวจสอบรายการบล็อก แล้วขอให้นำออกจากรายการ"
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "ตรวจสอบการสะกดของตัวยึดตำแหน่งในเทมเพลต และตรวจสอบว่าปลั๊กอินรองรับตัวยึดตำแหน่งนั้นสำหรับประเภทอีเมลนี้หรือไม่ Shortcode จะไม่ถูกประมวลผลในอีเมล เว้นแต่ปลั๊กอินที่ส่งจะเรียกใช้ do_shortcode()"
+
+msgid "Checked %s."
+msgstr "ตรวจสอบเมื่อ %s"
+
+msgid "Checked just now"
+msgstr "ตรวจสอบเมื่อสักครู่"
+
+msgid "Checking DNS records …"
+msgstr "กำลังตรวจสอบระเบียน DNS …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "ตรวจสอบระเบียน DNS ของโดเมนที่เว็บไซต์ของคุณใช้ส่งอีเมล: ที่อยู่ผู้ส่งเริ่มต้นและผู้ส่งที่พบบ่อยที่สุดในบันทึก ระเบียนที่ขาดหายหรืออ่อนแอเป็นสาเหตุที่พบบ่อยที่สุดที่ทำให้อีเมลไปอยู่ในสแปม ใช้เฉพาะ DNS resolver ของเซิร์ฟเวอร์คุณเองเท่านั้น ผลลัพธ์จะเก็บไว้หนึ่งชั่วโมง"
+
+msgid "Choose a range of at most %s days."
+msgstr "เลือกช่วงเวลาไม่เกิน %s วัน"
+
+msgid "Clear selection"
+msgstr "ล้างการเลือก"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "คลิกแท่งกราฟเพื่อเปิดอีเมลเหล่านี้ในบันทึก"
+
+msgid "Close"
+msgstr "ปิด"
+
+msgid "Close (Esc)"
+msgstr "ปิด (Esc)"
+
+msgid "Colour scheme"
+msgstr "ชุดสี"
+
+msgid "Command line"
+msgstr "บรรทัดคำสั่ง"
+
+msgid "Compare"
+msgstr "เปรียบเทียบ"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "เปรียบเทียบแหล่งที่มาของรายการเหล่านี้ ตรวจสอบว่ามีปลั๊กอินสองตัวส่งการแจ้งเตือนเดียวกันหรือไม่ หรือ hook (เช่น การเปลี่ยนสถานะคำสั่งซื้อ) ทำงานมากกว่าหนึ่งครั้งหรือไม่"
+
+msgid "Component"
+msgstr "ส่วนประกอบ"
+
+msgid "Configure alerts"
+msgstr "ตั้งค่าการแจ้งเตือน"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "เนื้อหาถูกทำให้เป็นข้อมูลนิรนามหลังจาก %1$s วัน, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "ทำเครื่องหมายการเปลี่ยนแปลงเนื้อหาว่าเห็นแล้ว"
+
+msgid "Content changed"
+msgstr "เนื้อหาเปลี่ยนแปลง"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "เนื้อหาเปลี่ยนแปลงเมื่อ %1$s หลังการอัปเดต %2$s"
+
+msgid "Content changed on %s."
+msgstr "เนื้อหาเปลี่ยนแปลงเมื่อ %s"
+
+msgid "Content removed"
+msgstr "ลบเนื้อหาแล้ว"
+
+msgid "Content removed after %s days"
+msgstr "ลบเนื้อหาหลังจาก %s วัน"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "เนื้อหา ส่วนหัว และไฟล์แนบถูกลบ และที่อยู่ถูกปกปิดโดยการตั้งค่าการทำให้เป็นข้อมูลนิรนาม"
+
+msgid "Copied"
+msgstr "คัดลอกแล้ว"
+
+msgid "Copied – paste it into your reply."
+msgstr "คัดลอกแล้ว – วางลงในคำตอบของคุณ"
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "คัดลอกประโยคสั้นๆ สำหรับตอบลูกค้า: อีเมลส่งถึงใครเมื่อใดและไปถึงหรือไม่ – โดยไม่มีรายละเอียดทางเทคนิค"
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "คัดลอกบันทึกที่มีอยู่ของปลั๊กอินบันทึกอีเมลอื่นมาไว้ใน Mailspur เพื่อให้ค้นหาและดูตัวอย่างอีเมลเก่าได้ที่นี่ ปลั๊กอินอื่นและข้อมูลของปลั๊กอินนั้นจะไม่ถูกแก้ไข การนำเข้าอีกครั้งจะเพิ่มเฉพาะรายการใหม่เท่านั้น"
+
+msgid "Copy"
+msgstr "คัดลอก"
+
+msgid "Copy for support"
+msgstr "คัดลอกสำหรับฝ่ายสนับสนุน"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "ไม่สามารถคัดลอกในเบราว์เซอร์นี้ได้ เลือกข้อความแล้วคัดลอก:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "แก้ไขที่อยู่ (เช่น ในโปรไฟล์ผู้ใช้หรือคำสั่งซื้อ) และพิจารณาเพิ่มการตรวจสอบอีเมลในแบบฟอร์มของคุณ"
+
+msgid "Counted once per email."
+msgstr "นับหนึ่งครั้งต่ออีเมล"
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "สร้างคีย์ API ใหม่ที่มีสิทธิ์ส่งที่บริการอีเมลของคุณ แล้วป้อนในปลั๊กอินส่งอีเมล"
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "สร้าง URL ของ webhook ใหม่หรือไม่? URL ปัจจุบันจะใช้ไม่ได้ทันที – วาง URL ใหม่ในการตั้งค่า webhook ของผู้ให้บริการอีเมลของคุณ"
+
+msgid "Create new URL"
+msgstr "สร้าง URL ใหม่"
+
+msgid "Current page"
+msgstr "หน้าปัจจุบัน"
+
+msgid "Current record"
+msgstr "ระเบียนปัจจุบัน"
+
+msgid "Current size"
+msgstr "ขนาดปัจจุบัน"
+
+msgid "Custom"
+msgstr "กำหนดเอง"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "พบคีย์ DKIM (selector: %s)"
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "พบระเบียน DMARC ที่มี p=none: รายงานเท่านั้น อีเมลปลอมแปลงยังคงถูกจัดส่ง"
+
+msgid "DMARC record found with policy p=%s."
+msgstr "พบระเบียน DMARC ที่มีนโยบาย p=%s"
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "ระเบียน DMARC ไม่มีนโยบายที่ถูกต้อง (p=none, quarantine หรือ reject)"
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "การค้นหา DNS ล้มเหลวหรือหมดเวลา ลองอีกครั้งในภายหลัง"
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "การค้นหา DNS ใช้งานไม่ได้บนเซิร์ฟเวอร์นี้ (dns_get_record() ถูกปิดใช้งาน) จึงไม่สามารถตรวจสอบผู้ส่งที่นี่ได้"
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "การค้นหา DNS ที่ต้องใช้: ประมาณ %1$s จาก %2$s ครั้งที่อนุญาต"
+
+msgid "Daily"
+msgstr "รายวัน"
+
+msgid "Daily digest"
+msgstr "อีเมลสรุปรายวัน"
+
+msgid "Dark"
+msgstr "มืด"
+
+msgid "Date"
+msgstr "วันที่"
+
+msgid "Default (%s days)"
+msgstr "ค่าเริ่มต้น (%s วัน)"
+
+msgid "Default (no time limit)"
+msgstr "ค่าเริ่มต้น (ไม่จำกัดเวลา)"
+
+msgid "Default sender"
+msgstr "ผู้ส่งเริ่มต้น"
+
+msgid "Delete"
+msgstr "ลบ"
+
+msgid "Delete %s selected log entries?"
+msgstr "ลบรายการบันทึกที่เลือก %s รายการหรือไม่?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "ลบรายการบันทึกทั้งหมดหรือไม่? การกระทำนี้ไม่สามารถย้อนกลับได้"
+
+msgid "Delete entries after"
+msgstr "ลบรายการหลังจาก"
+
+msgid "Delete selected"
+msgstr "ลบรายการที่เลือก"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "ลบตารางบันทึกและการตั้งค่าเมื่อลบปลั๊กอิน"
+
+msgid "Delete this log entry?"
+msgstr "ลบรายการบันทึกนี้หรือไม่?"
+
+msgid "Deleted."
+msgstr "ลบแล้ว"
+
+msgid "Delivered"
+msgstr "จัดส่งแล้ว"
+
+msgid "Delivered by %s (API)"
+msgstr "จัดส่งโดย %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "จัดส่งโดยโค้ดที่เชื่อมกับ pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "จัดส่งในอีเมลสรุปรายวันเมื่อ %s"
+
+msgid "Delivery"
+msgstr "การจัดส่ง"
+
+msgid "Delivery status from your email provider"
+msgstr "สถานะการจัดส่งจากผู้ให้บริการอีเมลของคุณ"
+
+msgid "Desktop"
+msgstr "เดสก์ท็อป"
+
+msgid "Did my email arrive?"
+msgstr "อีเมลของฉันไปถึงหรือไม่?"
+
+msgid "Disable the email or change its recipient"
+msgstr "ปิดใช้อีเมลนี้หรือเปลี่ยนผู้รับ"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "ทิ้งอีเมลที่ถูกระงับไว้ทั้งหมดหรือไม่? อีเมลจะยังอยู่ในบันทึกแต่จะไม่ถูกส่ง"
+
+msgid "Discard held emails"
+msgstr "ทิ้งอีเมลที่ถูกระงับไว้"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "อย่าส่งอีเมล \"จาก\" ที่อยู่อีเมลฟรี (gmail.com, gmx.de …) ผ่านเซิร์ฟเวอร์ของคุณเอง"
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "เสร็จแล้ว: ส่งอีเมล %1$s ฉบับ, ส่งไม่สำเร็จ %2$s ฉบับ"
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "เสร็จแล้ว: นำเข้า %1$s, ซ้ำ %2$s, เก่าเกินไป %3$s"
+
+msgid "Download .eml"
+msgstr "ดาวน์โหลด .eml"
+
+msgid "Download as CSV"
+msgstr "ดาวน์โหลดเป็น CSV"
+
+msgid "Download started."
+msgstr "เริ่มดาวน์โหลดแล้ว"
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "ดาวน์โหลดรายการที่ตรงกับตัวกรองปัจจุบันเป็น %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "อีเมลแต่ละฉบับจะถูกตรวจสอบหนึ่งครั้งเมื่อบันทึกหรือนำเข้า (ไม่มีคำขอภายนอก) การเปลี่ยนแปลงที่นี่มีผลเฉพาะกับอีเมลที่บันทึกหลังจากนั้น รายการเก่าจะไม่ถูกตรวจสอบซ้ำ การตรวจสอบ DNS และการส่งซ้ำจะทำงานเมื่อคุณเปิดรายการ"
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "อีเมลก่อนหน้านี้ถึง %s ส่งไม่สำเร็จแบบถาวรมากกว่าหนึ่งครั้ง"
+
+msgid "Edit template"
+msgstr "แก้ไขเทมเพลต"
+
+msgid "Editors and above"
+msgstr "บรรณาธิการขึ้นไป"
+
+msgid "Email address"
+msgstr "ที่อยู่อีเมล"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "ที่อยู่อีเมล (อีเมลล่าสุดไม่อยู่ในบันทึกแล้ว)"
+
+msgid "Email address or order number"
+msgstr "ที่อยู่อีเมลหรือหมายเลขคำสั่งซื้อ"
+
+msgid "Email consists almost only of images"
+msgstr "อีเมลประกอบด้วยรูปภาพเกือบทั้งหมด"
+
+msgid "Email failure spike"
+msgstr "อีเมลส่งไม่สำเร็จพุ่งสูง"
+
+msgid "Email failures"
+msgstr "อีเมลที่ส่งไม่สำเร็จ"
+
+msgid "Email failures resolved"
+msgstr "ปัญหาการส่งอีเมลได้รับการแก้ไขแล้ว"
+
+msgid "Email inventory"
+msgstr "ทะเบียนอีเมล"
+
+msgid "Email log"
+msgstr "บันทึกอีเมล"
+
+msgid "Email log: problem recipients"
+msgstr "บันทึกอีเมล: ผู้รับที่มีปัญหา"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "ส่งอีเมลถึงฉันทุกครั้งที่มีความเห็นรอการตรวจสอบ"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "ส่งอีเมลถึงฉันทุกครั้งที่มีผู้แสดงความเห็น"
+
+msgid "Email provider"
+msgstr "ผู้ให้บริการอีเมล"
+
+msgid "Email sent again."
+msgstr "ส่งอีเมลอีกครั้งแล้ว"
+
+msgid "Email sent to %s."
+msgstr "ส่งอีเมลถึง %s แล้ว"
+
+msgid "Email type"
+msgstr "ประเภทอีเมล"
+
+msgid "Email type is sent again"
+msgstr "ประเภทอีเมลกลับมาส่งอีกครั้ง"
+
+msgid "Email type stopped"
+msgstr "ประเภทอีเมลหยุดส่ง"
+
+msgid "Email types"
+msgstr "ประเภทอีเมล"
+
+msgid "Email volume back to normal"
+msgstr "ปริมาณอีเมลกลับสู่ปกติ"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "ปริมาณอีเมลกลับสู่ปกติแล้ว: เบรกฉุกเฉินไม่ได้ทำงานอีกต่อไป"
+
+msgid "Email: failed"
+msgstr "อีเมล: ส่งไม่สำเร็จ"
+
+msgid "Email: failed – see the log"
+msgstr "อีเมล: ส่งไม่สำเร็จ – ดูบันทึก"
+
+msgid "Email: sent"
+msgstr "อีเมล: ส่งแล้ว"
+
+msgid "Emails"
+msgstr "อีเมล"
+
+msgid "Emails are being logged again."
+msgstr "กำลังบันทึกอีเมลอีกครั้งแล้ว"
+
+msgid "Emails are delivered to their recipients."
+msgstr "อีเมลถูกจัดส่งถึงผู้รับ"
+
+msgid "Emails are flowing again"
+msgstr "อีเมลกลับมาส่งได้ตามปกติแล้ว"
+
+msgid "Emails are logged but not delivered."
+msgstr "อีเมลถูกบันทึกแต่ไม่ได้จัดส่ง"
+
+msgid "Emails are still being sent."
+msgstr "อีเมลยังคงถูกส่งอยู่"
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "อีเมลยังคงถูกส่งอยู่ ตรวจสอบแหล่งที่มาหลัก เปลี่ยนเบรกฉุกเฉินเป็น \"แจ้งเตือนและระงับอีเมลถัดไป\" เพื่อหยุดอีเมลเหล่านั้น"
+
+msgid "Emails in 30 days"
+msgstr "อีเมลใน 30 วัน"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "อีเมลประเภทนี้ที่ส่งถึงผู้ดูแลระบบเท่านั้นจะถูกรวบรวมและส่งวันละครั้งในอีเมลสรุปฉบับเดียว"
+
+msgid "Emails over time"
+msgstr "อีเมลตามช่วงเวลา"
+
+msgid "Emails per day and status"
+msgstr "อีเมลต่อวันและสถานะ"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "อีเมลต่อวันในสัปดาห์และชั่วโมง (เขตเวลาของเว็บไซต์)"
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "อีเมลที่อยู่ในบันทึกแล้ว – ไม่ว่าจะบันทึกโดย Mailspur เองหรือนำเข้าจากปลั๊กอินอื่น – จะถูกระบุจากผู้รับ หัวเรื่อง และเวลาส่ง แล้วข้ามไปเพราะซ้ำ"
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "อีเมลที่ส่งเป็นประจำหยุดส่งแล้ว (%s)"
+
+msgid "Emails to this user"
+msgstr "อีเมลถึงผู้ใช้นี้"
+
+msgid "Emails with notes"
+msgstr "อีเมลที่มีหมายเหตุ"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "อีเมลที่ไม่มีหัวเรื่องดูเหมือนสแปมและหาได้ยากในกล่องจดหมาย"
+
+msgid "Emails – last 7 days"
+msgstr "อีเมล – 7 วันล่าสุด"
+
+msgid "Emergency brake"
+msgstr "เบรกฉุกเฉิน"
+
+msgid "Emergency brake reset."
+msgstr "รีเซ็ตเบรกฉุกเฉินแล้ว"
+
+msgid "Emergency brake settings"
+msgstr "การตั้งค่าเบรกฉุกเฉิน"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "เบรกฉุกเฉิน: อีเมล %1$s ฉบับในชั่วโมงที่ผ่านมา – มากกว่าปกติมาก (เกณฑ์: %2$s ต่อชั่วโมง)"
+
+msgid "Emergency brake: unusual email flood"
+msgstr "เบรกฉุกเฉิน: อีเมลจำนวนมากผิดปกติ"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "ว่างไว้ = อัตโนมัติ: สามเท่าของชั่วโมงที่มีอีเมลมากที่สุดใน 14 วันที่ผ่านมา อย่างน้อย 50 – ปัจจุบัน %s"
+
+msgid "Empty log"
+msgstr "ล้างบันทึก"
+
+msgid "Empty subject"
+msgstr "หัวเรื่องว่างเปล่า"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "เปิดการยืนยันแบบ 2 ขั้นตอนสำหรับบัญชี Google แล้วสร้างรหัสผ่านสำหรับแอป (บัญชี Google → ความปลอดภัย → รหัสผ่านสำหรับแอป)"
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "เปิดการลงนาม DKIM ที่ผู้ให้บริการอีเมลหรือโฮสต์ของคุณ และเผยแพร่คีย์ที่ได้รับ หากคุณลงนามอยู่แล้ว ให้ป้อน selector ของคุณ (ค่า s= ของส่วนหัว DKIM-Signature) แล้วตรวจสอบอีกครั้ง"
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "เปิดการลงนาม DKIM ที่บริการอีเมลของคุณ และเผยแพร่ระเบียน DNS ของบริการนั้น"
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "เปิดการยืนยันตัวตนในปลั๊กอิน SMTP ของคุณ แล้วป้อนชื่อผู้ใช้และรหัสผ่าน"
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "เปิดการยืนยันตัวตนในปลั๊กอิน SMTP ของคุณ"
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "การเชื่อมต่อ SMTP ที่เข้ารหัส (TLS/SSL) ต้องใช้ส่วนขยาย PHP openssl ซึ่งไม่ได้ติดตั้งหรือไม่ได้เปิดใช้บนเซิร์ฟเวอร์นี้"
+
+msgid "Encryption"
+msgstr "การเข้ารหัส"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "การเข้ารหัส (TLS/SSL) ล้มเหลว"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "ป้อนที่อยู่อีเมลหรือ URL ของ webhook และบันทึกการตั้งค่าก่อน"
+
+msgid "Enter an email address or an order number."
+msgstr "ป้อนที่อยู่อีเมลหรือหมายเลขคำสั่งซื้อ"
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "ป้อนที่อยู่อีเมลใต้ “ส่งการแจ้งเตือนทางอีเมลไปที่” และบันทึกการตั้งค่าก่อน"
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "ป้อนที่อยู่อีเมลระหว่าง 1 ถึง 10 ที่อยู่"
+
+msgid "Enter one or more email addresses."
+msgstr "ป้อนที่อยู่อีเมลอย่างน้อยหนึ่งที่อยู่"
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "ป้อนรหัสผ่านสำหรับแอปในปลั๊กอิน SMTP ของคุณ หรือใช้การเชื่อมต่อ \"ลงชื่อเข้าใช้ด้วย Google\" (OAuth) ของปลั๊กอิน"
+
+msgid "Entries"
+msgstr "รายการ"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "รายการที่เก่ากว่า %s วันจะถูกข้าม เพราะการตั้งค่าระยะเวลาเก็บรักษาจะลบรายการเหล่านั้นอยู่แล้ว เปลี่ยนระยะเวลาเก็บรักษาด้านบนก่อนหากต้องการนำเข้าทั้งหมด"
+
+msgid "Error"
+msgstr "ข้อผิดพลาด"
+
+msgid "Errors"
+msgstr "ข้อผิดพลาด"
+
+msgid "Every %s days"
+msgstr "ทุก %s วัน"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "ทุก 15 นาที (การแจ้งเตือน Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "ทุกเช้าวันจันทร์ เฉพาะเมื่อมีสิ่งที่ต้องรายงาน: จำนวนอีเมลและอัตราการส่งไม่สำเร็จเทียบกับสัปดาห์ก่อน ประเภทอีเมลที่ใหม่ หยุดส่ง และเปลี่ยนแปลง อีเมลที่มีหมายเหตุ และเหตุการณ์เบรกฉุกเฉิน มีเพียงจำนวนและรูปแบบหัวเรื่องเท่านั้น"
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "อีเมลทุกประเภทที่เว็บไซต์นี้ส่ง สร้างจากบันทึกอีเมลของ Mailspur – เช่น สำหรับบันทึกกิจกรรมการประมวลผลหรือการส่งมอบงาน กลุ่มผู้รับได้มาจากอีเมลล่าสุดของผู้ส่งแต่ละราย หมวดหมู่ข้อมูลได้มาจากอีเมลล่าสุดของแต่ละประเภท รายการนี้ไม่มีเนื้อหาอีเมลและไม่มีที่อยู่"
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "อีเมลทุกประเภทที่เว็บไซต์ของคุณส่ง ซึ่งพบโดยอัตโนมัติในบันทึก: จัดกลุ่มตามปลั๊กอินที่ส่งและตามหัวเรื่อง โดยแทนตัวเลข ที่อยู่ และชื่อด้วยตัวยึดตำแหน่ง Mailspur เรียนรู้ว่าแต่ละประเภทถูกส่งบ่อยเพียงใด และสังเกตเมื่อประเภทใดหยุดส่ง – เช่น หลังการอัปเดตปลั๊กอิน"
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "ทุกอย่างปกติดี: อีเมล %s ฉบับใน 7 วันที่ผ่านมา ไม่มีข้อผิดพลาด"
+
+msgid "Expected today and not sent yet:"
+msgstr "คาดว่าจะส่งวันนี้แต่ยังไม่ได้ส่ง:"
+
+msgid "Export"
+msgstr "ส่งออก"
+
+msgid "Export started – your download begins shortly."
+msgstr "เริ่มส่งออกแล้ว – การดาวน์โหลดจะเริ่มในอีกสักครู่"
+
+msgid "Failed"
+msgstr "ไม่สำเร็จ"
+
+msgid "Failed (%s %%)"
+msgstr "ส่งไม่สำเร็จ (%s %%)"
+
+msgid "Failing"
+msgstr "มีปัญหา"
+
+msgid "Failure rate"
+msgstr "อัตราการส่งไม่สำเร็จ"
+
+msgid "Failure spike"
+msgstr "ส่งไม่สำเร็จพุ่งสูง"
+
+msgid "Far more emails than usual were sent"
+msgstr "มีการส่งอีเมลมากกว่าปกติมาก"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "มีการส่งอีเมลมากกว่าปกติมาก Mailspur จึงระงับอีเมลถัดไปไว้จนกว่าคุณจะปล่อยหรือทิ้งอีเมลเหล่านั้น"
+
+msgid "Fewer"
+msgstr "น้อยกว่า"
+
+msgid "File"
+msgstr "ไฟล์"
+
+msgid "Filter by status"
+msgstr "กรองตามสถานะ"
+
+msgid "Filter email types"
+msgstr "กรองประเภทอีเมล"
+
+msgid "First email after the change"
+msgstr "อีเมลฉบับแรกหลังการเปลี่ยนแปลง"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "อีเมลฉบับแรกจากผู้ส่งรายนี้เมื่อ %s เมื่อเปิดการแจ้งเตือนประเภทอีเมล Mailspur จะแจ้งเตือนเมื่อผู้ส่งรายใหม่ส่งไปยังที่อยู่ภายนอกจำนวนมาก"
+
+msgid "First page"
+msgstr "หน้าแรก"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "สำหรับไฟล์แนบขนาดใหญ่ อาจหมดเวลาระหว่างการถ่ายโอนได้ – ส่งไฟล์ที่เล็กลงหรือส่งลิงก์แทน"
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "สำหรับสำเนา staging และสำเนาสำหรับพัฒนาของเว็บไซต์: ทำให้มั่นใจว่าลูกค้าจะไม่ได้รับอีเมลจากสำเนา อีเมลทุกฉบับยังคงถูกบันทึก"
+
+msgid "Forced dark"
+msgstr "บังคับโหมดมืด"
+
+msgid "Format"
+msgstr "รูปแบบ"
+
+msgid "Free text from forms"
+msgstr "ข้อความอิสระจากแบบฟอร์ม"
+
+msgid "Friday"
+msgstr "วันศุกร์"
+
+msgid "From"
+msgstr "จาก"
+
+msgid "From date"
+msgstr "จากวันที่"
+
+msgid "Front end"
+msgstr "หน้าเว็บไซต์"
+
+msgid "Function"
+msgstr "ฟังก์ชัน"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "อีเมลถัดไปจะถูกระงับไว้จนกว่าผู้ดูแลระบบจะปล่อยหรือทิ้ง"
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail และ Google Workspace ไม่ยอมรับรหัสผ่านบัญชีปกติสำหรับ SMTP อีกต่อไป"
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail จะตัดอีเมล HTML ที่ใหญ่กว่า 102 KB และแสดง \"[Message clipped]\" ทุกอย่างหลังจุดที่ตัด – มักเป็นส่วนท้าย ลิงก์ยกเลิกการรับ หรือข้อความทางกฎหมาย – จะถูกซ่อน"
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail จะตัดอีเมลนี้ (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google ปฏิเสธการเข้าสู่ระบบ"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "ส่ง HTML เป็นข้อความธรรมดา"
+
+msgid "Handler"
+msgstr "ตัวจัดการ"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "การตีกลับแบบถาวรที่รายงานโดยผู้ให้บริการอีเมลของคุณ"
+
+msgid "Hard failures"
+msgstr "ส่งไม่สำเร็จแบบถาวร"
+
+msgid "Headers"
+msgstr "ส่วนหัว"
+
+msgid "Held"
+msgstr "ถูกระงับไว้"
+
+msgid "Held by emergency brake – discarded."
+msgstr "ถูกเบรกฉุกเฉินระงับไว้ – ทิ้งแล้ว"
+
+msgid "Held by emergency brake – not delivered."
+msgstr "ถูกเบรกฉุกเฉินระงับไว้ – ไม่ได้จัดส่ง"
+
+msgid "Held by emergency brake – released later."
+msgstr "ถูกเบรกฉุกเฉินระงับไว้ – ปล่อยในภายหลัง"
+
+msgid "Held by staging mode – not delivered."
+msgstr "ถูกโหมด Staging ระงับไว้ – ไม่ได้จัดส่ง"
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "ส่งอีเมลที่ถูกระงับไว้แล้ว และบันทึกเป็นรายการใหม่"
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "อีเมลที่ถูกระงับไว้จะมีสถานะ \"ถูกระงับไว้\" และยังส่งทีละฉบับได้จากบันทึก (\"ส่งเดี๋ยวนี้\")"
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "ถูกระงับไว้: ผู้รับทุกรายเคยส่งไม่สำเร็จแบบถาวรมาก่อน (ผู้รับที่มีปัญหา)"
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "ถูกระงับไว้: โหมด Staging ตั้งค่าให้เปลี่ยนเส้นทาง แต่ไม่ได้กำหนดที่อยู่ปลายทางที่ถูกต้อง"
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "คำแนะนำเกี่ยวกับปัญหาที่อาจทำให้อีเมลนี้ไปไม่ถึงหรือแสดงผลไม่ถูกต้อง"
+
+msgid "Hold further emails to problem recipients"
+msgstr "ระงับอีเมลถัดไปที่ส่งถึงผู้รับที่มีปัญหา"
+
+msgid "Hooks"
+msgstr "Hook"
+
+msgid "Hours"
+msgstr "ชั่วโมง"
+
+msgid "How to fix:"
+msgstr "วิธีแก้ไข:"
+
+msgid "I already did"
+msgstr "ทำแล้ว"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "ฉันเข้าใจว่าซอร์สดิบจะไม่ถูกปกปิด และใช้พื้นที่จัดเก็บต่ออีเมลเพิ่มขึ้นประมาณสองเท่า"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "หากเกิดขึ้นบ่อย ให้ตรวจสอบขีดจำกัดการส่งของผู้ให้บริการอีเมลของคุณ"
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "หากยังเกิดขึ้นอยู่ ให้ส่งอีเมลครั้งละน้อยลง หรือส่งผ่านบริการอีเมลที่มีคิว"
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "หากค่าเริ่มต้นด้านความปลอดภัยบล็อกไว้ ให้ใช้การเชื่อมต่อ Microsoft (OAuth / Graph API) ของปลั๊กอิน SMTP แทน"
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "หากผู้รับหลายรายส่งไม่สำเร็จ การตอบกลับของเซิร์ฟเวอร์หลังที่อยู่จะระบุสาเหตุ"
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "หากบัญชีใช้การยืนยันตัวตนแบบสองปัจจัย ให้สร้างรหัสผ่านสำหรับแอปแล้วใช้แทน"
+
+msgid "Ignore"
+msgstr "ละเว้น"
+
+msgid "Ignored"
+msgstr "ละเว้นแล้ว"
+
+msgid "Ignored notes"
+msgstr "หมายเหตุที่ละเว้น"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "หมายเหตุที่ละเว้นจะไม่ถูกบันทึกสำหรับอีเมลใหม่อีกต่อไป และจะถูกซ่อนในรายการที่มีอยู่"
+
+msgid "Images without alt text (%1$s)"
+msgstr "รูปภาพที่ไม่มีข้อความ alt (%1$s)"
+
+msgid "Import"
+msgstr "นำเข้า"
+
+msgid "Import failed: %s"
+msgstr "นำเข้าไม่สำเร็จ: %s"
+
+msgid "Import from other plugins"
+msgstr "นำเข้าจากปลั๊กอินอื่น"
+
+msgid "Import new entries"
+msgstr "นำเข้ารายการใหม่"
+
+msgid "Imported"
+msgstr "นำเข้าแล้ว"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "รายการที่นำเข้าไม่มีร่องรอย: ปลั๊กอินอื่นไม่ได้บันทึกรายละเอียดเหล่านี้"
+
+msgid "Imported from %s"
+msgstr "นำเข้าจาก %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "ใน Amazon SNS ให้สมัครรับ URL (โปรโตคอล HTTPS) กับหัวข้อที่รับการแจ้งเตือน Delivery, Bounce และ Complaint ของ Amazon SES แล้ว Mailspur จะยืนยันการสมัครรับโดยอัตโนมัติ"
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "ใน Brevo ให้เปิด Transactional → Settings → Webhook เพิ่ม URL แล้วเลือก Delivered, Hard bounce, Soft bounce, Invalid email และ Complaint"
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "ใน Mailgun ให้เปิด Sending → Webhooks เพิ่ม URL สำหรับ Delivered, Permanent failure, Temporary failure และ Spam complaints แล้ววาง HTTP webhook signing key ด้านล่าง"
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "ใน Postmark ให้เปิดเซิร์ฟเวอร์ของคุณ → Webhooks → Add webhook วาง URL แล้วเลือก Delivery, Bounce และ Spam complaint"
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "ในศูนย์การจัดการ Microsoft 365 ให้เปิดผู้ใช้ → Mail → Manage email apps แล้วเปิดใช้ \"Authenticated SMTP\""
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "กล่องจดหมายแสดงประมาณ 40–80 อักขระแรก ส่วนที่เหลือจะถูกตัด บนโทรศัพท์จะถูกตัดเร็วกว่านั้น"
+
+msgid "Include content"
+msgstr "รวมเนื้อหา"
+
+msgid "Information"
+msgstr "ข้อมูล"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "ติดตั้งปลั๊กอิน SMTP แล้วส่งผ่านกล่องจดหมายจริงหรือบริการอีเมลของโดเมนของคุณ"
+
+msgid "Invalid date."
+msgstr "วันที่ไม่ถูกต้อง"
+
+msgid "Invalid email address"
+msgstr "ที่อยู่อีเมลไม่ถูกต้อง"
+
+msgid "Invalid email address: %s"
+msgstr "ที่อยู่อีเมลไม่ถูกต้อง: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "ที่อยู่ผู้ส่งไม่ถูกต้อง: %1$s"
+
+msgid "Irregular"
+msgstr "ไม่สม่ำเสมอ"
+
+msgid "Is Mailspur helping you?"
+msgstr "Mailspur ช่วยคุณได้หรือไม่?"
+
+msgid "Is an email missing?"
+msgstr "มีอีเมลหายไปหรือไม่?"
+
+msgid "Is everything running?"
+msgstr "ทุกอย่างทำงานปกติหรือไม่?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "เก็บไว้สูงสุด"
+
+msgid "Keep for"
+msgstr "เก็บไว้เป็นเวลา"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "เก็บ URL นี้เป็นความลับ: URL มีคีย์ลับของเว็บไซต์นี้ บันทึกการตั้งค่าก่อนทดสอบ webhook"
+
+msgid "Kept: %s"
+msgstr "เก็บไว้: %s"
+
+msgid "Key figures"
+msgstr "ตัวเลขสำคัญ"
+
+msgid "Last 30 days"
+msgstr "30 วันล่าสุด"
+
+msgid "Last email before the change"
+msgstr "อีเมลฉบับสุดท้ายก่อนการเปลี่ยนแปลง"
+
+msgid "Last failure"
+msgstr "ส่งไม่สำเร็จครั้งล่าสุด"
+
+msgid "Last page"
+msgstr "หน้าสุดท้าย"
+
+msgid "Last sent"
+msgstr "ส่งล่าสุด"
+
+msgid "Leave a review"
+msgstr "เขียนรีวิว"
+
+msgid "Light"
+msgstr "สว่าง"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "ข้อความลิงก์แสดง %1$s แต่ลิงก์ไปที่ %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "ลิงก์ไปยังที่อยู่สำหรับพัฒนา: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "ลิงก์ไปยังหน้าที่ไม่มีอยู่บนเว็บไซต์ของคุณ: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "ลิงก์ไปยังที่อยู่เต็มโดยตรง สำหรับการติดตามการคลิก ให้ใช้พารามิเตอร์ UTM บนโดเมนของคุณเองแทน"
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "ลิงก์ผ่านบริการย่อ URL: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "ลิงก์และรูปภาพที่ขึ้นต้นด้วย \"/\" ใช้ได้บนเว็บไซต์เท่านั้น ในโปรแกรมอีเมลไม่มีที่อยู่เว็บไซต์ให้เติมเต็ม รูปภาพจึงว่างเปล่าและลิงก์ไม่นำไปที่ใด"
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "ลิงก์ไปยังสำเนาอื่นของเว็บไซต์: %1$s (เว็บไซต์นี้: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "ลิงก์ที่ที่อยู่ที่มองเห็นแตกต่างจากปลายทางจริงดูเหมือนฟิชชิง ตัวกรองสแปมจะลงโทษลิงก์เหล่านี้ และโปรแกรมอีเมลบางตัวจะเตือนผู้อ่าน"
+
+msgid "Load remote content"
+msgstr "โหลดเนื้อหาภายนอก"
+
+msgid "Loading…"
+msgstr "กำลังโหลด…"
+
+msgid "Log"
+msgstr "บันทึก"
+
+msgid "Log entries %s"
+msgstr "รายการบันทึก %s"
+
+msgid "Log entry not found."
+msgstr "ไม่พบรายการบันทึก"
+
+msgid "Log only – do not send any email"
+msgstr "บันทึกเท่านั้น – ไม่ส่งอีเมลใดเลย"
+
+msgid "Log size"
+msgstr "ขนาดบันทึก"
+
+msgid "Logged emails"
+msgstr "อีเมลที่บันทึกไว้"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "อีเมลที่บันทึกไว้อาจมีข้อมูลส่วนบุคคล ให้สิทธิ์การเข้าถึงให้น้อยที่สุดเท่าที่จำเป็น การตั้งค่าต้องใช้สิทธิ์ผู้ดูแลระบบเสมอ"
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "การเข้าสู่ระบบและผู้รับได้รับการยอมรับ แต่อีเมลถูกปฏิเสธ – โดยทั่วไปเกิดจากการกรองสแปม ขีดจำกัดการส่ง หรือนโยบายของผู้ให้บริการ (รหัสตอบกลับ 554)"
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "บันทึกอีเมลขาออก จัดทำแผนที่ประเภทอีเมลที่เว็บไซต์ของคุณส่ง และแจ้งเตือนคุณเมื่อประเภทใดหยุดส่ง พร้อมการแสดงตัวอย่างที่ปลอดภัย การวินิจฉัยการจัดส่ง และสถิติ"
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "มองหาตัวเลือกเพื่อปิดหรือเปลี่ยนผู้รับในการตั้งค่าอีเมลของ %s – หรือละเว้นประเภทนี้ที่นี่"
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "ดูการตอบกลับของเซิร์ฟเวอร์ในข้อความแสดงข้อผิดพลาด ซึ่งมักระบุสาเหตุไว้"
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "ตรวจหาการส่งจำนวนมากที่ไม่คาดคิด (การส่งแบบฟอร์มสแปม การวนซ้ำ) ในบันทึก"
+
+msgid "Looking it up …"
+msgstr "กำลังค้นหา …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "บันทึกอีเมล"
+
+msgid "Mail Log sections"
+msgstr "ส่วนต่างๆ ของบันทึกอีเมล"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "ตั้งค่าเซิร์ฟเวอร์อีเมลสำหรับการตอบกลับและการตีกลับแล้ว"
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "ผู้ให้บริการกล่องจดหมายสามารถตรวจสอบได้ว่าเว็บไซต์ของคุณได้รับอนุญาตให้ส่งอีเมลในนามโดเมนนี้ การตรวจสอบผู้ส่งแบบเต็มจะตรวจ DKIM ด้วย"
+
+msgid "Mailbox unknown or unavailable"
+msgstr "ไม่รู้จักกล่องจดหมายหรือกล่องจดหมายใช้งานไม่ได้"
+
+msgid "Mailer"
+msgstr "ระบบส่งอีเมล"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun ลงนาม webhook ทุกรายการด้วยคีย์นี้ (Sending → Webhooks → HTTP webhook signing key) รายงานที่ไม่มีลายเซ็นที่ถูกต้องจะถูกปฏิเสธ"
+
+msgid "Mailspur alerts"
+msgstr "การแจ้งเตือน Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur ตรวจสอบบันทึกเพื่อหาอีเมลที่ส่งไม่สำเร็จ"
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur ไม่พบคำสั่งซื้อ #%s ในร้านค้าของคุณ"
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "จนถึงตอนนี้ Mailspur บันทึกอีเมลที่จัดส่งแล้วบนเว็บไซต์นี้ %s ฉบับ หากช่วยประหยัดเวลาของคุณได้ รีวิวสั้นๆ บน WordPress.org จะมีความหมายมาก – ช่วยให้ผู้อื่นพบปลั๊กอินนี้และทำให้ใช้งานได้ฟรีต่อไป"
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur ไม่มีอีเมลสำหรับคำสั่งซื้อ #%s ในบันทึก"
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur ไม่มีอีเมลถึง %s ในบันทึก"
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur สร้างโดย %1$s ชอบหรือไม่? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur เรียนรู้ว่าอีเมลแต่ละประเภทถูกส่งบ่อยเพียงใด เช่น การยืนยันคำสั่งซื้อ และจะรายงานที่นี่เมื่อประเภทใดหยุดส่ง"
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur เรียนรู้จังหวะของอีเมลทุกประเภทจาก 8 สัปดาห์ล่าสุด – การยืนยันคำสั่งซื้อรายวันจะถือว่าเลยกำหนดหลัง 2 วัน รายงานรายสัปดาห์หลัง 2 สัปดาห์ การแจ้งเตือนจะระบุประเภท ผู้ส่ง และปลั๊กอินที่อัปเดตตั้งแต่อีเมลฉบับล่าสุด ใช้ช่องทางด้านบน ประเภทที่ละเว้นจะไม่แจ้งเตือน"
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur เห็นว่าเว็บไซต์ของคุณส่งอีเมลออกไปแล้ว แต่มองไม่เห็นกล่องจดหมายของผู้รับ หากไม่พบอีเมล ให้ขอผู้รับตรวจสอบโฟลเดอร์สแปม"
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur จะหยุดอีเมลเหล่านี้ตั้งแต่ตอนนี้ และละเว้นประเภทอีเมลของอีเมลเหล่านี้"
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – บันทึกอีเมล"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: อีเมลถูกระงับไว้"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: โหมด Staging"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "แหล่งที่มาหลัก: %1$s (อีเมล %2$s ฉบับ)"
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "ตรวจสอบให้แน่ใจว่าที่อยู่ From ในปลั๊กอินส่งอีเมลตรงกับโดเมนที่ยืนยันแล้ว"
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "ตรวจสอบให้แน่ใจว่าอีเมลถูกส่งด้วย \"charset=UTF-8\" ไฟล์เทมเพลตบันทึกเป็น UTF-8 และตารางฐานข้อมูลใช้ utf8mb4 แก้ไขข้อความที่ถูกจัดเก็บแบบเสียไปแล้ว"
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "ตรวจสอบให้แน่ใจว่าการตั้งค่าการเข้ารหัสตรงกับพอร์ต"
+
+msgid "Many emails could not be sent recently"
+msgstr "อีเมลจำนวนมากส่งไม่สำเร็จเมื่อเร็วๆ นี้"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "มีเครื่องหมายอัศเจรีย์จำนวนมากในหัวเรื่อง (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "โปรแกรมอีเมลหลายตัวบล็อกรูปภาพจนกว่าผู้อ่านจะอนุญาต หากไม่มีข้อความ alt ผู้อ่านจะเห็นเพียงกล่องว่าง และโปรแกรมอ่านหน้าจอจะไม่อ่านสิ่งที่เป็นประโยชน์"
+
+msgid "Mark as resolved"
+msgstr "ทำเครื่องหมายว่าแก้ไขแล้ว"
+
+msgid "Marked as spam"
+msgstr "ถูกทำเครื่องหมายเป็นสแปม"
+
+msgid "Marked as spam by the recipient"
+msgstr "ผู้รับทำเครื่องหมายเป็นสแปม"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "ปกปิดคีย์รีเซ็ตรหัสผ่าน คีย์เปิดใช้งาน และคีย์การเข้าถึงในลิงก์ที่บันทึกไว้ รวมถึงรหัสผ่าน คีย์ API และหมายเลขบัตรที่ส่งเป็นข้อความธรรมดา"
+
+msgid "Maybe later"
+msgstr "ไว้ทีหลัง"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "อีเมลอาจไม่เคยถูกส่งเลย – ตรวจสอบสถานะคำสั่งซื้อและการตั้งค่าอีเมลของร้านค้าของคุณ"
+
+msgid "Menu position"
+msgstr "ตำแหน่งเมนู"
+
+msgid "Message"
+msgstr "ข้อความ"
+
+msgid "Method"
+msgstr "วิธีการ"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online บล็อกการเข้าสู่ระบบ SMTP (การยืนยันตัวตนแบบพื้นฐาน) สำหรับกล่องจดหมายนี้หรือทั้งองค์กร"
+
+msgid "Minutes"
+msgstr "นาที"
+
+msgid "Monday"
+msgstr "วันจันทร์"
+
+msgid "Monitor again"
+msgstr "ตรวจติดตามอีกครั้ง"
+
+msgid "Monitoring alerts"
+msgstr "การตรวจติดตามและการแจ้งเตือน"
+
+msgid "More"
+msgstr "มากกว่า"
+
+msgid "More actions"
+msgstr "การกระทำเพิ่มเติม"
+
+msgid "More filters"
+msgstr "ตัวกรองเพิ่มเติม"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "สาเหตุที่พบบ่อยที่สุด (%1$s ฉบับ): %2$s"
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "เซิร์ฟเวอร์ส่วนใหญ่รับได้รวม 10–25 MB"
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "พบระเบียน DMARC หลายรายการ ผู้รับจะละเว้น DMARC ในกรณีนี้ – เก็บไว้เพียงรายการเดียว"
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "พบระเบียน SPF หลายรายการ ผู้รับจะถือว่าเป็นข้อผิดพลาด (PermError) – รวมเป็นระเบียนเดียว"
+
+msgid "Needs attention"
+msgstr "ต้องดูแล"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "ไม่มีการบันทึกทั้งส่วนหัว From และผู้ส่ง ระบบส่งอีเมลจะใช้ค่าเริ่มต้นแทน ซึ่งมักเป็น wordpress@yourdomain"
+
+msgid "Never"
+msgstr "ไม่เลย"
+
+msgid "New"
+msgstr "ใหม่"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "สร้าง URL ใหม่แล้ว อัปเดต URL ที่ผู้ให้บริการอีเมลของคุณ"
+
+msgid "New email types"
+msgstr "ประเภทอีเมลใหม่"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "อีเมลใหม่จะถูกระงับไว้จนกว่าคุณจะปล่อยหรือทิ้ง อีเมลรีเซ็ตรหัสผ่านยังคงส่งออกไป"
+
+msgid "New sender"
+msgstr "ผู้ส่งรายใหม่"
+
+msgid "New sender writes to many addresses"
+msgstr "ผู้ส่งรายใหม่ส่งไปยังที่อยู่จำนวนมาก"
+
+msgid "Next email"
+msgstr "อีเมลถัดไป"
+
+msgid "Next email (j)"
+msgstr "อีเมลถัดไป (j)"
+
+msgid "Next page"
+msgstr "หน้าถัดไป"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "ไม่พบคีย์ DKIM ภายใต้ selector ทั่วไป"
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "ไม่มีระเบียน DMARC สำหรับโดเมนผู้ส่ง %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "ไม่พบระเบียน DMARC ผู้ให้บริการกล่องจดหมายรายใหญ่คาดหวังให้มี และหากไม่มี ใครก็สามารถปลอมแปลงโดเมนนี้ได้โดยไม่มีใครสังเกต"
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "ไม่มีระเบียน MX: โดเมนนี้ไม่สามารถรับการตอบกลับหรือการตีกลับได้ และผู้รับบางรายปฏิเสธผู้ส่งลักษณะนี้"
+
+msgid "No SMTP transcript for this email."
+msgstr "ไม่มีบันทึกการสนทนา SMTP สำหรับอีเมลนี้"
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "ไม่มีระเบียน SPF และ DMARC สำหรับโดเมนผู้ส่ง %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "ไม่มีระเบียน SPF สำหรับโดเมนผู้ส่ง %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "ไม่พบระเบียน SPF ผู้รับไม่สามารถบอกได้ว่าเซิร์ฟเวอร์ใดได้รับอนุญาตให้ส่งอีเมลในนามโดเมนนี้"
+
+msgid "No alerts sent yet."
+msgstr "ยังไม่มีการส่งการแจ้งเตือน"
+
+msgid "No connection to the SMTP server"
+msgstr "ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ SMTP"
+
+msgid "No email logged for %s hours"
+msgstr "ไม่มีอีเมลที่บันทึกไว้มา %s ชั่วโมง"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "ไม่มีอีเมลที่บันทึกไว้ใน %1$s ชั่วโมงที่ผ่านมา แม้ว่าเว็บไซต์นี้จะส่งอีเมลในช่วงเวลานี้ใน %2$s จาก %3$s วันที่ผ่านมา (เฉลี่ย %4$s)"
+
+msgid "No emails"
+msgstr "ไม่มีอีเมล"
+
+msgid "No emails found."
+msgstr "ยังไม่มีอีเมลที่บันทึกไว้"
+
+msgid "No emails in this period."
+msgstr "ไม่มีอีเมลในช่วงเวลานี้"
+
+msgid "No emails logged for this order yet."
+msgstr "ยังไม่มีอีเมลที่บันทึกไว้สำหรับคำสั่งซื้อนี้"
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "ยังไม่มีอีเมลที่บันทึกไว้ ประเภทอีเมลจะปรากฏที่นี่ทันทีที่เว็บไซต์ของคุณส่งอีเมล"
+
+msgid "No emails match these filters."
+msgstr "ไม่มีอีเมลที่ตรงกับตัวกรองเหล่านี้"
+
+msgid "No emails sent"
+msgstr "ไม่มีการส่งอีเมล"
+
+msgid "No emails to this user in the log."
+msgstr "ไม่มีอีเมลถึงผู้ใช้นี้ในบันทึก"
+
+msgid "No emails were logged in the last two weeks."
+msgstr "ไม่มีอีเมลที่บันทึกไว้ในสองสัปดาห์ที่ผ่านมา"
+
+msgid "No limit"
+msgstr "ไม่จำกัด"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "ไม่พบบันทึกของปลั๊กอินบันทึกอีเมลอื่นบนเว็บไซต์นี้"
+
+msgid "No log of this plugin was found on this site."
+msgstr "ไม่พบบันทึกของปลั๊กอินนี้บนเว็บไซต์นี้"
+
+msgid "No problem recipients."
+msgstr "ไม่มีผู้รับที่มีปัญหา"
+
+msgid "No problems found in this email."
+msgstr "ไม่พบปัญหาในอีเมลนี้"
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "ไม่พบโดเมนผู้ส่งสาธารณะ (ที่อยู่เว็บไซต์ไม่ใช่ชื่อโดเมน และบันทึกยังไม่มีผู้ส่ง)"
+
+msgid "No public sender domain to check"
+msgstr "ไม่มีโดเมนผู้ส่งสาธารณะให้ตรวจสอบ"
+
+msgid "No regularly sent email has stopped"
+msgstr "ไม่มีอีเมลที่ส่งเป็นประจำหยุดส่ง"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "ไม่มีที่อยู่สำหรับรับรายงาน (rua) – คุณจะไม่เห็นว่าใครส่งอีเมลในนามของคุณ"
+
+msgid "No sender address recorded"
+msgstr "ไม่มีการบันทึกที่อยู่ผู้ส่ง"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "ไม่มีร่องรอยสำหรับรายการนี้ รายการนี้ถูกบันทึกก่อนที่จะมีร่องรอย หรือบันทึกโดยเวอร์ชันที่ไม่มีฟีเจอร์นี้"
+
+msgid "No unusual email failures"
+msgstr "ไม่มีการส่งอีเมลไม่สำเร็จที่ผิดปกติ"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "ไม่ โดยตั้งใจ “%1$s” ถึง %2$s ถูกระงับไว้%3$s และไม่ได้ส่ง สาเหตุ: %4$s"
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "ไม่ อีเมลทุกฉบับที่ส่งเป็นประจำออกไปตามกำหนดแล้ว"
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "ไม่ “%1$s” ถึง %2$s ส่งไม่สำเร็จ%3$s สาเหตุ: %4$s"
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "ไม่ “%1$s” ถึง %2$s ออกจากเว็บไซต์ของคุณ%3$s แต่ %4$s รายงานว่าเซิร์ฟเวอร์ปลายทางปฏิเสธอีเมลนี้"
+
+msgid "None"
+msgstr "ไม่มี"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "ปกติส่งอย่างน้อยทุก %1$s วัน ตอนนี้เลยกำหนดมา %2$s"
+
+msgid "Not all selectors could be checked in time."
+msgstr "ไม่สามารถตรวจสอบ selector ทั้งหมดได้ทันเวลา"
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "ไม่ได้บันทึก: ปลั๊กอินอื่นเปิดการดีบัก SMTP อยู่"
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "ไม่ได้บันทึก: บันทึกการสนทนา SMTP ถูกปิดในการตั้งค่า"
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "ไม่ได้บันทึก: อีเมลนี้ไม่ได้ส่งผ่าน SMTP"
+
+msgid "Not set up"
+msgstr "ยังไม่ได้ตั้งค่า"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "ไม่ได้จัดเก็บ: บันทึกการสนทนาจะเก็บไว้เฉพาะอีเมลที่ส่งไม่สำเร็จ"
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "ยังไม่ถึง “%1$s” ถึง %2$s ออกจากเว็บไซต์ของคุณ%3$s แต่ %4$s รายงานว่ามีปัญหาชั่วคราว"
+
+msgid "Notes"
+msgstr "หมายเหตุ"
+
+msgid "Notes in the latest email: %s"
+msgstr "หมายเหตุในอีเมลล่าสุด: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "หมายเหตุ: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "หมายเหตุ: %s"
+
+msgid "Nothing else is expected today."
+msgstr "วันนี้ไม่มีอีเมลอื่นที่คาดว่าจะส่งอีก"
+
+msgid "Nothing failed in the last 7 days."
+msgstr "ไม่มีอีเมลที่ส่งไม่สำเร็จใน 7 วันที่ผ่านมา"
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "ยังไม่มีข้อมูลให้เปรียบเทียบ: ยังไม่มีอีเมลใดที่ส่งสม่ำเสมอพอให้ Mailspur สังเกตเห็นช่วงที่ขาดหายไป"
+
+msgid "Number of failed emails"
+msgstr "จำนวนอีเมลที่ส่งไม่สำเร็จ"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "ระบบจะไม่สนใจตัวเลข ดังนั้น “คำสั่งซื้อ #123” และ “คำสั่งซื้อ #124” จะนับรวมกัน"
+
+msgid "OK"
+msgstr "ตกลง"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "จากอีเมล %1$s ฉบับล่าสุดที่ส่งขณะมีผู้รอหน้าเว็บโหลด ครึ่งหนึ่งใช้เวลานานกว่า %2$s วินาที (เฉลี่ย %3$s วินาที)"
+
+msgid "Off"
+msgstr "ปิด"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "ปิดไว้โดยค่าเริ่มต้น หากไม่เปิด \"ดาวน์โหลด .eml\" จะสร้างข้อความขึ้นใหม่จากข้อมูลที่บันทึกไว้ (ปกปิดแล้ว) ซอร์สดิบมีลิงก์รีเซ็ตรหัสผ่านและข้อมูลลับอื่นๆ ตรงตามที่ส่งออกไป – เปิดใช้เฉพาะเมื่อจำเป็นและทำเครื่องหมายทั้งสองช่องแล้ว"
+
+msgid "Off – deliver emails normally"
+msgstr "ปิด – จัดส่งอีเมลตามปกติ"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "เมื่อแก้ไขสาเหตุแล้ว คุณสามารถส่งอีเมลอีกครั้งได้จากบันทึก"
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "เมื่อรายงานแสดงว่าอีเมลที่ถูกต้องผ่านการตรวจสอบแล้ว ให้เปลี่ยนเป็น p=quarantine (หรือ p=reject)"
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "อีเมลหนึ่งในสองฉบับถูกลบหรือทำให้เป็นข้อมูลนิรนามโดยการตั้งค่าการเก็บรักษา จึงไม่สามารถเปรียบเทียบได้อีก"
+
+msgid "Only administrators can empty the log."
+msgstr "เฉพาะผู้ดูแลระบบเท่านั้นที่ล้างบันทึกได้"
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "เฉพาะผู้ดูแลระบบเท่านั้นที่ส่งอีเมลไปยังที่อยู่อื่นได้"
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "แจ้งเตือนเฉพาะเมื่อข้อมูล 14 วันล่าสุดแสดงว่าโดยปกติมีการส่งอีเมลในช่วงเวลานี้ (อย่างน้อย 10 จาก 14 วัน รวมถึงวันเดียวกันของสัปดาห์) คืนหรือวันหยุดสุดสัปดาห์ที่เงียบจึงไม่ทำให้เกิดการแจ้งเตือน"
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "เฉพาะอีเมลที่ผู้รับทุกรายเป็นผู้รับที่มีปัญหา อีเมลรีเซ็ตรหัสผ่านจะส่งออกไปเสมอ อีเมลที่ถูกระงับไว้ยังส่งได้จากบันทึก (\"ส่งเดี๋ยวนี้\")"
+
+msgid "Only held emails can be released."
+msgstr "ปล่อยได้เฉพาะอีเมลที่ถูกระงับไว้เท่านั้น"
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "รายชื่อผู้รับแบบเปิด: ผู้รับภายนอก %1$s รายเห็นที่อยู่ของกันและกัน"
+
+msgid "Open in log"
+msgstr "เปิดในบันทึก"
+
+msgid "Open latest"
+msgstr "เปิดฉบับล่าสุด"
+
+msgid "Open staging mode"
+msgstr "เปิดโหมด Staging"
+
+msgid "Open the email types"
+msgstr "เปิดประเภทอีเมล"
+
+msgid "Open the emergency brake"
+msgstr "เปิดเบรกฉุกเฉิน"
+
+msgid "Open the log"
+msgstr "เปิดบันทึก"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "เปิดบันทึกหรือมุมมองดีบักของปลั๊กอินส่งอีเมลของคุณเพื่อดูข้อผิดพลาดที่แน่ชัด"
+
+msgid "Open the mail log"
+msgstr "เปิดบันทึกอีเมล"
+
+msgid "Open the sender check"
+msgstr "เปิดการตรวจสอบผู้ส่ง"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "ไม่บังคับและปิดไว้โดยค่าเริ่มต้น เมื่อเปิดใช้ Mailspur จะตรวจสอบบันทึกเป็นประจำและแจ้งคุณเมื่อการส่งไม่สำเร็จพุ่งสูง เงียบผิดปกติ หรือประเภทอีเมลหยุดส่ง การแจ้งเตือนจะส่งไปยังที่อยู่และ webhook ที่คุณป้อนที่นี่เท่านั้น โดยมีชื่อเว็บไซต์ ข้อความแจ้งเตือน (สำหรับประเภทอีเมลที่หยุดส่ง: ผู้ส่งและรูปแบบหัวเรื่อง) และลิงก์ไปยังบันทึก – ไม่มีเนื้อหาอีเมลหรือผู้รับ"
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "ไม่บังคับ เฉพาะ https เท่านั้น URL ของ webhook Slack และ Discord จะได้รับข้อความแชต URL อื่นจะได้รับคำขอ JSON POST เซิร์ฟเวอร์ของคุณส่งคำขอไปยัง URL นี้โดยตรง – ไม่มีบริการอื่นเกี่ยวข้อง"
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "หรือเพิ่มที่อยู่เป็นนามแฝง / สิทธิ์ \"ส่งในนาม\" ที่ผู้ให้บริการอีเมลของคุณ"
+
+msgid "Order #%s"
+msgstr "คำสั่งซื้อ #%s"
+
+msgid "Order data"
+msgstr "ข้อมูลคำสั่งซื้อ"
+
+msgid "Origin"
+msgstr "ต้นทาง"
+
+msgid "Original Bcc"
+msgstr "Bcc เดิม"
+
+msgid "Original Cc"
+msgstr "Cc เดิม"
+
+msgid "Original recipients"
+msgstr "ผู้รับเดิม"
+
+msgid "Other emails"
+msgstr "อีเมลอื่นๆ"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "ผู้รับอื่นๆ (เช่น ผู้เยี่ยมชม)"
+
+msgid "Overview"
+msgstr "ภาพรวม"
+
+msgid "Own top-level menu item"
+msgstr "เมนูหลักของตัวเอง"
+
+msgid "PHP extension openssl is missing"
+msgstr "ไม่มีส่วนขยาย PHP openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer พร้อมแล้ว (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "การแบ่งหน้า"
+
+msgid "Password sent in plain text"
+msgstr "ส่งรหัสผ่านเป็นข้อความธรรมดา"
+
+msgid "Path"
+msgstr "พาธ"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "หมายเลขบัตรชำระเงินเป็นข้อความธรรมดา: %1$s"
+
+msgid "Per page"
+msgstr "ต่อหน้า"
+
+msgid "Period"
+msgstr "ช่วงเวลา"
+
+msgid "Personal data"
+msgstr "ข้อมูลส่วนบุคคล"
+
+msgid "Phone"
+msgstr "โทรศัพท์"
+
+msgid "Phone number"
+msgstr "หมายเลขโทรศัพท์"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "ความกว้างโทรศัพท์ (375 px) หากเลื่อนไปด้านข้างได้ แสดงว่าอีเมลกว้างกว่าหน้าจอโทรศัพท์ส่วนใหญ่"
+
+msgid "Plain text"
+msgstr "ข้อความธรรมดา"
+
+msgid "Please enter valid email addresses."
+msgstr "โปรดป้อนที่อยู่อีเมลที่ถูกต้อง"
+
+msgid "Plugin"
+msgstr "ปลั๊กอิน"
+
+msgid "Plugin or theme that sent the email."
+msgstr "ปลั๊กอินหรือธีมที่ส่งอีเมล"
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "ชี้ให้เห็นปัญหาที่ทำให้อีเมลไปไม่ถึงหรือแสดงผลไม่ถูกต้อง"
+
+msgid "Port"
+msgstr "พอร์ต"
+
+msgid "Postal address"
+msgstr "ที่อยู่ไปรษณีย์"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo หรือ Amazon SES สามารถรายงานมายังเว็บไซต์นี้ได้ว่าอีเมลถูกจัดส่ง ตีกลับ หรือถูกทำเครื่องหมายเป็นสแปม สถานะจะแสดงที่อีเมลที่บันทึกไว้ และการตีกลับแบบถาวรจะนับรวมในผู้รับที่มีปัญหา เพื่อจับคู่รายงาน Mailspur จะเพิ่มส่วนหัวอ้างอิงในอีเมลขาออก"
+
+msgid "Preparation"
+msgstr "การเตรียม"
+
+msgid "Preview"
+msgstr "ตัวอย่าง"
+
+msgid "Previews"
+msgstr "ตัวอย่าง"
+
+msgid "Previous email"
+msgstr "อีเมลก่อนหน้า"
+
+msgid "Previous email (k)"
+msgstr "อีเมลก่อนหน้า (k)"
+
+msgid "Previous page"
+msgstr "หน้าก่อนหน้า"
+
+msgid "Print"
+msgstr "พิมพ์"
+
+msgid "Privacy"
+msgstr "ความเป็นส่วนตัว"
+
+msgid "Privacy & security"
+msgstr "ความเป็นส่วนตัวและความปลอดภัย"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "น่าจะใช่: ประเภทอีเมล %s ประเภทหยุดส่งแล้ว"
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "อีเมลทดสอบจะส่งถึงผู้ดูแลระบบเท่านั้น"
+
+msgid "Problem"
+msgstr "ปัญหา"
+
+msgid "Problem recipients"
+msgstr "ผู้รับที่มีปัญหา"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "ปกป้องโดเมนของคุณเมื่อมีอีเมลส่งออกมากกว่าปกติมาก เช่น เพราะบอตสแปมใช้แบบฟอร์มติดต่อในทางที่ผิด การแจ้งเตือนใช้ช่องทางเดียวกับการแจ้งเตือนการตรวจติดตาม อีเมลรีเซ็ตรหัสผ่านจะไม่ถูกระงับเลย"
+
+msgid "Provider status"
+msgstr "สถานะจากผู้ให้บริการ"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "ผู้ให้บริการอย่าง %2$s เผยแพร่นโยบาย DMARC ที่เข้มงวด อีเมล \"จาก\" โดเมนของผู้ให้บริการเหล่านั้นที่ส่งโดยเว็บเซิร์ฟเวอร์ของคุณจะไม่ผ่านการตรวจสอบและถูกปฏิเสธหรือไปอยู่ในสแปม"
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "ใส่เนื้อหาสำคัญเป็นข้อความจริง และใช้รูปภาพเป็นส่วนเสริมเท่านั้น"
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "ใส่ข้อมูลสำคัญไว้ก่อน และให้หัวเรื่องยาวไม่เกินประมาณ 80 อักขระ"
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "เส้นทาง REST"
+
+msgid "Rarely"
+msgstr "นานๆ ครั้ง"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "ให้คะแนน Mailspur บน WordPress.org"
+
+msgid "Raw source"
+msgstr "ซอร์สดิบ"
+
+msgid "Reason"
+msgstr "สาเหตุ"
+
+msgid "Rebuild from the log"
+msgstr "สร้างใหม่จากบันทึก"
+
+msgid "Recipient"
+msgstr "ผู้รับ"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "โดเมนผู้รับไม่สามารถรับอีเมลได้: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "โดเมนผู้รับไม่รับอีเมล: %1$s"
+
+msgid "Recipients"
+msgstr "ผู้รับ"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "แนะนำ มิฉะนั้นใครก็ตามที่เข้าถึงบันทึกได้อาจใช้ลิงก์รีเซ็ตหรือรหัสผ่านที่บันทึกไว้เพื่อยึดบัญชีได้ การส่งอีเมลดังกล่าวอีกครั้งจะส่งฉบับที่ปกปิดแล้ว"
+
+msgid "Record for every email"
+msgstr "บันทึกสำหรับทุกอีเมล"
+
+msgid "Record for failed emails only"
+msgstr "บันทึกเฉพาะอีเมลที่ส่งไม่สำเร็จ"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "บันทึกการสนทนากับเซิร์ฟเวอร์ SMTP (เฉพาะเมื่อส่งอีเมลผ่าน SMTP) ข้อมูลเข้าสู่ระบบและเนื้อหาข้อความจะไม่ถูกบันทึกเลย จะข้ามไปขณะที่ปลั๊กอินอื่นเปิดการดีบัก SMTP อยู่"
+
+msgid "Recovery"
+msgstr "กลับสู่ปกติ"
+
+msgid "Redact secrets"
+msgstr "ปกปิดข้อมูลลับ"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "เปลี่ยนเส้นทางอีเมลทั้งหมดไปยังที่อยู่ด้านล่าง"
+
+msgid "Redirect to"
+msgstr "เปลี่ยนเส้นทางไปที่"
+
+msgid "Redirect to test addresses"
+msgstr "เปลี่ยนเส้นทางไปยังที่อยู่ทดสอบ"
+
+msgid "Redirected by staging mode."
+msgstr "เปลี่ยนเส้นทางโดยโหมด Staging"
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "ลดขนาด HTML: ลบ CSS ที่ไม่ได้ใช้ สไตล์อินไลน์ที่ซ้ำกัน ความเห็นในโค้ด และ URL ติดตามที่ยาว รูปภาพไม่นับรวม นับเฉพาะ HTML เท่านั้น"
+
+msgid "Registered users"
+msgstr "ผู้ใช้ที่ลงทะเบียน"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "ถูกปฏิเสธโดย SPF, DKIM หรือ DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "ลิงก์หรือรูปภาพแบบสัมพัทธ์ (%1$s) เช่น %2$s"
+
+msgid "Release held emails"
+msgstr "ปล่อยอีเมลที่ถูกระงับไว้"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "ปล่อยจากโหมด Staging แล้ว (รายการที่ถูกระงับไว้ #%s)"
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "ปล่อยจากเบรกฉุกเฉินแล้ว (รายการที่ถูกระงับไว้ #%s)"
+
+msgid "Remote content"
+msgstr "เนื้อหาภายนอก"
+
+msgid "Remote content is loaded."
+msgstr "โหลดเนื้อหาภายนอกแล้ว"
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "รูปภาพและฟอนต์ภายนอกถูกบล็อก เพื่อไม่ให้ผู้ส่งติดตามได้ว่าคุณเปิดรายการนี้เมื่อใด"
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "ลบรายการทั้งหมดที่นำเข้าจาก %s หรือไม่? ข้อมูลในปลั๊กอินอื่นจะไม่ได้รับผลกระทบ"
+
+msgid "Remove imported entries"
+msgstr "ลบรายการที่นำเข้า"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "ลบช่องหมายเลขบัตรออกจากการแจ้งเตือนของแบบฟอร์มหรือปลั๊กอินที่ส่งอีเมลนี้ – ข้อมูลบัตรควรอยู่กับผู้ให้บริการชำระเงินเท่านั้น แสดงไม่เกินสี่หลักสุดท้าย ขอให้ผู้รับลบอีเมลนี้"
+
+msgid "Removed:"
+msgstr "ลบ:"
+
+msgid "Repeat alerts after"
+msgstr "แจ้งเตือนซ้ำหลังจาก"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "การตอบกลับไปไม่ถึงคุณ: ส่งจาก %1$s โดยไม่มี Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "รายงานโดยผู้ให้บริการอีเมลของคุณใน 30 วันที่ผ่านมา นับเฉพาะอีเมลที่ผู้ให้บริการรายงานเท่านั้น"
+
+msgid "Request"
+msgstr "คำขอ"
+
+msgid "Request failed: %s"
+msgstr "คำขอไม่สำเร็จ: %s"
+
+msgid "Resend"
+msgstr "ส่งอีกครั้ง"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "ส่งอีเมลอีกครั้งจากบันทึกในอีกไม่กี่นาที"
+
+msgid "Resend the email from the log later."
+msgstr "ส่งอีเมลอีกครั้งจากบันทึกในภายหลัง"
+
+msgid "Resend the email from the log once delivery works."
+msgstr "ส่งอีเมลอีกครั้งจากบันทึกเมื่อการจัดส่งใช้งานได้แล้ว"
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "ส่งอีเมลที่ส่งไม่สำเร็จอีกครั้งเมื่อขีดจำกัดรีเซ็ตแล้ว"
+
+msgid "Resent from log"
+msgstr "ส่งอีกครั้งจากบันทึก"
+
+msgid "Reset filters"
+msgstr "รีเซ็ตตัวกรอง"
+
+msgid "Result"
+msgstr "ผลลัพธ์"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "ผลลัพธ์จากแคช – ใช้ \"ตรวจสอบอีกครั้ง\" หลังเปลี่ยนระเบียน DNS"
+
+msgid "Retention"
+msgstr "การเก็บรักษา"
+
+msgid "Retention in the log"
+msgstr "การเก็บรักษาในบันทึก"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "บันทึกการเก็บรักษาของประเภทอีเมลนี้แล้ว จะมีผลในการล้างข้อมูลรายวันครั้งถัดไป"
+
+msgid "Review held emails"
+msgstr "ตรวจดูอีเมลที่ถูกระงับไว้"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "ตรวจดูหมายเหตุของอีเมลนี้ (ลิงก์ ผู้ส่ง ตัวยึดตำแหน่ง)"
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "เพิกถอนคีย์ในแดชบอร์ดของบริการและสร้างคีย์ใหม่ จากนั้นหาสาเหตุว่าทำไมคีย์จึงไปอยู่ในอีเมล (รายงานดีบักหรือข้อผิดพลาด แบบฟอร์มที่แสดงการตั้งค่า) แล้วหยุดสิ่งนั้น"
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "คีย์ที่ถูกเพิกถอน (p= ว่าง): %s"
+
+msgid "Rhythm"
+msgstr "จังหวะ"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "ค้นหาและแทนที่โดเมนเก่าในฐานข้อมูล และตรวจสอบ URL ที่เขียนตายตัวไว้ในเทมเพลตอีเมลและการตั้งค่าปลั๊กอิน"
+
+msgid "Run the full sender check"
+msgstr "เรียกใช้การตรวจสอบผู้ส่งแบบเต็ม"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH ถูกปิดใช้งานใน Microsoft 365"
+
+msgid "SMTP host"
+msgstr "โฮสต์ SMTP"
+
+msgid "SMTP login failed"
+msgstr "การเข้าสู่ระบบ SMTP ล้มเหลว"
+
+msgid "SMTP transcript"
+msgstr "บันทึกการสนทนา SMTP"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "ระเบียน SPF อนุญาตให้ทุกเซิร์ฟเวอร์ในโลกส่งอีเมลในนามโดเมนนี้ได้ (+all)"
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "ระเบียน SPF ลงท้ายด้วย ?all (เป็นกลาง): ไม่ได้ป้องกันโดเมนจากการปลอมแปลง"
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "พบระเบียน SPF (redirect= ไปยังนโยบายอื่น)"
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "พบระเบียน SPF เซิร์ฟเวอร์อื่นจะถูกทำเครื่องหมายว่าน่าสงสัย (~all, softfail)"
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "พบระเบียน SPF เซิร์ฟเวอร์อื่นจะถูกปฏิเสธ (-all)"
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "ระเบียน SPF ไม่มีเงื่อนไข \"all\" อีเมลจากเซิร์ฟเวอร์อื่นจึงถูกถือว่าเป็นกลาง"
+
+msgid "Saturday"
+msgstr "วันเสาร์"
+
+msgid "Save"
+msgstr "บันทึก"
+
+msgid "Saved – leave empty to keep it"
+msgstr "บันทึกแล้ว – เว้นว่างไว้เพื่อใช้ค่าเดิม"
+
+msgid "Scheduled for later today:"
+msgstr "กำหนดส่งภายหลังวันนี้:"
+
+msgid "Search recipient or subject"
+msgstr "ค้นหาผู้รับหรือหัวเรื่อง"
+
+msgid "Search recipient or subject …"
+msgstr "ค้นหาผู้รับหรือหัวเรื่อง …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "ค้นหาที่อยู่เก่าในเทมเพลตอีเมล การตั้งค่าปลั๊กอิน และฐานข้อมูล (เช่น หลังย้ายเว็บไซต์) แล้วแทนที่ด้วยโดเมนที่ใช้งานจริง"
+
+msgid "See why"
+msgstr "ดูสาเหตุ"
+
+msgid "Seen"
+msgstr "เห็นแล้ว"
+
+msgid "Select all"
+msgstr "เลือกทั้งหมด"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Selector \"%s\" ก็ไม่มีคีย์เช่นกัน"
+
+msgid "Send"
+msgstr "ส่ง"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "ส่งลิงก์ให้ผู้ใช้ตั้งรหัสผ่านเองแทน – อีเมลผู้ใช้ใหม่ของแกนหลัก WordPress ทำเช่นนั้นอยู่แล้ว มองหาตัวเลือกอย่าง \"Send password by email\" หรือ \"Include password\" ในปลั๊กอินที่ส่งอีเมลนี้แล้วปิดไว้"
+
+msgid "Send a message when the problem is resolved"
+msgstr "ส่งข้อความเมื่อแก้ไขปัญหาแล้ว"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "ส่งอีเมลทดสอบจากการตั้งค่าของปลั๊กอินส่งอีเมล"
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "ส่งรายงานอีเมลรายสัปดาห์ไปยังที่อยู่ด้านบน"
+
+msgid "Send again"
+msgstr "ส่งอีกครั้ง"
+
+msgid "Send alerts by email to"
+msgstr "ส่งการแจ้งเตือนทางอีเมลไปที่"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "ส่งอีเมลที่ถูกระงับไว้ทั้งหมด %s ฉบับถึงผู้รับเดิมเดี๋ยวนี้หรือไม่?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "ส่งไฟล์ขนาดใหญ่เป็นลิงก์ดาวน์โหลดแทนไฟล์แนบ"
+
+msgid "Send latest to me"
+msgstr "ส่งฉบับล่าสุดถึงฉัน"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "ส่งจดหมายข่าวด้วยปลั๊กอินหรือบริการจดหมายข่าวที่เพิ่มส่วนหัว List-Unsubscribe และ List-Unsubscribe-Post และอย่าส่งถึงคนจำนวนมากในอีเมลฉบับเดียวผ่าน Bcc"
+
+msgid "Send now"
+msgstr "ส่งเดี๋ยวนี้"
+
+msgid "Send report now"
+msgstr "ส่งรายงานเดี๋ยวนี้"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "ส่งอีเมลลักษณะนี้ถึงผู้รับแต่ละรายแยกกัน หรือใส่ผู้รับไว้ใน Bcc สำหรับจดหมายข่าว ให้ใช้ปลั๊กอินจดหมายข่าวที่ส่งหนึ่งอีเมลต่อผู้รับหนึ่งราย หากที่อยู่ของลูกค้าถูกเปิดเผย ให้ปรึกษาเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคลของคุณว่าต้องรายงานเหตุการณ์นี้หรือไม่"
+
+msgid "Send test alert"
+msgstr "ส่งการแจ้งเตือนทดสอบ"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "ส่งอีเมลด้วยส่วนหัว \"Content-Type: text/html; charset=UTF-8\" หรือกำหนดประเภทเนื้อหาด้วยฟิลเตอร์ wp_mail_content_type ปลั๊กอินแบบฟอร์มและร้านค้าหลายตัวมีตัวเลือก \"อีเมล HTML\""
+
+msgid "Send the latest email of this type to %s?"
+msgstr "ส่งอีเมลล่าสุดของประเภทนี้ถึง %s หรือไม่?"
+
+msgid "Send this email again to %s?"
+msgstr "ส่งอีเมลนี้อีกครั้งถึง %s หรือไม่?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "ส่งอีเมลนี้ถึง (สูงสุด 10 ที่อยู่ คั่นด้วยเครื่องหมายจุลภาค):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "ส่งอีเมลที่ถูกระงับไว้นี้ถึง %s เดี๋ยวนี้หรือไม่? จะข้ามโหมด Staging สำหรับอีเมลฉบับนี้เท่านั้น"
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "ส่งผ่านบริการ SMTP ที่น่าเชื่อถือแทนเว็บเซิร์ฟเวอร์ โดยเฉพาะบนโฮสติ้งแบบแชร์"
+
+msgid "Send to…"
+msgstr "ส่งถึง…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "การตรวจสอบผู้ส่ง (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "โดเมนผู้ส่ง %1$s แตกต่างจากเว็บไซต์ (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "โดเมนผู้ส่ง (SPF และ DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "โดเมนหรือที่อยู่ผู้ส่งยังไม่ได้รับการยืนยัน"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "ผู้ส่งของ %s จากอีเมล 200 ฉบับล่าสุด"
+
+msgid "Sending failed – see the log."
+msgstr "ส่งไม่สำเร็จ – ดูบันทึก"
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "ส่งไม่สำเร็จ – ดูรายละเอียดในรายการบันทึกใหม่"
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "การส่งในเบื้องหลัง (ปลั๊กอินส่งอีเมลที่มีคิว) ช่วยให้หน้าเว็บโหลดเสร็จโดยไม่ต้องรอ"
+
+msgid "Sending limit or quota reached"
+msgstr "ถึงขีดจำกัดการส่งหรือโควตาแล้ว"
+
+msgid "Sending report …"
+msgstr "กำลังส่งรายงาน …"
+
+msgid "Sending test alert …"
+msgstr "กำลังส่งการแจ้งเตือนทดสอบ …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "การส่งกลับมาทำงานแล้ว: การส่งไม่สำเร็จไม่พุ่งสูงอีกต่อไป"
+
+msgid "Sending…"
+msgstr "กำลังส่ง…"
+
+msgid "Sent"
+msgstr "ส่งแล้ว"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "ส่งในนามที่อยู่อีเมลฟรี: %1$s"
+
+msgid "Sent by"
+msgstr "ส่งโดย"
+
+msgid "Sent by WP-Cron."
+msgstr "ส่งโดย WP-Cron"
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "ส่งโดยเหตุการณ์ cron %1$s – เลยกำหนดมา %2$s ขณะที่ WP-Cron เรียกใช้เหตุการณ์อื่น อาจล้มเหลวด้วยข้อผิดพลาด"
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "ส่งโดยเหตุการณ์ cron %1$s – เหตุการณ์ถูกตั้งเวลาไว้ (ทำงานครั้งถัดไปในอีก %2$s) และ WP-Cron ทำงานอยู่ ดังนั้นเหตุการณ์นี้ไม่ได้ส่งอีเมลนี้อีกแล้ว"
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "ส่งโดยเหตุการณ์ cron %s – เหตุการณ์นี้ไม่ได้ถูกตั้งเวลาไว้อีกแล้ว"
+
+msgid "Sent by the cron event %s."
+msgstr "ส่งโดยเหตุการณ์ cron %s"
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "ส่งซ้ำ: อีเมลที่เหมือนกันอีก %1$s ฉบับภายใน %2$s นาที"
+
+msgid "Sent to %s."
+msgstr "ส่งถึง %s แล้ว"
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "ส่งไปยังที่อยู่เดียวกันในช่วงวันที่สั่งซื้อ แต่ไม่ได้เชื่อมโยงกับคำสั่งซื้อนี้ (เช่น บันทึกไว้ก่อนที่จะมีการเชื่อมโยง หรือนำเข้ามา)"
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "ตั้งที่อยู่ Reply-To ที่มีคนอ่าน เช่น ใน WooCommerce → การตั้งค่า → อีเมล หรือในการตั้งค่าอีเมลของปลั๊กอินแบบฟอร์ม หรือส่งจากที่อยู่ที่รับการตอบกลับได้"
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "ตั้งที่อยู่ผู้ส่งบนโดเมนของคุณในปลั๊กอิน SMTP หรือผ่านฟิลเตอร์ wp_mail_from"
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "ตั้งที่อยู่ผู้ส่งบนโดเมนจริงของคุณ เช่น ในปลั๊กอิน SMTP หรือผ่านฟิลเตอร์ wp_mail_from และตรวจสอบที่อยู่เว็บไซต์ใน การตั้งค่า → ทั่วไป"
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "ตั้งหัวเรื่องในเทมเพลตหรือการตั้งค่าแบบฟอร์มของปลั๊กอินที่ส่ง"
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "ตั้งที่อยู่ From ในปลั๊กอิน SMTP ให้เป็นกล่องจดหมายที่คุณใช้เข้าสู่ระบบ และเปิดใช้ \"force From address\""
+
+msgid "Set up staging mode"
+msgstr "ตั้งค่าโหมด Staging"
+
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+msgid "Settings › Discussion"
+msgstr "การตั้งค่า › การแสดงความเห็น"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "เครื่องหมายอัศเจรีย์หลายตัวเป็นลักษณะทั่วไปของสแปมโฆษณา ตัวกรองสแปมอาจนับเป็นคะแนนลบ ซึ่งทำให้การจัดส่งแย่ลงได้"
+
+msgid "Several of the latest emails of this type failed."
+msgstr "อีเมลล่าสุดหลายฉบับของประเภทนี้ส่งไม่สำเร็จ"
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "สัดส่วนอีเมลที่ส่งไม่สำเร็จต่อวัน (ต่อสัปดาห์สำหรับช่วงเวลายาว)"
+
+msgid "Shop managers and above"
+msgstr "ผู้จัดการร้านค้าขึ้นไป"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "ลิงก์แบบย่อซ่อนปลายทางที่แท้จริง ผู้ส่งสแปมใช้กันมาก ตัวกรองสแปมจึงอาจนับเป็นคะแนนลบ ซึ่งทำให้การจัดส่งแย่ลงได้"
+
+msgid "Show all email types"
+msgstr "แสดงประเภทอีเมลทั้งหมด"
+
+msgid "Show all in Mail Log"
+msgstr "แสดงทั้งหมดในบันทึกอีเมล"
+
+msgid "Show as"
+msgstr "แสดงเป็น"
+
+msgid "Show data as table"
+msgstr "แสดงข้อมูลเป็นตาราง"
+
+msgid "Show email types"
+msgstr "แสดงประเภทอีเมล"
+
+msgid "Show emails"
+msgstr "แสดงอีเมล"
+
+msgid "Show emails for %s in the log"
+msgstr "แสดงอีเมลของ %s ในบันทึก"
+
+msgid "Show failed emails"
+msgstr "แสดงอีเมลที่ส่งไม่สำเร็จ"
+
+msgid "Show held emails"
+msgstr "แสดงอีเมลที่ถูกระงับไว้"
+
+msgid "Show these emails in the log"
+msgstr "แสดงอีเมลเหล่านี้ในบันทึก"
+
+msgid "Silence"
+msgstr "ความเงียบ"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "จำลองโหมดมืดโดยใช้สไตล์โหมดมืดของอีเมลเอง แอปอีเมลแต่ละตัวจัดการโหมดมืดแตกต่างกันเล็กน้อย"
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "จำลองแอปที่บังคับโหมดมืดด้วยการกลับสี รูปภาพยังคงสีเดิม แอปจริงอาจแตกต่างในรายละเอียด"
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "ตั้งแต่ปี 2024 Gmail และ Yahoo กำหนดให้อีเมลจำนวนมากต้องมีการยกเลิกการรับแบบคลิกเดียว (ส่วนหัว List-Unsubscribe) หากไม่มี จดหมายข่าวมีแนวโน้มจะถูกปฏิเสธหรือถูกกรองมากขึ้น"
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "การส่งไม่สำเร็จเป็นครั้งคราว เช่น จากที่อยู่ที่พิมพ์ผิด ถือเป็นเรื่องปกติ"
+
+msgid "Some emails could not be sent recently"
+msgstr "อีเมลบางฉบับส่งไม่สำเร็จเมื่อเร็วๆ นี้"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "การค้นหาบางรายการถูกข้ามเพราะ DNS ตอบสนองช้าเกินไป"
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "ขออภัย คุณไม่ได้รับอนุญาตให้เข้าถึงหน้านี้"
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "ขออภัย คุณไม่ได้รับอนุญาตให้ทำสิ่งนั้น"
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "ขออภัย คุณไม่ได้รับอนุญาตให้ส่งออกบันทึกอีเมล"
+
+msgid "Source"
+msgstr "แหล่งที่มา"
+
+msgid "Staging"
+msgstr "Staging"
+
+msgid "Staging mode"
+msgstr "โหมด Staging"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "โหมด Staging ทำงานอยู่: อีเมลทั้งหมดถูกเปลี่ยนเส้นทางไปที่ %s"
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "โหมด Staging ทำงานอยู่: อีเมลถูกบันทึกแต่ไม่ได้จัดส่ง"
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "โหมด Staging ทำงานอยู่: อีเมลควรถูกเปลี่ยนเส้นทาง แต่ไม่ได้กำหนดที่อยู่ปลายทางที่ถูกต้อง – อีเมลทั้งหมดจึงถูกระงับไว้และไม่ได้จัดส่ง"
+
+msgid "Staging mode is off"
+msgstr "โหมด Staging ปิดอยู่"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "โหมด Staging เปิดอยู่ ทั้งที่นี่เป็นเว็บไซต์ที่ใช้งานจริง"
+
+msgid "Staging mode is on for this staging site"
+msgstr "โหมด Staging เปิดอยู่สำหรับเว็บไซต์ staging นี้"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "โหมด Staging เปิดอยู่: อีเมลทั้งหมดจะส่งไปยังที่อยู่ทดสอบของคุณ ไม่ใช่ผู้รับจริง"
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "โหมด Staging เปิดอยู่: อีเมลจะถูกบันทึกแต่ไม่ถูกส่ง"
+
+msgid "Staging mode settings"
+msgstr "การตั้งค่าโหมด Staging"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "เริ่มต้นด้วย p=none เพื่อรับรายงาน แล้วเข้มงวดขึ้นเป็น quarantine หรือ reject เมื่อ SPF และ DKIM ผ่าน"
+
+msgid "Statistics"
+msgstr "สถิติ"
+
+msgid "Status"
+msgstr "สถานะ"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "กำลังจัดอีเมลเก่า %s ฉบับเข้าประเภทในเบื้องหลัง โหลดหน้านี้ใหม่ในอีกหนึ่งนาที"
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "หยุดรวมอีเมล (ส่งอีเมลที่รออยู่ทันที)"
+
+msgid "Stop these emails"
+msgstr "หยุดอีเมลเหล่านี้"
+
+msgid "Stopped"
+msgstr "หยุดส่ง"
+
+msgid "Stopped by Mailspur."
+msgstr "หยุดโดย Mailspur"
+
+msgid "Stopped email types"
+msgstr "ประเภทอีเมลที่หยุดส่ง"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "จัดเก็บซอร์ส MIME ดิบที่ตรงทุกประการของทุกอีเมล"
+
+msgid "Subject"
+msgstr "หัวเรื่อง"
+
+msgid "Subject mostly in capital letters"
+msgstr "หัวเรื่องเป็นตัวพิมพ์ใหญ่เป็นส่วนใหญ่"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "หัวเรื่องที่เป็นตัวพิมพ์ใหญ่อ่านแล้วเหมือนตะโกน และพบบ่อยในสแปม ตัวกรองสแปมอาจนับเป็นคะแนนลบ ซึ่งทำให้การจัดส่งแย่ลงได้"
+
+msgid "Subjects often contain names or order numbers."
+msgstr "หัวเรื่องมักมีชื่อหรือหมายเลขคำสั่งซื้อ"
+
+msgid "Suggested TXT record for %s"
+msgstr "ระเบียน TXT ที่แนะนำสำหรับ %s"
+
+msgid "Sunday"
+msgstr "วันอาทิตย์"
+
+msgid "Supported: %s."
+msgstr "รองรับ: %s"
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "ปิดได้ที่ %1$s: “%2$s”"
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "นำออกจากอีเมลสรุปรายวันและส่งแยกต่างหาก"
+
+msgid "Temporary rejection – try again later"
+msgstr "ถูกปฏิเสธชั่วคราว – ลองอีกครั้งในภายหลัง"
+
+msgid "Test"
+msgstr "ทดสอบ"
+
+msgid "Test alert"
+msgstr "การแจ้งเตือนทดสอบ"
+
+msgid "Text changes"
+msgstr "การเปลี่ยนแปลงข้อความ"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "ฉบับข้อความที่สร้างจาก HTML ไม่ได้บันทึกไว้ว่าอีเมลมีฉบับข้อความธรรมดาของตัวเองด้วยหรือไม่"
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "ไม่เป็นไรหากเซิร์ฟเวอร์อีเมลของคุณได้รับอนุญาตให้ส่งในนามโดเมนนั้น มิฉะนั้น SPF และ DMARC จะไม่ผ่าน และอีเมลจะไปอยู่ในสแปม"
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "ซึ่งเหมาะสำหรับสำเนาทดสอบ แต่บนเว็บไซต์ที่ใช้งานจริง ลูกค้าจะไม่ได้รับการยืนยันคำสั่งซื้อ ลิงก์รีเซ็ตรหัสผ่าน หรือคำตอบจากแบบฟอร์ม ปิดโหมด Staging หากนี่คือเว็บไซต์ที่ใช้งานจริง"
+
+msgid "The API key was rejected"
+msgstr "คีย์ API ถูกปฏิเสธ"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "การค้นหา DNS ล้มเหลวหรือหมดเวลา ลองตรวจสอบผู้ส่งอีกครั้งในภายหลัง"
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "อีเมล HTML มีรูปภาพแต่แทบไม่มีข้อความ ตัวกรองสแปมอ่านรูปภาพไม่ได้และไม่ไว้ใจอีเมลลักษณะนี้ ซึ่งทำให้การจัดส่งแย่ลงได้ หากโปรแกรมอีเมลบล็อกรูปภาพ ผู้อ่านจะเห็นอีเมลที่เกือบว่างเปล่า"
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "บัญชี SMTP ส่งได้เฉพาะด้วยที่อยู่ของตัวเอง (หรือนามแฝงที่ยืนยันแล้ว) แต่ WordPress หรือปลั๊กอินใช้ที่อยู่ From อื่น"
+
+msgid "The SMTP server conversation was empty."
+msgstr "การสนทนากับเซิร์ฟเวอร์ SMTP ว่างเปล่า"
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "ไม่สามารถเข้าถึงเซิร์ฟเวอร์ SMTP ได้เลย: ชื่อโฮสต์หรือพอร์ตผิด เซิร์ฟเวอร์ล่ม หรือเว็บโฮสต์บล็อกพอร์ตอีเมลขาออก"
+
+msgid "The SMTP server refuses to relay"
+msgstr "เซิร์ฟเวอร์ SMTP ปฏิเสธการส่งต่อ"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "เซิร์ฟเวอร์ SMTP ปฏิเสธชื่อผู้ใช้หรือรหัสผ่าน (รหัสตอบกลับ 535)"
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "เซิร์ฟเวอร์ SMTP ต้องการการเข้าสู่ระบบหรือการเข้ารหัส"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "ที่อยู่ดูเหมือนไม่ถูกต้อง – ตรวจสอบว่าพิมพ์ผิดหรือไม่ หรือขอที่อยู่อื่น"
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "เนื้อหามีแท็ก HTML แต่อีเมลถูกส่งเป็น text/plain (ค่าเริ่มต้นของ WordPress) ผู้รับจะเห็นแท็กดิบแทนข้อความที่จัดรูปแบบแล้ว"
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "การเชื่อมต่อหรือการถ่ายโอนใช้เวลานานเกินไป โดยทั่วไปเกิดจากไฟร์วอลล์ตัดการเชื่อมต่อแบบเงียบๆ หรือโฮสต์และพอร์ตไม่ถูกต้อง"
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "ที่อยู่ผู้ส่งเริ่มต้นไม่มีโดเมนสาธารณะ หรือเซิร์ฟเวอร์นี้ไม่สามารถค้นหาระเบียน DNS ได้"
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "โดเมนไม่มีทั้งระเบียน MX และระเบียน A ใน DNS อีเมลที่ส่งไปจะตีกลับ โดยทั่วไปที่อยู่สะกดผิดหรือโดเมนไม่มีอยู่แล้ว"
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "โดเมนเผยแพร่ระเบียน \"null MX\" ซึ่งระบุชัดเจนว่าไม่รับอีเมล อีเมลทุกฉบับที่ส่งไปจะตีกลับ"
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "API อีเมลตอบสนองช้า: ตรวจสอบภูมิภาคหรือปลายทางที่ตั้งค่าไว้ในปลั๊กอินส่งอีเมลของคุณ"
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "อีเมลมาจากที่อยู่ no-reply และไม่มีส่วนหัว Reply-To เมื่อลูกค้าคลิก \"ตอบกลับ\" คำตอบจะไปที่ที่อยู่ที่ไม่มีใครอ่าน หรือตีกลับ"
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "อีเมลมีรหัสผ่านในรูปแบบที่อ่านได้ อีเมลจะอยู่ในกล่องจดหมาย ข้อมูลสำรอง และเธรดที่ส่งต่อเป็นเวลาหลายปี – ใครก็ตามที่ได้อีเมลเหล่านั้นไปจะเข้าสู่ระบบได้ บันทึกอีเมลก็จัดเก็บไว้ด้วย เว้นแต่จะเปิด \"ปกปิดข้อมูลลับ\" (บันทึกจะเก็บสำเนาที่ปกปิดแล้ว แต่ผู้รับยังคงได้รับรหัสผ่าน)"
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "อีเมลมีคีย์การเข้าถึง (เช่น สำหรับ Stripe, GitHub, Slack, AWS, Google หรือ SendGrid) หรือคีย์ส่วนตัว ใครก็ตามที่อ่านอีเมล – ตอนนี้หรือหลายปีต่อมาในกล่องจดหมายหรือข้อมูลสำรอง – สามารถใช้คีย์นั้นได้ บันทึกอีเมลก็จัดเก็บไว้ด้วย เว้นแต่จะเปิด \"ปกปิดข้อมูลลับ\""
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "อีเมลมีตัวแปรเทมเพลตที่ไม่ได้ถูกแทนค่า ผู้รับจะเห็นตัวแปรเหล่านั้นตามตัวอักษร"
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "อีเมลมีสิ่งที่ดูเหมือนหมายเลขบัตรชำระเงินเต็มหมายเลข (ผ่านการตรวจสอบเลขตรวจสอบ) ห้ามส่งหมายเลขบัตรทางอีเมลโดยเด็ดขาด (PCI DSS): กล่องจดหมายเก็บไว้หลายปี บันทึกอีเมลก็จัดเก็บไว้ด้วย เว้นแต่จะเปิด \"ปกปิดข้อมูลลับ\""
+
+msgid "The email is too large"
+msgstr "อีเมลมีขนาดใหญ่เกินไป"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "อีเมลลิงก์ไปยังไฟล์ WordPress บนโฮสต์ที่เกี่ยวข้อง โดยทั่วไปเกิดขึ้นบนสำเนา staging ที่ยังมี URL ของเว็บไซต์จริงอยู่ – หรือกลับกัน"
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "อีเมลลิงก์ไปยังที่อยู่บนเว็บไซต์นี้ที่ตอบกลับว่า \"ไม่พบหน้า\" (404) โดยทั่วไปเกิดขึ้นหลังจากเปลี่ยนชื่อหรือลบหน้าหรือสินค้า: เทมเพลตยังชี้ไปที่ที่อยู่เก่า และผู้รับทุกรายจะไปที่หน้าข้อผิดพลาด"
+
+msgid "The email types are being rebuilt from the log."
+msgstr "กำลังสร้างประเภทอีเมลใหม่จากบันทึก"
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "อีเมลถูกส่งถึงหลายคนนอกโดเมนของคุณใน To หรือ Cc ผู้รับทุกรายจะเห็นที่อยู่อื่นทั้งหมด สำหรับลูกค้าหรือสมาชิก นี่คือการเปิดเผยข้อมูลส่วนบุคคลแก่บุคคลอื่น – ภายใต้ GDPR มักถือเป็นการละเมิดข้อมูล"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "อีเมล “%1$s” ถึง %2$s เมื่อ %3$s เวลา %4$s ถูกระงับไว้ชั่วครู่โดยการตรวจสอบความปลอดภัยของเรา และส่งออกไปหลังจากนั้นแล้ว โปรดตรวจสอบโฟลเดอร์สแปมของคุณด้วย"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "อีเมล “%1$s” ถึง %2$s เมื่อ %3$s เวลา %4$s ถูกระงับไว้โดยการตรวจสอบความปลอดภัยของเราและยังไม่ได้ส่ง เราจะส่งอีเมลนี้ให้อีกครั้ง"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "อีเมล “%1$s” ถึง %2$s เมื่อ %3$s เวลา %4$s ไม่ได้ส่ง เนื่องจากในขณะนั้นเราหยุดการส่งอีเมลชั่วคราว เราจะส่งอีเมลนี้ให้อีกครั้ง"
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "อีเมล “%1$s” ถึง %2$s เมื่อ %3$s เวลา %4$s ไม่สามารถจัดส่งได้ เราจะส่งอีเมลนี้ให้อีกครั้ง"
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "อีเมล “%1$s” ถึง %2$s ถูกสร้างเมื่อ %3$s เวลา %4$s แต่เราไม่สามารถยืนยันได้ว่าจัดส่งถึงแล้วหรือไม่ เราจะตรวจสอบและส่งให้อีกครั้งหากจำเป็น"
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "อีเมล “%1$s” ส่งถึง %2$s เมื่อ %3$s เวลา %4$s และเซิร์ฟเวอร์อีเมลรับไว้แล้ว โปรดตรวจสอบโฟลเดอร์สแปมของคุณด้วย"
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "เบรกฉุกเฉินจะระงับอีเมลขาออกไว้จนกว่าคุณจะปล่อยหรือทิ้ง"
+
+msgid "The emergency brake is holding emails"
+msgstr "เบรกฉุกเฉินกำลังระงับอีเมลไว้"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "เบรกฉุกเฉินไม่ได้ระงับอีเมลใดไว้"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "เบรกฉุกเฉินทำงานอยู่: เว็บไซต์ของคุณส่งอีเมลมากกว่าปกติอย่างกะทันหัน"
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "เบรกฉุกเฉินพบจำนวนอีเมลที่ผิดปกติภายในหนึ่งชั่วโมง แบบฟอร์มติดต่ออาจถูกใช้ในทางที่ผิด อีเมลยังคงถูกส่งอยู่"
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "จัดเก็บซอร์สดิบที่ตรงทุกประการแล้ว – \"ดาวน์โหลด .eml\" จะส่งคืนโดยไม่เปลี่ยนแปลง (ไม่ปกปิด)"
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "อีเมล %s ฉบับล่าสุดส่งไม่สำเร็จทั้งหมด การส่งอีเมลจากเว็บไซต์นี้อาจมีปัญหา เช่น ข้อมูลเข้าสู่ระบบ SMTP ไม่ถูกต้อง หรือบริการอีเมลปฏิเสธเว็บไซต์ ลูกค้าอาจไม่ได้รับการยืนยันคำสั่งซื้อหรือลิงก์รีเซ็ตรหัสผ่าน"
+
+msgid "The latest emails could not be sent"
+msgstr "อีเมลล่าสุดส่งไม่สำเร็จ"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "บันทึกจะเก็บอีเมลไว้ %s วัน"
+
+msgid "The log shows the reason for each failed email."
+msgstr "บันทึกจะแสดงสาเหตุของอีเมลแต่ละฉบับที่ส่งไม่สำเร็จ"
+
+msgid "The mail log requires JavaScript."
+msgstr "บันทึกอีเมลต้องใช้ JavaScript"
+
+msgid "The mail server did not answer in time"
+msgstr "เซิร์ฟเวอร์อีเมลไม่ตอบสนองทันเวลา"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "เซิร์ฟเวอร์อีเมลไม่พร้อมใช้งานชั่วคราว"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "เซิร์ฟเวอร์อีเมลปฏิเสธขนาดของอีเมล (รหัสตอบกลับ 552) ไฟล์แนบจะใหญ่ขึ้นประมาณหนึ่งในสามเมื่อถูกเข้ารหัส"
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "บริการอีเมลส่งได้เฉพาะจากโดเมนหรือที่อยู่ที่คุณยืนยันไว้ที่นั่นแล้วเท่านั้น"
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "บริการอีเมลหรือกล่องจดหมายปฏิเสธอีเมลเพิ่มเติม เนื่องจากถึงขีดจำกัดอัตรา โควตารายวัน หรือขีดจำกัดของแพ็กเกจแล้ว"
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "บริการอีเมลปฏิเสธคำขอ เนื่องจากคีย์ API ไม่ถูกต้อง หมดอายุ ถูกเพิกถอน หรือไม่มีสิทธิ์ส่ง"
+
+msgid "The mailer plugin reported a failure"
+msgstr "ปลั๊กอินส่งอีเมลรายงานความล้มเหลว"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "นโยบายมีผลกับอีเมลเพียง %s%% เท่านั้น (pct)"
+
+msgid "The reason: %s."
+msgstr "สาเหตุ: %s"
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "เซิร์ฟเวอร์ปลายทางขอให้ลองใหม่ภายหลัง (รหัสตอบกลับ 450/451/452): greylisting กล่องจดหมายเต็ม หรือมีอีเมลมากเกินไปในเวลาสั้นๆ"
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "เซิร์ฟเวอร์ปลายทางไม่สามารถยืนยันได้ว่าเซิร์ฟเวอร์ของคุณได้รับอนุญาตให้ส่งในนามโดเมนผู้ส่ง"
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "เซิร์ฟเวอร์ปลายทางไม่รู้จักกล่องจดหมายนี้ (รหัสตอบกลับ 550 / 5.1.1) – ที่อยู่สะกดผิดหรือไม่มีอยู่แล้ว"
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "เซิร์ฟเวอร์ปลายทางอาจยังรับอีเมลนี้ได้ในการลองครั้งถัดไป"
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "เซิร์ฟเวอร์ปลายทางปฏิเสธอีเมลเนื่องจากเนื้อหา หรือเพราะที่อยู่ IP ของเซิร์ฟเวอร์ที่ส่งอยู่ในรายการบล็อก"
+
+msgid "The recipient address was rejected"
+msgstr "ที่อยู่ผู้รับถูกปฏิเสธ"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "โดเมนผู้รับไม่รับอีเมล (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "โดเมนผู้รับไม่มีเซิร์ฟเวอร์อีเมล"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "โดเมนผู้รับดูเหมือนการสะกดผิดของผู้ให้บริการอีเมลยอดนิยม อีเมลลักษณะนี้จะตีกลับ – หรือไปถึงคนแปลกหน้าที่จดทะเบียนโดเมนที่สะกดผิดนั้นไว้"
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "หัวเรื่องเดียวกันถูกส่งถึงผู้รับเดิมหลายครั้งในเวลาสั้นๆ สาเหตุทั่วไปคือการยืนยันคำสั่งซื้อซ้ำ แบบฟอร์มถูกส่งสองครั้ง cron job ทำงานพร้อมกัน หรือการวนซ้ำในปลั๊กอิน"
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "ไม่สามารถสร้างการเชื่อมต่อที่ปลอดภัยกับเซิร์ฟเวอร์ SMTP ได้: ใบรับรองไม่ตรงกับชื่อโฮสต์ หมดอายุ หรือเซิร์ฟเวอร์ไม่รองรับการเข้ารหัสที่เลือก"
+
+msgid "The sender address is not allowed"
+msgstr "ที่อยู่ผู้ส่งไม่ได้รับอนุญาต"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "การตรวจสอบผู้ส่งพบปัญหากับ %s อีเมลอาจไปอยู่ในสแปม"
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "โดเมนผู้ส่ง %s มีระเบียน SPF และ DMARC"
+
+msgid "The sender domain could not be checked"
+msgstr "ไม่สามารถตรวจสอบโดเมนผู้ส่งได้"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "ผู้ส่งไม่มีโดเมนสาธารณะ (เช่น wordpress@localhost) เซิร์ฟเวอร์อีเมลส่วนใหญ่จะปฏิเสธอีเมลลักษณะนี้หรือนำไปไว้ในสแปม"
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "เซิร์ฟเวอร์ไม่สามารถส่งอีเมลด้วย PHP mail() ได้"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "เซิร์ฟเวอร์ปิดการเชื่อมต่อ (รหัสตอบกลับ 421) เช่น เนื่องจากการบำรุงรักษา โหลดเกิน หรือมีการเชื่อมต่อจากเซิร์ฟเวอร์ของคุณมากเกินไป"
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "เซิร์ฟเวอร์ไม่ส่งต่ออีเมลให้คุณ โดยทั่วไปเพราะคุณไม่ได้เข้าสู่ระบบ หรือที่อยู่ผู้ส่งไม่ได้เป็นของบัญชีนั้น"
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "เซิร์ฟเวอร์รับอีเมลเฉพาะหลังการยืนยันตัวตนหรือหลังเปลี่ยนเป็นการเชื่อมต่อที่เข้ารหัส (รหัสตอบกลับ 530)"
+
+msgid "The server rejected the content"
+msgstr "เซิร์ฟเวอร์ปฏิเสธเนื้อหา"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "โปรแกรมอีเมลภายในเซิร์ฟเวอร์ตอบสนองช้า: ปลั๊กอินส่งอีเมลแบบ SMTP หรือ API จะส่งต่ออีเมลให้ผู้ให้บริการแทน"
+
+msgid "The start date must not be after the end date."
+msgstr "วันที่เริ่มต้นต้องไม่อยู่หลังวันที่สิ้นสุด"
+
+msgid "The statistics require JavaScript."
+msgstr "สถิติต้องใช้ JavaScript"
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "ข้อความเหมือนเดิม มีเพียงเลย์เอาต์ที่เปลี่ยนไป เปรียบเทียบตัวอย่างดู"
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "ชื่อผู้ใช้มักเป็นที่อยู่อีเมลแบบเต็ม ระวังช่องว่างที่ติดมาเมื่อคัดลอกรหัสผ่าน"
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "URL ของ webhook ถูกลบ: อนุญาตเฉพาะ URL https ที่ถูกต้องเท่านั้น"
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "เปิดรายงานรายสัปดาห์อยู่แต่ไม่มีผู้รับ: ป้อนที่อยู่อีเมลใต้ “ส่งการแจ้งเตือนทางอีเมลไปที่”"
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "อีเมลเหล่านี้จะถูกส่งอีกครั้ง และประเภทอีเมลของอีเมลเหล่านี้จะถูกตรวจติดตามอีกครั้ง"
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "อีเมลประเภทเหล่านี้ไม่ได้ส่งนานกว่าปกติ สาเหตุอาจมาจากการอัปเดตปลั๊กอิน การตั้งค่าที่เปลี่ยนไป หรืองานที่ตั้งเวลาไว้ค้างอยู่"
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "อีเมลนี้มีฉบับข้อความธรรมดาของตัวเอง แต่บันทึกไม่ได้จัดเก็บไว้ ที่แสดงอยู่นี้คือฉบับข้อความที่สร้างจาก HTML"
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "อีเมลนี้ไม่มีสไตล์โหมดมืดของตัวเอง บางแอปแสดงตามเดิม บางแอปเปลี่ยนสี – ดู บังคับโหมดมืด"
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "อีเมลนี้ไม่มีฉบับข้อความธรรมดา – โปรแกรมอีเมลและตัวกรองสแปมบางตัวต้องการให้มี ที่แสดงอยู่นี้คือฉบับข้อความที่สร้างจาก HTML"
+
+msgid "This email type has no content change."
+msgstr "ประเภทอีเมลนี้ไม่มีการเปลี่ยนแปลงเนื้อหา"
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "ประเภทอีเมลนี้ถูกละเว้นแล้ว: ไม่มีสถานะ ไม่มีการแจ้งเตือน"
+
+msgid "This email type is monitored again."
+msgstr "ประเภทอีเมลนี้ถูกตรวจติดตามอีกครั้งแล้ว"
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "รายการนี้ถูกทำให้เป็นข้อมูลนิรนามแล้ว ไม่สามารถส่งเนื้อหาได้อีก"
+
+msgid "This import is already running in another tab."
+msgstr "การนำเข้านี้กำลังทำงานอยู่ในแท็บอื่นแล้ว"
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "นี่คือการแจ้งเตือนทดสอบ ช่องทางการแจ้งเตือนของคุณทำงานได้"
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "เว็บไซต์ที่ใช้งานจริงนี้ส่งลิงก์ไปยังที่อยู่ภายในเครื่องหรือที่อยู่ทดสอบ ผู้รับไม่สามารถเปิดได้"
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "คำถามนี้ต้องใช้ JavaScript คุณสามารถค้นหาในบันทึกแทนได้"
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "เว็บไซต์นี้เก็บบันทึกอีเมลที่ส่งออก (ผู้รับ หัวเรื่อง เนื้อหา และสถานะการจัดส่ง) เพื่อตรวจสอบการจัดส่งและแก้ไขปัญหา รายการบันทึกจะถูกลบโดยอัตโนมัติหลังจากระยะเวลาเก็บรักษาที่กำหนดไว้"
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "เว็บไซต์นี้ทำงานเป็นสภาพแวดล้อม %s และโหมด Staging ป้องกันไม่ให้อีเมลไปถึงผู้รับจริง"
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "เว็บไซต์นี้ทำงานเป็นสภาพแวดล้อม %s เปิดโหมด Staging เพื่อไม่ให้ลูกค้าจริงได้รับอีเมลจากเว็บไซต์นี้"
+
+msgid "Threshold (emails per hour)"
+msgstr "เกณฑ์ (อีเมลต่อชั่วโมง)"
+
+msgid "Thursday"
+msgstr "วันพฤหัสบดี"
+
+msgid "Timeline"
+msgstr "ลำดับเวลา"
+
+msgid "To"
+msgstr "ถึง"
+
+msgid "To date"
+msgstr "ถึงวันที่"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "หากต้องการเก็บไว้แต่รับเพียงวันละหนึ่งอีเมล ให้เลือก “รวมเป็นอีเมลเดียวต่อวัน” ในเมนู … ของประเภทนั้น"
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "รายการอันดับสูงสุดอ้างอิงจากอีเมลล่าสุด %s ฉบับในช่วงเวลานี้"
+
+msgid "Top recipient domains"
+msgstr "โดเมนผู้รับยอดนิยม"
+
+msgid "Top recipients: %s"
+msgstr "ผู้รับอันดับต้น: %s"
+
+msgid "Top sources"
+msgstr "แหล่งที่มายอดนิยม"
+
+msgid "Top subjects"
+msgstr "หัวเรื่องยอดนิยม"
+
+msgid "Total"
+msgstr "ทั้งหมด"
+
+msgid "Total: %s ms"
+msgstr "รวม: %s ms"
+
+msgid "Trace"
+msgstr "ร่องรอย"
+
+msgid "Transcript copied."
+msgstr "คัดลอกบันทึกการสนทนาแล้ว"
+
+msgid "Transport"
+msgstr "การส่งผ่าน"
+
+msgid "Trigger"
+msgstr "ทริกเกอร์"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "ทริกเกอร์อีเมลรีเซ็ตรหัสผ่านจริงสำหรับบัญชีของคุณเองหรือไม่? WordPress จะสร้างลิงก์รีเซ็ตใหม่ให้คุณ ลิงก์รีเซ็ตก่อนหน้าจึงใช้ไม่ได้อีก รหัสผ่านของคุณยังคงเดิม มีเพียง %s เท่านั้นที่ได้รับ"
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "ทริกเกอร์การแจ้งเตือนผู้ใช้ใหม่สำหรับบัญชีของคุณเอง (การแจ้งถึงผู้ดูแลระบบและรายละเอียดการเข้าสู่ระบบ) หรือไม่? WordPress จะสร้างลิงก์รหัสผ่านใหม่ให้คุณ ลิงก์ก่อนหน้าจึงใช้ไม่ได้อีก จะไม่มีการสร้างผู้ใช้ใหม่ มีเพียง %s เท่านั้นที่ได้รับ"
+
+msgid "Trigger to me"
+msgstr "ทริกเกอร์มาที่ฉัน"
+
+msgid "Triggering…"
+msgstr "กำลังทริกเกอร์…"
+
+msgid "Tuesday"
+msgstr "วันอังคาร"
+
+msgid "Type"
+msgstr "ชนิด"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "ประเภทจะอัปเดตทุกชั่วโมงและทุกครั้งที่คุณเปิดหน้านี้ จัดเก็บเฉพาะตัวนับ รูปแบบหัวเรื่อง และลายนิ้วมือเนื้อหา (ไม่มีผู้รับ ไม่มีเนื้อหา) และเป็นไปตามระยะเวลาเก็บรักษาของบันทึก"
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "พิมพ์โดเมนผู้รับผิดหรือไม่? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "สระพิเศษหรือเครื่องหมายคำพูดแสดงเป็นอักขระที่อ่านไม่ออก เช่น \"Ã¤\" หรือ \"â€™\" ข้อความ UTF-8 ถูกอ่านเป็นชุดอักขระอื่นที่ใดที่หนึ่งระหว่างทาง – ในเทมเพลต การนำเข้า หรือฐานข้อมูล"
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "ไม่แน่ชัด “%1$s” ถึง %2$s ถูกส่งต่อเพื่อส่งออก%3$s แต่ Mailspur ไม่ได้รับผลลัพธ์กลับมา"
+
+msgid "Under Tools"
+msgstr "ใต้เมนูเครื่องมือ"
+
+msgid "Uninstall"
+msgstr "ถอนการติดตั้ง"
+
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+msgid "Unknown probe."
+msgstr "อีเมลทดสอบที่ไม่รู้จัก"
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "ไม่ทราบ: ไม่มีการรายงานผลการจัดส่ง (ฟังก์ชัน wp_mail() ถูกแทนที่หรือไม่?)"
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "ตัวยึดตำแหน่งที่ไม่ถูกแทนค่า: %1$s"
+
+msgid "Until the log limit"
+msgstr "จนถึงขีดจำกัดของบันทึก"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "สูงสุด 10 ที่อยู่ คั่นด้วยเครื่องหมายจุลภาค Cc และ Bcc จะถูกลบออก และหัวเรื่องจะแสดงผู้รับเดิม หากไม่มีที่อยู่ที่ถูกต้อง อีเมลจะถูกระงับไว้แทน"
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "สูงสุด 5 ที่อยู่ คั่นด้วยเครื่องหมายจุลภาค อีเมลแจ้งเตือนจะปรากฏในบันทึกโดยมีแหล่งที่มาเป็น “การแจ้งเตือน Mailspur” และจะไม่ทำให้เกิดการแจ้งเตือนเอง"
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "อัปเดตลิงก์ในเทมเพลตอีเมลหรือในการตั้งค่าของปลั๊กอินที่ส่งอีเมลนี้ หรือเพิ่มการเปลี่ยนเส้นทางจากที่อยู่เก่าไปยังหน้าใหม่ (เช่น ด้วยปลั๊กอินเปลี่ยนเส้นทาง)"
+
+msgid "Updated in between: %s"
+msgstr "อัปเดตในระหว่างนั้น: %s"
+
+msgid "Updated since the last one:"
+msgstr "อัปเดตตั้งแต่ฉบับล่าสุด:"
+
+msgid "Updated since then: %s."
+msgstr "อัปเดตตั้งแต่นั้น: %s"
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "ใช้ TLS บนพอร์ต 587 หรือ SSL บนพอร์ต 465"
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "ใช้ข้อความลิงก์ที่สื่อความหมาย (เช่น \"ดูคำสั่งซื้อ\") หรือแสดงที่อยู่ที่ลิงก์นำไปจริง"
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "ใช้ที่อยู่ผู้ส่งบนโดเมนของคุณเอง และใส่ที่อยู่อีเมลฟรีไว้ใน Reply-To จะใช้ได้ก็ต่อเมื่อคุณส่งผ่านเซิร์ฟเวอร์ SMTP ของผู้ให้บริการนั้นจริงๆ ด้วยข้อมูลเข้าสู่ระบบของผู้ให้บริการนั้นเท่านั้น"
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "ใช้ URL แบบสัมบูรณ์ที่มี https:// และโดเมน เช่น ด้วย home_url() หรือ wp_get_attachment_url() ในเทมเพลต"
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "ใช้ชื่อโฮสต์ที่ตรงกับที่ออกใบรับรองไว้ทุกประการ (เช่น โฮสต์ smtp.… ของผู้ให้บริการ แทน IP หรือโดเมนของคุณเอง)"
+
+msgid "Use one exclamation mark at most."
+msgstr "ใช้เครื่องหมายอัศเจรีย์ไม่เกินหนึ่งตัว"
+
+msgid "Use the arrow keys to move between cells."
+msgstr "ใช้ปุ่มลูกศรเพื่อเลื่อนระหว่างเซลล์"
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "ใช้ปุ่มลูกศรเพื่อเลื่อนระหว่างค่า และกด Enter เพื่อเปิดในบันทึก"
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "ใช้ที่อยู่กล่องจดหมายของบัญชี SMTP เป็นผู้ส่ง (From)"
+
+msgid "User"
+msgstr "ผู้ใช้"
+
+msgid "User: %s"
+msgstr "ผู้ใช้: %s"
+
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "ใช้การตั้งค่าที่บันทึกไว้ – บันทึกการเปลี่ยนแปลงของคุณก่อน"
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "ยืนยันโดเมนผู้ส่งที่บริการอีเมลของคุณ (เพิ่มระเบียน DNS ของบริการ) หรือใช้ที่อยู่ผู้ส่งที่ยืนยันแล้ว"
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "เป็นไปได้มาก “%1$s” ส่งถึง %2$s แล้ว%3$s"
+
+msgid "Very long subject (%1$s characters)"
+msgstr "หัวเรื่องยาวมาก (%1$s อักขระ)"
+
+msgid "View"
+msgstr "ดู"
+
+msgid "View %s failed emails"
+msgstr "ดูอีเมลที่ส่งไม่สำเร็จ %s ฉบับ"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron ไม่ได้ทำงานมา %s (มีการตั้งค่า DISABLE_WP_CRON – ตรวจสอบ cron job ของเซิร์ฟเวอร์ของคุณ)"
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron ไม่ได้ทำงานมา %s – จะทำงานเฉพาะเมื่อมีผู้เข้าชมเว็บไซต์ หรือล้มเหลวด้วยข้อผิดพลาด"
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron ทำงานตามปกติ"
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "รออีเมลสรุปรายวัน – ไม่ส่งแยกต่างหาก"
+
+msgid "Waits %s s for the mail server"
+msgstr "รอเซิร์ฟเวอร์อีเมล %s วินาที"
+
+msgid "Warnings"
+msgstr "คำเตือน"
+
+msgid "Webhook URL"
+msgstr "URL ของ webhook"
+
+msgid "Webhook signing key"
+msgstr "คีย์ลงนาม webhook"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "วันพุธ"
+
+msgid "Week"
+msgstr "สัปดาห์"
+
+msgid "Week of %s"
+msgstr "สัปดาห์ของ %s"
+
+msgid "Weekday"
+msgstr "วันในสัปดาห์"
+
+msgid "Weekly"
+msgstr "รายสัปดาห์"
+
+msgid "Weekly email report"
+msgstr "รายงานอีเมลรายสัปดาห์"
+
+msgid "Weekly report"
+msgstr "รายงานรายสัปดาห์"
+
+msgid "What to do"
+msgstr "สิ่งที่ต้องทำ"
+
+msgid "When emails are sent"
+msgstr "เวลาที่ส่งอีเมล"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "เมื่อมีการส่งอีเมลมากกว่าปกติมาก เบรกฉุกเฉินจะเตือนคุณและสามารถระงับอีเมลถัดไปไว้ได้"
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "เมื่อปิดอยู่ พิกเซลติดตามจะไม่รู้ว่าคุณเปิดรายการเมื่อใด คุณยังโหลดเนื้อหาภายนอกสำหรับอีเมลแต่ละฉบับได้ สคริปต์และฟอร์มจะถูกบล็อกเสมอ"
+
+msgid "Who can view the log"
+msgstr "ใครดูบันทึกได้บ้าง"
+
+msgid "Why did an email fail?"
+msgstr "ทำไมอีเมลจึงส่งไม่สำเร็จ?"
+
+msgid "With attachments"
+msgstr "มีไฟล์แนบ"
+
+msgid "With notes"
+msgstr "มีหมายเหตุ"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "หากไม่มีระเบียน DNS เหล่านี้ ผู้ให้บริการกล่องจดหมายจะไม่สามารถตรวจสอบได้ว่าเว็บไซต์ของคุณได้รับอนุญาตให้ส่งอีเมลในนามโดเมนนี้ อีเมลจึงมีแนวโน้มจะไปอยู่ในสแปมมากขึ้น การตรวจสอบผู้ส่งจะแนะนำระเบียนที่คุณเพิ่มได้ที่ผู้ให้บริการโดเมนของคุณ"
+
+msgid "WooCommerce email"
+msgstr "อีเมล WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › การตั้งค่า › อีเมล"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "อีเมลของแกนหลัก WordPress ไม่มีตัวแก้ไข แต่เปลี่ยนได้ด้วยฟิลเตอร์"
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress ไม่ได้ส่งอีเมล – ปลั๊กอินอาจปิดอีเมลนี้ไว้"
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress ไม่มีการตั้งค่าสำหรับอีเมลนี้ Mailspur สามารถหยุดการแจ้งถึงผู้ดูแลระบบได้ ผู้ใช้ใหม่ยังคงได้รับอีเมลของตนเอง"
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress ไม่มีการตั้งค่าสำหรับอีเมลนี้ Mailspur สามารถหยุดการแจ้งความสำเร็จของการอัปเดตอัตโนมัติได้ การแจ้งเกี่ยวกับการอัปเดตที่ล้มเหลวยังคงส่งมา"
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "โดยค่าเริ่มต้น WordPress ส่งอีเมลผ่านฟังก์ชัน PHP mail() บนเซิร์ฟเวอร์นี้ฟังก์ชันถูกปิดใช้งาน หรือไม่ได้ติดตั้งโปรแกรมอีเมล (sendmail) – พบบ่อยในการติดตั้งภายในเครื่อง Docker และโฮสต์แบบจัดการหลายแห่ง"
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "เขียนหัวเรื่องด้วยตัวพิมพ์ใหญ่และเล็กตามปกติ และเน้นไม่เกินหนึ่งคำ"
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "ใช่ แต่ %4$s แจ้งว่าผู้รับทำเครื่องหมาย “%1$s” ถึง %2$s (%3$s) เป็นสแปม"
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "ใช่ “%1$s” ส่งถึง %2$s แล้ว%3$s และ %4$s ยืนยันการจัดส่งแล้ว"
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "คุณยังส่งอีเมลนี้ได้จากบันทึก (“ส่งเดี๋ยวนี้”)"
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "คุณได้รับอีเมลสรุปนี้เนื่องจากประเภทอีเมลเหล่านี้ถูกรวมเป็นอีเมลเดียวต่อวันใน Mailspur อีเมลแต่ละฉบับยังคงอยู่ในบันทึก"
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "คุณได้รับอีเมลนี้เนื่องจากเปิดการแจ้งเตือนการตรวจติดตามไว้ในการตั้งค่า Mailspur ของเว็บไซต์นี้"
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "คุณได้รับอีเมลนี้เนื่องจากเปิดรายงานรายสัปดาห์ไว้ในการตั้งค่า Mailspur ของเว็บไซต์นี้ รายงานมีเพียงจำนวนและรูปแบบหัวเรื่อง – ไม่มีเนื้อหาอีเมลหรือผู้รับ"
+
+msgid "Your DKIM selector (optional)"
+msgstr "DKIM selector ของคุณ (ไม่บังคับ)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "เว็บไซต์ของคุณไม่ได้ส่งอีเมลใดเลยใน 7 วันที่ผ่านมา"
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] การแจ้งเตือน %2$s รายการ: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] การแจ้งเตือน 1 รายการ: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] รายงานอีเมลรายสัปดาห์ %2$s"
+
+msgid "address"
+msgstr "ที่อยู่"
+
+msgid "and %s more"
+msgstr "และอีก %s รายการ"
+
+msgid "and %s more – see the log"
+msgstr "และอีก %s รายการ – ดูบันทึก"
+
+msgid "another plugin stopped it"
+msgstr "ปลั๊กอินอื่นหยุดอีเมลนี้ไว้"
+
+msgid "code"
+msgstr "รหัส"
+
+msgid "date"
+msgstr "วันที่"
+
+msgid "days"
+msgstr "วัน"
+
+msgid "deleted after %s days"
+msgstr "ลบหลังจาก %s วัน"
+
+msgid "emails to this address failed several times before"
+msgstr "อีเมลถึงที่อยู่นี้เคยส่งไม่สำเร็จมาแล้วหลายครั้ง"
+
+msgid "entries"
+msgstr "รายการ"
+
+msgid "failing"
+msgstr "มีปัญหา"
+
+msgid "failure spikes"
+msgstr "การส่งไม่สำเร็จพุ่งสูง"
+
+msgid "first seen %s"
+msgstr "พบครั้งแรก %s"
+
+msgid "from a new sender"
+msgstr "จากผู้ส่งรายใหม่"
+
+msgid "holding emails right now"
+msgstr "กำลังระงับอีเมลอยู่ในขณะนี้"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "เก็บไว้จนกว่าจะลบด้วยตนเอง"
+
+msgid "link"
+msgstr "ลิงก์"
+
+msgid "minutes"
+msgstr "นาที"
+
+msgid "name"
+msgstr "ชื่อ"
+
+msgid "new this week"
+msgstr "ใหม่สัปดาห์นี้"
+
+msgid "no"
+msgstr "ไม่"
+
+msgid "none"
+msgstr "ไม่มี"
+
+msgid "none in %1$s – %2$s"
+msgstr "ไม่มีใน %1$s – %2$s"
+
+msgid "number"
+msgstr "ตัวเลข"
+
+msgid "of %s"
+msgstr "จาก %s"
+
+msgid "often to administrators"
+msgstr "ส่งถึงผู้ดูแลระบบบ่อย"
+
+msgid "on %1$s at %2$s"
+msgstr "เมื่อ %1$s เวลา %2$s"
+
+msgid "same recipient"
+msgstr "ผู้รับเดียวกัน"
+
+msgid "slow to send"
+msgstr "ส่งช้า"
+
+msgid "staging mode is on"
+msgstr "โหมด Staging เปิดอยู่"
+
+msgid "stopped"
+msgstr "หยุดส่ง"
+
+msgid "stopped email types"
+msgstr "ประเภทอีเมลที่หยุดส่ง"
+
+msgid "text"
+msgstr "ข้อความ"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "เบรกฉุกเฉินหยุดอีเมลจำนวนมากที่หลั่งไหลออกไป"
+
+msgid "time"
+msgstr "เวลา"
+
+msgid "today at %s"
+msgstr "วันนี้ เวลา %s"
+
+msgid "triggered %s times"
+msgstr "ทำงาน %s ครั้ง"
+
+msgid "unchanged"
+msgstr "ไม่เปลี่ยนแปลง"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "ไม่ทราบ – ระบบส่งอีเมลไม่ได้ให้ข้อความแสดงข้อผิดพลาด"
+
+msgid "unusual silence"
+msgstr "ความเงียบผิดปกติ"
+
+msgid "usually sent: %s"
+msgstr "ปกติส่ง: %s"
+
+msgid "wp_mail() called"
+msgstr "เรียก wp_mail() แล้ว"
+
+msgid "yes"
+msgstr "ใช่"
+
+msgid "yesterday at %s"
+msgstr "เมื่อวาน เวลา %s"
+
+msgid "your email provider"
+msgstr "ผู้ให้บริการอีเมลของคุณ"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "“%1$s” (%2$s) เวลา %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "“%1$s” (%2$s) กลับมาส่งอีกครั้งแล้ว"
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "“%1$s” (%2$s) มักส่งออกอย่างน้อยทุก %3$s วัน ฉบับล่าสุดส่งไปเมื่อ %4$s ที่แล้ว"
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "“%1$s” (%2$s) ส่งครั้งล่าสุดเมื่อ %3$s ที่แล้ว ก่อนหน้านั้นส่งอย่างน้อยทุก %4$s วัน"
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "“%1$s” (%2$s) – ปกติทุก %4$s ล่าสุด %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "“%1$s” (%2$s) – ปกติทุกวัน ล่าสุด %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "“%1$s” – %2$s – %3$s"

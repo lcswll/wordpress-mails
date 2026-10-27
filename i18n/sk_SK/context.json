@@ -1,0 +1,13 @@
+{
+	"%s notes": "Poznámky: %s",
+	"Belongs to": "Patrí k",
+	"Emails to this user": "E-maily tomuto používateľovi",
+	"No emails logged for this order yet.": "K tejto objednávke zatiaľ neboli zaznamenané žiadne e-maily.",
+	"No emails to this user in the log.": "V protokole nie sú žiadne e-maily tomuto používateľovi.",
+	"Order #%s": "Objednávka #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Odoslané na rovnakú adresu okolo dátumu objednávky, ale neprepojené s touto objednávkou (napríklad zaznamenané skôr, než prepojenie existovalo, alebo importované).",
+	"Show all in Mail Log": "Zobraziť všetko v protokole e-mailov",
+	"User: %s": "Používateľ: %s",
+	"WooCommerce email": "E-mail WooCommerce",
+	"same recipient": "rovnaký príjemca"
+}

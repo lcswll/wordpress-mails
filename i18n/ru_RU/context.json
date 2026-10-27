@@ -1,0 +1,13 @@
+{
+	"%s notes": "Заметки: %s",
+	"Belongs to": "Относится к",
+	"Emails to this user": "Письма этому пользователю",
+	"No emails logged for this order yet.": "Для этого заказа ещё нет писем в журнале.",
+	"No emails to this user in the log.": "В журнале нет писем этому пользователю.",
+	"Order #%s": "Заказ №%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Отправлено на тот же адрес около даты заказа, но не связано с этим заказом (например, записано до появления связи или импортировано).",
+	"Show all in Mail Log": "Показать всё в журнале писем",
+	"User: %s": "Пользователь: %s",
+	"WooCommerce email": "Письмо WooCommerce",
+	"same recipient": "тот же получатель"
+}

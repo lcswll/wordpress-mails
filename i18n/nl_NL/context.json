@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s opmerkingen",
+	"Belongs to": "Hoort bij",
+	"Emails to this user": "E-mails aan deze gebruiker",
+	"No emails logged for this order yet.": "Nog geen e-mails voor deze bestelling in het logboek.",
+	"No emails to this user in the log.": "Geen e-mails aan deze gebruiker in het logboek.",
+	"Order #%s": "Bestelling #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Verzonden naar hetzelfde adres rond de besteldatum, maar niet gekoppeld aan deze bestelling (bijvoorbeeld gelogd voordat de koppeling bestond, of geïmporteerd).",
+	"Show all in Mail Log": "Alles tonen in E-maillogboek",
+	"User: %s": "Gebruiker: %s",
+	"WooCommerce email": "WooCommerce-e-mail",
+	"same recipient": "zelfde ontvanger"
+}

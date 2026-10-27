@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s הערות",
+	"Belongs to": "שייך ל",
+	"Emails to this user": "אימיילים למשתמש זה",
+	"No emails logged for this order yet.": "עדיין לא תועדו אימיילים עבור הזמנה זו.",
+	"No emails to this user in the log.": "אין ביומן אימיילים למשתמש זה.",
+	"Order #%s": "הזמנה #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "נשלח לאותה כתובת בסמוך לתאריך ההזמנה, אך אינו מקושר להזמנה זו (למשל תועד לפני שהקישור היה קיים, או יובא).",
+	"Show all in Mail Log": "הצגת הכל ביומן האימיילים",
+	"User: %s": "משתמש: %s",
+	"WooCommerce email": "אימייל של WooCommerce",
+	"same recipient": "אותו נמען"
+}

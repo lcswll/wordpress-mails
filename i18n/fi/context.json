@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s huomautusta",
+	"Belongs to": "Kuuluu",
+	"Emails to this user": "Sähköpostit tälle käyttäjälle",
+	"No emails logged for this order yet.": "Tälle tilaukselle ei ole vielä kirjattu sähköposteja.",
+	"No emails to this user in the log.": "Lokissa ei ole sähköposteja tälle käyttäjälle.",
+	"Order #%s": "Tilaus #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Lähetetty samaan osoitteeseen tilauspäivän tienoilla, mutta ei liitetty tähän tilaukseen (esimerkiksi kirjattu ennen liitoksen olemassaoloa tai tuotu).",
+	"Show all in Mail Log": "Näytä kaikki Sähköpostilokissa",
+	"User: %s": "Käyttäjä: %s",
+	"WooCommerce email": "WooCommerce-sähköposti",
+	"same recipient": "sama vastaanottaja"
+}

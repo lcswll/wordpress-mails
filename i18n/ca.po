@@ -1,0 +1,3253 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "«Baixa el .eml» reconstrueix el missatge a partir de les dades registrades i emmascarades (sense adjunts)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (setmana anterior: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (programat per a %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s tipus de correu s'ha aturat: %2$s."
+msgstr[1] "%1$s tipus de correu s'han aturat, p. ex. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%1$s tipus de correu de %2$s remitents"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "Han fallat %1$s correus en els darrers %2$s minuts."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%1$s correus en %2$s dies"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "%1$s correus en els darrers 30 dies, %2$s fallits"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "S'han enviat %1$s correus en una hora, molts més del que és habitual (llindar: %2$s per hora). Pot ser que s'estigui fent un mal ús d'un formulari de contacte o que el lloc web estigui compromès."
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s entrades, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s importades, %2$s duplicades, %3$s massa antigues"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s de %2$s han rebotat (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "No s'han pogut enviar %1$s de %2$s correus dels darrers %3$s dies."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "S'han processat %1$s de %2$s entrades…"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s punts percentuals respecte a %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s va enviar el primer correu el %2$s i ha escrit a %3$s adreces externes diferents en les darreres 24 hores. Si no heu instal·lat ni configurat res que enviï aquests correus, reviseu el lloc web: un remitent nou pot ser un senyal que el lloc web ha estat piratejat."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "%1$s enviats, %2$s encara retinguts…"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s respecte a %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · %2$s correus agrupats des de l'últim resum"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · a data de %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – taxa d'errors %2$s %% (setmana anterior: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – informat per %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (extensió must-use)"
+
+msgid "%s (theme)"
+msgstr "%s (tema)"
+
+msgid "%s ago"
+msgstr "fa %s"
+
+msgid "%s days"
+msgstr "%s dies"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s correu ha fallat en els darrers 7 dies."
+msgstr[1] "%s correus han fallat en els darrers 7 dies."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s correu espera la vostra decisió."
+msgstr[1] "%s correus esperen la vostra decisió."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s correu s'ha retingut i no s'ha enviat en els darrers 7 dies."
+msgstr[1] "%s correus s'han retingut i no s'han enviat en els darrers 7 dies."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "El fre d'emergència reté %s correus."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "Hi ha %s correus en espera que no s'han lliurat."
+
+msgid "%s entries"
+msgstr "%s entrades"
+
+msgid "%s failed"
+msgstr "%s fallits"
+
+msgid "%s held emails discarded."
+msgstr "S'han descartat %s correus retinguts."
+
+msgid "%s imported entries removed."
+msgstr "S'han eliminat %s entrades importades."
+
+msgid "%s in 30 days"
+msgstr "%s en 30 dies"
+
+msgid "%s marked as spam"
+msgstr "%s marcats com a correu brossa"
+
+msgid "%s more on the Email types page."
+msgstr "%s més a la pàgina Tipus de correu."
+
+msgid "%s notes"
+msgstr "%s notes"
+
+msgid "%s of all emails"
+msgstr "%s de tots els correus"
+
+msgid "%s of them in the last 24 hours."
+msgstr "%s d'ells en les darreres 24 hores."
+
+msgid "%s s"
+msgstr "%s s"
+
+msgid "%s selected"
+msgstr "%s seleccionades"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s cosa necessita atenció:"
+msgstr[1] "%s coses necessiten atenció:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s a administradors en 30 dies"
+
+msgid "%s unchanged lines"
+msgstr "%s línies sense canvis"
+
+msgid "(no subject)"
+msgstr "(sense assumpte)"
+
+msgid "(no text content)"
+msgstr "(sense contingut de text)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(els correus ja no són al registre)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all és més estricte; ~all és habitual i correcte juntament amb DMARC."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 conserva les entrades per sempre. La neteja s'executa un cop al dia."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 vol dir sense límit. Les entrades més antigues s'eliminen primer."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 ho desactiva. Elimina el contingut, les capçaleres i els adjunts de les entrades més antigues i emmascara les adreces (a***@example.com). La data, l'estat, la font, el format, la mida i les notes es conserven per a les estadístiques. S'executa amb la neteja diària, abans que s'eliminin les entrades; per tant, només té efecte si és més curt que el període d'eliminació de dalt."
+
+msgid "12 months"
+msgstr "12 mesos"
+
+msgid "30 days"
+msgstr "30 dies"
+
+msgid "7 days"
+msgstr "7 dies"
+
+msgid "90 days"
+msgstr "90 dies"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Un selector DKIM només pot contenir lletres, xifres, punts, guions i guions baixos."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Una extensió de correu que envia mitjançant una API s'ha encarregat del lliurament i ha informat que l'enviament ha fallat, sense indicar-ne el motiu."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Una clau publicada no demostra que els vostres correus se signin amb ella: comproveu el resultat DKIM a les capçaleres d'un correu rebut."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Un destinatari o l'adreça del remitent no és una adreça electrònica vàlida, de manera que PHPMailer s'ha negat a enviar."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "Clau d'API o clau privada en text pla: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Calen unes %1$s consultes DNS per avaluar aquest registre, més de les %2$s permeses, de manera que els receptors el poden ignorar (PermError). Elimineu les entrades include: que no s'utilitzin."
+
+msgid "Access"
+msgstr "Accés"
+
+msgid "Actions"
+msgstr "Accions"
+
+msgid "Active: alerts on %s."
+msgstr "Actiu: alertes per %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Afegiu un atribut alt breu a cada imatge de la plantilla, p. ex. alt=\"Logotip de la Botiga d'exemple\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Afegiu l'include: del vostre proveïdor de correu (p. ex. include:_spf.google.com) si envieu a través seu."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Afegiu el vostre servidor o servei de correu al registre SPF del domini del remitent."
+
+msgid "Added:"
+msgstr "Afegit:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Adreces amb com a mínim %s errors permanents: el servidor receptor va rebutjar la bústia, el domini no té servidor de correu o el vostre proveïdor de correu va informar d'un rebot permanent. Les entrades caduquen amb el període de conservació del registre."
+
+msgid "Admin screen"
+msgstr "Pantalla d'administració"
+
+msgid "Administrators"
+msgstr "Administradors"
+
+msgid "Aggregate reports go to %s."
+msgstr "Els informes agregats van a %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Alerta"
+
+msgid "Alert and hold further emails"
+msgstr "Avisa i retén els correus següents"
+
+msgid "Alert only"
+msgstr "Només avisa"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Avisa quan s'aturi un tipus de correu que s'envia regularment"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Avisa quan els correus fallin repetidament"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Avisa quan el lloc web deixi d'enviar correus inesperadament"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Les alertes estan activades però no tenen cap canal: introduïu una adreça electrònica o un URL de webhook."
+
+msgid "Alerts are off."
+msgstr "Les alertes estan desactivades."
+
+msgid "All"
+msgstr "Tots"
+
+msgid "All email types look healthy."
+msgstr "Tots els tipus de correu semblen correctes."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Tots els correus es redirigeixen a adreces de prova."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Tots els correus van a adreces de prova en lloc dels destinataris reals."
+
+msgid "All sources"
+msgstr "Totes les fonts"
+
+msgid "Allow again"
+msgstr "Torna a permetre"
+
+msgid "Allowed again."
+msgstr "S'ha tornat a permetre."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "També avisa una vegada quan una extensió o un tema que no havia enviat mai cap correu escriu a moltes adreces externes diferents en un dia, un possible senyal que el lloc web ha estat piratejat. Les dues primeres setmanes després d'instal·lar Mailspur serveixen de referència."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Elimina també l'assumpte en anonimitzar"
+
+msgid "Also search content"
+msgstr "Cerca també al contingut"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Com a alternativa, demaneu al vostre proveïdor d'allotjament que activi mail() / sendmail per a aquest lloc web."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Carrega sempre les imatges i els tipus de lletra externs a la previsualització"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (via SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Un proveïdor de correu amb una API HTTP en lloc de SMTP necessita menys anades i tornades per correu."
+
+msgid "Anonymisation"
+msgstr "Anonimització"
+
+msgid "Anonymise entries after"
+msgstr "Anonimitza les entrades després de"
+
+msgid "Anonymised"
+msgstr "Anonimitzat"
+
+msgid "Any format"
+msgstr "Qualsevol format"
+
+msgid "Any status"
+msgstr "Qualsevol estat"
+
+msgid "Apply"
+msgstr "Aplica"
+
+msgid "Ask the recipient for a working address."
+msgstr "Demaneu al destinatari una adreça que funcioni."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Demaneu al vostre proveïdor d'allotjament que activi l'extensió openssl (o activeu-la als paràmetres de PHP del vostre tauler d'allotjament)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Demaneu al vostre proveïdor d'allotjament que actualitzi els certificats CA i l'OpenSSL del servidor."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Pregunteu al vostre proveïdor d'allotjament si les connexions SMTP sortints estan bloquejades."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Pregunteu al vostre proveïdor d'allotjament si es permeten les connexions sortints a aquest port (tallafoc)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Com a mínim %1$s correus fallits en %2$s minuts"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Com a màxim una alerta per tipus en aquest temps, encara que el problema continuï."
+
+msgid "Attachments"
+msgstr "Adjunts"
+
+msgid "Attachments no longer available: %s"
+msgstr "Adjunts que ja no estan disponibles: %s"
+
+msgid "Authentication"
+msgstr "Autenticació"
+
+msgid "Automatic TLS"
+msgstr "TLS automàtic"
+
+msgid "Average per day"
+msgstr "Mitjana per dia"
+
+msgid "Back to the email types"
+msgstr "Torna als tipus de correu"
+
+msgid "Belongs to"
+msgstr "Pertany a"
+
+msgid "Block again"
+msgstr "Torna a bloquejar"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Bloquejat com a correu brossa o per una llista de bloqueig"
+
+msgid "Bounced (permanent)"
+msgstr "Rebotat (permanent)"
+
+msgid "Bounced (temporary)"
+msgstr "Rebotat (temporal)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Caràcters trencats (codificació): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Correu massiu sense capçalera de baixa (%1$s destinataris)"
+
+msgid "Bundle into one daily email"
+msgstr "Agrupa en un correu diari"
+
+msgid "Bundled into one daily email"
+msgstr "Agrupat en un correu diari"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "L'agrupació està desactivada. Els correus que esperaven s'han enviat ara en un resum."
+
+msgid "Busiest day"
+msgstr "Dia amb més activitat"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Atenció: els correus a aquesta adreça ja han fallat diverses vegades."
+
+msgid "Change in the email types"
+msgstr "Canvi en els tipus de correu"
+
+msgid "Change staging mode"
+msgstr "Canvia el mode de proves"
+
+msgid "Check"
+msgstr "Comprova"
+
+msgid "Check again"
+msgstr "Torna a comprovar"
+
+msgid "Check emails"
+msgstr "Comprova els correus"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Comproveu l'amfitrió i el port; proveu el 587 (TLS) en lloc del 465 (SSL) o a l'inrevés."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Comproveu l'amfitrió, el port, el xifratge, el nom d'usuari i la contrasenya a l'extensió SMTP i envieu-hi un correu de prova."
+
+msgid "Check sender domains"
+msgstr "Comprova els dominis de remitent"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Comproveu que el xifratge coincideixi amb el port: TLS per al 587, SSL per al 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Comproveu que la clau pertanyi a la regió o al compte correctes (p. ex. punt d'accés de la UE o dels EUA)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Comproveu l'amfitrió i el port SMTP: un port incorrecte o una connexió bloquejada sovint acaben en un temps d'espera esgotat abans que funcioni una alternativa."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Comproveu els registres SPF, DKIM i DMARC del domini del remitent, o feu servir una adreça de remitent del domini des del qual envieu."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Comproveu si l'adreça té errors tipogràfics, o potser el vostre lloc web no va enviar mai el correu."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Comproveu l'adreça amb el destinatari i corregiu-la allà on estigui desada (perfil d'usuari, comanda, entrada de formulari)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Comproveu l'adreça amb el destinatari i corregiu-la allà on estigui desada."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Comproveu el nom de l'amfitrió i el port: 587 amb STARTTLS (TLS) o 465 amb SSL. La majoria de proveïdors d'allotjament bloquegen el port 25."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Comproveu els límits i l'ús actual al compte del vostre servei de correu; milloreu el pla si cal."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Comproveu si les adreces de destinatari d'aquesta entrada tenen errors tipogràfics, espais o parts que falten."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Comproveu l'adreça del remitent a l'extensió SMTP i el filtre wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Comproveu els límits d'enviament del vostre compte de correu i les notes d'aquest correu."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Comproveu la IP del servidor en un verificador de llistes de bloqueig i sol·liciteu-ne l'eliminació."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Comproveu l'ortografia del marcador de posició a la plantilla i si l'extensió l'admet per a aquest tipus de correu. Els codis curts no es processen als correus tret que l'extensió que envia executi do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Comprovat %s."
+
+msgid "Checked just now"
+msgstr "Comprovat fa un moment"
+
+msgid "Checking DNS records …"
+msgstr "S'estan comprovant els registres DNS…"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Comprova els registres DNS dels dominis des dels quals envia el vostre lloc web: l'adreça del remitent per defecte i els remitents més freqüents del registre. La manca de registres o els registres febles són el motiu més habitual pel qual els correus acaben al correu brossa. Només es fa servir el resolutor DNS del vostre servidor; els resultats es conserven una hora."
+
+msgid "Choose a range of at most %s days."
+msgstr "Trieu un interval de com a màxim %s dies."
+
+msgid "Clear selection"
+msgstr "Esborra la selecció"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Feu clic en una barra per obrir aquests correus al registre."
+
+msgid "Close"
+msgstr "Tanca"
+
+msgid "Close (Esc)"
+msgstr "Tanca (Esc)"
+
+msgid "Colour scheme"
+msgstr "Esquema de colors"
+
+msgid "Command line"
+msgstr "Línia d'ordres"
+
+msgid "Compare"
+msgstr "Compara"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Compareu les fonts d'aquestes entrades. Comproveu si dues extensions envien la mateixa notificació o si un ganxo (p. ex. el canvi d'estat d'una comanda) s'executa més d'una vegada."
+
+msgid "Component"
+msgstr "Component"
+
+msgid "Configure alerts"
+msgstr "Configura les alertes"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Contingut anonimitzat després de %1$s dies, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Canvi de contingut marcat com a vist."
+
+msgid "Content changed"
+msgstr "Contingut canviat"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "El contingut va canviar el %1$s, després de l'actualització de %2$s."
+
+msgid "Content changed on %s."
+msgstr "El contingut va canviar el %s."
+
+msgid "Content removed"
+msgstr "Contingut eliminat"
+
+msgid "Content removed after %s days"
+msgstr "Contingut eliminat després de %s dies"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "El paràmetre d'anonimització ha eliminat el contingut, les capçaleres i els adjunts i ha emmascarat les adreces."
+
+msgid "Copied"
+msgstr "Copiat"
+
+msgid "Copied – paste it into your reply."
+msgstr "S'ha copiat. Enganxeu-ho a la vostra resposta."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Copia una frase breu per respondre al client: quan es va enviar el correu, a qui i si va arribar, sense detalls tècnics."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Copia el registre existent d'una altra extensió de registre de correu a Mailspur, perquè els correus antics es puguin cercar i previsualitzar aquí. L'altra extensió i les seves dades no es modifiquen; si torneu a executar la importació, només s'afegeixen entrades noves."
+
+msgid "Copy"
+msgstr "Copia"
+
+msgid "Copy for support"
+msgstr "Copia per al suport"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "No es pot copiar en aquest navegador. Seleccioneu el text i copieu-lo:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Corregiu l'adreça (p. ex. al perfil d'usuari o a la comanda) i plantegeu-vos validar els correus als formularis."
+
+msgid "Counted once per email."
+msgstr "Es compta una vegada per correu."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Creeu una clau d'API nova amb permís d'enviament al vostre servei de correu i introduïu-la a l'extensió de correu."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Voleu crear un URL de webhook nou? L'URL actual deixarà de funcionar immediatament: enganxeu l'URL nou als paràmetres de webhook del vostre proveïdor de correu."
+
+msgid "Create new URL"
+msgstr "Crea un URL nou"
+
+msgid "Current page"
+msgstr "Pàgina actual"
+
+msgid "Current record"
+msgstr "Registre actual"
+
+msgid "Current size"
+msgstr "Mida actual"
+
+msgid "Custom"
+msgstr "Personalitzat"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "S'ha trobat una clau DKIM (selector: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "S'ha trobat un registre DMARC amb p=none: només informes; el correu falsificat encara es lliura."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "S'ha trobat un registre DMARC amb la política p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "El registre DMARC no té cap política vàlida (p=none, quarantine o reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "La consulta DNS ha fallat o ha esgotat el temps d'espera. Torneu-ho a provar més tard."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Les consultes DNS no estan disponibles en aquest servidor (dns_get_record() està desactivada), de manera que la comprovació del remitent no es pot executar aquí."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Consultes DNS necessàries: unes %1$s de les %2$s permeses."
+
+msgid "Daily"
+msgstr "Diàriament"
+
+msgid "Daily digest"
+msgstr "Resum diari"
+
+msgid "Dark"
+msgstr "Fosc"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Default (%s days)"
+msgstr "Per defecte (%s dies)"
+
+msgid "Default (no time limit)"
+msgstr "Per defecte (sense límit de temps)"
+
+msgid "Default sender"
+msgstr "Remitent per defecte"
+
+msgid "Delete"
+msgstr "Suprimeix"
+
+msgid "Delete %s selected log entries?"
+msgstr "Voleu suprimir %s entrades seleccionades del registre?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Voleu suprimir TOTES les entrades del registre? Això no es pot desfer."
+
+msgid "Delete entries after"
+msgstr "Suprimeix les entrades després de"
+
+msgid "Delete selected"
+msgstr "Suprimeix les seleccionades"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Suprimeix la taula del registre i els paràmetres quan se suprimeixi l'extensió"
+
+msgid "Delete this log entry?"
+msgstr "Voleu suprimir aquesta entrada del registre?"
+
+msgid "Deleted."
+msgstr "S'ha suprimit."
+
+msgid "Delivered"
+msgstr "Lliurat"
+
+msgid "Delivered by %s (API)"
+msgstr "Lliurat per %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Lliurat per codi enganxat a pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Lliurat en el resum diari del %s."
+
+msgid "Delivery"
+msgstr "Lliurament"
+
+msgid "Delivery status from your email provider"
+msgstr "Estat de lliurament del vostre proveïdor de correu"
+
+msgid "Desktop"
+msgstr "Escriptori"
+
+msgid "Did my email arrive?"
+msgstr "Ha arribat el meu correu?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Desactiveu el correu o canvieu-ne el destinatari"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Voleu descartar tots els correus retinguts? Es queden al registre però no s'envien."
+
+msgid "Discard held emails"
+msgstr "Descarta els correus retinguts"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "No envieu «des de» adreces de correu gratuïtes (gmail.com, gmx.de…) a través del vostre servidor."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Fet: %1$s correus enviats, %2$s fallits."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Fet: %1$s importades, %2$s duplicades, %3$s massa antigues."
+
+msgid "Download .eml"
+msgstr "Baixa el .eml"
+
+msgid "Download as CSV"
+msgstr "Baixa com a CSV"
+
+msgid "Download started."
+msgstr "S'ha iniciat la baixada."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Baixa les entrades que coincideixen amb els filtres actuals en format %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Cada correu es comprova una vegada quan es registra o s'importa (sense sol·licituds externes). Els canvis aquí només afecten els correus registrats a partir d'ara; les entrades més antigues no es tornen a comprovar. Les comprovacions de DNS i d'enviaments repetits s'executen quan obriu una entrada."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Els correus anteriors a %s han fallat de manera permanent més d'una vegada."
+
+msgid "Edit template"
+msgstr "Edita la plantilla"
+
+msgid "Editors and above"
+msgstr "Editors i superiors"
+
+msgid "Email address"
+msgstr "Adreça electrònica"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "Adreça electrònica (l'últim correu ja no és al registre)"
+
+msgid "Email address or order number"
+msgstr "Adreça electrònica o número de comanda"
+
+msgid "Email consists almost only of images"
+msgstr "El correu consta gairebé només d'imatges"
+
+msgid "Email failure spike"
+msgstr "Pic de correus fallits"
+
+msgid "Email failures"
+msgstr "Correus fallits"
+
+msgid "Email failures resolved"
+msgstr "Correus fallits resolts"
+
+msgid "Email inventory"
+msgstr "Inventari de correus"
+
+msgid "Email log"
+msgstr "Registre de correu"
+
+msgid "Email log: problem recipients"
+msgstr "Registre de correu: destinataris problemàtics"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Envia'm un correu quan un comentari quedi pendent de moderació"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Envia'm un correu quan algú publiqui un comentari"
+
+msgid "Email provider"
+msgstr "Proveïdor de correu"
+
+msgid "Email sent again."
+msgstr "S'ha tornat a enviar el correu."
+
+msgid "Email sent to %s."
+msgstr "S'ha enviat el correu a %s."
+
+msgid "Email type"
+msgstr "Tipus de correu"
+
+msgid "Email type is sent again"
+msgstr "El tipus de correu es torna a enviar"
+
+msgid "Email type stopped"
+msgstr "Tipus de correu aturat"
+
+msgid "Email types"
+msgstr "Tipus de correu"
+
+msgid "Email volume back to normal"
+msgstr "El volum de correu torna a ser normal"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "El volum de correu torna a ser normal: el fre d'emergència ja no està actiu."
+
+msgid "Email: failed"
+msgstr "Correu: fallit"
+
+msgid "Email: failed – see the log"
+msgstr "Correu: fallit – vegeu el registre"
+
+msgid "Email: sent"
+msgstr "Correu: enviat"
+
+msgid "Emails"
+msgstr "Correus"
+
+msgid "Emails are being logged again."
+msgstr "Els correus es tornen a registrar."
+
+msgid "Emails are delivered to their recipients."
+msgstr "Els correus es lliuren als destinataris."
+
+msgid "Emails are flowing again"
+msgstr "Els correus tornen a circular"
+
+msgid "Emails are logged but not delivered."
+msgstr "Els correus es registren però no es lliuren."
+
+msgid "Emails are still being sent."
+msgstr "Els correus encara s'envien."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "Els correus encara s'envien. Comproveu la font principal; canvieu el fre d'emergència a «Avisa i retén els correus següents» per aturar-los."
+
+msgid "Emails in 30 days"
+msgstr "Correus en 30 dies"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Els correus d'aquest tipus que només van als administradors ara es recullen i s'envien una vegada al dia en un resum."
+
+msgid "Emails over time"
+msgstr "Correus al llarg del temps"
+
+msgid "Emails per day and status"
+msgstr "Correus per dia i estat"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "Correus per dia de la setmana i hora (zona horària del lloc web)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "Els correus que ja són al registre (registrats pel mateix Mailspur o importats d'una altra extensió) es reconeixen pels destinataris, l'assumpte i l'hora d'enviament i s'ometen com a duplicats."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Han deixat d'enviar-se correus que s'envien regularment (%s)"
+
+msgid "Emails to this user"
+msgstr "Correus a aquest usuari"
+
+msgid "Emails with notes"
+msgstr "Correus amb notes"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "Els correus sense assumpte semblen correu brossa i són difícils de trobar a la safata d'entrada."
+
+msgid "Emails – last 7 days"
+msgstr "Correus – darrers 7 dies"
+
+msgid "Emergency brake"
+msgstr "Fre d'emergència"
+
+msgid "Emergency brake reset."
+msgstr "S'ha restablert el fre d'emergència."
+
+msgid "Emergency brake settings"
+msgstr "Paràmetres del fre d'emergència"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Fre d'emergència: %1$s correus en l'última hora, molts més del que és habitual (llindar: %2$s per hora)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Fre d'emergència: allau inusual de correus"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Buit = automàtic: tres vegades l'hora amb més activitat dels darrers 14 dies, com a mínim 50; actualment, %s."
+
+msgid "Empty log"
+msgstr "Buida el registre"
+
+msgid "Empty subject"
+msgstr "Assumpte buit"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Activeu la verificació en dos passos per al compte de Google i creeu una contrasenya d'aplicació (Compte de Google → Seguretat → Contrasenyes d'aplicació)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Activeu la signatura DKIM al vostre proveïdor de correu o d'allotjament i publiqueu la clau que us doni. Si ja signeu, introduïu el selector (el valor s= de la capçalera DKIM-Signature) i torneu a comprovar."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Activeu la signatura DKIM al vostre servei de correu i publiqueu-ne el registre DNS."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Activeu l'autenticació a l'extensió SMTP i introduïu el nom d'usuari i la contrasenya."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Activeu l'autenticació a l'extensió SMTP."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Les connexions SMTP xifrades (TLS/SSL) necessiten l'extensió de PHP openssl, que no està instal·lada o activada en aquest servidor."
+
+msgid "Encryption"
+msgstr "Xifratge"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Ha fallat el xifratge (TLS/SSL)"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Primer introduïu una adreça electrònica o un URL de webhook i deseu els paràmetres."
+
+msgid "Enter an email address or an order number."
+msgstr "Introduïu una adreça electrònica o un número de comanda."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Primer introduïu una adreça electrònica a «Envia les alertes per correu a» i deseu els paràmetres."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Introduïu entre 1 i 10 adreces electròniques."
+
+msgid "Enter one or more email addresses."
+msgstr "Introduïu una o més adreces electròniques."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Introduïu la contrasenya d'aplicació a l'extensió SMTP o feu servir la connexió «Inicia la sessió amb Google» (OAuth) de l'extensió."
+
+msgid "Entries"
+msgstr "Entrades"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Les entrades de més de %s dies s'ometen perquè el paràmetre de conservació les suprimiria igualment. Primer canvieu la conservació de dalt per importar-ho tot."
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Errors"
+msgstr "Errors"
+
+msgid "Every %s days"
+msgstr "Cada %s dies"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "Cada 15 minuts (alertes de Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Cada dilluns al matí, només quan hi ha alguna cosa per informar: correus i taxa d'errors en comparació amb la setmana anterior, tipus de correu nous, aturats i canviats, correus amb notes i incidències del fre d'emergència. Només recomptes i patrons d'assumpte."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Tots els tipus de correu que envia aquest lloc web, generats a partir del registre de correu de Mailspur, p. ex. per a un registre d'activitats de tractament o un traspàs. Els grups de destinataris es dedueixen dels últims correus de cada remitent, i les categories de dades, de l'últim correu de cada tipus. La llista no conté contingut de correus ni adreces."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Tots els tipus de correu que envia el vostre lloc web, trobats automàticament al registre: agrupats per l'extensió que els envia i per assumpte, amb números, adreces i noms com a marcadors de posició. Mailspur aprèn amb quina freqüència s'envia cada tipus i detecta quan se n'atura algun, per exemple després d'actualitzar una extensió."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Tot sembla correcte: %s correu en els darrers 7 dies, sense errors."
+msgstr[1] "Tot sembla correcte: %s correus en els darrers 7 dies, cap ha fallat."
+
+msgid "Expected today and not sent yet:"
+msgstr "Previstos per avui i encara no enviats:"
+
+msgid "Export"
+msgstr "Exporta"
+
+msgid "Export started – your download begins shortly."
+msgstr "S'ha iniciat l'exportació: la baixada començarà aviat."
+
+msgid "Failed"
+msgstr "Fallit"
+
+msgid "Failed (%s %%)"
+msgstr "Fallits (%s %%)"
+
+msgid "Failing"
+msgstr "Falla"
+
+msgid "Failure rate"
+msgstr "Taxa d'errors"
+
+msgid "Failure spike"
+msgstr "Pic d'errors"
+
+msgid "Far more emails than usual were sent"
+msgstr "S'han enviat molts més correus del que és habitual"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "S'han enviat molts més correus del que és habitual, de manera que Mailspur reté els correus següents fins que els allibereu o els descarteu."
+
+msgid "Fewer"
+msgstr "Menys"
+
+msgid "File"
+msgstr "Fitxer"
+
+msgid "Filter by status"
+msgstr "Filtra per estat"
+
+msgid "Filter email types"
+msgstr "Filtra els tipus de correu"
+
+msgid "First email after the change"
+msgstr "Primer correu després del canvi"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Primer correu d'aquest remitent el %s. Amb les alertes de tipus activades, Mailspur avisa quan un remitent nou escriu a moltes adreces externes."
+
+msgid "First page"
+msgstr "Primera pàgina"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Amb adjunts grans, el temps d'espera també es pot esgotar durant la transferència: envieu fitxers més petits o enllaços."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Per a còpies de proves i de desenvolupament d'un lloc web: assegureu-vos que els clients no rebin mai correus de la còpia. Tots els correus es continuen registrant."
+
+msgid "Forced dark"
+msgstr "Fosc forçat"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Free text from forms"
+msgstr "Text lliure de formularis"
+
+msgid "Friday"
+msgstr "divendres"
+
+msgid "From"
+msgstr "De"
+
+msgid "From date"
+msgstr "Des de la data"
+
+msgid "Front end"
+msgstr "Part pública"
+
+msgid "Function"
+msgstr "Funció"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Els correus següents es retenen fins que un administrador els alliberi o els descarti."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail i Google Workspace ja no accepten la contrasenya normal del compte per a SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail retalla els correus HTML de més de 102 kB i mostra «[Message clipped]». Tot el que hi ha després del tall (sovint el peu, l'enllaç de baixa o l'avís legal) queda amagat."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail retallarà aquest correu (%1$s kB)"
+
+msgid "Google rejected the login"
+msgstr "Google ha rebutjat l'inici de sessió"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML enviat com a text pla"
+
+msgid "Handler"
+msgstr "Gestor"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Rebot permanent notificat pel vostre proveïdor de correu"
+
+msgid "Hard failures"
+msgstr "Errors permanents"
+
+msgid "Headers"
+msgstr "Capçaleres"
+
+msgid "Held"
+msgstr "Retingut"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Retingut pel fre d'emergència: descartat."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Retingut pel fre d'emergència: no lliurat."
+
+msgid "Held by emergency brake – released later."
+msgstr "Retingut pel fre d'emergència: alliberat més tard."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Retingut pel mode de proves: no lliurat."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "S'ha enviat el correu retingut. S'ha registrat com a entrada nova."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Els correus retinguts reben l'estat «Retingut» i encara es poden enviar un per un des del registre («Envia ara»)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Retingut: tots els destinataris havien fallat de manera permanent abans (destinataris problemàtics)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Retingut: el mode de proves està configurat per redirigir, però no hi ha cap adreça de redirecció vàlida."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Indicacions sobre problemes que poden impedir que aquest correu arribi o es mostri correctament."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Retén els correus següents als destinataris problemàtics"
+
+msgid "Hooks"
+msgstr "Ganxos"
+
+msgid "Hours"
+msgstr "Hores"
+
+msgid "How to fix:"
+msgstr "Com solucionar-ho:"
+
+msgid "I already did"
+msgstr "Ja ho he fet"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Entenc que el codi font en brut NO està emmascarat i que duplica aproximadament l'emmagatzematge per correu"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Si passa sovint, comproveu els límits d'enviament del vostre proveïdor de correu."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Si continua passant, envieu menys correus alhora o feu-ho a través d'un servei de correu amb cua."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Si els valors predeterminats de seguretat ho bloquegen, feu servir la connexió de Microsoft (OAuth / Graph API) de l'extensió SMTP."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Si han fallat diversos destinataris, la resposta del servidor després de l'adreça n'indica el motiu."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Si el compte fa servir l'autenticació de dos factors, creeu una contrasenya d'aplicació i feu-la servir."
+
+msgid "Ignore"
+msgstr "Ignora"
+
+msgid "Ignored"
+msgstr "Ignorat"
+
+msgid "Ignored notes"
+msgstr "Notes ignorades"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Les notes ignorades ja no es registren per als correus nous i s'amaguen a les entrades existents."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Imatges sense text alternatiu (%1$s)"
+
+msgid "Import"
+msgstr "Importa"
+
+msgid "Import failed: %s"
+msgstr "La importació ha fallat: %s"
+
+msgid "Import from other plugins"
+msgstr "Importa des d'altres extensions"
+
+msgid "Import new entries"
+msgstr "Importa les entrades noves"
+
+msgid "Imported"
+msgstr "Importat"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Les entrades importades no tenen traça: l'altra extensió no va registrar aquests detalls."
+
+msgid "Imported from %s"
+msgstr "Importat de %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "A Amazon SNS, subscriviu l'URL (protocol HTTPS) al tema que rep les notificacions Delivery, Bounce i Complaint d'Amazon SES. Mailspur confirma la subscripció automàticament."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "A Brevo, obriu Transactional → Settings → Webhook, afegiu l'URL i seleccioneu Delivered, Hard bounce, Soft bounce, Invalid email i Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "A Mailgun, obriu Sending → Webhooks, afegiu l'URL per a Delivered, Permanent failure, Temporary failure i Spam complaints, i enganxeu a sota la HTTP webhook signing key."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "A Postmark, obriu el vostre servidor → Webhooks → Add webhook, enganxeu l'URL i seleccioneu Delivery, Bounce i Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "Al Microsoft 365 admin center, obriu l'usuari → Mail → Manage email apps i activeu «Authenticated SMTP»."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Les safates d'entrada mostren aproximadament els primers 40–80 caràcters; la resta es talla, i als telèfons encara abans."
+
+msgid "Include content"
+msgstr "Inclou el contingut"
+
+msgid "Information"
+msgstr "Informació"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Instal·leu una extensió SMTP i envieu a través d'una bústia real o d'un servei de correu del vostre domini."
+
+msgid "Invalid date."
+msgstr "Data no vàlida."
+
+msgid "Invalid email address"
+msgstr "Adreça electrònica no vàlida"
+
+msgid "Invalid email address: %s"
+msgstr "Adreça electrònica no vàlida: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Adreça de remitent no vàlida: %1$s"
+
+msgid "Irregular"
+msgstr "Irregular"
+
+msgid "Is Mailspur helping you?"
+msgstr "Us és útil Mailspur?"
+
+msgid "Is an email missing?"
+msgstr "Falta algun correu?"
+
+msgid "Is everything running?"
+msgstr "Funciona tot?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Conserva com a màxim"
+
+msgid "Keep for"
+msgstr "Conserva durant"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Mantingueu aquest URL en privat: conté una clau secreta d'aquest lloc web. Deseu els paràmetres abans de provar el webhook."
+
+msgid "Kept: %s"
+msgstr "Es conserva: %s"
+
+msgid "Key figures"
+msgstr "Xifres clau"
+
+msgid "Last 30 days"
+msgstr "Darrers 30 dies"
+
+msgid "Last email before the change"
+msgstr "Últim correu abans del canvi"
+
+msgid "Last failure"
+msgstr "Últim error"
+
+msgid "Last page"
+msgstr "Última pàgina"
+
+msgid "Last sent"
+msgstr "Últim enviament"
+
+msgid "Leave a review"
+msgstr "Deixeu una ressenya"
+
+msgid "Light"
+msgstr "Clar"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "El text de l'enllaç mostra %1$s però porta a %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Enllaç a una adreça de desenvolupament: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Enllaç a una pàgina que no existeix al vostre lloc web: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Enllaceu directament a l'adreça completa. Per al seguiment de clics, feu servir paràmetres UTM al vostre domini."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Enllaç a través d'un escurçador d'URL: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Els enllaços i les imatges que comencen per «/» només funcionen al lloc web. En un client de correu no hi ha cap adreça de lloc web per completar-los, de manera que les imatges queden buides i els enllaços no porten enlloc."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Enllaços a una altra còpia del lloc web: %1$s (aquest lloc: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Els enllaços amb una adreça visible diferent de la destinació real semblen pesca electrònica. Els filtres de correu brossa els penalitzen i alguns clients de correu avisen el lector."
+
+msgid "Load remote content"
+msgstr "Carrega el contingut extern"
+
+msgid "Loading…"
+msgstr "S'està carregant…"
+
+msgid "Log"
+msgstr "Registre"
+
+msgid "Log entries %s"
+msgstr "Entrades del registre %s"
+
+msgid "Log entry not found."
+msgstr "No s'ha trobat l'entrada del registre."
+
+msgid "Log only – do not send any email"
+msgstr "Només registra: no enviïs cap correu"
+
+msgid "Log size"
+msgstr "Mida del registre"
+
+msgid "Logged emails"
+msgstr "Correus registrats"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Els correus registrats poden contenir dades personals. Concediu l'accés de la manera més restringida possible. Els paràmetres sempre requereixen permisos d'administrador."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "L'inici de sessió i els destinataris es van acceptar, però el correu en si es va rebutjar; normalment per un filtre de correu brossa, un límit d'enviament o una política del proveïdor (codi de resposta 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Registra els correus sortints, identifica els tipus de correu que envia el vostre lloc web i us avisa quan se n'atura algun. Previsualització segura, diagnòstic de lliurament, estadístiques."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Cerqueu una opció per desactivar-lo o canviar-ne el destinatari als paràmetres de correu de %s, o bé ignoreu el tipus aquí."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Cerqueu la resposta del servidor al missatge d'error; normalment n'indica el motiu."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Cerqueu al registre enviaments massius inesperats (formularis amb correu brossa, bucles)."
+
+msgid "Looking it up …"
+msgstr "S'està cercant…"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Registre de correu"
+
+msgid "Mail Log sections"
+msgstr "Seccions del Registre de correu"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Els servidors de correu per a respostes i rebots estan configurats."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Els proveïdors de correu poden verificar que el vostre lloc web pot enviar correus per a aquest domini. La comprovació completa del remitent també revisa el DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Bústia desconeguda o no disponible"
+
+msgid "Mailer"
+msgstr "Mailer"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun signa cada webhook amb aquesta clau (Sending → Webhooks → HTTP webhook signing key); els informes sense una signatura vàlida es rebutgen."
+
+msgid "Mailspur alerts"
+msgstr "Alertes de Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur revisa el registre per trobar correus que no s'han pogut enviar."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur no ha trobat cap comanda #%s a la vostra botiga."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Fins ara, Mailspur ha registrat %s correus lliurats en aquest lloc web. Si us estalvia temps, una ressenya breu a WordPress.org significaria molt: ajuda altres persones a trobar l'extensió i la manté gratuïta."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur no té cap correu de la comanda #%s al registre."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur no té cap correu adreçat a %s al registre."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur és obra de %1$s. Us agrada? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur aprèn amb quina freqüència s'envia cada tipus de correu, p. ex. les confirmacions de comanda, i avisa aquí quan se n'atura algun."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur aprèn el ritme de cada tipus de correu a partir de les darreres 8 setmanes: una confirmació de comanda diària va endarrerida després de 2 dies, i un informe setmanal, després de 2 setmanes. L'alerta indica el tipus, el remitent i les extensions actualitzades des de l'últim correu. Fa servir els canals de dalt; els tipus ignorats no avisen mai."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur veu que el vostre lloc web l'ha enviat, però no la safata d'entrada. Si no hi és, demaneu al destinatari que comprovi la carpeta de correu brossa."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur atura ara aquests correus; el seu tipus de correu s'ignora."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – Registre de correu"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: correus retinguts"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: mode de proves"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Font principal: %1$s (%2$s correus)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Assegureu-vos que l'adreça del remitent a l'extensió de correu coincideix amb el domini verificat."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Assegureu-vos que el correu s'envia amb «charset=UTF-8», que els fitxers de plantilla es desen en UTF-8 i que les taules de la base de dades fan servir utf8mb4. Corregiu els textos que ja s'han desat malmesos."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Assegureu-vos que el paràmetre de xifratge coincideixi amb el port."
+
+msgid "Many emails could not be sent recently"
+msgstr "Darrerament no s'han pogut enviar molts correus"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Molts signes d'exclamació a l'assumpte (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Molts clients de correu bloquegen les imatges fins que el lector les permet. Sense text alternatiu, el lector només veu caixes buides i els lectors de pantalla no anuncien res útil."
+
+msgid "Mark as resolved"
+msgstr "Marca com a resolt"
+
+msgid "Marked as spam"
+msgstr "Marcat com a correu brossa"
+
+msgid "Marked as spam by the recipient"
+msgstr "Marcat com a correu brossa pel destinatari"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Emmascara les claus de restabliment de contrasenya, d'activació i d'accés dels enllaços registrats, així com les contrasenyes, les claus d'API i els números de targeta enviats en text pla"
+
+msgid "Maybe later"
+msgstr "Potser més tard"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Potser el correu no es va enviar mai: comproveu l'estat de la comanda i els paràmetres dels correus de la botiga."
+
+msgid "Menu position"
+msgstr "Posició al menú"
+
+msgid "Message"
+msgstr "Missatge"
+
+msgid "Method"
+msgstr "Mètode"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online bloqueja l'inici de sessió SMTP (autenticació bàsica) per a aquesta bústia o per a tota l'organització."
+
+msgid "Minutes"
+msgstr "Minuts"
+
+msgid "Monday"
+msgstr "dilluns"
+
+msgid "Monitor again"
+msgstr "Torna a supervisar"
+
+msgid "Monitoring alerts"
+msgstr "Alertes de supervisió"
+
+msgid "More"
+msgstr "Més"
+
+msgid "More actions"
+msgstr "Més accions"
+
+msgid "More filters"
+msgstr "Més filtres"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Motiu més freqüent (%1$s casos): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "La majoria de servidors accepten 10–25 MB en total."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "S'han trobat diversos registres DMARC. En aquest cas, els receptors ignoren el DMARC: conserveu-ne només un."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "S'han trobat diversos registres SPF. Els receptors ho tracten com un error (PermError): fusioneu-los en un sol registre."
+
+msgid "Needs attention"
+msgstr "Necessita atenció"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "No s'ha registrat ni cap capçalera From ni cap remitent. El mailer recorre al valor per defecte, sovint wordpress@elvostredomini."
+
+msgid "Never"
+msgstr "Mai"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "S'ha creat un URL nou. Actualitzeu-lo al vostre proveïdor de correu."
+
+msgid "New email types"
+msgstr "Tipus de correu nous"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Els correus nous es retenen fins que els allibereu o els descarteu. Els correus de restabliment de contrasenya s'envien igualment."
+
+msgid "New sender"
+msgstr "Remitent nou"
+
+msgid "New sender writes to many addresses"
+msgstr "Un remitent nou escriu a moltes adreces"
+
+msgid "Next email"
+msgstr "Correu següent"
+
+msgid "Next email (j)"
+msgstr "Correu següent (j)"
+
+msgid "Next page"
+msgstr "Pàgina següent"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "No s'ha trobat cap clau DKIM amb els selectors habituals."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "No hi ha cap registre DMARC per al domini del remitent %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "No s'ha trobat cap registre DMARC. Els grans proveïdors de correu n'esperen un i, sense ell, qualsevol pot falsificar aquest domini sense que ningú se n'adoni."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "No hi ha cap registre MX: aquest domini no pot rebre respostes ni rebots, i alguns receptors rebutgen aquests remitents."
+
+msgid "No SMTP transcript for this email."
+msgstr "No hi ha transcripció SMTP per a aquest correu."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "No hi ha registre SPF ni DMARC per al domini del remitent %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "No hi ha cap registre SPF per al domini del remitent %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "No s'ha trobat cap registre SPF. Els receptors no poden saber quins servidors poden enviar en nom d'aquest domini."
+
+msgid "No alerts sent yet."
+msgstr "Encara no s'ha enviat cap alerta."
+
+msgid "No connection to the SMTP server"
+msgstr "No hi ha connexió amb el servidor SMTP"
+
+msgid "No email logged for %s hours"
+msgstr "Cap correu registrat en %s hores"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "No s'ha registrat cap correu en les darreres %1$s hores, tot i que aquest lloc web va enviar correus en aquesta franja horària %2$s dels darrers %3$s dies (de mitjana, %4$s)."
+
+msgid "No emails"
+msgstr "Cap correu"
+
+msgid "No emails found."
+msgstr "No s'ha trobat cap correu."
+
+msgid "No emails in this period."
+msgstr "No hi ha cap correu en aquest període."
+
+msgid "No emails logged for this order yet."
+msgstr "Encara no s'ha registrat cap correu per a aquesta comanda."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Encara no s'ha registrat cap correu. Els tipus de correu apareixeran aquí tan bon punt el vostre lloc web enviï correus."
+
+msgid "No emails match these filters."
+msgstr "Cap correu coincideix amb aquests filtres."
+
+msgid "No emails sent"
+msgstr "No s'ha enviat cap correu"
+
+msgid "No emails to this user in the log."
+msgstr "No hi ha cap correu a aquest usuari al registre."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "No s'ha registrat cap correu en les darreres dues setmanes."
+
+msgid "No limit"
+msgstr "Sense límit"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "No s'ha trobat cap registre d'una altra extensió de registre de correu en aquest lloc web."
+
+msgid "No log of this plugin was found on this site."
+msgstr "No s'ha trobat cap registre d'aquesta extensió en aquest lloc web."
+
+msgid "No problem recipients."
+msgstr "No hi ha destinataris problemàtics."
+
+msgid "No problems found in this email."
+msgstr "No s'ha trobat cap problema en aquest correu."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "No s'ha trobat cap domini de remitent públic (l'adreça del lloc web no és un nom de domini i el registre encara no té remitents)."
+
+msgid "No public sender domain to check"
+msgstr "No hi ha cap domini de remitent públic per comprovar"
+
+msgid "No regularly sent email has stopped"
+msgstr "No s'ha aturat cap correu que s'enviï regularment"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "No hi ha cap adreça d'informes (rua): no veureu qui envia en nom vostre."
+
+msgid "No sender address recorded"
+msgstr "No s'ha registrat cap adreça de remitent"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "No hi ha cap traça disponible per a aquesta entrada. Es va registrar abans que existís la traça o amb una versió que no la té."
+
+msgid "No unusual email failures"
+msgstr "No hi ha errors de correu inusuals"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "No, a propòsit. «%1$s» per a %2$s es va retenir %3$s i no es va enviar. Motiu: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "No. Tots els correus que s'envien regularment han sortit quan tocava."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "No. «%1$s» per a %2$s va fallar %3$s. Motiu: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "No. «%1$s» per a %2$s va sortir del vostre lloc web %3$s, però %4$s informa que el servidor receptor el va rebutjar."
+
+msgid "None"
+msgstr "Cap"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Normalment s'envia com a mínim cada %1$s dies; ara va endarrerit %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "No s'han pogut comprovar tots els selectors a temps."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "No registrat: una altra extensió tenia activada la depuració SMTP."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "No registrat: la transcripció SMTP està desactivada als paràmetres."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "No registrat: aquest correu no s'ha enviat per SMTP."
+
+msgid "Not set up"
+msgstr "No configurat"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "No desat: les transcripcions només es conserven per als correus fallits."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Encara no. «%1$s» per a %2$s va sortir del vostre lloc web %3$s, però %4$s informa d'un problema temporal."
+
+msgid "Notes"
+msgstr "Notes"
+
+msgid "Notes in the latest email: %s"
+msgstr "Notes de l'últim correu: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Notes: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Notes: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Avui no s'espera res més."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "No ha fallat res en els darrers 7 dies."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Encara no hi ha res per comparar: cap correu s'envia amb prou regularitat perquè Mailspur detecti una interrupció."
+
+msgid "Number of failed emails"
+msgstr "Nombre de correus fallits"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Els números s'ignoren, de manera que «Comanda #123» i «Comanda #124» es compten juntes."
+
+msgid "OK"
+msgstr "D'acord"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Dels darrers %1$s correus enviats mentre algú esperava la pàgina, la meitat van trigar més de %2$s s (mitjana: %3$s s)."
+
+msgid "Off"
+msgstr "Desactivat"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Desactivat per defecte. Sense això, «Baixa el .eml» reconstrueix el missatge a partir de les dades registrades (emmascarades). El codi font en brut conté enllaços de restabliment de contrasenya i altres secrets tal com es van enviar; activeu-ho només quan ho necessiteu i amb les dues caselles marcades."
+
+msgid "Off – deliver emails normally"
+msgstr "Desactivat: lliura els correus normalment"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Un cop solucionada la causa, podeu tornar a enviar el correu des del registre."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Quan els informes mostrin que el correu legítim passa la comprovació, canvieu a p=quarantine (o p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Un dels dos correus s'ha suprimit o anonimitzat pels paràmetres de conservació, de manera que ja no es poden comparar."
+
+msgid "Only administrators can empty the log."
+msgstr "Només els administradors poden buidar el registre."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Només els administradors poden enviar correus a altres adreces."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Només avisa quan els darrers 14 dies mostren que normalment s'envien correus en aquesta franja horària (com a mínim 10 de 14 dies, inclòs el mateix dia de la setmana), de manera que les nits o els caps de setmana tranquils no l'activen."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Només els correus en què tots els destinataris són problemàtics. Els correus de restabliment de contrasenya sempre s'envien; els correus retinguts encara es poden enviar des del registre («Envia ara»)."
+
+msgid "Only held emails can be released."
+msgstr "Només es poden alliberar els correus retinguts."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Llista de distribució oberta: %1$s destinataris externs veuen les adreces dels altres"
+
+msgid "Open in log"
+msgstr "Obre al registre"
+
+msgid "Open latest"
+msgstr "Obre l'últim"
+
+msgid "Open staging mode"
+msgstr "Obre el mode de proves"
+
+msgid "Open the email types"
+msgstr "Obre els tipus de correu"
+
+msgid "Open the emergency brake"
+msgstr "Obre el fre d'emergència"
+
+msgid "Open the log"
+msgstr "Obre el registre"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Obriu el registre o la vista de depuració de l'extensió de correu per veure l'error exacte."
+
+msgid "Open the mail log"
+msgstr "Obre el registre de correu"
+
+msgid "Open the sender check"
+msgstr "Obre la comprovació del remitent"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Opcional i desactivat per defecte. Quan s'activa, Mailspur revisa el registre periòdicament i us avisa de pics d'errors, silencis inusuals o tipus de correu aturats. Les alertes només s'envien a les adreces i al webhook que introduïu aquí; contenen el nom del lloc web, el text de l'alerta (per a un tipus de correu aturat: el remitent i el patró de l'assumpte) i un enllaç al registre, mai el contingut ni els destinataris dels correus."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Opcional, només https. Els URL de webhook de Slack i Discord reben un missatge de xat; qualsevol altre URL, una sol·licitud POST JSON. La sol·licitud la fa el vostre servidor exactament a aquest URL; no hi intervé cap altre servei."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "O bé afegiu l'adreça com a àlies o permís «envia com a» al vostre proveïdor de correu."
+
+msgid "Order #%s"
+msgstr "Comanda #%s"
+
+msgid "Order data"
+msgstr "Dades de comanda"
+
+msgid "Origin"
+msgstr "Origen"
+
+msgid "Original Bcc"
+msgstr "Bcc original"
+
+msgid "Original Cc"
+msgstr "Cc original"
+
+msgid "Original recipients"
+msgstr "Destinataris originals"
+
+msgid "Other emails"
+msgstr "Altres correus"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Altres destinataris (p. ex. convidats)"
+
+msgid "Overview"
+msgstr "Resum"
+
+msgid "Own top-level menu item"
+msgstr "Element de menú propi de primer nivell"
+
+msgid "PHP extension openssl is missing"
+msgstr "Falta l'extensió de PHP openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer a punt (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Paginació"
+
+msgid "Password sent in plain text"
+msgstr "Contrasenya enviada en text pla"
+
+msgid "Path"
+msgstr "Camí"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Número de targeta de pagament en text pla: %1$s"
+
+msgid "Per page"
+msgstr "Per pàgina"
+
+msgid "Period"
+msgstr "Període"
+
+msgid "Personal data"
+msgstr "Dades personals"
+
+msgid "Phone"
+msgstr "Telèfon"
+
+msgid "Phone number"
+msgstr "Número de telèfon"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Amplada de telèfon (375 px). Si podeu desplaçar-vos lateralment, el correu és més ample que la majoria de pantalles de telèfon."
+
+msgid "Plain text"
+msgstr "Text pla"
+
+msgid "Please enter valid email addresses."
+msgstr "Introduïu adreces electròniques vàlides."
+
+msgid "Plugin"
+msgstr "Extensió"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Extensió o tema que ha enviat el correu."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Assenyala els problemes que impedeixen que els correus arribin o es mostrin correctament"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Postal address"
+msgstr "Adreça postal"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo o Amazon SES poden informar aquest lloc web de si un correu s'ha lliurat, ha rebotat o s'ha marcat com a correu brossa. L'estat es mostra al correu registrat, i els rebots permanents compten per als destinataris problemàtics. Per relacionar els informes, Mailspur afegeix una capçalera de referència als correus sortints."
+
+msgid "Preparation"
+msgstr "Preparació"
+
+msgid "Preview"
+msgstr "Previsualització"
+
+msgid "Previews"
+msgstr "Previsualitzacions"
+
+msgid "Previous email"
+msgstr "Correu anterior"
+
+msgid "Previous email (k)"
+msgstr "Correu anterior (k)"
+
+msgid "Previous page"
+msgstr "Pàgina anterior"
+
+msgid "Print"
+msgstr "Imprimeix"
+
+msgid "Privacy"
+msgstr "Privadesa"
+
+msgid "Privacy & security"
+msgstr "Privadesa i seguretat"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Probablement sí: %s tipus de correu s'ha aturat."
+msgstr[1] "Probablement sí: %s tipus de correu s'han aturat."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Els correus de prova només s'envien a un administrador."
+
+msgid "Problem"
+msgstr "Problema"
+
+msgid "Problem recipients"
+msgstr "Destinataris problemàtics"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Protegeix el vostre domini quan surten molts més correus del que és habitual, p. ex. perquè uns robots de correu brossa fan un mal ús d'un formulari de contacte. Les alertes fan servir els canals de les alertes de supervisió; els correus de restabliment de contrasenya no es retenen mai."
+
+msgid "Provider status"
+msgstr "Estat del proveïdor"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Proveïdors com %2$s publiquen una política DMARC estricta. Un correu «des del» seu domini enviat pel vostre servidor web no supera aquesta comprovació i es rebutja o acaba al correu brossa."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Poseu el contingut important en text real i feu servir les imatges només com a complement."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Poseu la informació important al principi i mantingueu l'assumpte per sota d'uns 80 caràcters."
+
+msgid "REST API"
+msgstr "API REST"
+
+msgid "REST route"
+msgstr "Ruta REST"
+
+msgid "Rarely"
+msgstr "Rarament"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Valoreu Mailspur a WordPress.org"
+
+msgid "Raw source"
+msgstr "Codi font en brut"
+
+msgid "Reason"
+msgstr "Motiu"
+
+msgid "Rebuild from the log"
+msgstr "Reconstrueix a partir del registre"
+
+msgid "Recipient"
+msgstr "Destinatari"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "El domini del destinatari no pot rebre correu: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "El domini del destinatari no accepta correu: %1$s"
+
+msgid "Recipients"
+msgstr "Destinataris"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Recomanat. Si no, qualsevol persona amb accés al registre podria fer servir un enllaç de restabliment o una contrasenya registrats per apoderar-se d'un compte. Si torneu a enviar un correu d'aquest tipus, s'envia la versió emmascarada."
+
+msgid "Record for every email"
+msgstr "Registra per a tots els correus"
+
+msgid "Record for failed emails only"
+msgstr "Registra només per als correus fallits"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Registra la conversa amb el servidor SMTP (només quan els correus s'envien per SMTP). Les dades d'inici de sessió i el contingut del missatge no es registren mai. S'omet mentre una altra extensió té activada la depuració SMTP."
+
+msgid "Recovery"
+msgstr "Recuperació"
+
+msgid "Redact secrets"
+msgstr "Emmascara els secrets"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Redirigeix tots els correus a les adreces de sota"
+
+msgid "Redirect to"
+msgstr "Redirigeix a"
+
+msgid "Redirect to test addresses"
+msgstr "Redirigeix a adreces de prova"
+
+msgid "Redirected by staging mode."
+msgstr "Redirigit pel mode de proves."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Reduïu l'HTML: elimineu el CSS no utilitzat, els estils en línia repetits, els comentaris i els URL de seguiment llargs. Les imatges no compten, només l'HTML."
+
+msgid "Registered users"
+msgstr "Usuaris registrats"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Rebutjat per SPF, DKIM o DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Enllaços o imatges relatius (%1$s), p. ex. %2$s"
+
+msgid "Release held emails"
+msgstr "Allibera els correus retinguts"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Alliberat del mode de proves (entrada retinguda #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Alliberat del fre d'emergència (entrada retinguda #%s)."
+
+msgid "Remote content"
+msgstr "Contingut extern"
+
+msgid "Remote content is loaded."
+msgstr "S'ha carregat el contingut extern."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Les imatges i els tipus de lletra externs es bloquegen perquè els remitents no puguin saber quan obriu aquesta entrada."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Voleu eliminar totes les entrades importades de %s? Les dades de l'altra extensió no es veuen afectades."
+
+msgid "Remove imported entries"
+msgstr "Elimina les entrades importades"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Elimineu el camp de la targeta de la notificació del formulari o de l'extensió que ha enviat aquest correu: les dades de la targeta només pertanyen al proveïdor de pagament. Mostreu com a màxim els quatre últims dígits. Demaneu al destinatari que suprimeixi el correu."
+
+msgid "Removed:"
+msgstr "Eliminat:"
+
+msgid "Repeat alerts after"
+msgstr "Repeteix les alertes després de"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Les respostes no us poden arribar: enviat des de %1$s sense Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Notificat pel vostre proveïdor de correu en els darrers 30 dies; només compten els correus dels quals ha informat."
+
+msgid "Request"
+msgstr "Sol·licitud"
+
+msgid "Request failed: %s"
+msgstr "La sol·licitud ha fallat: %s"
+
+msgid "Resend"
+msgstr "Torna a enviar"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Torneu a enviar el correu des del registre d'aquí a uns minuts."
+
+msgid "Resend the email from the log later."
+msgstr "Torneu a enviar el correu des del registre més tard."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Torneu a enviar el correu des del registre quan el lliurament funcioni."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Torneu a enviar els correus fallits quan es restableixi el límit."
+
+msgid "Resent from log"
+msgstr "Reenviat des del registre"
+
+msgid "Reset filters"
+msgstr "Restableix els filtres"
+
+msgid "Result"
+msgstr "Resultat"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Resultat de la memòria cau: feu servir «Torna a comprovar» després de canviar els registres DNS."
+
+msgid "Retention"
+msgstr "Conservació"
+
+msgid "Retention in the log"
+msgstr "Conservació al registre"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "S'ha desat la conservació d'aquest tipus de correu. S'aplicarà en la propera neteja diària."
+
+msgid "Review held emails"
+msgstr "Revisa els correus retinguts"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Reviseu les notes d'aquest correu (enllaços, remitent, marcadors de posició)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Revoqueu la clau al tauler del servei i creeu-ne una de nova. Després esbrineu per què ha acabat en un correu (informes de depuració o d'errors, un formulari que mostra paràmetres) i atureu-ho."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Claus revocades (p= buit): %s."
+
+msgid "Rhythm"
+msgstr "Ritme"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Executeu un cerca i substitueix del domini antic a la base de dades i comproveu els URL fixos a les plantilles de correu i als paràmetres de les extensions."
+
+msgid "Run the full sender check"
+msgstr "Executa la comprovació completa del remitent"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH està desactivat a Microsoft 365"
+
+msgid "SMTP host"
+msgstr "Amfitrió SMTP"
+
+msgid "SMTP login failed"
+msgstr "Ha fallat l'inici de sessió SMTP"
+
+msgid "SMTP transcript"
+msgstr "Transcripció SMTP"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "El registre SPF permet que qualsevol servidor del món enviï en nom d'aquest domini (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "El registre SPF acaba amb ?all (neutral): no protegeix el domini contra la falsificació."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "S'ha trobat un registre SPF (redirect= a una altra política)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "S'ha trobat un registre SPF. Els altres servidors es marquen com a sospitosos (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "S'ha trobat un registre SPF. Els altres servidors es rebutgen (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "El registre SPF no té cap terme «all», de manera que el correu d'altres servidors es tracta com a neutral."
+
+msgid "Saturday"
+msgstr "dissabte"
+
+msgid "Save"
+msgstr "Desa"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Desat: deixeu-ho buit per conservar-lo"
+
+msgid "Scheduled for later today:"
+msgstr "Programat per a més tard avui:"
+
+msgid "Search recipient or subject"
+msgstr "Cerca per destinatari o assumpte"
+
+msgid "Search recipient or subject …"
+msgstr "Cerca per destinatari o assumpte…"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Cerqueu l'adreça antiga a la plantilla de correu, als paràmetres de l'extensió i a la base de dades (p. ex. després de migrar el lloc web) i substituïu-la pel domini en producció."
+
+msgid "See why"
+msgstr "Mostra el motiu"
+
+msgid "Seen"
+msgstr "Vist"
+
+msgid "Select all"
+msgstr "Selecciona-ho tot"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "El selector «%s» tampoc no té cap clau."
+
+msgid "Send"
+msgstr "Envia"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Envieu en canvi un enllaç on l'usuari defineixi una contrasenya; el correu d'usuari nou del nucli del WordPress fa exactament això. Cerqueu una opció com ara «Envia la contrasenya per correu» o «Inclou la contrasenya» a l'extensió que ha enviat aquest correu i desactiveu-la."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Envia un missatge quan el problema s'hagi resolt"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Envieu un correu de prova des dels paràmetres de l'extensió de correu."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Envia un informe setmanal de correu a les adreces de dalt"
+
+msgid "Send again"
+msgstr "Torna a enviar"
+
+msgid "Send alerts by email to"
+msgstr "Envia les alertes per correu a"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Voleu enviar ara els %s correus retinguts als destinataris originals?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Envieu els fitxers grans com a enllaç de baixada en lloc d'adjunt."
+
+msgid "Send latest to me"
+msgstr "Envia'm l'últim"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Envieu els butlletins amb una extensió o un servei de butlletins que afegeixi les capçaleres List-Unsubscribe i List-Unsubscribe-Post, i no envieu a moltes persones en un sol correu amb Bcc."
+
+msgid "Send now"
+msgstr "Envia ara"
+
+msgid "Send report now"
+msgstr "Envia l'informe ara"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Envieu aquests correus a cada destinatari per separat o poseu els destinataris en Bcc. Per als butlletins, feu servir una extensió que enviï un correu per destinatari. Si s'han revelat adreces de clients, consulteu amb el vostre delegat de protecció de dades si cal notificar l'incident."
+
+msgid "Send test alert"
+msgstr "Envia una alerta de prova"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Envieu el correu amb la capçalera «Content-Type: text/html; charset=UTF-8» o definiu el tipus de contingut amb el filtre wp_mail_content_type. Moltes extensions de formularis i de botiga tenen una opció «Correu HTML»."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Voleu enviar l'últim correu d'aquest tipus a %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Voleu tornar a enviar aquest correu a %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Envia aquest correu a (fins a 10 adreces, separades per comes):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Voleu enviar ara aquest correu retingut a %s? El mode de proves s'omet només per a aquest correu."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Envieu a través d'un servei SMTP de confiança en lloc del servidor web, sobretot en allotjament compartit."
+
+msgid "Send to…"
+msgstr "Envia a…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Comprovació del remitent (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "El domini del remitent %1$s és diferent del del lloc web (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Domini del remitent (SPF i DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Domini o adreça del remitent no verificats"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Remitent de %s dels darrers 200 correus"
+
+msgid "Sending failed – see the log."
+msgstr "L'enviament ha fallat: vegeu el registre."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "L'enviament ha fallat: vegeu la nova entrada del registre per als detalls."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "L'enviament en segon pla (una extensió de correu amb cua) permet que la pàgina acabi sense esperar."
+
+msgid "Sending limit or quota reached"
+msgstr "S'ha arribat al límit d'enviament o a la quota"
+
+msgid "Sending report …"
+msgstr "S'està enviant l'informe…"
+
+msgid "Sending test alert …"
+msgstr "S'està enviant l'alerta de prova…"
+
+msgid "Sending works again: no more failure spike."
+msgstr "L'enviament torna a funcionar: ja no hi ha cap pic d'errors."
+
+msgid "Sending…"
+msgstr "S'està enviant…"
+
+msgid "Sent"
+msgstr "Enviat"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Enviat com a adreça de correu gratuïta: %1$s"
+
+msgid "Sent by"
+msgstr "Enviat per"
+
+msgid "Sent by WP-Cron."
+msgstr "Enviat per WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Enviat per l'esdeveniment cron %1$s: va endarrerit %2$s mentre WP-Cron executa altres esdeveniments; pot ser que falli amb un error."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Enviat per l'esdeveniment cron %1$s: està programat (propera execució d'aquí a %2$s) i WP-Cron funciona, així que l'esdeveniment ja no envia aquest correu."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Enviat per l'esdeveniment cron %s: aquest esdeveniment ja no està programat."
+
+msgid "Sent by the cron event %s."
+msgstr "Enviat per l'esdeveniment cron %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Enviat repetidament: %1$s correus idèntics més en %2$s minuts"
+
+msgid "Sent to %s."
+msgstr "Enviat a %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Enviat a la mateixa adreça al voltant de la data de la comanda, però no vinculat a aquesta comanda (per exemple, registrat abans que existís el vincle o importat)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Definiu una adreça Reply-To que algú llegeixi, p. ex. a WooCommerce → Paràmetres → Correus electrònics o als paràmetres de correu de l'extensió de formularis. O bé envieu des d'una adreça que pugui rebre respostes."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Definiu una adreça de remitent del vostre domini a l'extensió SMTP o mitjançant el filtre wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Definiu una adreça de remitent del vostre domini real, p. ex. a l'extensió SMTP o mitjançant el filtre wp_mail_from, i comproveu l'adreça del lloc web a Paràmetres → General."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Definiu un assumpte als paràmetres de plantilla o de formulari de l'extensió que envia."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Definiu l'adreça del remitent a l'extensió SMTP com la bústia amb què inicieu la sessió i activeu «força l'adreça del remitent»."
+
+msgid "Set up staging mode"
+msgstr "Configura el mode de proves"
+
+msgid "Settings"
+msgstr "Paràmetres"
+
+msgid "Settings › Discussion"
+msgstr "Paràmetres › Debat"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Diversos signes d'exclamació són típics del correu brossa publicitari. Els filtres de correu brossa ho poden tenir en compte en contra del correu, cosa que pot empitjorar-ne el lliurament."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Diversos dels últims correus d'aquest tipus han fallat."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Proporció de correus fallits per dia (per setmana en períodes llargs)."
+
+msgid "Shop managers and above"
+msgstr "Gestors de la botiga i superiors"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Els enllaços escurçats amaguen on porten. Els spammers els fan servir molt, de manera que els filtres de correu brossa els poden tenir en compte en contra del correu, cosa que pot empitjorar-ne el lliurament."
+
+msgid "Show all email types"
+msgstr "Mostra tots els tipus de correu"
+
+msgid "Show all in Mail Log"
+msgstr "Mostra-ho tot al Registre de correu"
+
+msgid "Show as"
+msgstr "Mostra com a"
+
+msgid "Show data as table"
+msgstr "Mostra les dades com a taula"
+
+msgid "Show email types"
+msgstr "Mostra els tipus de correu"
+
+msgid "Show emails"
+msgstr "Mostra els correus"
+
+msgid "Show emails for %s in the log"
+msgstr "Mostra els correus de %s al registre"
+
+msgid "Show failed emails"
+msgstr "Mostra els correus fallits"
+
+msgid "Show held emails"
+msgstr "Mostra els correus retinguts"
+
+msgid "Show these emails in the log"
+msgstr "Mostra aquests correus al registre"
+
+msgid "Silence"
+msgstr "Silenci"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Mode fosc simulat amb els estils de mode fosc del mateix correu. Cada aplicació de correu gestiona el mode fosc d'una manera una mica diferent."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Simulació d'aplicacions que forcen el mode fosc invertint els colors. Les imatges mantenen els colors; les aplicacions reals difereixen en els detalls."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Des del 2024, Gmail i Yahoo exigeixen la baixa amb un clic (capçalera List-Unsubscribe) per al correu massiu. Sense això, és més probable que els butlletins es rebutgin o es filtrin."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Els errors aïllats, p. ex. per una adreça mal escrita, són normals."
+
+msgid "Some emails could not be sent recently"
+msgstr "Darrerament no s'han pogut enviar alguns correus"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "S'han omès algunes consultes perquè el DNS ha respost massa lentament."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "No teniu permís per accedir a aquesta pàgina."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "No teniu permís per fer això."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "No teniu permís per exportar el registre de correu."
+
+msgid "Source"
+msgstr "Font"
+
+msgid "Staging"
+msgstr "Proves"
+
+msgid "Staging mode"
+msgstr "Mode de proves"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "El mode de proves està actiu: tots els correus es redirigeixen a %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "El mode de proves està actiu: els correus es registren però no es lliuren."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "El mode de proves està actiu: els correus s'haurien de redirigir, però no hi ha cap adreça de redirecció vàlida; tots els correus es retenen i no es lliuren."
+
+msgid "Staging mode is off"
+msgstr "El mode de proves està desactivat"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "El mode de proves està activat tot i que aquest és un lloc web en producció"
+
+msgid "Staging mode is on for this staging site"
+msgstr "El mode de proves està activat per a aquest lloc web de proves"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "El mode de proves està activat: tots els correus van a les vostres adreces de prova, no als destinataris reals."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "El mode de proves està activat: els correus es registren però no s'envien."
+
+msgid "Staging mode settings"
+msgstr "Paràmetres del mode de proves"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Comenceu amb p=none per rebre informes i, després, enduriu-ho a quarantine o reject quan SPF i DKIM passin la comprovació."
+
+msgid "Statistics"
+msgstr "Estadístiques"
+
+msgid "Status"
+msgstr "Estat"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "Encara s'estan classificant %s correus antics per tipus en segon pla. Torneu a carregar la pàgina d'aquí a un minut."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Deixa d'agrupar (envia ara el que espera)"
+
+msgid "Stop these emails"
+msgstr "Atura aquests correus"
+
+msgid "Stopped"
+msgstr "Aturat"
+
+msgid "Stopped by Mailspur."
+msgstr "Aturat per Mailspur."
+
+msgid "Stopped email types"
+msgstr "Tipus de correu aturats"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Desa el codi font MIME en brut exacte de cada correu"
+
+msgid "Subject"
+msgstr "Assumpte"
+
+msgid "Subject mostly in capital letters"
+msgstr "Assumpte majoritàriament en majúscules"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Els assumptes en majúscules semblen crits i són habituals en el correu brossa. Els filtres de correu brossa ho poden tenir en compte en contra del correu, cosa que pot empitjorar-ne el lliurament."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Els assumptes sovint contenen noms o números de comanda."
+
+msgid "Suggested TXT record for %s"
+msgstr "Registre TXT suggerit per a %s"
+
+msgid "Sunday"
+msgstr "diumenge"
+
+msgid "Supported: %s."
+msgstr "Compatibles: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Desactiveu-ho a %1$s: «%2$s»."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Tret del resum diari i enviat per separat."
+
+msgid "Temporary rejection – try again later"
+msgstr "Rebuig temporal: torneu-ho a provar més tard"
+
+msgid "Test"
+msgstr "Prova"
+
+msgid "Test alert"
+msgstr "Alerta de prova"
+
+msgid "Text changes"
+msgstr "Canvis de text"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Versió de text derivada de l'HTML. No es va registrar si el correu també tenia la seva pròpia versió en text pla."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "No passa res si el vostre servidor de correu pot enviar en nom d'aquest domini. Si no, SPF i DMARC fallen i el correu acaba al correu brossa."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Això és correcte per a una còpia de proves, però en un lloc web en producció els clients no reben confirmacions de comanda, restabliments de contrasenya ni respostes als formularis. Desactiveu el mode de proves si aquest és el lloc web en producció."
+
+msgid "The API key was rejected"
+msgstr "S'ha rebutjat la clau d'API"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "La consulta DNS ha fallat o ha esgotat el temps d'espera. Torneu a provar la comprovació del remitent més tard."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "El correu HTML conté imatges però gairebé gens de text. Els filtres de correu brossa no poden llegir imatges i desconfien d'aquests correus, cosa que pot empitjorar-ne el lliurament. Si el client de correu bloqueja les imatges, el lector veu un correu gairebé buit."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "El compte SMTP només pot enviar amb la seva pròpia adreça (o àlies verificats). El WordPress o una extensió ha fet servir una adreça de remitent diferent."
+
+msgid "The SMTP server conversation was empty."
+msgstr "La conversa amb el servidor SMTP era buida."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "No s'ha pogut arribar de cap manera al servidor SMTP: nom d'amfitrió o port incorrectes, el servidor no funciona o el proveïdor d'allotjament bloqueja els ports de correu sortints."
+
+msgid "The SMTP server refuses to relay"
+msgstr "El servidor SMTP es nega a retransmetre"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "El servidor SMTP ha rebutjat el nom d'usuari o la contrasenya (codi de resposta 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "El servidor SMTP requereix inici de sessió o xifratge"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Sembla que l'adreça no és vàlida: comproveu si té errors tipogràfics o demaneu-ne una altra."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "El cos conté etiquetes HTML, però el correu s'ha enviat com a text/plain (el valor per defecte del WordPress). Els destinataris veuen les etiquetes en brut en lloc del text amb format."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "La connexió o la transferència han trigat massa. Normalment un tallafoc descarta la connexió sense avisar, o bé l'amfitrió i el port són incorrectes."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "L'adreça del remitent per defecte no té cap domini públic, o aquest servidor no pot consultar registres DNS."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "El domini no té cap registre MX ni A al DNS. Els correus que s'hi envien reboten. Normalment l'adreça està mal escrita o el domini ja no existeix."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "El domini publica un registre «null MX», que indica explícitament que no rep correu. Tots els correus que s'hi envien reboten."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "L'API de correu respon lentament: comproveu la regió o el punt d'accés configurat a la vostra extensió de correu."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "El correu ve d'una adreça no-reply i no té capçalera Reply-To. Quan un client fa clic a «Respon», la resposta va a una adreça que no llegeix ningú, o bé rebota."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "El correu conté una contrasenya en format llegible. Els correus es queden durant anys a les safates d'entrada, a les còpies de seguretat i als fils reenviats: qualsevol que n'obtingui un pot iniciar la sessió. El registre de correu també la desa, tret que «Emmascara els secrets» estigui activat (llavors el registre en conserva una còpia emmascarada, però el destinatari ja ha rebut la contrasenya)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "El correu conté una clau d'accés (p. ex. per a Stripe, GitHub, Slack, AWS, Google o SendGrid) o una clau privada. Qui llegeixi el correu, ara o anys després en una safata d'entrada o una còpia de seguretat, la pot fer servir. El registre de correu també la desa, tret que «Emmascara els secrets» estigui activat."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "El correu conté variables de plantilla que no s'han emplenat. Els destinataris les veuen literalment."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "El correu conté el que sembla un número complet de targeta de pagament (supera la prova del dígit de control). Els números de targeta no s'han d'enviar mai per correu (PCI DSS): les safates d'entrada els conserven durant anys. El registre de correu també el desa, tret que «Emmascara els secrets» estigui activat."
+
+msgid "The email is too large"
+msgstr "El correu és massa gran"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "El correu enllaça a fitxers del WordPress d'un amfitrió relacionat. Normalment passa en una còpia de proves que encara conté URL del lloc en producció, o a l'inrevés."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "El correu enllaça a una adreça d'aquest lloc web que respon «no s'ha trobat la pàgina» (404). Normalment passa després de canviar el nom d'una pàgina o d'un producte o de suprimir-los: la plantilla encara apunta a l'adreça antiga i tots els destinataris arriben a una pàgina d'error."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Els tipus de correu s'estan reconstruint a partir del registre."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "El correu va anar a diverses persones de fora del vostre domini a Per a o Cc. Cada destinatari veu totes les altres adreces. Amb clients o membres, això revela dades personals a desconeguts: segons el RGPD, normalment és una violació de seguretat de les dades."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "El correu «%1$s» per a %2$s del %3$s a les %4$s va quedar retingut breument per una comprovació de seguretat per part nostra i es va enviar després. Comproveu també la carpeta de correu brossa."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "El correu «%1$s» per a %2$s del %3$s a les %4$s va quedar retingut per una comprovació de seguretat per part nostra i no s'ha enviat. El tornarem a enviar."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "El correu «%1$s» per a %2$s del %3$s a les %4$s no es va enviar perquè en aquell moment teníem l'enviament de correus en pausa. El tornarem a enviar."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "El correu «%1$s» per a %2$s del %3$s a les %4$s no s'ha pogut lliurar. El tornarem a enviar."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "El correu «%1$s» per a %2$s es va crear el %3$s a les %4$s, però no podem confirmar si es va lliurar. Ho comprovarem i el tornarem a enviar si cal."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "El correu «%1$s» es va enviar a %2$s el %3$s a les %4$s i el servidor de correu el va acceptar. Comproveu també la carpeta de correu brossa."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "El fre d'emergència reté els correus sortints fins que els allibereu o els descarteu."
+
+msgid "The emergency brake is holding emails"
+msgstr "El fre d'emergència està retenint correus"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "El fre d'emergència no reté cap correu"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "El fre d'emergència està activat: el vostre lloc web ha enviat de sobte molts més correus del que és habitual."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "El fre d'emergència ha detectat un nombre inusual de correus en una hora. Pot ser que s'estigui fent un mal ús d'un formulari de contacte. Els correus encara s'envien."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Es desa el codi font en brut exacte: «Baixa el .eml» el retorna sense canvis (no emmascarat)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Els darrers %s correus han fallat tots. Pot ser que l'enviament des d'aquest lloc web no funcioni, p. ex. per un inici de sessió SMTP incorrecte o un servei de correu que rebutja el lloc. Pot ser que els clients no rebin confirmacions de comanda ni restabliments de contrasenya."
+
+msgid "The latest emails could not be sent"
+msgstr "No s'han pogut enviar els darrers correus"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "El registre conserva els correus durant %s dia."
+msgstr[1] "El registre conserva els correus durant %s dies."
+
+msgid "The log shows the reason for each failed email."
+msgstr "El registre mostra el motiu de cada correu fallit."
+
+msgid "The mail log requires JavaScript."
+msgstr "El registre de correu requereix JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "El servidor de correu no ha respost a temps"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "El servidor de correu no està disponible temporalment"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "El servidor de correu ha rebutjat la mida del correu (codi de resposta 552). Els adjunts augmenten aproximadament un terç quan es codifiquen."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "El servei de correu només envia des de dominis o adreces que hi hàgiu verificat."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "El servei de correu o la bústia han rebutjat més correus perquè s'ha arribat a un límit de velocitat, a la quota diària o al límit del pla."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "El servei de correu ha rebutjat la sol·licitud perquè la clau d'API és incorrecta, ha caducat, s'ha revocat o no té permís per enviar."
+
+msgid "The mailer plugin reported a failure"
+msgstr "L'extensió de correu ha informat d'un error"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "La política només s'aplica al %s%% del correu (pct)."
+
+msgid "The reason: %s."
+msgstr "El motiu: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "El servidor receptor ha demanat que es torni a provar més tard (codi de resposta 450/451/452): llista grisa, una bústia plena o massa correus en poc temps."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "El servidor receptor no ha pogut confirmar que el vostre servidor pugui enviar en nom del domini del remitent."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "El servidor receptor no coneix aquesta bústia (codi de resposta 550 / 5.1.1): l'adreça està mal escrita o ja no existeix."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "El servidor receptor encara el pot acceptar en un intent posterior."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "El servidor receptor ha rebutjat el correu pel contingut o perquè l'adreça IP del servidor que l'envia és en una llista de bloqueig."
+
+msgid "The recipient address was rejected"
+msgstr "S'ha rebutjat l'adreça del destinatari"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "El domini del destinatari no accepta correu (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "El domini del destinatari no té servidor de correu"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "El domini del destinatari sembla una errada d'un proveïdor de correu popular. Aquests correus reboten o arriben a un desconegut que ha registrat el domini amb l'errada."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "El mateix assumpte ha anat als mateixos destinataris diverses vegades en poc temps. Les causes típiques són confirmacions de comanda duplicades, un formulari enviat dues vegades, una tasca cron que s'executa en paral·lel o un bucle en una extensió."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "No s'ha pogut establir la connexió segura amb el servidor SMTP: el certificat no coincideix amb el nom de l'amfitrió, ha caducat o el servidor no admet el xifratge triat."
+
+msgid "The sender address is not allowed"
+msgstr "L'adreça del remitent no està permesa"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "La comprovació del remitent ha trobat un problema amb %s. Els correus poden acabar al correu brossa."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "El domini del remitent %s té registres SPF i DMARC"
+
+msgid "The sender domain could not be checked"
+msgstr "No s'ha pogut comprovar el domini del remitent"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "El remitent no té cap domini públic (p. ex. wordpress@localhost). La majoria de servidors de correu rebutgen aquests correus o els envien al correu brossa."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "El servidor no pot enviar correu amb la funció mail() de PHP"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "El servidor ha tancat la connexió (codi de resposta 421), p. ex. per manteniment, sobrecàrrega o massa connexions des del vostre servidor."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "El servidor no retransmet correu en nom vostre, normalment perquè no heu iniciat la sessió o l'adreça del remitent no pertany al compte."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "El servidor només accepta correu després de l'autenticació o de canviar a una connexió xifrada (codi de resposta 530)."
+
+msgid "The server rejected the content"
+msgstr "El servidor ha rebutjat el contingut"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "El programa de correu local del servidor respon lentament: una extensió de correu SMTP o API lliura els correus a un proveïdor."
+
+msgid "The start date must not be after the end date."
+msgstr "La data d'inici no pot ser posterior a la data de finalització."
+
+msgid "The statistics require JavaScript."
+msgstr "Les estadístiques requereixen JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "El text és el mateix; només ha canviat el disseny. Compareu les previsualitzacions."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Normalment, el nom d'usuari és l'adreça electrònica completa. Vigileu els espais copiats juntament amb la contrasenya."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "S'ha eliminat l'URL del webhook: només es permeten URL https vàlids."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "L'informe setmanal està activat però no té cap destinatari: introduïu una adreça electrònica a «Envia les alertes per correu a»."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Aquests correus es tornen a enviar; el seu tipus de correu es torna a supervisar."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Aquests tipus de correu fa més temps del que és habitual que no s'envien. Pot ser per una actualització d'una extensió, un paràmetre canviat o una tasca programada encallada."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Aquest correu té la seva pròpia versió en text pla, però el registre no la desa. Aquí es mostra una versió de text derivada de l'HTML."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Aquest correu no té estils de mode fosc propis. Algunes aplicacions el mostren sense canvis i d'altres en canvien els colors: vegeu Fosc forçat."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Aquest correu no té versió en text pla; alguns clients de correu i filtres de correu brossa la prefereixen. Aquí es mostra una versió de text derivada de l'HTML."
+
+msgid "This email type has no content change."
+msgstr "Aquest tipus de correu no té cap canvi de contingut."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Ara s'ignora aquest tipus de correu: sense estat ni alertes."
+
+msgid "This email type is monitored again."
+msgstr "Aquest tipus de correu es torna a supervisar."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Aquesta entrada s'ha anonimitzat; el contingut ja no es pot enviar."
+
+msgid "This import is already running in another tab."
+msgstr "Aquesta importació ja s'està executant en una altra pestanya."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Això és una alerta de prova. Els vostres canals d'alerta funcionen."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Aquest lloc web en producció ha enviat un enllaç a una adreça local o de proves. Els destinataris no la poden obrir."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Aquesta pregunta requereix JavaScript. En lloc d'això, podeu cercar al registre."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Aquest lloc web manté un registre dels correus que envia (destinatari, assumpte, contingut i estat de lliurament) per verificar-ne el lliurament i resoldre problemes. Les entrades del registre se suprimeixen automàticament després del període de conservació configurat."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Aquest lloc web s'executa com a entorn %s i el mode de proves evita que els seus correus arribin a persones reals."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Aquest lloc web s'executa com a entorn %s. Activeu el mode de proves perquè cap client real no en rebi correus."
+
+msgid "Threshold (emails per hour)"
+msgstr "Llindar (correus per hora)"
+
+msgid "Thursday"
+msgstr "dijous"
+
+msgid "Timeline"
+msgstr "Cronologia"
+
+msgid "To"
+msgstr "Per a"
+
+msgid "To date"
+msgstr "Fins a la data"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Per conservar-los però rebre només un correu al dia, trieu «Agrupa en un correu diari» al menú … del tipus."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Les llistes principals es basen en els darrers %s correus d'aquest període."
+
+msgid "Top recipient domains"
+msgstr "Dominis de destinatari més freqüents"
+
+msgid "Top recipients: %s"
+msgstr "Destinataris més freqüents: %s"
+
+msgid "Top sources"
+msgstr "Fonts més freqüents"
+
+msgid "Top subjects"
+msgstr "Assumptes més freqüents"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Total: %s ms"
+msgstr "Total: %s ms"
+
+msgid "Trace"
+msgstr "Traça"
+
+msgid "Transcript copied."
+msgstr "S'ha copiat la transcripció."
+
+msgid "Transport"
+msgstr "Transport"
+
+msgid "Trigger"
+msgstr "Activa"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Voleu activar un correu real de restabliment de contrasenya per al vostre compte? El WordPress us crea un enllaç de restabliment nou, de manera que els anteriors deixen de funcionar; la contrasenya no canvia. Només el rebrà %s."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Voleu activar les notificacions d'usuari nou per al vostre compte (l'avís a l'administrador i les dades d'inici de sessió)? El WordPress us crea un enllaç de contrasenya nou, de manera que els anteriors deixen de funcionar. No es crea cap usuari; només les rebrà %s."
+
+msgid "Trigger to me"
+msgstr "Activa per a mi"
+
+msgid "Triggering…"
+msgstr "S'està activant…"
+
+msgid "Tuesday"
+msgstr "dimarts"
+
+msgid "Type"
+msgstr "Tipus"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Els tipus s'actualitzen cada hora i cada vegada que obriu aquesta pàgina. Només es desen comptadors, patrons d'assumpte i empremtes de contingut (sense destinataris ni continguts), i segueixen el període de conservació del registre."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Errada al domini del destinatari? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Els accents o les cometes apareixen com a caràcters estranys, com ara «Ã¤» o «â€™». En algun punt del camí, un text UTF-8 s'ha llegit amb un altre joc de caràcters: en una plantilla, una importació o la base de dades."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "No està clar. «%1$s» per a %2$s es va lliurar per enviar-lo %3$s, però Mailspur no ha rebut cap resultat."
+
+msgid "Under Tools"
+msgstr "A Eines"
+
+msgid "Uninstall"
+msgstr "Desinstal·la"
+
+msgid "Unknown"
+msgstr "Desconegut"
+
+msgid "Unknown probe."
+msgstr "Prova desconeguda."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Desconegut: no s'ha informat de cap resultat de lliurament (s'ha substituït la funció wp_mail()?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Marcadors de posició sense substituir: %1$s"
+
+msgid "Until the log limit"
+msgstr "Fins al límit del registre"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Fins a 10 adreces, separades per comes. Cc i Bcc s'eliminen i l'assumpte mostra els destinataris originals. Sense una adreça vàlida, els correus es retenen."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Fins a 5 adreces, separades per comes. Els correus d'alerta apareixen al registre amb la font «Alertes de Mailspur» i mai no activen alertes per si mateixos."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Actualitzeu l'enllaç a la plantilla de correu o als paràmetres de l'extensió que envia aquest correu, o afegiu una redirecció de l'adreça antiga a la pàgina nova (p. ex. amb una extensió de redireccions)."
+
+msgid "Updated in between: %s"
+msgstr "Actualitzat entremig: %s"
+
+msgid "Updated since the last one:"
+msgstr "Actualitzat des de l'últim:"
+
+msgid "Updated since then: %s."
+msgstr "Actualitzat des de llavors: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Feu servir TLS al port 587 o SSL al port 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Feu servir un text d'enllaç descriptiu (p. ex. «Mostra la comanda») o mostreu l'adreça on porta realment l'enllaç."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Feu servir una adreça de remitent del vostre domini i poseu l'adreça gratuïta a Reply-To. Només és correcte si realment envieu a través del servidor SMTP del mateix proveïdor amb el seu inici de sessió."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Feu servir URL absoluts amb https:// i el domini, p. ex. amb home_url() o wp_get_attachment_url() a la plantilla."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Feu servir exactament el nom d'amfitrió per al qual es va emetre el certificat (p. ex. l'amfitrió smtp.… del proveïdor en lloc d'una IP o del vostre domini)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Feu servir com a màxim un signe d'exclamació."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Feu servir les tecles de fletxa per moure-us entre les cel·les."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Feu servir les tecles de fletxa per moure-us entre els valors i Retorn per obrir-los al registre."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Feu servir l'adreça de la bústia del compte SMTP com a remitent (De)."
+
+msgid "User"
+msgstr "Usuari"
+
+msgid "User: %s"
+msgstr "Usuari: %s"
+
+msgid "Username"
+msgstr "Nom d'usuari"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Fa servir els paràmetres desats: primer deseu els canvis."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Verifiqueu el domini del remitent al vostre servei de correu (afegiu-ne els registres DNS) o feu servir una adreça de remitent ja verificada."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Molt probablement. «%1$s» es va enviar a %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Assumpte molt llarg (%1$s caràcters)"
+
+msgid "View"
+msgstr "Mostra"
+
+msgid "View %s failed emails"
+msgstr "Mostra %s correus fallits"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron fa %s que no s'executa (DISABLE_WP_CRON està definit: comproveu la tasca cron del servidor)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron fa %s que no s'executa: només s'executa quan el lloc web rep visites, o bé falla amb un error."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron funciona amb normalitat."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Esperant el resum diari: no s'envia per separat."
+
+msgid "Waits %s s for the mail server"
+msgstr "Espera %s s el servidor de correu"
+
+msgid "Warnings"
+msgstr "Avisos"
+
+msgid "Webhook URL"
+msgstr "URL del webhook"
+
+msgid "Webhook signing key"
+msgstr "Clau de signatura del webhook"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "dimecres"
+
+msgid "Week"
+msgstr "Setmana"
+
+msgid "Week of %s"
+msgstr "Setmana del %s"
+
+msgid "Weekday"
+msgstr "Dia de la setmana"
+
+msgid "Weekly"
+msgstr "Setmanalment"
+
+msgid "Weekly email report"
+msgstr "Informe setmanal de correu"
+
+msgid "Weekly report"
+msgstr "Informe setmanal"
+
+msgid "What to do"
+msgstr "Què cal fer"
+
+msgid "When emails are sent"
+msgstr "Quan s'envien els correus"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Quan s'envien molts més correus del que és habitual, el fre d'emergència us avisa i pot retenir els correus següents."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Quan està desactivat, els píxels de seguiment no poden saber quan obriu una entrada. Igualment podeu carregar el contingut extern d'un sol correu. Els scripts i els formularis sempre es bloquegen."
+
+msgid "Who can view the log"
+msgstr "Qui pot veure el registre"
+
+msgid "Why did an email fail?"
+msgstr "Per què ha fallat un correu?"
+
+msgid "With attachments"
+msgstr "Amb adjunts"
+
+msgid "With notes"
+msgstr "Amb notes"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Sense aquests registres DNS, els proveïdors de correu no poden verificar que el vostre lloc web pot enviar correus per a aquest domini, de manera que és més probable que els correus acabin al correu brossa. La comprovació del remitent suggereix registres que podeu afegir al vostre proveïdor de domini."
+
+msgid "WooCommerce email"
+msgstr "Correu del WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Paràmetres › Correus electrònics"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "Els correus del nucli del WordPress no tenen editor; es poden canviar amb filtres."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "El WordPress no ha enviat cap correu: pot ser que una extensió hagi desactivat aquest correu."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "El WordPress no té cap paràmetre per a aquest correu. Mailspur pot aturar l'avís als administradors; l'usuari nou continua rebent el seu correu."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "El WordPress no té cap paràmetre per a aquest correu. Mailspur pot aturar els avisos d'èxit de les actualitzacions automàtiques; els avisos d'actualitzacions fallides continuen arribant."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "El WordPress envia per defecte mitjançant la funció mail() de PHP. En aquest servidor està desactivada o no hi ha instal·lat cap programa de correu (sendmail), cosa habitual en entorns locals, Docker i molts allotjaments gestionats."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Escriviu l'assumpte en majúscules i minúscules normals i destaqueu com a màxim una sola paraula."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Sí, però el destinatari va marcar «%1$s» per a %2$s (%3$s) com a correu brossa, segons %4$s."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Sí. «%1$s» es va enviar a %2$s %3$s i %4$s n'ha confirmat el lliurament."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Encara el podeu enviar des del registre («Envia ara»)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Rebeu aquest resum perquè aquests tipus de correu estan agrupats en un correu diari a Mailspur. Cada correu es queda al registre."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Rebeu aquest correu perquè les alertes de supervisió estan activades als paràmetres de Mailspur d'aquest lloc web."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Rebeu aquest correu perquè l'informe setmanal està activat als paràmetres de Mailspur d'aquest lloc web. Només conté recomptes i patrons d'assumpte, sense contingut ni destinataris dels correus."
+
+msgid "Your DKIM selector (optional)"
+msgstr "El vostre selector DKIM (opcional)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "El vostre lloc web no ha enviat cap correu en els darrers 7 dies."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s notificacions: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 notificació: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Informe setmanal de correu %2$s"
+
+msgid "address"
+msgstr "adreça"
+
+msgid "and %s more"
+msgstr "i %s més"
+
+msgid "and %s more – see the log"
+msgstr "i %s més: vegeu el registre"
+
+msgid "another plugin stopped it"
+msgstr "una altra extensió l'ha aturat"
+
+msgid "code"
+msgstr "codi"
+
+msgid "date"
+msgstr "data"
+
+msgid "days"
+msgstr "dies"
+
+msgid "deleted after %s days"
+msgstr "se suprimeix després de %s dies"
+
+msgid "emails to this address failed several times before"
+msgstr "els correus a aquesta adreça ja havien fallat diverses vegades"
+
+msgid "entries"
+msgstr "entrades"
+
+msgid "failing"
+msgstr "falla"
+
+msgid "failure spikes"
+msgstr "pics d'errors"
+
+msgid "first seen %s"
+msgstr "vist per primera vegada %s"
+
+msgid "from a new sender"
+msgstr "d'un remitent nou"
+
+msgid "holding emails right now"
+msgstr "està retenint correus ara mateix"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "es conserva fins que se suprimeixi manualment"
+
+msgid "link"
+msgstr "enllaç"
+
+msgid "minutes"
+msgstr "minuts"
+
+msgid "name"
+msgstr "nom"
+
+msgid "new this week"
+msgstr "nou aquesta setmana"
+
+msgid "no"
+msgstr "no"
+
+msgid "none"
+msgstr "cap"
+
+msgid "none in %1$s – %2$s"
+msgstr "cap en %1$s – %2$s"
+
+msgid "number"
+msgstr "número"
+
+msgid "of %s"
+msgstr "de %s"
+
+msgid "often to administrators"
+msgstr "sovint als administradors"
+
+msgid "on %1$s at %2$s"
+msgstr "el %1$s a les %2$s"
+
+msgid "same recipient"
+msgstr "mateix destinatari"
+
+msgid "slow to send"
+msgstr "lent d'enviar"
+
+msgid "staging mode is on"
+msgstr "el mode de proves està activat"
+
+msgid "stopped"
+msgstr "aturat"
+
+msgid "stopped email types"
+msgstr "tipus de correu aturats"
+
+msgid "text"
+msgstr "text"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "el fre d'emergència ha aturat una allau de correus"
+
+msgid "time"
+msgstr "hora"
+
+msgid "today at %s"
+msgstr "avui a les %s"
+
+msgid "triggered %s times"
+msgstr "activat %s vegades"
+
+msgid "unchanged"
+msgstr "sense canvis"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "desconegut: el mailer no ha donat cap missatge d'error"
+
+msgid "unusual silence"
+msgstr "silenci inusual"
+
+msgid "usually sent: %s"
+msgstr "s'envia normalment: %s"
+
+msgid "wp_mail() called"
+msgstr "S'ha cridat wp_mail()"
+
+msgid "yes"
+msgstr "sí"
+
+msgid "yesterday at %s"
+msgstr "ahir a les %s"
+
+msgid "your email provider"
+msgstr "el vostre proveïdor de correu"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "«%1$s» (%2$s) a les %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "«%1$s» (%2$s) es torna a enviar."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "«%1$s» (%2$s) se sol enviar com a mínim cada %3$s dies. L'últim es va enviar fa %4$s."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "«%1$s» (%2$s) es va enviar per última vegada fa %3$s. Fins aleshores s'enviava com a mínim cada %4$s dies."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "«%1$s» (%2$s) – normalment cada %4$s, l'últim %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "«%1$s» (%2$s) – normalment cada dia, l'últim %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "«%1$s» – %2$s – %3$s"

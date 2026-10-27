@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s anmärkningar",
+	"Belongs to": "Hör till",
+	"Emails to this user": "E-post till den här användaren",
+	"No emails logged for this order yet.": "Ingen e-post har loggats för den här beställningen ännu.",
+	"No emails to this user in the log.": "Ingen e-post till den här användaren i loggen.",
+	"Order #%s": "Beställning #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Skickat till samma adress runt beställningsdatumet, men inte kopplat till den här beställningen (till exempel loggat innan kopplingen fanns, eller importerat).",
+	"Show all in Mail Log": "Visa alla i E-postlogg",
+	"User: %s": "Användare: %s",
+	"WooCommerce email": "WooCommerce-e-post",
+	"same recipient": "samma mottagare"
+}

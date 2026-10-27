@@ -1,0 +1,3261 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "„Preuzmi .eml“ ponovno sastavlja poruku iz zabilježenih, maskiranih podataka (bez privitaka)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (prethodni tjedan: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (zakazano za %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s vrsta e-poruke više se ne šalje: %2$s."
+msgstr[1] "%1$s vrste e-poruka više se ne šalju, npr. %2$s."
+msgstr[2] "%1$s vrsta e-poruka više se ne šalje, npr. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "Vrste e-poruka: %1$s, pošiljatelji: %2$s"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "U posljednjih %2$s minuta nije uspjelo %1$s e-poruka."
+
+msgid "%1$s emails in %2$s days"
+msgstr "E-poruke: %1$s u %2$s dana"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "E-poruke u posljednjih 30 dana: %1$s, neuspjele: %2$s"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "Unutar jednog sata poslano je %1$s e-poruka – mnogo više nego inače (prag: %2$s na sat). Kontaktni obrazac možda se zloupotrebljava ili je web-mjesto možda kompromitirano."
+
+msgid "%1$s entries, %2$s"
+msgstr "Zapisi: %1$s, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "Uvezeno: %1$s, duplikati: %2$s, prestaro: %3$s"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "Odbijeno %1$s od %2$s (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "U posljednjih %3$s dana nije poslano %1$s od %2$s e-poruka."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "Obrađeno %1$s od %2$s zapisa …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s p. b. u odnosu na %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s poslao je prvu e-poruku %2$s i u posljednja 24 sata pisao na %3$s različitih vanjskih adresa. Ako niste instalirali ni postavili ništa što šalje takve e-poruke, provjerite web-mjesto: novi pošiljatelj može biti znak hakiranog web-mjesta."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "Poslano %1$s, još zadržano %2$s …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s u odnosu na %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · e-poruke prikupljene od posljednjeg sažetka: %2$s"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · stanje na %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – stopa neuspjeha %2$s %% (prethodni tjedan: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – prijavio %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (must-use dodatak)"
+
+msgid "%s (theme)"
+msgstr "%s (tema)"
+
+msgid "%s ago"
+msgstr "prije %s"
+
+msgid "%s days"
+msgstr "%s dana"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s e-poruka nije uspješno poslana u posljednjih 7 dana."
+msgstr[1] "%s e-poruke nisu uspješno poslane u posljednjih 7 dana."
+msgstr[2] "%s e-poruka nije uspješno poslano u posljednjih 7 dana."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s e-poruka čeka vašu odluku."
+msgstr[1] "%s e-poruke čekaju vašu odluku."
+msgstr[2] "%s e-poruka čeka vašu odluku."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s e-poruka zadržana je i nije poslana u posljednjih 7 dana."
+msgstr[1] "%s e-poruke zadržane su i nisu poslane u posljednjih 7 dana."
+msgstr[2] "%s e-poruka zadržano je i nije poslano u posljednjih 7 dana."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "Kočnica u nuždi zadržava e-poruke: %s."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "E-poruke koje čekaju i nisu isporučene: %s."
+
+msgid "%s entries"
+msgstr "Zapisi: %s"
+
+msgid "%s failed"
+msgstr "Neuspjelo: %s"
+
+msgid "%s held emails discarded."
+msgstr "Odbačene zadržane e-poruke: %s."
+
+msgid "%s imported entries removed."
+msgstr "Uklonjeni uvezeni zapisi: %s."
+
+msgid "%s in 30 days"
+msgstr "%s u 30 dana"
+
+msgid "%s marked as spam"
+msgstr "Označeno kao neželjena pošta: %s"
+
+msgid "%s more on the Email types page."
+msgstr "Još %s na stranici Vrste e-poruka."
+
+msgid "%s notes"
+msgstr "Napomene: %s"
+
+msgid "%s of all emails"
+msgstr "%s svih e-poruka"
+
+msgid "%s of them in the last 24 hours."
+msgstr "Od toga %s u posljednja 24 sata."
+
+msgid "%s s"
+msgstr "%s s"
+
+msgid "%s selected"
+msgstr "Odabrano: %s"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s stvar zahtijeva pažnju:"
+msgstr[1] "%s stvari zahtijevaju pažnju:"
+msgstr[2] "%s stvari zahtijeva pažnju:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s administratorima u 30 dana"
+
+msgid "%s unchanged lines"
+msgstr "Nepromijenjeni retci: %s"
+
+msgid "(no subject)"
+msgstr "(bez predmeta)"
+
+msgid "(no text content)"
+msgstr "(bez tekstnog sadržaja)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(te e-poruke više nisu u zapisniku)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all je stroži; ~all je uobičajen i u redu u kombinaciji s DMARC-om."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 zauvijek čuva zapise. Čišćenje se pokreće jednom dnevno."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 znači bez ograničenja. Najstariji zapisi uklanjaju se prvi."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 je isključuje. Uklanja sadržaj, zaglavlja i privitke starijih zapisa i maskira adrese (a***@example.com). Datum, status, izvor, format, veličina i napomene ostaju radi statistike. Pokreće se s dnevnim čišćenjem, prije brisanja zapisa – pa ima učinka samo ako je kraća od gornjeg razdoblja brisanja."
+
+msgid "12 months"
+msgstr "12 mjeseci"
+
+msgid "30 days"
+msgstr "30 dana"
+
+msgid "7 days"
+msgstr "7 dana"
+
+msgid "90 days"
+msgstr "90 dana"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "DKIM selektor smije sadržavati samo slova, znamenke, točke, crtice i podvlake."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Dodatak za slanje e-pošte koji šalje putem API-ja preuzeo je isporuku i javio da slanje nije uspjelo, bez navođenja razloga."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Objavljeni ključ ne dokazuje da su vaše e-poruke njime potpisane – provjerite DKIM rezultat u zaglavljima primljene poruke."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Primatelj ili adresa pošiljatelja nije valjana adresa e-pošte, pa je PHPMailer odbio slanje."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "API ključ ili privatni ključ kao običan tekst: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Za procjenu ovog zapisa potrebno je oko %1$s DNS upita – više od dopuštenih %2$s, pa ga primatelji mogu zanemariti (PermError). Uklonite nekorištene stavke include:."
+
+msgid "Access"
+msgstr "Pristup"
+
+msgid "Actions"
+msgstr "Radnje"
+
+msgid "Active: alerts on %s."
+msgstr "Aktivno: upozorenja za %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Svakoj slici u predlošku dodajte kratak atribut alt, npr. alt=\"Logotip Primjer Trgovine\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Dodajte include: svog pružatelja usluge e-pošte (npr. include:_spf.google.com) ako šaljete preko njega."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Dodajte svoj poslužitelj e-pošte ili uslugu e-pošte u SPF zapis domene pošiljatelja."
+
+msgid "Added:"
+msgstr "Dodano:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Adrese s najmanje %s trajnih pogrešaka: poslužitelj primatelja odbio je pretinac, domena nema poslužitelj e-pošte ili je vaš pružatelj usluge e-pošte prijavio trajno odbijanje. Unosi istječu s razdobljem čuvanja zapisnika."
+
+msgid "Admin screen"
+msgstr "Administratorski zaslon"
+
+msgid "Administrators"
+msgstr "Administratori"
+
+msgid "Aggregate reports go to %s."
+msgstr "Zbirna izvješća idu na %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Upozorenje"
+
+msgid "Alert and hold further emails"
+msgstr "Upozori i zadrži daljnje e-poruke"
+
+msgid "Alert only"
+msgstr "Samo upozori"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Upozori kada se redovito slana vrsta e-poruke prestane slati"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Upozori kada e-poruke opetovano ne uspiju"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Upozori kada web-mjesto neočekivano prestane slati e-poruke"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Upozorenja su uključena, ali nemaju kanal: unesite adresu e-pošte ili URL webhooka."
+
+msgid "Alerts are off."
+msgstr "Upozorenja su isključena."
+
+msgid "All"
+msgstr "Sve"
+
+msgid "All email types look healthy."
+msgstr "Sve vrste e-poruka izgledaju u redu."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Sve e-poruke preusmjeravaju se na testne adrese."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Sve e-poruke idu na testne adrese umjesto stvarnim primateljima."
+
+msgid "All sources"
+msgstr "Svi izvori"
+
+msgid "Allow again"
+msgstr "Ponovno dopusti"
+
+msgid "Allowed again."
+msgstr "Ponovno dopušteno."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Također jednom upozorava kada dodatak ili tema koja nikada prije nije poslala e-poruku unutar jednog dana piše na mnogo različitih vanjskih adresa – mogući znak hakiranog web-mjesta. Prva dva tjedna nakon instalacije Mailspura služe kao polazište."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Pri anonimizaciji ukloni i predmet"
+
+msgid "Also search content"
+msgstr "Pretraži i sadržaj"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Ili zamolite davatelja hostinga da omogući mail() / sendmail za ovo web-mjesto."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Uvijek učitaj vanjske slike i fontove u pregledu"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (putem SNS-a)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Pružatelju usluge e-pošte s HTTP API-jem umjesto SMTP-a treba manje razmjena po e-poruci."
+
+msgid "Anonymisation"
+msgstr "Anonimizacija"
+
+msgid "Anonymise entries after"
+msgstr "Anonimiziraj zapise nakon"
+
+msgid "Anonymised"
+msgstr "Anonimizirano"
+
+msgid "Any format"
+msgstr "Bilo koji format"
+
+msgid "Any status"
+msgstr "Bilo koji status"
+
+msgid "Apply"
+msgstr "Primijeni"
+
+msgid "Ask the recipient for a working address."
+msgstr "Zamolite primatelja za ispravnu adresu."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Zamolite davatelja hostinga da omogući proširenje openssl (ili ga omogućite u PHP postavkama upravljačke ploče hostinga)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Zamolite davatelja hostinga da ažurira CA certifikate i OpenSSL na poslužitelju."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Pitajte davatelja hostinga jesu li odlazne SMTP veze blokirane."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Pitajte davatelja hostinga jesu li odlazne veze na taj priključak dopuštene (vatrozid)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Najmanje %1$s neuspjelih e-poruka unutar %2$s minuta"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Najviše jedno upozorenje po vrsti u tom razdoblju, čak i ako problem i dalje postoji."
+
+msgid "Attachments"
+msgstr "Privici"
+
+msgid "Attachments no longer available: %s"
+msgstr "Privici više nisu dostupni: %s"
+
+msgid "Authentication"
+msgstr "Autentifikacija"
+
+msgid "Automatic TLS"
+msgstr "Automatski TLS"
+
+msgid "Average per day"
+msgstr "Prosjek po danu"
+
+msgid "Back to the email types"
+msgstr "Natrag na vrste e-poruka"
+
+msgid "Belongs to"
+msgstr "Pripada"
+
+msgid "Block again"
+msgstr "Ponovno blokiraj"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Blokirano kao neželjena pošta ili zbog popisa blokiranih"
+
+msgid "Bounced (permanent)"
+msgstr "Odbijeno (trajno)"
+
+msgid "Bounced (temporary)"
+msgstr "Odbijeno (privremeno)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Pokvareni znakovi (kodiranje): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Masovna e-poruka bez zaglavlja za odjavu (primatelja: %1$s)"
+
+msgid "Bundle into one daily email"
+msgstr "Skupi u jednu dnevnu e-poruku"
+
+msgid "Bundled into one daily email"
+msgstr "Skupljeno u jednu dnevnu e-poruku"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Skupljanje je isključeno. E-poruke koje su čekale upravo su otišle u jednom sažetku."
+
+msgid "Busiest day"
+msgstr "Najprometniji dan"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Odustani"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Oprez: e-poruke na ovu adresu već nekoliko puta nisu uspjele."
+
+msgid "Change in the email types"
+msgstr "Promijeni u vrstama e-poruka"
+
+msgid "Change staging mode"
+msgstr "Promijeni testni način rada"
+
+msgid "Check"
+msgstr "Provjeri"
+
+msgid "Check again"
+msgstr "Provjeri ponovno"
+
+msgid "Check emails"
+msgstr "Provjeri e-poruke"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Provjerite host i priključak; pokušajte 587 (TLS) umjesto 465 (SSL) ili obrnuto."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Provjerite host, priključak, šifriranje, korisničko ime i lozinku u svom SMTP dodatku i odande pošaljite testnu e-poruku."
+
+msgid "Check sender domains"
+msgstr "Provjeri domene pošiljatelja"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Provjerite odgovara li šifriranje priključku: TLS za 587, SSL za 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Provjerite pripada li ključ ispravnoj regiji / računu (npr. EU ili US krajnja točka)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Provjerite SMTP host i priključak: pogrešan priključak ili blokirana veza često završe istekom vremena prije nego što rezervno rješenje proradi."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Provjerite SPF, DKIM i DMARC zapise domene pošiljatelja ili upotrijebite adresu pošiljatelja na domeni s koje šaljete."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Provjerite ima li u adresi tipfelera – ili vaše web-mjesto tu e-poruku nikada nije poslalo."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Provjerite adresu s primateljem i ispravite je ondje gdje je spremljena (korisnički profil, narudžba, unos obrasca)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Provjerite adresu s primateljem i ispravite je ondje gdje je spremljena."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Provjerite naziv hosta i priključak: 587 sa STARTTLS-om (TLS) ili 465 sa SSL-om. Priključak 25 blokira većina davatelja hostinga."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Provjerite ograničenja i trenutačnu potrošnju na računu usluge e-pošte; po potrebi prijeđite na veći paket."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Provjerite adrese primatelja ovog zapisa ima li tipfelera, razmaka ili dijelova koji nedostaju."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Provjerite adresu pošiljatelja u svom SMTP dodatku i filtar wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Provjerite ograničenja slanja svog računa e-pošte i napomene uz ovu e-poruku."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Provjerite IP adresu poslužitelja alatom za provjeru popisa blokiranih i zatražite uklanjanje s popisa."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Provjerite pravopis rezerviranog mjesta u predlošku i podržava li ga dodatak za ovu vrstu e-poruke. Kratki kodovi ne obrađuju se u e-porukama osim ako dodatak koji šalje ne pokreće do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Provjereno %s."
+
+msgid "Checked just now"
+msgstr "Upravo provjereno"
+
+msgid "Checking DNS records …"
+msgstr "Provjera DNS zapisa …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Provjerava DNS zapise domena s kojih vaše web-mjesto šalje: zadanu adresu pošiljatelja i najčešće pošiljatelje u zapisniku. Nedostajući ili slabi zapisi najčešći su razlog zašto e-poruke završavaju u neželjenoj pošti. Koristi se samo DNS resolver vašeg poslužitelja; rezultati se čuvaju jedan sat."
+
+msgid "Choose a range of at most %s days."
+msgstr "Odaberite raspon od najviše %s dana."
+
+msgid "Clear selection"
+msgstr "Poništi odabir"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Kliknite stupac da biste otvorili te e-poruke u zapisniku."
+
+msgid "Close"
+msgstr "Zatvori"
+
+msgid "Close (Esc)"
+msgstr "Zatvori (Esc)"
+
+msgid "Colour scheme"
+msgstr "Shema boja"
+
+msgid "Command line"
+msgstr "Naredbeni redak"
+
+msgid "Compare"
+msgstr "Usporedi"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Usporedite izvore ovih zapisa. Provjerite šalju li dva dodatka istu obavijest ili se neki hook (npr. promjena statusa narudžbe) pokreće više puta."
+
+msgid "Component"
+msgstr "Komponenta"
+
+msgid "Configure alerts"
+msgstr "Postavi upozorenja"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Sadržaj anonimiziran nakon %1$s dana, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Promjena sadržaja označena kao viđena."
+
+msgid "Content changed"
+msgstr "Sadržaj promijenjen"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Sadržaj promijenjen %1$s, nakon ažuriranja %2$s."
+
+msgid "Content changed on %s."
+msgstr "Sadržaj promijenjen %s."
+
+msgid "Content removed"
+msgstr "Sadržaj uklonjen"
+
+msgid "Content removed after %s days"
+msgstr "Sadržaj uklonjen nakon %s dana"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Sadržaj, zaglavlja i privici uklonjeni su, a adrese maskirane postavkom anonimizacije."
+
+msgid "Copied"
+msgstr "Kopirano"
+
+msgid "Copied – paste it into your reply."
+msgstr "Kopirano – zalijepite to u svoj odgovor."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Kopira kratku rečenicu za odgovor kupcu: kada je i kome e-poruka poslana i je li stigla – bez tehničkih pojedinosti."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Kopira postojeći zapisnik drugog dodatka za bilježenje e-pošte u Mailspur kako bi se stare e-poruke mogle ovdje pretraživati i pregledavati. Drugi dodatak i njegovi podaci ostaju netaknuti; ponovno pokretanje uvoza dodaje samo nove zapise."
+
+msgid "Copy"
+msgstr "Kopiraj"
+
+msgid "Copy for support"
+msgstr "Kopiraj za podršku"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Kopiranje nije moguće u ovom pregledniku. Označite tekst i kopirajte ga:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Ispravite adresu (npr. u korisničkom profilu ili narudžbi) i razmislite o provjeri valjanosti e-pošte u svojim obrascima."
+
+msgid "Counted once per email."
+msgstr "Broji se jednom po e-poruci."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Stvorite novi API ključ s dopuštenjem slanja kod usluge e-pošte i unesite ga u dodatak za slanje e-pošte."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Stvoriti novi URL webhooka? Trenutačni URL odmah prestaje raditi – zalijepite novi URL u postavke webhooka kod svog pružatelja usluge e-pošte."
+
+msgid "Create new URL"
+msgstr "Stvori novi URL"
+
+msgid "Current page"
+msgstr "Trenutačna stranica"
+
+msgid "Current record"
+msgstr "Trenutačni zapis"
+
+msgid "Current size"
+msgstr "Trenutačna veličina"
+
+msgid "Custom"
+msgstr "Prilagođeno"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "DKIM ključ pronađen (selektor: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "DMARC zapis pronađen s p=none: samo izvješća, krivotvorena pošta i dalje se isporučuje."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "DMARC zapis pronađen s pravilom p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "DMARC zapis nema valjano pravilo (p=none, quarantine ili reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "DNS upit nije uspio ili je istekao. Pokušajte ponovno kasnije."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "DNS upiti nisu dostupni na ovom poslužitelju (dns_get_record() je onemogućena), pa se provjera pošiljatelja ovdje ne može pokrenuti."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Potrebni DNS upiti: oko %1$s od dopuštenih %2$s."
+
+msgid "Daily"
+msgstr "Dnevno"
+
+msgid "Daily digest"
+msgstr "Dnevni sažetak"
+
+msgid "Dark"
+msgstr "Tamno"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Default (%s days)"
+msgstr "Zadano (%s dana)"
+
+msgid "Default (no time limit)"
+msgstr "Zadano (bez vremenskog ograničenja)"
+
+msgid "Default sender"
+msgstr "Zadani pošiljatelj"
+
+msgid "Delete"
+msgstr "Izbriši"
+
+msgid "Delete %s selected log entries?"
+msgstr "Izbrisati odabrane zapise iz zapisnika (%s)?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Izbrisati SVE zapise iz zapisnika? To se ne može poništiti."
+
+msgid "Delete entries after"
+msgstr "Briši zapise nakon"
+
+msgid "Delete selected"
+msgstr "Izbriši odabrano"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Izbriši tablicu zapisnika i postavke kada se dodatak izbriše"
+
+msgid "Delete this log entry?"
+msgstr "Izbrisati ovaj zapis?"
+
+msgid "Deleted."
+msgstr "Izbrisano."
+
+msgid "Delivered"
+msgstr "Isporučeno"
+
+msgid "Delivered by %s (API)"
+msgstr "Isporučio %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Isporučio kôd povezan s pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Isporučeno u dnevnom sažetku %s."
+
+msgid "Delivery"
+msgstr "Isporuka"
+
+msgid "Delivery status from your email provider"
+msgstr "Status isporuke od vašeg pružatelja usluge e-pošte"
+
+msgid "Desktop"
+msgstr "Računalo"
+
+msgid "Did my email arrive?"
+msgstr "Je li moja e-poruka stigla?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Isključite e-poruku ili promijenite njezina primatelja"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Odbaciti sve zadržane e-poruke? Ostat će u zapisniku, ali neće biti poslane."
+
+msgid "Discard held emails"
+msgstr "Odbaci zadržane e-poruke"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Ne šaljite „s“ besplatnih adresa e-pošte (gmail.com, gmx.de …) preko vlastitog poslužitelja."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Gotovo: poslano e-poruka: %1$s, neuspjelo: %2$s."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Gotovo: uvezeno %1$s, duplikati: %2$s, prestaro: %3$s."
+
+msgid "Download .eml"
+msgstr "Preuzmi .eml"
+
+msgid "Download as CSV"
+msgstr "Preuzmi kao CSV"
+
+msgid "Download started."
+msgstr "Preuzimanje je započelo."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Preuzmi zapise koji odgovaraju trenutačnim filtrima kao %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Svaka se e-poruka provjerava jednom kada se zabilježi ili uveze (bez vanjskih zahtjeva). Promjene ovdje utječu samo na e-poruke zabilježene nakon toga; stariji zapisi ne provjeravaju se ponovno. Provjere DNS-a i ponovljenog slanja pokreću se kada otvorite zapis."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Ranije e-poruke na %s više su puta trajno odbijene."
+
+msgid "Edit template"
+msgstr "Uredi predložak"
+
+msgid "Editors and above"
+msgstr "Urednici i viši"
+
+msgid "Email address"
+msgstr "Adresa e-pošte"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "Adresa e-pošte (najnovija e-poruka više nije u zapisniku)"
+
+msgid "Email address or order number"
+msgstr "Adresa e-pošte ili broj narudžbe"
+
+msgid "Email consists almost only of images"
+msgstr "E-poruka se sastoji gotovo samo od slika"
+
+msgid "Email failure spike"
+msgstr "Nagli porast neuspjelih e-poruka"
+
+msgid "Email failures"
+msgstr "Neuspjele e-poruke"
+
+msgid "Email failures resolved"
+msgstr "Pogreške e-poruka su riješene"
+
+msgid "Email inventory"
+msgstr "Popis e-poruka"
+
+msgid "Email log"
+msgstr "Zapisnik e-pošte"
+
+msgid "Email log: problem recipients"
+msgstr "Zapisnik e-pošte: problematični primatelji"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Pošalji mi e-poruku kad netko objavi komentar"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Pošalji mi e-poruku kad komentar čeka moderiranje"
+
+msgid "Email provider"
+msgstr "Pružatelj usluge e-pošte"
+
+msgid "Email sent again."
+msgstr "E-poruka je ponovno poslana."
+
+msgid "Email sent to %s."
+msgstr "E-poruka poslana na %s."
+
+msgid "Email type"
+msgstr "Vrsta e-poruke"
+
+msgid "Email type is sent again"
+msgstr "Vrsta e-poruke ponovno se šalje"
+
+msgid "Email type stopped"
+msgstr "Vrsta e-poruke prestala se slati"
+
+msgid "Email types"
+msgstr "Vrste e-poruka"
+
+msgid "Email volume back to normal"
+msgstr "Količina e-poruka ponovno je normalna"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Količina e-poruka ponovno je normalna: kočnica u nuždi više nije aktivna."
+
+msgid "Email: failed"
+msgstr "E-poruka: neuspjelo"
+
+msgid "Email: failed – see the log"
+msgstr "E-poruka: neuspjelo – pogledajte zapisnik"
+
+msgid "Email: sent"
+msgstr "E-poruka: poslano"
+
+msgid "Emails"
+msgstr "E-poruke"
+
+msgid "Emails are being logged again."
+msgstr "E-poruke se ponovno bilježe u zapisnik."
+
+msgid "Emails are delivered to their recipients."
+msgstr "E-poruke se isporučuju primateljima."
+
+msgid "Emails are flowing again"
+msgstr "E-poruke ponovno odlaze"
+
+msgid "Emails are logged but not delivered."
+msgstr "E-poruke se bilježe u zapisnik, ali se ne isporučuju."
+
+msgid "Emails are still being sent."
+msgstr "E-poruke se i dalje šalju."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "E-poruke se i dalje šalju. Provjerite glavni izvor; prebacite kočnicu u nuždi na „Upozori i zadrži daljnje e-poruke“ da ih zaustavite."
+
+msgid "Emails in 30 days"
+msgstr "E-poruke u 30 dana"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "E-poruke ove vrste koje idu samo administratorima sada se skupljaju i šalju jednom dnevno u jednom sažetku."
+
+msgid "Emails over time"
+msgstr "E-poruke kroz vrijeme"
+
+msgid "Emails per day and status"
+msgstr "E-poruke po danu i statusu"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "E-poruke po danu u tjednu i satu (vremenska zona web-mjesta)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "E-poruke koje su već u zapisniku – zabilježio ih je sam Mailspur ili su uvezene iz drugog dodatka – prepoznaju se po primateljima, predmetu i vremenu slanja te se preskaču kao duplikati."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Redovite e-poruke prestale su se slati (%s)"
+
+msgid "Emails to this user"
+msgstr "E-poruke ovom korisniku"
+
+msgid "Emails with notes"
+msgstr "E-poruke s napomenama"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "E-poruke bez predmeta izgledaju kao neželjena pošta i teško ih je pronaći u pretincu."
+
+msgid "Emails – last 7 days"
+msgstr "E-poruke – posljednjih 7 dana"
+
+msgid "Emergency brake"
+msgstr "Kočnica u nuždi"
+
+msgid "Emergency brake reset."
+msgstr "Kočnica u nuždi poništena."
+
+msgid "Emergency brake settings"
+msgstr "Postavke kočnice u nuždi"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Kočnica u nuždi: %1$s e-poruka u posljednjem satu – mnogo više nego inače (prag: %2$s na sat)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Kočnica u nuždi: neuobičajena poplava e-poruka"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Prazno = automatski: trostruko od najprometnijeg sata u posljednjih 14 dana, najmanje 50 – trenutačno %s."
+
+msgid "Empty log"
+msgstr "Isprazni zapisnik"
+
+msgid "Empty subject"
+msgstr "Prazan predmet"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Uključite potvrdu u dva koraka za Google račun i stvorite zaporku za aplikaciju (Google račun → Sigurnost → Zaporke aplikacija)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Uključite DKIM potpisivanje kod svog pružatelja usluge e-pošte ili hostinga i objavite ključ koji vam on da. Ako već potpisujete, unesite svoj selektor (vrijednost s= iz zaglavlja DKIM-Signature) i provjerite ponovno."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Uključite DKIM potpisivanje kod svoje usluge e-pošte i objavite njezin DNS zapis."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Uključite autentifikaciju u svom SMTP dodatku i unesite korisničko ime i lozinku."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Uključite autentifikaciju u svom SMTP dodatku."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Šifrirane SMTP veze (TLS/SSL) trebaju PHP proširenje openssl, koje na ovom poslužitelju nije instalirano ili omogućeno."
+
+msgid "Encryption"
+msgstr "Šifriranje"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Šifriranje (TLS/SSL) nije uspjelo"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Najprije unesite adresu e-pošte ili URL webhooka i spremite postavke."
+
+msgid "Enter an email address or an order number."
+msgstr "Unesite adresu e-pošte ili broj narudžbe."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Najprije unesite adresu e-pošte pod „Šalji upozorenja e-poštom na“ i spremite postavke."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Unesite od 1 do 10 adresa e-pošte."
+
+msgid "Enter one or more email addresses."
+msgstr "Unesite jednu ili više adresa e-pošte."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Unesite zaporku za aplikaciju u svoj SMTP dodatak ili upotrijebite vezu dodatka „Prijava putem Googlea“ (OAuth)."
+
+msgid "Entries"
+msgstr "Zapisi"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Zapisi stariji od %s dana preskaču se jer bi ih postavka čuvanja ionako izbrisala. Da biste uvezli sve, najprije gore promijenite razdoblje čuvanja."
+
+msgid "Error"
+msgstr "Pogreška"
+
+msgid "Errors"
+msgstr "Pogreške"
+
+msgid "Every %s days"
+msgstr "Svakih %s dana"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "Svakih 15 minuta (Mailspur upozorenja)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Svakog ponedjeljka ujutro, samo kad ima što za javiti: e-poruke i stopa neuspjeha u usporedbi s prethodnim tjednom, nove, zaustavljene i promijenjene vrste e-poruka, e-poruke s napomenama i aktivacije kočnice u nuždi. Samo brojevi i uzorci predmeta."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Svaka vrsta e-poruke koju ovo web-mjesto šalje, generirana iz Mailspurova zapisnika e-pošte – npr. za evidenciju aktivnosti obrade ili primopredaju. Skupine primatelja izvode se iz najnovijih e-poruka svakog pošiljatelja, kategorije podataka iz najnovije e-poruke svake vrste. Popis ne sadrži sadržaj e-poruka ni adrese."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Svaka vrsta e-poruke koju vaše web-mjesto šalje, automatski pronađena u zapisniku: grupirana po dodatku koji je šalje i po predmetu, s brojevima, adresama i imenima kao rezerviranim mjestima. Mailspur uči koliko se često šalje svaka vrsta i primjećuje kada se neka prestane slati – na primjer nakon ažuriranja dodatka."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Sve je u redu: %s e-poruka u posljednjih 7 dana, bez pogrešaka."
+msgstr[1] "Sve je u redu: %s e-poruke u posljednjih 7 dana, nijedna nije neuspjela."
+msgstr[2] "Sve je u redu: %s e-poruka u posljednjih 7 dana, nijedna nije neuspjela."
+
+msgid "Expected today and not sent yet:"
+msgstr "Očekivano danas, a još nije poslano:"
+
+msgid "Export"
+msgstr "Izvoz"
+
+msgid "Export started – your download begins shortly."
+msgstr "Izvoz je započeo – preuzimanje će uskoro početi."
+
+msgid "Failed"
+msgstr "Neuspjelo"
+
+msgid "Failed (%s %%)"
+msgstr "Neuspjelo (%s %%)"
+
+msgid "Failing"
+msgstr "S pogreškama"
+
+msgid "Failure rate"
+msgstr "Stopa neuspjeha"
+
+msgid "Failure spike"
+msgstr "Nagli porast pogrešaka"
+
+msgid "Far more emails than usual were sent"
+msgstr "Poslano je mnogo više e-poruka nego inače"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Poslano je mnogo više e-poruka nego inače, pa Mailspur zadržava daljnje e-poruke dok ih ne oslobodite ili odbacite."
+
+msgid "Fewer"
+msgstr "Manje"
+
+msgid "File"
+msgstr "Datoteka"
+
+msgid "Filter by status"
+msgstr "Filtriraj po statusu"
+
+msgid "Filter email types"
+msgstr "Filtriraj vrste e-poruka"
+
+msgid "First email after the change"
+msgstr "Prva e-poruka nakon promjene"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Prva e-poruka od ovog pošiljatelja %s. Uz uključena upozorenja za vrste Mailspur upozorava kada novi pošiljatelj piše na mnogo vanjskih adresa."
+
+msgid "First page"
+msgstr "Prva stranica"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Kod velikih privitaka vremensko ograničenje može isteći i tijekom prijenosa – šaljite manje datoteke ili poveznice."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Za testne i razvojne kopije web-mjesta: pobrinite se da kupci nikada ne dobiju e-poruke s kopije. Svaka se e-poruka i dalje bilježi u zapisnik."
+
+msgid "Forced dark"
+msgstr "Prisilno tamno"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Free text from forms"
+msgstr "Slobodan tekst iz obrazaca"
+
+msgid "Friday"
+msgstr "Petak"
+
+msgid "From"
+msgstr "Od"
+
+msgid "From date"
+msgstr "Od datuma"
+
+msgid "Front end"
+msgstr "Javni dio"
+
+msgid "Function"
+msgstr "Funkcija"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Daljnje e-poruke zadržavaju se dok ih administrator ne oslobodi ili odbaci."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail i Google Workspace više ne prihvaćaju uobičajenu lozinku računa za SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail skraćuje HTML e-poruke veće od 102 KB i prikazuje „[Poruka je skraćena]“. Sve nakon reza – često podnožje, poveznica za odjavu ili pravna napomena – skriveno je."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail će skratiti ovu e-poruku (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google je odbio prijavu"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML poslan kao običan tekst"
+
+msgid "Handler"
+msgstr "Rukovatelj"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Trajno odbijanje koje je prijavio vaš pružatelj usluge e-pošte"
+
+msgid "Hard failures"
+msgstr "Trajne pogreške"
+
+msgid "Headers"
+msgstr "Zaglavlja"
+
+msgid "Held"
+msgstr "Zadržano"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Zadržala kočnica u nuždi – odbačeno."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Zadržala kočnica u nuždi – nije isporučeno."
+
+msgid "Held by emergency brake – released later."
+msgstr "Zadržala kočnica u nuždi – kasnije oslobođeno."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Zadržao testni način rada – nije isporučeno."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Zadržana e-poruka poslana. Zabilježena je kao novi zapis."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Zadržane e-poruke dobivaju status „Zadržano“ i i dalje se mogu poslati pojedinačno iz zapisnika („Pošalji sada“)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Zadržano: svi primatelji već su prije imali trajnu pogrešku (problematični primatelji)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Zadržano: testni način rada postavljen je na preusmjeravanje, ali nije postavljena valjana adresa za preusmjeravanje."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Savjeti o problemima zbog kojih ova e-poruka možda neće stići ili se neće ispravno prikazati."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Zadrži daljnje e-poruke problematičnim primateljima"
+
+msgid "Hooks"
+msgstr "Hookovi"
+
+msgid "Hours"
+msgstr "Sati"
+
+msgid "How to fix:"
+msgstr "Kako popraviti:"
+
+msgid "I already did"
+msgstr "Već sam to učinio"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Razumijem da izvorni zapis NIJE maskiran i otprilike udvostručuje prostor za pohranu po e-poruci"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Ako se to često događa, provjerite ograničenja slanja svog pružatelja usluge e-pošte."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Ako se to ponavlja, šaljite manje e-poruka odjednom ili putem usluge e-pošte s redom čekanja."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Ako to blokiraju zadane sigurnosne postavke, umjesto toga upotrijebite Microsoftovu vezu (OAuth / Graph API) u svom SMTP dodatku."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Ako nije uspjelo nekoliko primatelja, odgovor poslužitelja nakon adrese navodi razlog."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Ako račun koristi dvofaktorsku autentifikaciju, stvorite zaporku za aplikaciju i upotrijebite nju."
+
+msgid "Ignore"
+msgstr "Zanemari"
+
+msgid "Ignored"
+msgstr "Zanemareno"
+
+msgid "Ignored notes"
+msgstr "Zanemarene napomene"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Zanemarene napomene više se ne bilježe za nove e-poruke i skrivene su u postojećim zapisima."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Slike bez zamjenskog teksta (%1$s)"
+
+msgid "Import"
+msgstr "Uvezi"
+
+msgid "Import failed: %s"
+msgstr "Uvoz nije uspio: %s"
+
+msgid "Import from other plugins"
+msgstr "Uvoz iz drugih dodataka"
+
+msgid "Import new entries"
+msgstr "Uvezi nove zapise"
+
+msgid "Imported"
+msgstr "Uvezeno"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Uvezeni zapisi nemaju trag: drugi dodatak nije bilježio te pojedinosti."
+
+msgid "Imported from %s"
+msgstr "Uvezeno iz %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "U Amazon SNS-u pretplatite URL (protokol HTTPS) na temu koja prima obavijesti Delivery, Bounce i Complaint iz Amazon SES-a. Mailspur automatski potvrđuje pretplatu."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "U Brevu otvorite Transactional → Settings → Webhook, dodajte URL i odaberite Delivered, Hard bounce, Soft bounce, Invalid email i Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "U Mailgunu otvorite Sending → Webhooks, dodajte URL za Delivered, Permanent failure, Temporary failure i Spam complaints te ispod zalijepite HTTP webhook signing key."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "U Postmarku otvorite svoj poslužitelj → Webhooks → Add webhook, zalijepite URL i odaberite Delivery, Bounce i Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "U centru za administraciju sustava Microsoft 365 otvorite korisnika → Pošta → Upravljanje aplikacijama e-pošte i uključite „Provjereni SMTP“."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Pretinci prikazuju otprilike prvih 40 – 80 znakova; ostatak se odsijeca, na telefonima i ranije."
+
+msgid "Include content"
+msgstr "Uključi sadržaj"
+
+msgid "Information"
+msgstr "Informacije"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Instalirajte SMTP dodatak i šaljite putem stvarnog pretinca ili usluge e-pošte svoje domene."
+
+msgid "Invalid date."
+msgstr "Neispravan datum."
+
+msgid "Invalid email address"
+msgstr "Neispravna adresa e-pošte"
+
+msgid "Invalid email address: %s"
+msgstr "Neispravna adresa e-pošte: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Neispravna adresa pošiljatelja: %1$s"
+
+msgid "Irregular"
+msgstr "Neredovito"
+
+msgid "Is Mailspur helping you?"
+msgstr "Pomaže li vam Mailspur?"
+
+msgid "Is an email missing?"
+msgstr "Nedostaje li e-poruka?"
+
+msgid "Is everything running?"
+msgstr "Radi li sve?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Zadrži najviše"
+
+msgid "Keep for"
+msgstr "Čuvaj"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Čuvajte ovaj URL u tajnosti: sadrži tajni ključ ovog web-mjesta. Spremite postavke prije testiranja webhooka."
+
+msgid "Kept: %s"
+msgstr "Čuvanje: %s"
+
+msgid "Key figures"
+msgstr "Ključni pokazatelji"
+
+msgid "Last 30 days"
+msgstr "Posljednjih 30 dana"
+
+msgid "Last email before the change"
+msgstr "Posljednja e-poruka prije promjene"
+
+msgid "Last failure"
+msgstr "Posljednja pogreška"
+
+msgid "Last page"
+msgstr "Posljednja stranica"
+
+msgid "Last sent"
+msgstr "Posljednje poslano"
+
+msgid "Leave a review"
+msgstr "Ostavite recenziju"
+
+msgid "Light"
+msgstr "Svijetlo"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Tekst poveznice prikazuje %1$s, ali vodi na %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Poveznica na razvojnu adresu: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Poveznica na stranicu koja ne postoji na vašem web-mjestu: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Povežite izravno na punu adresu. Za praćenje klikova umjesto toga koristite UTM parametre na vlastitoj domeni."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Poveznica preko skraćivača URL-ova: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Poveznice i slike koje počinju s „/“ rade samo na web-mjestu. U programu za e-poštu nema adrese web-mjesta koja bi ih dopunila, pa slike ostaju prazne, a poveznice ne vode nikamo."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Poveznice na drugu kopiju web-mjesta: %1$s (ovo web-mjesto: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Poveznice čija se vidljiva adresa razlikuje od stvarnog odredišta izgledaju kao phishing. Filtri neželjene pošte kažnjavaju ih, a neki programi za e-poštu upozoravaju čitatelja."
+
+msgid "Load remote content"
+msgstr "Učitaj vanjski sadržaj"
+
+msgid "Loading…"
+msgstr "Učitavanje…"
+
+msgid "Log"
+msgstr "Zapisnik"
+
+msgid "Log entries %s"
+msgstr "Zapisi %s"
+
+msgid "Log entry not found."
+msgstr "Zapis nije pronađen."
+
+msgid "Log only – do not send any email"
+msgstr "Samo bilježi – ne šalji nijednu e-poruku"
+
+msgid "Log size"
+msgstr "Veličina zapisnika"
+
+msgid "Logged emails"
+msgstr "Zabilježene e-poruke"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Zabilježene e-poruke mogu sadržavati osobne podatke. Pristup dodijelite što uže. Postavke uvijek zahtijevaju administratorska prava."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Prijava i primatelji prihvaćeni su, ali sama e-poruka odbijena je – obično zbog filtriranja neželjene pošte, ograničenja slanja ili pravila pružatelja (kôd odgovora 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Bilježi odlazne e-poruke, prepoznaje vrste e-poruka koje vaše web-mjesto šalje i upozorava vas kad se neka prestane slati. Siguran pregled, dijagnostika isporuke, statistika."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "U postavkama e-pošte za %s potražite opciju kojom je možete isključiti ili promijeniti primatelja – ili ovdje zanemarite tu vrstu."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Potražite odgovor poslužitelja u poruci o pogrešci; obično navodi razlog."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Potražite u zapisniku neočekivano masovno slanje (neželjena slanja obrazaca, petlje)."
+
+msgid "Looking it up …"
+msgstr "Traženje …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Zapisnik e-pošte"
+
+msgid "Mail Log sections"
+msgstr "Odjeljci zapisnika e-pošte"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Poslužitelji e-pošte za odgovore i odbijene poruke postavljeni su."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Pružatelji pretinaca mogu provjeriti smije li vaše web-mjesto slati e-poruke za ovu domenu. Puna provjera pošiljatelja provjerava i DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Pretinac nepoznat ili nedostupan"
+
+msgid "Mailer"
+msgstr "Mailer"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun potpisuje svaki webhook ovim ključem (Sending → Webhooks → HTTP webhook signing key); izvješća bez valjanog potpisa odbijaju se."
+
+msgid "Mailspur alerts"
+msgstr "Mailspur upozorenja"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur u zapisniku traži e-poruke koje nije bilo moguće poslati."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur u vašoj trgovini nije pronašao narudžbu #%s."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur je na ovom web-mjestu dosad zabilježio %s isporučenih e-poruka. Ako vam štedi vrijeme, kratka recenzija na WordPress.org mnogo bi značila – pomaže drugima pronaći dodatak i održava ga besplatnim."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur u zapisniku nema e-poruka za narudžbu #%s."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur u zapisniku nema e-poruka za %s."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur izrađuje %1$s. Sviđa vam se? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur uči koliko se često šalje svaka vrsta e-poruke, npr. potvrde narudžbi, i ovdje javlja kada se neka prestane slati."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur uči ritam svake vrste e-poruke iz posljednjih 8 tjedana – dnevna potvrda narudžbe kasni nakon 2 dana, tjedno izvješće nakon 2 tjedna. Upozorenje navodi vrstu, njezina pošiljatelja i dodatke ažurirane od njezine posljednje e-poruke. Koristi gornje kanale; zanemarene vrste nikada ne upozoravaju."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur vidi da ju je vaše web-mjesto poslalo, ali ne vidi sam pretinac. Ako je nema ondje, zamolite primatelja da provjeri mapu za neželjenu poštu."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur sada zaustavlja te e-poruke; njihova se vrsta e-poruke zanemaruje."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – zapisnik e-pošte"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: e-poruke zadržane"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: testni način rada"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Glavni izvor: %1$s (e-poruka: %2$s)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Provjerite odgovara li adresa Od u dodatku za slanje e-pošte potvrđenoj domeni."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Provjerite šalje li se e-poruka s „charset=UTF-8“, jesu li datoteke predložaka spremljene kao UTF-8 i koriste li tablice baze podataka utf8mb4. Ispravite tekstove koji su već spremljeni pokvareni."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Provjerite odgovara li postavka šifriranja priključku."
+
+msgid "Many emails could not be sent recently"
+msgstr "Mnoge e-poruke nedavno nije bilo moguće poslati"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Mnogo uskličnika u predmetu (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Mnogi programi za e-poštu blokiraju slike dok ih čitatelj ne dopusti. Bez zamjenskog teksta čitatelj vidi samo prazne okvire; čitači zaslona ne izgovaraju ništa korisno."
+
+msgid "Mark as resolved"
+msgstr "Označi kao riješeno"
+
+msgid "Marked as spam"
+msgstr "Označeno kao neželjena pošta"
+
+msgid "Marked as spam by the recipient"
+msgstr "Primatelj je označio kao neželjenu poštu"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Maskiraj ključeve za ponovno postavljanje lozinke, aktivaciju i pristup u zabilježenim poveznicama, kao i lozinke, API ključeve i brojeve kartica poslane kao običan tekst"
+
+msgid "Maybe later"
+msgstr "Možda kasnije"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Možda e-poruka nikada nije poslana – provjerite status narudžbe i postavke e-poruka vaše trgovine."
+
+msgid "Menu position"
+msgstr "Položaj u izborniku"
+
+msgid "Message"
+msgstr "Poruka"
+
+msgid "Method"
+msgstr "Metoda"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online blokira SMTP prijavu (osnovnu autentifikaciju) za ovaj pretinac ili cijelu organizaciju."
+
+msgid "Minutes"
+msgstr "Minute"
+
+msgid "Monday"
+msgstr "Ponedjeljak"
+
+msgid "Monitor again"
+msgstr "Ponovno nadziri"
+
+msgid "Monitoring alerts"
+msgstr "Upozorenja nadzora"
+
+msgid "More"
+msgstr "Više"
+
+msgid "More actions"
+msgstr "Više radnji"
+
+msgid "More filters"
+msgstr "Više filtara"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Najčešći razlog (%1$s od njih): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Većina poslužitelja prihvaća ukupno 10 – 25 MB."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Pronađeno je više DMARC zapisa. Primatelji u tom slučaju zanemaruju DMARC – zadržite samo jedan."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Pronađeno je više SPF zapisa. Primatelji to smatraju pogreškom (PermError) – spojite ih u jedan zapis."
+
+msgid "Needs attention"
+msgstr "Zahtijeva pažnju"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Nije zabilježeno ni zaglavlje From ni pošiljatelj. Mailer se vraća na zadanu vrijednost, često wordpress@vasadomena."
+
+msgid "Never"
+msgstr "Nikada"
+
+msgid "New"
+msgstr "Novo"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Novi URL stvoren. Ažurirajte ga kod svog pružatelja usluge e-pošte."
+
+msgid "New email types"
+msgstr "Nove vrste e-poruka"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Nove e-poruke zadržavaju se dok ih ne oslobodite ili odbacite. E-poruke za ponovno postavljanje lozinke i dalje se šalju."
+
+msgid "New sender"
+msgstr "Novi pošiljatelj"
+
+msgid "New sender writes to many addresses"
+msgstr "Novi pošiljatelj piše na mnogo adresa"
+
+msgid "Next email"
+msgstr "Sljedeća e-poruka"
+
+msgid "Next email (j)"
+msgstr "Sljedeća e-poruka (j)"
+
+msgid "Next page"
+msgstr "Sljedeća stranica"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Pod uobičajenim selektorima nije pronađen DKIM ključ."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Nema DMARC zapisa za domenu pošiljatelja %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "DMARC zapis nije pronađen. Veliki pružatelji pretinaca to očekuju, a bez njega svatko može neprimjetno krivotvoriti ovu domenu."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Nema MX zapisa: ova domena ne može primati odgovore ni odbijene poruke, a neki primatelji odbijaju takve pošiljatelje."
+
+msgid "No SMTP transcript for this email."
+msgstr "Nema SMTP transkripta za ovu e-poruku."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Nema SPF ni DMARC zapisa za domenu pošiljatelja %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Nema SPF zapisa za domenu pošiljatelja %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "SPF zapis nije pronađen. Primatelji ne mogu znati koji poslužitelji smiju slati za ovu domenu."
+
+msgid "No alerts sent yet."
+msgstr "Još nisu poslana upozorenja."
+
+msgid "No connection to the SMTP server"
+msgstr "Nema veze sa SMTP poslužiteljem"
+
+msgid "No email logged for %s hours"
+msgstr "Već %s sati nije zabilježena nijedna e-poruka"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "U posljednjih %1$s sati nije zabilježena nijedna e-poruka, iako je ovo web-mjesto u tom vremenskom okviru slalo e-poruke %2$s od posljednjih %3$s dana (prosječno %4$s)."
+
+msgid "No emails"
+msgstr "Nema e-poruka"
+
+msgid "No emails found."
+msgstr "Nema pronađenih e-poruka."
+
+msgid "No emails in this period."
+msgstr "Nema e-poruka u ovom razdoblju."
+
+msgid "No emails logged for this order yet."
+msgstr "Za ovu narudžbu još nisu zabilježene e-poruke."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Još nema zabilježenih e-poruka. Vrste e-poruka pojavit će se ovdje čim vaše web-mjesto počne slati e-poruke."
+
+msgid "No emails match these filters."
+msgstr "Nijedna e-poruka ne odgovara ovim filtrima."
+
+msgid "No emails sent"
+msgstr "Nije poslana nijedna e-poruka"
+
+msgid "No emails to this user in the log."
+msgstr "U zapisniku nema e-poruka ovom korisniku."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "U posljednja dva tjedna nije zabilježena nijedna e-poruka."
+
+msgid "No limit"
+msgstr "Bez ograničenja"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Na ovom web-mjestu nije pronađen zapisnik drugog dodatka za bilježenje e-pošte."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Na ovom web-mjestu nije pronađen zapisnik ovog dodatka."
+
+msgid "No problem recipients."
+msgstr "Nema problematičnih primatelja."
+
+msgid "No problems found in this email."
+msgstr "U ovoj e-poruci nisu pronađeni problemi."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Nije pronađena javna domena pošiljatelja (adresa web-mjesta nije naziv domene, a zapisnik još nema pošiljatelja)."
+
+msgid "No public sender domain to check"
+msgstr "Nema javne domene pošiljatelja za provjeru"
+
+msgid "No regularly sent email has stopped"
+msgstr "Nijedna redovita e-poruka nije se prestala slati"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Nema adrese za izvješća (rua) – nećete vidjeti tko šalje u vaše ime."
+
+msgid "No sender address recorded"
+msgstr "Adresa pošiljatelja nije zabilježena"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Za ovaj zapis nije dostupan trag. Zabilježen je prije nego što je trag postojao ili inačicom bez njega."
+
+msgid "No unusual email failures"
+msgstr "Nema neuobičajenih neuspjeha e-poruka"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Ne, namjerno. „%1$s“ za %2$s zadržana je %3$s i nije poslana. Razlog: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Ne. Svaka redovita e-poruka otišla je prema rasporedu."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Ne. „%1$s“ za %2$s nije uspjela %3$s. Razlog: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Ne. „%1$s“ za %2$s napustila je vaše web-mjesto %3$s, ali %4$s javlja da ju je poslužitelj primatelja odbio."
+
+msgid "None"
+msgstr "Nijedna"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Obično se šalje barem svakih %1$s dana, sada kasni %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Nisu svi selektori mogli biti provjereni na vrijeme."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Nije zabilježeno: drugi dodatak imao je uključeno otklanjanje pogrešaka SMTP-a."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Nije zabilježeno: SMTP transkript isključen je u postavkama."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Nije zabilježeno: ova e-poruka nije poslana putem SMTP-a."
+
+msgid "Not set up"
+msgstr "Nije postavljeno"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Nije spremljeno: transkripti se čuvaju samo za neuspjele e-poruke."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Još ne. „%1$s“ za %2$s napustila je vaše web-mjesto %3$s, ali %4$s javlja privremeni problem."
+
+msgid "Notes"
+msgstr "Napomene"
+
+msgid "Notes in the latest email: %s"
+msgstr "Napomene u najnovijoj e-poruci: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Napomene: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Napomene: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Danas se ništa drugo ne očekuje."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "U posljednjih 7 dana ništa nije neuspjelo."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Još nema što usporediti: nijedna e-poruka ne odlazi dovoljno redovito da bi Mailspur primijetio prekid."
+
+msgid "Number of failed emails"
+msgstr "Broj neuspjelih e-poruka"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Brojevi se zanemaruju, pa se „Narudžba #123“ i „Narudžba #124“ broje zajedno."
+
+msgid "OK"
+msgstr "U redu"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Od posljednjih %1$s e-poruka poslanih dok je netko čekao stranicu, polovica je trajala dulje od %2$s s (prosječno %3$s s)."
+
+msgid "Off"
+msgstr "Isključeno"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Prema zadanim postavkama isključeno. Bez toga „Preuzmi .eml“ ponovno sastavlja poruku iz zabilježenih (maskiranih) podataka. Izvorni zapis sadrži poveznice za ponovno postavljanje lozinke i druge tajne podatke točno onako kako su poslani – uključite samo kada vam treba i kada su oba okvira označena."
+
+msgid "Off – deliver emails normally"
+msgstr "Isključeno – normalno isporučuj e-poruke"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Kad uklonite uzrok, e-poruku možete ponovno poslati iz zapisnika."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Kad izvješća pokažu da legitimna pošta prolazi, prebacite na p=quarantine (ili p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Jedna od dviju e-poruka izbrisana je ili anonimizirana postavkama čuvanja, pa ih više nije moguće usporediti."
+
+msgid "Only administrators can empty the log."
+msgstr "Samo administratori mogu isprazniti zapisnik."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Samo administratori mogu slati e-poruke na druge adrese."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Upozorava samo kada posljednjih 14 dana pokazuje da se e-poruke u tom vremenskom okviru obično šalju (najmanje 10 od 14 dana, uključujući isti dan u tjednu), pa ga mirne noći ili vikendi ne pokreću."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Samo e-poruke čiji su svi primatelji problematični. E-poruke za ponovno postavljanje lozinke uvijek se šalju; zadržane e-poruke i dalje se mogu poslati iz zapisnika („Pošalji sada“)."
+
+msgid "Only held emails can be released."
+msgstr "Osloboditi se mogu samo zadržane e-poruke."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Otvoreni popis za distribuciju: vanjski primatelji (%1$s) vide međusobne adrese"
+
+msgid "Open in log"
+msgstr "Otvori u zapisniku"
+
+msgid "Open latest"
+msgstr "Otvori najnoviju"
+
+msgid "Open staging mode"
+msgstr "Otvori testni način rada"
+
+msgid "Open the email types"
+msgstr "Otvori vrste e-poruka"
+
+msgid "Open the emergency brake"
+msgstr "Otvori kočnicu u nuždi"
+
+msgid "Open the log"
+msgstr "Otvori zapisnik"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Za točnu pogrešku otvorite zapisnik ili prikaz za otklanjanje pogrešaka svog dodatka za slanje e-pošte."
+
+msgid "Open the mail log"
+msgstr "Otvori zapisnik e-pošte"
+
+msgid "Open the sender check"
+msgstr "Otvori provjeru pošiljatelja"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Neobavezno i prema zadanim postavkama isključeno. Kada je uključeno, Mailspur redovito provjerava zapisnik i obavještava vas o naglim porastima pogrešaka, neuobičajenoj tišini ili vrstama e-poruka koje su se prestale slati. Upozorenja idu samo na adrese i webhook koje ovdje unesete; sadrže naziv web-mjesta, tekst upozorenja (za vrstu e-poruke koja se prestala slati: njezina pošiljatelja i uzorak predmeta) i poveznicu na zapisnik – nikada sadržaj e-poruka ni primatelje."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Neobavezno, samo https. URL-ovi webhooka za Slack i Discord primaju poruku u chatu, bilo koji drugi URL JSON POST zahtjev. Zahtjev šalje vaš poslužitelj točno na taj URL – nijedna druga usluga nije uključena."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Ili dodajte adresu kao alias / dopuštenje „pošalji kao“ kod svog pružatelja usluge e-pošte."
+
+msgid "Order #%s"
+msgstr "Narudžba #%s"
+
+msgid "Order data"
+msgstr "Podaci o narudžbi"
+
+msgid "Origin"
+msgstr "Podrijetlo"
+
+msgid "Original Bcc"
+msgstr "Izvorni Bcc"
+
+msgid "Original Cc"
+msgstr "Izvorni Cc"
+
+msgid "Original recipients"
+msgstr "Izvorni primatelji"
+
+msgid "Other emails"
+msgstr "Ostale e-poruke"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Ostali primatelji (npr. gosti)"
+
+msgid "Overview"
+msgstr "Pregled"
+
+msgid "Own top-level menu item"
+msgstr "Vlastita stavka glavnog izbornika"
+
+msgid "PHP extension openssl is missing"
+msgstr "Nedostaje PHP proširenje openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer spreman (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Stranice"
+
+msgid "Password sent in plain text"
+msgstr "Lozinka poslana kao običan tekst"
+
+msgid "Path"
+msgstr "Putanja"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Broj platne kartice kao običan tekst: %1$s"
+
+msgid "Per page"
+msgstr "Po stranici"
+
+msgid "Period"
+msgstr "Razdoblje"
+
+msgid "Personal data"
+msgstr "Osobni podaci"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Phone number"
+msgstr "Telefonski broj"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Širina telefona (375 px). Ako se možete pomicati vodoravno, e-poruka je šira od većine zaslona telefona."
+
+msgid "Plain text"
+msgstr "Običan tekst"
+
+msgid "Please enter valid email addresses."
+msgstr "Unesite valjane adrese e-pošte."
+
+msgid "Plugin"
+msgstr "Dodatak"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Dodatak ili tema koja je poslala e-poruku."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Ukazuj na probleme zbog kojih e-poruke ne stižu ili se ne prikazuju ispravno"
+
+msgid "Port"
+msgstr "Priključak"
+
+msgid "Postal address"
+msgstr "Poštanska adresa"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo ili Amazon SES mogu ovom web-mjestu javiti je li e-poruka isporučena, odbijena ili označena kao neželjena pošta. Status se prikazuje uz zabilježenu e-poruku, a trajna odbijanja ubrajaju se u problematične primatelje. Radi povezivanja izvješća Mailspur odlaznim e-porukama dodaje referentno zaglavlje."
+
+msgid "Preparation"
+msgstr "Priprema"
+
+msgid "Preview"
+msgstr "Pregled"
+
+msgid "Previews"
+msgstr "Pregledi"
+
+msgid "Previous email"
+msgstr "Prethodna e-poruka"
+
+msgid "Previous email (k)"
+msgstr "Prethodna e-poruka (k)"
+
+msgid "Previous page"
+msgstr "Prethodna stranica"
+
+msgid "Print"
+msgstr "Ispis"
+
+msgid "Privacy"
+msgstr "Privatnost"
+
+msgid "Privacy & security"
+msgstr "Privatnost i sigurnost"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Vjerojatno da: %s vrsta e-poruke više se ne šalje."
+msgstr[1] "Vjerojatno da: %s vrste e-poruka više se ne šalju."
+msgstr[2] "Vjerojatno da: %s vrsta e-poruka više se ne šalje."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Testne e-poruke šalju se samo administratoru."
+
+msgid "Problem"
+msgstr "Problem"
+
+msgid "Problem recipients"
+msgstr "Problematični primatelji"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Štiti vašu domenu kada odlazi mnogo više e-poruka nego inače, npr. jer spam-botovi zloupotrebljavaju kontaktni obrazac. Upozorenja koriste kanale upozorenja nadzora; e-poruke za ponovno postavljanje lozinke nikada se ne zadržavaju."
+
+msgid "Provider status"
+msgstr "Status kod pružatelja"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Pružatelji poput %2$s objavljuju strogo DMARC pravilo. E-poruka „s“ njihove domene koju je poslao vaš web-poslužitelj ne prolazi tu provjeru i odbija se ili završava u neželjenoj pošti."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Važan sadržaj stavite u pravi tekst, a slike koristite samo kao dodatak."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Važne informacije stavite na početak, a predmet neka bude kraći od otprilike 80 znakova."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "REST ruta"
+
+msgid "Rarely"
+msgstr "Rijetko"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Ocijenite Mailspur na WordPress.org"
+
+msgid "Raw source"
+msgstr "Izvorni zapis"
+
+msgid "Reason"
+msgstr "Razlog"
+
+msgid "Rebuild from the log"
+msgstr "Ponovno izgradi iz zapisnika"
+
+msgid "Recipient"
+msgstr "Primatelj"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Domena primatelja ne može primati e-poštu: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Domena primatelja ne prihvaća e-poštu: %1$s"
+
+msgid "Recipients"
+msgstr "Primatelji"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Preporučeno. Inače bi svatko s pristupom zapisniku mogao iskoristiti zabilježenu poveznicu za ponovno postavljanje ili lozinku i preuzeti račun. Ponovno slanje takve e-poruke šalje maskiranu inačicu."
+
+msgid "Record for every email"
+msgstr "Bilježi za svaku e-poruku"
+
+msgid "Record for failed emails only"
+msgstr "Bilježi samo za neuspjele e-poruke"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Bilježi razgovor sa SMTP poslužiteljem (samo kada se e-poruke šalju putem SMTP-a). Podaci za prijavu i sadržaj poruke nikada se ne bilježe. Preskače se dok drugi dodatak ima uključeno otklanjanje pogrešaka SMTP-a."
+
+msgid "Recovery"
+msgstr "Oporavak"
+
+msgid "Redact secrets"
+msgstr "Sakrij tajne podatke"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Preusmjeri sve e-poruke na adrese u nastavku"
+
+msgid "Redirect to"
+msgstr "Preusmjeri na"
+
+msgid "Redirect to test addresses"
+msgstr "Preusmjeri na testne adrese"
+
+msgid "Redirected by staging mode."
+msgstr "Preusmjerio testni način rada."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Smanjite HTML: uklonite nekorišteni CSS, ponovljene inline stilove, komentare i duge URL-ove za praćenje. Slike se ne broje, samo sam HTML."
+
+msgid "Registered users"
+msgstr "Registrirani korisnici"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Odbijeno zbog SPF-a, DKIM-a ili DMARC-a"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Relativne poveznice ili slike (%1$s), npr. %2$s"
+
+msgid "Release held emails"
+msgstr "Oslobodi zadržane e-poruke"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Oslobođeno iz testnog načina rada (zadržani zapis #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Oslobođeno iz kočnice u nuždi (zadržani zapis #%s)."
+
+msgid "Remote content"
+msgstr "Vanjski sadržaj"
+
+msgid "Remote content is loaded."
+msgstr "Vanjski sadržaj je učitan."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Vanjske slike i fontovi blokirani su kako pošiljatelji ne bi mogli pratiti kada otvarate ovaj zapis."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Ukloniti sve zapise uvezene iz %s? To ne utječe na podatke u drugom dodatku."
+
+msgid "Remove imported entries"
+msgstr "Ukloni uvezene zapise"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Uklonite polje kartice iz obavijesti obrasca ili dodatka koji je poslao ovu e-poruku – podaci o kartici pripadaju samo pružatelju plaćanja. Prikazujte najviše posljednje četiri znamenke. Zamolite primatelja da izbriše e-poruku."
+
+msgid "Removed:"
+msgstr "Uklonjeno:"
+
+msgid "Repeat alerts after"
+msgstr "Ponovi upozorenja nakon"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Odgovori vam ne mogu stići: poslano s %1$s bez Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Javio vaš pružatelj usluge e-pošte u posljednjih 30 dana; broje se samo e-poruke o kojima je javio."
+
+msgid "Request"
+msgstr "Zahtjev"
+
+msgid "Request failed: %s"
+msgstr "Zahtjev nije uspio: %s"
+
+msgid "Resend"
+msgstr "Pošalji ponovno"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Ponovno pošaljite e-poruku iz zapisnika za nekoliko minuta."
+
+msgid "Resend the email from the log later."
+msgstr "Ponovno pošaljite e-poruku iz zapisnika kasnije."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Ponovno pošaljite e-poruku iz zapisnika kada isporuka proradi."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Ponovno pošaljite neuspjele e-poruke kada se ograničenje poništi."
+
+msgid "Resent from log"
+msgstr "Ponovno poslano iz zapisnika"
+
+msgid "Reset filters"
+msgstr "Poništi filtre"
+
+msgid "Result"
+msgstr "Rezultat"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Rezultat iz predmemorije – nakon promjene DNS zapisa upotrijebite „Provjeri ponovno“."
+
+msgid "Retention"
+msgstr "Čuvanje"
+
+msgid "Retention in the log"
+msgstr "Čuvanje u zapisniku"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Razdoblje čuvanja za ovu vrstu e-poruke spremljeno je. Primjenjuje se pri sljedećem dnevnom čišćenju."
+
+msgid "Review held emails"
+msgstr "Pregledaj zadržane e-poruke"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Pregledajte napomene uz ovu e-poruku (poveznice, pošiljatelj, rezervirana mjesta)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Opozovite ključ na nadzornoj ploči usluge i stvorite novi. Zatim saznajte zašto je završio u e-poruci (izvješća o otklanjanju pogrešaka ili pogreškama, obrazac koji ispisuje postavke) i spriječite to."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Opozvani ključevi (prazan p=): %s."
+
+msgid "Rhythm"
+msgstr "Ritam"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Pokrenite pretraživanje i zamjenu stare domene u bazi podataka i provjerite fiksno upisane URL-ove u predlošcima e-poruka i postavkama dodataka."
+
+msgid "Run the full sender check"
+msgstr "Pokreni punu provjeru pošiljatelja"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH je isključen u sustavu Microsoft 365"
+
+msgid "SMTP host"
+msgstr "SMTP host"
+
+msgid "SMTP login failed"
+msgstr "SMTP prijava nije uspjela"
+
+msgid "SMTP transcript"
+msgstr "SMTP transkript"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "SPF zapis dopušta svakom poslužitelju na svijetu slanje za ovu domenu (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "SPF zapis završava s ?all (neutralno): ne štiti domenu od krivotvorenja."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "SPF zapis pronađen (redirect= na drugo pravilo)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "SPF zapis pronađen. Ostali poslužitelji označavaju se kao sumnjivi (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "SPF zapis pronađen. Ostali poslužitelji se odbijaju (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "SPF zapis nema izraz „all“, pa se pošta s drugih poslužitelja smatra neutralnom."
+
+msgid "Saturday"
+msgstr "Subota"
+
+msgid "Save"
+msgstr "Spremi"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Spremljeno – ostavite prazno da biste ga zadržali"
+
+msgid "Scheduled for later today:"
+msgstr "Zakazano za kasnije danas:"
+
+msgid "Search recipient or subject"
+msgstr "Traži primatelja ili predmet"
+
+msgid "Search recipient or subject …"
+msgstr "Traži primatelja ili predmet …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Potražite staru adresu u predlošku e-poruke, postavkama dodataka i bazi podataka (npr. nakon selidbe web-mjesta) i zamijenite je produkcijskom domenom."
+
+msgid "See why"
+msgstr "Pogledajte zašto"
+
+msgid "Seen"
+msgstr "Viđeno"
+
+msgid "Select all"
+msgstr "Odaberi sve"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Ni selektor „%s“ nema ključ."
+
+msgid "Send"
+msgstr "Pošalji"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Umjesto toga pošaljite poveznicu kojom korisnik postavlja lozinku – upravo to radi WordPressova e-poruka za nove korisnike. U dodatku koji je poslao ovu e-poruku potražite opciju poput „Pošalji lozinku e-poštom“ ili „Uključi lozinku“ i isključite je."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Pošalji poruku kada se problem riješi"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Pošaljite testnu e-poruku iz postavki dodatka za slanje e-pošte."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Šalji tjedno izvješće e-poštom na gornje adrese"
+
+msgid "Send again"
+msgstr "Pošalji ponovno"
+
+msgid "Send alerts by email to"
+msgstr "Šalji upozorenja e-poštom na"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Poslati sada sve zadržane e-poruke (%s) njihovim izvornim primateljima?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Velike datoteke šaljite kao poveznicu za preuzimanje umjesto privitka."
+
+msgid "Send latest to me"
+msgstr "Pošalji mi najnoviju"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Biltene šaljite dodatkom ili uslugom za biltene koja dodaje zaglavlja List-Unsubscribe i List-Unsubscribe-Post i ne šaljite mnogim osobama u jednoj e-poruci putem Bcc-a."
+
+msgid "Send now"
+msgstr "Pošalji sada"
+
+msgid "Send report now"
+msgstr "Pošalji izvješće sada"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Takve e-poruke šaljite svakom primatelju zasebno ili stavite primatelje u Bcc. Za biltene koristite dodatak koji šalje jednu e-poruku po primatelju. Ako su otkrivene adrese kupaca, provjerite sa službenikom za zaštitu podataka treba li incident prijaviti."
+
+msgid "Send test alert"
+msgstr "Pošalji testno upozorenje"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Pošaljite e-poruku sa zaglavljem „Content-Type: text/html; charset=UTF-8“ ili postavite vrstu sadržaja filtrom wp_mail_content_type. Mnogi dodaci za obrasce i trgovine imaju opciju „HTML e-poruka“."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Poslati najnoviju e-poruku ove vrste na %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Ponovno poslati ovu e-poruku na %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Pošalji ovu e-poruku na (do 10 adresa, odvojenih zarezima):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Poslati ovu zadržanu e-poruku sada na %s? Testni način rada zaobilazi se za ovu jednu e-poruku."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Šaljite putem pouzdane SMTP usluge umjesto web-poslužitelja, osobito na dijeljenom hostingu."
+
+msgid "Send to…"
+msgstr "Pošalji na…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Provjera pošiljatelja (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Domena pošiljatelja %1$s razlikuje se od web-mjesta (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Domena pošiljatelja (SPF i DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Domena ili adresa pošiljatelja nije potvrđena"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Pošiljatelj %s od posljednjih 200 e-poruka"
+
+msgid "Sending failed – see the log."
+msgstr "Slanje nije uspjelo – pogledajte zapisnik."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Slanje nije uspjelo – pojedinosti potražite u novom zapisu."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Slanje u pozadini (dodatak za slanje e-pošte s redom čekanja) omogućuje stranici da se učita bez čekanja."
+
+msgid "Sending limit or quota reached"
+msgstr "Dosegnuto ograničenje slanja ili kvota"
+
+msgid "Sending report …"
+msgstr "Slanje izvješća …"
+
+msgid "Sending test alert …"
+msgstr "Slanje testnog upozorenja …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Slanje ponovno radi: više nema naglog porasta pogrešaka."
+
+msgid "Sending…"
+msgstr "Slanje…"
+
+msgid "Sent"
+msgstr "Poslano"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Poslano kao besplatna adresa e-pošte: %1$s"
+
+msgid "Sent by"
+msgstr "Pošiljatelj"
+
+msgid "Sent by WP-Cron."
+msgstr "Poslao WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Poslao cron događaj %1$s – kasni %2$s iako WP-Cron pokreće druge događaje; možda završava pogreškom."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Poslao cron događaj %1$s – zakazan je (sljedeće pokretanje za %2$s) i WP-Cron radi, pa događaj više ne šalje ovu e-poruku."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Poslao cron događaj %s – taj događaj više nije zakazan."
+
+msgid "Sent by the cron event %s."
+msgstr "Poslao cron događaj %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Poslano više puta: još %1$s jednakih e-poruka unutar %2$s minuta"
+
+msgid "Sent to %s."
+msgstr "Poslano na %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Poslano na istu adresu oko datuma narudžbe, ali nije povezano s ovom narudžbom (na primjer zabilježeno prije nego što je veza postojala ili uvezeno)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Postavite adresu Reply-To koju netko čita, npr. u WooCommerce → Postavke → E-pošta ili u postavkama e-pošte svog dodatka za obrasce. Ili šaljite s adrese koja može primati odgovore."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Postavite adresu pošiljatelja na svojoj domeni u SMTP dodatku ili putem filtra wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Postavite adresu pošiljatelja na svojoj stvarnoj domeni, npr. u SMTP dodatku ili putem filtra wp_mail_from, i provjerite adresu web-mjesta pod Postavke → Općenito."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Postavite predmet u postavkama predloška ili obrasca dodatka koji šalje."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "U svom SMTP dodatku postavite adresu Od na pretinac s kojim se prijavljujete i uključite „prisili adresu Od“."
+
+msgid "Set up staging mode"
+msgstr "Postavi testni način rada"
+
+msgid "Settings"
+msgstr "Postavke"
+
+msgid "Settings › Discussion"
+msgstr "Postavke › Rasprava"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Više uskličnika tipično je za reklamnu neželjenu poštu. Filtri neželjene pošte to mogu uračunati protiv e-poruke, što može pogoršati isporuku."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Nekoliko najnovijih e-poruka ove vrste nije uspjelo."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Udio neuspjelih e-poruka po danu (po tjednu za duga razdoblja)."
+
+msgid "Shop managers and above"
+msgstr "Upravitelji trgovine i viši"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Skraćene poveznice skrivaju kamo vode. Pošiljatelji neželjene pošte često ih koriste, pa ih filtri neželjene pošte mogu uračunati protiv e-poruke, što može pogoršati isporuku."
+
+msgid "Show all email types"
+msgstr "Prikaži sve vrste e-poruka"
+
+msgid "Show all in Mail Log"
+msgstr "Prikaži sve u zapisniku e-pošte"
+
+msgid "Show as"
+msgstr "Prikaži kao"
+
+msgid "Show data as table"
+msgstr "Prikaži podatke kao tablicu"
+
+msgid "Show email types"
+msgstr "Prikaži vrste e-poruka"
+
+msgid "Show emails"
+msgstr "Prikaži e-poruke"
+
+msgid "Show emails for %s in the log"
+msgstr "Prikaži e-poruke za %s u zapisniku"
+
+msgid "Show failed emails"
+msgstr "Prikaži neuspjele e-poruke"
+
+msgid "Show held emails"
+msgstr "Prikaži zadržane e-poruke"
+
+msgid "Show these emails in the log"
+msgstr "Prikaži ove e-poruke u zapisniku"
+
+msgid "Silence"
+msgstr "Tišina"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Simulirani tamni način rada koji koristi stilove tamnog načina same e-poruke. Svaka aplikacija za e-poštu tamni način rada obrađuje malo drukčije."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Simulacija aplikacija koje nameću tamni način rada obrtanjem boja. Slike zadržavaju svoje boje; stvarne aplikacije razlikuju se u pojedinostima."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Od 2024. Gmail i Yahoo za masovnu poštu zahtijevaju odjavu jednim klikom (zaglavlje List-Unsubscribe). Bez nje se bilteni češće odbijaju ili filtriraju."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Pojedinačni neuspjesi, npr. zbog pogrešno upisane adrese, normalni su."
+
+msgid "Some emails could not be sent recently"
+msgstr "Neke e-poruke nedavno nije bilo moguće poslati"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Neki su upiti preskočeni jer je DNS presporo odgovarao."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Nažalost, nemate dopuštenje za pristup ovoj stranici."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Nažalost, nemate dopuštenje za to."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Nažalost, nemate dopuštenje za izvoz zapisnika e-pošte."
+
+msgid "Source"
+msgstr "Izvor"
+
+msgid "Staging"
+msgstr "Testni način rada"
+
+msgid "Staging mode"
+msgstr "Testni način rada"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Testni način rada je aktivan: sve e-poruke preusmjeravaju se na %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Testni način rada je aktivan: e-poruke se bilježe u zapisnik, ali se ne isporučuju."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Testni način rada je aktivan: e-poruke bi se trebale preusmjeravati, ali nije postavljena valjana adresa za preusmjeravanje – sve e-poruke se zadržavaju i ne isporučuju."
+
+msgid "Staging mode is off"
+msgstr "Testni način rada je isključen"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Testni način rada je uključen iako je ovo produkcijsko web-mjesto"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Testni način rada je uključen za ovo testno web-mjesto"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Testni način rada je uključen: sve e-poruke idu na vaše testne adrese, a ne stvarnim primateljima."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Testni način rada je uključen: e-poruke se bilježe u zapisnik, ali se ne šalju."
+
+msgid "Staging mode settings"
+msgstr "Postavke testnog načina rada"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Počnite s p=none kako biste primali izvješća, a zatim pooštrite na quarantine ili reject kad SPF i DKIM budu prolazili."
+
+msgid "Statistics"
+msgstr "Statistika"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "U pozadini se još razvrstava %s starijih e-poruka po vrstama. Ponovno učitajte stranicu za minutu."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Prestani skupljati (odmah šalje ono što čeka)"
+
+msgid "Stop these emails"
+msgstr "Zaustavi ove e-poruke"
+
+msgid "Stopped"
+msgstr "Zaustavljeno"
+
+msgid "Stopped by Mailspur."
+msgstr "Zaustavio Mailspur."
+
+msgid "Stopped email types"
+msgstr "Zaustavljene vrste e-poruka"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Spremi točan izvorni MIME zapis svake e-poruke"
+
+msgid "Subject"
+msgstr "Predmet"
+
+msgid "Subject mostly in capital letters"
+msgstr "Predmet uglavnom velikim slovima"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Predmeti velikim slovima djeluju kao vikanje i česti su u neželjenoj pošti. Filtri neželjene pošte to mogu uračunati protiv e-poruke, što može pogoršati isporuku."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Predmeti često sadrže imena ili brojeve narudžbi."
+
+msgid "Suggested TXT record for %s"
+msgstr "Predloženi TXT zapis za %s"
+
+msgid "Sunday"
+msgstr "Nedjelja"
+
+msgid "Supported: %s."
+msgstr "Podržano: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Isključite to pod %1$s: „%2$s“."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Izdvojeno iz dnevnog sažetka i poslano zasebno."
+
+msgid "Temporary rejection – try again later"
+msgstr "Privremeno odbijanje – pokušajte ponovno kasnije"
+
+msgid "Test"
+msgstr "Test"
+
+msgid "Test alert"
+msgstr "Testno upozorenje"
+
+msgid "Text changes"
+msgstr "Promjene teksta"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Tekstna inačica izvedena iz HTML-a. Nije zabilježeno je li e-poruka imala i vlastitu inačicu u običnom tekstu."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "To je u redu ako vaš poslužitelj e-pošte smije slati za tu domenu. U suprotnom SPF i DMARC ne prolaze i e-poruka završava u neželjenoj pošti."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "To je ispravno za testnu kopiju, ali na produkcijskom web-mjestu kupci ne dobivaju potvrde narudžbi, ponovno postavljanje lozinke ni odgovore na obrasce. Isključite testni način rada ako je ovo produkcijsko web-mjesto."
+
+msgid "The API key was rejected"
+msgstr "API ključ je odbijen"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "DNS upit nije uspio ili je istekao. Kasnije ponovno pokrenite provjeru pošiljatelja."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "HTML e-poruka sadrži slike, ali gotovo nimalo teksta. Filtri neželjene pošte ne mogu čitati slike i ne vjeruju takvim e-porukama, što može pogoršati isporuku. Ako program za e-poštu blokira slike, čitatelj vidi gotovo praznu e-poruku."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "SMTP račun smije slati samo sa svoje adrese (ili potvrđenih aliasa). WordPress ili dodatak upotrijebio je drugu adresu Od."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Razgovor sa SMTP poslužiteljem bio je prazan."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "SMTP poslužitelj uopće nije bio dostupan: pogrešan naziv hosta ili priključak, poslužitelj ne radi ili web-host blokira odlazne priključke za poštu."
+
+msgid "The SMTP server refuses to relay"
+msgstr "SMTP poslužitelj odbija prosljeđivanje"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "SMTP poslužitelj odbio je korisničko ime ili lozinku (kôd odgovora 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "SMTP poslužitelj zahtijeva prijavu ili šifriranje"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Adresa se čini neispravnom – provjerite ima li tipfelera ili zatražite drugu."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Tijelo sadrži HTML oznake, ali e-poruka je poslana kao text/plain (zadano u WordPressu). Primatelji vide sirove oznake umjesto oblikovanog teksta."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Veza ili prijenos trajali su predugo. Obično vatrozid tiho prekida vezu ili su host i priključak pogrešni."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Zadana adresa pošiljatelja nema javnu domenu ili ovaj poslužitelj ne može dohvatiti DNS zapise."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Domena nema ni MX ni A zapis u DNS-u. E-poruke na nju se odbijaju. Obično je adresa pogrešno napisana ili domena više ne postoji."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Domena objavljuje zapis „null MX“, koji izričito kaže da ne prima e-poštu. Svaka e-poruka na nju se odbija."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "API za e-poštu sporo odgovara: provjerite regiju ili krajnju točku postavljenu u dodatku za slanje e-pošte."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "E-poruka dolazi s adrese no-reply i nema zaglavlje Reply-To. Kada kupac klikne „Odgovori“, odgovor odlazi na adresu koju nitko ne čita ili se odbija."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "E-poruka sadrži lozinku u čitljivom obliku. E-poruke godinama ostaju u pretincima, sigurnosnim kopijama i proslijeđenim razgovorima – svatko tko dođe do neke od njih može se prijaviti. Zapisnik e-pošte također je sprema, osim ako je uključeno „Sakrij tajne podatke“ (tada zapisnik čuva maskiranu kopiju, ali primatelj je lozinku ipak dobio)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-poruka sadrži pristupni ključ (npr. za Stripe, GitHub, Slack, AWS, Google ili SendGrid) ili privatni ključ. Tko god pročita e-poruku – sada ili godinama kasnije u pretincu ili sigurnosnoj kopiji – može ga upotrijebiti. Zapisnik e-pošte također ga sprema, osim ako je uključeno „Sakrij tajne podatke“."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "E-poruka sadrži varijable predloška koje nisu popunjene. Primatelji ih vide doslovno."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-poruka sadrži nešto što izgleda kao puni broj platne kartice (prolazi provjeru kontrolne znamenke). Brojevi kartica nikada se ne smiju slati e-poštom (PCI DSS): pretinci ih čuvaju godinama. Zapisnik e-pošte također ga sprema, osim ako je uključeno „Sakrij tajne podatke“."
+
+msgid "The email is too large"
+msgstr "E-poruka je prevelika"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "E-poruka sadrži poveznice na WordPressove datoteke na srodnom hostu. To se obično događa na testnoj kopiji koja još sadrži URL-ove produkcijskog web-mjesta – ili obrnuto."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "E-poruka sadrži poveznicu na adresu na ovom web-mjestu koja odgovara „stranica nije pronađena“ (404). To se obično događa nakon što je stranica ili proizvod preimenovan ili izbrisan: predložak još pokazuje na staru adresu i svaki primatelj završi na stranici s pogreškom."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Vrste e-poruka ponovno se izgrađuju iz zapisnika."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "E-poruka je otišla nekolicini osoba izvan vaše domene u polju Za ili Cc. Svaki primatelj vidi sve ostale adrese. Kod kupaca ili članova to otkriva osobne podatke strancima – prema GDPR-u obično povreda osobnih podataka."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "E-poruka „%1$s“ za %2$s od %3$s u %4$s nakratko je zadržana sigurnosnom provjerom s naše strane, a zatim poslana. Molimo provjerite i mapu neželjene pošte."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "E-poruka „%1$s“ za %2$s od %3$s u %4$s zadržana je sigurnosnom provjerom s naše strane i nije poslana. Poslat ćemo je ponovno."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "E-poruka „%1$s“ za %2$s od %3$s u %4$s nije poslana jer je slanje e-pošte u to vrijeme s naše strane bilo pauzirano. Poslat ćemo je ponovno."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "E-poruku „%1$s“ za %2$s od %3$s u %4$s nije bilo moguće isporučiti. Poslat ćemo je ponovno."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "E-poruka „%1$s“ za %2$s stvorena je %3$s u %4$s, ali ne možemo potvrditi je li isporučena. Provjerit ćemo to i po potrebi je poslati ponovno."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "E-poruka „%1$s“ poslana je na %2$s %3$s u %4$s i prihvatio ju je poslužitelj e-pošte. Molimo provjerite i mapu neželjene pošte."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Kočnica u nuždi zadržava odlazne e-poruke dok ih ne oslobodite ili odbacite."
+
+msgid "The emergency brake is holding emails"
+msgstr "Kočnica u nuždi zadržava e-poruke"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Kočnica u nuždi ne zadržava nijednu e-poruku"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Kočnica u nuždi je uključena: vaše web-mjesto iznenada je poslalo mnogo više e-poruka nego inače."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Kočnica u nuždi primijetila je neuobičajen broj e-poruka unutar jednog sata. Kontaktni obrazac možda se zloupotrebljava. E-poruke se i dalje šalju."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Sprema se točan izvorni zapis – „Preuzmi .eml“ vraća ga nepromijenjenog (nemaskiranog)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Svih posljednjih %s e-poruka nije uspjelo. Slanje s ovog web-mjesta možda ne radi, npr. zbog pogrešne SMTP prijave ili usluge e-pošte koja odbija web-mjesto. Kupci možda ne dobivaju potvrde narudžbi ili poveznice za ponovno postavljanje lozinke."
+
+msgid "The latest emails could not be sent"
+msgstr "Najnovije e-poruke nije bilo moguće poslati"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Zapisnik čuva e-poruke %s dan."
+msgstr[1] "Zapisnik čuva e-poruke %s dana."
+msgstr[2] "Zapisnik čuva e-poruke %s dana."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Zapisnik prikazuje razlog za svaku neuspjelu e-poruku."
+
+msgid "The mail log requires JavaScript."
+msgstr "Zapisnik e-pošte zahtijeva JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Poslužitelj e-pošte nije odgovorio na vrijeme"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Poslužitelj e-pošte privremeno je nedostupan"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Poslužitelj e-pošte odbio je veličinu e-poruke (kôd odgovora 552). Privici kodiranjem narastu za otprilike trećinu."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Usluga e-pošte šalje samo s domena ili adresa koje ste ondje potvrdili."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Usluga e-pošte ili pretinac odbili su daljnje e-poruke jer je dosegnuto ograničenje brzine, dnevna kvota ili ograničenje paketa."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Usluga e-pošte odbila je zahtjev jer je API ključ pogrešan, istekao, opozvan ili nema dopuštenje za slanje."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Dodatak za slanje e-pošte javio je neuspjeh"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Pravilo se primjenjuje samo na %s%% pošte (pct)."
+
+msgid "The reason: %s."
+msgstr "Razlog: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Poslužitelj primatelja zatražio je ponovni pokušaj kasnije (kôd odgovora 450/451/452): greylisting, pun pretinac ili previše e-poruka u kratkom vremenu."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Poslužitelj primatelja nije mogao potvrditi da vaš poslužitelj smije slati za domenu pošiljatelja."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Poslužitelj primatelja ne poznaje ovaj pretinac (kôd odgovora 550 / 5.1.1) – adresa je pogrešno napisana ili više ne postoji."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Poslužitelj primatelja možda će je prihvatiti u kasnijem pokušaju."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Poslužitelj primatelja odbio je e-poruku zbog njezina sadržaja ili zato što je IP adresa poslužitelja pošiljatelja na popisu blokiranih."
+
+msgid "The recipient address was rejected"
+msgstr "Adresa primatelja je odbijena"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Domena primatelja ne prima e-poštu (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Domena primatelja nema poslužitelj e-pošte"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Domena primatelja izgleda kao tipfeler u nazivu popularnog pružatelja usluge e-pošte. Takve se e-poruke odbijaju – ili stižu strancu koji je registrirao domenu s tipfelerom."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Isti je predmet istim primateljima otišao nekoliko puta u kratkom vremenu. Tipični uzroci su dvostruke potvrde narudžbe, dvaput poslan obrazac, cron zadatak koji se izvodi paralelno ili petlja u dodatku."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Sigurna veza sa SMTP poslužiteljem nije uspostavljena: certifikat ne odgovara nazivu hosta, istekao je ili poslužitelj ne podržava odabrano šifriranje."
+
+msgid "The sender address is not allowed"
+msgstr "Adresa pošiljatelja nije dopuštena"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Provjera pošiljatelja pronašla je problem s %s. E-poruke bi mogle završiti u neželjenoj pošti."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Domena pošiljatelja %s ima SPF i DMARC zapise"
+
+msgid "The sender domain could not be checked"
+msgstr "Domenu pošiljatelja nije bilo moguće provjeriti"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Pošiljatelj nema javnu domenu (npr. wordpress@localhost). Većina poslužitelja e-pošte takve e-poruke odbija ili ih stavlja u neželjenu poštu."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Poslužitelj ne može slati e-poštu putem PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Poslužitelj je zatvorio vezu (kôd odgovora 421), npr. zbog održavanja, preopterećenja ili previše veza s vašeg poslužitelja."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Poslužitelj ne prosljeđuje poštu za vas, obično zato što niste prijavljeni ili adresa pošiljatelja ne pripada računu."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Poslužitelj prihvaća poštu tek nakon autentifikacije ili prelaska na šifriranu vezu (kôd odgovora 530)."
+
+msgid "The server rejected the content"
+msgstr "Poslužitelj je odbio sadržaj"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Lokalni program za poštu na poslužitelju sporo odgovara: SMTP ili API dodatak za slanje e-pošte umjesto toga predaje e-poruke pružatelju."
+
+msgid "The start date must not be after the end date."
+msgstr "Datum početka ne smije biti nakon datuma završetka."
+
+msgid "The statistics require JavaScript."
+msgstr "Statistika zahtijeva JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Tekst je isti; promijenio se samo raspored. Usporedite preglede."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Korisničko ime obično je puna adresa e-pošte. Pazite na razmake kopirane zajedno s lozinkom."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "URL webhooka je uklonjen: dopušteni su samo valjani https URL-ovi."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Tjedno izvješće je uključeno, ali nema primatelja: unesite adresu e-pošte pod „Šalji upozorenja e-poštom na“."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Te se e-poruke ponovno šalju; njihova se vrsta e-poruke ponovno nadzire."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Ove vrste e-poruka nisu poslane dulje nego inače. Razlog može biti ažuriranje dodatka, promijenjena postavka ili zaglavljeni zakazani zadatak."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Ova e-poruka ima vlastitu inačicu u običnom tekstu, ali je zapisnik ne sprema. Ovdje je prikazana tekstna inačica izvedena iz HTML-a."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Ova e-poruka nema vlastite stilove za tamni način rada. Neke je aplikacije prikazuju nepromijenjenu, druge joj mijenjaju boje – pogledajte Prisilno tamno."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Ova e-poruka nema inačicu u običnom tekstu – neki programi za e-poštu i filtri neželjene pošte to preferiraju. Ovdje je prikazana tekstna inačica izvedena iz HTML-a."
+
+msgid "This email type has no content change."
+msgstr "Ova vrsta e-poruke nema promjenu sadržaja."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Ova se vrsta e-poruke sada zanemaruje: bez statusa, bez upozorenja."
+
+msgid "This email type is monitored again."
+msgstr "Ova se vrsta e-poruke ponovno nadzire."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Ovaj je zapis anonimiziran; njegov se sadržaj više ne može poslati."
+
+msgid "This import is already running in another tab."
+msgstr "Ovaj se uvoz već izvodi u drugoj kartici."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Ovo je testno upozorenje. Vaši kanali upozorenja rade."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Ovo produkcijsko web-mjesto poslalo je poveznicu na lokalnu ili testnu adresu. Primatelji je ne mogu otvoriti."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Ovo pitanje zahtijeva JavaScript. Umjesto toga možete pretražiti zapisnik."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Ovo web-mjesto vodi zapisnik e-poruka koje šalje (primatelj, predmet, sadržaj i status isporuke) radi provjere isporuke i rješavanja problema. Zapisi se automatski brišu nakon postavljenog razdoblja čuvanja."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Ovo web-mjesto radi kao okruženje %s, a testni način rada sprječava da njegove e-poruke stignu do stvarnih ljudi."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Ovo web-mjesto radi kao okruženje %s. Uključite testni način rada kako nijedan stvarni kupac ne bi dobio e-poruku s njega."
+
+msgid "Threshold (emails per hour)"
+msgstr "Prag (e-poruka na sat)"
+
+msgid "Thursday"
+msgstr "Četvrtak"
+
+msgid "Timeline"
+msgstr "Vremenska crta"
+
+msgid "To"
+msgstr "Za"
+
+msgid "To date"
+msgstr "Do datuma"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Da biste ih zadržali, ali dobivali samo jednu e-poruku dnevno, odaberite „Skupi u jednu dnevnu e-poruku“ u izborniku … te vrste."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Ljestvice se temelje na najnovijih %s e-poruka ovog razdoblja."
+
+msgid "Top recipient domains"
+msgstr "Najčešće domene primatelja"
+
+msgid "Top recipients: %s"
+msgstr "Najčešći primatelji: %s"
+
+msgid "Top sources"
+msgstr "Najčešći izvori"
+
+msgid "Top subjects"
+msgstr "Najčešći predmeti"
+
+msgid "Total"
+msgstr "Ukupno"
+
+msgid "Total: %s ms"
+msgstr "Ukupno: %s ms"
+
+msgid "Trace"
+msgstr "Trag"
+
+msgid "Transcript copied."
+msgstr "Transkript kopiran."
+
+msgid "Transport"
+msgstr "Prijenos"
+
+msgid "Trigger"
+msgstr "Pokreni"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Pokrenuti stvarnu e-poruku za ponovno postavljanje lozinke za vaš vlastiti račun? WordPress će vam stvoriti novu poveznicu za ponovno postavljanje, pa ranije poveznice prestaju raditi; vaša lozinka ostaje ista. Prima je samo %s."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Pokrenuti obavijesti o novom korisniku za vaš vlastiti račun (obavijest administratoru i podatke za prijavu)? WordPress će vam stvoriti novu poveznicu za lozinku, pa ranije poveznice prestaju raditi. Ne stvara se nijedan korisnik; prima ih samo %s."
+
+msgid "Trigger to me"
+msgstr "Pokreni test za mene"
+
+msgid "Triggering…"
+msgstr "Pokretanje…"
+
+msgid "Tuesday"
+msgstr "Utorak"
+
+msgid "Type"
+msgstr "Vrsta"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Vrste se ažuriraju svakih sat vremena i svaki put kada otvorite ovu stranicu. Spremaju se samo brojači, uzorci predmeta i otisci sadržaja (bez primatelja, bez sadržaja) i prate razdoblje čuvanja zapisnika."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Tipfeler u domeni primatelja? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Dijakritički znakovi ili navodnici prikazuju se kao iskrivljeni znakovi poput \"Ã¤\" ili \"â€™\". UTF-8 tekst negdje je usput pročitan kao drugi skup znakova – u predlošku, pri uvozu ili u bazi podataka."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Nejasno. „%1$s“ za %2$s predana je na slanje %3$s, ali Mailspur nije dobio rezultat."
+
+msgid "Under Tools"
+msgstr "U izborniku Alati"
+
+msgid "Uninstall"
+msgstr "Deinstalacija"
+
+msgid "Unknown"
+msgstr "Nepoznato"
+
+msgid "Unknown probe."
+msgstr "Nepoznata testna e-poruka."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Nepoznato: nije javljen rezultat isporuke (zamijenjena funkcija wp_mail()?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Nezamijenjena rezervirana mjesta: %1$s"
+
+msgid "Until the log limit"
+msgstr "Do ograničenja zapisnika"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Do 10 adresa, odvojenih zarezima. Cc i Bcc uklanjaju se, a predmet prikazuje izvorne primatelje. Bez valjane adrese e-poruke se umjesto toga zadržavaju."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Do 5 adresa, odvojenih zarezima. E-poruke s upozorenjima pojavljuju se u zapisniku s izvorom „Mailspur upozorenja“ i same nikada ne pokreću upozorenja."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Ažurirajte poveznicu u predlošku e-poruke ili u postavkama dodatka koji šalje ovu e-poruku, ili dodajte preusmjeravanje sa stare adrese na novu stranicu (npr. dodatkom za preusmjeravanje)."
+
+msgid "Updated in between: %s"
+msgstr "U međuvremenu ažurirano: %s"
+
+msgid "Updated since the last one:"
+msgstr "Ažurirano od posljednje:"
+
+msgid "Updated since then: %s."
+msgstr "Od tada ažurirano: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Koristite TLS na priključku 587 ili SSL na priključku 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Koristite opisni tekst poveznice (npr. „Pogledaj narudžbu“) ili prikažite adresu na koju poveznica stvarno vodi."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Koristite adresu pošiljatelja na vlastitoj domeni, a besplatnu adresu stavite u Reply-To. To je u redu samo ako stvarno šaljete preko vlastitog SMTP poslužitelja tog pružatelja s njegovom prijavom."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Koristite apsolutne URL-ove s https:// i domenom, npr. pomoću home_url() ili wp_get_attachment_url() u predlošku."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Koristite točno onaj naziv hosta za koji je certifikat izdan (npr. pružateljev host smtp.… umjesto IP adrese ili vlastite domene)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Koristite najviše jedan uskličnik."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Strelicama se pomičite između ćelija."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Strelicama se pomičite između vrijednosti, a tipkom Enter otvorite ih u zapisniku."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Kao pošiljatelja (Od) upotrijebite adresu pretinca SMTP računa."
+
+msgid "User"
+msgstr "Korisnik"
+
+msgid "User: %s"
+msgstr "Korisnik: %s"
+
+msgid "Username"
+msgstr "Korisničko ime"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Koristi spremljene postavke – najprije spremite promjene."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Potvrdite domenu pošiljatelja kod svoje usluge e-pošte (dodajte njezine DNS zapise) ili upotrijebite već potvrđenu adresu pošiljatelja."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Vrlo vjerojatno. „%1$s“ je otišla na %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Vrlo dug predmet (znakova: %1$s)"
+
+msgid "View"
+msgstr "Prikaži"
+
+msgid "View %s failed emails"
+msgstr "Prikaži neuspjele e-poruke (%s)"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron nije pokrenut već %s (postavljeno je DISABLE_WP_CRON – provjerite cron zadatak na poslužitelju)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron nije pokrenut već %s – pokreće se samo kada web-mjesto ima posjete ili završava pogreškom."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron radi normalno."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Čeka dnevni sažetak – ne šalje se zasebno."
+
+msgid "Waits %s s for the mail server"
+msgstr "Čeka %s s na poslužitelj e-pošte"
+
+msgid "Warnings"
+msgstr "Upozorenja"
+
+msgid "Webhook URL"
+msgstr "URL webhooka"
+
+msgid "Webhook signing key"
+msgstr "Ključ za potpisivanje webhooka"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "Srijeda"
+
+msgid "Week"
+msgstr "Tjedan"
+
+msgid "Week of %s"
+msgstr "Tjedan od %s"
+
+msgid "Weekday"
+msgstr "Dan u tjednu"
+
+msgid "Weekly"
+msgstr "Tjedno"
+
+msgid "Weekly email report"
+msgstr "Tjedno izvješće e-poštom"
+
+msgid "Weekly report"
+msgstr "Tjedno izvješće"
+
+msgid "What to do"
+msgstr "Što učiniti"
+
+msgid "When emails are sent"
+msgstr "Kada se šalju e-poruke"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Kada se šalje mnogo više e-poruka nego inače, kočnica u nuždi vas upozorava i može zadržati daljnje e-poruke."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Kada je isključeno, pikseli za praćenje ne mogu otkriti kada otvarate zapis. Vanjski sadržaj i dalje možete učitati za pojedinu e-poruku. Skripte i obrasci uvijek su blokirani."
+
+msgid "Who can view the log"
+msgstr "Tko može pregledavati zapisnik"
+
+msgid "Why did an email fail?"
+msgstr "Zašto e-poruka nije uspjela?"
+
+msgid "With attachments"
+msgstr "S privicima"
+
+msgid "With notes"
+msgstr "S napomenama"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Bez ovih DNS zapisa pružatelji pretinaca ne mogu provjeriti smije li vaše web-mjesto slati e-poruke za ovu domenu, pa e-poruke češće završavaju u neželjenoj pošti. Provjera pošiljatelja predlaže zapise koje možete dodati kod svog pružatelja domene."
+
+msgid "WooCommerce email"
+msgstr "WooCommerce e-poruka"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Postavke › E-pošta"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "E-poruke jezgre WordPressa nemaju uređivač; mogu se mijenjati filtrima."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress nije poslao e-poruku – možda je neki dodatak isključio ovu e-poruku."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress nema postavku za ovu e-poruku. Mailspur može zaustaviti obavijest administratorima; novi korisnik i dalje prima svoju e-poruku."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress nema postavku za ovu e-poruku. Mailspur može zaustaviti obavijesti o uspješnim automatskim ažuriranjima; obavijesti o neuspjelim ažuriranjima i dalje stižu."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress prema zadanim postavkama šalje putem PHP funkcije mail(). Na ovom poslužitelju ona je onemogućena ili nije instaliran program za poštu (sendmail) – to je često kod lokalnih instalacija, Dockera i mnogih upravljanih hostinga."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Predmet pišite normalno velikim i malim slovima i istaknite najviše jednu riječ."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Da, ali prema %4$s primatelj je označio „%1$s“ za %2$s (%3$s) kao neželjenu poštu."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Da. „%1$s“ je otišla na %2$s %3$s, a %4$s je potvrdio isporuku."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Još je možete poslati iz zapisnika („Pošalji sada“)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Ovaj sažetak primate jer Mailspur ove vrste e-poruka skuplja u jednu dnevnu e-poruku. Svaka e-poruka ostaje u zapisniku."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Ovu e-poruku primate jer su u postavkama Mailspura ovog web-mjesta uključena upozorenja nadzora."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Ovu e-poruku primate jer je u postavkama Mailspura ovog web-mjesta uključeno tjedno izvješće. Sadrži samo brojeve i uzorke predmeta – bez sadržaja e-poruka ili primatelja."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Vaš DKIM selektor (neobavezno)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Vaše web-mjesto u posljednjih 7 dana nije poslalo nijednu e-poruku."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] Obavijesti (%2$s): %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 obavijest: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Tjedno izvješće e-poštom %2$s"
+
+msgid "address"
+msgstr "adresa"
+
+msgid "and %s more"
+msgstr "i još %s"
+
+msgid "and %s more – see the log"
+msgstr "i još %s – pogledajte zapisnik"
+
+msgid "another plugin stopped it"
+msgstr "zaustavio ju je drugi dodatak"
+
+msgid "code"
+msgstr "kôd"
+
+msgid "date"
+msgstr "datum"
+
+msgid "days"
+msgstr "dana"
+
+msgid "deleted after %s days"
+msgstr "brišu se nakon %s dana"
+
+msgid "emails to this address failed several times before"
+msgstr "e-poruke na ovu adresu već nekoliko puta nisu uspjele"
+
+msgid "entries"
+msgstr "zapisa"
+
+msgid "failing"
+msgstr "s pogreškama"
+
+msgid "failure spikes"
+msgstr "nagle poraste pogrešaka"
+
+msgid "first seen %s"
+msgstr "prvi put viđeno %s"
+
+msgid "from a new sender"
+msgstr "od novog pošiljatelja"
+
+msgid "holding emails right now"
+msgstr "trenutačno zadržava e-poruke"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "čuva se do ručnog brisanja"
+
+msgid "link"
+msgstr "poveznica"
+
+msgid "minutes"
+msgstr "minuta"
+
+msgid "name"
+msgstr "ime"
+
+msgid "new this week"
+msgstr "novo ovaj tjedan"
+
+msgid "no"
+msgstr "ne"
+
+msgid "none"
+msgstr "nema"
+
+msgid "none in %1$s – %2$s"
+msgstr "nijedna u %1$s – %2$s"
+
+msgid "number"
+msgstr "broj"
+
+msgid "of %s"
+msgstr "od %s"
+
+msgid "often to administrators"
+msgstr "često administratorima"
+
+msgid "on %1$s at %2$s"
+msgstr "%1$s u %2$s"
+
+msgid "same recipient"
+msgstr "isti primatelj"
+
+msgid "slow to send"
+msgstr "sporo slanje"
+
+msgid "staging mode is on"
+msgstr "uključen je testni način rada"
+
+msgid "stopped"
+msgstr "zaustavljeno"
+
+msgid "stopped email types"
+msgstr "zaustavljene vrste e-poruka"
+
+msgid "text"
+msgstr "tekst"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "kočnica u nuždi zaustavila je poplavu e-poruka"
+
+msgid "time"
+msgstr "vrijeme"
+
+msgid "today at %s"
+msgstr "danas u %s"
+
+msgid "triggered %s times"
+msgstr "aktivirano %s puta"
+
+msgid "unchanged"
+msgstr "nepromijenjeno"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "nepoznato – mailer nije vratio poruku o pogrešci"
+
+msgid "unusual silence"
+msgstr "neuobičajenu tišinu"
+
+msgid "usually sent: %s"
+msgstr "obično se šalje: %s"
+
+msgid "wp_mail() called"
+msgstr "pozvana wp_mail()"
+
+msgid "yes"
+msgstr "da"
+
+msgid "yesterday at %s"
+msgstr "jučer u %s"
+
+msgid "your email provider"
+msgstr "vaš pružatelj usluge e-pošte"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "„%1$s“ (%2$s) u %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "„%1$s“ (%2$s) ponovno se šalje."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "„%1$s“ (%2$s) obično odlazi barem svakih %3$s dana. Posljednja je poslana prije %4$s."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "„%1$s“ (%2$s) posljednji je put poslana prije %3$s. Do tada se slala barem svakih %4$s dana."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "„%1$s“ (%2$s) – obično jednom tjedno (%4$s), posljednja %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "„%1$s“ (%2$s) – obično svaki dan, posljednja %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "„%1$s“ – %2$s – %3$s"

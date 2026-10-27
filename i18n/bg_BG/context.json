@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s бележки",
+	"Belongs to": "Принадлежи към",
+	"Emails to this user": "Имейли до този потребител",
+	"No emails logged for this order yet.": "Все още няма записани имейли за тази поръчка.",
+	"No emails to this user in the log.": "В дневника няма имейли до този потребител.",
+	"Order #%s": "Поръчка #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Изпратен до същия адрес около датата на поръчката, но не е свързан с тази поръчка (например записан преди връзката да съществува или импортиран).",
+	"Show all in Mail Log": "Показване на всички в дневника на имейлите",
+	"User: %s": "Потребител: %s",
+	"WooCommerce email": "Имейл на WooCommerce",
+	"same recipient": "същият получател"
+}

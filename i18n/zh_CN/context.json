@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s 条提示",
+	"Belongs to": "关联到",
+	"Emails to this user": "发给此用户的邮件",
+	"No emails logged for this order yet.": "尚未记录此订单的邮件。",
+	"No emails to this user in the log.": "日志中没有发给此用户的邮件。",
+	"Order #%s": "订单 #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "在下单日期前后发往同一地址，但未关联到此订单（例如在关联功能出现之前记录的，或是导入的）。",
+	"Show all in Mail Log": "在邮件日志中查看全部",
+	"User: %s": "用户：%s",
+	"WooCommerce email": "WooCommerce 邮件",
+	"same recipient": "同一收件人"
+}

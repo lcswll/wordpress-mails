@@ -1,0 +1,13 @@
+{
+	"%s notes": "Note: %s",
+	"Belongs to": "Aparține de",
+	"Emails to this user": "Emailuri către acest utilizator",
+	"No emails logged for this order yet.": "Încă nu s-a înregistrat niciun email pentru această comandă.",
+	"No emails to this user in the log.": "Niciun email către acest utilizator în jurnal.",
+	"Order #%s": "Comanda #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Trimis la aceeași adresă în jurul datei comenzii, dar nelegat de această comandă (de exemplu înregistrat înainte să existe legătura sau importat).",
+	"Show all in Mail Log": "Arată tot în jurnalul de emailuri",
+	"User: %s": "Utilizator: %s",
+	"WooCommerce email": "Email WooCommerce",
+	"same recipient": "același destinatar"
+}

@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s not",
+	"Belongs to": "Ait olduğu",
+	"Emails to this user": "Bu kullanıcıya giden e-postalar",
+	"No emails logged for this order yet.": "Bu sipariş için henüz kaydedilmiş e-posta yok.",
+	"No emails to this user in the log.": "Günlükte bu kullanıcıya giden e-posta yok.",
+	"Order #%s": "Sipariş #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Sipariş tarihi civarında aynı adrese gönderildi ancak bu siparişle ilişkilendirilmedi (örneğin ilişki oluşmadan önce kaydedildi veya içe aktarıldı).",
+	"Show all in Mail Log": "Tümünü e-posta günlüğünde göster",
+	"User: %s": "Kullanıcı: %s",
+	"WooCommerce email": "WooCommerce e-postası",
+	"same recipient": "aynı alıcı"
+}

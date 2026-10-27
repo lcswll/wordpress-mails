@@ -1,0 +1,13 @@
+{
+	"%s notes": "Napomene: %s",
+	"Belongs to": "Pripada",
+	"Emails to this user": "E-poruke ovom korisniku",
+	"No emails logged for this order yet.": "Za ovu narudžbu još nisu zabilježene e-poruke.",
+	"No emails to this user in the log.": "U zapisniku nema e-poruka ovom korisniku.",
+	"Order #%s": "Narudžba #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Poslano na istu adresu oko datuma narudžbe, ali nije povezano s ovom narudžbom (na primjer zabilježeno prije nego što je veza postojala ili uvezeno).",
+	"Show all in Mail Log": "Prikaži sve u zapisniku e-pošte",
+	"User: %s": "Korisnik: %s",
+	"WooCommerce email": "WooCommerce e-poruka",
+	"same recipient": "isti primatelj"
+}

@@ -1,0 +1,3245 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "“Tải xuống .eml” dựng lại thư từ dữ liệu đã ghi nhật ký và đã che (không có tệp đính kèm)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (tuần trước: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (lên lịch lúc %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s loại email đã ngừng gửi: %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%1$s loại email từ %2$s người gửi"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "%1$s email bị lỗi trong %2$s phút qua."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%1$s email trong %2$s ngày"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "%1$s email trong 30 ngày qua, %2$s bị lỗi"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "%1$s email đã được gửi trong vòng một giờ – nhiều hơn bình thường rất nhiều (ngưỡng: %2$s mỗi giờ). Có thể một biểu mẫu liên hệ đang bị lạm dụng hoặc trang web đã bị xâm nhập."
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s mục, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s đã nhập, %2$s trùng lặp, %3$s quá cũ"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s trên %2$s bị trả về (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "%1$s trong số %2$s email của %3$s ngày qua không thể gửi được."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "Đã xử lý %1$s / %2$s mục …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s điểm phần trăm so với %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s đã gửi email đầu tiên vào %2$s và đã gửi đến %3$s địa chỉ bên ngoài khác nhau trong 24 giờ qua. Nếu bạn không cài đặt hay thiết lập gì gửi những email như vậy, hãy kiểm tra trang web: một người gửi mới có thể là dấu hiệu trang web bị hack."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "Đã gửi %1$s, còn %2$s đang bị giữ lại …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s so với %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · %2$s email được gộp kể từ email tổng hợp gần nhất"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · tính đến %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – tỷ lệ lỗi %2$s %% (tuần trước: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – được báo bởi %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (plugin must-use)"
+
+msgid "%s (theme)"
+msgstr "%s (giao diện)"
+
+msgid "%s ago"
+msgstr "%s trước"
+
+msgid "%s days"
+msgstr "%s ngày"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s email bị lỗi trong 7 ngày qua."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s email đang chờ bạn quyết định."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s email bị giữ lại và không được gửi trong 7 ngày qua."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "%s email đang bị phanh khẩn cấp giữ lại."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s email đang chờ và chưa được chuyển phát."
+
+msgid "%s entries"
+msgstr "%s mục"
+
+msgid "%s failed"
+msgstr "%s bị lỗi"
+
+msgid "%s held emails discarded."
+msgstr "Đã hủy %s email bị giữ lại."
+
+msgid "%s imported entries removed."
+msgstr "Đã xóa %s mục đã nhập."
+
+msgid "%s in 30 days"
+msgstr "%s trong 30 ngày"
+
+msgid "%s marked as spam"
+msgstr "%s bị đánh dấu là spam"
+
+msgid "%s more on the Email types page."
+msgstr "Còn %s mục khác trên trang Loại email."
+
+msgid "%s notes"
+msgstr "%s ghi chú"
+
+msgid "%s of all emails"
+msgstr "%s tổng số email"
+
+msgid "%s of them in the last 24 hours."
+msgstr "Trong đó %s trong 24 giờ qua."
+
+msgid "%s s"
+msgstr "%s giây"
+
+msgid "%s selected"
+msgstr "Đã chọn %s"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s việc cần bạn chú ý:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s gửi đến quản trị viên trong 30 ngày"
+
+msgid "%s unchanged lines"
+msgstr "%s dòng không thay đổi"
+
+msgid "(no subject)"
+msgstr "(không có tiêu đề)"
+
+msgid "(no text content)"
+msgstr "(không có nội dung văn bản)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(các email không còn trong nhật ký)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all nghiêm ngặt hơn; ~all phổ biến và ổn khi đi kèm DMARC."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 nghĩa là giữ các mục vĩnh viễn. Việc dọn dẹp chạy mỗi ngày một lần."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 nghĩa là không giới hạn. Các mục cũ nhất sẽ bị xóa trước."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 để tắt. Xóa nội dung, header và tệp đính kèm của các mục cũ hơn và che địa chỉ (a***@example.com). Ngày, trạng thái, nguồn, định dạng, kích thước và ghi chú được giữ lại cho thống kê. Chạy cùng đợt dọn dẹp hằng ngày, trước khi các mục bị xóa – nên chỉ có tác dụng nếu ngắn hơn thời hạn xóa ở trên."
+
+msgid "12 months"
+msgstr "12 tháng"
+
+msgid "30 days"
+msgstr "30 ngày"
+
+msgid "7 days"
+msgstr "7 ngày"
+
+msgid "90 days"
+msgstr "90 ngày"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Selector DKIM chỉ được chứa chữ cái, chữ số, dấu chấm, dấu gạch ngang và dấu gạch dưới."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Một plugin gửi thư qua API đã đảm nhận việc chuyển phát và báo gửi thất bại mà không cho biết lý do."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Khóa đã công bố không chứng minh rằng email của bạn được ký bằng nó – hãy kiểm tra kết quả DKIM trong header của một email đã nhận."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Một người nhận hoặc địa chỉ người gửi không phải là địa chỉ email hợp lệ, nên PHPMailer đã từ chối gửi."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "Khóa API hoặc khóa riêng tư ở dạng văn bản thuần: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Cần khoảng %1$s lượt truy vấn DNS để đánh giá bản ghi này – nhiều hơn mức cho phép %2$s, nên bên nhận có thể bỏ qua nó (PermError). Hãy xóa các mục include: không dùng đến."
+
+msgid "Access"
+msgstr "Quyền truy cập"
+
+msgid "Actions"
+msgstr "Hành động"
+
+msgid "Active: alerts on %s."
+msgstr "Đang hoạt động: cảnh báo khi có %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Thêm thuộc tính alt ngắn cho mọi hình ảnh trong mẫu, ví dụ alt=\"Logo Cửa hàng Mẫu\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Thêm include: của nhà cung cấp email (ví dụ include:_spf.google.com) nếu bạn gửi qua nhà cung cấp đó."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Thêm máy chủ thư hoặc dịch vụ email của bạn vào bản ghi SPF của tên miền người gửi."
+
+msgid "Added:"
+msgstr "Đã thêm:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Các địa chỉ có ít nhất %s lỗi cứng: máy chủ nhận đã từ chối hộp thư, tên miền không có máy chủ thư, hoặc nhà cung cấp email của bạn báo hard bounce. Các mục hết hạn theo thời gian lưu giữ của nhật ký."
+
+msgid "Admin screen"
+msgstr "Màn hình quản trị"
+
+msgid "Administrators"
+msgstr "Quản trị viên"
+
+msgid "Aggregate reports go to %s."
+msgstr "Báo cáo tổng hợp được gửi đến %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Cảnh báo"
+
+msgid "Alert and hold further emails"
+msgstr "Cảnh báo và giữ lại các email tiếp theo"
+
+msgid "Alert only"
+msgstr "Chỉ cảnh báo"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Cảnh báo khi một loại email được gửi định kỳ ngừng gửi"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Cảnh báo khi email liên tục bị lỗi"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Cảnh báo khi trang web bất ngờ ngừng gửi email"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Cảnh báo đã bật nhưng chưa có kênh nhận: hãy nhập địa chỉ email hoặc URL webhook."
+
+msgid "Alerts are off."
+msgstr "Cảnh báo đang tắt."
+
+msgid "All"
+msgstr "Tất cả"
+
+msgid "All email types look healthy."
+msgstr "Mọi loại email đều có vẻ hoạt động tốt."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Mọi email được chuyển hướng đến địa chỉ thử nghiệm."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Mọi email được gửi đến địa chỉ thử nghiệm thay vì người nhận thật."
+
+msgid "All sources"
+msgstr "Tất cả nguồn"
+
+msgid "Allow again"
+msgstr "Cho phép lại"
+
+msgid "Allowed again."
+msgstr "Đã cho phép lại."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Đồng thời cảnh báo một lần khi một plugin hoặc giao diện chưa từng gửi email lại gửi đến nhiều địa chỉ bên ngoài khác nhau trong một ngày – có thể là dấu hiệu trang web bị hack. Hai tuần đầu sau khi cài Mailspur được dùng làm mốc so sánh."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Xóa cả tiêu đề khi ẩn danh hóa"
+
+msgid "Also search content"
+msgstr "Tìm cả trong nội dung"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Hoặc nhờ nhà cung cấp hosting bật mail() / sendmail cho trang web này."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Luôn tải hình ảnh và phông chữ bên ngoài trong bản xem trước"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (qua SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Nhà cung cấp email có HTTP API thay vì SMTP cần ít lượt trao đổi hơn cho mỗi email."
+
+msgid "Anonymisation"
+msgstr "Ẩn danh hóa"
+
+msgid "Anonymise entries after"
+msgstr "Ẩn danh hóa các mục sau"
+
+msgid "Anonymised"
+msgstr "Đã ẩn danh hóa"
+
+msgid "Any format"
+msgstr "Mọi định dạng"
+
+msgid "Any status"
+msgstr "Mọi trạng thái"
+
+msgid "Apply"
+msgstr "Áp dụng"
+
+msgid "Ask the recipient for a working address."
+msgstr "Hãy hỏi người nhận một địa chỉ đang hoạt động."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Nhờ nhà cung cấp hosting bật tiện ích mở rộng openssl (hoặc tự bật trong phần cài đặt PHP của bảng điều khiển hosting)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Nhờ nhà cung cấp hosting cập nhật chứng chỉ CA và OpenSSL của máy chủ."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Hỏi nhà cung cấp hosting xem kết nối SMTP ra ngoài có bị chặn không."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Hỏi nhà cung cấp hosting xem kết nối ra ngoài đến cổng đó có được cho phép không (tường lửa)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Ít nhất %1$s email bị lỗi trong vòng %2$s phút"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Tối đa một cảnh báo cho mỗi loại trong khoảng thời gian này, kể cả khi sự cố vẫn tiếp diễn."
+
+msgid "Attachments"
+msgstr "Tệp đính kèm"
+
+msgid "Attachments no longer available: %s"
+msgstr "Tệp đính kèm không còn tồn tại: %s"
+
+msgid "Authentication"
+msgstr "Xác thực"
+
+msgid "Automatic TLS"
+msgstr "TLS tự động"
+
+msgid "Average per day"
+msgstr "Trung bình mỗi ngày"
+
+msgid "Back to the email types"
+msgstr "Quay lại loại email"
+
+msgid "Belongs to"
+msgstr "Thuộc về"
+
+msgid "Block again"
+msgstr "Chặn lại"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Bị chặn vì là spam hoặc do danh sách chặn"
+
+msgid "Bounced (permanent)"
+msgstr "Bị trả về (vĩnh viễn)"
+
+msgid "Bounced (temporary)"
+msgstr "Bị trả về (tạm thời)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Ký tự bị lỗi (mã hóa ký tự): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Email hàng loạt không có header hủy đăng ký (%1$s người nhận)"
+
+msgid "Bundle into one daily email"
+msgstr "Gộp vào một email mỗi ngày"
+
+msgid "Bundled into one daily email"
+msgstr "Đã gộp vào một email mỗi ngày"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Đã tắt gộp. Các email đang chờ vừa được gửi trong một email tổng hợp."
+
+msgid "Busiest day"
+msgstr "Ngày nhiều nhất"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Hủy"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Lưu ý: email gửi đến địa chỉ này đã bị lỗi nhiều lần trước đây."
+
+msgid "Change in the email types"
+msgstr "Thay đổi trong loại email"
+
+msgid "Change staging mode"
+msgstr "Thay đổi chế độ staging"
+
+msgid "Check"
+msgstr "Kiểm tra"
+
+msgid "Check again"
+msgstr "Kiểm tra lại"
+
+msgid "Check emails"
+msgstr "Kiểm tra email"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Kiểm tra máy chủ và cổng; thử 587 (TLS) thay cho 465 (SSL) hoặc ngược lại."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Kiểm tra máy chủ, cổng, mã hóa, tên người dùng và mật khẩu trong plugin SMTP của bạn và gửi email thử từ đó."
+
+msgid "Check sender domains"
+msgstr "Kiểm tra tên miền người gửi"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Kiểm tra xem mã hóa có khớp với cổng không: TLS cho 587, SSL cho 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Kiểm tra xem khóa có thuộc đúng khu vực / tài khoản không (ví dụ endpoint EU so với US)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Kiểm tra máy chủ và cổng SMTP: cổng sai hoặc kết nối bị chặn thường dẫn đến hết thời gian chờ trước khi phương án dự phòng hoạt động."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Kiểm tra bản ghi SPF, DKIM và DMARC của tên miền người gửi, hoặc dùng địa chỉ người gửi thuộc tên miền mà bạn gửi từ đó."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Hãy kiểm tra địa chỉ xem có lỗi chính tả không – hoặc trang web của bạn chưa bao giờ gửi email này."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Xác nhận địa chỉ với người nhận và sửa lại ở nơi lưu trữ (hồ sơ người dùng, đơn hàng, mục biểu mẫu)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Xác nhận địa chỉ với người nhận và sửa lại ở nơi lưu trữ."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Kiểm tra tên máy chủ và cổng: 587 với STARTTLS (TLS) hoặc 465 với SSL. Hầu hết nhà cung cấp hosting chặn cổng 25."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Kiểm tra giới hạn và mức sử dụng hiện tại trong tài khoản dịch vụ email; nâng cấp gói nếu cần."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Kiểm tra địa chỉ người nhận của mục này xem có lỗi chính tả, khoảng trắng hoặc phần bị thiếu không."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Kiểm tra địa chỉ người gửi trong plugin SMTP và bộ lọc wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Kiểm tra giới hạn gửi của tài khoản email và các ghi chú của email này."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Kiểm tra IP máy chủ bằng công cụ kiểm tra danh sách chặn và yêu cầu gỡ khỏi danh sách."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Kiểm tra chính tả của biến giữ chỗ trong mẫu và xem plugin có hỗ trợ nó cho loại email này không. Shortcode không được xử lý trong email trừ khi plugin gửi thư chạy do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Đã kiểm tra %s."
+
+msgid "Checked just now"
+msgstr "Vừa kiểm tra"
+
+msgid "Checking DNS records …"
+msgstr "Đang kiểm tra bản ghi DNS …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Kiểm tra bản ghi DNS của các tên miền mà trang web của bạn dùng để gửi: địa chỉ người gửi mặc định và những người gửi thường gặp nhất trong nhật ký. Bản ghi thiếu hoặc yếu là lý do phổ biến nhất khiến email bị đưa vào spam. Chỉ dùng DNS resolver của chính máy chủ của bạn; kết quả được lưu trong một giờ."
+
+msgid "Choose a range of at most %s days."
+msgstr "Chọn khoảng thời gian tối đa %s ngày."
+
+msgid "Clear selection"
+msgstr "Bỏ chọn"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Nhấp vào một cột để mở các email này trong nhật ký."
+
+msgid "Close"
+msgstr "Đóng"
+
+msgid "Close (Esc)"
+msgstr "Đóng (Esc)"
+
+msgid "Colour scheme"
+msgstr "Bảng màu"
+
+msgid "Command line"
+msgstr "Dòng lệnh"
+
+msgid "Compare"
+msgstr "So sánh"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "So sánh nguồn của các mục này. Kiểm tra xem có hai plugin cùng gửi một thông báo không, hoặc một hook (ví dụ thay đổi trạng thái đơn hàng) có chạy nhiều lần không."
+
+msgid "Component"
+msgstr "Thành phần"
+
+msgid "Configure alerts"
+msgstr "Cấu hình cảnh báo"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Nội dung được ẩn danh hóa sau %1$s ngày, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Đã đánh dấu thay đổi nội dung là đã xem."
+
+msgid "Content changed"
+msgstr "Nội dung đã thay đổi"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Nội dung đã thay đổi vào %1$s, sau khi cập nhật %2$s."
+
+msgid "Content changed on %s."
+msgstr "Nội dung đã thay đổi vào %s."
+
+msgid "Content removed"
+msgstr "Đã xóa nội dung"
+
+msgid "Content removed after %s days"
+msgstr "Nội dung bị xóa sau %s ngày"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Nội dung, header và tệp đính kèm đã bị xóa và địa chỉ đã được che theo cài đặt ẩn danh hóa."
+
+msgid "Copied"
+msgstr "Đã sao chép"
+
+msgid "Copied – paste it into your reply."
+msgstr "Đã sao chép – hãy dán vào thư trả lời của bạn."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Sao chép một câu ngắn để trả lời khách hàng: email được gửi cho ai, khi nào và đã đến nơi chưa – không kèm chi tiết kỹ thuật."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Sao chép nhật ký hiện có của một plugin ghi nhật ký email khác vào Mailspur, để có thể tìm kiếm và xem trước các email cũ tại đây. Plugin kia và dữ liệu của nó được giữ nguyên; nhập lại chỉ thêm các mục mới."
+
+msgid "Copy"
+msgstr "Sao chép"
+
+msgid "Copy for support"
+msgstr "Sao chép cho hỗ trợ"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Trình duyệt này không hỗ trợ sao chép. Hãy chọn văn bản và tự sao chép:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Sửa địa chỉ (ví dụ trong hồ sơ người dùng hoặc đơn hàng) và cân nhắc thêm kiểm tra email trong các biểu mẫu."
+
+msgid "Counted once per email."
+msgstr "Mỗi email được tính một lần."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Tạo khóa API mới có quyền gửi tại dịch vụ email và nhập vào plugin gửi thư."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Tạo URL webhook mới? URL hiện tại sẽ ngừng hoạt động ngay lập tức – hãy dán URL mới vào cài đặt webhook của nhà cung cấp email."
+
+msgid "Create new URL"
+msgstr "Tạo URL mới"
+
+msgid "Current page"
+msgstr "Trang hiện tại"
+
+msgid "Current record"
+msgstr "Bản ghi hiện tại"
+
+msgid "Current size"
+msgstr "Dung lượng hiện tại"
+
+msgid "Custom"
+msgstr "Tùy chỉnh"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "Đã tìm thấy khóa DKIM (selector: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "Đã tìm thấy bản ghi DMARC với p=none: chỉ báo cáo, email giả mạo vẫn được chuyển phát."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "Đã tìm thấy bản ghi DMARC với chính sách p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "Bản ghi DMARC không có chính sách hợp lệ (p=none, quarantine hoặc reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "Truy vấn DNS thất bại hoặc hết thời gian chờ. Hãy thử lại sau."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Máy chủ này không hỗ trợ truy vấn DNS (dns_get_record() bị vô hiệu hóa), nên không thể chạy kiểm tra người gửi ở đây."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Số truy vấn DNS cần: khoảng %1$s trên %2$s được phép."
+
+msgid "Daily"
+msgstr "Hằng ngày"
+
+msgid "Daily digest"
+msgstr "Email tổng hợp hằng ngày"
+
+msgid "Dark"
+msgstr "Tối"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "Default (%s days)"
+msgstr "Mặc định (%s ngày)"
+
+msgid "Default (no time limit)"
+msgstr "Mặc định (không giới hạn thời gian)"
+
+msgid "Default sender"
+msgstr "Người gửi mặc định"
+
+msgid "Delete"
+msgstr "Xóa"
+
+msgid "Delete %s selected log entries?"
+msgstr "Xóa %s mục nhật ký đã chọn?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Xóa TẤT CẢ mục nhật ký? Thao tác này không thể hoàn tác."
+
+msgid "Delete entries after"
+msgstr "Xóa các mục sau"
+
+msgid "Delete selected"
+msgstr "Xóa mục đã chọn"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Xóa bảng nhật ký và cài đặt khi plugin bị xóa"
+
+msgid "Delete this log entry?"
+msgstr "Xóa mục nhật ký này?"
+
+msgid "Deleted."
+msgstr "Đã xóa."
+
+msgid "Delivered"
+msgstr "Đã chuyển phát"
+
+msgid "Delivered by %s (API)"
+msgstr "Chuyển phát bởi %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Chuyển phát bởi mã móc vào pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Đã được chuyển phát trong email tổng hợp hằng ngày vào %s."
+
+msgid "Delivery"
+msgstr "Chuyển phát"
+
+msgid "Delivery status from your email provider"
+msgstr "Trạng thái chuyển phát từ nhà cung cấp email"
+
+msgid "Desktop"
+msgstr "Máy tính"
+
+msgid "Did my email arrive?"
+msgstr "Email của tôi đã đến chưa?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Tắt email hoặc thay đổi người nhận"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Hủy tất cả email bị giữ lại? Chúng vẫn nằm trong nhật ký nhưng không được gửi."
+
+msgid "Discard held emails"
+msgstr "Hủy email bị giữ lại"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Đừng gửi “từ” các địa chỉ email miễn phí (gmail.com, gmx.de …) qua máy chủ của chính bạn."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Hoàn tất: đã gửi %1$s email, %2$s bị lỗi."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Hoàn tất: %1$s đã nhập, %2$s trùng lặp, %3$s quá cũ."
+
+msgid "Download .eml"
+msgstr "Tải xuống .eml"
+
+msgid "Download as CSV"
+msgstr "Tải xuống dạng CSV"
+
+msgid "Download started."
+msgstr "Đã bắt đầu tải xuống."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Tải xuống các mục khớp với bộ lọc hiện tại dưới dạng %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Mỗi email được kiểm tra một lần khi được ghi nhật ký hoặc nhập (không có yêu cầu ra bên ngoài). Thay đổi ở đây chỉ áp dụng cho email được ghi sau đó; các mục cũ không được kiểm tra lại. Kiểm tra DNS và gửi lặp chạy khi bạn mở một mục."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Các email trước đây gửi đến %s đã bị lỗi cứng nhiều lần."
+
+msgid "Edit template"
+msgstr "Sửa mẫu"
+
+msgid "Editors and above"
+msgstr "Biên tập viên trở lên"
+
+msgid "Email address"
+msgstr "Địa chỉ email"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "Địa chỉ email (email mới nhất không còn trong nhật ký)"
+
+msgid "Email address or order number"
+msgstr "Địa chỉ email hoặc mã đơn hàng"
+
+msgid "Email consists almost only of images"
+msgstr "Email gần như chỉ có hình ảnh"
+
+msgid "Email failure spike"
+msgstr "Số email bị lỗi tăng đột biến"
+
+msgid "Email failures"
+msgstr "Email bị lỗi"
+
+msgid "Email failures resolved"
+msgstr "Lỗi email đã được khắc phục"
+
+msgid "Email inventory"
+msgstr "Danh mục email"
+
+msgid "Email log"
+msgstr "Nhật ký email"
+
+msgid "Email log: problem recipients"
+msgstr "Nhật ký email: người nhận có vấn đề"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Gửi email cho tôi khi có bình luận đang chờ kiểm duyệt"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Gửi email cho tôi khi có người đăng bình luận"
+
+msgid "Email provider"
+msgstr "Nhà cung cấp email"
+
+msgid "Email sent again."
+msgstr "Đã gửi lại email."
+
+msgid "Email sent to %s."
+msgstr "Đã gửi email đến %s."
+
+msgid "Email type"
+msgstr "Loại email"
+
+msgid "Email type is sent again"
+msgstr "Loại email đã được gửi trở lại"
+
+msgid "Email type stopped"
+msgstr "Loại email đã ngừng gửi"
+
+msgid "Email types"
+msgstr "Loại email"
+
+msgid "Email volume back to normal"
+msgstr "Lượng email đã trở lại bình thường"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Lượng email đã trở lại bình thường: phanh khẩn cấp không còn hoạt động."
+
+msgid "Email: failed"
+msgstr "Email: bị lỗi"
+
+msgid "Email: failed – see the log"
+msgstr "Email: bị lỗi – xem nhật ký"
+
+msgid "Email: sent"
+msgstr "Email: đã gửi"
+
+msgid "Emails"
+msgstr "Email"
+
+msgid "Emails are being logged again."
+msgstr "Email đã được ghi nhật ký trở lại."
+
+msgid "Emails are delivered to their recipients."
+msgstr "Email được chuyển phát đến người nhận."
+
+msgid "Emails are flowing again"
+msgstr "Email đã được gửi trở lại"
+
+msgid "Emails are logged but not delivered."
+msgstr "Email được ghi nhật ký nhưng không được chuyển phát."
+
+msgid "Emails are still being sent."
+msgstr "Email vẫn đang được gửi."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "Email vẫn đang được gửi. Hãy kiểm tra nguồn chính; chuyển phanh khẩn cấp sang “Cảnh báo và giữ lại các email tiếp theo” để chặn chúng."
+
+msgid "Emails in 30 days"
+msgstr "Email trong 30 ngày"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Email thuộc loại này chỉ gửi cho quản trị viên giờ sẽ được thu gom và gửi mỗi ngày một lần trong một email tổng hợp."
+
+msgid "Emails over time"
+msgstr "Email theo thời gian"
+
+msgid "Emails per day and status"
+msgstr "Email theo ngày và trạng thái"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "Email theo ngày trong tuần và giờ (múi giờ của trang web)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "Các email đã có trong nhật ký – do chính Mailspur ghi hoặc được nhập từ plugin khác – được nhận diện qua người nhận, tiêu đề và thời gian gửi, rồi bỏ qua như bản trùng lặp."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Các email được gửi định kỳ đã ngừng gửi (%s)"
+
+msgid "Emails to this user"
+msgstr "Email gửi đến người dùng này"
+
+msgid "Emails with notes"
+msgstr "Email có ghi chú"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "Email không có tiêu đề trông giống spam và khó tìm trong hộp thư đến."
+
+msgid "Emails – last 7 days"
+msgstr "Email – 7 ngày qua"
+
+msgid "Emergency brake"
+msgstr "Phanh khẩn cấp"
+
+msgid "Emergency brake reset."
+msgstr "Đã đặt lại phanh khẩn cấp."
+
+msgid "Emergency brake settings"
+msgstr "Cài đặt phanh khẩn cấp"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Phanh khẩn cấp: %1$s email trong giờ vừa qua – nhiều hơn bình thường rất nhiều (ngưỡng: %2$s mỗi giờ)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Phanh khẩn cấp: lượng email tăng đột biến bất thường"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Để trống = tự động: gấp ba lần giờ cao điểm nhất trong 14 ngày qua, tối thiểu 50 – hiện tại là %s."
+
+msgid "Empty log"
+msgstr "Làm trống nhật ký"
+
+msgid "Empty subject"
+msgstr "Tiêu đề trống"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Bật xác minh 2 bước cho tài khoản Google và tạo mật khẩu ứng dụng (Tài khoản Google → Bảo mật → Mật khẩu ứng dụng)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Bật ký DKIM tại nhà cung cấp email hoặc nhà cung cấp hosting của bạn và công bố khóa được cấp. Nếu bạn đã ký, hãy nhập selector của bạn (giá trị s= trong header DKIM-Signature) và kiểm tra lại."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Bật ký DKIM tại dịch vụ email và công bố bản ghi DNS tương ứng."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Bật xác thực trong plugin SMTP và nhập tên người dùng cùng mật khẩu."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Bật xác thực trong plugin SMTP."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Kết nối SMTP được mã hóa (TLS/SSL) cần tiện ích mở rộng PHP openssl, nhưng nó chưa được cài hoặc chưa được bật trên máy chủ này."
+
+msgid "Encryption"
+msgstr "Mã hóa"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Mã hóa (TLS/SSL) thất bại"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Hãy nhập địa chỉ email hoặc URL webhook và lưu cài đặt trước."
+
+msgid "Enter an email address or an order number."
+msgstr "Nhập địa chỉ email hoặc mã đơn hàng."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Hãy nhập địa chỉ email trong “Gửi cảnh báo qua email đến” và lưu cài đặt trước."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Nhập từ 1 đến 10 địa chỉ email."
+
+msgid "Enter one or more email addresses."
+msgstr "Nhập một hoặc nhiều địa chỉ email."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Nhập mật khẩu ứng dụng vào plugin SMTP, hoặc dùng kết nối “Đăng nhập bằng Google” (OAuth) của plugin."
+
+msgid "Entries"
+msgstr "Mục"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Các mục cũ hơn %s ngày sẽ bị bỏ qua vì cài đặt thời gian lưu giữ cũng sẽ xóa chúng. Hãy thay đổi thời gian lưu giữ ở trên trước để nhập tất cả."
+
+msgid "Error"
+msgstr "Lỗi"
+
+msgid "Errors"
+msgstr "Lỗi"
+
+msgid "Every %s days"
+msgstr "Mỗi %s ngày"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "Mỗi 15 phút (cảnh báo Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Mỗi sáng thứ Hai, chỉ khi có điều cần báo cáo: số email và tỷ lệ lỗi so với tuần trước, các loại email mới, ngừng gửi và đã thay đổi, email có ghi chú và các lần kích hoạt phanh khẩn cấp. Chỉ có số liệu và mẫu tiêu đề."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Mọi loại email mà trang web này gửi, được tạo từ nhật ký email của Mailspur – ví dụ cho hồ sơ hoạt động xử lý dữ liệu hoặc khi bàn giao. Nhóm người nhận được suy ra từ các email mới nhất của mỗi người gửi, danh mục dữ liệu từ email mới nhất của mỗi loại. Danh sách không chứa nội dung email hay địa chỉ."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Mọi loại email mà trang web của bạn gửi, được tự động tìm thấy trong nhật ký: nhóm theo plugin gửi và theo tiêu đề, với số, địa chỉ và tên được thay bằng biến giữ chỗ. Mailspur học xem mỗi loại được gửi thường xuyên đến mức nào và nhận ra khi một loại ngừng gửi – ví dụ sau khi cập nhật plugin."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Mọi thứ đều ổn: %s email trong 7 ngày qua, không có lỗi."
+
+msgid "Expected today and not sent yet:"
+msgstr "Dự kiến hôm nay nhưng chưa được gửi:"
+
+msgid "Export"
+msgstr "Xuất"
+
+msgid "Export started – your download begins shortly."
+msgstr "Đã bắt đầu xuất – việc tải xuống sẽ bắt đầu ngay."
+
+msgid "Failed"
+msgstr "Bị lỗi"
+
+msgid "Failed (%s %%)"
+msgstr "Bị lỗi (%s %%)"
+
+msgid "Failing"
+msgstr "Đang lỗi"
+
+msgid "Failure rate"
+msgstr "Tỷ lệ lỗi"
+
+msgid "Failure spike"
+msgstr "Lỗi tăng đột biến"
+
+msgid "Far more emails than usual were sent"
+msgstr "Số email được gửi nhiều hơn bình thường rất nhiều"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Số email được gửi nhiều hơn bình thường rất nhiều, nên Mailspur giữ lại các email tiếp theo cho đến khi bạn cho gửi hoặc hủy chúng."
+
+msgid "Fewer"
+msgstr "Ít hơn"
+
+msgid "File"
+msgstr "Tệp"
+
+msgid "Filter by status"
+msgstr "Lọc theo trạng thái"
+
+msgid "Filter email types"
+msgstr "Lọc loại email"
+
+msgid "First email after the change"
+msgstr "Email đầu tiên sau thay đổi"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Email đầu tiên từ người gửi này vào %s. Khi bật cảnh báo loại email, Mailspur sẽ cảnh báo khi một người gửi mới gửi đến nhiều địa chỉ bên ngoài."
+
+msgid "First page"
+msgstr "Trang đầu"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Với tệp đính kèm lớn, việc truyền tải cũng có thể bị hết thời gian chờ – hãy gửi tệp nhỏ hơn hoặc gửi liên kết."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Dành cho bản sao staging và phát triển của trang web: đảm bảo khách hàng không bao giờ nhận email từ bản sao. Mọi email vẫn được ghi nhật ký."
+
+msgid "Forced dark"
+msgstr "Ép chế độ tối"
+
+msgid "Format"
+msgstr "Định dạng"
+
+msgid "Free text from forms"
+msgstr "Văn bản tự do từ biểu mẫu"
+
+msgid "Friday"
+msgstr "Thứ Sáu"
+
+msgid "From"
+msgstr "Từ"
+
+msgid "From date"
+msgstr "Từ ngày"
+
+msgid "Front end"
+msgstr "Giao diện người dùng"
+
+msgid "Function"
+msgstr "Hàm"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Các email tiếp theo bị giữ lại cho đến khi quản trị viên cho gửi hoặc hủy chúng."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail và Google Workspace không còn chấp nhận mật khẩu tài khoản thông thường cho SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail cắt bớt email HTML lớn hơn 102 KB và hiển thị “[Thư đã bị cắt bớt]”. Mọi thứ sau chỗ cắt – thường là chân trang, liên kết hủy đăng ký hoặc thông tin pháp lý – sẽ bị ẩn."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail sẽ cắt bớt email này (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google đã từ chối đăng nhập"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML được gửi dưới dạng văn bản thuần"
+
+msgid "Handler"
+msgstr "Trình xử lý"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Hard bounce do nhà cung cấp email báo"
+
+msgid "Hard failures"
+msgstr "Lỗi cứng"
+
+msgid "Headers"
+msgstr "Header"
+
+msgid "Held"
+msgstr "Bị giữ lại"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Bị phanh khẩn cấp giữ lại – đã hủy."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Bị phanh khẩn cấp giữ lại – không được chuyển phát."
+
+msgid "Held by emergency brake – released later."
+msgstr "Bị phanh khẩn cấp giữ lại – sau đó đã được cho gửi."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Bị chế độ staging giữ lại – không được chuyển phát."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Đã gửi email bị giữ lại. Email được ghi nhật ký thành một mục mới."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Email bị giữ lại có trạng thái “Bị giữ lại” và vẫn có thể được gửi từng email một từ nhật ký (“Gửi ngay”)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Bị giữ lại: mọi người nhận đều đã từng bị lỗi cứng (người nhận có vấn đề)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Bị giữ lại: chế độ staging được đặt để chuyển hướng, nhưng chưa cấu hình địa chỉ chuyển hướng hợp lệ."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Gợi ý về các vấn đề có thể khiến email này không đến nơi hoặc hiển thị sai."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Giữ lại các email tiếp theo gửi đến người nhận có vấn đề"
+
+msgid "Hooks"
+msgstr "Hook"
+
+msgid "Hours"
+msgstr "Giờ"
+
+msgid "How to fix:"
+msgstr "Cách khắc phục:"
+
+msgid "I already did"
+msgstr "Tôi đã làm rồi"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Tôi hiểu rằng mã nguồn thô KHÔNG được che và làm dung lượng lưu trữ mỗi email tăng khoảng gấp đôi"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Nếu việc này xảy ra thường xuyên, hãy kiểm tra giới hạn gửi của nhà cung cấp email."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Nếu việc này tiếp tục xảy ra, hãy gửi ít email hơn mỗi lần hoặc gửi qua dịch vụ email có hàng đợi."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Nếu cài đặt bảo mật mặc định chặn việc này, hãy dùng kết nối Microsoft (OAuth / Graph API) của plugin SMTP."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Nếu nhiều người nhận bị lỗi, phản hồi của máy chủ sau địa chỉ sẽ cho biết lý do."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Nếu tài khoản dùng xác thực hai yếu tố, hãy tạo mật khẩu ứng dụng và dùng nó thay thế."
+
+msgid "Ignore"
+msgstr "Bỏ qua"
+
+msgid "Ignored"
+msgstr "Đã bỏ qua"
+
+msgid "Ignored notes"
+msgstr "Ghi chú bị bỏ qua"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Ghi chú bị bỏ qua sẽ không còn được ghi nhận cho email mới và bị ẩn ở các mục hiện có."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Hình ảnh không có văn bản thay thế (%1$s)"
+
+msgid "Import"
+msgstr "Nhập"
+
+msgid "Import failed: %s"
+msgstr "Nhập thất bại: %s"
+
+msgid "Import from other plugins"
+msgstr "Nhập từ plugin khác"
+
+msgid "Import new entries"
+msgstr "Nhập mục mới"
+
+msgid "Imported"
+msgstr "Đã nhập"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Các mục đã nhập không có dấu vết: plugin kia không ghi lại những chi tiết này."
+
+msgid "Imported from %s"
+msgstr "Đã nhập từ %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "Trong Amazon SNS, đăng ký URL (giao thức HTTPS) vào topic nhận các thông báo Delivery, Bounce và Complaint của Amazon SES. Mailspur sẽ tự động xác nhận đăng ký."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "Trong Brevo, mở Transactional → Settings → Webhook, thêm URL và chọn Delivered, Hard bounce, Soft bounce, Invalid email và Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "Trong Mailgun, mở Sending → Webhooks, thêm URL cho Delivered, Permanent failure, Temporary failure và Spam complaints, rồi dán HTTP webhook signing key vào bên dưới."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "Trong Postmark, mở máy chủ của bạn → Webhooks → Add webhook, dán URL và chọn Delivery, Bounce và Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "Trong trung tâm quản trị Microsoft 365, mở người dùng → Thư → Quản lý ứng dụng email và bật “SMTP đã xác thực”."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Hộp thư đến chỉ hiển thị khoảng 40–80 ký tự đầu; phần còn lại bị cắt, trên điện thoại còn sớm hơn."
+
+msgid "Include content"
+msgstr "Kèm nội dung"
+
+msgid "Information"
+msgstr "Thông tin"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Cài một plugin SMTP và gửi qua một hộp thư thật hoặc dịch vụ email của tên miền bạn."
+
+msgid "Invalid date."
+msgstr "Ngày không hợp lệ."
+
+msgid "Invalid email address"
+msgstr "Địa chỉ email không hợp lệ"
+
+msgid "Invalid email address: %s"
+msgstr "Địa chỉ email không hợp lệ: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Địa chỉ người gửi không hợp lệ: %1$s"
+
+msgid "Irregular"
+msgstr "Không đều đặn"
+
+msgid "Is Mailspur helping you?"
+msgstr "Mailspur có giúp ích cho bạn không?"
+
+msgid "Is an email missing?"
+msgstr "Có email nào bị thiếu không?"
+
+msgid "Is everything running?"
+msgstr "Mọi thứ có hoạt động bình thường không?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Giữ tối đa"
+
+msgid "Keep for"
+msgstr "Lưu giữ trong"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Hãy giữ bí mật URL này: nó chứa khóa bí mật của trang web này. Lưu cài đặt trước khi bạn thử webhook."
+
+msgid "Kept: %s"
+msgstr "Lưu giữ: %s"
+
+msgid "Key figures"
+msgstr "Số liệu chính"
+
+msgid "Last 30 days"
+msgstr "30 ngày qua"
+
+msgid "Last email before the change"
+msgstr "Email cuối cùng trước thay đổi"
+
+msgid "Last failure"
+msgstr "Lỗi gần nhất"
+
+msgid "Last page"
+msgstr "Trang cuối"
+
+msgid "Last sent"
+msgstr "Gửi lần cuối"
+
+msgid "Leave a review"
+msgstr "Viết đánh giá"
+
+msgid "Light"
+msgstr "Sáng"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Văn bản liên kết hiển thị %1$s nhưng dẫn đến %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Liên kết đến địa chỉ phát triển: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Liên kết đến trang không tồn tại trên trang web của bạn: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Hãy liên kết trực tiếp đến địa chỉ đầy đủ. Để theo dõi lượt nhấp, hãy dùng tham số UTM trên tên miền của chính bạn."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Liên kết qua dịch vụ rút gọn URL: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Liên kết và hình ảnh bắt đầu bằng “/” chỉ hoạt động trên trang web. Trong trình đọc email không có địa chỉ trang web để bổ sung, nên hình ảnh bị trống và liên kết không dẫn đến đâu."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Liên kết đến một bản sao khác của trang web: %1$s (trang web này: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Liên kết có địa chỉ hiển thị khác với đích thật trông giống lừa đảo (phishing). Bộ lọc spam sẽ đánh giá thấp chúng và một số trình đọc email cảnh báo người đọc."
+
+msgid "Load remote content"
+msgstr "Tải nội dung bên ngoài"
+
+msgid "Loading…"
+msgstr "Đang tải…"
+
+msgid "Log"
+msgstr "Nhật ký"
+
+msgid "Log entries %s"
+msgstr "Mục nhật ký %s"
+
+msgid "Log entry not found."
+msgstr "Không tìm thấy mục nhật ký."
+
+msgid "Log only – do not send any email"
+msgstr "Chỉ ghi nhật ký – không gửi email nào"
+
+msgid "Log size"
+msgstr "Dung lượng nhật ký"
+
+msgid "Logged emails"
+msgstr "Email đã ghi nhật ký"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Email được ghi nhật ký có thể chứa dữ liệu cá nhân. Hãy cấp quyền truy cập càng hạn chế càng tốt. Phần cài đặt luôn yêu cầu quyền quản trị viên."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Thông tin đăng nhập và người nhận đã được chấp nhận, nhưng bản thân email bị từ chối – thường do bộ lọc spam, giới hạn gửi hoặc chính sách của nhà cung cấp (mã phản hồi 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Ghi nhật ký email gửi đi, lập bản đồ các loại email mà trang web của bạn gửi và cảnh báo khi một loại ngừng gửi. Xem trước an toàn, chẩn đoán chuyển phát, thống kê."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Tìm tùy chọn để tắt hoặc thay đổi người nhận trong cài đặt email của %s – hoặc bỏ qua loại email này tại đây."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Tìm phản hồi của máy chủ trong thông báo lỗi; nó thường cho biết lý do."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Tìm trong nhật ký các đợt gửi hàng loạt bất thường (biểu mẫu bị spam, vòng lặp)."
+
+msgid "Looking it up …"
+msgstr "Đang tra cứu …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Nhật ký email"
+
+msgid "Mail Log sections"
+msgstr "Các mục của Nhật ký email"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Đã thiết lập máy chủ thư cho thư trả lời và thư bị trả về."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Các nhà cung cấp hộp thư có thể xác minh rằng trang web của bạn được phép gửi email thay cho tên miền này. Kiểm tra người gửi đầy đủ còn xem cả DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Hộp thư không xác định hoặc không khả dụng"
+
+msgid "Mailer"
+msgstr "Trình gửi thư"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun ký mọi webhook bằng khóa này (Sending → Webhooks → HTTP webhook signing key); các báo cáo không có chữ ký hợp lệ sẽ bị từ chối."
+
+msgid "Mailspur alerts"
+msgstr "Cảnh báo Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur kiểm tra nhật ký để tìm các email không thể gửi được."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur không tìm thấy đơn hàng #%s trong cửa hàng của bạn."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Đến nay Mailspur đã ghi nhật ký %s email được chuyển phát trên trang web này. Nếu plugin giúp bạn tiết kiệm thời gian, một đánh giá ngắn trên WordPress.org sẽ rất có ý nghĩa – nó giúp người khác tìm thấy plugin và giữ cho plugin miễn phí."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur không có email nào cho đơn hàng #%s trong nhật ký."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur không có email nào gửi đến %s trong nhật ký."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur được phát triển bởi %1$s. Bạn thấy hài lòng? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur học xem mỗi loại email được gửi thường xuyên đến mức nào, ví dụ xác nhận đơn hàng, và báo ở đây khi một loại ngừng gửi."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur học nhịp gửi của mỗi loại email từ 8 tuần qua – xác nhận đơn hàng hằng ngày bị coi là trễ sau 2 ngày, báo cáo hằng tuần sau 2 tuần. Cảnh báo nêu tên loại email, người gửi và các plugin đã được cập nhật kể từ email gần nhất của loại đó. Dùng các kênh ở trên; loại email bị bỏ qua không bao giờ cảnh báo."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur chỉ thấy trang web của bạn đã gửi email, không thấy được hộp thư đến. Nếu email không có ở đó, hãy nhờ người nhận kiểm tra thư mục spam."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur sẽ chặn các email này từ bây giờ; loại email của chúng bị bỏ qua."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – Nhật ký email"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: email bị giữ lại"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: chế độ staging"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Nguồn chính: %1$s (%2$s email)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Đảm bảo địa chỉ From trong plugin gửi thư khớp với tên miền đã xác minh."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Đảm bảo email được gửi với “charset=UTF-8”, các tệp mẫu được lưu dạng UTF-8 và các bảng cơ sở dữ liệu dùng utf8mb4. Sửa các văn bản đã bị lưu sai."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Đảm bảo cài đặt mã hóa khớp với cổng."
+
+msgid "Many emails could not be sent recently"
+msgstr "Gần đây nhiều email không thể gửi được"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Nhiều dấu chấm than trong tiêu đề (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Nhiều trình đọc email chặn hình ảnh cho đến khi người đọc cho phép. Không có văn bản thay thế, người đọc chỉ thấy các ô trống; trình đọc màn hình không đọc được gì hữu ích."
+
+msgid "Mark as resolved"
+msgstr "Đánh dấu đã xử lý"
+
+msgid "Marked as spam"
+msgstr "Bị đánh dấu là spam"
+
+msgid "Marked as spam by the recipient"
+msgstr "Bị người nhận đánh dấu là spam"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Che khóa đặt lại mật khẩu, khóa kích hoạt và khóa truy cập trong các liên kết được ghi nhật ký, cũng như mật khẩu, khóa API và số thẻ được gửi dưới dạng văn bản thuần"
+
+msgid "Maybe later"
+msgstr "Để sau"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Có thể email chưa bao giờ được gửi – hãy kiểm tra trạng thái đơn hàng và cài đặt email của cửa hàng."
+
+msgid "Menu position"
+msgstr "Vị trí menu"
+
+msgid "Message"
+msgstr "Tin nhắn"
+
+msgid "Method"
+msgstr "Phương thức"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online chặn đăng nhập SMTP (xác thực cơ bản) cho hộp thư này hoặc cho toàn bộ tổ chức."
+
+msgid "Minutes"
+msgstr "Phút"
+
+msgid "Monday"
+msgstr "Thứ Hai"
+
+msgid "Monitor again"
+msgstr "Giám sát lại"
+
+msgid "Monitoring alerts"
+msgstr "Giám sát & cảnh báo"
+
+msgid "More"
+msgstr "Nhiều hơn"
+
+msgid "More actions"
+msgstr "Thêm hành động"
+
+msgid "More filters"
+msgstr "Thêm bộ lọc"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Lý do phổ biến nhất (%1$s trường hợp): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Hầu hết máy chủ chấp nhận tổng cộng 10–25 MB."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Tìm thấy nhiều bản ghi DMARC. Trong trường hợp này bên nhận sẽ bỏ qua DMARC – chỉ giữ lại một bản ghi."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Tìm thấy nhiều bản ghi SPF. Bên nhận coi đây là lỗi (PermError) – hãy gộp chúng thành một bản ghi."
+
+msgid "Needs attention"
+msgstr "Cần chú ý"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Không ghi nhận được header From hay người gửi. Trình gửi thư sẽ dùng giá trị mặc định, thường là wordpress@tenmiencuaban."
+
+msgid "Never"
+msgstr "Không bao giờ"
+
+msgid "New"
+msgstr "Mới"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Đã tạo URL mới. Hãy cập nhật URL này tại nhà cung cấp email."
+
+msgid "New email types"
+msgstr "Loại email mới"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Email mới bị giữ lại cho đến khi bạn cho gửi hoặc hủy chúng. Email đặt lại mật khẩu vẫn được gửi."
+
+msgid "New sender"
+msgstr "Người gửi mới"
+
+msgid "New sender writes to many addresses"
+msgstr "Người gửi mới gửi đến nhiều địa chỉ"
+
+msgid "Next email"
+msgstr "Email tiếp theo"
+
+msgid "Next email (j)"
+msgstr "Email tiếp theo (j)"
+
+msgid "Next page"
+msgstr "Trang sau"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Không tìm thấy khóa DKIM nào dưới các selector phổ biến."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Không có bản ghi DMARC cho tên miền người gửi %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Không tìm thấy bản ghi DMARC. Các nhà cung cấp hộp thư lớn yêu cầu có bản ghi này, và nếu thiếu, bất kỳ ai cũng có thể giả mạo tên miền này mà không bị phát hiện."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Không có bản ghi MX: tên miền này không thể nhận thư trả lời hoặc thư bị trả về, và một số bên nhận từ chối những người gửi như vậy."
+
+msgid "No SMTP transcript for this email."
+msgstr "Không có bản ghi SMTP cho email này."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Không có bản ghi SPF và DMARC cho tên miền người gửi %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Không có bản ghi SPF cho tên miền người gửi %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Không tìm thấy bản ghi SPF. Bên nhận không thể biết máy chủ nào được phép gửi thay cho tên miền này."
+
+msgid "No alerts sent yet."
+msgstr "Chưa có cảnh báo nào được gửi."
+
+msgid "No connection to the SMTP server"
+msgstr "Không kết nối được đến máy chủ SMTP"
+
+msgid "No email logged for %s hours"
+msgstr "Không có email nào được ghi nhật ký trong %s giờ"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "Không có email nào được ghi nhật ký trong %1$s giờ qua, mặc dù trang web này đã gửi email trong khung giờ này vào %2$s trên %3$s ngày gần nhất (trung bình %4$s)."
+
+msgid "No emails"
+msgstr "Không có email"
+
+msgid "No emails found."
+msgstr "Chưa có email nào được ghi nhật ký."
+
+msgid "No emails in this period."
+msgstr "Không có email nào trong khoảng thời gian này."
+
+msgid "No emails logged for this order yet."
+msgstr "Chưa có email nào được ghi nhật ký cho đơn hàng này."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Chưa có email nào được ghi nhật ký. Loại email sẽ xuất hiện ở đây ngay khi trang web của bạn gửi email."
+
+msgid "No emails match these filters."
+msgstr "Không có email nào khớp với bộ lọc này."
+
+msgid "No emails sent"
+msgstr "Không có email nào được gửi"
+
+msgid "No emails to this user in the log."
+msgstr "Không có email nào gửi đến người dùng này trong nhật ký."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "Không có email nào được ghi nhật ký trong hai tuần qua."
+
+msgid "No limit"
+msgstr "Không giới hạn"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Không tìm thấy nhật ký của plugin ghi nhật ký email nào khác trên trang web này."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Không tìm thấy nhật ký của plugin này trên trang web này."
+
+msgid "No problem recipients."
+msgstr "Không có người nhận có vấn đề."
+
+msgid "No problems found in this email."
+msgstr "Không tìm thấy vấn đề nào trong email này."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Không tìm thấy tên miền người gửi công khai (địa chỉ trang web không phải là tên miền và nhật ký chưa có người gửi nào)."
+
+msgid "No public sender domain to check"
+msgstr "Không có tên miền người gửi công khai để kiểm tra"
+
+msgid "No regularly sent email has stopped"
+msgstr "Không có email định kỳ nào ngừng gửi"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Không có địa chỉ báo cáo (rua) – bạn sẽ không biết ai đang gửi thư dưới tên bạn."
+
+msgid "No sender address recorded"
+msgstr "Không ghi nhận được địa chỉ người gửi"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Không có dấu vết cho mục này. Mục được ghi nhật ký trước khi có tính năng dấu vết hoặc bởi một phiên bản không có tính năng này."
+
+msgid "No unusual email failures"
+msgstr "Không có lỗi email bất thường"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Không, có chủ ý. “%1$s” gửi đến %2$s đã bị giữ lại %3$s và không được gửi. Lý do: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Không. Mọi email được gửi định kỳ đều đã gửi đúng lịch."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Không. “%1$s” gửi đến %2$s bị lỗi %3$s. Lý do: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Không. “%1$s” gửi đến %2$s đã rời trang web của bạn %3$s, nhưng %4$s báo rằng máy chủ nhận đã từ chối."
+
+msgid "None"
+msgstr "Không có"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Thường được gửi ít nhất %1$s ngày một lần, hiện đã trễ %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Không thể kiểm tra kịp tất cả selector."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Không ghi lại: một plugin khác đang bật gỡ lỗi SMTP."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Không ghi lại: bản ghi SMTP đang tắt trong cài đặt."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Không ghi lại: email này không được gửi qua SMTP."
+
+msgid "Not set up"
+msgstr "Chưa thiết lập"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Không lưu: bản ghi chỉ được giữ cho email bị lỗi."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Chưa. “%1$s” gửi đến %2$s đã rời trang web của bạn %3$s, nhưng %4$s báo có sự cố tạm thời."
+
+msgid "Notes"
+msgstr "Ghi chú"
+
+msgid "Notes in the latest email: %s"
+msgstr "Ghi chú trong email mới nhất: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Ghi chú: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Ghi chú: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Hôm nay không có email nào khác được dự kiến."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Không có lỗi nào trong 7 ngày qua."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Chưa có gì để so sánh: chưa có email nào được gửi đủ đều đặn để Mailspur nhận ra khoảng trống."
+
+msgid "Number of failed emails"
+msgstr "Số email bị lỗi"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Các con số được bỏ qua, nên “Đơn hàng #123” và “Đơn hàng #124” được tính chung."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Trong %1$s email gần nhất được gửi khi có người đang chờ trang tải, một nửa mất hơn %2$s giây (trung bình %3$s giây)."
+
+msgid "Off"
+msgstr "Tắt"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Tắt theo mặc định. Khi tắt, “Tải xuống .eml” dựng lại thư từ dữ liệu đã ghi nhật ký (đã che). Mã nguồn thô chứa liên kết đặt lại mật khẩu và các thông tin bí mật khác đúng như khi gửi – chỉ bật khi bạn cần và đã đánh dấu cả hai ô."
+
+msgid "Off – deliver emails normally"
+msgstr "Tắt – chuyển phát email bình thường"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Sau khi khắc phục nguyên nhân, bạn có thể gửi lại email từ nhật ký."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Khi báo cáo cho thấy email hợp lệ đều đạt, hãy chuyển sang p=quarantine (hoặc p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Một trong hai email đã bị xóa hoặc ẩn danh hóa theo cài đặt lưu giữ, nên không thể so sánh được nữa."
+
+msgid "Only administrators can empty the log."
+msgstr "Chỉ quản trị viên mới có thể làm trống nhật ký."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Chỉ quản trị viên mới có thể gửi email đến địa chỉ khác."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Chỉ cảnh báo khi 14 ngày qua cho thấy email thường được gửi trong khung giờ này (ít nhất 10 trên 14 ngày, bao gồm cùng ngày trong tuần), nên những đêm hay cuối tuần yên ắng sẽ không kích hoạt cảnh báo."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Chỉ những email mà tất cả người nhận đều là người nhận có vấn đề. Email đặt lại mật khẩu luôn được gửi; email bị giữ lại vẫn có thể được gửi từ nhật ký (“Gửi ngay”)."
+
+msgid "Only held emails can be released."
+msgstr "Chỉ có thể cho gửi những email bị giữ lại."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Danh sách gửi mở: %1$s người nhận bên ngoài thấy địa chỉ của nhau"
+
+msgid "Open in log"
+msgstr "Mở trong nhật ký"
+
+msgid "Open latest"
+msgstr "Mở email mới nhất"
+
+msgid "Open staging mode"
+msgstr "Mở chế độ staging"
+
+msgid "Open the email types"
+msgstr "Mở loại email"
+
+msgid "Open the emergency brake"
+msgstr "Mở phanh khẩn cấp"
+
+msgid "Open the log"
+msgstr "Mở nhật ký"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Mở nhật ký hoặc chế độ gỡ lỗi của plugin gửi thư để xem lỗi chính xác."
+
+msgid "Open the mail log"
+msgstr "Mở nhật ký email"
+
+msgid "Open the sender check"
+msgstr "Mở kiểm tra người gửi"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Tùy chọn và tắt theo mặc định. Khi bật, Mailspur kiểm tra nhật ký thường xuyên và thông báo cho bạn khi lỗi tăng đột biến, im lặng bất thường hoặc có loại email ngừng gửi. Cảnh báo chỉ được gửi đến các địa chỉ và webhook bạn nhập ở đây; chúng chứa tên trang web, nội dung cảnh báo (với loại email ngừng gửi: người gửi và mẫu tiêu đề) và liên kết đến nhật ký – không bao giờ chứa nội dung email hay người nhận."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Tùy chọn, chỉ https. URL webhook Slack và Discord nhận một tin nhắn trò chuyện, mọi URL khác nhận một yêu cầu JSON POST. Yêu cầu được máy chủ của bạn gửi thẳng đến đúng URL này – không có dịch vụ nào khác tham gia."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Hoặc thêm địa chỉ làm bí danh / quyền “gửi dưới tên” tại nhà cung cấp email."
+
+msgid "Order #%s"
+msgstr "Đơn hàng #%s"
+
+msgid "Order data"
+msgstr "Dữ liệu đơn hàng"
+
+msgid "Origin"
+msgstr "Nguồn gốc"
+
+msgid "Original Bcc"
+msgstr "Bcc gốc"
+
+msgid "Original Cc"
+msgstr "Cc gốc"
+
+msgid "Original recipients"
+msgstr "Người nhận gốc"
+
+msgid "Other emails"
+msgstr "Email khác"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Người nhận khác (ví dụ khách)"
+
+msgid "Overview"
+msgstr "Tổng quan"
+
+msgid "Own top-level menu item"
+msgstr "Mục menu cấp cao nhất riêng"
+
+msgid "PHP extension openssl is missing"
+msgstr "Thiếu tiện ích mở rộng PHP openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer sẵn sàng (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Phân trang"
+
+msgid "Password sent in plain text"
+msgstr "Mật khẩu được gửi dưới dạng văn bản thuần"
+
+msgid "Path"
+msgstr "Đường dẫn"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Số thẻ thanh toán ở dạng văn bản thuần: %1$s"
+
+msgid "Per page"
+msgstr "Mỗi trang"
+
+msgid "Period"
+msgstr "Khoảng thời gian"
+
+msgid "Personal data"
+msgstr "Dữ liệu cá nhân"
+
+msgid "Phone"
+msgstr "Điện thoại"
+
+msgid "Phone number"
+msgstr "Số điện thoại"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Độ rộng điện thoại (375 px). Nếu bạn có thể cuộn ngang, email rộng hơn hầu hết màn hình điện thoại."
+
+msgid "Plain text"
+msgstr "Văn bản thuần"
+
+msgid "Please enter valid email addresses."
+msgstr "Vui lòng nhập địa chỉ email hợp lệ."
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Plugin hoặc giao diện đã gửi email."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Chỉ ra các vấn đề khiến email không đến nơi hoặc hiển thị sai"
+
+msgid "Port"
+msgstr "Cổng"
+
+msgid "Postal address"
+msgstr "Địa chỉ bưu chính"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo hoặc Amazon SES có thể báo cho trang web này biết một email đã được chuyển phát, bị trả về hay bị đánh dấu là spam. Trạng thái được hiển thị trên email đã ghi nhật ký, và hard bounce được tính vào người nhận có vấn đề. Để khớp các báo cáo, Mailspur thêm một header tham chiếu vào email gửi đi."
+
+msgid "Preparation"
+msgstr "Chuẩn bị"
+
+msgid "Preview"
+msgstr "Xem trước"
+
+msgid "Previews"
+msgstr "Bản xem trước"
+
+msgid "Previous email"
+msgstr "Email trước"
+
+msgid "Previous email (k)"
+msgstr "Email trước (k)"
+
+msgid "Previous page"
+msgstr "Trang trước"
+
+msgid "Print"
+msgstr "In"
+
+msgid "Privacy"
+msgstr "Quyền riêng tư"
+
+msgid "Privacy & security"
+msgstr "Quyền riêng tư & bảo mật"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Có lẽ có: %s loại email đã ngừng gửi."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Email thử chỉ được gửi đến quản trị viên."
+
+msgid "Problem"
+msgstr "Vấn đề"
+
+msgid "Problem recipients"
+msgstr "Người nhận có vấn đề"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Bảo vệ tên miền của bạn khi số email gửi đi nhiều hơn bình thường rất nhiều, ví dụ do bot spam lạm dụng biểu mẫu liên hệ. Cảnh báo dùng các kênh của cảnh báo giám sát; email đặt lại mật khẩu không bao giờ bị giữ lại."
+
+msgid "Provider status"
+msgstr "Trạng thái từ nhà cung cấp"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Các nhà cung cấp như %2$s công bố chính sách DMARC nghiêm ngặt. Email “từ” tên miền của họ nhưng do máy chủ web của bạn gửi sẽ không vượt qua kiểm tra đó và bị từ chối hoặc bị đưa vào spam."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Đưa nội dung quan trọng vào văn bản thật và chỉ dùng hình ảnh để bổ sung."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Đặt thông tin quan trọng lên đầu và giữ tiêu đề dưới khoảng 80 ký tự."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "Route REST"
+
+msgid "Rarely"
+msgstr "Hiếm khi"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Đánh giá Mailspur trên WordPress.org"
+
+msgid "Raw source"
+msgstr "Mã nguồn thô"
+
+msgid "Reason"
+msgstr "Lý do"
+
+msgid "Rebuild from the log"
+msgstr "Dựng lại từ nhật ký"
+
+msgid "Recipient"
+msgstr "Người nhận"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Tên miền người nhận không thể nhận email: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Tên miền người nhận không chấp nhận email: %1$s"
+
+msgid "Recipients"
+msgstr "Người nhận"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Khuyến nghị. Nếu không, bất kỳ ai có quyền truy cập nhật ký đều có thể dùng liên kết đặt lại hoặc mật khẩu đã ghi để chiếm quyền một tài khoản. Khi gửi lại email như vậy, phiên bản đã che sẽ được gửi."
+
+msgid "Record for every email"
+msgstr "Ghi lại cho mọi email"
+
+msgid "Record for failed emails only"
+msgstr "Chỉ ghi lại cho email bị lỗi"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Ghi lại cuộc trao đổi với máy chủ SMTP (chỉ khi email được gửi qua SMTP). Thông tin đăng nhập và nội dung thư không bao giờ được ghi lại. Bỏ qua khi một plugin khác đang bật gỡ lỗi SMTP."
+
+msgid "Recovery"
+msgstr "Đã phục hồi"
+
+msgid "Redact secrets"
+msgstr "Che thông tin bí mật"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Chuyển hướng mọi email đến các địa chỉ bên dưới"
+
+msgid "Redirect to"
+msgstr "Chuyển hướng đến"
+
+msgid "Redirect to test addresses"
+msgstr "Chuyển hướng đến địa chỉ thử nghiệm"
+
+msgid "Redirected by staging mode."
+msgstr "Đã được chế độ staging chuyển hướng."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Giảm dung lượng HTML: xóa CSS không dùng, style nội tuyến lặp lại, chú thích và URL theo dõi dài. Hình ảnh không được tính, chỉ tính bản thân HTML."
+
+msgid "Registered users"
+msgstr "Người dùng đã đăng ký"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Bị từ chối do SPF, DKIM hoặc DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Liên kết hoặc hình ảnh tương đối (%1$s), ví dụ %2$s"
+
+msgid "Release held emails"
+msgstr "Cho gửi email bị giữ lại"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Đã cho gửi từ staging (mục bị giữ lại #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Đã cho gửi từ phanh khẩn cấp (mục bị giữ lại #%s)."
+
+msgid "Remote content"
+msgstr "Nội dung bên ngoài"
+
+msgid "Remote content is loaded."
+msgstr "Nội dung bên ngoài đã được tải."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Hình ảnh và phông chữ bên ngoài bị chặn để người gửi không thể theo dõi khi nào bạn mở mục này."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Xóa tất cả mục đã nhập từ %s? Dữ liệu trong plugin kia không bị ảnh hưởng."
+
+msgid "Remove imported entries"
+msgstr "Xóa các mục đã nhập"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Xóa trường số thẻ khỏi thông báo của biểu mẫu hoặc plugin đã gửi email này – dữ liệu thẻ chỉ thuộc về nhà cung cấp thanh toán. Chỉ hiển thị tối đa bốn chữ số cuối. Hãy nhờ người nhận xóa email."
+
+msgid "Removed:"
+msgstr "Đã xóa:"
+
+msgid "Repeat alerts after"
+msgstr "Lặp lại cảnh báo sau"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Thư trả lời không đến được bạn: gửi từ %1$s mà không có Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Do nhà cung cấp email của bạn báo trong 30 ngày qua; chỉ tính những email mà nhà cung cấp đã báo về."
+
+msgid "Request"
+msgstr "Yêu cầu"
+
+msgid "Request failed: %s"
+msgstr "Yêu cầu thất bại: %s"
+
+msgid "Resend"
+msgstr "Gửi lại"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Gửi lại email từ nhật ký sau vài phút."
+
+msgid "Resend the email from the log later."
+msgstr "Gửi lại email từ nhật ký sau."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Gửi lại email từ nhật ký khi việc chuyển phát hoạt động trở lại."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Gửi lại các email bị lỗi khi giới hạn được đặt lại."
+
+msgid "Resent from log"
+msgstr "Đã gửi lại từ nhật ký"
+
+msgid "Reset filters"
+msgstr "Đặt lại bộ lọc"
+
+msgid "Result"
+msgstr "Kết quả"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Kết quả từ bộ nhớ đệm – hãy dùng “Kiểm tra lại” sau khi thay đổi bản ghi DNS."
+
+msgid "Retention"
+msgstr "Thời gian lưu giữ"
+
+msgid "Retention in the log"
+msgstr "Thời gian lưu giữ trong nhật ký"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Đã lưu thời gian lưu giữ của loại email này. Thiết lập có hiệu lực từ lần dọn dẹp hằng ngày tiếp theo."
+
+msgid "Review held emails"
+msgstr "Xem lại email bị giữ lại"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Xem lại các ghi chú của email này (liên kết, người gửi, biến giữ chỗ)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Thu hồi khóa trong bảng điều khiển của dịch vụ và tạo khóa mới. Sau đó tìm hiểu vì sao nó lọt vào email (báo cáo gỡ lỗi hoặc báo lỗi, một biểu mẫu hiển thị lại cài đặt) và ngăn chặn điều đó."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Khóa đã thu hồi (p= trống): %s."
+
+msgid "Rhythm"
+msgstr "Nhịp gửi"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Chạy tìm kiếm & thay thế tên miền cũ trong cơ sở dữ liệu và kiểm tra các URL được gán cứng trong mẫu email và cài đặt plugin."
+
+msgid "Run the full sender check"
+msgstr "Chạy kiểm tra người gửi đầy đủ"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH đang bị tắt trong Microsoft 365"
+
+msgid "SMTP host"
+msgstr "Máy chủ SMTP"
+
+msgid "SMTP login failed"
+msgstr "Đăng nhập SMTP thất bại"
+
+msgid "SMTP transcript"
+msgstr "Bản ghi SMTP"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "Bản ghi SPF cho phép mọi máy chủ trên thế giới gửi thay cho tên miền này (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "Bản ghi SPF kết thúc bằng ?all (trung lập): nó không bảo vệ tên miền khỏi bị giả mạo."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "Đã tìm thấy bản ghi SPF (redirect= đến một chính sách khác)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "Đã tìm thấy bản ghi SPF. Các máy chủ khác bị đánh dấu là đáng ngờ (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "Đã tìm thấy bản ghi SPF. Các máy chủ khác bị từ chối (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "Bản ghi SPF không có phần “all”, nên email từ các máy chủ khác được coi là trung lập."
+
+msgid "Saturday"
+msgstr "Thứ Bảy"
+
+msgid "Save"
+msgstr "Lưu"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Đã lưu – để trống để giữ nguyên"
+
+msgid "Scheduled for later today:"
+msgstr "Đã lên lịch cho cuối ngày hôm nay:"
+
+msgid "Search recipient or subject"
+msgstr "Tìm người nhận hoặc tiêu đề"
+
+msgid "Search recipient or subject …"
+msgstr "Tìm người nhận hoặc tiêu đề …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Tìm địa chỉ cũ trong mẫu email, cài đặt plugin và cơ sở dữ liệu (ví dụ sau khi chuyển trang web) và thay bằng tên miền đang chạy thật."
+
+msgid "See why"
+msgstr "Xem lý do"
+
+msgid "Seen"
+msgstr "Đã xem"
+
+msgid "Select all"
+msgstr "Chọn tất cả"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Selector “%s” cũng không có khóa."
+
+msgid "Send"
+msgstr "Gửi"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Thay vào đó, hãy gửi liên kết để người dùng tự đặt mật khẩu – email người dùng mới của WordPress làm đúng như vậy. Tìm tùy chọn như “Gửi mật khẩu qua email” hoặc “Kèm mật khẩu” trong plugin đã gửi email này và tắt nó đi."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Gửi tin nhắn khi sự cố đã được khắc phục"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Gửi email thử từ phần cài đặt của plugin gửi thư."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Gửi báo cáo email hằng tuần đến các địa chỉ ở trên"
+
+msgid "Send again"
+msgstr "Gửi lại"
+
+msgid "Send alerts by email to"
+msgstr "Gửi cảnh báo qua email đến"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Gửi ngay tất cả %s email bị giữ lại đến người nhận gốc?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Gửi tệp lớn dưới dạng liên kết tải xuống thay vì tệp đính kèm."
+
+msgid "Send latest to me"
+msgstr "Gửi email mới nhất cho tôi"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Gửi bản tin bằng plugin hoặc dịch vụ bản tin có thêm header List-Unsubscribe và List-Unsubscribe-Post, và đừng gửi một email cho nhiều người qua Bcc."
+
+msgid "Send now"
+msgstr "Gửi ngay"
+
+msgid "Send report now"
+msgstr "Gửi báo cáo ngay"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Hãy gửi những email như vậy riêng cho từng người nhận hoặc đưa người nhận vào Bcc. Với bản tin, hãy dùng plugin bản tin gửi một email cho mỗi người nhận. Nếu địa chỉ của khách hàng đã bị lộ, hãy hỏi cán bộ bảo vệ dữ liệu xem sự cố có phải báo cáo không."
+
+msgid "Send test alert"
+msgstr "Gửi cảnh báo thử"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Gửi email với header “Content-Type: text/html; charset=UTF-8” hoặc đặt loại nội dung bằng bộ lọc wp_mail_content_type. Nhiều plugin biểu mẫu và cửa hàng có tùy chọn “Email HTML”."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Gửi email mới nhất thuộc loại này đến %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Gửi lại email này đến %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Gửi email này đến (tối đa 10 địa chỉ, phân cách bằng dấu phẩy):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Gửi ngay email bị giữ lại này đến %s? Chế độ staging sẽ được bỏ qua cho riêng email này."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Gửi qua một dịch vụ SMTP uy tín thay vì máy chủ web, đặc biệt trên shared hosting."
+
+msgid "Send to…"
+msgstr "Gửi đến…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Kiểm tra người gửi (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Tên miền người gửi %1$s khác với trang web (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Tên miền người gửi (SPF và DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Tên miền hoặc địa chỉ người gửi chưa được xác minh"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Người gửi của %s trong 200 email gần nhất"
+
+msgid "Sending failed – see the log."
+msgstr "Gửi thất bại – xem nhật ký."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Gửi thất bại – xem chi tiết trong mục nhật ký mới."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Gửi ở chế độ nền (một plugin gửi thư có hàng đợi) giúp trang tải xong mà không phải chờ."
+
+msgid "Sending limit or quota reached"
+msgstr "Đã đạt giới hạn gửi hoặc hạn mức"
+
+msgid "Sending report …"
+msgstr "Đang gửi báo cáo …"
+
+msgid "Sending test alert …"
+msgstr "Đang gửi cảnh báo thử …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Việc gửi đã hoạt động trở lại: không còn lỗi tăng đột biến."
+
+msgid "Sending…"
+msgstr "Đang gửi…"
+
+msgid "Sent"
+msgstr "Đã gửi"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Được gửi bằng địa chỉ email miễn phí: %1$s"
+
+msgid "Sent by"
+msgstr "Được gửi bởi"
+
+msgid "Sent by WP-Cron."
+msgstr "Được gửi bởi WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Được gửi bởi sự kiện cron %1$s – sự kiện đã trễ %2$s trong khi WP-Cron vẫn chạy các sự kiện khác; có thể nó đang bị lỗi."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Được gửi bởi sự kiện cron %1$s – sự kiện đã được lên lịch (lần chạy tiếp theo sau %2$s) và WP-Cron đang chạy, nên sự kiện không còn gửi email này nữa."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Được gửi bởi sự kiện cron %s – sự kiện này không còn được lên lịch."
+
+msgid "Sent by the cron event %s."
+msgstr "Được gửi bởi sự kiện cron %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Gửi lặp lại: thêm %1$s email giống hệt trong vòng %2$s phút"
+
+msgid "Sent to %s."
+msgstr "Đã gửi đến %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Được gửi đến cùng địa chỉ vào khoảng ngày đặt hàng, nhưng không được liên kết với đơn hàng này (ví dụ được ghi nhật ký trước khi có liên kết, hoặc được nhập)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Đặt địa chỉ Reply-To có người đọc, ví dụ trong WooCommerce → Cài đặt → Email hoặc trong cài đặt email của plugin biểu mẫu. Hoặc gửi từ một địa chỉ có thể nhận thư trả lời."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Đặt địa chỉ người gửi thuộc tên miền của bạn trong plugin SMTP hoặc qua bộ lọc wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Đặt địa chỉ người gửi thuộc tên miền thật của bạn, ví dụ trong plugin SMTP hoặc qua bộ lọc wp_mail_from, và kiểm tra địa chỉ trang web trong Cài đặt → Tổng quan."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Đặt tiêu đề trong mẫu hoặc cài đặt biểu mẫu của plugin gửi thư."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Đặt địa chỉ From trong plugin SMTP thành hộp thư bạn dùng để đăng nhập và bật “bắt buộc địa chỉ From”."
+
+msgid "Set up staging mode"
+msgstr "Thiết lập chế độ staging"
+
+msgid "Settings"
+msgstr "Cài đặt"
+
+msgid "Settings › Discussion"
+msgstr "Cài đặt › Thảo luận"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Nhiều dấu chấm than là đặc trưng của spam quảng cáo. Bộ lọc spam có thể đánh giá thấp email vì điều này, làm việc chuyển phát kém đi."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Một số email gần nhất thuộc loại này bị lỗi."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Tỷ lệ email bị lỗi mỗi ngày (mỗi tuần đối với khoảng thời gian dài)."
+
+msgid "Shop managers and above"
+msgstr "Quản lý cửa hàng trở lên"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Liên kết rút gọn che giấu nơi chúng dẫn đến. Kẻ gửi spam dùng chúng rất nhiều, nên bộ lọc spam có thể đánh giá thấp email, làm việc chuyển phát kém đi."
+
+msgid "Show all email types"
+msgstr "Hiển thị tất cả loại email"
+
+msgid "Show all in Mail Log"
+msgstr "Hiển thị tất cả trong Nhật ký email"
+
+msgid "Show as"
+msgstr "Hiển thị dạng"
+
+msgid "Show data as table"
+msgstr "Hiển thị dữ liệu dạng bảng"
+
+msgid "Show email types"
+msgstr "Hiển thị loại email"
+
+msgid "Show emails"
+msgstr "Hiển thị email"
+
+msgid "Show emails for %s in the log"
+msgstr "Hiển thị email cho %s trong nhật ký"
+
+msgid "Show failed emails"
+msgstr "Hiển thị email bị lỗi"
+
+msgid "Show held emails"
+msgstr "Hiển thị email bị giữ lại"
+
+msgid "Show these emails in the log"
+msgstr "Hiển thị các email này trong nhật ký"
+
+msgid "Silence"
+msgstr "Im lặng"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Chế độ tối mô phỏng, dùng các kiểu chế độ tối của chính email. Mỗi ứng dụng email xử lý chế độ tối hơi khác nhau."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Mô phỏng các ứng dụng ép chế độ tối bằng cách đảo ngược màu. Hình ảnh giữ nguyên màu; ứng dụng thực tế khác nhau ở chi tiết."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Từ năm 2024, Gmail và Yahoo yêu cầu hủy đăng ký bằng một cú nhấp (header List-Unsubscribe) cho email hàng loạt. Nếu thiếu, bản tin dễ bị từ chối hoặc bị lọc hơn."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Lỗi đơn lẻ, ví dụ do gõ sai địa chỉ, là bình thường."
+
+msgid "Some emails could not be sent recently"
+msgstr "Gần đây một số email không thể gửi được"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Một số truy vấn đã bị bỏ qua vì DNS phản hồi quá chậm."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Xin lỗi, bạn không được phép truy cập trang này."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Xin lỗi, bạn không được phép thực hiện thao tác này."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Xin lỗi, bạn không được phép xuất nhật ký email."
+
+msgid "Source"
+msgstr "Nguồn"
+
+msgid "Staging"
+msgstr "Staging"
+
+msgid "Staging mode"
+msgstr "Chế độ staging"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Chế độ staging đang hoạt động: mọi email được chuyển hướng đến %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Chế độ staging đang hoạt động: email được ghi nhật ký nhưng không được chuyển phát."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Chế độ staging đang hoạt động: email cần được chuyển hướng, nhưng chưa đặt địa chỉ chuyển hướng hợp lệ – mọi email bị giữ lại và không được chuyển phát."
+
+msgid "Staging mode is off"
+msgstr "Chế độ staging đang tắt"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Chế độ staging đang bật mặc dù đây là trang web đang chạy thật"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Chế độ staging đang bật cho trang web staging này"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Chế độ staging đang bật: mọi email được gửi đến địa chỉ thử nghiệm của bạn, không phải đến người nhận thật."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Chế độ staging đang bật: email được ghi nhật ký nhưng không được gửi."
+
+msgid "Staging mode settings"
+msgstr "Cài đặt chế độ staging"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Bắt đầu với p=none để nhận báo cáo, sau đó siết chặt thành quarantine hoặc reject khi SPF và DKIM đều đạt."
+
+msgid "Statistics"
+msgstr "Thống kê"
+
+msgid "Status"
+msgstr "Trạng thái"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "Vẫn đang phân loại %s email cũ hơn ở chế độ nền. Hãy tải lại trang sau một phút."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Ngừng gộp (gửi ngay các email đang chờ)"
+
+msgid "Stop these emails"
+msgstr "Chặn các email này"
+
+msgid "Stopped"
+msgstr "Đã ngừng gửi"
+
+msgid "Stopped by Mailspur."
+msgstr "Bị Mailspur chặn."
+
+msgid "Stopped email types"
+msgstr "Loại email đã ngừng gửi"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Lưu chính xác mã nguồn MIME thô của mọi email"
+
+msgid "Subject"
+msgstr "Tiêu đề"
+
+msgid "Subject mostly in capital letters"
+msgstr "Tiêu đề chủ yếu viết hoa"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Tiêu đề viết hoa đọc như đang la hét và rất phổ biến trong spam. Bộ lọc spam có thể đánh giá thấp email vì điều này, làm việc chuyển phát kém đi."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Tiêu đề thường chứa tên hoặc mã đơn hàng."
+
+msgid "Suggested TXT record for %s"
+msgstr "Bản ghi TXT đề xuất cho %s"
+
+msgid "Sunday"
+msgstr "Chủ Nhật"
+
+msgid "Supported: %s."
+msgstr "Được hỗ trợ: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Tắt trong %1$s: “%2$s”."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Đã được tách khỏi email tổng hợp hằng ngày và gửi riêng."
+
+msgid "Temporary rejection – try again later"
+msgstr "Bị từ chối tạm thời – hãy thử lại sau"
+
+msgid "Test"
+msgstr "Thử"
+
+msgid "Test alert"
+msgstr "Cảnh báo thử"
+
+msgid "Text changes"
+msgstr "Thay đổi văn bản"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Phiên bản văn bản được tạo từ HTML. Không ghi nhận được liệu email có phiên bản văn bản thuần riêng hay không."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Điều này ổn nếu máy chủ thư của bạn được phép gửi thay cho tên miền đó. Nếu không, SPF và DMARC sẽ thất bại và email bị đưa vào spam."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Điều này đúng với bản sao thử nghiệm, nhưng trên trang web đang chạy thật, khách hàng sẽ không nhận được xác nhận đơn hàng, email đặt lại mật khẩu hay phản hồi cho biểu mẫu của họ. Hãy tắt chế độ staging nếu đây là trang web đang chạy thật."
+
+msgid "The API key was rejected"
+msgstr "Khóa API đã bị từ chối"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "Truy vấn DNS thất bại hoặc hết thời gian chờ. Hãy chạy lại kiểm tra người gửi sau."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "Email HTML có hình ảnh nhưng hầu như không có văn bản. Bộ lọc spam không đọc được hình ảnh và không tin những email như vậy, làm việc chuyển phát kém đi. Nếu trình đọc email chặn hình ảnh, người đọc sẽ thấy một email gần như trống."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "Tài khoản SMTP chỉ được gửi bằng địa chỉ của chính nó (hoặc các bí danh đã xác minh). WordPress hoặc một plugin đã dùng địa chỉ From khác."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Cuộc trao đổi với máy chủ SMTP trống."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "Hoàn toàn không kết nối được máy chủ SMTP: sai tên máy chủ hoặc cổng, máy chủ ngừng hoạt động, hoặc nhà cung cấp hosting chặn các cổng thư gửi đi."
+
+msgid "The SMTP server refuses to relay"
+msgstr "Máy chủ SMTP từ chối chuyển tiếp"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "Máy chủ SMTP đã từ chối tên người dùng hoặc mật khẩu (mã phản hồi 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "Máy chủ SMTP yêu cầu đăng nhập hoặc mã hóa"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Địa chỉ có vẻ không hợp lệ – hãy kiểm tra lỗi chính tả hoặc yêu cầu một địa chỉ khác."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Nội dung có thẻ HTML, nhưng email được gửi dưới dạng text/plain (mặc định của WordPress). Người nhận thấy các thẻ thô thay vì văn bản đã định dạng."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Kết nối hoặc truyền tải mất quá nhiều thời gian. Thường là do tường lửa âm thầm ngắt kết nối, hoặc sai máy chủ và cổng."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Địa chỉ người gửi mặc định không có tên miền công khai, hoặc máy chủ này không thể truy vấn bản ghi DNS."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Tên miền không có bản ghi MX hay bản ghi A trong DNS. Email gửi đến sẽ bị trả về. Thường là địa chỉ bị viết sai hoặc tên miền không còn tồn tại."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Tên miền công bố bản ghi “null MX”, nói rõ rằng nó không nhận email. Mọi email gửi đến đều bị trả về."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "API email phản hồi chậm: hãy kiểm tra khu vực hoặc endpoint được cấu hình trong plugin gửi thư."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "Email được gửi từ địa chỉ no-reply và không có header Reply-To. Khi khách hàng nhấp “Trả lời”, thư trả lời sẽ đến một địa chỉ không ai đọc, hoặc bị trả về."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "Email chứa mật khẩu ở dạng đọc được. Email nằm trong hộp thư, bản sao lưu và chuỗi thư chuyển tiếp nhiều năm – bất kỳ ai có được một trong số đó đều có thể đăng nhập. Nhật ký email cũng lưu mật khẩu, trừ khi bật “Che thông tin bí mật” (khi đó nhật ký giữ bản đã che, nhưng người nhận vẫn đã nhận được mật khẩu)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Email chứa khóa truy cập (ví dụ cho Stripe, GitHub, Slack, AWS, Google hoặc SendGrid) hoặc khóa riêng tư. Bất kỳ ai đọc email – bây giờ hoặc nhiều năm sau trong hộp thư hay bản sao lưu – đều có thể dùng nó. Nhật ký email cũng lưu khóa này, trừ khi bật “Che thông tin bí mật”."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "Email chứa các biến mẫu chưa được điền. Người nhận thấy nguyên văn các biến đó."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Email có vẻ chứa số thẻ thanh toán đầy đủ (vượt qua kiểm tra chữ số kiểm tra). Không bao giờ được gửi số thẻ qua email (PCI DSS): hộp thư lưu giữ chúng nhiều năm. Nhật ký email cũng lưu số thẻ, trừ khi bật “Che thông tin bí mật”."
+
+msgid "The email is too large"
+msgstr "Email quá lớn"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "Email liên kết đến các tệp WordPress trên một máy chủ liên quan. Điều này thường xảy ra trên bản sao staging vẫn còn chứa URL của trang web đang chạy thật – hoặc ngược lại."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "Email liên kết đến một địa chỉ trên trang web này trả về “không tìm thấy trang” (404). Điều này thường xảy ra sau khi một trang hoặc sản phẩm bị đổi tên hay bị xóa: mẫu vẫn trỏ đến địa chỉ cũ và mọi người nhận đều gặp trang lỗi."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Loại email đang được dựng lại từ nhật ký."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "Email đã được gửi đến nhiều người ngoài tên miền của bạn trong To hoặc Cc. Mỗi người nhận đều thấy tất cả địa chỉ còn lại. Với khách hàng hoặc thành viên, điều này làm lộ dữ liệu cá nhân cho người lạ – theo GDPR thường là một vi phạm dữ liệu."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "Email “%1$s” gửi đến %2$s vào %3$s lúc %4$s đã bị một bước kiểm tra an toàn phía chúng tôi tạm giữ trong thời gian ngắn và sau đó đã được gửi. Quý khách vui lòng kiểm tra cả thư mục spam."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "Email “%1$s” gửi đến %2$s vào %3$s lúc %4$s đã bị một bước kiểm tra an toàn phía chúng tôi giữ lại và chưa được gửi. Chúng tôi sẽ gửi lại cho Quý khách."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "Email “%1$s” gửi đến %2$s vào %3$s lúc %4$s chưa được gửi vì khi đó việc gửi email phía chúng tôi đang tạm dừng. Chúng tôi sẽ gửi lại cho Quý khách."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "Email “%1$s” gửi đến %2$s vào %3$s lúc %4$s không thể chuyển phát. Chúng tôi sẽ gửi lại cho Quý khách."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "Email “%1$s” gửi đến %2$s đã được tạo vào %3$s lúc %4$s, nhưng chúng tôi không thể xác nhận email đã được chuyển phát hay chưa. Chúng tôi sẽ kiểm tra và gửi lại nếu cần."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "Email “%1$s” đã được gửi đến %2$s vào %3$s lúc %4$s và đã được máy chủ thư chấp nhận. Quý khách vui lòng kiểm tra cả thư mục spam."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Phanh khẩn cấp giữ lại email gửi đi cho đến khi bạn cho gửi hoặc hủy chúng."
+
+msgid "The emergency brake is holding emails"
+msgstr "Phanh khẩn cấp đang giữ lại email"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Phanh khẩn cấp không giữ lại email nào"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Phanh khẩn cấp đang bật: trang web của bạn đột nhiên gửi nhiều email hơn bình thường rất nhiều."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Phanh khẩn cấp phát hiện số email bất thường trong vòng một giờ. Có thể một biểu mẫu liên hệ đang bị lạm dụng. Email vẫn đang được gửi."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Mã nguồn thô chính xác đã được lưu – “Tải xuống .eml” trả về nguyên trạng (không che)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "%s email gần nhất đều bị lỗi. Việc gửi email từ trang web này có thể đang hỏng, ví dụ do sai thông tin đăng nhập SMTP hoặc dịch vụ email từ chối trang web. Khách hàng có thể không nhận được xác nhận đơn hàng hay email đặt lại mật khẩu."
+
+msgid "The latest emails could not be sent"
+msgstr "Các email gần nhất không thể gửi được"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Nhật ký lưu email trong %s ngày."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Nhật ký hiển thị lý do cho từng email bị lỗi."
+
+msgid "The mail log requires JavaScript."
+msgstr "Nhật ký email cần JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Máy chủ thư không phản hồi kịp thời"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Máy chủ thư tạm thời không khả dụng"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Máy chủ thư đã từ chối kích thước email (mã phản hồi 552). Tệp đính kèm tăng khoảng một phần ba kích thước khi được mã hóa."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Dịch vụ email chỉ gửi từ các tên miền hoặc địa chỉ bạn đã xác minh tại đó."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Dịch vụ email hoặc hộp thư đã từ chối thêm email vì đã chạm giới hạn tốc độ, hạn mức hằng ngày hoặc giới hạn của gói."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Dịch vụ email đã từ chối yêu cầu vì khóa API sai, hết hạn, đã bị thu hồi hoặc không có quyền gửi."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Plugin gửi thư đã báo lỗi"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Chính sách chỉ áp dụng cho %s%% số email (pct)."
+
+msgid "The reason: %s."
+msgstr "Lý do: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Máy chủ nhận yêu cầu thử lại sau (mã phản hồi 450/451/452): greylisting, hộp thư đầy hoặc quá nhiều email trong thời gian ngắn."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Máy chủ nhận không thể xác nhận rằng máy chủ của bạn được phép gửi thay cho tên miền người gửi."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Máy chủ nhận không biết hộp thư này (mã phản hồi 550 / 5.1.1) – địa chỉ bị viết sai hoặc không còn tồn tại."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Máy chủ nhận vẫn có thể chấp nhận ở lần thử sau."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Máy chủ nhận đã từ chối email vì nội dung hoặc vì địa chỉ IP của máy chủ gửi nằm trong danh sách chặn."
+
+msgid "The recipient address was rejected"
+msgstr "Địa chỉ người nhận đã bị từ chối"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Tên miền người nhận không nhận email (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Tên miền người nhận không có máy chủ thư"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Tên miền người nhận có vẻ là lỗi chính tả của một nhà cung cấp email phổ biến. Những email như vậy sẽ bị trả về – hoặc đến tay người lạ đã đăng ký tên miền gõ sai đó."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Cùng một tiêu đề đã được gửi đến cùng người nhận nhiều lần trong thời gian ngắn. Nguyên nhân thường gặp là xác nhận đơn hàng bị trùng, biểu mẫu được gửi hai lần, cron job chạy song song hoặc vòng lặp trong một plugin."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Không thể thiết lập kết nối bảo mật đến máy chủ SMTP: chứng chỉ không khớp với tên máy chủ, đã hết hạn, hoặc máy chủ không hỗ trợ kiểu mã hóa đã chọn."
+
+msgid "The sender address is not allowed"
+msgstr "Địa chỉ người gửi không được phép"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Kiểm tra người gửi phát hiện sự cố với %s. Email có thể bị đưa vào spam."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Tên miền người gửi %s có bản ghi SPF và DMARC"
+
+msgid "The sender domain could not be checked"
+msgstr "Không thể kiểm tra tên miền người gửi"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Người gửi không có tên miền công khai (ví dụ wordpress@localhost). Hầu hết máy chủ thư từ chối những email như vậy hoặc đưa chúng vào spam."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Máy chủ không thể gửi email bằng PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Máy chủ đã đóng kết nối (mã phản hồi 421), ví dụ do bảo trì, quá tải hoặc quá nhiều kết nối từ máy chủ của bạn."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Máy chủ không chuyển tiếp email cho bạn, thường vì bạn chưa đăng nhập hoặc địa chỉ người gửi không thuộc tài khoản."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Máy chủ chỉ chấp nhận email sau khi xác thực hoặc sau khi chuyển sang kết nối mã hóa (mã phản hồi 530)."
+
+msgid "The server rejected the content"
+msgstr "Máy chủ đã từ chối nội dung"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Chương trình gửi thư cục bộ của máy chủ phản hồi chậm: một plugin gửi thư qua SMTP hoặc API sẽ chuyển email cho nhà cung cấp thay thế."
+
+msgid "The start date must not be after the end date."
+msgstr "Ngày bắt đầu không được sau ngày kết thúc."
+
+msgid "The statistics require JavaScript."
+msgstr "Phần thống kê cần JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Văn bản vẫn giống nhau; chỉ bố cục thay đổi. Hãy so sánh các bản xem trước."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Tên người dùng thường là địa chỉ email đầy đủ. Hãy chú ý các khoảng trắng bị sao chép kèm mật khẩu."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "URL webhook đã bị xóa: chỉ cho phép URL https hợp lệ."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Báo cáo hằng tuần đã bật nhưng chưa có người nhận: hãy nhập địa chỉ email trong “Gửi cảnh báo qua email đến”."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Các email này được gửi trở lại; loại email của chúng được giám sát lại."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Những loại email này đã không được gửi lâu hơn bình thường. Nguyên nhân có thể là một bản cập nhật plugin, một cài đặt bị thay đổi hoặc một tác vụ theo lịch bị kẹt."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Email này có phiên bản văn bản thuần riêng, nhưng nhật ký không lưu nó. Hiển thị ở đây: phiên bản văn bản được tạo từ HTML."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Email này không có kiểu chế độ tối riêng. Một số ứng dụng hiển thị nguyên trạng, số khác đổi màu – xem “Ép chế độ tối”."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Email này không có phiên bản văn bản thuần – một số trình đọc email và bộ lọc spam ưu tiên có nó. Hiển thị ở đây: phiên bản văn bản được tạo từ HTML."
+
+msgid "This email type has no content change."
+msgstr "Loại email này không có thay đổi nội dung."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Loại email này giờ bị bỏ qua: không có trạng thái, không có cảnh báo."
+
+msgid "This email type is monitored again."
+msgstr "Loại email này được giám sát lại."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Mục này đã được ẩn danh hóa; không thể gửi nội dung của nó nữa."
+
+msgid "This import is already running in another tab."
+msgstr "Việc nhập này đang chạy trong một tab khác."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Đây là cảnh báo thử. Các kênh cảnh báo của bạn hoạt động tốt."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Trang web đang chạy thật này đã gửi liên kết đến một địa chỉ cục bộ hoặc thử nghiệm. Người nhận không thể mở nó."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Câu hỏi này cần JavaScript. Bạn có thể tìm kiếm trong nhật ký thay thế."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Trang web này lưu nhật ký các email mà nó gửi (người nhận, tiêu đề, nội dung và trạng thái chuyển phát) để xác minh việc chuyển phát và khắc phục sự cố. Các mục nhật ký được tự động xóa sau thời gian lưu giữ đã cấu hình."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Trang web này đang chạy dưới dạng môi trường %s, và chế độ staging ngăn email của nó đến tay người thật."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Trang web này đang chạy dưới dạng môi trường %s. Hãy bật chế độ staging để không khách hàng thật nào nhận được email từ đây."
+
+msgid "Threshold (emails per hour)"
+msgstr "Ngưỡng (email mỗi giờ)"
+
+msgid "Thursday"
+msgstr "Thứ Năm"
+
+msgid "Timeline"
+msgstr "Dòng thời gian"
+
+msgid "To"
+msgstr "Đến"
+
+msgid "To date"
+msgstr "Đến ngày"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Để giữ chúng nhưng chỉ nhận một email mỗi ngày, hãy chọn “Gộp vào một email mỗi ngày” trong menu … của loại email."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Các danh sách hàng đầu dựa trên %s email mới nhất của khoảng thời gian này."
+
+msgid "Top recipient domains"
+msgstr "Tên miền người nhận nhiều nhất"
+
+msgid "Top recipients: %s"
+msgstr "Người nhận nhiều nhất: %s"
+
+msgid "Top sources"
+msgstr "Nguồn nhiều nhất"
+
+msgid "Top subjects"
+msgstr "Tiêu đề nhiều nhất"
+
+msgid "Total"
+msgstr "Tổng"
+
+msgid "Total: %s ms"
+msgstr "Tổng: %s ms"
+
+msgid "Trace"
+msgstr "Dấu vết"
+
+msgid "Transcript copied."
+msgstr "Đã sao chép bản ghi."
+
+msgid "Transport"
+msgstr "Phương thức truyền"
+
+msgid "Trigger"
+msgstr "Kích hoạt"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Kích hoạt một email đặt lại mật khẩu thật cho tài khoản của chính bạn? WordPress sẽ tạo liên kết đặt lại mới cho bạn, nên các liên kết đặt lại trước đó sẽ không còn hoạt động; mật khẩu của bạn vẫn giữ nguyên. Chỉ %s nhận được email này."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Kích hoạt thông báo người dùng mới cho tài khoản của chính bạn (thông báo cho quản trị viên và thông tin đăng nhập)? WordPress sẽ tạo liên kết mật khẩu mới cho bạn, nên các liên kết trước đó sẽ không còn hoạt động. Không có người dùng nào được tạo; chỉ %s nhận được các email này."
+
+msgid "Trigger to me"
+msgstr "Kích hoạt gửi cho tôi"
+
+msgid "Triggering…"
+msgstr "Đang kích hoạt…"
+
+msgid "Tuesday"
+msgstr "Thứ Ba"
+
+msgid "Type"
+msgstr "Loại"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Loại email được cập nhật mỗi giờ và mỗi khi bạn mở trang này. Chỉ lưu bộ đếm, mẫu tiêu đề và dấu vân tay nội dung (không có người nhận, không có nội dung), và chúng tuân theo thời gian lưu giữ của nhật ký."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Lỗi chính tả trong tên miền người nhận? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Ký tự có dấu hoặc dấu ngoặc kép hiển thị thành ký tự lỗi như “Ã¤” hoặc “â€™”. Văn bản UTF-8 đã bị đọc bằng một bảng mã khác ở đâu đó trên đường đi – trong mẫu, khi nhập hoặc trong cơ sở dữ liệu."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Không rõ. “%1$s” gửi đến %2$s đã được chuyển đi để gửi %3$s, nhưng Mailspur không nhận được kết quả."
+
+msgid "Under Tools"
+msgstr "Trong Công cụ"
+
+msgid "Uninstall"
+msgstr "Gỡ cài đặt"
+
+msgid "Unknown"
+msgstr "Không rõ"
+
+msgid "Unknown probe."
+msgstr "Email thử không xác định."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Không rõ: không có kết quả chuyển phát nào được báo về (hàm wp_mail() đã bị thay thế?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Biến giữ chỗ chưa được thay thế: %1$s"
+
+msgid "Until the log limit"
+msgstr "Đến giới hạn của nhật ký"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Tối đa 10 địa chỉ, phân cách bằng dấu phẩy. Cc và Bcc bị loại bỏ và tiêu đề hiển thị người nhận gốc. Nếu không có địa chỉ hợp lệ, email sẽ bị giữ lại."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Tối đa 5 địa chỉ, phân cách bằng dấu phẩy. Email cảnh báo xuất hiện trong nhật ký với nguồn “Cảnh báo Mailspur” và không bao giờ tự kích hoạt cảnh báo."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Cập nhật liên kết trong mẫu email hoặc trong cài đặt của plugin gửi email này, hoặc thêm chuyển hướng từ địa chỉ cũ sang trang mới (ví dụ bằng một plugin chuyển hướng)."
+
+msgid "Updated in between: %s"
+msgstr "Đã cập nhật trong khoảng đó: %s"
+
+msgid "Updated since the last one:"
+msgstr "Đã cập nhật kể từ lần gần nhất:"
+
+msgid "Updated since then: %s."
+msgstr "Đã cập nhật kể từ đó: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Dùng TLS trên cổng 587 hoặc SSL trên cổng 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Dùng văn bản liên kết có tính mô tả (ví dụ “Xem đơn hàng”) hoặc hiển thị địa chỉ mà liên kết thật sự dẫn đến."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Dùng địa chỉ người gửi thuộc tên miền của chính bạn và đặt địa chỉ miễn phí vào Reply-To. Chỉ khi bạn thật sự gửi qua máy chủ SMTP của chính nhà cung cấp đó với thông tin đăng nhập của nó thì mới ổn."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Dùng URL tuyệt đối gồm https:// và tên miền, ví dụ với home_url() hoặc wp_get_attachment_url() trong mẫu."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Dùng chính xác tên máy chủ mà chứng chỉ được cấp cho (ví dụ máy chủ smtp.… của nhà cung cấp thay vì IP hoặc tên miền của bạn)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Dùng tối đa một dấu chấm than."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Dùng các phím mũi tên để di chuyển giữa các ô."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Dùng các phím mũi tên để di chuyển giữa các giá trị, Enter để mở chúng trong nhật ký."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Dùng địa chỉ hộp thư của tài khoản SMTP làm người gửi (From)."
+
+msgid "User"
+msgstr "Người dùng"
+
+msgid "User: %s"
+msgstr "Người dùng: %s"
+
+msgid "Username"
+msgstr "Tên người dùng"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Dùng cài đặt đã lưu – hãy lưu thay đổi của bạn trước."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Xác minh tên miền người gửi tại dịch vụ email (thêm các bản ghi DNS của nó) hoặc dùng địa chỉ người gửi đã được xác minh."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Rất có thể. “%1$s” đã được gửi đến %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Tiêu đề rất dài (%1$s ký tự)"
+
+msgid "View"
+msgstr "Xem"
+
+msgid "View %s failed emails"
+msgstr "Xem %s email bị lỗi"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron đã không chạy trong %s (DISABLE_WP_CRON đang được đặt – hãy kiểm tra cron job trên máy chủ)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron đã không chạy trong %s – nó chỉ chạy khi trang web có lượt truy cập, hoặc nó đang bị lỗi."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron chạy bình thường."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Đang chờ email tổng hợp hằng ngày – không được gửi riêng."
+
+msgid "Waits %s s for the mail server"
+msgstr "Chờ máy chủ thư %s giây"
+
+msgid "Warnings"
+msgstr "Cảnh báo"
+
+msgid "Webhook URL"
+msgstr "URL webhook"
+
+msgid "Webhook signing key"
+msgstr "Khóa ký webhook"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "Thứ Tư"
+
+msgid "Week"
+msgstr "Tuần"
+
+msgid "Week of %s"
+msgstr "Tuần từ %s"
+
+msgid "Weekday"
+msgstr "Ngày trong tuần"
+
+msgid "Weekly"
+msgstr "Hằng tuần"
+
+msgid "Weekly email report"
+msgstr "Báo cáo email hằng tuần"
+
+msgid "Weekly report"
+msgstr "Báo cáo hằng tuần"
+
+msgid "What to do"
+msgstr "Cần làm gì"
+
+msgid "When emails are sent"
+msgstr "Thời điểm gửi email"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Khi số email được gửi nhiều hơn bình thường rất nhiều, phanh khẩn cấp sẽ cảnh báo bạn và có thể giữ lại các email tiếp theo."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Khi tắt, pixel theo dõi không thể biết khi nào bạn mở một mục. Bạn vẫn có thể tải nội dung bên ngoài cho từng email. Script và biểu mẫu luôn bị chặn."
+
+msgid "Who can view the log"
+msgstr "Ai có thể xem nhật ký"
+
+msgid "Why did an email fail?"
+msgstr "Tại sao email bị lỗi?"
+
+msgid "With attachments"
+msgstr "Có tệp đính kèm"
+
+msgid "With notes"
+msgstr "Có ghi chú"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Nếu thiếu các bản ghi DNS này, nhà cung cấp hộp thư không thể xác minh rằng trang web của bạn được phép gửi email thay cho tên miền này, nên email dễ bị đưa vào spam hơn. Kiểm tra người gửi sẽ đề xuất các bản ghi bạn có thể thêm tại nhà cung cấp tên miền."
+
+msgid "WooCommerce email"
+msgstr "Email WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Cài đặt › Email"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "Email của lõi WordPress không có trình chỉnh sửa; có thể thay đổi chúng bằng bộ lọc."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress đã không gửi email – có thể một plugin đã tắt email này."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress không có cài đặt cho email này. Mailspur có thể chặn thông báo gửi quản trị viên; người dùng mới vẫn nhận được email của riêng họ."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress không có cài đặt cho email này. Mailspur có thể chặn thông báo thành công của các bản cập nhật tự động; thông báo về cập nhật thất bại vẫn được gửi."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "Theo mặc định, WordPress gửi qua hàm PHP mail(). Trên máy chủ này, hàm đó bị tắt hoặc chưa cài chương trình gửi thư (sendmail) – thường gặp ở môi trường cục bộ, Docker và nhiều dịch vụ managed hosting."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Viết tiêu đề với chữ hoa và chữ thường bình thường, chỉ nhấn mạnh tối đa một từ."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Có, nhưng theo %4$s, người nhận đã đánh dấu “%1$s” gửi đến %2$s (%3$s) là spam."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Có. “%1$s” đã được gửi đến %2$s %3$s và %4$s đã xác nhận chuyển phát."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Bạn vẫn có thể gửi email này từ nhật ký (“Gửi ngay”)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Bạn nhận được email tổng hợp này vì các loại email này được gộp vào một email mỗi ngày trong Mailspur. Mỗi email vẫn được giữ trong nhật ký."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Bạn nhận được email này vì cảnh báo giám sát đã được bật trong cài đặt Mailspur của trang web này."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Bạn nhận được email này vì báo cáo hằng tuần đã được bật trong cài đặt Mailspur của trang web này. Báo cáo chỉ chứa số liệu và mẫu tiêu đề – không có nội dung email hay người nhận."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Selector DKIM của bạn (tùy chọn)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Trang web của bạn không gửi email nào trong 7 ngày qua."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s thông báo: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 thông báo: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Báo cáo email hằng tuần %2$s"
+
+msgid "address"
+msgstr "địa chỉ"
+
+msgid "and %s more"
+msgstr "và %s mục khác"
+
+msgid "and %s more – see the log"
+msgstr "và %s mục khác – xem nhật ký"
+
+msgid "another plugin stopped it"
+msgstr "một plugin khác đã chặn email"
+
+msgid "code"
+msgstr "mã"
+
+msgid "date"
+msgstr "ngày"
+
+msgid "days"
+msgstr "ngày"
+
+msgid "deleted after %s days"
+msgstr "bị xóa sau %s ngày"
+
+msgid "emails to this address failed several times before"
+msgstr "email gửi đến địa chỉ này đã bị lỗi nhiều lần trước đây"
+
+msgid "entries"
+msgstr "mục"
+
+msgid "failing"
+msgstr "đang lỗi"
+
+msgid "failure spikes"
+msgstr "lỗi tăng đột biến"
+
+msgid "first seen %s"
+msgstr "thấy lần đầu %s"
+
+msgid "from a new sender"
+msgstr "từ một người gửi mới"
+
+msgid "holding emails right now"
+msgstr "đang giữ lại email"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "được giữ cho đến khi xóa thủ công"
+
+msgid "link"
+msgstr "liên kết"
+
+msgid "minutes"
+msgstr "phút"
+
+msgid "name"
+msgstr "tên"
+
+msgid "new this week"
+msgstr "mới trong tuần này"
+
+msgid "no"
+msgstr "không"
+
+msgid "none"
+msgstr "không có"
+
+msgid "none in %1$s – %2$s"
+msgstr "không có trong %1$s – %2$s"
+
+msgid "number"
+msgstr "số"
+
+msgid "of %s"
+msgstr "/ %s"
+
+msgid "often to administrators"
+msgstr "thường gửi cho quản trị viên"
+
+msgid "on %1$s at %2$s"
+msgstr "vào %1$s lúc %2$s"
+
+msgid "same recipient"
+msgstr "cùng người nhận"
+
+msgid "slow to send"
+msgstr "gửi chậm"
+
+msgid "staging mode is on"
+msgstr "chế độ staging đang bật"
+
+msgid "stopped"
+msgstr "đã ngừng gửi"
+
+msgid "stopped email types"
+msgstr "loại email ngừng gửi"
+
+msgid "text"
+msgstr "văn bản"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "phanh khẩn cấp đã chặn một loạt email ồ ạt"
+
+msgid "time"
+msgstr "giờ"
+
+msgid "today at %s"
+msgstr "hôm nay lúc %s"
+
+msgid "triggered %s times"
+msgstr "đã kích hoạt %s lần"
+
+msgid "unchanged"
+msgstr "không đổi"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "không rõ – trình gửi thư không trả về thông báo lỗi"
+
+msgid "unusual silence"
+msgstr "im lặng bất thường"
+
+msgid "usually sent: %s"
+msgstr "nhịp gửi thường lệ: %s"
+
+msgid "wp_mail() called"
+msgstr "Đã gọi wp_mail()"
+
+msgid "yes"
+msgstr "có"
+
+msgid "yesterday at %s"
+msgstr "hôm qua lúc %s"
+
+msgid "your email provider"
+msgstr "nhà cung cấp email của bạn"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "“%1$s” (%2$s) lúc %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "“%1$s” (%2$s) đang được gửi trở lại."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "“%1$s” (%2$s) thường được gửi ít nhất %3$s ngày một lần. Lần gần nhất được gửi cách đây %4$s."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "“%1$s” (%2$s) được gửi lần cuối cách đây %3$s. Trước đó loại email này được gửi ít nhất %4$s ngày một lần."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "“%1$s” (%2$s) – thường mỗi %4$s, lần gần nhất %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "“%1$s” (%2$s) – thường mỗi ngày, lần gần nhất %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "“%1$s” – %2$s – %3$s"

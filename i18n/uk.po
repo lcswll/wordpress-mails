@@ -1,0 +1,3261 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "«Завантажити .eml» відтворює повідомлення із записаних, знеособлених даних (без вкладень)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (попередній тиждень: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (заплановано на %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s тип листа більше не надсилається: %2$s."
+msgstr[1] "%1$s типи листів більше не надсилаються, напр. %2$s."
+msgstr[2] "%1$s типів листів більше не надсилаються, напр. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "Типів листів: %1$s, відправників: %2$s"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "За останні %2$s хв не вдалося надіслати листів: %1$s."
+
+msgid "%1$s emails in %2$s days"
+msgstr "Листів: %1$s за %2$s дн."
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "Листів за останні 30 днів: %1$s, невдалих: %2$s"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "Протягом однієї години надіслано листів: %1$s – набагато більше, ніж зазвичай (поріг: %2$s на годину). Можливо, хтось зловживає контактною формою або сайт зламано."
+
+msgid "%1$s entries, %2$s"
+msgstr "Записів: %1$s, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "імпортовано: %1$s, дублікатів: %2$s, застарілих: %3$s"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s з %2$s повернуто (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "За останні %3$s днів не вдалося надіслати %1$s із %2$s листів."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "Оброблено %1$s із %2$s записів …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s в. п. порівняно з %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s надіслав свій перший лист %2$s і за останні 24 години написав на різні зовнішні адреси (кількість: %3$s). Якщо ви не встановлювали й не налаштовували нічого, що надсилає такі листи, перевірте сайт: новий відправник може бути ознакою зламу сайту."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "Надіслано: %1$s, ще затримано: %2$s …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s порівняно з %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · листів, об’єднаних від останнього дайджесту: %2$s"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · станом на %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – частка збоїв %2$s %% (попередній тиждень: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – повідомлено %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (обов'язковий плагін)"
+
+msgid "%s (theme)"
+msgstr "%s (тема)"
+
+msgid "%s ago"
+msgstr "%s тому"
+
+msgid "%s days"
+msgstr "%s днів"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "За останні 7 днів не вдалося надіслати %s лист."
+msgstr[1] "За останні 7 днів не вдалося надіслати %s листи."
+msgstr[2] "За останні 7 днів не вдалося надіслати %s листів."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s лист очікує на ваше рішення."
+msgstr[1] "%s листи очікують на ваше рішення."
+msgstr[2] "%s листів очікують на ваше рішення."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "За останні 7 днів %s лист було затримано й не надіслано."
+msgstr[1] "За останні 7 днів %s листи було затримано й не надіслано."
+msgstr[2] "За останні 7 днів %s листів було затримано й не надіслано."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "Аварійне гальмо затримує листів: %s."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s листів очікують і не доставлені."
+
+msgid "%s entries"
+msgstr "Записів: %s"
+
+msgid "%s failed"
+msgstr "Невдалих: %s"
+
+msgid "%s held emails discarded."
+msgstr "Відхилено затриманих листів: %s."
+
+msgid "%s imported entries removed."
+msgstr "Видалено імпортованих записів: %s."
+
+msgid "%s in 30 days"
+msgstr "%s за 30 днів"
+
+msgid "%s marked as spam"
+msgstr "Позначено як спам: %s"
+
+msgid "%s more on the Email types page."
+msgstr "Ще %s на сторінці «Типи листів»."
+
+msgid "%s notes"
+msgstr "%s приміток"
+
+msgid "%s of all emails"
+msgstr "%s від усіх листів"
+
+msgid "%s of them in the last 24 hours."
+msgstr "З них %s – за останні 24 години."
+
+msgid "%s s"
+msgstr "%s с"
+
+msgid "%s selected"
+msgstr "Вибрано: %s"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s пункт потребує уваги:"
+msgstr[1] "%s пункти потребують уваги:"
+msgstr[2] "%s пунктів потребують уваги:"
+
+msgid "%s to administrators in 30 days"
+msgstr "Адміністраторам за 30 днів: %s"
+
+msgid "%s unchanged lines"
+msgstr "Незмінених рядків: %s"
+
+msgid "(no subject)"
+msgstr "(без теми)"
+
+msgid "(no text content)"
+msgstr "(немає текстового вмісту)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(листів уже немає в журналі)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all суворіший; ~all поширений і разом із DMARC цілком підходить."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 – зберігати записи назавжди. Очищення виконується раз на день."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 – без обмежень. Найстаріші записи видаляються першими."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 вимикає цю функцію. Видаляє вміст, заголовки та вкладення старіших записів і маскує адреси (a***@example.com). Дата, статус, джерело, формат, розмір і примітки залишаються для статистики. Виконується під час щоденного очищення, перед видаленням записів, – тому діє, лише якщо цей строк коротший за період видалення вище."
+
+msgid "12 months"
+msgstr "12 місяців"
+
+msgid "30 days"
+msgstr "30 днів"
+
+msgid "7 days"
+msgstr "7 днів"
+
+msgid "90 days"
+msgstr "90 днів"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Селектор DKIM може містити лише літери, цифри, крапки, дефіси та підкреслення."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Поштовий плагін, що надсилає через API, перебрав доставку й повідомив, що надіслати не вдалося, не вказавши причини."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Опублікований ключ не доводить, що ваші листи ним підписуються – перевірте результат DKIM у заголовках отриманого листа."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Адреса одержувача або відправника не є дійсною адресою ел. пошти, тому PHPMailer відмовився надсилати."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "Ключ API або приватний ключ у відкритому вигляді: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Для перевірки цього запису потрібно близько %1$s запитів DNS – більше за дозволені %2$s, тож одержувачі можуть його ігнорувати (PermError). Видаліть непотрібні записи include:."
+
+msgid "Access"
+msgstr "Доступ"
+
+msgid "Actions"
+msgstr "Дії"
+
+msgid "Active: alerts on %s."
+msgstr "Активно: попередження про %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Додайте короткий атрибут alt до кожного зображення в шаблоні, напр. alt=\"Logo Example Shop\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Додайте include: вашого поштового провайдера (напр. include:_spf.google.com), якщо надсилаєте через нього."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Додайте свій поштовий сервер або поштовий сервіс до запису SPF домену відправника."
+
+msgid "Added:"
+msgstr "Додано:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Адреси з щонайменше %s остаточними збоями: сервер одержувача відхилив поштову скриньку, домен не має поштового сервера або ваш поштовий провайдер повідомив про жорстке повернення. Записи зникають разом зі строком зберігання журналу."
+
+msgid "Admin screen"
+msgstr "Екран адмінки"
+
+msgid "Administrators"
+msgstr "Адміністратори"
+
+msgid "Aggregate reports go to %s."
+msgstr "Зведені звіти надходять на %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Попередження"
+
+msgid "Alert and hold further emails"
+msgstr "Попередити й затримувати подальші листи"
+
+msgid "Alert only"
+msgstr "Лише попередити"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Сповіщати, коли тип листа, що надсилається регулярно, перестає надсилатися"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Попереджати, коли листи неодноразово не вдається надіслати"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Попереджати, коли сайт несподівано припиняє надсилати листи"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Попередження ввімкнено, але канал не задано: введіть адресу ел. пошти або URL-адресу вебхука."
+
+msgid "Alerts are off."
+msgstr "Попередження вимкнено."
+
+msgid "All"
+msgstr "Усі"
+
+msgid "All email types look healthy."
+msgstr "Усі типи листів виглядають справними."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Усі листи переспрямовуються на тестові адреси."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Усі листи надходять на тестові адреси замість справжніх одержувачів."
+
+msgid "All sources"
+msgstr "Усі джерела"
+
+msgid "Allow again"
+msgstr "Знову дозволити"
+
+msgid "Allowed again."
+msgstr "Знову дозволено."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Також один раз сповіщає, коли плагін або тема, які раніше ніколи не надсилали листів, протягом доби пишуть на багато різних зовнішніх адрес, – можлива ознака зламу сайту. Перші два тижні після встановлення Mailspur слугують базою для порівняння."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Також видаляти тему під час анонімізації"
+
+msgid "Also search content"
+msgstr "Шукати також у вмісті"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Або попросіть хостинг-провайдера ввімкнути mail() / sendmail для цього сайту."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Завжди завантажувати зовнішні зображення та шрифти в попередньому перегляді"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (через SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Поштовому провайдеру з HTTP API замість SMTP потрібно менше обмінів даними на кожен лист."
+
+msgid "Anonymisation"
+msgstr "Анонімізація"
+
+msgid "Anonymise entries after"
+msgstr "Анонімізувати записи через"
+
+msgid "Anonymised"
+msgstr "Анонімізовано"
+
+msgid "Any format"
+msgstr "Будь-який формат"
+
+msgid "Any status"
+msgstr "Будь-який статус"
+
+msgid "Apply"
+msgstr "Застосувати"
+
+msgid "Ask the recipient for a working address."
+msgstr "Попросіть одержувача надати робочу адресу."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Попросіть хостинг-провайдера ввімкнути розширення openssl (або ввімкніть його в налаштуваннях PHP у панелі хостингу)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Попросіть хостинг-провайдера оновити сертифікати CA та OpenSSL на сервері."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Запитайте хостинг-провайдера, чи не заблоковано вихідні SMTP-з’єднання."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Запитайте хостинг-провайдера, чи дозволено вихідні з’єднання на цей порт (брандмауер)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Щонайменше %1$s невдалих листів протягом %2$s хв"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Не більше одного попередження кожного типу за цей час, навіть якщо проблема залишається."
+
+msgid "Attachments"
+msgstr "Вкладення"
+
+msgid "Attachments no longer available: %s"
+msgstr "Вкладення більше недоступні: %s"
+
+msgid "Authentication"
+msgstr "Автентифікація"
+
+msgid "Automatic TLS"
+msgstr "Автоматичний TLS"
+
+msgid "Average per day"
+msgstr "Середнє за день"
+
+msgid "Back to the email types"
+msgstr "Назад до типів листів"
+
+msgid "Belongs to"
+msgstr "Належить до"
+
+msgid "Block again"
+msgstr "Знову блокувати"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Заблоковано як спам або через чорний список"
+
+msgid "Bounced (permanent)"
+msgstr "Повернено (остаточно)"
+
+msgid "Bounced (temporary)"
+msgstr "Повернено (тимчасово)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Пошкоджені символи (кодування): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Масова розсилка без заголовка відписки (одержувачів: %1$s)"
+
+msgid "Bundle into one daily email"
+msgstr "Об’єднувати в один щоденний лист"
+
+msgid "Bundled into one daily email"
+msgstr "Об’єднано в один щоденний лист"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Об’єднання вимкнено. Листи, що очікували, щойно надіслано одним дайджестом."
+
+msgid "Busiest day"
+msgstr "Найнавантаженіший день"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Увага: листи на цю адресу вже кілька разів не вдавалося надіслати."
+
+msgid "Change in the email types"
+msgstr "Змінити в типах листів"
+
+msgid "Change staging mode"
+msgstr "Змінити тестовий режим"
+
+msgid "Check"
+msgstr "Перевірити"
+
+msgid "Check again"
+msgstr "Перевірити знову"
+
+msgid "Check emails"
+msgstr "Перевіряти листи"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Перевірте хост і порт; спробуйте 587 (TLS) замість 465 (SSL) або навпаки."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Перевірте хост, порт, шифрування, ім’я користувача та пароль у своєму SMTP-плагіні й надішліть звідти тестовий лист."
+
+msgid "Check sender domains"
+msgstr "Перевірити домени відправників"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Переконайтеся, що шифрування відповідає порту: TLS для 587, SSL для 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Перевірте, чи належить ключ до правильного регіону / облікового запису (напр. кінцева точка EU чи US)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Перевірте хост і порт SMTP: неправильний порт або заблоковане з’єднання часто закінчуються тайм-аутом, перш ніж спрацює запасний варіант."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Перевірте записи SPF, DKIM і DMARC домену відправника або використовуйте адресу відправника на домені, з якого ви надсилаєте."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Перевірте адресу на помилки – або ж ваш сайт ніколи не надсилав цей лист."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Уточніть адресу в одержувача й виправте її там, де її збережено (профіль користувача, замовлення, запис форми)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Уточніть адресу в одержувача й виправте її там, де її збережено."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Перевірте ім’я хоста й порт: 587 зі STARTTLS (TLS) або 465 з SSL. Порт 25 блокує більшість хостинг-провайдерів."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Перевірте ліміти й поточне використання в обліковому записі поштового сервісу; за потреби змініть тариф на вищий."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Перевірте адреси одержувачів цього запису на помилки, пробіли або пропущені частини."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Перевірте адресу відправника у своєму SMTP-плагіні та фільтр wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Перевірте ліміти надсилання свого поштового облікового запису та примітки до цього листа."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Перевірте IP сервера в сервісі перевірки чорних списків і подайте запит на вилучення з них."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Перевірте написання заповнювача в шаблоні та чи підтримує його плагін для цього типу листа. Шорткоди в листах не обробляються, якщо плагін-відправник не викликає do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Перевірено %s."
+
+msgid "Checked just now"
+msgstr "Щойно перевірено"
+
+msgid "Checking DNS records …"
+msgstr "Перевірка записів DNS …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Перевіряє записи DNS доменів, з яких надсилає ваш сайт: типової адреси відправника та найчастіших відправників у журналі. Відсутні або слабкі записи – найпоширеніша причина потрапляння листів у спам. Використовується лише власний DNS-резолвер вашого сервера; результати зберігаються одну годину."
+
+msgid "Choose a range of at most %s days."
+msgstr "Виберіть діапазон не більше %s днів."
+
+msgid "Clear selection"
+msgstr "Скасувати вибір"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Натисніть на стовпчик, щоб відкрити ці листи в журналі."
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Close (Esc)"
+msgstr "Закрити (Esc)"
+
+msgid "Colour scheme"
+msgstr "Колірна схема"
+
+msgid "Command line"
+msgstr "Командний рядок"
+
+msgid "Compare"
+msgstr "Порівняти"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Порівняйте джерела цих записів. Перевірте, чи не надсилають два плагіни те саме сповіщення або чи не спрацьовує хук (напр. зміна статусу замовлення) більше одного разу."
+
+msgid "Component"
+msgstr "Компонент"
+
+msgid "Configure alerts"
+msgstr "Налаштувати попередження"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Вміст анонімізовано через %1$s дн., %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Зміну вмісту позначено як переглянуту."
+
+msgid "Content changed"
+msgstr "Вміст змінився"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Вміст змінився %1$s, після оновлення %2$s."
+
+msgid "Content changed on %s."
+msgstr "Вміст змінився %s."
+
+msgid "Content removed"
+msgstr "Вміст видалено"
+
+msgid "Content removed after %s days"
+msgstr "Вміст видалено через %s днів"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Вміст, заголовки та вкладення видалено, а адреси замасковано згідно з налаштуванням анонімізації."
+
+msgid "Copied"
+msgstr "Скопійовано"
+
+msgid "Copied – paste it into your reply."
+msgstr "Скопійовано – вставте у свою відповідь."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Копіює коротке речення для відповіді клієнту: коли й кому надіслано лист і чи він дійшов – без технічних подробиць."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Копіює наявний журнал іншого плагіна журналювання листів у Mailspur, щоб старі листи можна було шукати й переглядати тут. Інший плагін і його дані залишаються без змін; повторний імпорт додає лише нові записи."
+
+msgid "Copy"
+msgstr "Копіювати"
+
+msgid "Copy for support"
+msgstr "Копіювати для підтримки"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "У цьому браузері копіювання неможливе. Виділіть текст і скопіюйте його:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Виправте адресу (напр. у профілі користувача або замовленні) і подумайте про перевірку адрес ел. пошти у своїх формах."
+
+msgid "Counted once per email."
+msgstr "Враховується один раз на лист."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Створіть у поштовому сервісі новий ключ API з дозволом на надсилання й введіть його в поштовому плагіні."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Створити нову URL-адресу вебхука? Поточна адреса одразу перестане працювати – вставте нову адресу в налаштування вебхука вашого поштового провайдера."
+
+msgid "Create new URL"
+msgstr "Створити нову URL-адресу"
+
+msgid "Current page"
+msgstr "Поточна сторінка"
+
+msgid "Current record"
+msgstr "Поточний запис"
+
+msgid "Current size"
+msgstr "Поточний розмір"
+
+msgid "Custom"
+msgstr "Власний"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "Знайдено ключ DKIM (селектор: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "Знайдено запис DMARC із p=none: лише звіти, підроблені листи все одно доставляються."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "Знайдено запис DMARC із політикою p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "Запис DMARC не має дійсної політики (p=none, quarantine або reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "Запит DNS не вдався або перевищив час очікування. Спробуйте пізніше."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Запити DNS недоступні на цьому сервері (dns_get_record() вимкнено), тому перевірка відправника тут не може працювати."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Потрібно запитів DNS: близько %1$s із дозволених %2$s."
+
+msgid "Daily"
+msgstr "Щодня"
+
+msgid "Daily digest"
+msgstr "Щоденний дайджест"
+
+msgid "Dark"
+msgstr "Темна"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Default (%s days)"
+msgstr "Типово (%s дн.)"
+
+msgid "Default (no time limit)"
+msgstr "Типово (без обмеження часу)"
+
+msgid "Default sender"
+msgstr "Типовий відправник"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Delete %s selected log entries?"
+msgstr "Видалити вибрані записи журналу (%s)?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Видалити ВСІ записи журналу? Цю дію неможливо скасувати."
+
+msgid "Delete entries after"
+msgstr "Видаляти записи через"
+
+msgid "Delete selected"
+msgstr "Видалити вибрані"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Видаляти таблицю журналу й налаштування під час видалення плагіна"
+
+msgid "Delete this log entry?"
+msgstr "Видалити цей запис журналу?"
+
+msgid "Deleted."
+msgstr "Видалено."
+
+msgid "Delivered"
+msgstr "Доставлено"
+
+msgid "Delivered by %s (API)"
+msgstr "Доставлено через %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Доставлено кодом, підключеним до pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Доставлено в щоденному дайджесті %s."
+
+msgid "Delivery"
+msgstr "Доставка"
+
+msgid "Delivery status from your email provider"
+msgstr "Статус доставки від вашого поштового провайдера"
+
+msgid "Desktop"
+msgstr "Комп'ютер"
+
+msgid "Did my email arrive?"
+msgstr "Чи дійшов мій лист?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Вимкнути лист або змінити його одержувача"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Відхилити всі затримані листи? Вони залишаться в журналі, але не будуть надіслані."
+
+msgid "Discard held emails"
+msgstr "Відхилити затримані листи"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Не надсилайте листи «від імені» безкоштовних поштових адрес (gmail.com, gmx.de …) через власний сервер."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Готово: надіслано листів: %1$s, невдалих: %2$s."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Готово: імпортовано: %1$s, дублікатів: %2$s, застарілих: %3$s."
+
+msgid "Download .eml"
+msgstr "Завантажити .eml"
+
+msgid "Download as CSV"
+msgstr "Завантажити як CSV"
+
+msgid "Download started."
+msgstr "Завантаження почалося."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Завантажити записи, що відповідають поточним фільтрам, як %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Кожен лист перевіряється один раз під час запису до журналу або імпорту (без зовнішніх запитів). Зміни тут стосуються лише листів, записаних після цього; старіші записи повторно не перевіряються. Перевірки DNS і повторного надсилання виконуються, коли ви відкриваєте запис."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Попередні листи на %s неодноразово мали остаточні збої."
+
+msgid "Edit template"
+msgstr "Редагувати шаблон"
+
+msgid "Editors and above"
+msgstr "Редактори й вище"
+
+msgid "Email address"
+msgstr "Адреса ел. пошти"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "Адреса ел. пошти (останнього листа вже немає в журналі)"
+
+msgid "Email address or order number"
+msgstr "Адреса ел. пошти або номер замовлення"
+
+msgid "Email consists almost only of images"
+msgstr "Лист складається майже лише із зображень"
+
+msgid "Email failure spike"
+msgstr "Сплеск збоїв листів"
+
+msgid "Email failures"
+msgstr "Збої листів"
+
+msgid "Email failures resolved"
+msgstr "Збої листів усунено"
+
+msgid "Email inventory"
+msgstr "Реєстр листів"
+
+msgid "Email log"
+msgstr "Журнал листів"
+
+msgid "Email log: problem recipients"
+msgstr "Журнал листів: проблемні одержувачі"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Надсилати мені лист, коли коментар очікує на модерацію"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Надсилати мені лист, коли хтось залишає коментар"
+
+msgid "Email provider"
+msgstr "Поштовий провайдер"
+
+msgid "Email sent again."
+msgstr "Лист надіслано повторно."
+
+msgid "Email sent to %s."
+msgstr "Лист надіслано на %s."
+
+msgid "Email type"
+msgstr "Тип листа"
+
+msgid "Email type is sent again"
+msgstr "Тип листа знову надсилається"
+
+msgid "Email type stopped"
+msgstr "Тип листа більше не надсилається"
+
+msgid "Email types"
+msgstr "Типи листів"
+
+msgid "Email volume back to normal"
+msgstr "Кількість листів повернулася до норми"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Кількість листів повернулася до норми: аварійне гальмо більше не активне."
+
+msgid "Email: failed"
+msgstr "Лист: невдалий"
+
+msgid "Email: failed – see the log"
+msgstr "Лист: невдалий – див. журнал"
+
+msgid "Email: sent"
+msgstr "Лист: надіслано"
+
+msgid "Emails"
+msgstr "Листи"
+
+msgid "Emails are being logged again."
+msgstr "Листи знову записуються в журнал."
+
+msgid "Emails are delivered to their recipients."
+msgstr "Листи доставляються одержувачам."
+
+msgid "Emails are flowing again"
+msgstr "Листи знову надсилаються"
+
+msgid "Emails are logged but not delivered."
+msgstr "Листи записуються в журнал, але не доставляються."
+
+msgid "Emails are still being sent."
+msgstr "Листи все ще надсилаються."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "Листи все ще надсилаються. Перевірте головне джерело; щоб зупинити їх, перемкніть аварійне гальмо на «Попередити й затримувати подальші листи»."
+
+msgid "Emails in 30 days"
+msgstr "Листи за 30 днів"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Листи цього типу, що надходять лише адміністраторам, тепер збираються й надсилаються раз на день одним дайджестом."
+
+msgid "Emails over time"
+msgstr "Листи з часом"
+
+msgid "Emails per day and status"
+msgstr "Листи за днями та статусом"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "Листи за днями тижня й годинами (часовий пояс сайту)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "Листи, які вже є в журналі (записані самим Mailspur або імпортовані з іншого плагіна), розпізнаються за одержувачами, темою й часом надсилання та пропускаються як дублікати."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Регулярні листи більше не надсилаються (%s)"
+
+msgid "Emails to this user"
+msgstr "Листи цьому користувачу"
+
+msgid "Emails with notes"
+msgstr "Листи з примітками"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "Листи без теми схожі на спам, і їх важко знайти у вхідних."
+
+msgid "Emails – last 7 days"
+msgstr "Листи – останні 7 днів"
+
+msgid "Emergency brake"
+msgstr "Аварійне гальмо"
+
+msgid "Emergency brake reset."
+msgstr "Аварійне гальмо скинуто."
+
+msgid "Emergency brake settings"
+msgstr "Налаштування аварійного гальма"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Аварійне гальмо: листів за останню годину: %1$s – набагато більше, ніж зазвичай (поріг: %2$s на годину)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Аварійне гальмо: незвичний потік листів"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Порожньо = автоматично: утричі більше за найнавантаженішу годину за останні 14 днів, щонайменше 50 – зараз %s."
+
+msgid "Empty log"
+msgstr "Очистити журнал"
+
+msgid "Empty subject"
+msgstr "Порожня тема"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Увімкніть двоетапну перевірку для облікового запису Google і створіть пароль застосунку (Google account → Security → App passwords)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Увімкніть підписування DKIM у свого поштового провайдера або хостингу й опублікуйте наданий ключ. Якщо ви вже підписуєте листи, введіть свій селектор (значення s= заголовка DKIM-Signature) і перевірте знову."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Увімкніть підпис DKIM у поштовому сервісі й опублікуйте його DNS-запис."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Увімкніть автентифікацію у своєму SMTP-плагіні та введіть ім’я користувача й пароль."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Увімкніть автентифікацію у своєму SMTP-плагіні."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Шифровані SMTP-з’єднання (TLS/SSL) потребують розширення PHP openssl, яке на цьому сервері не встановлено або не ввімкнено."
+
+msgid "Encryption"
+msgstr "Шифрування"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Помилка шифрування (TLS/SSL)"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Спершу введіть адресу ел. пошти або URL-адресу вебхука й збережіть налаштування."
+
+msgid "Enter an email address or an order number."
+msgstr "Введіть адресу ел. пошти або номер замовлення."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Спершу введіть адресу ел. пошти в полі «Надсилати попередження ел. поштою на» й збережіть налаштування."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Введіть від 1 до 10 адрес ел. пошти."
+
+msgid "Enter one or more email addresses."
+msgstr "Введіть одну або кілька адрес ел. пошти."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Введіть пароль застосунку у своєму SMTP-плагіні або скористайтеся підключенням плагіна «Sign in with Google» (OAuth)."
+
+msgid "Entries"
+msgstr "Записи"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Записи, старші за %s днів, пропускаються, оскільки налаштування строку зберігання однаково їх видалило б. Щоб імпортувати все, спершу змініть строк зберігання вище."
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Errors"
+msgstr "Помилки"
+
+msgid "Every %s days"
+msgstr "Кожні %s дн."
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "Кожні 15 хвилин (попередження Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Щопонеділка вранці, лише коли є про що повідомити: листи й частка збоїв порівняно з попереднім тижнем, нові, зупинені та змінені типи листів, листи з примітками та спрацювання аварійного гальма. Лише кількості й шаблони тем."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Усі види листів, які надсилає цей сайт, згенеровані з журналу листів Mailspur, – напр. для реєстру операцій обробки даних або передавання справ. Групи одержувачів визначаються за останніми листами кожного відправника, категорії даних – за останнім листом кожного типу. Список не містить вмісту листів і адрес."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Усі види листів, які надсилає ваш сайт, автоматично знайдені в журналі: згруповані за плагіном, що їх надсилає, і за темою, з числами, адресами й іменами як заповнювачами. Mailspur дізнається, як часто надсилається кожен тип, і помічає, коли якийсь перестає надсилатися, – наприклад, після оновлення плагіна."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Усе гаразд: %s лист за останні 7 днів, без помилок."
+msgstr[1] "Усе гаразд: %s листи за останні 7 днів, жодного невдалого."
+msgstr[2] "Усе гаразд: %s листів за останні 7 днів, жодного невдалого."
+
+msgid "Expected today and not sent yet:"
+msgstr "Очікувалися сьогодні й ще не надіслані:"
+
+msgid "Export"
+msgstr "Експорт"
+
+msgid "Export started – your download begins shortly."
+msgstr "Експорт розпочато – завантаження незабаром почнеться."
+
+msgid "Failed"
+msgstr "Невдалі"
+
+msgid "Failed (%s %%)"
+msgstr "Невдалі (%s %%)"
+
+msgid "Failing"
+msgstr "З помилками"
+
+msgid "Failure rate"
+msgstr "Частка збоїв"
+
+msgid "Failure spike"
+msgstr "Сплеск збоїв"
+
+msgid "Far more emails than usual were sent"
+msgstr "Надіслано набагато більше листів, ніж зазвичай"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Надіслано набагато більше листів, ніж зазвичай, тому Mailspur затримує подальші листи, доки ви їх не випустите або не відхилите."
+
+msgid "Fewer"
+msgstr "Менше"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Filter by status"
+msgstr "Фільтрувати за статусом"
+
+msgid "Filter email types"
+msgstr "Фільтрувати типи листів"
+
+msgid "First email after the change"
+msgstr "Перший лист після зміни"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Перший лист від цього відправника – %s. Якщо сповіщення про типи ввімкнено, Mailspur сповіщає, коли новий відправник пише на багато зовнішніх адрес."
+
+msgid "First page"
+msgstr "Перша сторінка"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Для великих вкладень тайм-аут може настати й під час передавання – надсилайте менші файли або посилання."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Для тестових і розробницьких копій сайту: гарантує, що клієнти ніколи не отримають листів із копії. Кожен лист однаково записується в журнал."
+
+msgid "Forced dark"
+msgstr "Примусово темна"
+
+msgid "Format"
+msgstr "Формат"
+
+msgid "Free text from forms"
+msgstr "Довільний текст із форм"
+
+msgid "Friday"
+msgstr "П'ятниця"
+
+msgid "From"
+msgstr "Від"
+
+msgid "From date"
+msgstr "З дати"
+
+msgid "Front end"
+msgstr "Фронтенд"
+
+msgid "Function"
+msgstr "Функція"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Подальші листи затримуються, доки адміністратор їх не звільнить або не відхилить."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail і Google Workspace більше не приймають звичайний пароль облікового запису для SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail обрізає HTML-листи, більші за 102 КБ, і показує «[Message clipped]». Усе після місця обрізання – часто нижній колонтитул, посилання для відписки або юридична інформація – приховано."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail обріже цей лист (%1$s КБ)"
+
+msgid "Google rejected the login"
+msgstr "Google відхилив вхід"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML надіслано як звичайний текст"
+
+msgid "Handler"
+msgstr "Обробник"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Ваш поштовий провайдер повідомив про жорстке повернення"
+
+msgid "Hard failures"
+msgstr "Остаточні збої"
+
+msgid "Headers"
+msgstr "Заголовки"
+
+msgid "Held"
+msgstr "Затримано"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Затримано аварійним гальмом – відхилено."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Затримано аварійним гальмом – не доставлено."
+
+msgid "Held by emergency brake – released later."
+msgstr "Затримано аварійним гальмом – згодом звільнено."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Затримано тестовим режимом – не доставлено."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Затриманий лист надіслано. Його записано як новий запис."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Затримані листи отримують статус «Затримано», і їх усе ще можна надіслати по одному з журналу («Надіслати зараз»)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Затримано: у кожного одержувача раніше були остаточні збої (проблемні одержувачі)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Затримано: тестовий режим налаштовано на переспрямування, але дійсну адресу переспрямування не задано."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Підказки щодо проблем, через які цей лист може не дійти або відображатися неправильно."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Затримувати подальші листи проблемним одержувачам"
+
+msgid "Hooks"
+msgstr "Хуки"
+
+msgid "Hours"
+msgstr "Години"
+
+msgid "How to fix:"
+msgstr "Як виправити:"
+
+msgid "I already did"
+msgstr "Я вже це зробив"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Я розумію, що необроблене джерело НЕ знеособлюється і приблизно подвоює обсяг зберігання на кожен лист"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Якщо це трапляється часто, перевірте ліміти надсилання свого поштового провайдера."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Якщо це повторюється, надсилайте менше листів одночасно або через поштовий сервіс із чергою."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Якщо це блокують стандартні параметри безпеки (security defaults), використайте натомість підключення Microsoft (OAuth / Graph API) у своєму SMTP-плагіні."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Якщо не вдалося надіслати кільком одержувачам, причину вказано у відповіді сервера після адреси."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Якщо обліковий запис використовує двофакторну автентифікацію, створіть пароль застосунку й використовуйте його."
+
+msgid "Ignore"
+msgstr "Ігнорувати"
+
+msgid "Ignored"
+msgstr "Ігнорується"
+
+msgid "Ignored notes"
+msgstr "Ігноровані примітки"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Ігноровані примітки більше не записуються для нових листів і приховуються для наявних записів."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Зображення без альтернативного тексту (%1$s)"
+
+msgid "Import"
+msgstr "Імпорт"
+
+msgid "Import failed: %s"
+msgstr "Помилка імпорту: %s"
+
+msgid "Import from other plugins"
+msgstr "Імпорт з інших плагінів"
+
+msgid "Import new entries"
+msgstr "Імпортувати нові записи"
+
+msgid "Imported"
+msgstr "Імпортовано"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Імпортовані записи не мають трасування: інший плагін не записував ці дані."
+
+msgid "Imported from %s"
+msgstr "Імпортовано з %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "В Amazon SNS підпишіть URL-адресу (протокол HTTPS) на тему, яка отримує сповіщення Delivery, Bounce і Complaint від Amazon SES. Mailspur підтверджує підписку автоматично."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "У Brevo відкрийте Transactional → Settings → Webhook, додайте URL-адресу й виберіть Delivered, Hard bounce, Soft bounce, Invalid email і Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "У Mailgun відкрийте Sending → Webhooks, додайте URL-адресу для Delivered, Permanent failure, Temporary failure і Spam complaints та вставте нижче HTTP webhook signing key."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "У Postmark відкрийте свій сервер → Webhooks → Add webhook, вставте URL-адресу й виберіть Delivery, Bounce і Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "У центрі адміністрування Microsoft 365 відкрийте користувача → Mail → Manage email apps і ввімкніть «Authenticated SMTP»."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Поштові скриньки показують приблизно перші 40–80 символів; решту обрізано, на телефонах – ще раніше."
+
+msgid "Include content"
+msgstr "Включити вміст"
+
+msgid "Information"
+msgstr "Інформація"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Установіть SMTP-плагін і надсилайте через справжню поштову скриньку або поштовий сервіс свого домену."
+
+msgid "Invalid date."
+msgstr "Недійсна дата."
+
+msgid "Invalid email address"
+msgstr "Недійсна адреса ел. пошти"
+
+msgid "Invalid email address: %s"
+msgstr "Недійсна адреса ел. пошти: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Недійсна адреса відправника: %1$s"
+
+msgid "Irregular"
+msgstr "Нерегулярно"
+
+msgid "Is Mailspur helping you?"
+msgstr "Mailspur вам допомагає?"
+
+msgid "Is an email missing?"
+msgstr "Чи бракує якогось листа?"
+
+msgid "Is everything running?"
+msgstr "Чи все працює?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Зберігати не більше"
+
+msgid "Keep for"
+msgstr "Зберігати"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Тримайте цю URL-адресу в таємниці: вона містить секретний ключ цього сайту. Збережіть налаштування, перш ніж тестувати вебхук."
+
+msgid "Kept: %s"
+msgstr "Зберігається: %s"
+
+msgid "Key figures"
+msgstr "Ключові показники"
+
+msgid "Last 30 days"
+msgstr "Останні 30 днів"
+
+msgid "Last email before the change"
+msgstr "Останній лист перед зміною"
+
+msgid "Last failure"
+msgstr "Останній збій"
+
+msgid "Last page"
+msgstr "Остання сторінка"
+
+msgid "Last sent"
+msgstr "Востаннє надіслано"
+
+msgid "Leave a review"
+msgstr "Залишити відгук"
+
+msgid "Light"
+msgstr "Світла"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Текст посилання показує %1$s, але веде на %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Посилання на адресу розробки: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Посилання на сторінку, якої немає на вашому сайті: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Посилайтеся безпосередньо на повну адресу. Для відстеження кліків використовуйте натомість параметри UTM на власному домені."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Посилання через скорочувач URL: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Посилання й зображення, що починаються з «/», працюють лише на вебсайті. У поштовому клієнті немає адреси сайту, щоб їх доповнити, тому зображення залишаються порожніми, а посилання нікуди не ведуть."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Посилання на іншу копію сайту: %1$s (цей сайт: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Посилання, видима адреса яких відрізняється від справжньої цілі, схожі на фішинг. Спам-фільтри за них штрафують, а деякі поштові клієнти попереджають читача."
+
+msgid "Load remote content"
+msgstr "Завантажити зовнішній вміст"
+
+msgid "Loading…"
+msgstr "Завантаження…"
+
+msgid "Log"
+msgstr "Журнал"
+
+msgid "Log entries %s"
+msgstr "Записи журналу %s"
+
+msgid "Log entry not found."
+msgstr "Запис журналу не знайдено."
+
+msgid "Log only – do not send any email"
+msgstr "Лише записувати – не надсилати жодних листів"
+
+msgid "Log size"
+msgstr "Розмір журналу"
+
+msgid "Logged emails"
+msgstr "Записані листи"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Записані листи можуть містити персональні дані. Надавайте доступ якомога вужчому колу. Для налаштувань завжди потрібні права адміністратора."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Вхід і одержувачів прийнято, але сам лист відхилено – зазвичай через спам-фільтр, ліміт надсилання або політику провайдера (код відповіді 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Записує вихідні листи, визначає типи листів, які надсилає ваш сайт, і попереджає, коли якийсь із них перестає надсилатися. Безпечний перегляд, діагностика доставки, статистика."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Пошукайте в налаштуваннях листів %s опцію, щоб вимкнути його або змінити одержувача, – або ігноруйте цей тип тут."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Знайдіть відповідь сервера в повідомленні про помилку; зазвичай у ній указано причину."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Пошукайте в журналі неочікуване масове надсилання (спам через форми, цикли)."
+
+msgid "Looking it up …"
+msgstr "Шукаємо …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Журнал листів"
+
+msgid "Mail Log sections"
+msgstr "Розділи журналу листів"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Поштові сервери для відповідей і повернень налаштовано."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Поштові провайдери можуть перевірити, що ваш сайт має право надсилати листи від імені цього домену. Повна перевірка відправника також перевіряє DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Поштова скринька невідома або недоступна"
+
+msgid "Mailer"
+msgstr "Поштовий модуль"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun підписує кожен вебхук цим ключем (Sending → Webhooks → HTTP webhook signing key); звіти без дійсного підпису відхиляються."
+
+msgid "Mailspur alerts"
+msgstr "Попередження Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur перевіряє журнал на листи, які не вдалося надіслати."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur не знайшов у вашому магазині замовлення #%s."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "На цьому сайті Mailspur уже записав доставлених листів: %s. Якщо він заощаджує вам час, короткий відгук на WordPress.org дуже допоможе – так інші знайдуть плагін, і він залишиться безкоштовним."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "У журналі Mailspur немає листа для замовлення #%s."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "У журналі Mailspur немає листа для %s."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur створив %1$s. Подобається? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur дізнається, як часто надсилається кожен вид листів, наприклад підтвердження замовлень, і повідомляє тут, коли якийсь із них припиняється."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur вивчає ритм кожного типу листа за останні 8 тижнів – щоденне підтвердження замовлення вважається простроченим через 2 дні, щотижневий звіт – через 2 тижні. Сповіщення вказує тип, його відправника та плагіни, оновлені після його останнього листа. Використовує канали вище; ігноровані типи ніколи не надсилають сповіщень."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur бачить, що ваш сайт його надіслав, але не бачить саму поштову скриньку. Якщо листа там немає, попросіть одержувача перевірити папку «Спам»."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur тепер зупиняє ці листи; їхній тип листа ігнорується."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – Журнал листів"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: листи затримано"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: тестовий режим"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Головне джерело: %1$s (листів: %2$s)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Переконайтеся, що адреса From у поштовому плагіні відповідає підтвердженому домену."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Переконайтеся, що лист надсилається з «charset=UTF-8», файли шаблонів збережено в UTF-8, а таблиці бази даних використовують utf8mb4. Виправте тексти, які вже збережено пошкодженими."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Переконайтеся, що налаштування шифрування відповідає порту."
+
+msgid "Many emails could not be sent recently"
+msgstr "Останнім часом багато листів не вдалося надіслати"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Багато знаків оклику в темі (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Багато поштових клієнтів блокують зображення, доки читач їх не дозволить. Без альтернативного тексту читач бачить лише порожні рамки, а програми зчитування з екрана не озвучують нічого корисного."
+
+msgid "Mark as resolved"
+msgstr "Позначити як вирішене"
+
+msgid "Marked as spam"
+msgstr "Позначено як спам"
+
+msgid "Marked as spam by the recipient"
+msgstr "Одержувач позначив як спам"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Маскувати ключі скидання пароля, активації та доступу в записаних посиланнях, а також паролі, ключі API й номери карток, надіслані відкритим текстом"
+
+msgid "Maybe later"
+msgstr "Можливо, пізніше"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Можливо, лист так і не було надіслано – перевірте статус замовлення та налаштування листів вашого магазину."
+
+msgid "Menu position"
+msgstr "Розташування в меню"
+
+msgid "Message"
+msgstr "Повідомлення"
+
+msgid "Method"
+msgstr "Метод"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online блокує вхід SMTP (базову автентифікацію) для цієї поштової скриньки або всієї організації."
+
+msgid "Minutes"
+msgstr "Хвилини"
+
+msgid "Monday"
+msgstr "Понеділок"
+
+msgid "Monitor again"
+msgstr "Знову відстежувати"
+
+msgid "Monitoring alerts"
+msgstr "Попередження моніторингу"
+
+msgid "More"
+msgstr "Більше"
+
+msgid "More actions"
+msgstr "Інші дії"
+
+msgid "More filters"
+msgstr "Більше фільтрів"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Найчастіша причина (%1$s з них): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Більшість серверів приймають загалом 10–25 МБ."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Знайдено кілька записів DMARC. У такому разі одержувачі ігнорують DMARC – залиште лише один."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Знайдено кілька записів SPF. Одержувачі вважають це помилкою (PermError) – об'єднайте їх в один запис."
+
+msgid "Needs attention"
+msgstr "Потребує уваги"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Не записано ні заголовка From, ні відправника. Поштова програма використає значення за замовчуванням, часто wordpress@yourdomain."
+
+msgid "Never"
+msgstr "Ніколи"
+
+msgid "New"
+msgstr "Новий"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Нову URL-адресу створено. Оновіть її у свого поштового провайдера."
+
+msgid "New email types"
+msgstr "Нові типи листів"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Нові листи затримуються, доки ви їх не звільните або не відхилите. Листи для скидання пароля все одно надсилаються."
+
+msgid "New sender"
+msgstr "Новий відправник"
+
+msgid "New sender writes to many addresses"
+msgstr "Новий відправник пише на багато адрес"
+
+msgid "Next email"
+msgstr "Наступний лист"
+
+msgid "Next email (j)"
+msgstr "Наступний лист (j)"
+
+msgid "Next page"
+msgstr "Наступна сторінка"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Під поширеними селекторами ключ DKIM не знайдено."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Немає запису DMARC для домену відправника %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Запис DMARC не знайдено. Великі поштові провайдери очікують його наявності, а без нього будь-хто може непомітно підробити цей домен."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Немає запису MX: цей домен не може отримувати відповіді чи повернення, і деякі одержувачі відхиляють таких відправників."
+
+msgid "No SMTP transcript for this email."
+msgstr "Для цього листа немає протоколу SMTP."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Немає записів SPF і DMARC для домену відправника %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Немає запису SPF для домену відправника %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Запис SPF не знайдено. Одержувачі не можуть визначити, які сервери мають право надсилати від імені цього домену."
+
+msgid "No alerts sent yet."
+msgstr "Попереджень ще не надсилалося."
+
+msgid "No connection to the SMTP server"
+msgstr "Немає з’єднання із сервером SMTP"
+
+msgid "No email logged for %s hours"
+msgstr "Жодного листа не записано вже %s год"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "За останні %1$s год не записано жодного листа, хоча цей сайт надсилав листи в цьому проміжку часу в %2$s з останніх %3$s днів (у середньому %4$s)."
+
+msgid "No emails"
+msgstr "Немає листів"
+
+msgid "No emails found."
+msgstr "Листів не знайдено."
+
+msgid "No emails in this period."
+msgstr "За цей період листів немає."
+
+msgid "No emails logged for this order yet."
+msgstr "Для цього замовлення ще не записано жодного листа."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Ще не записано жодного листа. Типи листів з’являться тут, щойно ваш сайт почне надсилати листи."
+
+msgid "No emails match these filters."
+msgstr "Жоден лист не відповідає цим фільтрам."
+
+msgid "No emails sent"
+msgstr "Листи не надсилалися"
+
+msgid "No emails to this user in the log."
+msgstr "У журналі немає листів цьому користувачу."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "За останні два тижні не записано жодного листа."
+
+msgid "No limit"
+msgstr "Без обмежень"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "На цьому сайті не знайдено журналу іншого плагіна журналювання листів."
+
+msgid "No log of this plugin was found on this site."
+msgstr "На цьому сайті не знайдено журналу цього плагіна."
+
+msgid "No problem recipients."
+msgstr "Немає проблемних одержувачів."
+
+msgid "No problems found in this email."
+msgstr "У цьому листі проблем не знайдено."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Публічний домен відправника не знайдено (адреса сайту не є доменним ім'ям, а в журналі ще немає відправників)."
+
+msgid "No public sender domain to check"
+msgstr "Немає публічного домену відправника для перевірки"
+
+msgid "No regularly sent email has stopped"
+msgstr "Жоден регулярний лист не припинився"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Немає адреси для звітів (rua) – ви не бачитимете, хто надсилає від вашого імені."
+
+msgid "No sender address recorded"
+msgstr "Адресу відправника не записано"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Для цього запису трасування недоступне. Його записано до появи трасування або версією без нього."
+
+msgid "No unusual email failures"
+msgstr "Немає незвичних збоїв листів"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Ні, навмисно. «%1$s» для %2$s було затримано %3$s і не надіслано. Причина: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Ні. Усі регулярні листи надійшли за графіком."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Ні. «%1$s» для %2$s не вдалося надіслати %3$s. Причина: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Ні. «%1$s» для %2$s залишив ваш сайт %3$s, але %4$s повідомляє, що сервер одержувача його відхилив."
+
+msgid "None"
+msgstr "Немає"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Зазвичай надсилається щонайменше кожні %1$s дн., зараз запізнюється на %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Не всі селектори вдалося перевірити вчасно."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Не записано: в іншому плагіні було ввімкнено налагодження SMTP."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Не записано: протокол SMTP вимкнено в налаштуваннях."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Не записано: цей лист надіслано не через SMTP."
+
+msgid "Not set up"
+msgstr "Не налаштовано"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Не збережено: протоколи зберігаються лише для невдалих листів."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Ще ні. «%1$s» для %2$s залишив ваш сайт %3$s, але %4$s повідомляє про тимчасову проблему."
+
+msgid "Notes"
+msgstr "Примітки"
+
+msgid "Notes in the latest email: %s"
+msgstr "Примітки в останньому листі: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Примітки: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Примітки: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Сьогодні більше нічого не очікується."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "За останні 7 днів збоїв не було."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Поки що немає з чим порівнювати: жоден лист не надсилається достатньо регулярно, щоб Mailspur помітив перерву."
+
+msgid "Number of failed emails"
+msgstr "Кількість невдалих листів"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Числа ігноруються, тому «Замовлення #123» і «Замовлення #124» рахуються разом."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "З останніх листів (%1$s), надісланих, поки хтось чекав на сторінку, половина тривала довше за %2$s с (у середньому %3$s с)."
+
+msgid "Off"
+msgstr "Вимкнено"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Типово вимкнено. Без цього «Завантажити .eml» відтворює повідомлення із записаних (знеособлених) даних. Необроблене джерело містить посилання для скидання пароля та інші секрети точно в тому вигляді, як їх надіслано, – вмикайте лише за потреби, коли позначено обидва прапорці."
+
+msgid "Off – deliver emails normally"
+msgstr "Вимкнено – доставляти листи як зазвичай"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Коли причину буде усунено, ви зможете знову надіслати лист із журналу."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Коли звіти покажуть, що легітимні листи проходять перевірку, перейдіть на p=quarantine (або p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Один із двох листів було видалено або анонімізовано відповідно до налаштувань зберігання, тому їх більше не можна порівняти."
+
+msgid "Only administrators can empty the log."
+msgstr "Лише адміністратори можуть очищувати журнал."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Лише адміністратори можуть надсилати листи на інші адреси."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Попереджає лише тоді, коли останні 14 днів показують, що в цьому проміжку часу листи зазвичай надсилаються (щонайменше в 10 із 14 днів, зокрема в той самий день тижня), тож тихі ночі чи вихідні його не спрацьовують."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Лише листи, усі одержувачі яких є проблемними. Листи для скидання пароля надсилаються завжди; затримані листи все ще можна надіслати з журналу («Надіслати зараз»)."
+
+msgid "Only held emails can be released."
+msgstr "Звільнити можна лише затримані листи."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Відкритий список розсилки: зовнішні одержувачі (%1$s) бачать адреси одне одного"
+
+msgid "Open in log"
+msgstr "Відкрити в журналі"
+
+msgid "Open latest"
+msgstr "Відкрити останній"
+
+msgid "Open staging mode"
+msgstr "Відкрити тестовий режим"
+
+msgid "Open the email types"
+msgstr "Відкрити типи листів"
+
+msgid "Open the emergency brake"
+msgstr "Відкрити аварійне гальмо"
+
+msgid "Open the log"
+msgstr "Відкрити журнал"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Відкрийте журнал або режим налагодження свого поштового плагіна, щоб побачити точну помилку."
+
+msgid "Open the mail log"
+msgstr "Відкрити журнал листів"
+
+msgid "Open the sender check"
+msgstr "Відкрити перевірку відправника"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Необов'язково й типово вимкнено. Якщо ввімкнено, Mailspur регулярно перевіряє журнал і повідомляє вас про сплески збоїв, незвичну тишу або типи листів, що перестали надсилатися. Попередження надходять лише на адреси та вебхук, які ви тут вкажете; вони містять назву сайту, текст попередження (для типу листа, що перестав надсилатися: його відправника й шаблон теми) і посилання на журнал – ніколи не вміст листів чи одержувачів."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Необов'язково, лише https. URL-адреси вебхуків Slack і Discord отримують повідомлення в чат, будь-яка інша URL-адреса – запит JSON POST. Запит надсилає ваш сервер саме на цю URL-адресу – інші сервіси не залучаються."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Або додайте адресу як псевдонім / дозвіл «надсилати як» у свого поштового провайдера."
+
+msgid "Order #%s"
+msgstr "Замовлення #%s"
+
+msgid "Order data"
+msgstr "Дані замовлення"
+
+msgid "Origin"
+msgstr "Походження"
+
+msgid "Original Bcc"
+msgstr "Оригінальна Bcc"
+
+msgid "Original Cc"
+msgstr "Оригінальна Cc"
+
+msgid "Original recipients"
+msgstr "Оригінальні одержувачі"
+
+msgid "Other emails"
+msgstr "Інші листи"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Інші одержувачі (напр. гості)"
+
+msgid "Overview"
+msgstr "Огляд"
+
+msgid "Own top-level menu item"
+msgstr "Окремий пункт головного меню"
+
+msgid "PHP extension openssl is missing"
+msgstr "Відсутнє розширення PHP openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer готовий (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Посторінкова навігація"
+
+msgid "Password sent in plain text"
+msgstr "Пароль надіслано у відкритому вигляді"
+
+msgid "Path"
+msgstr "Шлях"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Номер платіжної картки у відкритому вигляді: %1$s"
+
+msgid "Per page"
+msgstr "На сторінку"
+
+msgid "Period"
+msgstr "Період"
+
+msgid "Personal data"
+msgstr "Персональні дані"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Phone number"
+msgstr "Номер телефону"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Ширина телефона (375 px). Якщо можна прокручувати вбік, лист ширший за більшість екранів телефонів."
+
+msgid "Plain text"
+msgstr "Звичайний текст"
+
+msgid "Please enter valid email addresses."
+msgstr "Введіть дійсні адреси ел. пошти."
+
+msgid "Plugin"
+msgstr "Плагін"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Плагін або тема, що надіслали лист."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Вказувати на проблеми, через які листи можуть не дійти або відображатися неправильно"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Postal address"
+msgstr "Поштова адреса"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo або Amazon SES можуть повідомляти цьому сайту, чи лист доставлено, повернено або позначено як спам. Статус показується в записаному листі, а жорсткі повернення враховуються для проблемних одержувачів. Щоб зіставляти звіти, Mailspur додає до вихідних листів службовий заголовок."
+
+msgid "Preparation"
+msgstr "Підготовка"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "Previews"
+msgstr "Попередні перегляди"
+
+msgid "Previous email"
+msgstr "Попередній лист"
+
+msgid "Previous email (k)"
+msgstr "Попередній лист (k)"
+
+msgid "Previous page"
+msgstr "Попередня сторінка"
+
+msgid "Print"
+msgstr "Друкувати"
+
+msgid "Privacy"
+msgstr "Конфіденційність"
+
+msgid "Privacy & security"
+msgstr "Конфіденційність і безпека"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Імовірно, так: %s тип листа більше не надсилається."
+msgstr[1] "Імовірно, так: %s типи листів більше не надсилаються."
+msgstr[2] "Імовірно, так: %s типів листів більше не надсилаються."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Тестові листи надсилаються лише адміністраторові."
+
+msgid "Problem"
+msgstr "Проблема"
+
+msgid "Problem recipients"
+msgstr "Проблемні одержувачі"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Захищає ваш домен, коли виходить набагато більше листів, ніж зазвичай, наприклад через спам-ботів, які зловживають контактною формою. Попередження використовують канали сповіщень моніторингу; листи для скидання пароля ніколи не затримуються."
+
+msgid "Provider status"
+msgstr "Статус провайдера"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Провайдери на кшталт %2$s публікують сувору політику DMARC. Лист «від імені» їхнього домену, надісланий вашим вебсервером, не проходить цю перевірку й відхиляється або потрапляє в спам."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Розміщуйте важливий вміст у вигляді справжнього тексту, а зображення використовуйте лише як доповнення."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Ставте важливу інформацію на початок і тримайте тему в межах приблизно 80 символів."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "Маршрут REST"
+
+msgid "Rarely"
+msgstr "Рідко"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Оцініть Mailspur на WordPress.org"
+
+msgid "Raw source"
+msgstr "Необроблене джерело"
+
+msgid "Reason"
+msgstr "Причина"
+
+msgid "Rebuild from the log"
+msgstr "Перебудувати з журналу"
+
+msgid "Recipient"
+msgstr "Одержувач"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Домен одержувача не може отримувати листи: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Домен одержувача не приймає листи: %1$s"
+
+msgid "Recipients"
+msgstr "Одержувачі"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Рекомендовано. Інакше будь-хто з доступом до журналу зможе скористатися записаним посиланням для скидання або паролем, щоб заволодіти обліковим записом. Під час повторного надсилання такого листа надсилається замаскована версія."
+
+msgid "Record for every email"
+msgstr "Записувати для кожного листа"
+
+msgid "Record for failed emails only"
+msgstr "Записувати лише для невдалих листів"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Записує обмін даними із сервером SMTP (лише коли листи надсилаються через SMTP). Дані входу та вміст повідомлення ніколи не записуються. Пропускається, поки в іншому плагіні ввімкнено налагодження SMTP."
+
+msgid "Recovery"
+msgstr "Відновлення"
+
+msgid "Redact secrets"
+msgstr "Приховувати секрети"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Переспрямовувати всі листи на адреси нижче"
+
+msgid "Redirect to"
+msgstr "Переспрямовувати на"
+
+msgid "Redirect to test addresses"
+msgstr "Переспрямувати на тестові адреси"
+
+msgid "Redirected by staging mode."
+msgstr "Переспрямовано тестовим режимом."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Зменште HTML: видаліть невикористаний CSS, повторювані вбудовані стилі, коментарі й довгі URL-адреси відстеження. Зображення не враховуються, лише сам HTML."
+
+msgid "Registered users"
+msgstr "Зареєстровані користувачі"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Відхилено через SPF, DKIM або DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Відносні посилання або зображення (%1$s), напр. %2$s"
+
+msgid "Release held emails"
+msgstr "Звільнити затримані листи"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Звільнено з тестового режиму (затриманий запис #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Звільнено з аварійного гальма (затриманий запис #%s)."
+
+msgid "Remote content"
+msgstr "Зовнішній вміст"
+
+msgid "Remote content is loaded."
+msgstr "Зовнішній вміст завантажено."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Зовнішні зображення та шрифти заблоковано, щоб відправники не могли відстежити, коли ви відкриваєте цей запис."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Видалити всі записи, імпортовані з %s? Дані в іншому плагіні не зміняться."
+
+msgid "Remove imported entries"
+msgstr "Видалити імпортовані записи"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Приберіть поле картки зі сповіщення форми або плагіна, що надіслали цей лист, – дані картки має отримувати лише платіжний провайдер. Показуйте щонайбільше останні чотири цифри. Попросіть одержувача видалити лист."
+
+msgid "Removed:"
+msgstr "Видалено:"
+
+msgid "Repeat alerts after"
+msgstr "Повторювати попередження через"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Відповіді не дійдуть до вас: надіслано з %1$s без Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Повідомлено вашим поштовим провайдером за останні 30 днів; враховуються лише листи, про які він повідомив."
+
+msgid "Request"
+msgstr "Запит"
+
+msgid "Request failed: %s"
+msgstr "Помилка запиту: %s"
+
+msgid "Resend"
+msgstr "Надіслати повторно"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Повторно надішліть лист із журналу за кілька хвилин."
+
+msgid "Resend the email from the log later."
+msgstr "Повторно надішліть лист із журналу пізніше."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Повторно надішліть лист із журналу, щойно доставка запрацює."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Повторно надішліть невдалі листи, щойно ліміт буде скинуто."
+
+msgid "Resent from log"
+msgstr "Повторно надіслано з журналу"
+
+msgid "Reset filters"
+msgstr "Скинути фільтри"
+
+msgid "Result"
+msgstr "Результат"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Результат із кешу – після зміни записів DNS скористайтеся «Перевірити знову»."
+
+msgid "Retention"
+msgstr "Строк зберігання"
+
+msgid "Retention in the log"
+msgstr "Зберігання в журналі"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Термін зберігання для цього типу листа збережено. Він застосується під час наступного щоденного очищення."
+
+msgid "Review held emails"
+msgstr "Переглянути затримані листи"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Перегляньте примітки до цього листа (посилання, відправник, заповнювачі)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Відкличте ключ у панелі керування сервісу й створіть новий. Потім з’ясуйте, як він потрапив у лист (звіти налагодження чи про помилки, форма, яка виводить налаштування), і усуньте причину."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Відкликані ключі (порожнє p=): %s."
+
+msgid "Rhythm"
+msgstr "Ритм"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Виконайте пошук і заміну старого домену в базі даних і перевірте жорстко прописані URL-адреси в шаблонах листів і налаштуваннях плагінів."
+
+msgid "Run the full sender check"
+msgstr "Запустити повну перевірку відправника"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH вимкнено в Microsoft 365"
+
+msgid "SMTP host"
+msgstr "Хост SMTP"
+
+msgid "SMTP login failed"
+msgstr "Не вдалося увійти в SMTP"
+
+msgid "SMTP transcript"
+msgstr "Протокол SMTP"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "Запис SPF дозволяє будь-якому серверу у світі надсилати від імені цього домену (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "Запис SPF закінчується на ?all (нейтрально): він не захищає домен від підробки."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "Знайдено запис SPF (redirect= на іншу політику)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "Знайдено запис SPF. Інші сервери позначаються як підозрілі (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "Знайдено запис SPF. Інші сервери відхиляються (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "Запис SPF не має терміна «all», тому листи з інших серверів вважаються нейтральними."
+
+msgid "Saturday"
+msgstr "Субота"
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Збережено – залиште порожнім, щоб не змінювати"
+
+msgid "Scheduled for later today:"
+msgstr "Заплановано на пізніше сьогодні:"
+
+msgid "Search recipient or subject"
+msgstr "Пошук за одержувачем або темою"
+
+msgid "Search recipient or subject …"
+msgstr "Пошук за одержувачем або темою …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Знайдіть стару адресу в шаблоні листа, налаштуваннях плагінів і базі даних (напр. після перенесення сайту) і замініть її робочим доменом."
+
+msgid "See why"
+msgstr "Дізнатися чому"
+
+msgid "Seen"
+msgstr "Переглянуто"
+
+msgid "Select all"
+msgstr "Вибрати все"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Селектор «%s» також не має ключа."
+
+msgid "Send"
+msgstr "Надіслати"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Натомість надсилайте посилання, за яким користувач сам задає пароль, – саме так робить лист ядра WordPress для нових користувачів. Знайдіть у плагіні, що надіслав цей лист, опцію на кшталт «Надіслати пароль листом» або «Додати пароль» і вимкніть її."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Надсилати повідомлення, коли проблему усунено"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Надішліть тестовий лист із налаштувань поштового плагіна."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Надсилати щотижневий звіт про листи на адреси вище"
+
+msgid "Send again"
+msgstr "Надіслати знову"
+
+msgid "Send alerts by email to"
+msgstr "Надсилати попередження ел. поштою на"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Надіслати всі затримані листи (%s) їхнім оригінальним одержувачам зараз?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Надсилайте великі файли як посилання для завантаження, а не як вкладення."
+
+msgid "Send latest to me"
+msgstr "Надіслати останній мені"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Надсилайте розсилки за допомогою плагіна чи сервісу розсилок, який додає заголовки List-Unsubscribe і List-Unsubscribe-Post, і не надсилайте один лист багатьом людям через Bcc."
+
+msgid "Send now"
+msgstr "Надіслати зараз"
+
+msgid "Send report now"
+msgstr "Надіслати звіт зараз"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Надсилайте такі листи кожному одержувачу окремо або додавайте одержувачів у Bcc. Для розсилок використовуйте плагін, який надсилає окремий лист кожному одержувачу. Якщо було розкрито адреси клієнтів, з’ясуйте з відповідальним за захист даних, чи потрібно повідомляти про інцидент."
+
+msgid "Send test alert"
+msgstr "Надіслати тестове попередження"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Надсилайте лист із заголовком «Content-Type: text/html; charset=UTF-8» або задайте тип вмісту за допомогою фільтра wp_mail_content_type. Багато плагінів форм і магазинів мають опцію «HTML-лист»."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Надіслати останній лист цього типу на %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Надіслати цей лист повторно на %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Надіслати цей лист на (до 10 адрес через кому):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Надіслати цей затриманий лист на %s зараз? Для цього одного листа тестовий режим буде обійдено."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Надсилайте через надійний SMTP-сервіс замість вебсервера, особливо на віртуальному хостингу."
+
+msgid "Send to…"
+msgstr "Надіслати на…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Перевірка відправника (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Домен відправника %1$s відрізняється від домену сайту (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Домен відправника (SPF і DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Домен або адресу відправника не підтверджено"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Відправник %s з останніх 200 листів"
+
+msgid "Sending failed – see the log."
+msgstr "Не вдалося надіслати – див. журнал."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Не вдалося надіслати – подробиці в новому записі журналу."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Надсилання у фоновому режимі (поштовий плагін із чергою) дає змогу сторінці завантажитися без очікування."
+
+msgid "Sending limit or quota reached"
+msgstr "Досягнуто ліміту надсилання або квоти"
+
+msgid "Sending report …"
+msgstr "Надсилання звіту …"
+
+msgid "Sending test alert …"
+msgstr "Надсилання тестового попередження …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Надсилання знову працює: сплеску збоїв більше немає."
+
+msgid "Sending…"
+msgstr "Надсилання…"
+
+msgid "Sent"
+msgstr "Надіслано"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Надіслано від імені безкоштовної поштової адреси: %1$s"
+
+msgid "Sent by"
+msgstr "Ким надіслано"
+
+msgid "Sent by WP-Cron."
+msgstr "Надіслано через WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Надіслано подією cron %1$s – вона запізнюється на %2$s, хоча WP-Cron виконує інші події; можливо, вона завершується з помилкою."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Надіслано подією cron %1$s – її заплановано (наступний запуск через %2$s), і WP-Cron працює, отже, подія більше не надсилає цей лист."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Надіслано подією cron %s – цю подію більше не заплановано."
+
+msgid "Sent by the cron event %s."
+msgstr "Надіслано подією cron %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Надіслано повторно: ще ідентичних листів – %1$s за %2$s хв"
+
+msgid "Sent to %s."
+msgstr "Надіслано на %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Надіслано на ту саму адресу приблизно в дату замовлення, але не пов'язано з цим замовленням (наприклад, записано до появи зв'язку або імпортовано)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Укажіть адресу Reply-To, яку хтось читає, напр. у WooCommerce → Налаштування → Листи або в налаштуваннях листів свого плагіна форм. Або надсилайте з адреси, яка може отримувати відповіді."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Укажіть адресу відправника на своєму домені в SMTP-плагіні або через фільтр wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Укажіть адресу відправника на своєму справжньому домені, напр. у SMTP-плагіні або через фільтр wp_mail_from, і перевірте адресу сайту в розділі Налаштування → Загальні."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Задайте тему в шаблоні або налаштуваннях форми плагіна, що надсилає лист."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Укажіть у SMTP-плагіні як адресу From поштову скриньку, з якою ви входите, і ввімкніть «примусову адресу From»."
+
+msgid "Set up staging mode"
+msgstr "Налаштувати тестовий режим"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Settings › Discussion"
+msgstr "Налаштування › Обговорення"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Кілька знаків оклику типові для рекламного спаму. Спам-фільтри можуть урахувати це проти листа, що може погіршити доставку."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Кілька останніх листів цього типу не вдалося надіслати."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Частка невдалих листів за день (за тиждень для довгих періодів)."
+
+msgid "Shop managers and above"
+msgstr "Менеджери магазину й вище"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Скорочені посилання приховують, куди вони ведуть. Спамери часто ними користуються, тому спам-фільтри можуть урахувати їх проти листа, що може погіршити доставку."
+
+msgid "Show all email types"
+msgstr "Показати всі типи листів"
+
+msgid "Show all in Mail Log"
+msgstr "Показати всі в журналі листів"
+
+msgid "Show as"
+msgstr "Показати як"
+
+msgid "Show data as table"
+msgstr "Показати дані таблицею"
+
+msgid "Show email types"
+msgstr "Показати типи листів"
+
+msgid "Show emails"
+msgstr "Показати листи"
+
+msgid "Show emails for %s in the log"
+msgstr "Показати листи за %s у журналі"
+
+msgid "Show failed emails"
+msgstr "Показати невдалі листи"
+
+msgid "Show held emails"
+msgstr "Показати затримані листи"
+
+msgid "Show these emails in the log"
+msgstr "Показати ці листи в журналі"
+
+msgid "Silence"
+msgstr "Тиша"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Імітація темного режиму на основі власних стилів темного режиму листа. Кожна поштова програма обробляє темний режим трохи по-своєму."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Імітація програм, які примусово вмикають темний режим, інвертуючи кольори. Зображення зберігають свої кольори; реальні програми відрізняються в деталях."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "З 2024 року Gmail і Yahoo вимагають для масових розсилок відписки одним кліком (заголовок List-Unsubscribe). Без нього розсилки частіше відхиляються або фільтруються."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Поодинокі збої, наприклад через помилку в адресі, – це нормально."
+
+msgid "Some emails could not be sent recently"
+msgstr "Останнім часом деякі листи не вдалося надіслати"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Деякі запити пропущено, бо DNS відповідав надто повільно."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Вибачте, вам не дозволено переглядати цю сторінку."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Вибачте, вам не дозволено це робити."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Вибачте, вам не дозволено експортувати журнал листів."
+
+msgid "Source"
+msgstr "Джерело"
+
+msgid "Staging"
+msgstr "Тестування"
+
+msgid "Staging mode"
+msgstr "Тестовий режим"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Тестовий режим активний: усі листи переспрямовуються на %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Тестовий режим активний: листи записуються в журнал, але не доставляються."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Тестовий режим активний: листи мають переспрямовуватися, але дійсну адресу переспрямування не задано – усі листи затримуються й не доставляються."
+
+msgid "Staging mode is off"
+msgstr "Тестовий режим вимкнено"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Тестовий режим увімкнено, хоча це робочий сайт"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Тестовий режим увімкнено для цього тестового сайту"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Тестовий режим увімкнено: усі листи надходять на ваші тестові адреси, а не справжнім одержувачам."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Тестовий режим увімкнено: листи записуються в журнал, але не надсилаються."
+
+msgid "Staging mode settings"
+msgstr "Налаштування тестового режиму"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Почніть із p=none, щоб отримувати звіти, а коли SPF і DKIM проходитимуть, посильте до quarantine або reject."
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "У фоновому режимі ще розподіляються за типами старіші листи (%s). Перезавантажте сторінку за хвилину."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Припинити об’єднання (надсилає очікувані листи зараз)"
+
+msgid "Stop these emails"
+msgstr "Зупинити ці листи"
+
+msgid "Stopped"
+msgstr "Припинився"
+
+msgid "Stopped by Mailspur."
+msgstr "Зупинено Mailspur."
+
+msgid "Stopped email types"
+msgstr "Типи листів, що більше не надсилаються"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Зберігати точне необроблене MIME-джерело кожного листа"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Subject mostly in capital letters"
+msgstr "Тема переважно великими літерами"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Теми великими літерами сприймаються як крик і поширені в спамі. Спам-фільтри можуть урахувати це проти листа, що може погіршити доставку."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Теми часто містять імена або номери замовлень."
+
+msgid "Suggested TXT record for %s"
+msgstr "Рекомендований запис TXT для %s"
+
+msgid "Sunday"
+msgstr "Неділя"
+
+msgid "Supported: %s."
+msgstr "Підтримуються: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Вимкніть це в %1$s: «%2$s»."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Вилучено зі щоденного дайджесту й надіслано окремо."
+
+msgid "Temporary rejection – try again later"
+msgstr "Тимчасова відмова – спробуйте пізніше"
+
+msgid "Test"
+msgstr "Тест"
+
+msgid "Test alert"
+msgstr "Тестове попередження"
+
+msgid "Text changes"
+msgstr "Зміни тексту"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Текстова версія, отримана з HTML. Чи мав лист власну версію звичайним текстом, не записано."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Це нормально, якщо вашому поштовому серверу дозволено надсилати від імені цього домену. Інакше перевірки SPF і DMARC не пройдуть, і лист потрапить у спам."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Для тестової копії це правильно, але на робочому сайті клієнти не отримують підтверджень замовлень, скидань пароля чи відповідей на свої форми. Вимкніть тестовий режим, якщо це робочий сайт."
+
+msgid "The API key was rejected"
+msgstr "Ключ API відхилено"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "Запит DNS не вдався або перевищив час очікування. Спробуйте перевірку відправника пізніше."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "HTML-лист містить зображення, але майже не містить тексту. Спам-фільтри не можуть читати зображення й не довіряють таким листам, що може погіршити доставку. Якщо поштовий клієнт блокує зображення, читач бачить майже порожній лист."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "Обліковий запис SMTP може надсилати лише зі своєї адреси (або підтверджених псевдонімів). WordPress або плагін використав іншу адресу From."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Обмін даними із сервером SMTP був порожнім."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "До сервера SMTP взагалі не вдалося під’єднатися: неправильне ім’я хоста чи порт, сервер не працює або хостинг-провайдер блокує вихідні поштові порти."
+
+msgid "The SMTP server refuses to relay"
+msgstr "Сервер SMTP відмовляється пересилати лист"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "Сервер SMTP відхилив ім’я користувача або пароль (код відповіді 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "Сервер SMTP вимагає входу або шифрування"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Схоже, адреса недійсна – перевірте її на помилки або попросіть іншу."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Тіло листа містить HTML-теги, але лист надіслано як text/plain (типово у WordPress). Одержувачі бачать необроблені теги замість відформатованого тексту."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "З’єднання або передавання тривало надто довго. Зазвичай брандмауер мовчки розриває з’єднання або хост і порт неправильні."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Типова адреса відправника не має публічного домену, або цей сервер не може запитувати записи DNS."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Домен не має в DNS ні запису MX, ні запису A. Листи на нього повертаються. Зазвичай адресу написано з помилкою або домену більше не існує."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Домен публікує запис «null MX», який прямо вказує, що він не отримує листів. Кожен лист на нього повертається."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "API пошти відповідає повільно: перевірте регіон або кінцеву точку, налаштовані у вашому поштовому плагіні."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "Лист надіслано з адреси no-reply, і він не має заголовка Reply-To. Коли клієнт натискає «Відповісти», відповідь іде на адресу, яку ніхто не читає, або повертається."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "Лист містить пароль у читабельному вигляді. Листи роками зберігаються в поштових скриньках, резервних копіях і пересланих ланцюжках – будь-хто, хто отримає доступ до одного з них, зможе увійти. Журнал листів теж його зберігає, якщо не ввімкнено «Приховувати секрети» (тоді журнал зберігає замасковану копію, але одержувач усе одно отримав пароль)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Лист містить ключ доступу (напр. для Stripe, GitHub, Slack, AWS, Google чи SendGrid) або приватний ключ. Будь-хто, хто прочитає лист – зараз чи через роки в поштовій скриньці або резервній копії, – зможе ним скористатися. Журнал листів теж його зберігає, якщо не ввімкнено «Приховувати секрети»."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "Лист містить змінні шаблону, які не було заповнено. Одержувачі бачать їх як є."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Лист містить щось схоже на повний номер платіжної картки (він проходить перевірку контрольної цифри). Номери карток ніколи не можна надсилати електронною поштою (PCI DSS): поштові скриньки зберігають їх роками. Журнал листів теж його зберігає, якщо не ввімкнено «Приховувати секрети»."
+
+msgid "The email is too large"
+msgstr "Лист завеликий"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "Лист містить посилання на файли WordPress на спорідненому хості. Зазвичай так буває на тестовій копії, що досі містить URL-адреси робочого сайту, – або навпаки."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "Лист містить посилання на адресу на цьому сайті, яка відповідає «сторінку не знайдено» (404). Зазвичай так буває після перейменування чи видалення сторінки або товару: шаблон досі вказує на стару адресу, і кожен одержувач потрапляє на сторінку помилки."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Типи листів перебудовуються з журналу."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "Лист надіслано кільком людям поза вашим доменом у полях To або Cc. Кожен одержувач бачить усі інші адреси. Якщо йдеться про клієнтів чи учасників, це розкриває персональні дані стороннім особам – за GDPR це зазвичай порушення захисту даних."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "Лист «%1$s» для %2$s від %3$s о %4$s було ненадовго затримано перевіркою безпеки на нашому боці, а потім надіслано. Будь ласка, перевірте також папку «Спам»."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "Лист «%1$s» для %2$s від %3$s о %4$s було затримано перевіркою безпеки на нашому боці, і його не надіслано. Ми надішлемо його ще раз."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "Лист «%1$s» для %2$s від %3$s о %4$s не надіслано, оскільки на той час надсилання листів на нашому боці було призупинено. Ми надішлемо його ще раз."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "Лист «%1$s» для %2$s %3$s о %4$s не вдалося доставити. Ми надішлемо його ще раз."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "Лист «%1$s» для %2$s створено %3$s о %4$s, але ми не можемо підтвердити, чи його доставлено. Ми перевіримо це й за потреби надішлемо його ще раз."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "Лист «%1$s» надіслано на %2$s %3$s о %4$s, і поштовий сервер його прийняв. Будь ласка, перевірте також папку «Спам»."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Аварійне гальмо затримує вихідні листи, доки ви їх не звільните або не відхилите."
+
+msgid "The emergency brake is holding emails"
+msgstr "Аварійне гальмо затримує листи"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Аварійне гальмо не затримує жодних листів"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Аварійне гальмо ввімкнено: ваш сайт раптово надіслав набагато більше листів, ніж зазвичай."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Аварійне гальмо помітило незвичну кількість листів протягом однієї години. Можливо, хтось зловживає контактною формою. Листи все ще надсилаються."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Точне необроблене джерело збережено – «Завантажити .eml» повертає його без змін (не знеособлено)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Усі останні %s листів не вдалося надіслати. Можливо, надсилання з цього сайту не працює, наприклад через неправильний вхід SMTP або поштовий сервіс, який відмовляє сайту. Клієнти можуть не отримувати підтверджень замовлень чи скидань пароля."
+
+msgid "The latest emails could not be sent"
+msgstr "Останні листи не вдалося надіслати"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Журнал зберігає листи %s день."
+msgstr[1] "Журнал зберігає листи %s дні."
+msgstr[2] "Журнал зберігає листи %s днів."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Журнал показує причину для кожного невдалого листа."
+
+msgid "The mail log requires JavaScript."
+msgstr "Для журналу листів потрібен JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Поштовий сервер не відповів вчасно"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Поштовий сервер тимчасово недоступний"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Поштовий сервер відхилив лист через розмір (код відповіді 552). Під час кодування вкладення збільшуються приблизно на третину."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Поштовий сервіс надсилає лише з доменів або адрес, які ви там підтвердили."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Поштовий сервіс або скринька відмовилися приймати нові листи, бо досягнуто ліміту частоти, денної квоти або ліміту тарифу."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Поштовий сервіс відхилив запит, бо ключ API неправильний, прострочений, відкликаний або не має дозволу на надсилання."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Поштовий плагін повідомив про збій"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Політика застосовується лише до %s%% листів (pct)."
+
+msgid "The reason: %s."
+msgstr "Причина: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Сервер-одержувач попросив повторити спробу пізніше (код відповіді 450/451/452): сірий список, переповнена скринька або забагато листів за короткий час."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Сервер-одержувач не зміг підтвердити, що ваш сервер має право надсилати від імені домену відправника."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Сервер-одержувач не знає цієї поштової скриньки (код відповіді 550 / 5.1.1) – адресу написано з помилкою або її більше не існує."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Сервер одержувача ще може прийняти його під час наступної спроби."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Сервер-одержувач відхилив лист через його вміст або тому, що IP-адреса сервера-відправника є в чорному списку."
+
+msgid "The recipient address was rejected"
+msgstr "Адресу одержувача відхилено"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Домен одержувача не приймає листів (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Домен одержувача не має поштового сервера"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Домен одержувача схожий на помилкове написання популярного поштового провайдера. Такі листи повертаються – або потрапляють до незнайомця, який зареєстрував домен із помилкою."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Лист з тією самою темою кілька разів за короткий час надійшов тим самим одержувачам. Типові причини: подвійні підтвердження замовлень, форма, надіслана двічі, паралельний запуск завдання cron або цикл у плагіні."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Не вдалося встановити захищене з’єднання із сервером SMTP: сертифікат не відповідає імені хоста, термін його дії минув або сервер не підтримує вибране шифрування."
+
+msgid "The sender address is not allowed"
+msgstr "Адреса відправника не дозволена"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Перевірка відправника виявила проблему з %s. Листи можуть потрапляти в спам."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Домен відправника %s має записи SPF і DMARC"
+
+msgid "The sender domain could not be checked"
+msgstr "Не вдалося перевірити домен відправника"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Відправник не має публічного домену (напр. wordpress@localhost). Більшість поштових серверів відхиляють такі листи або переносять їх у спам."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Сервер не може надсилати листи через PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Сервер закрив з’єднання (код відповіді 421), напр. через технічне обслуговування, перевантаження або забагато з’єднань із вашого сервера."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Сервер не пересилає для вас листи, зазвичай тому, що ви не ввійшли або адреса відправника не належить до облікового запису."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Сервер приймає листи лише після автентифікації або після переходу на шифроване з’єднання (код відповіді 530)."
+
+msgid "The server rejected the content"
+msgstr "Сервер відхилив вміст"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Локальна поштова програма сервера відповідає повільно: плагін надсилання через SMTP або API натомість передає листи провайдеру."
+
+msgid "The start date must not be after the end date."
+msgstr "Дата початку не може бути пізнішою за дату завершення."
+
+msgid "The statistics require JavaScript."
+msgstr "Для статистики потрібен JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Текст той самий; змінилося лише оформлення. Порівняйте попередні перегляди."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Ім’я користувача зазвичай є повною адресою ел. пошти. Стежте, щоб разом із паролем не скопіювалися пробіли."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "URL-адресу вебхука видалено: дозволено лише дійсні URL-адреси https."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Щотижневий звіт увімкнено, але одержувача не задано: введіть адресу ел. пошти в полі «Надсилати попередження ел. поштою на»."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Ці листи знову надсилаються; їхній тип листа знову відстежується."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Ці види листів не надсилалися довше, ніж зазвичай. Причиною може бути оновлення плагіна, змінене налаштування або завислe заплановане завдання."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Цей лист має власну версію звичайним текстом, але журнал її не зберігає. Тут показано текстову версію, отриману з HTML."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Цей лист не має власних стилів темного режиму. Одні програми показують його без змін, інші перефарбовують – див. «Примусово темна»."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Цей лист не має версії звичайним текстом – деякі поштові клієнти та спам-фільтри надають їй перевагу. Тут показано текстову версію, отриману з HTML."
+
+msgid "This email type has no content change."
+msgstr "Цей тип листа не має змін вмісту."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Цей тип листа тепер ігнорується: без статусу, без сповіщень."
+
+msgid "This email type is monitored again."
+msgstr "Цей тип листа знову відстежується."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Цей запис анонімізовано; його вміст більше не можна надіслати."
+
+msgid "This import is already running in another tab."
+msgstr "Цей імпорт уже виконується в іншій вкладці."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Це тестове попередження. Ваші канали попереджень працюють."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Цей робочий сайт надіслав посилання на локальну або тестову адресу. Одержувачі не зможуть його відкрити."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Для цього питання потрібен JavaScript. Натомість можна виконати пошук у журналі."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Цей сайт веде журнал листів, які він надсилає (одержувач, тема, вміст і статус доставки), щоб перевіряти доставку та усувати проблеми. Записи журналу автоматично видаляються після налаштованого строку зберігання."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Цей сайт працює як середовище %s, і тестовий режим не дає його листам потрапляти до справжніх людей."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Цей сайт працює як середовище %s. Увімкніть тестовий режим, щоб жоден справжній клієнт не отримав із нього листа."
+
+msgid "Threshold (emails per hour)"
+msgstr "Поріг (листів на годину)"
+
+msgid "Thursday"
+msgstr "Четвер"
+
+msgid "Timeline"
+msgstr "Хронологія"
+
+msgid "To"
+msgstr "Кому"
+
+msgid "To date"
+msgstr "До дати"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Щоб зберегти їх, але отримувати лише один лист на день, виберіть «Об’єднувати в один щоденний лист» у меню … цього типу."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Топ-списки складено на основі останніх %s листів цього періоду."
+
+msgid "Top recipient domains"
+msgstr "Найчастіші домени одержувачів"
+
+msgid "Top recipients: %s"
+msgstr "Найчастіші одержувачі: %s"
+
+msgid "Top sources"
+msgstr "Найчастіші джерела"
+
+msgid "Top subjects"
+msgstr "Найчастіші теми"
+
+msgid "Total"
+msgstr "Усього"
+
+msgid "Total: %s ms"
+msgstr "Загалом: %s мс"
+
+msgid "Trace"
+msgstr "Трасування"
+
+msgid "Transcript copied."
+msgstr "Протокол скопійовано."
+
+msgid "Transport"
+msgstr "Транспорт"
+
+msgid "Trigger"
+msgstr "Запустити"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Запустити справжній лист для скидання пароля для власного облікового запису? WordPress створить для вас нове посилання для скидання, тож попередні посилання перестануть працювати; ваш пароль не зміниться. Його отримає лише %s."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Запустити сповіщення про нового користувача для власного облікового запису (повідомлення адміністраторові та дані для входу)? WordPress створить для вас нове посилання для встановлення пароля, тож попередні посилання перестануть працювати. Користувача не буде створено; їх отримає лише %s."
+
+msgid "Trigger to me"
+msgstr "Надіслати тест мені"
+
+msgid "Triggering…"
+msgstr "Запуск…"
+
+msgid "Tuesday"
+msgstr "Вівторок"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Типи оновлюються щогодини та щоразу, коли ви відкриваєте цю сторінку. Зберігаються лише лічильники, шаблони тем і відбитки вмісту (без одержувачів і вмісту), і на них поширюється термін зберігання журналу."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Помилка в домені одержувача? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Літери з діакритикою або лапки відображаються як незрозумілі символи, напр. «Ã¤» чи «â€™». Десь на шляху – у шаблоні, імпорті чи базі даних – текст UTF-8 було прочитано в іншому кодуванні."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Незрозуміло. «%1$s» для %2$s передано на надсилання %3$s, але Mailspur не отримав результату."
+
+msgid "Under Tools"
+msgstr "У розділі «Інструменти»"
+
+msgid "Uninstall"
+msgstr "Видалення"
+
+msgid "Unknown"
+msgstr "Невідомо"
+
+msgid "Unknown probe."
+msgstr "Невідомий тестовий лист."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Невідомо: результат доставки не повідомлено (функцію wp_mail() замінено?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Незамінені заповнювачі: %1$s"
+
+msgid "Until the log limit"
+msgstr "До ліміту журналу"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "До 10 адрес через кому. Cc і Bcc видаляються, а в темі показуються оригінальні одержувачі. Без дійсної адреси листи натомість затримуються."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "До 5 адрес через кому. Листи-попередження з'являються в журналі з джерелом «Попередження Mailspur» і самі ніколи не викликають попереджень."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Оновіть посилання в шаблоні листа або в налаштуваннях плагіна, що надсилає цей лист, або додайте переспрямування зі старої адреси на нову сторінку (напр. за допомогою плагіна переспрямувань)."
+
+msgid "Updated in between: %s"
+msgstr "Оновлено в проміжку: %s"
+
+msgid "Updated since the last one:"
+msgstr "Оновлено після останнього:"
+
+msgid "Updated since then: %s."
+msgstr "Відтоді оновлено: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Використовуйте TLS на порту 587 або SSL на порту 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Використовуйте змістовний текст посилання (напр. «Переглянути замовлення») або показуйте адресу, на яку посилання насправді веде."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Використовуйте адресу відправника на власному домені, а безкоштовну адресу вкажіть у Reply-To. Це прийнятно, лише якщо ви справді надсилаєте через власний SMTP-сервер цього провайдера з його обліковими даними."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Використовуйте абсолютні URL-адреси з https:// і доменом, напр. за допомогою home_url() або wp_get_attachment_url() у шаблоні."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Використовуйте саме те ім’я хоста, для якого видано сертифікат (напр. хост smtp.… провайдера замість IP-адреси чи власного домену)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Використовуйте щонайбільше один знак оклику."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Використовуйте клавіші зі стрілками для переходу між клітинками."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Використовуйте клавіші зі стрілками для переходу між значеннями й Enter, щоб відкрити їх у журналі."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Використовуйте адресу поштової скриньки облікового запису SMTP як відправника (From)."
+
+msgid "User"
+msgstr "Користувач"
+
+msgid "User: %s"
+msgstr "Користувач: %s"
+
+msgid "Username"
+msgstr "Ім'я користувача"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Використовує збережені налаштування – спершу збережіть зміни."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Підтвердьте домен відправника в поштовому сервісі (додайте його DNS-записи) або використовуйте вже підтверджену адресу відправника."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Дуже ймовірно. «%1$s» надіслано для %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Дуже довга тема (символів: %1$s)"
+
+msgid "View"
+msgstr "Переглянути"
+
+msgid "View %s failed emails"
+msgstr "Переглянути невдалі листи (%s)"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron не запускався вже %s (задано DISABLE_WP_CRON – перевірте завдання cron на сервері)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron не запускався вже %s – він запускається лише тоді, коли сайт відвідують, або завершується з помилкою."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron працює нормально."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Очікує на щоденний дайджест – окремо не надсилається."
+
+msgid "Waits %s s for the mail server"
+msgstr "Очікує на поштовий сервер %s с"
+
+msgid "Warnings"
+msgstr "Попередження"
+
+msgid "Webhook URL"
+msgstr "URL-адреса вебхука"
+
+msgid "Webhook signing key"
+msgstr "Ключ підпису вебхука"
+
+msgid "Webhook: %s"
+msgstr "Вебхук: %s"
+
+msgid "Wednesday"
+msgstr "Середа"
+
+msgid "Week"
+msgstr "Тиждень"
+
+msgid "Week of %s"
+msgstr "Тиждень від %s"
+
+msgid "Weekday"
+msgstr "День тижня"
+
+msgid "Weekly"
+msgstr "Щотижня"
+
+msgid "Weekly email report"
+msgstr "Щотижневий звіт про листи"
+
+msgid "Weekly report"
+msgstr "Щотижневий звіт"
+
+msgid "What to do"
+msgstr "Що робити"
+
+msgid "When emails are sent"
+msgstr "Коли надсилаються листи"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Коли надсилається набагато більше листів, ніж зазвичай, аварійне гальмо попереджає вас і може затримувати подальші листи."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Коли вимкнено, пікселі відстеження не можуть визначити, коли ви відкриваєте запис. Ви все одно можете завантажити зовнішній вміст для окремого листа. Скрипти й форми завжди блокуються."
+
+msgid "Who can view the log"
+msgstr "Хто може переглядати журнал"
+
+msgid "Why did an email fail?"
+msgstr "Чому не вдалося надіслати лист?"
+
+msgid "With attachments"
+msgstr "З вкладеннями"
+
+msgid "With notes"
+msgstr "З примітками"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Без цих записів DNS поштові провайдери не можуть перевірити, що ваш сайт має право надсилати листи від імені цього домену, тому листи частіше потрапляють у спам. Перевірка відправника пропонує записи, які можна додати в реєстратора домену."
+
+msgid "WooCommerce email"
+msgstr "Лист WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Налаштування › Листи"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "Листи ядра WordPress не мають редактора; їх можна змінити за допомогою фільтрів."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress не надіслав листа – можливо, плагін вимкнув цей лист."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "У WordPress немає налаштування для цього листа. Mailspur може зупинити повідомлення адміністраторам; новий користувач усе одно отримає свій лист."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "У WordPress немає налаштування для цього листа. Mailspur може зупинити повідомлення про успішні автоматичні оновлення; повідомлення про невдалі оновлення й далі надходитимуть."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "Типово WordPress надсилає листи через функцію PHP mail(). На цьому сервері її вимкнено або не встановлено поштову програму (sendmail) – це поширено на локальних середовищах, у Docker і на багатьох керованих хостингах."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Пишіть тему звичайними великими й малими літерами й виділяйте щонайбільше одне слово."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Так, але, за даними %4$s, одержувач позначив «%1$s» для %2$s (%3$s) як спам."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Так. «%1$s» надіслано для %2$s %3$s, і %4$s підтвердив доставку."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Ви ще можете надіслати його з журналу («Надіслати зараз»)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Ви отримуєте цей дайджест, тому що в Mailspur ці типи листів об’єднано в один щоденний лист. Кожен лист залишається в журналі."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Ви отримуєте цей лист, оскільки в налаштуваннях Mailspur цього сайту ввімкнено попередження моніторингу."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Ви отримуєте цей лист, оскільки в налаштуваннях Mailspur цього сайту ввімкнено щотижневий звіт. Він містить лише кількості й шаблони тем – жодного вмісту листів чи одержувачів."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Ваш селектор DKIM (необов'язково)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "За останні 7 днів ваш сайт не надіслав жодного листа."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] Сповіщення (%2$s): %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 сповіщення: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Щотижневий звіт про листи %2$s"
+
+msgid "address"
+msgstr "адреса"
+
+msgid "and %s more"
+msgstr "і ще %s"
+
+msgid "and %s more – see the log"
+msgstr "і ще %s – див. журнал"
+
+msgid "another plugin stopped it"
+msgstr "інший плагін зупинив його"
+
+msgid "code"
+msgstr "код"
+
+msgid "date"
+msgstr "дата"
+
+msgid "days"
+msgstr "днів"
+
+msgid "deleted after %s days"
+msgstr "видаляються через %s дн."
+
+msgid "emails to this address failed several times before"
+msgstr "листи на цю адресу вже кілька разів не вдавалося надіслати"
+
+msgid "entries"
+msgstr "записів"
+
+msgid "failing"
+msgstr "з помилками"
+
+msgid "failure spikes"
+msgstr "сплески збоїв"
+
+msgid "first seen %s"
+msgstr "уперше помічено %s"
+
+msgid "from a new sender"
+msgstr "від нового відправника"
+
+msgid "holding emails right now"
+msgstr "зараз затримує листи"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "зберігаються, доки їх не видалять вручну"
+
+msgid "link"
+msgstr "посилання"
+
+msgid "minutes"
+msgstr "хвилин"
+
+msgid "name"
+msgstr "ім’я"
+
+msgid "new this week"
+msgstr "нове цього тижня"
+
+msgid "no"
+msgstr "ні"
+
+msgid "none"
+msgstr "немає"
+
+msgid "none in %1$s – %2$s"
+msgstr "жодного за %1$s – %2$s"
+
+msgid "number"
+msgstr "число"
+
+msgid "of %s"
+msgstr "з %s"
+
+msgid "often to administrators"
+msgstr "часто адміністраторам"
+
+msgid "on %1$s at %2$s"
+msgstr "%1$s о %2$s"
+
+msgid "same recipient"
+msgstr "той самий одержувач"
+
+msgid "slow to send"
+msgstr "повільне надсилання"
+
+msgid "staging mode is on"
+msgstr "увімкнено тестовий режим"
+
+msgid "stopped"
+msgstr "припинився"
+
+msgid "stopped email types"
+msgstr "типи листів, що більше не надсилаються"
+
+msgid "text"
+msgstr "текст"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "аварійне гальмо зупинило потік листів"
+
+msgid "time"
+msgstr "час"
+
+msgid "today at %s"
+msgstr "сьогодні о %s"
+
+msgid "triggered %s times"
+msgstr "спрацювало разів: %s"
+
+msgid "unchanged"
+msgstr "без змін"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "невідомо – поштовий модуль не повідомив про помилку"
+
+msgid "unusual silence"
+msgstr "незвичну тишу"
+
+msgid "usually sent: %s"
+msgstr "зазвичай надсилається: %s"
+
+msgid "wp_mail() called"
+msgstr "Викликано wp_mail()"
+
+msgid "yes"
+msgstr "так"
+
+msgid "yesterday at %s"
+msgstr "учора о %s"
+
+msgid "your email provider"
+msgstr "ваш поштовий провайдер"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "«%1$s» (%2$s) о %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "«%1$s» (%2$s) знову надсилається."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "«%1$s» (%2$s) зазвичай надсилається щонайменше раз на %3$s дн. Останній надіслано %4$s тому."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "«%1$s» (%2$s) востаннє надіслано %3$s тому. До того він надсилався щонайменше кожні %4$s дн."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "«%1$s» (%2$s) – зазвичай кожні %4$s, останній %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "«%1$s» (%2$s) – зазвичай щодня, останній %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "«%1$s» – %2$s – %3$s"

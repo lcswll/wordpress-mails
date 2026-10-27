@@ -1,0 +1,3253 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "Η «Λήψη .eml» αναδημιουργεί το μήνυμα από τα καταγεγραμμένα, λογοκριμένα δεδομένα (χωρίς συνημμένα)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (προηγούμενη εβδομάδα: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (προγραμματισμένο για %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s τύπος email σταμάτησε να αποστέλλεται: %2$s."
+msgstr[1] "%1$s τύποι email σταμάτησαν να αποστέλλονται, π.χ. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%1$s τύποι email από %2$s αποστολείς"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "%1$s email απέτυχαν μέσα στα τελευταία %2$s λεπτά."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%1$s email σε %2$s ημέρες"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "%1$s email τις τελευταίες 30 ημέρες, %2$s απέτυχαν"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "Στάλθηκαν %1$s email μέσα σε μία ώρα – πολύ περισσότερα από το συνηθισμένο (όριο: %2$s ανά ώρα). Ίσως γίνεται κατάχρηση μιας φόρμας επικοινωνίας ή ο ιστότοπος έχει παραβιαστεί."
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s καταχωρίσεις, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s εισήχθησαν, %2$s διπλότυπα, %3$s πολύ παλιά"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s από %2$s επιστράφηκαν (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "%1$s από %2$s email τις τελευταίες %3$s ημέρες δεν ήταν δυνατό να σταλούν."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "Επεξεργάστηκαν %1$s από %2$s καταχωρίσεις …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s π.μ. έναντι %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "Το %1$s έστειλε το πρώτο του email στις %2$s και έχει γράψει σε %3$s διαφορετικές εξωτερικές διευθύνσεις τις τελευταίες 24 ώρες. Αν δεν εγκαταστήσατε ή ρυθμίσατε κάτι που στέλνει τέτοια email, ελέγξτε τον ιστότοπο: ένας νέος αποστολέας μπορεί να είναι ένδειξη παραβιασμένου ιστότοπου."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "%1$s στάλθηκαν, %2$s ακόμη σε αναμονή …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s έναντι %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · %2$s email ομαδοποιήθηκαν από την τελευταία σύνοψη"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · στις %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – ποσοστό αποτυχίας %2$s %% (προηγούμενη εβδομάδα: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – αναφέρθηκε από %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (πρόσθετο must-use)"
+
+msgid "%s (theme)"
+msgstr "%s (θέμα)"
+
+msgid "%s ago"
+msgstr "πριν από %s"
+
+msgid "%s days"
+msgstr "%s ημέρες"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s email απέτυχε τις τελευταίες 7 ημέρες."
+msgstr[1] "%s email απέτυχαν τις τελευταίες 7 ημέρες."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s email περιμένει την απόφασή σας."
+msgstr[1] "%s email περιμένουν την απόφασή σας."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s email κρατήθηκε και δεν στάλθηκε τις τελευταίες 7 ημέρες."
+msgstr[1] "%s email κρατήθηκαν και δεν στάλθηκαν τις τελευταίες 7 ημέρες."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "%s email κρατούνται από το φρένο έκτακτης ανάγκης."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s email βρίσκονται σε αναμονή και δεν έχουν παραδοθεί."
+
+msgid "%s entries"
+msgstr "%s καταχωρίσεις"
+
+msgid "%s failed"
+msgstr "%s απέτυχαν"
+
+msgid "%s held emails discarded."
+msgstr "Απορρίφθηκαν %s email σε αναμονή."
+
+msgid "%s imported entries removed."
+msgstr "Αφαιρέθηκαν %s εισαγόμενες καταχωρίσεις."
+
+msgid "%s in 30 days"
+msgstr "%s σε 30 ημέρες"
+
+msgid "%s marked as spam"
+msgstr "Σημειώθηκαν ως ανεπιθύμητα: %s"
+
+msgid "%s more on the Email types page."
+msgstr "%s ακόμη στη σελίδα «Τύποι email»."
+
+msgid "%s notes"
+msgstr "%s σημειώσεις"
+
+msgid "%s of all emails"
+msgstr "%s του συνόλου των email"
+
+msgid "%s of them in the last 24 hours."
+msgstr "%s από αυτά τις τελευταίες 24 ώρες."
+
+msgid "%s s"
+msgstr "%s δ"
+
+msgid "%s selected"
+msgstr "%s επιλεγμένα"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s θέμα χρειάζεται προσοχή:"
+msgstr[1] "%s θέματα χρειάζονται προσοχή:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s προς διαχειριστές σε 30 ημέρες"
+
+msgid "%s unchanged lines"
+msgstr "%s αμετάβλητες γραμμές"
+
+msgid "(no subject)"
+msgstr "(χωρίς θέμα)"
+
+msgid "(no text content)"
+msgstr "(χωρίς περιεχόμενο κειμένου)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(τα email δεν βρίσκονται πλέον στο αρχείο καταγραφής)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "Το -all είναι αυστηρότερο· το ~all είναι συνηθισμένο και αρκετό σε συνδυασμό με DMARC."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "Το 0 διατηρεί τις καταχωρίσεις για πάντα. Ο καθαρισμός εκτελείται μία φορά την ημέρα."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "Το 0 σημαίνει χωρίς όριο. Οι παλαιότερες καταχωρίσεις αφαιρούνται πρώτες."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "Το 0 το απενεργοποιεί. Αφαιρεί το περιεχόμενο, τις κεφαλίδες και τα συνημμένα των παλαιότερων καταχωρίσεων και αποκρύπτει τις διευθύνσεις (a***@example.com). Η ημερομηνία, η κατάσταση, η πηγή, η μορφή, το μέγεθος και οι σημειώσεις παραμένουν για τα στατιστικά. Εκτελείται με τον ημερήσιο καθαρισμό, πριν διαγραφούν οι καταχωρίσεις – επομένως έχει αποτέλεσμα μόνο αν είναι μικρότερο από την περίοδο διαγραφής παραπάνω."
+
+msgid "12 months"
+msgstr "12 μήνες"
+
+msgid "30 days"
+msgstr "30 ημέρες"
+
+msgid "7 days"
+msgstr "7 ημέρες"
+
+msgid "90 days"
+msgstr "90 ημέρες"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Ένας επιλογέας DKIM μπορεί να περιέχει μόνο γράμματα, ψηφία, τελείες, παύλες και κάτω παύλες."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Ένα πρόσθετο αποστολής email που στέλνει μέσω API ανέλαβε την παράδοση και ανέφερε ότι η αποστολή απέτυχε, χωρίς να δώσει αιτία."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Ένα δημοσιευμένο κλειδί δεν αποδεικνύει ότι τα email σας υπογράφονται με αυτό – ελέγξτε το αποτέλεσμα DKIM στις κεφαλίδες ενός ληφθέντος email."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Μια διεύθυνση παραλήπτη ή η διεύθυνση αποστολέα δεν είναι έγκυρη διεύθυνση email, οπότε το PHPMailer αρνήθηκε την αποστολή."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "Κλειδί API ή ιδιωτικό κλειδί σε απλό κείμενο: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Χρειάζονται περίπου %1$s αναζητήσεις DNS για την αξιολόγηση αυτής της εγγραφής – περισσότερες από τις επιτρεπόμενες %2$s, οπότε οι παραλήπτες ενδέχεται να την αγνοήσουν (PermError). Αφαιρέστε τις αχρησιμοποίητες καταχωρίσεις include:."
+
+msgid "Access"
+msgstr "Πρόσβαση"
+
+msgid "Actions"
+msgstr "Ενέργειες"
+
+msgid "Active: alerts on %s."
+msgstr "Ενεργό: ειδοποιήσεις για %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Προσθέστε ένα σύντομο χαρακτηριστικό alt σε κάθε εικόνα του προτύπου, π.χ. alt=\"Logo Example Shop\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Προσθέστε το include: του παρόχου αλληλογραφίας σας (π.χ. include:_spf.google.com) αν στέλνετε μέσω αυτού."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Προσθέστε τον διακομιστή αλληλογραφίας ή την υπηρεσία email σας στην εγγραφή SPF του τομέα του αποστολέα."
+
+msgid "Added:"
+msgstr "Προστέθηκαν:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Διευθύνσεις με τουλάχιστον %s μόνιμες αποτυχίες: ο διακομιστής παραλαβής απέρριψε το γραμματοκιβώτιο, ο τομέας δεν έχει διακομιστή αλληλογραφίας ή ο πάροχος email σας ανέφερε μόνιμη επιστροφή (hard bounce). Οι καταχωρίσεις λήγουν με την περίοδο διατήρησης του αρχείου καταγραφής."
+
+msgid "Admin screen"
+msgstr "Οθόνη διαχείρισης"
+
+msgid "Administrators"
+msgstr "Διαχειριστές"
+
+msgid "Aggregate reports go to %s."
+msgstr "Οι συγκεντρωτικές αναφορές πηγαίνουν στο %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Ειδοποίηση"
+
+msgid "Alert and hold further emails"
+msgstr "Ειδοποίηση και αναμονή επόμενων email"
+
+msgid "Alert only"
+msgstr "Μόνο ειδοποίηση"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Ειδοποίηση όταν ένας τύπος email που αποστέλλεται τακτικά σταματήσει"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Ειδοποίηση όταν τα email αποτυγχάνουν επανειλημμένα"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Ειδοποίηση όταν ο ιστότοπος σταματά απροσδόκητα να στέλνει email"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Οι ειδοποιήσεις είναι ενεργές αλλά δεν έχουν κανάλι: εισαγάγετε μια διεύθυνση email ή ένα URL webhook."
+
+msgid "Alerts are off."
+msgstr "Οι ειδοποιήσεις είναι ανενεργές."
+
+msgid "All"
+msgstr "Όλα"
+
+msgid "All email types look healthy."
+msgstr "Όλοι οι τύποι email φαίνονται υγιείς."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Όλα τα email ανακατευθύνονται σε δοκιμαστικές διευθύνσεις."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Όλα τα email πηγαίνουν σε δοκιμαστικές διευθύνσεις αντί για τους πραγματικούς παραλήπτες."
+
+msgid "All sources"
+msgstr "Όλες οι πηγές"
+
+msgid "Allow again"
+msgstr "Επιτρέπεται ξανά"
+
+msgid "Allowed again."
+msgstr "Επιτρέπεται ξανά."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Ειδοποιεί επίσης μία φορά όταν ένα πρόσθετο ή θέμα που δεν είχε στείλει ποτέ email γράφει σε πολλές διαφορετικές εξωτερικές διευθύνσεις μέσα σε μία ημέρα – πιθανή ένδειξη παραβιασμένου ιστότοπου. Οι πρώτες δύο εβδομάδες μετά την εγκατάσταση του Mailspur αποτελούν τη βάση αναφοράς."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Αφαίρεση και του θέματος κατά την ανωνυμοποίηση"
+
+msgid "Also search content"
+msgstr "Αναζήτηση και στο περιεχόμενο"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Εναλλακτικά, ζητήστε από τον πάροχο φιλοξενίας να ενεργοποιήσει τα mail() / sendmail για αυτόν τον ιστότοπο."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Πάντα φόρτωση απομακρυσμένων εικόνων και γραμματοσειρών στην προεπισκόπηση"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (μέσω SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Ένας πάροχος email με HTTP API αντί για SMTP χρειάζεται λιγότερες ανταλλαγές ανά email."
+
+msgid "Anonymisation"
+msgstr "Ανωνυμοποίηση"
+
+msgid "Anonymise entries after"
+msgstr "Ανωνυμοποίηση καταχωρίσεων μετά από"
+
+msgid "Anonymised"
+msgstr "Ανωνυμοποιήθηκε"
+
+msgid "Any format"
+msgstr "Οποιαδήποτε μορφή"
+
+msgid "Any status"
+msgstr "Οποιαδήποτε κατάσταση"
+
+msgid "Apply"
+msgstr "Εφαρμογή"
+
+msgid "Ask the recipient for a working address."
+msgstr "Ζητήστε από τον παραλήπτη μια διεύθυνση που λειτουργεί."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Ζητήστε από τον πάροχο φιλοξενίας να ενεργοποιήσει την επέκταση openssl (ή ενεργοποιήστε την στις ρυθμίσεις PHP του πίνακα φιλοξενίας)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Ζητήστε από τον πάροχο φιλοξενίας να ενημερώσει τα πιστοποιητικά CA και το OpenSSL του διακομιστή."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Ρωτήστε τον πάροχο φιλοξενίας αν οι εξερχόμενες συνδέσεις SMTP είναι αποκλεισμένες."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Ρωτήστε τον πάροχο φιλοξενίας αν επιτρέπονται εξερχόμενες συνδέσεις προς αυτή τη θύρα (τείχος προστασίας)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Τουλάχιστον %1$s αποτυχημένα email μέσα σε %2$s λεπτά"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Το πολύ μία ειδοποίηση ανά τύπο μέσα σε αυτό το διάστημα, ακόμη κι αν το πρόβλημα παραμένει."
+
+msgid "Attachments"
+msgstr "Συνημμένα"
+
+msgid "Attachments no longer available: %s"
+msgstr "Τα συνημμένα δεν είναι πλέον διαθέσιμα: %s"
+
+msgid "Authentication"
+msgstr "Ταυτοποίηση"
+
+msgid "Automatic TLS"
+msgstr "Αυτόματο TLS"
+
+msgid "Average per day"
+msgstr "Μέσος όρος ανά ημέρα"
+
+msgid "Back to the email types"
+msgstr "Επιστροφή στους τύπους email"
+
+msgid "Belongs to"
+msgstr "Ανήκει σε"
+
+msgid "Block again"
+msgstr "Αποκλεισμός ξανά"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Αποκλείστηκε ως ανεπιθύμητο ή από λίστα αποκλεισμού"
+
+msgid "Bounced (permanent)"
+msgstr "Επεστράφη (μόνιμα)"
+
+msgid "Bounced (temporary)"
+msgstr "Επεστράφη (προσωρινά)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Αλλοιωμένοι χαρακτήρες (κωδικοποίηση): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Μαζικό email χωρίς κεφαλίδα διαγραφής (παραλήπτες: %1$s)"
+
+msgid "Bundle into one daily email"
+msgstr "Ομαδοποίηση σε ένα ημερήσιο email"
+
+msgid "Bundled into one daily email"
+msgstr "Ομαδοποιημένα σε ένα ημερήσιο email"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Η ομαδοποίηση απενεργοποιήθηκε. Τα email σε αναμονή στάλθηκαν τώρα σε μία σύνοψη."
+
+msgid "Busiest day"
+msgstr "Πιο φορτωμένη ημέρα"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Προσοχή: τα email προς αυτή τη διεύθυνση έχουν αποτύχει αρκετές φορές στο παρελθόν."
+
+msgid "Change in the email types"
+msgstr "Αλλαγή στους τύπους email"
+
+msgid "Change staging mode"
+msgstr "Αλλαγή δοκιμαστικής λειτουργίας"
+
+msgid "Check"
+msgstr "Έλεγχος"
+
+msgid "Check again"
+msgstr "Έλεγχος ξανά"
+
+msgid "Check emails"
+msgstr "Έλεγχος email"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Ελέγξτε τον διακομιστή και τη θύρα· δοκιμάστε 587 (TLS) αντί για 465 (SSL) ή αντίστροφα."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Ελέγξτε διακομιστή, θύρα, κρυπτογράφηση, όνομα χρήστη και συνθηματικό στο πρόσθετο SMTP και στείλτε από εκεί ένα δοκιμαστικό email."
+
+msgid "Check sender domains"
+msgstr "Έλεγχος τομέων αποστολέα"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Ελέγξτε ότι η κρυπτογράφηση ταιριάζει με τη θύρα: TLS για 587, SSL για 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Ελέγξτε ότι το κλειδί ανήκει στη σωστή περιοχή / στον σωστό λογαριασμό (π.χ. τελικό σημείο EU ή US)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Ελέγξτε τον διακομιστή και τη θύρα SMTP: μια λάθος θύρα ή μια αποκλεισμένη σύνδεση συχνά καταλήγει σε λήξη χρονικού ορίου πριν λειτουργήσει μια εναλλακτική λύση."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Ελέγξτε τις εγγραφές SPF, DKIM και DMARC του τομέα του αποστολέα ή χρησιμοποιήστε διεύθυνση αποστολέα στον τομέα από τον οποίο στέλνετε."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Ελέγξτε τη διεύθυνση για λάθη – ή το email δεν στάλθηκε ποτέ από τον ιστότοπό σας."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Επιβεβαιώστε τη διεύθυνση με τον παραλήπτη και διορθώστε την εκεί όπου είναι αποθηκευμένη (προφίλ χρήστη, παραγγελία, καταχώριση φόρμας)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Επιβεβαιώστε τη διεύθυνση με τον παραλήπτη και διορθώστε την εκεί όπου είναι αποθηκευμένη."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Ελέγξτε το όνομα διακομιστή και τη θύρα: 587 με STARTTLS (TLS) ή 465 με SSL. Η θύρα 25 είναι αποκλεισμένη από τους περισσότερους παρόχους φιλοξενίας."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Ελέγξτε τα όρια και την τρέχουσα χρήση στον λογαριασμό της υπηρεσίας email· αναβαθμίστε το πρόγραμμα αν χρειάζεται."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Ελέγξτε τις διευθύνσεις παραληπτών αυτής της καταχώρισης για λάθη, κενά ή τμήματα που λείπουν."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Ελέγξτε τη διεύθυνση αποστολέα στο πρόσθετο SMTP και το φίλτρο wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Ελέγξτε τα όρια αποστολής του λογαριασμού email σας και τις σημειώσεις αυτού του email."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Ελέγξτε την IP του διακομιστή σε έναν ελεγκτή λιστών αποκλεισμού και ζητήστε τη διαγραφή της."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Ελέγξτε την ορθογραφία του δεσμευτικού θέσης στο πρότυπο και αν το πρόσθετο το υποστηρίζει για αυτόν τον τύπο email. Τα shortcodes δεν επεξεργάζονται στα email, εκτός αν το πρόσθετο που στέλνει εκτελεί do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Ελέγχθηκε %s."
+
+msgid "Checked just now"
+msgstr "Ελέγχθηκε μόλις τώρα"
+
+msgid "Checking DNS records …"
+msgstr "Έλεγχος εγγραφών DNS …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Ελέγχει τις εγγραφές DNS των τομέων από τους οποίους στέλνει ο ιστότοπός σας: την προεπιλεγμένη διεύθυνση αποστολέα και τους συχνότερους αποστολείς στο αρχείο καταγραφής. Οι εγγραφές που λείπουν ή είναι αδύναμες είναι η συχνότερη αιτία που τα email καταλήγουν στα ανεπιθύμητα. Χρησιμοποιείται μόνο ο επιλυτής DNS του διακομιστή σας· τα αποτελέσματα διατηρούνται για μία ώρα."
+
+msgid "Choose a range of at most %s days."
+msgstr "Επιλέξτε εύρος έως %s ημερών."
+
+msgid "Clear selection"
+msgstr "Εκκαθάριση επιλογής"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Κάντε κλικ σε μια στήλη για να ανοίξετε αυτά τα email στο αρχείο καταγραφής."
+
+msgid "Close"
+msgstr "Κλείσιμο"
+
+msgid "Close (Esc)"
+msgstr "Κλείσιμο (Esc)"
+
+msgid "Colour scheme"
+msgstr "Χρωματικό σχήμα"
+
+msgid "Command line"
+msgstr "Γραμμή εντολών"
+
+msgid "Compare"
+msgstr "Σύγκριση"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Συγκρίνετε τις πηγές αυτών των καταχωρίσεων. Ελέγξτε αν δύο πρόσθετα στέλνουν την ίδια ειδοποίηση ή αν ένα hook (π.χ. αλλαγή κατάστασης παραγγελίας) εκτελείται περισσότερες από μία φορές."
+
+msgid "Component"
+msgstr "Στοιχείο"
+
+msgid "Configure alerts"
+msgstr "Ρύθμιση ειδοποιήσεων"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Ανωνυμοποίηση περιεχομένου μετά από %1$s ημέρες, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Η αλλαγή περιεχομένου σημειώθηκε ως προβεβλημένη."
+
+msgid "Content changed"
+msgstr "Το περιεχόμενο άλλαξε"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Το περιεχόμενο άλλαξε στις %1$s, μετά την ενημέρωση του %2$s."
+
+msgid "Content changed on %s."
+msgstr "Το περιεχόμενο άλλαξε στις %s."
+
+msgid "Content removed"
+msgstr "Το περιεχόμενο αφαιρέθηκε"
+
+msgid "Content removed after %s days"
+msgstr "Το περιεχόμενο αφαιρέθηκε μετά από %s ημέρες"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Το περιεχόμενο, οι κεφαλίδες και τα συνημμένα αφαιρέθηκαν και οι διευθύνσεις αποκρύφτηκαν από τη ρύθμιση ανωνυμοποίησης."
+
+msgid "Copied"
+msgstr "Αντιγράφηκε"
+
+msgid "Copied – paste it into your reply."
+msgstr "Αντιγράφηκε – επικολλήστε το στην απάντησή σας."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Αντιγράφει μια σύντομη πρόταση για απάντηση στον πελάτη: πότε και σε ποιον στάλθηκε το email και αν έφτασε – χωρίς τεχνικές λεπτομέρειες."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Αντιγράφει το υπάρχον αρχείο καταγραφής άλλου πρόσθετου καταγραφής email στο Mailspur, ώστε να μπορείτε να αναζητάτε και να προεπισκοπείτε εδώ παλιά email. Το άλλο πρόσθετο και τα δεδομένα του μένουν ανέγγιχτα· η επανάληψη της εισαγωγής προσθέτει μόνο νέες καταχωρίσεις."
+
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+msgid "Copy for support"
+msgstr "Αντιγραφή για υποστήριξη"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Η αντιγραφή δεν είναι δυνατή σε αυτό το πρόγραμμα περιήγησης. Επιλέξτε το κείμενο και αντιγράψτε το:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Διορθώστε τη διεύθυνση (π.χ. στο προφίλ χρήστη ή στην παραγγελία) και εξετάστε το ενδεχόμενο επικύρωσης email στις φόρμες σας."
+
+msgid "Counted once per email."
+msgstr "Μετράται μία φορά ανά email."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Δημιουργήστε ένα νέο κλειδί API με δικαίωμα αποστολής στην υπηρεσία email και εισαγάγετέ το στο πρόσθετο αποστολής email."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Δημιουργία νέου URL webhook; Το τρέχον URL σταματά να λειτουργεί αμέσως – επικολλήστε το νέο URL στις ρυθμίσεις webhook του παρόχου email σας."
+
+msgid "Create new URL"
+msgstr "Δημιουργία νέου URL"
+
+msgid "Current page"
+msgstr "Τρέχουσα σελίδα"
+
+msgid "Current record"
+msgstr "Τρέχουσα εγγραφή"
+
+msgid "Current size"
+msgstr "Τρέχον μέγεθος"
+
+msgid "Custom"
+msgstr "Προσαρμογή"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "Βρέθηκε κλειδί DKIM (επιλογέας: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "Βρέθηκε εγγραφή DMARC με p=none: μόνο αναφορές, τα πλαστά email εξακολουθούν να παραδίδονται."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "Βρέθηκε εγγραφή DMARC με πολιτική p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "Η εγγραφή DMARC δεν έχει έγκυρη πολιτική (p=none, quarantine ή reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "Η αναζήτηση DNS απέτυχε ή έληξε. Δοκιμάστε ξανά αργότερα."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Οι αναζητήσεις DNS δεν είναι διαθέσιμες σε αυτόν τον διακομιστή (η dns_get_record() είναι απενεργοποιημένη), οπότε ο έλεγχος αποστολέα δεν μπορεί να εκτελεστεί εδώ."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Απαιτούμενες αναζητήσεις DNS: περίπου %1$s από τις %2$s επιτρεπόμενες."
+
+msgid "Daily"
+msgstr "Ημερήσια"
+
+msgid "Daily digest"
+msgstr "Ημερήσια σύνοψη"
+
+msgid "Dark"
+msgstr "Σκούρο"
+
+msgid "Date"
+msgstr "Ημερομηνία"
+
+msgid "Default (%s days)"
+msgstr "Προεπιλογή (%s ημέρες)"
+
+msgid "Default (no time limit)"
+msgstr "Προεπιλογή (χωρίς χρονικό όριο)"
+
+msgid "Default sender"
+msgstr "Προεπιλεγμένος αποστολέας"
+
+msgid "Delete"
+msgstr "Διαγραφή"
+
+msgid "Delete %s selected log entries?"
+msgstr "Διαγραφή %s επιλεγμένων καταχωρίσεων του αρχείου καταγραφής;"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Διαγραφή ΟΛΩΝ των καταχωρίσεων του αρχείου καταγραφής; Αυτό δεν μπορεί να αναιρεθεί."
+
+msgid "Delete entries after"
+msgstr "Διαγραφή καταχωρίσεων μετά από"
+
+msgid "Delete selected"
+msgstr "Διαγραφή επιλεγμένων"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Διαγραφή του πίνακα του αρχείου καταγραφής και των ρυθμίσεων όταν διαγράφεται το πρόσθετο"
+
+msgid "Delete this log entry?"
+msgstr "Διαγραφή αυτής της καταχώρισης;"
+
+msgid "Deleted."
+msgstr "Διαγράφηκε."
+
+msgid "Delivered"
+msgstr "Παραδόθηκε"
+
+msgid "Delivered by %s (API)"
+msgstr "Παραδόθηκε μέσω %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Παραδόθηκε από κώδικα συνδεδεμένο στο pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Παραδόθηκε στην ημερήσια σύνοψη στις %s."
+
+msgid "Delivery"
+msgstr "Παράδοση"
+
+msgid "Delivery status from your email provider"
+msgstr "Κατάσταση παράδοσης από τον πάροχο email σας"
+
+msgid "Desktop"
+msgstr "Υπολογιστής"
+
+msgid "Did my email arrive?"
+msgstr "Έφτασε το email μου;"
+
+msgid "Disable the email or change its recipient"
+msgstr "Απενεργοποίηση του email ή αλλαγή του παραλήπτη του"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Απόρριψη όλων των email σε αναμονή; Παραμένουν στο αρχείο καταγραφής αλλά δεν αποστέλλονται."
+
+msgid "Discard held emails"
+msgstr "Απόρριψη email σε αναμονή"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Μην στέλνετε email «από» δωρεάν διευθύνσεις email (gmail.com, gmx.de …) μέσω του δικού σας διακομιστή."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Ολοκληρώθηκε: %1$s email στάλθηκαν, %2$s απέτυχαν."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Ολοκληρώθηκε: %1$s εισήχθησαν, %2$s διπλότυπα, %3$s πολύ παλιά."
+
+msgid "Download .eml"
+msgstr "Λήψη .eml"
+
+msgid "Download as CSV"
+msgstr "Λήψη ως CSV"
+
+msgid "Download started."
+msgstr "Η λήψη ξεκίνησε."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Λήψη των καταχωρίσεων που ταιριάζουν στα τρέχοντα φίλτρα ως %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Κάθε email ελέγχεται μία φορά όταν καταγράφεται ή εισάγεται (χωρίς εξωτερικά αιτήματα). Οι αλλαγές εδώ επηρεάζουν μόνο τα email που καταγράφονται στη συνέχεια· οι παλαιότερες καταχωρίσεις δεν ελέγχονται ξανά. Οι έλεγχοι DNS και επαναλαμβανόμενης αποστολής εκτελούνται όταν ανοίγετε μια καταχώριση."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Προηγούμενα email προς %s απέτυχαν μόνιμα περισσότερες από μία φορές."
+
+msgid "Edit template"
+msgstr "Επεξεργασία προτύπου"
+
+msgid "Editors and above"
+msgstr "Συντάκτες και άνω"
+
+msgid "Email address"
+msgstr "Διεύθυνση email"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "Διεύθυνση email (το πιο πρόσφατο email δεν βρίσκεται πλέον στο αρχείο καταγραφής)"
+
+msgid "Email address or order number"
+msgstr "Διεύθυνση email ή αριθμός παραγγελίας"
+
+msgid "Email consists almost only of images"
+msgstr "Το email αποτελείται σχεδόν μόνο από εικόνες"
+
+msgid "Email failure spike"
+msgstr "Έξαρση αποτυχιών email"
+
+msgid "Email failures"
+msgstr "Αποτυχίες email"
+
+msgid "Email failures resolved"
+msgstr "Οι αποτυχίες email επιλύθηκαν"
+
+msgid "Email inventory"
+msgstr "Κατάλογος email"
+
+msgid "Email log"
+msgstr "Αρχείο καταγραφής email"
+
+msgid "Email log: problem recipients"
+msgstr "Αρχείο καταγραφής email: προβληματικοί παραλήπτες"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Αποστολή email σε εμένα όταν ένα σχόλιο τίθεται σε αναμονή για έλεγχο"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Αποστολή email σε εμένα όταν κάποιος δημοσιεύει σχόλιο"
+
+msgid "Email provider"
+msgstr "Πάροχος email"
+
+msgid "Email sent again."
+msgstr "Το email στάλθηκε ξανά."
+
+msgid "Email sent to %s."
+msgstr "Το email στάλθηκε προς %s."
+
+msgid "Email type"
+msgstr "Τύπος email"
+
+msgid "Email type is sent again"
+msgstr "Ο τύπος email αποστέλλεται ξανά"
+
+msgid "Email type stopped"
+msgstr "Ο τύπος email σταμάτησε να αποστέλλεται"
+
+msgid "Email types"
+msgstr "Τύποι email"
+
+msgid "Email volume back to normal"
+msgstr "Ο όγκος email επανήλθε στο κανονικό"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Ο όγκος email επανήλθε στο κανονικό: το φρένο έκτακτης ανάγκης δεν είναι πλέον ενεργό."
+
+msgid "Email: failed"
+msgstr "Email: απέτυχε"
+
+msgid "Email: failed – see the log"
+msgstr "Email: απέτυχε – δείτε το αρχείο καταγραφής"
+
+msgid "Email: sent"
+msgstr "Email: στάλθηκε"
+
+msgid "Emails"
+msgstr "Email"
+
+msgid "Emails are being logged again."
+msgstr "Τα email καταγράφονται ξανά."
+
+msgid "Emails are delivered to their recipients."
+msgstr "Τα email παραδίδονται στους παραλήπτες τους."
+
+msgid "Emails are flowing again"
+msgstr "Τα email ρέουν ξανά"
+
+msgid "Emails are logged but not delivered."
+msgstr "Τα email καταγράφονται αλλά δεν παραδίδονται."
+
+msgid "Emails are still being sent."
+msgstr "Τα email εξακολουθούν να αποστέλλονται."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "Τα email εξακολουθούν να αποστέλλονται. Ελέγξτε την κύρια πηγή· αλλάξτε το φρένο έκτακτης ανάγκης σε «Ειδοποίηση και αναμονή επόμενων email» για να τα σταματήσετε."
+
+msgid "Emails in 30 days"
+msgstr "Email σε 30 ημέρες"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Τα email αυτού του τύπου που πηγαίνουν μόνο σε διαχειριστές συγκεντρώνονται πλέον και αποστέλλονται μία φορά την ημέρα σε μία σύνοψη."
+
+msgid "Emails over time"
+msgstr "Email με την πάροδο του χρόνου"
+
+msgid "Emails per day and status"
+msgstr "Email ανά ημέρα και κατάσταση"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "Email ανά ημέρα της εβδομάδας και ώρα (ζώνη ώρας ιστότοπου)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "Τα email που υπάρχουν ήδη στο αρχείο καταγραφής – καταγεγραμμένα από το ίδιο το Mailspur ή εισαγόμενα από άλλο πρόσθετο – αναγνωρίζονται από τους παραλήπτες, το θέμα και την ώρα αποστολής και παραλείπονται ως διπλότυπα."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Email που στέλνονται τακτικά σταμάτησαν (%s)"
+
+msgid "Emails to this user"
+msgstr "Email προς αυτόν τον χρήστη"
+
+msgid "Emails with notes"
+msgstr "Email με σημειώσεις"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "Τα email χωρίς θέμα μοιάζουν με ανεπιθύμητα και είναι δύσκολο να βρεθούν στα εισερχόμενα."
+
+msgid "Emails – last 7 days"
+msgstr "Email – τελευταίες 7 ημέρες"
+
+msgid "Emergency brake"
+msgstr "Φρένο έκτακτης ανάγκης"
+
+msgid "Emergency brake reset."
+msgstr "Το φρένο έκτακτης ανάγκης επαναφέρθηκε."
+
+msgid "Emergency brake settings"
+msgstr "Ρυθμίσεις φρένου έκτακτης ανάγκης"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Φρένο έκτακτης ανάγκης: %1$s email την τελευταία ώρα – πολύ περισσότερα από το συνηθισμένο (όριο: %2$s ανά ώρα)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Φρένο έκτακτης ανάγκης: ασυνήθιστη πλημμύρα email"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Κενό = αυτόματο: τριπλάσιο της πιο φορτωμένης ώρας των τελευταίων 14 ημερών, τουλάχιστον 50 – αυτή τη στιγμή %s."
+
+msgid "Empty log"
+msgstr "Άδειασμα αρχείου καταγραφής"
+
+msgid "Empty subject"
+msgstr "Κενό θέμα"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Ενεργοποιήστε την επαλήθευση σε δύο βήματα για τον λογαριασμό Google και δημιουργήστε έναν κωδικό εφαρμογής (Google account → Security → App passwords)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Ενεργοποιήστε την υπογραφή DKIM στον πάροχο αλληλογραφίας ή φιλοξενίας σας και δημοσιεύστε το κλειδί που σας δίνει. Αν υπογράφετε ήδη, εισαγάγετε τον επιλογέα σας (την τιμή s= της κεφαλίδας DKIM-Signature) και ελέγξτε ξανά."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Ενεργοποιήστε την υπογραφή DKIM στην υπηρεσία email και δημοσιεύστε την εγγραφή DNS της."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Ενεργοποιήστε τον έλεγχο ταυτότητας στο πρόσθετο SMTP και εισαγάγετε όνομα χρήστη και συνθηματικό."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Ενεργοποιήστε τον έλεγχο ταυτότητας στο πρόσθετο SMTP."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Οι κρυπτογραφημένες συνδέσεις SMTP (TLS/SSL) απαιτούν την επέκταση PHP openssl, η οποία δεν είναι εγκατεστημένη ή ενεργοποιημένη σε αυτόν τον διακομιστή."
+
+msgid "Encryption"
+msgstr "Κρυπτογράφηση"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Η κρυπτογράφηση (TLS/SSL) απέτυχε"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Εισαγάγετε πρώτα μια διεύθυνση email ή ένα URL webhook και αποθηκεύστε τις ρυθμίσεις."
+
+msgid "Enter an email address or an order number."
+msgstr "Εισαγάγετε μια διεύθυνση email ή έναν αριθμό παραγγελίας."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Εισαγάγετε πρώτα μια διεύθυνση email στο «Αποστολή ειδοποιήσεων μέσω email σε» και αποθηκεύστε τις ρυθμίσεις."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Εισαγάγετε από 1 έως 10 διευθύνσεις email."
+
+msgid "Enter one or more email addresses."
+msgstr "Εισαγάγετε μία ή περισσότερες διευθύνσεις email."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Εισαγάγετε τον κωδικό εφαρμογής στο πρόσθετο SMTP ή χρησιμοποιήστε τη σύνδεση «Sign in with Google» (OAuth) του προσθέτου."
+
+msgid "Entries"
+msgstr "Καταχωρίσεις"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Οι καταχωρίσεις παλαιότερες από %s ημέρες παραλείπονται, επειδή η ρύθμιση διατήρησης θα τις διέγραφε ούτως ή άλλως. Αλλάξτε πρώτα τη διατήρηση παραπάνω για να τα εισαγάγετε όλα."
+
+msgid "Error"
+msgstr "Σφάλμα"
+
+msgid "Errors"
+msgstr "Σφάλματα"
+
+msgid "Every %s days"
+msgstr "Κάθε %s ημέρες"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "Κάθε 15 λεπτά (ειδοποιήσεις Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Κάθε Δευτέρα πρωί, μόνο όταν υπάρχει κάτι να αναφερθεί: email και ποσοστό αποτυχίας σε σύγκριση με την προηγούμενη εβδομάδα, νέοι, σταματημένοι και αλλαγμένοι τύποι email, email με σημειώσεις και περιστατικά του φρένου έκτακτης ανάγκης. Μόνο αριθμοί και μοτίβα θεμάτων."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Κάθε είδος email που στέλνει αυτός ο ιστότοπος, όπως προκύπτει από το αρχείο καταγραφής email του Mailspur – π.χ. για αρχείο δραστηριοτήτων επεξεργασίας ή για παράδοση έργου. Οι ομάδες παραληπτών προκύπτουν από τα πιο πρόσφατα email κάθε αποστολέα, οι κατηγορίες δεδομένων από το πιο πρόσφατο email κάθε τύπου. Η λίστα δεν περιέχει περιεχόμενο email ούτε διευθύνσεις."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Κάθε είδος email που στέλνει ο ιστότοπός σας, εντοπισμένο αυτόματα στο αρχείο καταγραφής: ομαδοποιημένο ανά πρόσθετο αποστολής και ανά θέμα, με αριθμούς, διευθύνσεις και ονόματα ως δεσμευτικά θέσης. Το Mailspur μαθαίνει πόσο συχνά αποστέλλεται κάθε τύπος και αντιλαμβάνεται πότε κάποιος σταματά – για παράδειγμα μετά από ενημέρωση προσθέτου."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Όλα φαίνονται εντάξει: %s email τις τελευταίες 7 ημέρες, χωρίς σφάλματα."
+msgstr[1] "Όλα φαίνονται εντάξει: %s email τις τελευταίες 7 ημέρες, κανένα δεν απέτυχε."
+
+msgid "Expected today and not sent yet:"
+msgstr "Αναμένονταν σήμερα και δεν έχουν σταλεί ακόμη:"
+
+msgid "Export"
+msgstr "Εξαγωγή"
+
+msgid "Export started – your download begins shortly."
+msgstr "Η εξαγωγή ξεκίνησε – η λήψη θα αρχίσει σύντομα."
+
+msgid "Failed"
+msgstr "Απέτυχε"
+
+msgid "Failed (%s %%)"
+msgstr "Απέτυχαν (%s %%)"
+
+msgid "Failing"
+msgstr "Με σφάλματα"
+
+msgid "Failure rate"
+msgstr "Ποσοστό αποτυχίας"
+
+msgid "Failure spike"
+msgstr "Έξαρση αποτυχιών"
+
+msgid "Far more emails than usual were sent"
+msgstr "Στάλθηκαν πολύ περισσότερα email από το συνηθισμένο"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Στάλθηκαν πολύ περισσότερα email από το συνηθισμένο, οπότε το Mailspur κρατά τα επόμενα email μέχρι να τα αποδεσμεύσετε ή να τα απορρίψετε."
+
+msgid "Fewer"
+msgstr "Λιγότερα"
+
+msgid "File"
+msgstr "Αρχείο"
+
+msgid "Filter by status"
+msgstr "Φιλτράρισμα κατά κατάσταση"
+
+msgid "Filter email types"
+msgstr "Φιλτράρισμα τύπων email"
+
+msgid "First email after the change"
+msgstr "Πρώτο email μετά την αλλαγή"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Πρώτο email από αυτόν τον αποστολέα στις %s. Με ενεργές τις ειδοποιήσεις τύπων, το Mailspur ειδοποιεί όταν ένας νέος αποστολέας γράφει σε πολλές εξωτερικές διευθύνσεις."
+
+msgid "First page"
+msgstr "Πρώτη σελίδα"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Με μεγάλα συνημμένα, το χρονικό όριο μπορεί να εξαντληθεί και κατά τη μεταφορά – στείλτε μικρότερα αρχεία ή συνδέσμους."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Για δοκιμαστικά αντίγραφα και αντίγραφα ανάπτυξης ενός ιστότοπου: διασφαλίζει ότι οι πελάτες δεν λαμβάνουν ποτέ email από το αντίγραφο. Κάθε email εξακολουθεί να καταγράφεται."
+
+msgid "Forced dark"
+msgstr "Αναγκαστικά σκούρο"
+
+msgid "Format"
+msgstr "Μορφή"
+
+msgid "Free text from forms"
+msgstr "Ελεύθερο κείμενο από φόρμες"
+
+msgid "Friday"
+msgstr "Παρασκευή"
+
+msgid "From"
+msgstr "Από"
+
+msgid "From date"
+msgstr "Από ημερομηνία"
+
+msgid "Front end"
+msgstr "Δημόσια πλευρά"
+
+msgid "Function"
+msgstr "Συνάρτηση"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Τα επόμενα email κρατούνται μέχρι ένας διαχειριστής να τα αποδεσμεύσει ή να τα απορρίψει."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Το Gmail και το Google Workspace δεν δέχονται πλέον τον κανονικό κωδικό του λογαριασμού για SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Το Gmail περικόπτει τα email HTML που ξεπερνούν τα 102 KB και εμφανίζει «[Message clipped]». Ό,τι ακολουθεί την περικοπή – συχνά το υποσέλιδο, ο σύνδεσμος διαγραφής ή οι νομικές πληροφορίες – αποκρύπτεται."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Το Gmail θα περικόψει αυτό το email (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Η Google απέρριψε τη σύνδεση"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "Το HTML στάλθηκε ως απλό κείμενο"
+
+msgid "Handler"
+msgstr "Χειριστής"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Μόνιμη επιστροφή (hard bounce) αναφέρθηκε από τον πάροχο email σας"
+
+msgid "Hard failures"
+msgstr "Μόνιμες αποτυχίες"
+
+msgid "Headers"
+msgstr "Κεφαλίδες"
+
+msgid "Held"
+msgstr "Σε αναμονή"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Κρατήθηκε από το φρένο έκτακτης ανάγκης – απορρίφθηκε."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Κρατήθηκε από το φρένο έκτακτης ανάγκης – δεν παραδόθηκε."
+
+msgid "Held by emergency brake – released later."
+msgstr "Κρατήθηκε από το φρένο έκτακτης ανάγκης – αποδεσμεύτηκε αργότερα."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Κρατήθηκε από τη δοκιμαστική λειτουργία – δεν παραδόθηκε."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Το email σε αναμονή στάλθηκε. Καταγράφηκε ως νέα καταχώριση."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Τα email σε αναμονή λαμβάνουν την κατάσταση «Σε αναμονή» και μπορούν ακόμη να σταλούν ένα προς ένα από το αρχείο καταγραφής («Αποστολή τώρα»)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Σε αναμονή: κάθε παραλήπτης είχε μόνιμη αποτυχία στο παρελθόν (προβληματικοί παραλήπτες)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Σε αναμονή: η δοκιμαστική λειτουργία έχει ρυθμιστεί για ανακατεύθυνση, αλλά δεν έχει οριστεί έγκυρη διεύθυνση ανακατεύθυνσης."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Υποδείξεις για προβλήματα που μπορεί να εμποδίσουν αυτό το email να φτάσει ή να εμφανιστεί σωστά."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Αναμονή επόμενων email προς προβληματικούς παραλήπτες"
+
+msgid "Hooks"
+msgstr "Hooks"
+
+msgid "Hours"
+msgstr "Ώρες"
+
+msgid "How to fix:"
+msgstr "Πώς να διορθωθεί:"
+
+msgid "I already did"
+msgstr "Το έκανα ήδη"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Κατανοώ ότι η ακατέργαστη πηγή ΔΕΝ λογοκρίνεται και περίπου διπλασιάζει τον αποθηκευτικό χώρο ανά email"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Αν συμβαίνει συχνά, ελέγξτε τα όρια αποστολής του παρόχου email σας."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Αν συνεχίζει να συμβαίνει, στέλνετε λιγότερα email ταυτόχρονα ή μέσω υπηρεσίας email με ουρά."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Αν το εμποδίζουν οι προεπιλογές ασφαλείας (security defaults), χρησιμοποιήστε αντί αυτού τη σύνδεση Microsoft (OAuth / Graph API) του προσθέτου SMTP."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Αν απέτυχαν αρκετοί παραλήπτες, η απάντηση του διακομιστή μετά τη διεύθυνση αναφέρει την αιτία."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Αν ο λογαριασμός χρησιμοποιεί έλεγχο ταυτότητας δύο παραγόντων, δημιουργήστε έναν κωδικό εφαρμογής και χρησιμοποιήστε αυτόν."
+
+msgid "Ignore"
+msgstr "Παράβλεψη"
+
+msgid "Ignored"
+msgstr "Αγνοείται"
+
+msgid "Ignored notes"
+msgstr "Σημειώσεις που αγνοούνται"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Οι σημειώσεις που αγνοούνται δεν καταγράφονται πλέον για νέα email και αποκρύπτονται στις υπάρχουσες καταχωρίσεις."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Εικόνες χωρίς εναλλακτικό κείμενο (%1$s)"
+
+msgid "Import"
+msgstr "Εισαγωγή"
+
+msgid "Import failed: %s"
+msgstr "Η εισαγωγή απέτυχε: %s"
+
+msgid "Import from other plugins"
+msgstr "Εισαγωγή από άλλα πρόσθετα"
+
+msgid "Import new entries"
+msgstr "Εισαγωγή νέων καταχωρίσεων"
+
+msgid "Imported"
+msgstr "Εισήχθη"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Οι εισαγόμενες καταχωρίσεις δεν έχουν ίχνος: το άλλο πρόσθετο δεν κατέγραψε αυτές τις λεπτομέρειες."
+
+msgid "Imported from %s"
+msgstr "Εισήχθη από %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "Στο Amazon SNS, εγγράψτε το URL (πρωτόκολλο HTTPS) στο θέμα που λαμβάνει τις ειδοποιήσεις Delivery, Bounce και Complaint του Amazon SES. Το Mailspur επιβεβαιώνει την εγγραφή αυτόματα."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "Στο Brevo, ανοίξτε Transactional → Settings → Webhook, προσθέστε το URL και επιλέξτε Delivered, Hard bounce, Soft bounce, Invalid email και Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "Στο Mailgun, ανοίξτε Sending → Webhooks, προσθέστε το URL για Delivered, Permanent failure, Temporary failure και Spam complaints και επικολλήστε παρακάτω το HTTP webhook signing key."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "Στο Postmark, ανοίξτε τον διακομιστή σας → Webhooks → Add webhook, επικολλήστε το URL και επιλέξτε Delivery, Bounce και Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "Στο κέντρο διαχείρισης του Microsoft 365, ανοίξτε τον χρήστη → Mail → Manage email apps και ενεργοποιήστε το «Authenticated SMTP»."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Τα εισερχόμενα εμφανίζουν περίπου τους πρώτους 40–80 χαρακτήρες· τα υπόλοιπα περικόπτονται, στα κινητά ακόμη νωρίτερα."
+
+msgid "Include content"
+msgstr "Συμπερίληψη περιεχομένου"
+
+msgid "Information"
+msgstr "Πληροφορίες"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Εγκαταστήστε ένα πρόσθετο SMTP και στέλνετε μέσω πραγματικού γραμματοκιβωτίου ή υπηρεσίας email του τομέα σας."
+
+msgid "Invalid date."
+msgstr "Μη έγκυρη ημερομηνία."
+
+msgid "Invalid email address"
+msgstr "Μη έγκυρη διεύθυνση email"
+
+msgid "Invalid email address: %s"
+msgstr "Μη έγκυρη διεύθυνση email: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Μη έγκυρη διεύθυνση αποστολέα: %1$s"
+
+msgid "Irregular"
+msgstr "Ακανόνιστα"
+
+msgid "Is Mailspur helping you?"
+msgstr "Σας βοηθά το Mailspur;"
+
+msgid "Is an email missing?"
+msgstr "Λείπει κάποιο email;"
+
+msgid "Is everything running?"
+msgstr "Λειτουργούν όλα;"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Διατήρηση το πολύ"
+
+msgid "Keep for"
+msgstr "Διατήρηση για"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Κρατήστε αυτό το URL ιδιωτικό: περιέχει ένα μυστικό κλειδί αυτού του ιστότοπου. Αποθηκεύστε τις ρυθμίσεις πριν δοκιμάσετε το webhook."
+
+msgid "Kept: %s"
+msgstr "Διατήρηση: %s"
+
+msgid "Key figures"
+msgstr "Βασικά μεγέθη"
+
+msgid "Last 30 days"
+msgstr "Τελευταίες 30 ημέρες"
+
+msgid "Last email before the change"
+msgstr "Τελευταίο email πριν από την αλλαγή"
+
+msgid "Last failure"
+msgstr "Τελευταία αποτυχία"
+
+msgid "Last page"
+msgstr "Τελευταία σελίδα"
+
+msgid "Last sent"
+msgstr "Τελευταία αποστολή"
+
+msgid "Leave a review"
+msgstr "Αφήστε μια αξιολόγηση"
+
+msgid "Light"
+msgstr "Ανοιχτό"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Το κείμενο του συνδέσμου δείχνει %1$s αλλά οδηγεί σε %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Σύνδεσμος σε διεύθυνση ανάπτυξης: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Σύνδεσμος σε σελίδα που δεν υπάρχει στον ιστότοπό σας: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Συνδέστε απευθείας την πλήρη διεύθυνση. Για παρακολούθηση κλικ, χρησιμοποιήστε αντί αυτού παραμέτρους UTM στον δικό σας τομέα."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Σύνδεσμος μέσω υπηρεσίας συντόμευσης URL: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Οι σύνδεσμοι και οι εικόνες που ξεκινούν με «/» λειτουργούν μόνο στον ιστότοπο. Σε ένα πρόγραμμα email δεν υπάρχει διεύθυνση ιστότοπου για να συμπληρωθούν, οπότε οι εικόνες μένουν κενές και οι σύνδεσμοι δεν οδηγούν πουθενά."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Σύνδεσμοι σε άλλο αντίγραφο του ιστότοπου: %1$s (αυτός ο ιστότοπος: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Οι σύνδεσμοι των οποίων η ορατή διεύθυνση διαφέρει από τον πραγματικό προορισμό μοιάζουν με phishing. Τα φίλτρα ανεπιθύμητων τους βαθμολογούν αρνητικά και ορισμένα προγράμματα email προειδοποιούν τον αναγνώστη."
+
+msgid "Load remote content"
+msgstr "Φόρτωση απομακρυσμένου περιεχομένου"
+
+msgid "Loading…"
+msgstr "Φόρτωση…"
+
+msgid "Log"
+msgstr "Αρχείο καταγραφής"
+
+msgid "Log entries %s"
+msgstr "Καταχωρίσεις αρχείου καταγραφής %s"
+
+msgid "Log entry not found."
+msgstr "Η καταχώριση δεν βρέθηκε."
+
+msgid "Log only – do not send any email"
+msgstr "Μόνο καταγραφή – να μην αποστέλλεται κανένα email"
+
+msgid "Log size"
+msgstr "Μέγεθος αρχείου καταγραφής"
+
+msgid "Logged emails"
+msgstr "Καταγεγραμμένα email"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Τα καταγεγραμμένα email μπορεί να περιέχουν προσωπικά δεδομένα. Παραχωρήστε πρόσβαση όσο το δυνατόν πιο περιορισμένα. Οι ρυθμίσεις απαιτούν πάντα δικαιώματα διαχειριστή."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Η σύνδεση και οι παραλήπτες έγιναν δεκτοί, αλλά το ίδιο το email απορρίφθηκε – συνήθως λόγω φιλτραρίσματος ανεπιθύμητων, ορίου αποστολής ή πολιτικής του παρόχου (κωδικός απάντησης 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Καταγράφει τα εξερχόμενα email, χαρτογραφεί τους τύπους email που στέλνει ο ιστότοπός σας και σας ειδοποιεί όταν κάποιος σταματήσει. Ασφαλής προεπισκόπηση, διαγνωστικά παράδοσης, στατιστικά."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Αναζητήστε μια επιλογή για να το απενεργοποιήσετε ή να αλλάξετε τον παραλήπτη του στις ρυθμίσεις email του %s – ή αγνοήστε τον τύπο εδώ."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Αναζητήστε την απάντηση του διακομιστή στο μήνυμα σφάλματος· συνήθως αναφέρει την αιτία."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Αναζητήστε στο αρχείο καταγραφής απροσδόκητη μαζική αποστολή (ανεπιθύμητες υποβολές φορμών, βρόχους)."
+
+msgid "Looking it up …"
+msgstr "Αναζήτηση …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Αρχείο καταγραφής email"
+
+msgid "Mail Log sections"
+msgstr "Ενότητες αρχείου καταγραφής email"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Οι διακομιστές αλληλογραφίας για απαντήσεις και επιστροφές έχουν ρυθμιστεί."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Οι πάροχοι γραμματοκιβωτίων μπορούν να επαληθεύσουν ότι ο ιστότοπός σας επιτρέπεται να στέλνει email για αυτόν τον τομέα. Ο πλήρης έλεγχος αποστολέα εξετάζει και το DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Το γραμματοκιβώτιο είναι άγνωστο ή μη διαθέσιμο"
+
+msgid "Mailer"
+msgstr "Mailer"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Το Mailgun υπογράφει κάθε webhook με αυτό το κλειδί (Sending → Webhooks → HTTP webhook signing key)· οι αναφορές χωρίς έγκυρη υπογραφή απορρίπτονται."
+
+msgid "Mailspur alerts"
+msgstr "Ειδοποιήσεις Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Το Mailspur ελέγχει το αρχείο καταγραφής για email που δεν ήταν δυνατό να σταλούν."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Το Mailspur δεν βρήκε παραγγελία #%s στο κατάστημά σας."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Το Mailspur έχει καταγράψει μέχρι στιγμής %s παραδοθέντα email σε αυτόν τον ιστότοπο. Αν σας εξοικονομεί χρόνο, μια σύντομη αξιολόγηση στο WordPress.org θα σήμαινε πολλά – βοηθά άλλους να βρουν το πρόσθετο και το κρατά δωρεάν."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Το Mailspur δεν έχει email για την παραγγελία #%s στο αρχείο καταγραφής."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Το Mailspur δεν έχει email προς %s στο αρχείο καταγραφής."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Το Mailspur δημιουργήθηκε από τον %1$s. Σας αρέσει; %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Το Mailspur μαθαίνει πόσο συχνά αποστέλλεται κάθε είδος email, π.χ. επιβεβαιώσεις παραγγελιών, και αναφέρει εδώ όταν κάποιο σταματήσει."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Το Mailspur μαθαίνει τον ρυθμό κάθε τύπου email από τις τελευταίες 8 εβδομάδες – μια ημερήσια επιβεβαίωση παραγγελίας θεωρείται καθυστερημένη μετά από 2 ημέρες, μια εβδομαδιαία αναφορά μετά από 2 εβδομάδες. Η ειδοποίηση αναφέρει τον τύπο, τον αποστολέα του και τα πρόσθετα που ενημερώθηκαν μετά το τελευταίο του email. Χρησιμοποιεί τα παραπάνω κανάλια· οι τύποι που αγνοούνται δεν ειδοποιούν ποτέ."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Το Mailspur βλέπει ότι ο ιστότοπός σας το έστειλε, όχι το ίδιο το γραμματοκιβώτιο. Αν δεν βρίσκεται εκεί, ζητήστε από τον παραλήπτη να ελέγξει τον φάκελο ανεπιθύμητης αλληλογραφίας."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Το Mailspur σταματά πλέον αυτά τα email· ο τύπος email τους αγνοείται."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – Αρχείο καταγραφής email"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: email σε αναμονή"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: δοκιμαστική λειτουργία"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Κύρια πηγή: %1$s (%2$s email)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Βεβαιωθείτε ότι η διεύθυνση From στο πρόσθετο αποστολής email ταιριάζει με τον επαληθευμένο τομέα."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Βεβαιωθείτε ότι το email αποστέλλεται με «charset=UTF-8», ότι τα αρχεία προτύπων είναι αποθηκευμένα σε UTF-8 και ότι οι πίνακες της βάσης δεδομένων χρησιμοποιούν utf8mb4. Διορθώστε τα κείμενα που έχουν ήδη αποθηκευτεί αλλοιωμένα."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Βεβαιωθείτε ότι η ρύθμιση κρυπτογράφησης ταιριάζει με τη θύρα."
+
+msgid "Many emails could not be sent recently"
+msgstr "Πολλά email δεν ήταν δυνατό να σταλούν πρόσφατα"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Πολλά θαυμαστικά στο θέμα (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Πολλά προγράμματα email αποκλείουν τις εικόνες μέχρι να τις επιτρέψει ο αναγνώστης. Χωρίς εναλλακτικό κείμενο ο αναγνώστης βλέπει μόνο κενά πλαίσια· οι αναγνώστες οθόνης δεν ανακοινώνουν τίποτα χρήσιμο."
+
+msgid "Mark as resolved"
+msgstr "Σήμανση ως επιλυμένο"
+
+msgid "Marked as spam"
+msgstr "Επισημάνθηκε ως ανεπιθύμητο"
+
+msgid "Marked as spam by the recipient"
+msgstr "Επισημάνθηκε ως ανεπιθύμητο από τον παραλήπτη"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Απόκρυψη κλειδιών επαναφοράς κωδικού, ενεργοποίησης και πρόσβασης στους καταγεγραμμένους συνδέσμους, καθώς και κωδικών, κλειδιών API και αριθμών καρτών που στάλθηκαν ως απλό κείμενο"
+
+msgid "Maybe later"
+msgstr "Ίσως αργότερα"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Ίσως το email δεν στάλθηκε ποτέ – ελέγξτε την κατάσταση της παραγγελίας και τις ρυθμίσεις των email του καταστήματός σας."
+
+msgid "Menu position"
+msgstr "Θέση στο μενού"
+
+msgid "Message"
+msgstr "Μήνυμα"
+
+msgid "Method"
+msgstr "Μέθοδος"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Το Microsoft 365 / Exchange Online αποκλείει τη σύνδεση SMTP (βασικός έλεγχος ταυτότητας) για αυτό το γραμματοκιβώτιο ή για ολόκληρο τον οργανισμό."
+
+msgid "Minutes"
+msgstr "Λεπτά"
+
+msgid "Monday"
+msgstr "Δευτέρα"
+
+msgid "Monitor again"
+msgstr "Επανέναρξη παρακολούθησης"
+
+msgid "Monitoring alerts"
+msgstr "Ειδοποιήσεις παρακολούθησης"
+
+msgid "More"
+msgstr "Περισσότερα"
+
+msgid "More actions"
+msgstr "Περισσότερες ενέργειες"
+
+msgid "More filters"
+msgstr "Περισσότερα φίλτρα"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Συχνότερη αιτία (%1$s από αυτά): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Οι περισσότεροι διακομιστές δέχονται συνολικά 10–25 MB."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Βρέθηκαν πολλές εγγραφές DMARC. Σε αυτή την περίπτωση οι παραλήπτες αγνοούν το DMARC – κρατήστε μόνο μία."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Βρέθηκαν πολλές εγγραφές SPF. Οι παραλήπτες το θεωρούν σφάλμα (PermError) – συγχωνεύστε τις σε μία εγγραφή."
+
+msgid "Needs attention"
+msgstr "Χρειάζεται προσοχή"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Δεν καταγράφηκε ούτε κεφαλίδα From ούτε αποστολέας. Το πρόγραμμα αποστολής χρησιμοποιεί την προεπιλογή του, συχνά wordpress@yourdomain."
+
+msgid "Never"
+msgstr "Ποτέ"
+
+msgid "New"
+msgstr "Νέος"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Δημιουργήθηκε νέο URL. Ενημερώστε το στον πάροχο email σας."
+
+msgid "New email types"
+msgstr "Νέοι τύποι email"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Τα νέα email κρατούνται μέχρι να τα αποδεσμεύσετε ή να τα απορρίψετε. Τα email επαναφοράς κωδικού εξακολουθούν να αποστέλλονται."
+
+msgid "New sender"
+msgstr "Νέος αποστολέας"
+
+msgid "New sender writes to many addresses"
+msgstr "Νέος αποστολέας γράφει σε πολλές διευθύνσεις"
+
+msgid "Next email"
+msgstr "Επόμενο email"
+
+msgid "Next email (j)"
+msgstr "Επόμενο email (j)"
+
+msgid "Next page"
+msgstr "Επόμενη σελίδα"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Δεν βρέθηκε κλειδί DKIM στους συνήθεις επιλογείς."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Δεν υπάρχει εγγραφή DMARC για τον τομέα αποστολέα %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Δεν βρέθηκε εγγραφή DMARC. Οι μεγάλοι πάροχοι γραμματοκιβωτίων την αναμένουν και χωρίς αυτήν ο καθένας μπορεί να πλαστογραφήσει αυτόν τον τομέα απαρατήρητα."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Δεν υπάρχει εγγραφή MX: αυτός ο τομέας δεν μπορεί να λάβει απαντήσεις ή επιστροφές και ορισμένοι παραλήπτες απορρίπτουν τέτοιους αποστολείς."
+
+msgid "No SMTP transcript for this email."
+msgstr "Δεν υπάρχει πρακτικό SMTP για αυτό το email."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Δεν υπάρχει εγγραφή SPF ούτε DMARC για τον τομέα αποστολέα %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Δεν υπάρχει εγγραφή SPF για τον τομέα αποστολέα %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Δεν βρέθηκε εγγραφή SPF. Οι παραλήπτες δεν μπορούν να γνωρίζουν ποιοι διακομιστές επιτρέπεται να στέλνουν για αυτόν τον τομέα."
+
+msgid "No alerts sent yet."
+msgstr "Δεν έχουν σταλεί ακόμη ειδοποιήσεις."
+
+msgid "No connection to the SMTP server"
+msgstr "Δεν υπάρχει σύνδεση με τον διακομιστή SMTP"
+
+msgid "No email logged for %s hours"
+msgstr "Κανένα email δεν καταγράφηκε για %s ώρες"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "Κανένα email δεν καταγράφηκε τις τελευταίες %1$s ώρες, αν και αυτός ο ιστότοπος έστειλε email σε αυτό το χρονικό διάστημα σε %2$s από τις τελευταίες %3$s ημέρες (κατά μέσο όρο %4$s)."
+
+msgid "No emails"
+msgstr "Κανένα email"
+
+msgid "No emails found."
+msgstr "Δεν βρέθηκαν email."
+
+msgid "No emails in this period."
+msgstr "Δεν υπάρχουν email σε αυτή την περίοδο."
+
+msgid "No emails logged for this order yet."
+msgstr "Δεν έχουν καταγραφεί ακόμη email για αυτή την παραγγελία."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Δεν έχουν καταγραφεί ακόμη email. Οι τύποι email εμφανίζονται εδώ μόλις ο ιστότοπός σας στείλει email."
+
+msgid "No emails match these filters."
+msgstr "Κανένα email δεν ταιριάζει σε αυτά τα φίλτρα."
+
+msgid "No emails sent"
+msgstr "Δεν στάλθηκαν email"
+
+msgid "No emails to this user in the log."
+msgstr "Δεν υπάρχουν email προς αυτόν τον χρήστη στο αρχείο καταγραφής."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "Δεν καταγράφηκαν email τις τελευταίες δύο εβδομάδες."
+
+msgid "No limit"
+msgstr "Χωρίς όριο"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Δεν βρέθηκε αρχείο καταγραφής άλλου πρόσθετου καταγραφής email σε αυτόν τον ιστότοπο."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Δεν βρέθηκε αρχείο καταγραφής αυτού του πρόσθετου σε αυτόν τον ιστότοπο."
+
+msgid "No problem recipients."
+msgstr "Δεν υπάρχουν προβληματικοί παραλήπτες."
+
+msgid "No problems found in this email."
+msgstr "Δεν βρέθηκαν προβλήματα σε αυτό το email."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Δεν βρέθηκε δημόσιος τομέας αποστολέα (η διεύθυνση του ιστότοπου δεν είναι όνομα τομέα και το αρχείο καταγραφής δεν έχει ακόμη αποστολείς)."
+
+msgid "No public sender domain to check"
+msgstr "Δεν υπάρχει δημόσιος τομέας αποστολέα για έλεγχο"
+
+msgid "No regularly sent email has stopped"
+msgstr "Κανένα τακτικά αποστελλόμενο email δεν σταμάτησε"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Δεν υπάρχει διεύθυνση αναφορών (rua) – δεν θα βλέπετε ποιος στέλνει εκ μέρους σας."
+
+msgid "No sender address recorded"
+msgstr "Δεν καταγράφηκε διεύθυνση αποστολέα"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Δεν υπάρχει διαθέσιμο ίχνος για αυτή την καταχώριση. Καταγράφηκε πριν υπάρξει το ίχνος ή από έκδοση χωρίς αυτό."
+
+msgid "No unusual email failures"
+msgstr "Καμία ασυνήθιστη αποτυχία email"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Όχι, σκόπιμα. Το «%1$s» προς %2$s κρατήθηκε %3$s και δεν στάλθηκε. Αιτία: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Όχι. Κάθε email που στέλνεται τακτικά έφυγε στην ώρα του."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Όχι. Το «%1$s» προς %2$s απέτυχε %3$s. Αιτία: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Όχι. Το «%1$s» προς %2$s έφυγε από τον ιστότοπό σας %3$s, αλλά το %4$s αναφέρει ότι ο διακομιστής παραλαβής το απέρριψε."
+
+msgid "None"
+msgstr "Κανένα"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Κανονικά αποστέλλεται τουλάχιστον κάθε %1$s ημέρες, τώρα καθυστερεί κατά %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Δεν ήταν δυνατό να ελεγχθούν όλοι οι επιλογείς εγκαίρως."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Δεν καταγράφηκε: άλλο πρόσθετο είχε ενεργοποιημένη την αποσφαλμάτωση SMTP."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Δεν καταγράφηκε: το πρακτικό SMTP είναι απενεργοποιημένο στις ρυθμίσεις."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Δεν καταγράφηκε: αυτό το email δεν στάλθηκε μέσω SMTP."
+
+msgid "Not set up"
+msgstr "Δεν έχει ρυθμιστεί"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Δεν αποθηκεύτηκε: τα πρακτικά διατηρούνται μόνο για αποτυχημένα email."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Όχι ακόμη. Το «%1$s» προς %2$s έφυγε από τον ιστότοπό σας %3$s, αλλά το %4$s αναφέρει προσωρινό πρόβλημα."
+
+msgid "Notes"
+msgstr "Σημειώσεις"
+
+msgid "Notes in the latest email: %s"
+msgstr "Σημειώσεις στο πιο πρόσφατο email: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Σημειώσεις: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Σημειώσεις: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Δεν αναμένεται τίποτε άλλο σήμερα."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Τίποτα δεν απέτυχε τις τελευταίες 7 ημέρες."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Δεν υπάρχει ακόμη τίποτα για σύγκριση: κανένα email δεν στέλνεται αρκετά τακτικά ώστε το Mailspur να εντοπίσει κενό."
+
+msgid "Number of failed emails"
+msgstr "Αριθμός αποτυχημένων email"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Οι αριθμοί αγνοούνται, οπότε τα «Παραγγελία #123» και «Παραγγελία #124» μετρούν μαζί."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Από τα τελευταία %1$s email που στάλθηκαν ενώ κάποιος περίμενε τη σελίδα, τα μισά χρειάστηκαν περισσότερο από %2$s δ (μέσος όρος %3$s δ)."
+
+msgid "Off"
+msgstr "Ανενεργό"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Ανενεργό από προεπιλογή. Χωρίς αυτό, η «Λήψη .eml» αναδημιουργεί το μήνυμα από τα καταγεγραμμένα (λογοκριμένα) δεδομένα. Η ακατέργαστη πηγή περιέχει συνδέσμους επαναφοράς κωδικού και άλλα μυστικά ακριβώς όπως στάλθηκαν – ενεργοποιήστε το μόνο όταν το χρειάζεστε και είναι επιλεγμένα και τα δύο πλαίσια."
+
+msgid "Off – deliver emails normally"
+msgstr "Ανενεργό – κανονική παράδοση email"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Μόλις διορθωθεί η αιτία, μπορείτε να στείλετε ξανά το email από το αρχείο καταγραφής."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Μόλις οι αναφορές σας δείξουν ότι η νόμιμη αλληλογραφία περνά, αλλάξτε σε p=quarantine (ή p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Ένα από τα δύο email διαγράφηκε ή ανωνυμοποιήθηκε από τις ρυθμίσεις διατήρησης, οπότε δεν μπορούν πλέον να συγκριθούν."
+
+msgid "Only administrators can empty the log."
+msgstr "Μόνο οι διαχειριστές μπορούν να αδειάσουν το αρχείο καταγραφής."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Μόνο οι διαχειριστές μπορούν να στέλνουν email σε άλλες διευθύνσεις."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Ειδοποιεί μόνο όταν οι τελευταίες 14 ημέρες δείχνουν ότι κανονικά αποστέλλονται email σε αυτό το χρονικό διάστημα (σε τουλάχιστον 10 από 14 ημέρες, συμπεριλαμβανομένης της ίδιας ημέρας της εβδομάδας), ώστε οι ήσυχες νύχτες ή τα σαββατοκύριακα να μην την ενεργοποιούν."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Μόνο email των οποίων όλοι οι παραλήπτες είναι προβληματικοί. Τα email επαναφοράς κωδικού αποστέλλονται πάντα· τα email σε αναμονή μπορούν ακόμη να σταλούν από το αρχείο καταγραφής («Αποστολή τώρα»)."
+
+msgid "Only held emails can be released."
+msgstr "Μόνο email σε αναμονή μπορούν να αποδεσμευτούν."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Ανοιχτή λίστα διανομής: %1$s εξωτερικοί παραλήπτες βλέπουν ο ένας τη διεύθυνση του άλλου"
+
+msgid "Open in log"
+msgstr "Άνοιγμα στο αρχείο καταγραφής"
+
+msgid "Open latest"
+msgstr "Άνοιγμα του πιο πρόσφατου"
+
+msgid "Open staging mode"
+msgstr "Άνοιγμα δοκιμαστικής λειτουργίας"
+
+msgid "Open the email types"
+msgstr "Άνοιγμα των τύπων email"
+
+msgid "Open the emergency brake"
+msgstr "Άνοιγμα φρένου έκτακτης ανάγκης"
+
+msgid "Open the log"
+msgstr "Άνοιγμα αρχείου καταγραφής"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Ανοίξτε το αρχείο καταγραφής ή την προβολή εντοπισμού σφαλμάτων του προσθέτου αποστολής email για το ακριβές σφάλμα."
+
+msgid "Open the mail log"
+msgstr "Άνοιγμα αρχείου καταγραφής email"
+
+msgid "Open the sender check"
+msgstr "Άνοιγμα ελέγχου αποστολέα"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Προαιρετικό και ανενεργό από προεπιλογή. Όταν είναι ενεργό, το Mailspur ελέγχει τακτικά το αρχείο καταγραφής και σας ειδοποιεί για εξάρσεις αποτυχιών, ασυνήθιστη σιωπή ή τύπους email που σταμάτησαν. Οι ειδοποιήσεις πηγαίνουν μόνο στις διευθύνσεις και στο webhook που εισάγετε εδώ· περιέχουν το όνομα του ιστότοπου, το κείμενο της ειδοποίησης (για τύπο email που σταμάτησε: τον αποστολέα και το μοτίβο θέματος) και έναν σύνδεσμο προς το αρχείο καταγραφής – ποτέ περιεχόμενο email ή παραλήπτες."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Προαιρετικό, μόνο https. Τα URL webhook του Slack και του Discord λαμβάνουν μήνυμα συνομιλίας, οποιοδήποτε άλλο URL ένα αίτημα JSON POST. Το αίτημα γίνεται από τον διακομιστή σας ακριβώς σε αυτό το URL – δεν εμπλέκεται καμία άλλη υπηρεσία."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Ή προσθέστε τη διεύθυνση ως ψευδώνυμο / δικαίωμα «αποστολή ως» στον πάροχο email σας."
+
+msgid "Order #%s"
+msgstr "Παραγγελία #%s"
+
+msgid "Order data"
+msgstr "Δεδομένα παραγγελίας"
+
+msgid "Origin"
+msgstr "Προέλευση"
+
+msgid "Original Bcc"
+msgstr "Αρχικό Bcc"
+
+msgid "Original Cc"
+msgstr "Αρχικό Cc"
+
+msgid "Original recipients"
+msgstr "Αρχικοί παραλήπτες"
+
+msgid "Other emails"
+msgstr "Άλλα email"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Άλλοι παραλήπτες (π.χ. επισκέπτες)"
+
+msgid "Overview"
+msgstr "Επισκόπηση"
+
+msgid "Own top-level menu item"
+msgstr "Δικό του στοιχείο στο κύριο μενού"
+
+msgid "PHP extension openssl is missing"
+msgstr "Λείπει η επέκταση PHP openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "Το PHPMailer είναι έτοιμο (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Σελιδοποίηση"
+
+msgid "Password sent in plain text"
+msgstr "Το συνθηματικό στάλθηκε σε απλό κείμενο"
+
+msgid "Path"
+msgstr "Διαδρομή"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Αριθμός κάρτας πληρωμής σε απλό κείμενο: %1$s"
+
+msgid "Per page"
+msgstr "Ανά σελίδα"
+
+msgid "Period"
+msgstr "Περίοδος"
+
+msgid "Personal data"
+msgstr "Προσωπικά δεδομένα"
+
+msgid "Phone"
+msgstr "Τηλέφωνο"
+
+msgid "Phone number"
+msgstr "Αριθμός τηλεφώνου"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Πλάτος τηλεφώνου (375 px). Αν μπορείτε να κάνετε κύλιση οριζόντια, το email είναι πλατύτερο από τις περισσότερες οθόνες τηλεφώνων."
+
+msgid "Plain text"
+msgstr "Απλό κείμενο"
+
+msgid "Please enter valid email addresses."
+msgstr "Εισαγάγετε έγκυρες διευθύνσεις email."
+
+msgid "Plugin"
+msgstr "Πρόσθετο"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Πρόσθετο ή θέμα που έστειλε το email."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Επισήμανση προβλημάτων που εμποδίζουν τα email να φτάσουν ή να εμφανιστούν σωστά"
+
+msgid "Port"
+msgstr "Θύρα"
+
+msgid "Postal address"
+msgstr "Ταχυδρομική διεύθυνση"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Τα Postmark, Mailgun, Brevo ή Amazon SES μπορούν να αναφέρουν σε αυτόν τον ιστότοπο αν ένα email παραδόθηκε, επεστράφη ή επισημάνθηκε ως ανεπιθύμητο. Η κατάσταση εμφανίζεται στο καταγεγραμμένο email και οι μόνιμες επιστροφές μετρούν για τους προβληματικούς παραλήπτες. Για την αντιστοίχιση των αναφορών, το Mailspur προσθέτει μια κεφαλίδα αναφοράς στα εξερχόμενα email."
+
+msgid "Preparation"
+msgstr "Προετοιμασία"
+
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+msgid "Previews"
+msgstr "Προεπισκοπήσεις"
+
+msgid "Previous email"
+msgstr "Προηγούμενο email"
+
+msgid "Previous email (k)"
+msgstr "Προηγούμενο email (k)"
+
+msgid "Previous page"
+msgstr "Προηγούμενη σελίδα"
+
+msgid "Print"
+msgstr "Εκτύπωση"
+
+msgid "Privacy"
+msgstr "Απόρρητο"
+
+msgid "Privacy & security"
+msgstr "Απόρρητο και ασφάλεια"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Πιθανότατα ναι: %s τύπος email σταμάτησε να αποστέλλεται."
+msgstr[1] "Πιθανότατα ναι: %s τύποι email σταμάτησαν να αποστέλλονται."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Τα δοκιμαστικά email αποστέλλονται μόνο σε διαχειριστή."
+
+msgid "Problem"
+msgstr "Πρόβλημα"
+
+msgid "Problem recipients"
+msgstr "Προβληματικοί παραλήπτες"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Προστατεύει τον τομέα σας όταν φεύγουν πολύ περισσότερα email από το συνηθισμένο, π.χ. επειδή bots ανεπιθύμητης αλληλογραφίας κάνουν κατάχρηση μιας φόρμας επικοινωνίας. Οι ειδοποιήσεις χρησιμοποιούν τα κανάλια των ειδοποιήσεων παρακολούθησης· τα email επαναφοράς κωδικού δεν κρατούνται ποτέ."
+
+msgid "Provider status"
+msgstr "Κατάσταση παρόχου"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Πάροχοι όπως %2$s δημοσιεύουν αυστηρή πολιτική DMARC. Ένα email «από» τον τομέα τους που στάλθηκε από τον διακομιστή web σας αποτυγχάνει σε αυτόν τον έλεγχο και απορρίπτεται ή καταλήγει στα ανεπιθύμητα."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Τοποθετήστε το σημαντικό περιεχόμενο σε πραγματικό κείμενο και χρησιμοποιήστε εικόνες μόνο συμπληρωματικά."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Τοποθετήστε πρώτα τις σημαντικές πληροφορίες και κρατήστε το θέμα κάτω από περίπου 80 χαρακτήρες."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "Διαδρομή REST"
+
+msgid "Rarely"
+msgstr "Σπάνια"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Αξιολογήστε το Mailspur στο WordPress.org"
+
+msgid "Raw source"
+msgstr "Ακατέργαστη πηγή"
+
+msgid "Reason"
+msgstr "Αιτία"
+
+msgid "Rebuild from the log"
+msgstr "Ανακατασκευή από το αρχείο καταγραφής"
+
+msgid "Recipient"
+msgstr "Παραλήπτης"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Ο τομέας του παραλήπτη δεν μπορεί να λάβει email: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Ο τομέας του παραλήπτη δεν δέχεται email: %1$s"
+
+msgid "Recipients"
+msgstr "Παραλήπτες"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Συνιστάται. Διαφορετικά, οποιοσδήποτε έχει πρόσβαση στο αρχείο καταγραφής θα μπορούσε να χρησιμοποιήσει έναν καταγεγραμμένο σύνδεσμο επαναφοράς ή κωδικό για να καταλάβει έναν λογαριασμό. Η επαναποστολή τέτοιου email στέλνει την έκδοση με απόκρυψη."
+
+msgid "Record for every email"
+msgstr "Καταγραφή για κάθε email"
+
+msgid "Record for failed emails only"
+msgstr "Καταγραφή μόνο για αποτυχημένα email"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Καταγράφει τη συνομιλία με τον διακομιστή SMTP (μόνο όταν τα email αποστέλλονται μέσω SMTP). Τα στοιχεία σύνδεσης και το περιεχόμενο του μηνύματος δεν καταγράφονται ποτέ. Παραλείπεται όσο άλλο πρόσθετο έχει ενεργοποιημένη την αποσφαλμάτωση SMTP."
+
+msgid "Recovery"
+msgstr "Ανάκαμψη"
+
+msgid "Redact secrets"
+msgstr "Απόκρυψη μυστικών"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Ανακατεύθυνση όλων των email στις παρακάτω διευθύνσεις"
+
+msgid "Redirect to"
+msgstr "Ανακατεύθυνση σε"
+
+msgid "Redirect to test addresses"
+msgstr "Ανακατεύθυνση σε δοκιμαστικές διευθύνσεις"
+
+msgid "Redirected by staging mode."
+msgstr "Ανακατευθύνθηκε από τη δοκιμαστική λειτουργία."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Μειώστε το HTML: αφαιρέστε αχρησιμοποίητο CSS, επαναλαμβανόμενα ενσωματωμένα στυλ, σχόλια και μεγάλα URL παρακολούθησης. Οι εικόνες δεν μετρούν, μόνο το ίδιο το HTML."
+
+msgid "Registered users"
+msgstr "Εγγεγραμμένοι χρήστες"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Απορρίφθηκε από SPF, DKIM ή DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Σχετικοί σύνδεσμοι ή εικόνες (%1$s), π.χ. %2$s"
+
+msgid "Release held emails"
+msgstr "Αποδέσμευση email σε αναμονή"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Αποδεσμεύτηκε από τη δοκιμαστική λειτουργία (καταχώριση σε αναμονή #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Αποδεσμεύτηκε από το φρένο έκτακτης ανάγκης (καταχώριση σε αναμονή #%s)."
+
+msgid "Remote content"
+msgstr "Απομακρυσμένο περιεχόμενο"
+
+msgid "Remote content is loaded."
+msgstr "Το απομακρυσμένο περιεχόμενο φορτώθηκε."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Οι απομακρυσμένες εικόνες και γραμματοσειρές αποκλείονται, ώστε οι αποστολείς να μην μπορούν να καταγράψουν πότε ανοίγετε αυτή την καταχώριση."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Αφαίρεση όλων των καταχωρίσεων που εισήχθησαν από %s; Τα δεδομένα στο άλλο πρόσθετο δεν επηρεάζονται."
+
+msgid "Remove imported entries"
+msgstr "Αφαίρεση εισαγόμενων καταχωρίσεων"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Αφαιρέστε το πεδίο της κάρτας από την ειδοποίηση της φόρμας ή του προσθέτου που έστειλε αυτό το email – τα στοιχεία της κάρτας αφορούν μόνο τον πάροχο πληρωμών. Εμφανίστε το πολύ τα τέσσερα τελευταία ψηφία. Ζητήστε από τον παραλήπτη να διαγράψει το email."
+
+msgid "Removed:"
+msgstr "Αφαιρέθηκαν:"
+
+msgid "Repeat alerts after"
+msgstr "Επανάληψη ειδοποιήσεων μετά από"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Οι απαντήσεις δεν μπορούν να σας φτάσουν: στάλθηκε από %1$s χωρίς Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Αναφέρθηκε από τον πάροχο email σας τις τελευταίες 30 ημέρες· μετρούν μόνο τα email για τα οποία έδωσε αναφορά."
+
+msgid "Request"
+msgstr "Αίτημα"
+
+msgid "Request failed: %s"
+msgstr "Το αίτημα απέτυχε: %s"
+
+msgid "Resend"
+msgstr "Επαναποστολή"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Στείλτε ξανά το email από το αρχείο καταγραφής σε λίγα λεπτά."
+
+msgid "Resend the email from the log later."
+msgstr "Στείλτε ξανά το email από το αρχείο καταγραφής αργότερα."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Στείλτε ξανά το email από το αρχείο καταγραφής μόλις λειτουργήσει η παράδοση."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Στείλτε ξανά τα αποτυχημένα email μόλις μηδενιστεί το όριο."
+
+msgid "Resent from log"
+msgstr "Στάλθηκε ξανά από το αρχείο καταγραφής"
+
+msgid "Reset filters"
+msgstr "Επαναφορά φίλτρων"
+
+msgid "Result"
+msgstr "Αποτέλεσμα"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Αποτέλεσμα από την προσωρινή μνήμη – χρησιμοποιήστε το «Έλεγχος ξανά» μετά την αλλαγή εγγραφών DNS."
+
+msgid "Retention"
+msgstr "Διατήρηση"
+
+msgid "Retention in the log"
+msgstr "Διατήρηση στο αρχείο καταγραφής"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Η διατήρηση για αυτόν τον τύπο email αποθηκεύτηκε. Ισχύει από τον επόμενο ημερήσιο καθαρισμό."
+
+msgid "Review held emails"
+msgstr "Έλεγχος email σε αναμονή"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Ελέγξτε τις σημειώσεις αυτού του email (σύνδεσμοι, αποστολέας, δεσμευτικά θέσης)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Ανακαλέστε το κλειδί στον πίνακα ελέγχου της υπηρεσίας και δημιουργήστε νέο. Έπειτα εντοπίστε πώς κατέληξε σε email (αναφορές εντοπισμού σφαλμάτων ή σφαλμάτων, φόρμα που εμφανίζει ρυθμίσεις) και σταματήστε το."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Ανακληθέντα κλειδιά (κενό p=): %s."
+
+msgid "Rhythm"
+msgstr "Ρυθμός"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Εκτελέστε αναζήτηση και αντικατάσταση του παλιού τομέα στη βάση δεδομένων και ελέγξτε τα σταθερά URL στα πρότυπα email και στις ρυθμίσεις των προσθέτων."
+
+msgid "Run the full sender check"
+msgstr "Εκτέλεση πλήρους ελέγχου αποστολέα"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "Το SMTP AUTH είναι απενεργοποιημένο στο Microsoft 365"
+
+msgid "SMTP host"
+msgstr "Διακομιστής SMTP"
+
+msgid "SMTP login failed"
+msgstr "Η σύνδεση SMTP απέτυχε"
+
+msgid "SMTP transcript"
+msgstr "Πρακτικό SMTP"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "Η εγγραφή SPF επιτρέπει σε κάθε διακομιστή στον κόσμο να στέλνει για αυτόν τον τομέα (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "Η εγγραφή SPF τελειώνει με ?all (ουδέτερο): δεν προστατεύει τον τομέα από πλαστογράφηση."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "Βρέθηκε εγγραφή SPF (redirect= σε άλλη πολιτική)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "Βρέθηκε εγγραφή SPF. Οι άλλοι διακομιστές επισημαίνονται ως ύποπτοι (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "Βρέθηκε εγγραφή SPF. Οι άλλοι διακομιστές απορρίπτονται (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "Η εγγραφή SPF δεν έχει όρο «all», οπότε η αλληλογραφία από άλλους διακομιστές αντιμετωπίζεται ως ουδέτερη."
+
+msgid "Saturday"
+msgstr "Σάββατο"
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Αποθηκεύτηκε – αφήστε κενό για να διατηρηθεί"
+
+msgid "Scheduled for later today:"
+msgstr "Προγραμματισμένα για αργότερα σήμερα:"
+
+msgid "Search recipient or subject"
+msgstr "Αναζήτηση παραλήπτη ή θέματος"
+
+msgid "Search recipient or subject …"
+msgstr "Αναζήτηση παραλήπτη ή θέματος …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Αναζητήστε την παλιά διεύθυνση στο πρότυπο email, στις ρυθμίσεις των προσθέτων και στη βάση δεδομένων (π.χ. μετά από μεταφορά του ιστότοπου) και αντικαταστήστε την με τον ζωντανό τομέα."
+
+msgid "See why"
+msgstr "Δείτε γιατί"
+
+msgid "Seen"
+msgstr "Προβλήθηκε"
+
+msgid "Select all"
+msgstr "Επιλογή όλων"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Ο επιλογέας «%s» δεν έχει επίσης κλειδί."
+
+msgid "Send"
+msgstr "Αποστολή"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Στείλτε αντί αυτού έναν σύνδεσμο όπου ο χρήστης ορίζει ο ίδιος συνθηματικό – αυτό ακριβώς κάνει το email νέου χρήστη του πυρήνα του WordPress. Αναζητήστε στο πρόσθετο που έστειλε αυτό το email μια επιλογή όπως «Αποστολή συνθηματικού μέσω email» ή «Συμπερίληψη συνθηματικού» και απενεργοποιήστε την."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Αποστολή μηνύματος όταν επιλυθεί το πρόβλημα"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Στείλτε ένα δοκιμαστικό email από τις ρυθμίσεις του προσθέτου αποστολής email."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Αποστολή εβδομαδιαίας αναφοράς email στις παραπάνω διευθύνσεις"
+
+msgid "Send again"
+msgstr "Αποστολή ξανά"
+
+msgid "Send alerts by email to"
+msgstr "Αποστολή ειδοποιήσεων μέσω email σε"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Αποστολή όλων των %s email σε αναμονή στους αρχικούς παραλήπτες τους τώρα;"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Στέλνετε τα μεγάλα αρχεία ως σύνδεσμο λήψης αντί για συνημμένο."
+
+msgid "Send latest to me"
+msgstr "Αποστολή του πιο πρόσφατου σε εμένα"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Στέλνετε τα ενημερωτικά δελτία με πρόσθετο ή υπηρεσία newsletter που προσθέτει τις κεφαλίδες List-Unsubscribe και List-Unsubscribe-Post και μην στέλνετε ένα email σε πολλούς ανθρώπους μέσω Bcc."
+
+msgid "Send now"
+msgstr "Αποστολή τώρα"
+
+msgid "Send report now"
+msgstr "Αποστολή αναφοράς τώρα"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Στέλνετε τέτοια email σε κάθε παραλήπτη ξεχωριστά ή βάλτε τους παραλήπτες σε Bcc. Για ενημερωτικά δελτία χρησιμοποιήστε πρόσθετο που στέλνει ένα email ανά παραλήπτη. Αν αποκαλύφθηκαν διευθύνσεις πελατών, ελέγξτε με τον υπεύθυνο προστασίας δεδομένων αν το περιστατικό πρέπει να αναφερθεί."
+
+msgid "Send test alert"
+msgstr "Αποστολή δοκιμαστικής ειδοποίησης"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Στείλτε το email με την κεφαλίδα «Content-Type: text/html; charset=UTF-8» ή ορίστε τον τύπο περιεχομένου με το φίλτρο wp_mail_content_type. Πολλά πρόσθετα φορμών και καταστημάτων έχουν επιλογή «HTML email»."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Αποστολή του πιο πρόσφατου email αυτού του τύπου στο %s;"
+
+msgid "Send this email again to %s?"
+msgstr "Αποστολή αυτού του email ξανά προς %s;"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Αποστολή αυτού του email σε (έως 10 διευθύνσεις, χωρισμένες με κόμμα):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Αποστολή αυτού του email σε αναμονή τώρα προς %s; Η δοκιμαστική λειτουργία παρακάμπτεται για αυτό το ένα email."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Στέλνετε μέσω αξιόπιστης υπηρεσίας SMTP αντί για τον διακομιστή web, ειδικά σε κοινόχρηστη φιλοξενία."
+
+msgid "Send to…"
+msgstr "Αποστολή σε…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Έλεγχος αποστολέα (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Ο τομέας αποστολέα %1$s διαφέρει από τον ιστότοπο (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Τομέας αποστολέα (SPF και DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Ο τομέας ή η διεύθυνση αποστολέα δεν έχει επαληθευτεί"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Αποστολέας %s από τα τελευταία 200 email"
+
+msgid "Sending failed – see the log."
+msgstr "Η αποστολή απέτυχε – δείτε το αρχείο καταγραφής."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Η αποστολή απέτυχε – δείτε τη νέα καταχώριση για λεπτομέρειες."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Η αποστολή στο παρασκήνιο (πρόσθετο αποστολής email με ουρά) επιτρέπει στη σελίδα να ολοκληρωθεί χωρίς αναμονή."
+
+msgid "Sending limit or quota reached"
+msgstr "Συμπληρώθηκε το όριο αποστολής ή η ποσόστωση"
+
+msgid "Sending report …"
+msgstr "Αποστολή αναφοράς …"
+
+msgid "Sending test alert …"
+msgstr "Αποστολή δοκιμαστικής ειδοποίησης …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Η αποστολή λειτουργεί ξανά: δεν υπάρχει πλέον έξαρση αποτυχιών."
+
+msgid "Sending…"
+msgstr "Αποστολή…"
+
+msgid "Sent"
+msgstr "Στάλθηκε"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Στάλθηκε ως δωρεάν διεύθυνση email: %1$s"
+
+msgid "Sent by"
+msgstr "Αποστολή από"
+
+msgid "Sent by WP-Cron."
+msgstr "Στάλθηκε από το WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Στάλθηκε από το συμβάν cron %1$s – καθυστερεί κατά %2$s ενώ το WP-Cron εκτελεί άλλα συμβάντα· ίσως αποτυγχάνει με σφάλμα."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Στάλθηκε από το συμβάν cron %1$s – είναι προγραμματισμένο (επόμενη εκτέλεση σε %2$s) και το WP-Cron λειτουργεί, άρα το συμβάν δεν στέλνει πλέον αυτό το email."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Στάλθηκε από το συμβάν cron %s – αυτό το συμβάν δεν είναι πλέον προγραμματισμένο."
+
+msgid "Sent by the cron event %s."
+msgstr "Στάλθηκε από το συμβάν cron %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Στάλθηκε επανειλημμένα: %1$s ακόμη πανομοιότυπα email μέσα σε %2$s λεπτά"
+
+msgid "Sent to %s."
+msgstr "Στάλθηκε στο %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Στάλθηκε στην ίδια διεύθυνση γύρω από την ημερομηνία της παραγγελίας, αλλά δεν συνδέεται με αυτή την παραγγελία (για παράδειγμα καταγράφηκε πριν υπάρξει η σύνδεση ή εισήχθη)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Ορίστε μια διεύθυνση Reply-To που διαβάζει κάποιος, π.χ. στο WooCommerce → Ρυθμίσεις → Email ή στις ρυθμίσεις email του προσθέτου φορμών σας. Ή στέλνετε από διεύθυνση που μπορεί να λαμβάνει απαντήσεις."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Ορίστε διεύθυνση αποστολέα στον τομέα σας στο πρόσθετο SMTP ή μέσω του φίλτρου wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Ορίστε διεύθυνση αποστολέα στον πραγματικό τομέα σας, π.χ. στο πρόσθετο SMTP ή μέσω του φίλτρου wp_mail_from, και ελέγξτε τη διεύθυνση του ιστότοπου στις Ρυθμίσεις → Γενικά."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Ορίστε θέμα στο πρότυπο ή στις ρυθμίσεις φόρμας του προσθέτου που στέλνει το email."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Ορίστε στο πρόσθετο SMTP ως διεύθυνση From το γραμματοκιβώτιο με το οποίο συνδέεστε και ενεργοποιήστε την «επιβολή διεύθυνσης From»."
+
+msgid "Set up staging mode"
+msgstr "Ρύθμιση δοκιμαστικής λειτουργίας"
+
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Settings › Discussion"
+msgstr "Ρυθμίσεις › Συζήτηση"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Τα πολλά θαυμαστικά είναι χαρακτηριστικά των διαφημιστικών ανεπιθύμητων. Τα φίλτρα ανεπιθύμητων μπορεί να το μετρήσουν εις βάρος του email, κάτι που μπορεί να χειροτερέψει την παράδοση."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Αρκετά από τα πιο πρόσφατα email αυτού του τύπου απέτυχαν."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Ποσοστό αποτυχημένων email ανά ημέρα (ανά εβδομάδα για μεγάλες περιόδους)."
+
+msgid "Shop managers and above"
+msgstr "Διαχειριστές καταστήματος και άνω"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Οι συντομευμένοι σύνδεσμοι κρύβουν πού οδηγούν. Οι αποστολείς ανεπιθύμητων τους χρησιμοποιούν πολύ, οπότε τα φίλτρα ανεπιθύμητων μπορεί να τους μετρήσουν εις βάρος του email, κάτι που μπορεί να χειροτερέψει την παράδοση."
+
+msgid "Show all email types"
+msgstr "Εμφάνιση όλων των τύπων email"
+
+msgid "Show all in Mail Log"
+msgstr "Εμφάνιση όλων στο αρχείο καταγραφής email"
+
+msgid "Show as"
+msgstr "Εμφάνιση ως"
+
+msgid "Show data as table"
+msgstr "Εμφάνιση δεδομένων ως πίνακα"
+
+msgid "Show email types"
+msgstr "Εμφάνιση τύπων email"
+
+msgid "Show emails"
+msgstr "Εμφάνιση email"
+
+msgid "Show emails for %s in the log"
+msgstr "Εμφάνιση των email για %s στο αρχείο καταγραφής"
+
+msgid "Show failed emails"
+msgstr "Εμφάνιση αποτυχημένων email"
+
+msgid "Show held emails"
+msgstr "Εμφάνιση email σε αναμονή"
+
+msgid "Show these emails in the log"
+msgstr "Εμφάνιση αυτών των email στο αρχείο καταγραφής"
+
+msgid "Silence"
+msgstr "Σιωπή"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Προσομοίωση σκούρας λειτουργίας με χρήση των στυλ σκούρας λειτουργίας του ίδιου του email. Κάθε εφαρμογή αλληλογραφίας χειρίζεται τη σκούρα λειτουργία λίγο διαφορετικά."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Προσομοίωση εφαρμογών που επιβάλλουν σκούρα λειτουργία αντιστρέφοντας τα χρώματα. Οι εικόνες διατηρούν τα χρώματά τους· οι πραγματικές εφαρμογές διαφέρουν σε λεπτομέρειες."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Από το 2024 το Gmail και το Yahoo απαιτούν διαγραφή με ένα κλικ (κεφαλίδα List-Unsubscribe) για τη μαζική αλληλογραφία. Χωρίς αυτήν, τα ενημερωτικά δελτία απορρίπτονται ή φιλτράρονται πιο συχνά."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Μεμονωμένες αποτυχίες, π.χ. λόγω λάθους στη διεύθυνση, είναι φυσιολογικές."
+
+msgid "Some emails could not be sent recently"
+msgstr "Ορισμένα email δεν ήταν δυνατό να σταλούν πρόσφατα"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Ορισμένες αναζητήσεις παραλείφθηκαν επειδή το DNS απάντησε πολύ αργά."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Λυπούμαστε, δεν σας επιτρέπεται η πρόσβαση σε αυτή τη σελίδα."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Δεν σας επιτρέπεται να το κάνετε αυτό."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Λυπούμαστε, δεν σας επιτρέπεται να εξάγετε το αρχείο καταγραφής email."
+
+msgid "Source"
+msgstr "Πηγή"
+
+msgid "Staging"
+msgstr "Δοκιμαστικό"
+
+msgid "Staging mode"
+msgstr "Δοκιμαστική λειτουργία"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Η δοκιμαστική λειτουργία είναι ενεργή: όλα τα email ανακατευθύνονται στο %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Η δοκιμαστική λειτουργία είναι ενεργή: τα email καταγράφονται αλλά δεν παραδίδονται."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Η δοκιμαστική λειτουργία είναι ενεργή: τα email θα έπρεπε να ανακατευθύνονται, αλλά δεν έχει οριστεί έγκυρη διεύθυνση ανακατεύθυνσης – όλα τα email κρατούνται και δεν παραδίδονται."
+
+msgid "Staging mode is off"
+msgstr "Η δοκιμαστική λειτουργία είναι ανενεργή"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Η δοκιμαστική λειτουργία είναι ενεργή αν και αυτός είναι ζωντανός ιστότοπος"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Η δοκιμαστική λειτουργία είναι ενεργή για αυτόν τον δοκιμαστικό ιστότοπο"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Η δοκιμαστική λειτουργία είναι ενεργή: όλα τα email πηγαίνουν στις δοκιμαστικές διευθύνσεις σας, όχι στους πραγματικούς παραλήπτες."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Η δοκιμαστική λειτουργία είναι ενεργή: τα email καταγράφονται αλλά δεν αποστέλλονται."
+
+msgid "Staging mode settings"
+msgstr "Ρυθμίσεις δοκιμαστικής λειτουργίας"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Ξεκινήστε με p=none για να λαμβάνετε αναφορές και έπειτα αυστηροποιήστε σε quarantine ή reject μόλις περνούν τα SPF και DKIM."
+
+msgid "Statistics"
+msgstr "Στατιστικά"
+
+msgid "Status"
+msgstr "Κατάσταση"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "Γίνεται ακόμη ταξινόμηση %s παλαιότερων email σε τύπους στο παρασκήνιο. Φορτώστε ξανά τη σελίδα σε ένα λεπτό."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Διακοπή ομαδοποίησης (στέλνει τώρα όσα περιμένουν)"
+
+msgid "Stop these emails"
+msgstr "Διακοπή αυτών των email"
+
+msgid "Stopped"
+msgstr "Σταμάτησε"
+
+msgid "Stopped by Mailspur."
+msgstr "Διακόπηκε από το Mailspur."
+
+msgid "Stopped email types"
+msgstr "Τύποι email που σταμάτησαν"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Αποθήκευση της ακριβούς ακατέργαστης πηγής MIME κάθε email"
+
+msgid "Subject"
+msgstr "Θέμα"
+
+msgid "Subject mostly in capital letters"
+msgstr "Θέμα κυρίως με κεφαλαία γράμματα"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Τα θέματα με κεφαλαία διαβάζονται σαν φωνές και είναι συνηθισμένα στα ανεπιθύμητα. Τα φίλτρα ανεπιθύμητων μπορεί να το μετρήσουν εις βάρος του email, κάτι που μπορεί να χειροτερέψει την παράδοση."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Τα θέματα συχνά περιέχουν ονόματα ή αριθμούς παραγγελιών."
+
+msgid "Suggested TXT record for %s"
+msgstr "Προτεινόμενη εγγραφή TXT για %s"
+
+msgid "Sunday"
+msgstr "Κυριακή"
+
+msgid "Supported: %s."
+msgstr "Υποστηρίζονται: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Απενεργοποιήστε το στο %1$s: «%2$s»."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Αφαιρέθηκε από την ημερήσια σύνοψη και στάλθηκε ξεχωριστά."
+
+msgid "Temporary rejection – try again later"
+msgstr "Προσωρινή απόρριψη – δοκιμάστε ξανά αργότερα"
+
+msgid "Test"
+msgstr "Δοκιμή"
+
+msgid "Test alert"
+msgstr "Δοκιμαστική ειδοποίηση"
+
+msgid "Text changes"
+msgstr "Αλλαγές κειμένου"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Έκδοση κειμένου που προέκυψε από το HTML. Δεν καταγράφηκε αν το email είχε και δική του έκδοση απλού κειμένου."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Αυτό είναι εντάξει αν ο διακομιστής αλληλογραφίας σας επιτρέπεται να στέλνει για αυτόν τον τομέα. Διαφορετικά οι έλεγχοι SPF και DMARC αποτυγχάνουν και το email καταλήγει στα ανεπιθύμητα."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Αυτό είναι σωστό για ένα δοκιμαστικό αντίγραφο, αλλά σε ζωντανό ιστότοπο οι πελάτες δεν λαμβάνουν επιβεβαιώσεις παραγγελιών, επαναφορές κωδικού ή απαντήσεις στις φόρμες τους. Απενεργοποιήστε τη δοκιμαστική λειτουργία αν αυτός είναι ο ζωντανός ιστότοπος."
+
+msgid "The API key was rejected"
+msgstr "Το κλειδί API απορρίφθηκε"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "Η αναζήτηση DNS απέτυχε ή έληξε. Δοκιμάστε ξανά τον έλεγχο αποστολέα αργότερα."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "Το email HTML περιέχει εικόνες αλλά σχεδόν καθόλου κείμενο. Τα φίλτρα ανεπιθύμητων δεν μπορούν να διαβάσουν εικόνες και δεν εμπιστεύονται τέτοια email, κάτι που μπορεί να χειροτερέψει την παράδοση. Αν το πρόγραμμα email αποκλείει τις εικόνες, ο αναγνώστης βλέπει ένα σχεδόν κενό email."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "Ο λογαριασμός SMTP μπορεί να στέλνει μόνο με τη δική του διεύθυνση (ή επαληθευμένα ψευδώνυμα). Το WordPress ή κάποιο πρόσθετο χρησιμοποίησε διαφορετική διεύθυνση From."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Η συνομιλία με τον διακομιστή SMTP ήταν κενή."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "Ο διακομιστής SMTP δεν ήταν καθόλου προσβάσιμος: λάθος όνομα διακομιστή ή θύρα, ο διακομιστής είναι εκτός λειτουργίας ή ο πάροχος φιλοξενίας αποκλείει τις εξερχόμενες θύρες αλληλογραφίας."
+
+msgid "The SMTP server refuses to relay"
+msgstr "Ο διακομιστής SMTP αρνείται την αναμετάδοση"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "Ο διακομιστής SMTP απέρριψε το όνομα χρήστη ή το συνθηματικό (κωδικός απάντησης 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "Ο διακομιστής SMTP απαιτεί σύνδεση ή κρυπτογράφηση"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Η διεύθυνση φαίνεται μη έγκυρη – ελέγξτε την για λάθη ή ζητήστε άλλη."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Το σώμα περιέχει ετικέτες HTML, αλλά το email στάλθηκε ως text/plain (η προεπιλογή του WordPress). Οι παραλήπτες βλέπουν τις ακατέργαστες ετικέτες αντί για μορφοποιημένο κείμενο."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Η σύνδεση ή η μεταφορά διήρκεσε υπερβολικά. Συνήθως ένα τείχος προστασίας απορρίπτει σιωπηλά τη σύνδεση ή ο διακομιστής και η θύρα είναι λάθος."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Η προεπιλεγμένη διεύθυνση αποστολέα δεν έχει δημόσιο τομέα ή αυτός ο διακομιστής δεν μπορεί να αναζητήσει εγγραφές DNS."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Ο τομέας δεν έχει ούτε εγγραφή MX ούτε εγγραφή A στο DNS. Τα email προς αυτόν επιστρέφονται. Συνήθως η διεύθυνση είναι λάθος γραμμένη ή ο τομέας δεν υπάρχει πλέον."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Ο τομέας δημοσιεύει εγγραφή «null MX», η οποία δηλώνει ρητά ότι δεν λαμβάνει email. Κάθε email προς αυτόν επιστρέφεται."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "Το API email απαντά αργά: ελέγξτε την περιοχή ή το τελικό σημείο που έχει οριστεί στο πρόσθετο αποστολής email."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "Το email προέρχεται από διεύθυνση no-reply και δεν έχει κεφαλίδα Reply-To. Όταν ένας πελάτης πατά «Απάντηση», η απάντηση πηγαίνει σε διεύθυνση που δεν διαβάζει κανείς ή επιστρέφεται."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "Το email περιέχει ένα συνθηματικό σε αναγνώσιμη μορφή. Τα email παραμένουν για χρόνια σε εισερχόμενα, αντίγραφα ασφαλείας και προωθημένες συζητήσεις – όποιος αποκτήσει πρόσβαση σε κάποιο από αυτά μπορεί να συνδεθεί. Το αρχείο καταγραφής email το αποθηκεύει επίσης, εκτός αν είναι ενεργή η «Απόκρυψη μυστικών» (τότε το αρχείο κρατά ένα συγκαλυμμένο αντίγραφο, αλλά ο παραλήπτης έλαβε ήδη το συνθηματικό)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Το email περιέχει κλειδί πρόσβασης (π.χ. για Stripe, GitHub, Slack, AWS, Google ή SendGrid) ή ιδιωτικό κλειδί. Όποιος διαβάσει το email – τώρα ή χρόνια αργότερα σε εισερχόμενα ή αντίγραφο ασφαλείας – μπορεί να το χρησιμοποιήσει. Το αρχείο καταγραφής email το αποθηκεύει επίσης, εκτός αν είναι ενεργή η «Απόκρυψη μυστικών»."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "Το email περιέχει μεταβλητές προτύπου που δεν συμπληρώθηκαν. Οι παραλήπτες τις βλέπουν αυτούσιες."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Το email περιέχει κάτι που μοιάζει με πλήρη αριθμό κάρτας πληρωμής (περνά τον έλεγχο ψηφίου ελέγχου). Οι αριθμοί καρτών δεν πρέπει ποτέ να αποστέλλονται μέσω email (PCI DSS): τα εισερχόμενα τους κρατούν για χρόνια. Το αρχείο καταγραφής email τον αποθηκεύει επίσης, εκτός αν είναι ενεργή η «Απόκρυψη μυστικών»."
+
+msgid "The email is too large"
+msgstr "Το email είναι πολύ μεγάλο"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "Το email περιέχει συνδέσμους σε αρχεία WordPress σε συγγενικό διακομιστή. Αυτό συμβαίνει συνήθως σε ένα δοκιμαστικό αντίγραφο που περιέχει ακόμη URL του ζωντανού ιστότοπου – ή το αντίστροφο."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "Το email περιέχει σύνδεσμο σε διεύθυνση αυτού του ιστότοπου που απαντά «η σελίδα δεν βρέθηκε» (404). Αυτό συμβαίνει συνήθως αφού μια σελίδα ή ένα προϊόν μετονομάστηκε ή διαγράφηκε: το πρότυπο εξακολουθεί να δείχνει στην παλιά διεύθυνση και κάθε παραλήπτης καταλήγει σε σελίδα σφάλματος."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Οι τύποι email ανακατασκευάζονται από το αρχείο καταγραφής."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "Το email στάλθηκε σε αρκετά άτομα εκτός του τομέα σας στα πεδία To ή Cc. Κάθε παραλήπτης βλέπει όλες τις άλλες διευθύνσεις. Με πελάτες ή μέλη, αυτό αποκαλύπτει προσωπικά δεδομένα σε αγνώστους – σύμφωνα με τον GDPR συνήθως πρόκειται για παραβίαση δεδομένων."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "Το email «%1$s» προς %2$s από %3$s στις %4$s κρατήθηκε για λίγο από έλεγχο ασφαλείας από την πλευρά μας και στάλθηκε στη συνέχεια. Ελέγξτε επίσης τον φάκελο ανεπιθύμητης αλληλογραφίας."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "Το email «%1$s» προς %2$s από %3$s στις %4$s κρατήθηκε από έλεγχο ασφαλείας από την πλευρά μας και δεν στάλθηκε. Θα το στείλουμε ξανά."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "Το email «%1$s» προς %2$s από %3$s στις %4$s δεν στάλθηκε επειδή η αποστολή email είχε τεθεί σε παύση από την πλευρά μας εκείνη τη στιγμή. Θα το στείλουμε ξανά."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "Το email «%1$s» προς %2$s στις %3$s και ώρα %4$s δεν ήταν δυνατό να παραδοθεί. Θα το στείλουμε ξανά."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "Το email «%1$s» προς %2$s δημιουργήθηκε στις %3$s και ώρα %4$s, αλλά δεν μπορούμε να επιβεβαιώσουμε αν παραδόθηκε. Θα το ελέγξουμε και θα το στείλουμε ξανά αν χρειαστεί."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "Το email «%1$s» στάλθηκε προς %2$s στις %3$s και ώρα %4$s και έγινε αποδεκτό από τον διακομιστή αλληλογραφίας. Ελέγξτε επίσης τον φάκελο ανεπιθύμητης αλληλογραφίας."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Το φρένο έκτακτης ανάγκης κρατά τα εξερχόμενα email μέχρι να τα αποδεσμεύσετε ή να τα απορρίψετε."
+
+msgid "The emergency brake is holding emails"
+msgstr "Το φρένο έκτακτης ανάγκης κρατά email"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Το φρένο έκτακτης ανάγκης δεν κρατά κανένα email"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Το φρένο έκτακτης ανάγκης είναι ενεργό: ο ιστότοπός σας έστειλε ξαφνικά πολύ περισσότερα email από το συνηθισμένο."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Το φρένο έκτακτης ανάγκης εντόπισε ασυνήθιστο αριθμό email μέσα σε μία ώρα. Ίσως γίνεται κατάχρηση μιας φόρμας επικοινωνίας. Τα email εξακολουθούν να αποστέλλονται."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Η ακριβής ακατέργαστη πηγή είναι αποθηκευμένη – η «Λήψη .eml» την επιστρέφει αναλλοίωτη (χωρίς λογοκρισία)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Τα τελευταία %s email απέτυχαν όλα. Η αποστολή από αυτόν τον ιστότοπο ίσως δεν λειτουργεί, π.χ. λόγω λάθους σύνδεσης SMTP ή υπηρεσίας αλληλογραφίας που απορρίπτει τον ιστότοπο. Οι πελάτες ενδέχεται να μη λαμβάνουν επιβεβαιώσεις παραγγελιών ή επαναφορές κωδικού."
+
+msgid "The latest emails could not be sent"
+msgstr "Τα πιο πρόσφατα email δεν ήταν δυνατό να σταλούν"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Το αρχείο καταγραφής διατηρεί τα email για %s ημέρα."
+msgstr[1] "Το αρχείο καταγραφής διατηρεί τα email για %s ημέρες."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Το αρχείο καταγραφής δείχνει την αιτία για κάθε αποτυχημένο email."
+
+msgid "The mail log requires JavaScript."
+msgstr "Το αρχείο καταγραφής email απαιτεί JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Ο διακομιστής αλληλογραφίας δεν απάντησε εγκαίρως"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Ο διακομιστής αλληλογραφίας δεν είναι προσωρινά διαθέσιμος"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Ο διακομιστής αλληλογραφίας απέρριψε το μέγεθος του email (κωδικός απάντησης 552). Τα συνημμένα μεγαλώνουν περίπου κατά ένα τρίτο κατά την κωδικοποίηση."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Η υπηρεσία email στέλνει μόνο από τομείς ή διευθύνσεις που έχετε επαληθεύσει εκεί."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Η υπηρεσία email ή το γραμματοκιβώτιο αρνήθηκε περαιτέρω email επειδή συμπληρώθηκε όριο ρυθμού, ημερήσια ποσόστωση ή όριο προγράμματος."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Η υπηρεσία email απέρριψε το αίτημα επειδή το κλειδί API είναι λάθος, έχει λήξει, έχει ανακληθεί ή δεν έχει δικαίωμα αποστολής."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Το πρόσθετο αποστολής email ανέφερε αποτυχία"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Η πολιτική εφαρμόζεται μόνο στο %s%% της αλληλογραφίας (pct)."
+
+msgid "The reason: %s."
+msgstr "Η αιτία: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Ο διακομιστής παραλήπτη ζήτησε νέα προσπάθεια αργότερα (κωδικός απάντησης 450/451/452): greylisting, γεμάτο γραμματοκιβώτιο ή πάρα πολλά email σε σύντομο χρόνο."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Ο διακομιστής παραλήπτη δεν μπόρεσε να επιβεβαιώσει ότι ο διακομιστής σας επιτρέπεται να στέλνει για τον τομέα του αποστολέα."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Ο διακομιστής παραλήπτη δεν γνωρίζει αυτό το γραμματοκιβώτιο (κωδικός απάντησης 550 / 5.1.1) – η διεύθυνση είναι λάθος γραμμένη ή δεν υπάρχει πλέον."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Ο διακομιστής παραλαβής μπορεί ακόμη να το δεχτεί σε επόμενη προσπάθεια."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Ο διακομιστής παραλήπτη απέρριψε το email λόγω του περιεχομένου του ή επειδή η διεύθυνση IP του διακομιστή αποστολής βρίσκεται σε λίστα αποκλεισμού."
+
+msgid "The recipient address was rejected"
+msgstr "Η διεύθυνση παραλήπτη απορρίφθηκε"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Ο τομέας του παραλήπτη δεν δέχεται email (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Ο τομέας του παραλήπτη δεν έχει διακομιστή αλληλογραφίας"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Ο τομέας του παραλήπτη μοιάζει με ορθογραφικό λάθος ενός δημοφιλούς παρόχου email. Τέτοια email επιστρέφονται – ή φτάνουν σε έναν άγνωστο που καταχώρισε τον λανθασμένο τομέα."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Το ίδιο θέμα στάλθηκε στους ίδιους παραλήπτες αρκετές φορές σε σύντομο χρόνο. Τυπικές αιτίες είναι διπλές επιβεβαιώσεις παραγγελιών, μια φόρμα που υποβλήθηκε δύο φορές, μια εργασία cron που εκτελείται παράλληλα ή ένας βρόχος σε πρόσθετο."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Δεν ήταν δυνατή η δημιουργία ασφαλούς σύνδεσης με τον διακομιστή SMTP: το πιστοποιητικό δεν ταιριάζει με το όνομα διακομιστή, έχει λήξει ή ο διακομιστής δεν υποστηρίζει την επιλεγμένη κρυπτογράφηση."
+
+msgid "The sender address is not allowed"
+msgstr "Η διεύθυνση αποστολέα δεν επιτρέπεται"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Ο έλεγχος αποστολέα εντόπισε πρόβλημα με το %s. Τα email ενδέχεται να καταλήγουν στα ανεπιθύμητα."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Ο τομέας αποστολέα %s έχει εγγραφές SPF και DMARC"
+
+msgid "The sender domain could not be checked"
+msgstr "Δεν ήταν δυνατός ο έλεγχος του τομέα αποστολέα"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Ο αποστολέας δεν έχει δημόσιο τομέα (π.χ. wordpress@localhost). Οι περισσότεροι διακομιστές αλληλογραφίας απορρίπτουν τέτοια email ή τα βάζουν στα ανεπιθύμητα."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Ο διακομιστής δεν μπορεί να στείλει email με το PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Ο διακομιστής έκλεισε τη σύνδεση (κωδικός απάντησης 421), π.χ. λόγω συντήρησης, υπερφόρτωσης ή πάρα πολλών συνδέσεων από τον διακομιστή σας."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Ο διακομιστής δεν προωθεί email για εσάς, συνήθως επειδή δεν έχετε συνδεθεί ή η διεύθυνση αποστολέα δεν ανήκει στον λογαριασμό."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Ο διακομιστής δέχεται email μόνο μετά από έλεγχο ταυτότητας ή μετά τη μετάβαση σε κρυπτογραφημένη σύνδεση (κωδικός απάντησης 530)."
+
+msgid "The server rejected the content"
+msgstr "Ο διακομιστής απέρριψε το περιεχόμενο"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Το τοπικό πρόγραμμα αλληλογραφίας του διακομιστή απαντά αργά: ένα πρόσθετο αποστολής μέσω SMTP ή API παραδίδει αντί αυτού τα email σε έναν πάροχο."
+
+msgid "The start date must not be after the end date."
+msgstr "Η ημερομηνία έναρξης δεν μπορεί να είναι μετά την ημερομηνία λήξης."
+
+msgid "The statistics require JavaScript."
+msgstr "Τα στατιστικά απαιτούν JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Το κείμενο είναι το ίδιο· άλλαξε μόνο η διάταξη. Συγκρίνετε τις προεπισκοπήσεις."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Το όνομα χρήστη είναι συνήθως η πλήρης διεύθυνση email. Προσέξτε για κενά που αντιγράφηκαν μαζί με το συνθηματικό."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "Το URL webhook αφαιρέθηκε: επιτρέπονται μόνο έγκυρα URL https."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Η εβδομαδιαία αναφορά είναι ενεργή αλλά δεν έχει παραλήπτη: εισαγάγετε μια διεύθυνση email στο «Αποστολή ειδοποιήσεων μέσω email σε»."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Αυτά τα email αποστέλλονται ξανά· ο τύπος email τους παρακολουθείται ξανά."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Αυτά τα είδη email δεν έχουν σταλεί για περισσότερο από το συνηθισμένο. Η αιτία μπορεί να είναι μια ενημέρωση πρόσθετου, μια αλλαγμένη ρύθμιση ή μια κολλημένη προγραμματισμένη εργασία."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Αυτό το email έχει δική του έκδοση απλού κειμένου, αλλά το αρχείο καταγραφής δεν την αποθηκεύει. Εμφανίζεται εδώ: έκδοση κειμένου που προέκυψε από το HTML."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Αυτό το email δεν έχει δικά του στυλ σκούρας λειτουργίας. Ορισμένες εφαρμογές το εμφανίζουν αμετάβλητο, άλλες το χρωματίζουν ξανά – δείτε «Αναγκαστικά σκούρο»."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Αυτό το email δεν έχει έκδοση απλού κειμένου – ορισμένα προγράμματα και φίλτρα ανεπιθύμητων την προτιμούν. Εμφανίζεται εδώ: έκδοση κειμένου που προέκυψε από το HTML."
+
+msgid "This email type has no content change."
+msgstr "Αυτός ο τύπος email δεν έχει αλλαγή περιεχομένου."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Αυτός ο τύπος email αγνοείται πλέον: χωρίς κατάσταση, χωρίς ειδοποιήσεις."
+
+msgid "This email type is monitored again."
+msgstr "Αυτός ο τύπος email παρακολουθείται ξανά."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Αυτή η καταχώριση ανωνυμοποιήθηκε· το περιεχόμενό της δεν μπορεί πλέον να σταλεί."
+
+msgid "This import is already running in another tab."
+msgstr "Αυτή η εισαγωγή εκτελείται ήδη σε άλλη καρτέλα."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Αυτή είναι μια δοκιμαστική ειδοποίηση. Τα κανάλια ειδοποιήσεών σας λειτουργούν."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Αυτός ο ζωντανός ιστότοπος έστειλε σύνδεσμο σε τοπική ή δοκιμαστική διεύθυνση. Οι παραλήπτες δεν μπορούν να τον ανοίξουν."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Αυτή η ερώτηση απαιτεί JavaScript. Μπορείτε αντί γι' αυτό να κάνετε αναζήτηση στο αρχείο καταγραφής."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Αυτός ο ιστότοπος τηρεί αρχείο καταγραφής των email που στέλνει (παραλήπτης, θέμα, περιεχόμενο και κατάσταση παράδοσης) για την επαλήθευση της παράδοσης και την αντιμετώπιση προβλημάτων. Οι καταχωρίσεις διαγράφονται αυτόματα μετά την καθορισμένη περίοδο διατήρησης."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Αυτός ο ιστότοπος λειτουργεί ως περιβάλλον %s και η δοκιμαστική λειτουργία εμποδίζει τα email του να φτάνουν σε πραγματικούς ανθρώπους."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Αυτός ο ιστότοπος λειτουργεί ως περιβάλλον %s. Ενεργοποιήστε τη δοκιμαστική λειτουργία ώστε κανένας πραγματικός πελάτης να μη λάβει email από αυτόν."
+
+msgid "Threshold (emails per hour)"
+msgstr "Όριο (email ανά ώρα)"
+
+msgid "Thursday"
+msgstr "Πέμπτη"
+
+msgid "Timeline"
+msgstr "Χρονολόγιο"
+
+msgid "To"
+msgstr "Προς"
+
+msgid "To date"
+msgstr "Έως ημερομηνία"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Για να τα διατηρήσετε αλλά να λαμβάνετε μόνο ένα email την ημέρα, επιλέξτε «Ομαδοποίηση σε ένα ημερήσιο email» στο μενού … του τύπου."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Οι κορυφαίες λίστες βασίζονται στα τελευταία %s email αυτής της περιόδου."
+
+msgid "Top recipient domains"
+msgstr "Κορυφαίοι τομείς παραληπτών"
+
+msgid "Top recipients: %s"
+msgstr "Κορυφαίοι παραλήπτες: %s"
+
+msgid "Top sources"
+msgstr "Κορυφαίες πηγές"
+
+msgid "Top subjects"
+msgstr "Κορυφαία θέματα"
+
+msgid "Total"
+msgstr "Σύνολο"
+
+msgid "Total: %s ms"
+msgstr "Σύνολο: %s ms"
+
+msgid "Trace"
+msgstr "Ίχνος"
+
+msgid "Transcript copied."
+msgstr "Το πρακτικό αντιγράφηκε."
+
+msgid "Transport"
+msgstr "Μεταφορά"
+
+msgid "Trigger"
+msgstr "Εκκίνηση"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Ενεργοποίηση ενός πραγματικού email επαναφοράς συνθηματικού για τον δικό σας λογαριασμό; Το WordPress δημιουργεί νέο σύνδεσμο επαναφοράς για εσάς, οπότε οι προηγούμενοι σύνδεσμοι επαναφοράς παύουν να λειτουργούν· το συνθηματικό σας παραμένει ίδιο. Το λαμβάνει μόνο το %s."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Ενεργοποίηση των ειδοποιήσεων νέου χρήστη για τον δικό σας λογαριασμό (η ειδοποίηση προς τον διαχειριστή και τα στοιχεία σύνδεσης); Το WordPress δημιουργεί νέο σύνδεσμο συνθηματικού για εσάς, οπότε οι προηγούμενοι σύνδεσμοι παύουν να λειτουργούν. Δεν δημιουργείται χρήστης· τις λαμβάνει μόνο το %s."
+
+msgid "Trigger to me"
+msgstr "Αποστολή δοκιμής σε εμένα"
+
+msgid "Triggering…"
+msgstr "Εκκίνηση…"
+
+msgid "Tuesday"
+msgstr "Τρίτη"
+
+msgid "Type"
+msgstr "Τύπος"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Οι τύποι ενημερώνονται κάθε ώρα και κάθε φορά που ανοίγετε αυτή τη σελίδα. Αποθηκεύονται μόνο μετρητές, μοτίβα θεμάτων και αποτυπώματα περιεχομένου (χωρίς παραλήπτες, χωρίς περιεχόμενο) και ακολουθούν την περίοδο διατήρησης του αρχείου καταγραφής."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Λάθος στον τομέα του παραλήπτη; %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Τα τονισμένα γράμματα ή τα εισαγωγικά εμφανίζονται ως αλλοιωμένοι χαρακτήρες, όπως «Ã¤» ή «â€™». Κάπου στη διαδρομή – σε πρότυπο, σε εισαγωγή ή στη βάση δεδομένων – κείμενο UTF-8 διαβάστηκε ως διαφορετικό σύνολο χαρακτήρων."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Ασαφές. Το «%1$s» προς %2$s παραδόθηκε για αποστολή %3$s, αλλά το Mailspur δεν έλαβε αποτέλεσμα."
+
+msgid "Under Tools"
+msgstr "Στα Εργαλεία"
+
+msgid "Uninstall"
+msgstr "Απεγκατάσταση"
+
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+msgid "Unknown probe."
+msgstr "Άγνωστο δοκιμαστικό email."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Άγνωστο: δεν αναφέρθηκε αποτέλεσμα παράδοσης (ίσως αντικαταστάθηκε η συνάρτηση wp_mail())."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Δεσμευτικά θέσης που δεν αντικαταστάθηκαν: %1$s"
+
+msgid "Until the log limit"
+msgstr "Έως το όριο του αρχείου καταγραφής"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Έως 10 διευθύνσεις, χωρισμένες με κόμμα. Τα Cc και Bcc αφαιρούνται και το θέμα εμφανίζει τους αρχικούς παραλήπτες. Χωρίς έγκυρη διεύθυνση, τα email κρατούνται."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Έως 5 διευθύνσεις, χωρισμένες με κόμμα. Τα email ειδοποιήσεων εμφανίζονται στο αρχείο καταγραφής με πηγή «Ειδοποιήσεις Mailspur» και δεν ενεργοποιούν ποτέ τα ίδια ειδοποιήσεις."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Ενημερώστε τον σύνδεσμο στο πρότυπο email ή στις ρυθμίσεις του προσθέτου που στέλνει αυτό το email, ή προσθέστε ανακατεύθυνση από την παλιά διεύθυνση στη νέα σελίδα (π.χ. με πρόσθετο ανακατευθύνσεων)."
+
+msgid "Updated in between: %s"
+msgstr "Ενημερώθηκαν στο μεταξύ: %s"
+
+msgid "Updated since the last one:"
+msgstr "Ενημερώθηκαν μετά το τελευταίο:"
+
+msgid "Updated since then: %s."
+msgstr "Ενημερώθηκαν από τότε: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Χρησιμοποιήστε TLS στη θύρα 587 ή SSL στη θύρα 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Χρησιμοποιήστε περιγραφικό κείμενο συνδέσμου (π.χ. «Προβολή παραγγελίας») ή εμφανίστε τη διεύθυνση στην οποία οδηγεί πραγματικά ο σύνδεσμος."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Χρησιμοποιήστε διεύθυνση αποστολέα στον δικό σας τομέα και βάλτε τη δωρεάν διεύθυνση στο Reply-To. Αυτό είναι εντάξει μόνο αν στέλνετε πραγματικά μέσω του διακομιστή SMTP του ίδιου του παρόχου με τα στοιχεία σύνδεσής του."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Χρησιμοποιήστε απόλυτα URL με https:// και τον τομέα, π.χ. με home_url() ή wp_get_attachment_url() στο πρότυπο."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Χρησιμοποιήστε ακριβώς το όνομα διακομιστή για το οποίο εκδόθηκε το πιστοποιητικό (π.χ. τον διακομιστή smtp.… του παρόχου αντί για IP ή τον δικό σας τομέα)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Χρησιμοποιήστε το πολύ ένα θαυμαστικό."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Χρησιμοποιήστε τα πλήκτρα βέλους για να μετακινηθείτε μεταξύ των κελιών."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Χρησιμοποιήστε τα πλήκτρα βέλους για να μετακινηθείτε μεταξύ των τιμών και το Enter για να τις ανοίξετε στο αρχείο καταγραφής."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Χρησιμοποιήστε τη διεύθυνση γραμματοκιβωτίου του λογαριασμού SMTP ως αποστολέα (From)."
+
+msgid "User"
+msgstr "Χρήστης"
+
+msgid "User: %s"
+msgstr "Χρήστης: %s"
+
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Χρησιμοποιεί τις αποθηκευμένες ρυθμίσεις – αποθηκεύστε πρώτα τις αλλαγές σας."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Επαληθεύστε τον τομέα του αποστολέα στην υπηρεσία email (προσθέστε τις εγγραφές DNS του) ή χρησιμοποιήστε μια ήδη επαληθευμένη διεύθυνση αποστολέα."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Πολύ πιθανόν. Το «%1$s» στάλθηκε προς %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Πολύ μεγάλο θέμα (%1$s χαρακτήρες)"
+
+msgid "View"
+msgstr "Προβολή"
+
+msgid "View %s failed emails"
+msgstr "Προβολή %s αποτυχημένων email"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "Το WP-Cron δεν έχει εκτελεστεί εδώ και %s (έχει οριστεί το DISABLE_WP_CRON – ελέγξτε την εργασία cron του διακομιστή σας)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "Το WP-Cron δεν έχει εκτελεστεί εδώ και %s – εκτελείται μόνο όταν ο ιστότοπος δέχεται επισκέψεις ή αποτυγχάνει με σφάλμα."
+
+msgid "WP-Cron runs normally."
+msgstr "Το WP-Cron λειτουργεί κανονικά."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Σε αναμονή για την ημερήσια σύνοψη – δεν αποστέλλεται ξεχωριστά."
+
+msgid "Waits %s s for the mail server"
+msgstr "Περιμένει %s δ τον διακομιστή αλληλογραφίας"
+
+msgid "Warnings"
+msgstr "Προειδοποιήσεις"
+
+msgid "Webhook URL"
+msgstr "URL webhook"
+
+msgid "Webhook signing key"
+msgstr "Κλειδί υπογραφής webhook"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "Τετάρτη"
+
+msgid "Week"
+msgstr "Εβδομάδα"
+
+msgid "Week of %s"
+msgstr "Εβδομάδα από %s"
+
+msgid "Weekday"
+msgstr "Ημέρα εβδομάδας"
+
+msgid "Weekly"
+msgstr "Εβδομαδιαία"
+
+msgid "Weekly email report"
+msgstr "Εβδομαδιαία αναφορά email"
+
+msgid "Weekly report"
+msgstr "Εβδομαδιαία αναφορά"
+
+msgid "What to do"
+msgstr "Τι να κάνετε"
+
+msgid "When emails are sent"
+msgstr "Πότε αποστέλλονται τα email"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Όταν στέλνονται πολύ περισσότερα email από το συνηθισμένο, το φρένο έκτακτης ανάγκης σας προειδοποιεί και μπορεί να κρατήσει τα επόμενα email."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Όταν είναι ανενεργό, τα pixel παρακολούθησης δεν μπορούν να καταλάβουν πότε ανοίγετε μια καταχώριση. Μπορείτε ακόμη να φορτώσετε απομακρυσμένο περιεχόμενο για ένα μεμονωμένο email. Τα σενάρια και οι φόρμες αποκλείονται πάντα."
+
+msgid "Who can view the log"
+msgstr "Ποιος μπορεί να δει το αρχείο καταγραφής"
+
+msgid "Why did an email fail?"
+msgstr "Γιατί απέτυχε ένα email;"
+
+msgid "With attachments"
+msgstr "Με συνημμένα"
+
+msgid "With notes"
+msgstr "Με σημειώσεις"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Χωρίς αυτές τις εγγραφές DNS, οι πάροχοι γραμματοκιβωτίων δεν μπορούν να επαληθεύσουν ότι ο ιστότοπός σας επιτρέπεται να στέλνει email για αυτόν τον τομέα, οπότε τα email είναι πιο πιθανό να καταλήξουν στα ανεπιθύμητα. Ο έλεγχος αποστολέα προτείνει εγγραφές που μπορείτε να προσθέσετε στον πάροχο του τομέα σας."
+
+msgid "WooCommerce email"
+msgstr "Email του WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Ρυθμίσεις › Email"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "Τα email του πυρήνα του WordPress δεν έχουν επεξεργαστή· μπορούν να αλλάξουν με φίλτρα."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "Το WordPress δεν έστειλε email – ίσως κάποιο πρόσθετο απενεργοποίησε αυτό το email."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "Το WordPress δεν έχει ρύθμιση για αυτό το email. Το Mailspur μπορεί να σταματήσει την ειδοποίηση προς τους διαχειριστές· ο νέος χρήστης εξακολουθεί να λαμβάνει το δικό του email."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "Το WordPress δεν έχει ρύθμιση για αυτό το email. Το Mailspur μπορεί να σταματήσει τις ειδοποιήσεις επιτυχίας των αυτόματων ενημερώσεων· οι ειδοποιήσεις για αποτυχημένες ενημερώσεις εξακολουθούν να φτάνουν."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "Από προεπιλογή το WordPress στέλνει μέσω της συνάρτησης PHP mail(). Σε αυτόν τον διακομιστή είναι απενεργοποιημένη ή δεν είναι εγκατεστημένο πρόγραμμα αλληλογραφίας (sendmail) – σύνηθες σε τοπικά περιβάλλοντα, Docker και πολλούς διαχειριζόμενους παρόχους φιλοξενίας."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Γράψτε το θέμα με κανονικά κεφαλαία και πεζά και τονίστε το πολύ μία λέξη."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Ναι, αλλά σύμφωνα με το %4$s ο παραλήπτης επισήμανε το «%1$s» προς %2$s (%3$s) ως ανεπιθύμητο."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Ναι. Το «%1$s» στάλθηκε προς %2$s %3$s και το %4$s επιβεβαίωσε την παράδοση."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Μπορείτε ακόμη να το στείλετε από το αρχείο καταγραφής («Αποστολή τώρα»)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Λαμβάνετε αυτή τη σύνοψη επειδή αυτοί οι τύποι email ομαδοποιούνται σε ένα ημερήσιο email στο Mailspur. Κάθε email παραμένει στο αρχείο καταγραφής."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Λαμβάνετε αυτό το email επειδή οι ειδοποιήσεις παρακολούθησης είναι ενεργές στις ρυθμίσεις του Mailspur αυτού του ιστότοπου."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Λαμβάνετε αυτό το email επειδή η εβδομαδιαία αναφορά είναι ενεργή στις ρυθμίσεις του Mailspur αυτού του ιστότοπου. Περιέχει μόνο αριθμούς και μοτίβα θεμάτων – κανένα περιεχόμενο email ή παραλήπτες."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Ο επιλογέας DKIM σας (προαιρετικό)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Ο ιστότοπός σας δεν έστειλε κανένα email τις τελευταίες 7 ημέρες."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s ειδοποιήσεις: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 ειδοποίηση: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Εβδομαδιαία αναφορά email %2$s"
+
+msgid "address"
+msgstr "διεύθυνση"
+
+msgid "and %s more"
+msgstr "και %s ακόμη"
+
+msgid "and %s more – see the log"
+msgstr "και %s ακόμη – δείτε το αρχείο καταγραφής"
+
+msgid "another plugin stopped it"
+msgstr "άλλο πρόσθετο το σταμάτησε"
+
+msgid "code"
+msgstr "κωδικός"
+
+msgid "date"
+msgstr "ημερομηνία"
+
+msgid "days"
+msgstr "ημέρες"
+
+msgid "deleted after %s days"
+msgstr "διαγράφονται μετά από %s ημέρες"
+
+msgid "emails to this address failed several times before"
+msgstr "τα email προς αυτή τη διεύθυνση έχουν αποτύχει αρκετές φορές στο παρελθόν"
+
+msgid "entries"
+msgstr "καταχωρίσεις"
+
+msgid "failing"
+msgstr "με σφάλματα"
+
+msgid "failure spikes"
+msgstr "εξάρσεις αποτυχιών"
+
+msgid "first seen %s"
+msgstr "πρώτη εμφάνιση %s"
+
+msgid "from a new sender"
+msgstr "από νέο αποστολέα"
+
+msgid "holding emails right now"
+msgstr "κρατά email αυτή τη στιγμή"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "διατηρούνται μέχρι να διαγραφούν χειροκίνητα"
+
+msgid "link"
+msgstr "σύνδεσμος"
+
+msgid "minutes"
+msgstr "λεπτά"
+
+msgid "name"
+msgstr "όνομα"
+
+msgid "new this week"
+msgstr "νέος αυτή την εβδομάδα"
+
+msgid "no"
+msgstr "όχι"
+
+msgid "none"
+msgstr "κανένα"
+
+msgid "none in %1$s – %2$s"
+msgstr "κανένα στο %1$s – %2$s"
+
+msgid "number"
+msgstr "αριθμός"
+
+msgid "of %s"
+msgstr "από %s"
+
+msgid "often to administrators"
+msgstr "συχνά προς διαχειριστές"
+
+msgid "on %1$s at %2$s"
+msgstr "στις %1$s και ώρα %2$s"
+
+msgid "same recipient"
+msgstr "ίδιος παραλήπτης"
+
+msgid "slow to send"
+msgstr "αργή αποστολή"
+
+msgid "staging mode is on"
+msgstr "η δοκιμαστική λειτουργία είναι ενεργή"
+
+msgid "stopped"
+msgstr "σταμάτησε"
+
+msgid "stopped email types"
+msgstr "τύποι email που σταμάτησαν"
+
+msgid "text"
+msgstr "κείμενο"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "το φρένο έκτακτης ανάγκης σταμάτησε μια πλημμύρα email"
+
+msgid "time"
+msgstr "ώρα"
+
+msgid "today at %s"
+msgstr "σήμερα στις %s"
+
+msgid "triggered %s times"
+msgstr "ενεργοποιήθηκε %s φορές"
+
+msgid "unchanged"
+msgstr "αμετάβλητο"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "άγνωστο – το mailer δεν έδωσε μήνυμα σφάλματος"
+
+msgid "unusual silence"
+msgstr "ασυνήθιστη σιωπή"
+
+msgid "usually sent: %s"
+msgstr "συνήθης αποστολή: %s"
+
+msgid "wp_mail() called"
+msgstr "Κλήθηκε η wp_mail()"
+
+msgid "yes"
+msgstr "ναι"
+
+msgid "yesterday at %s"
+msgstr "χθες στις %s"
+
+msgid "your email provider"
+msgstr "ο πάροχος email σας"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "«%1$s» (%2$s) στις %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "Το «%1$s» (%2$s) αποστέλλεται ξανά."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "Το «%1$s» (%2$s) συνήθως αποστέλλεται τουλάχιστον κάθε %3$s ημέρες. Το τελευταίο στάλθηκε πριν από %4$s."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "Το «%1$s» (%2$s) στάλθηκε τελευταία φορά πριν από %3$s. Μέχρι τότε αποστελλόταν τουλάχιστον κάθε %4$s ημέρες."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "«%1$s» (%2$s) – συνήθως κάθε %4$s, το τελευταίο %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "«%1$s» (%2$s) – συνήθως καθημερινά, το τελευταίο %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "«%1$s» – %2$s – %3$s"

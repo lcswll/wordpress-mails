@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s bemærkninger",
+	"Belongs to": "Hører til",
+	"Emails to this user": "E-mails til denne bruger",
+	"No emails logged for this order yet.": "Der er endnu ikke logget nogen e-mails for denne ordre.",
+	"No emails to this user in the log.": "Ingen e-mails til denne bruger i loggen.",
+	"Order #%s": "Ordre #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Sendt til samme adresse omkring ordredatoen, men ikke knyttet til denne ordre (fx logget før koblingen fandtes, eller importeret).",
+	"Show all in Mail Log": "Vis alle i E-maillog",
+	"User: %s": "Bruger: %s",
+	"WooCommerce email": "WooCommerce-e-mail",
+	"same recipient": "samme modtager"
+}

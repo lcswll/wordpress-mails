@@ -1,0 +1,3261 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ro_RO\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n == 0 || n % 100 >= 2 && n % 100 <= 19) ? 1 : 2);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "„Descarcă .eml” reconstruiește mesajul din datele înregistrate și mascate (fără atașamente)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (săptămâna anterioară: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (programat pentru %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s tip de email nu se mai trimite: %2$s."
+msgstr[1] "%1$s tipuri de email nu se mai trimit, de ex. %2$s."
+msgstr[2] "%1$s de tipuri de email nu se mai trimit, de ex. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%1$s tipuri de email de la %2$s expeditori"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "%1$s emailuri au eșuat în ultimele %2$s minute."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%1$s emailuri în %2$s zile"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "%1$s emailuri în ultimele 30 de zile, %2$s eșuate"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "În decurs de o oră au fost trimise %1$s emailuri – mult mai multe decât de obicei (prag: %2$s pe oră). Un formular de contact poate fi folosit abuziv sau site-ul poate fi compromis."
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s intrări, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s importate, %2$s duplicate, %3$s prea vechi"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s din %2$s respinse (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "%1$s din %2$s emailuri din ultimele %3$s zile nu au putut fi trimise."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "%1$s din %2$s intrări procesate …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s pp față de %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s a trimis primul email pe %2$s și a scris către %3$s adrese externe diferite în ultimele 24 de ore. Dacă nu ai instalat sau configurat nimic care trimite astfel de emailuri, verifică site-ul: un expeditor nou poate fi semnul unui site spart."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "%1$s trimise, %2$s încă reținute …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s față de %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · %2$s emailuri adunate de la ultimul rezumat"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · la data de %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – rata de eșec %2$s %% (săptămâna anterioară: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – raportat de %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (modul must-use)"
+
+msgid "%s (theme)"
+msgstr "%s (temă)"
+
+msgid "%s ago"
+msgstr "acum %s"
+
+msgid "%s days"
+msgstr "%s zile"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s email a eșuat în ultimele 7 zile."
+msgstr[1] "%s emailuri au eșuat în ultimele 7 zile."
+msgstr[2] "%s de emailuri au eșuat în ultimele 7 zile."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s email așteaptă decizia ta."
+msgstr[1] "%s emailuri așteaptă decizia ta."
+msgstr[2] "%s de emailuri așteaptă decizia ta."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s email a fost reținut și netrimis în ultimele 7 zile."
+msgstr[1] "%s emailuri au fost reținute și netrimise în ultimele 7 zile."
+msgstr[2] "%s de emailuri au fost reținute și netrimise în ultimele 7 zile."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "Emailuri reținute de frâna de urgență: %s."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "Emailuri în așteptare, nelivrate: %s."
+
+msgid "%s entries"
+msgstr "%s intrări"
+
+msgid "%s failed"
+msgstr "%s eșuate"
+
+msgid "%s held emails discarded."
+msgstr "Emailuri reținute eliminate: %s."
+
+msgid "%s imported entries removed."
+msgstr "%s intrări importate au fost eliminate."
+
+msgid "%s in 30 days"
+msgstr "%s în 30 de zile"
+
+msgid "%s marked as spam"
+msgstr "%s marcate ca spam"
+
+msgid "%s more on the Email types page."
+msgstr "Încă %s pe pagina Tipuri de email."
+
+msgid "%s notes"
+msgstr "Note: %s"
+
+msgid "%s of all emails"
+msgstr "%s din toate emailurile"
+
+msgid "%s of them in the last 24 hours."
+msgstr "Dintre acestea, %s în ultimele 24 de ore."
+
+msgid "%s s"
+msgstr "%s s"
+
+msgid "%s selected"
+msgstr "%s selectate"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s lucru necesită atenție:"
+msgstr[1] "%s lucruri necesită atenție:"
+msgstr[2] "%s de lucruri necesită atenție:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s către administratori în 30 de zile"
+
+msgid "%s unchanged lines"
+msgstr "%s rânduri neschimbate"
+
+msgid "(no subject)"
+msgstr "(fără subiect)"
+
+msgid "(no text content)"
+msgstr "(fără conținut text)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(emailurile nu mai sunt în jurnal)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all este mai strict; ~all este obișnuit și în regulă împreună cu DMARC."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 păstrează intrările pentru totdeauna. Curățarea rulează o dată pe zi."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 înseamnă fără limită. Cele mai vechi intrări sunt eliminate primele."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 o dezactivează. Elimină conținutul, antetele și atașamentele intrărilor mai vechi și maschează adresele (a***@example.com). Data, starea, sursa, formatul, dimensiunea și notele rămân pentru statistici. Rulează odată cu curățarea zilnică, înainte ca intrările să fie șterse – deci are efect doar dacă este mai scurtă decât perioada de ștergere de mai sus."
+
+msgid "12 months"
+msgstr "12 luni"
+
+msgid "30 days"
+msgstr "30 de zile"
+
+msgid "7 days"
+msgstr "7 zile"
+
+msgid "90 days"
+msgstr "90 de zile"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Un selector DKIM poate conține doar litere, cifre, puncte, cratime și liniuțe de subliniere."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Un modul de trimitere care folosește un API a preluat livrarea și a raportat că trimiterea a eșuat, fără să transmită un motiv."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "O cheie publicată nu dovedește că emailurile tale sunt semnate cu ea – verifică rezultatul DKIM în antetele unui email primit."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Un destinatar sau adresa expeditorului nu este o adresă de email validă, așa că PHPMailer a refuzat trimiterea."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "Cheie API sau cheie privată în text simplu: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Pentru evaluarea acestei înregistrări sunt necesare aproximativ %1$s interogări DNS – mai mult decât cele %2$s permise, așa că destinatarii o pot ignora (PermError). Elimină intrările include: nefolosite."
+
+msgid "Access"
+msgstr "Acces"
+
+msgid "Actions"
+msgstr "Acțiuni"
+
+msgid "Active: alerts on %s."
+msgstr "Activ: alerte la %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Adaugă un atribut alt scurt fiecărei imagini din șablon, de ex. alt=\"Logo Magazin Exemplu\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Adaugă include: al furnizorului tău de email (de ex. include:_spf.google.com) dacă trimiți prin el."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Adaugă serverul tău de email sau serviciul de email în înregistrarea SPF a domeniului expeditorului."
+
+msgid "Added:"
+msgstr "Adăugat:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Adrese cu cel puțin %s eșecuri permanente: serverul destinatarului a respins căsuța poștală, domeniul nu are server de email sau furnizorul tău de email a raportat un hard bounce. Intrările expiră odată cu perioada de păstrare a jurnalului."
+
+msgid "Admin screen"
+msgstr "Ecran de administrare"
+
+msgid "Administrators"
+msgstr "Administratori"
+
+msgid "Aggregate reports go to %s."
+msgstr "Rapoartele agregate merg la %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Alertă"
+
+msgid "Alert and hold further emails"
+msgstr "Alertează și reține emailurile următoare"
+
+msgid "Alert only"
+msgstr "Doar alertă"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Alertează când un tip de email trimis regulat nu se mai trimite"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Alertează când emailurile eșuează repetat"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Alertează când site-ul nu mai trimite emailuri în mod neașteptat"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Alertele sunt activate, dar nu au niciun canal: introdu o adresă de email sau un URL de webhook."
+
+msgid "Alerts are off."
+msgstr "Alertele sunt dezactivate."
+
+msgid "All"
+msgstr "Toate"
+
+msgid "All email types look healthy."
+msgstr "Toate tipurile de email arată în regulă."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Toate emailurile sunt redirecționate către adrese de test."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Toate emailurile merg la adrese de test în loc de destinatarii reali."
+
+msgid "All sources"
+msgstr "Toate sursele"
+
+msgid "Allow again"
+msgstr "Permite din nou"
+
+msgid "Allowed again."
+msgstr "Permis din nou."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Alertează și o dată când un modul sau o temă care nu a trimis niciodată un email scrie într-o zi către multe adrese externe diferite – un posibil semn al unui site spart. Primele două săptămâni după instalarea Mailspur servesc drept referință."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Elimină și subiectul la anonimizare"
+
+msgid "Also search content"
+msgstr "Caută și în conținut"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Alternativ, cere furnizorului de găzduire să activeze mail() / sendmail pentru acest site."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Încarcă întotdeauna imaginile și fonturile externe în previzualizare"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (prin SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Un furnizor de email cu API HTTP în loc de SMTP are nevoie de mai puține schimburi per email."
+
+msgid "Anonymisation"
+msgstr "Anonimizare"
+
+msgid "Anonymise entries after"
+msgstr "Anonimizează intrările după"
+
+msgid "Anonymised"
+msgstr "Anonimizat"
+
+msgid "Any format"
+msgstr "Orice format"
+
+msgid "Any status"
+msgstr "Orice stare"
+
+msgid "Apply"
+msgstr "Aplică"
+
+msgid "Ask the recipient for a working address."
+msgstr "Cere destinatarului o adresă funcțională."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Cere furnizorului de găzduire să activeze extensia openssl (sau activeaz-o în setările PHP din panoul de găzduire)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Cere furnizorului de găzduire să actualizeze certificatele CA și OpenSSL de pe server."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Întreabă furnizorul de găzduire dacă conexiunile SMTP de ieșire sunt blocate."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Întreabă furnizorul de găzduire dacă sunt permise conexiunile de ieșire către acel port (firewall)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Cel puțin %1$s emailuri eșuate în %2$s minute"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Cel mult o alertă de fiecare tip în acest interval, chiar dacă problema persistă."
+
+msgid "Attachments"
+msgstr "Atașamente"
+
+msgid "Attachments no longer available: %s"
+msgstr "Atașamente care nu mai sunt disponibile: %s"
+
+msgid "Authentication"
+msgstr "Autentificare"
+
+msgid "Automatic TLS"
+msgstr "TLS automat"
+
+msgid "Average per day"
+msgstr "Medie pe zi"
+
+msgid "Back to the email types"
+msgstr "Înapoi la tipurile de email"
+
+msgid "Belongs to"
+msgstr "Aparține de"
+
+msgid "Block again"
+msgstr "Blochează din nou"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Blocat ca spam sau de o listă de blocare"
+
+msgid "Bounced (permanent)"
+msgstr "Respins (permanent)"
+
+msgid "Bounced (temporary)"
+msgstr "Respins (temporar)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Caractere stricate (codificare): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Email în masă fără antet de dezabonare (%1$s destinatari)"
+
+msgid "Bundle into one daily email"
+msgstr "Adună într-un singur email zilnic"
+
+msgid "Bundled into one daily email"
+msgstr "Adunat într-un singur email zilnic"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Adunarea este dezactivată. Emailurile care așteptau au plecat acum într-un singur rezumat."
+
+msgid "Busiest day"
+msgstr "Ziua cea mai aglomerată"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Atenție: emailurile către această adresă au eșuat de mai multe ori până acum."
+
+msgid "Change in the email types"
+msgstr "Modifică în tipurile de email"
+
+msgid "Change staging mode"
+msgstr "Modifică modul de test"
+
+msgid "Check"
+msgstr "Verifică"
+
+msgid "Check again"
+msgstr "Verifică din nou"
+
+msgid "Check emails"
+msgstr "Verifică emailurile"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Verifică gazda și portul; încearcă 587 (TLS) în loc de 465 (SSL) sau invers."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Verifică gazda, portul, criptarea, numele de utilizator și parola în modulul SMTP și trimite de acolo un email de test."
+
+msgid "Check sender domains"
+msgstr "Verifică domeniile expeditorului"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Verifică dacă criptarea se potrivește cu portul: TLS pentru 587, SSL pentru 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Verifică dacă cheia aparține regiunii / contului corect (de ex. endpoint UE vs. SUA)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Verifică gazda și portul SMTP: un port greșit sau o conexiune blocată se termină adesea cu o depășire a timpului înainte ca o soluție de rezervă să funcționeze."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Verifică înregistrările SPF, DKIM și DMARC ale domeniului expeditorului sau folosește o adresă de expeditor pe domeniul de pe care trimiți."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Verifică adresa pentru greșeli de scriere – sau site-ul tău nu a trimis niciodată emailul."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Verifică adresa cu destinatarul și corecteaz-o acolo unde este stocată (profil de utilizator, comandă, intrare de formular)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Verifică adresa cu destinatarul și corecteaz-o acolo unde este stocată."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Verifică numele gazdei și portul: 587 cu STARTTLS (TLS) sau 465 cu SSL. Portul 25 este blocat de majoritatea furnizorilor de găzduire."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Verifică limitele și utilizarea curentă în contul serviciului de email; trece la un plan superior dacă e nevoie."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Verifică adresele destinatarilor acestei intrări pentru greșeli de scriere, spații sau părți lipsă."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Verifică adresa expeditorului în modulul SMTP și filtrul wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Verifică limitele de trimitere ale contului tău de email și notele acestui email."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Verifică IP-ul serverului cu un instrument de verificare a listelor de blocare și cere eliminarea din listă."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Verifică ortografia substituentului din șablon și dacă modulul îl acceptă pentru acest tip de email. Shortcode-urile nu sunt procesate în emailuri decât dacă modulul care trimite rulează do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Verificat %s."
+
+msgid "Checked just now"
+msgstr "Verificat chiar acum"
+
+msgid "Checking DNS records …"
+msgstr "Se verifică înregistrările DNS …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Verifică înregistrările DNS ale domeniilor de pe care trimite site-ul tău: adresa implicită a expeditorului și cei mai frecvenți expeditori din jurnal. Înregistrările lipsă sau slabe sunt cel mai frecvent motiv pentru care emailurile ajung în spam. Se folosește doar resolverul DNS propriu al serverului tău; rezultatele sunt păstrate o oră."
+
+msgid "Choose a range of at most %s days."
+msgstr "Alege un interval de cel mult %s zile."
+
+msgid "Clear selection"
+msgstr "Golește selecția"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Dă clic pe o bară pentru a deschide aceste emailuri în jurnal."
+
+msgid "Close"
+msgstr "Închide"
+
+msgid "Close (Esc)"
+msgstr "Închide (Esc)"
+
+msgid "Colour scheme"
+msgstr "Schemă de culori"
+
+msgid "Command line"
+msgstr "Linie de comandă"
+
+msgid "Compare"
+msgstr "Compară"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Compară sursele acestor intrări. Verifică dacă două module trimit aceeași notificare sau dacă un hook (de ex. schimbarea stării comenzii) se declanșează de mai multe ori."
+
+msgid "Component"
+msgstr "Componentă"
+
+msgid "Configure alerts"
+msgstr "Configurează alertele"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Conținut anonimizat după %1$s zile, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Modificarea conținutului a fost marcată ca văzută."
+
+msgid "Content changed"
+msgstr "Conținut modificat"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Conținut modificat pe %1$s, după actualizarea %2$s."
+
+msgid "Content changed on %s."
+msgstr "Conținut modificat pe %s."
+
+msgid "Content removed"
+msgstr "Conținut eliminat"
+
+msgid "Content removed after %s days"
+msgstr "Conținut eliminat după %s zile"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Conținutul, antetele și atașamentele au fost eliminate, iar adresele mascate de setarea de anonimizare."
+
+msgid "Copied"
+msgstr "Copiat"
+
+msgid "Copied – paste it into your reply."
+msgstr "Copiat – lipește-l în răspunsul tău."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Copiază o propoziție scurtă pentru a-i răspunde clientului: când și cui a fost trimis emailul și dacă a ajuns – fără detalii tehnice."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Copiază jurnalul existent al altui modul de jurnalizare a emailurilor în Mailspur, astfel încât emailurile vechi să poată fi căutate și previzualizate aici. Celălalt modul și datele lui rămân neatinse; rularea din nou a importului adaugă doar intrările noi."
+
+msgid "Copy"
+msgstr "Copiază"
+
+msgid "Copy for support"
+msgstr "Copiază pentru suport"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Copierea nu este posibilă în acest browser. Selectează textul și copiază-l:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Corectează adresa (de ex. în profilul utilizatorului sau în comandă) și ia în considerare o validare a emailului în formulare."
+
+msgid "Counted once per email."
+msgstr "Numărat o dată pe email."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Creează o nouă cheie API cu permisiune de trimitere la serviciul de email și introdu-o în modulul de trimitere."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Creezi un URL nou pentru webhook? URL-ul actual nu mai funcționează imediat – lipește noul URL în setările de webhook ale furnizorului tău de email."
+
+msgid "Create new URL"
+msgstr "Creează un URL nou"
+
+msgid "Current page"
+msgstr "Pagina curentă"
+
+msgid "Current record"
+msgstr "Înregistrarea curentă"
+
+msgid "Current size"
+msgstr "Dimensiunea curentă"
+
+msgid "Custom"
+msgstr "Personalizat"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "Cheie DKIM găsită (selector: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "Înregistrare DMARC găsită cu p=none: doar rapoarte, emailurile falsificate sunt încă livrate."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "Înregistrare DMARC găsită cu politica p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "Înregistrarea DMARC nu are o politică validă (p=none, quarantine sau reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "Interogarea DNS a eșuat sau a expirat. Încearcă din nou mai târziu."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Interogările DNS nu sunt disponibile pe acest server (dns_get_record() este dezactivată), așa că verificarea expeditorului nu poate rula aici."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Interogări DNS necesare: aproximativ %1$s din %2$s permise."
+
+msgid "Daily"
+msgstr "Zilnic"
+
+msgid "Daily digest"
+msgstr "Rezumat zilnic"
+
+msgid "Dark"
+msgstr "Întunecat"
+
+msgid "Date"
+msgstr "Dată"
+
+msgid "Default (%s days)"
+msgstr "Implicit (%s zile)"
+
+msgid "Default (no time limit)"
+msgstr "Implicit (fără limită de timp)"
+
+msgid "Default sender"
+msgstr "Expeditor implicit"
+
+msgid "Delete"
+msgstr "Șterge"
+
+msgid "Delete %s selected log entries?"
+msgstr "Ștergi cele %s intrări selectate din jurnal?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Ștergi TOATE intrările din jurnal? Acțiunea nu poate fi anulată."
+
+msgid "Delete entries after"
+msgstr "Șterge intrările după"
+
+msgid "Delete selected"
+msgstr "Șterge selecția"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Șterge tabelul jurnalului și setările când modulul este șters"
+
+msgid "Delete this log entry?"
+msgstr "Ștergi această intrare din jurnal?"
+
+msgid "Deleted."
+msgstr "Șters."
+
+msgid "Delivered"
+msgstr "Livrat"
+
+msgid "Delivered by %s (API)"
+msgstr "Livrat de %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Livrat de cod atașat la pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Livrat în rezumatul zilnic pe %s."
+
+msgid "Delivery"
+msgstr "Livrare"
+
+msgid "Delivery status from your email provider"
+msgstr "Starea livrării de la furnizorul tău de email"
+
+msgid "Desktop"
+msgstr "Desktop"
+
+msgid "Did my email arrive?"
+msgstr "A ajuns emailul meu?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Dezactivează emailul sau schimbă-i destinatarul"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Elimini toate emailurile reținute? Rămân în jurnal, dar nu sunt trimise."
+
+msgid "Discard held emails"
+msgstr "Elimină emailurile reținute"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Nu trimite „de la” adrese de email gratuite (gmail.com, gmx.de …) prin propriul server."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Gata: %1$s emailuri trimise, %2$s eșuate."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Gata: %1$s importate, %2$s duplicate, %3$s prea vechi."
+
+msgid "Download .eml"
+msgstr "Descarcă .eml"
+
+msgid "Download as CSV"
+msgstr "Descarcă în format CSV"
+
+msgid "Download started."
+msgstr "Descărcarea a început."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Descarcă intrările care corespund filtrelor curente ca %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Fiecare email este verificat o dată când este înregistrat sau importat (fără cereri externe). Modificările de aici afectează doar emailurile înregistrate ulterior; intrările mai vechi nu sunt verificate din nou. Verificările DNS și de trimitere repetată rulează când deschizi o intrare."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Emailurile anterioare către %s au eșuat permanent de mai multe ori."
+
+msgid "Edit template"
+msgstr "Editează șablonul"
+
+msgid "Editors and above"
+msgstr "Editori și peste"
+
+msgid "Email address"
+msgstr "Adresă de email"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "Adresă de email (cel mai recent email nu mai este în jurnal)"
+
+msgid "Email address or order number"
+msgstr "Adresă de email sau număr de comandă"
+
+msgid "Email consists almost only of images"
+msgstr "Emailul constă aproape numai din imagini"
+
+msgid "Email failure spike"
+msgstr "Val de emailuri eșuate"
+
+msgid "Email failures"
+msgstr "Eșecuri de email"
+
+msgid "Email failures resolved"
+msgstr "Eșecurile de email au fost rezolvate"
+
+msgid "Email inventory"
+msgstr "Inventarul emailurilor"
+
+msgid "Email log"
+msgstr "Jurnal de emailuri"
+
+msgid "Email log: problem recipients"
+msgstr "Jurnal de emailuri: destinatari problematici"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Trimite-mi un email de fiecare dată când cineva publică un comentariu"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Trimite-mi un email de fiecare dată când un comentariu este reținut pentru moderare"
+
+msgid "Email provider"
+msgstr "Furnizor de email"
+
+msgid "Email sent again."
+msgstr "Emailul a fost retrimis."
+
+msgid "Email sent to %s."
+msgstr "Email trimis către %s."
+
+msgid "Email type"
+msgstr "Tip de email"
+
+msgid "Email type is sent again"
+msgstr "Tipul de email se trimite din nou"
+
+msgid "Email type stopped"
+msgstr "Tipul de email nu se mai trimite"
+
+msgid "Email types"
+msgstr "Tipuri de email"
+
+msgid "Email volume back to normal"
+msgstr "Volumul de emailuri a revenit la normal"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Volumul de emailuri a revenit la normal: frâna de urgență nu mai este activă."
+
+msgid "Email: failed"
+msgstr "Email: eșuat"
+
+msgid "Email: failed – see the log"
+msgstr "Email: eșuat – vezi jurnalul"
+
+msgid "Email: sent"
+msgstr "Email: trimis"
+
+msgid "Emails"
+msgstr "Emailuri"
+
+msgid "Emails are being logged again."
+msgstr "Emailurile sunt din nou înregistrate în jurnal."
+
+msgid "Emails are delivered to their recipients."
+msgstr "Emailurile sunt livrate destinatarilor."
+
+msgid "Emails are flowing again"
+msgstr "Emailurile pleacă din nou"
+
+msgid "Emails are logged but not delivered."
+msgstr "Emailurile sunt înregistrate în jurnal, dar nu sunt livrate."
+
+msgid "Emails are still being sent."
+msgstr "Emailurile sunt încă trimise."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "Emailurile sunt încă trimise. Verifică sursa principală; comută frâna de urgență pe „Alertează și reține emailurile următoare” pentru a le opri."
+
+msgid "Emails in 30 days"
+msgstr "Emailuri în 30 de zile"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Emailurile de acest tip care merg doar la administratori sunt acum adunate și trimise o dată pe zi într-un singur rezumat."
+
+msgid "Emails over time"
+msgstr "Emailuri în timp"
+
+msgid "Emails per day and status"
+msgstr "Emailuri pe zi și stare"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "Emailuri pe zi a săptămânii și oră (fusul orar al site-ului)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "Emailurile care sunt deja în jurnal – înregistrate de Mailspur însuși sau importate din alt modul – sunt recunoscute după destinatari, subiect și ora trimiterii și sărite ca duplicate."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Emailuri trimise regulat nu se mai trimit (%s)"
+
+msgid "Emails to this user"
+msgstr "Emailuri către acest utilizator"
+
+msgid "Emails with notes"
+msgstr "Emailuri cu note"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "Emailurile fără subiect arată ca spam și sunt greu de găsit în căsuța poștală."
+
+msgid "Emails – last 7 days"
+msgstr "Emailuri – ultimele 7 zile"
+
+msgid "Emergency brake"
+msgstr "Frână de urgență"
+
+msgid "Emergency brake reset."
+msgstr "Frâna de urgență a fost resetată."
+
+msgid "Emergency brake settings"
+msgstr "Setările frânei de urgență"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Frână de urgență: %1$s emailuri în ultima oră – mult mai multe decât de obicei (prag: %2$s pe oră)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Frână de urgență: val neobișnuit de emailuri"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Gol = automat: de trei ori ora cea mai aglomerată din ultimele 14 zile, cel puțin 50 – în prezent %s."
+
+msgid "Empty log"
+msgstr "Golește jurnalul"
+
+msgid "Empty subject"
+msgstr "Subiect gol"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Activează verificarea în doi pași pentru contul Google și creează o parolă pentru aplicații (Cont Google → Securitate → Parole pentru aplicații)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Activează semnarea DKIM la furnizorul tău de email sau la găzduire și publică cheia pe care ți-o oferă. Dacă semnezi deja, introdu selectorul tău (valoarea s= din antetul DKIM-Signature) și verifică din nou."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Activează semnarea DKIM la serviciul de email și publică înregistrarea DNS a acestuia."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Activează autentificarea în modulul SMTP și introdu numele de utilizator și parola."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Activează autentificarea în modulul SMTP."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Conexiunile SMTP criptate (TLS/SSL) au nevoie de extensia PHP openssl, care nu este instalată sau activată pe acest server."
+
+msgid "Encryption"
+msgstr "Criptare"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Criptarea (TLS/SSL) a eșuat"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Introdu mai întâi o adresă de email sau un URL de webhook și salvează setările."
+
+msgid "Enter an email address or an order number."
+msgstr "Introdu o adresă de email sau un număr de comandă."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Introdu mai întâi o adresă de email la „Trimite alertele prin email către” și salvează setările."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Introdu între 1 și 10 adrese de email."
+
+msgid "Enter one or more email addresses."
+msgstr "Introdu una sau mai multe adrese de email."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Introdu parola pentru aplicații în modulul SMTP sau folosește conexiunea „Conectează-te cu Google” (OAuth) a modulului."
+
+msgid "Entries"
+msgstr "Intrări"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Intrările mai vechi de %s zile sunt sărite, deoarece setarea de păstrare le-ar șterge oricum. Pentru a importa tot, modifică mai întâi perioada de păstrare de mai sus."
+
+msgid "Error"
+msgstr "Eroare"
+
+msgid "Errors"
+msgstr "Erori"
+
+msgid "Every %s days"
+msgstr "La fiecare %s zile"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "La fiecare 15 minute (alerte Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "În fiecare luni dimineața, doar când e ceva de raportat: emailuri și rata de eșec comparate cu săptămâna anterioară, tipuri de email noi, oprite și modificate, emailuri cu note și incidente ale frânei de urgență. Doar numere și modele de subiect."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Fiecare fel de email pe care îl trimite acest site, generat din jurnalul de emailuri Mailspur – de ex. pentru un registru al activităților de prelucrare sau pentru predarea site-ului. Grupurile de destinatari sunt deduse din cele mai recente emailuri ale fiecărui expeditor, categoriile de date din cel mai recent email al fiecărui tip. Lista nu conține conținutul emailurilor și nici adrese."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Fiecare fel de email pe care îl trimite site-ul tău, găsit automat în jurnal: grupat după modulul care îl trimite și după subiect, cu numerele, adresele și numele ca substituenți. Mailspur învață cât de des este trimis fiecare tip și observă când unul nu se mai trimite – de exemplu după o actualizare de modul."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Totul arată bine: %s email în ultimele 7 zile, fără erori."
+msgstr[1] "Totul arată bine: %s emailuri în ultimele 7 zile, niciunul eșuat."
+msgstr[2] "Totul arată bine: %s de emailuri în ultimele 7 zile, niciunul eșuat."
+
+msgid "Expected today and not sent yet:"
+msgstr "Așteptate azi și încă netrimise:"
+
+msgid "Export"
+msgstr "Exportă"
+
+msgid "Export started – your download begins shortly."
+msgstr "Exportul a început – descărcarea va începe în curând."
+
+msgid "Failed"
+msgstr "Eșuat"
+
+msgid "Failed (%s %%)"
+msgstr "Eșuate (%s %%)"
+
+msgid "Failing"
+msgstr "Cu erori"
+
+msgid "Failure rate"
+msgstr "Rata de eșec"
+
+msgid "Failure spike"
+msgstr "Val de eșecuri"
+
+msgid "Far more emails than usual were sent"
+msgstr "Au fost trimise mult mai multe emailuri decât de obicei"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Au fost trimise mult mai multe emailuri decât de obicei, așa că Mailspur reține emailurile următoare până când le eliberezi sau le elimini."
+
+msgid "Fewer"
+msgstr "Mai puține"
+
+msgid "File"
+msgstr "Fișier"
+
+msgid "Filter by status"
+msgstr "Filtrează după stare"
+
+msgid "Filter email types"
+msgstr "Filtrează tipurile de email"
+
+msgid "First email after the change"
+msgstr "Primul email după modificare"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Primul email de la acest expeditor pe %s. Cu alertele de tip active, Mailspur alertează când un expeditor nou scrie către multe adrese externe."
+
+msgid "First page"
+msgstr "Prima pagină"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "La atașamente mari, timpul limită poate fi atins și în timpul transferului – trimite fișiere mai mici sau legături."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Pentru copiile de test și de dezvoltare ale unui site: asigură-te că clienții nu primesc niciodată emailuri de la copie. Fiecare email este în continuare înregistrat în jurnal."
+
+msgid "Forced dark"
+msgstr "Întunecat forțat"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Free text from forms"
+msgstr "Text liber din formulare"
+
+msgid "Friday"
+msgstr "Vineri"
+
+msgid "From"
+msgstr "De la"
+
+msgid "From date"
+msgstr "De la data"
+
+msgid "Front end"
+msgstr "Partea publică"
+
+msgid "Function"
+msgstr "Funcție"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Emailurile următoare sunt reținute până când un administrator le eliberează sau le elimină."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail și Google Workspace nu mai acceptă parola normală a contului pentru SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail taie emailurile HTML mai mari de 102 KB și afișează „[Mesaj trunchiat]”. Tot ce urmează după tăietură – adesea subsolul, legătura de dezabonare sau mențiunile legale – este ascuns."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail va trunchia acest email (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google a respins autentificarea"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML trimis ca text simplu"
+
+msgid "Handler"
+msgstr "Handler"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Hard bounce raportat de furnizorul tău de email"
+
+msgid "Hard failures"
+msgstr "Eșecuri permanente"
+
+msgid "Headers"
+msgstr "Antete"
+
+msgid "Held"
+msgstr "Reținut"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Reținut de frâna de urgență – eliminat."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Reținut de frâna de urgență – nelivrat."
+
+msgid "Held by emergency brake – released later."
+msgstr "Reținut de frâna de urgență – eliberat ulterior."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Reținut de modul de test – nelivrat."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Emailul reținut a fost trimis. Este înregistrat ca intrare nouă."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Emailurile reținute primesc starea „Reținut” și pot fi trimise în continuare unul câte unul din jurnal („Trimite acum”)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Reținut: fiecare destinatar a avut deja un eșec permanent (destinatari problematici)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Reținut: modul de test este setat pe redirecționare, dar nu este configurată nicio adresă de redirecționare validă."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Indicii despre probleme care pot împiedica sosirea sau afișarea corectă a acestui email."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Reține emailurile următoare către destinatari problematici"
+
+msgid "Hooks"
+msgstr "Hookuri"
+
+msgid "Hours"
+msgstr "Ore"
+
+msgid "How to fix:"
+msgstr "Cum rezolvi:"
+
+msgid "I already did"
+msgstr "Am făcut-o deja"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Înțeleg că sursa brută NU este mascată și dublează aproximativ spațiul de stocare per email"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Dacă se întâmplă des, verifică limitele de trimitere ale furnizorului tău de email."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Dacă se repetă, trimite mai puține emailuri deodată sau printr-un serviciu de email cu coadă."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Dacă setările implicite de securitate o blochează, folosește în schimb conexiunea Microsoft (OAuth / Graph API) a modulului SMTP."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Dacă au eșuat mai mulți destinatari, răspunsul serverului de după adresă numește motivul."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Dacă contul folosește autentificarea cu doi factori, creează o parolă pentru aplicații și folosește-o pe aceea."
+
+msgid "Ignore"
+msgstr "Ignoră"
+
+msgid "Ignored"
+msgstr "Ignorat"
+
+msgid "Ignored notes"
+msgstr "Note ignorate"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Notele ignorate nu mai sunt înregistrate pentru emailurile noi și sunt ascunse pentru intrările existente."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Imagini fără text alternativ (%1$s)"
+
+msgid "Import"
+msgstr "Importă"
+
+msgid "Import failed: %s"
+msgstr "Importul a eșuat: %s"
+
+msgid "Import from other plugins"
+msgstr "Importă din alte module"
+
+msgid "Import new entries"
+msgstr "Importă intrările noi"
+
+msgid "Imported"
+msgstr "Importat"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Intrările importate nu au urmă: celălalt modul nu a înregistrat aceste detalii."
+
+msgid "Imported from %s"
+msgstr "Importat din %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "În Amazon SNS, abonează URL-ul (protocol HTTPS) la subiectul care primește notificările Delivery, Bounce și Complaint de la Amazon SES. Mailspur confirmă automat abonarea."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "În Brevo, deschide Transactional → Settings → Webhook, adaugă URL-ul și selectează Delivered, Hard bounce, Soft bounce, Invalid email și Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "În Mailgun, deschide Sending → Webhooks, adaugă URL-ul pentru Delivered, Permanent failure, Temporary failure și Spam complaints și lipește mai jos HTTP webhook signing key."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "În Postmark, deschide serverul tău → Webhooks → Add webhook, lipește URL-ul și selectează Delivery, Bounce și Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "În centrul de administrare Microsoft 365, deschide utilizatorul → Corespondență → Gestionați aplicațiile de e-mail și activează „SMTP autentificat”."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Căsuțele poștale afișează aproximativ primele 40–80 de caractere; restul este tăiat, pe telefoane chiar mai devreme."
+
+msgid "Include content"
+msgstr "Include conținutul"
+
+msgid "Information"
+msgstr "Informații"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Instalează un modul SMTP și trimite printr-o căsuță poștală reală sau printr-un serviciu de email al domeniului tău."
+
+msgid "Invalid date."
+msgstr "Dată invalidă."
+
+msgid "Invalid email address"
+msgstr "Adresă de email invalidă"
+
+msgid "Invalid email address: %s"
+msgstr "Adresă de email invalidă: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Adresă de expeditor invalidă: %1$s"
+
+msgid "Irregular"
+msgstr "Neregulat"
+
+msgid "Is Mailspur helping you?"
+msgstr "Te ajută Mailspur?"
+
+msgid "Is an email missing?"
+msgstr "Lipsește un email?"
+
+msgid "Is everything running?"
+msgstr "Funcționează totul?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Păstrează cel mult"
+
+msgid "Keep for"
+msgstr "Păstrează pentru"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Păstrează acest URL privat: conține o cheie secretă a acestui site. Salvează setările înainte de a testa webhookul."
+
+msgid "Kept: %s"
+msgstr "Păstrat: %s"
+
+msgid "Key figures"
+msgstr "Indicatori cheie"
+
+msgid "Last 30 days"
+msgstr "Ultimele 30 de zile"
+
+msgid "Last email before the change"
+msgstr "Ultimul email înainte de modificare"
+
+msgid "Last failure"
+msgstr "Ultimul eșec"
+
+msgid "Last page"
+msgstr "Ultima pagină"
+
+msgid "Last sent"
+msgstr "Trimis ultima dată"
+
+msgid "Leave a review"
+msgstr "Lasă o recenzie"
+
+msgid "Light"
+msgstr "Luminos"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Textul legăturii arată %1$s, dar duce la %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Legătură către o adresă de dezvoltare: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Legătură către o pagină care nu există pe site-ul tău: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Leagă direct către adresa completă. Pentru urmărirea clicurilor, folosește în schimb parametri UTM pe propriul domeniu."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Legătură printr-un scurtător de URL-uri: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Legăturile și imaginile care încep cu „/” funcționează doar pe site. Într-un program de email nu există o adresă de site care să le completeze, așa că imaginile rămân goale, iar legăturile nu duc nicăieri."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Legături către o altă copie a site-ului: %1$s (acest site: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Legăturile a căror adresă vizibilă diferă de ținta reală arată ca phishing. Filtrele de spam le penalizează, iar unele programe de email avertizează cititorul."
+
+msgid "Load remote content"
+msgstr "Încarcă conținutul extern"
+
+msgid "Loading…"
+msgstr "Se încarcă…"
+
+msgid "Log"
+msgstr "Jurnal"
+
+msgid "Log entries %s"
+msgstr "Intrări în jurnal %s"
+
+msgid "Log entry not found."
+msgstr "Intrarea din jurnal nu a fost găsită."
+
+msgid "Log only – do not send any email"
+msgstr "Doar înregistrează în jurnal – nu trimite niciun email"
+
+msgid "Log size"
+msgstr "Dimensiunea jurnalului"
+
+msgid "Logged emails"
+msgstr "Emailuri înregistrate"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Emailurile înregistrate pot conține date personale. Acordă accesul cât mai restrâns posibil. Setările necesită întotdeauna drepturi de administrator."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Autentificarea și destinatarii au fost acceptați, dar emailul în sine a fost refuzat – de obicei din cauza filtrării spamului, a unei limite de trimitere sau a unei politici a furnizorului (cod de răspuns 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Înregistrează emailurile trimise, identifică tipurile de email pe care le trimite site-ul tău și te avertizează când unul nu se mai trimite. Previzualizare sigură, diagnosticare a livrării, statistici."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Caută în setările de email ale %s o opțiune pentru a-l dezactiva sau a-i schimba destinatarul – ori ignoră tipul aici."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Caută răspunsul serverului în mesajul de eroare; de obicei numește motivul."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Caută în jurnal trimiteri în masă neașteptate (trimiteri de formulare spam, bucle)."
+
+msgid "Looking it up …"
+msgstr "Se caută …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Jurnal de emailuri"
+
+msgid "Mail Log sections"
+msgstr "Secțiunile jurnalului de emailuri"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Serverele de email pentru răspunsuri și bounce-uri sunt configurate."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Furnizorii de email pot verifica dacă site-ul tău are voie să trimită emailuri pentru acest domeniu. Verificarea completă a expeditorului analizează și DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Căsuță poștală necunoscută sau indisponibilă"
+
+msgid "Mailer"
+msgstr "Mailer"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun semnează fiecare webhook cu această cheie (Sending → Webhooks → HTTP webhook signing key); rapoartele fără o semnătură validă sunt respinse."
+
+msgid "Mailspur alerts"
+msgstr "Alerte Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur verifică jurnalul pentru emailuri care nu au putut fi trimise."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur nu a găsit comanda #%s în magazinul tău."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur a înregistrat până acum %s emailuri livrate pe acest site. Dacă îți economisește timp, o scurtă recenzie pe WordPress.org ar însemna mult – îi ajută pe alții să găsească modulul și îl menține gratuit."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur nu are niciun email pentru comanda #%s în jurnal."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur nu are niciun email către %s în jurnal."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur este creat de %1$s. Îți place? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur învață cât de des este trimis fiecare fel de email, de ex. confirmările de comandă, și raportează aici când unul nu se mai trimite."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur învață ritmul fiecărui tip de email din ultimele 8 săptămâni – o confirmare de comandă zilnică este întârziată după 2 zile, un raport săptămânal după 2 săptămâni. Alerta numește tipul, expeditorul său și modulele actualizate de la ultimul său email. Folosește canalele de mai sus; tipurile ignorate nu alertează niciodată."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur vede că site-ul tău l-a trimis, nu și căsuța de email. Dacă nu este acolo, roagă destinatarul să verifice dosarul de spam."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur oprește acum aceste emailuri; tipul lor de email este ignorat."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – jurnal de emailuri"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: emailuri reținute"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: modul de test"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Sursa principală: %1$s (%2$s emailuri)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Asigură-te că adresa De la din modulul de trimitere se potrivește cu domeniul verificat."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Asigură-te că emailul este trimis cu „charset=UTF-8”, fișierele șablon sunt salvate ca UTF-8 și tabelele bazei de date folosesc utf8mb4. Corectează textele care au fost deja stocate stricat."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Asigură-te că setarea de criptare se potrivește cu portul."
+
+msgid "Many emails could not be sent recently"
+msgstr "Multe emailuri nu au putut fi trimise recent"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Multe semne de exclamare în subiect (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Multe programe de email blochează imaginile până când cititorul le permite. Fără text alternativ, cititorul vede doar casete goale; cititoarele de ecran nu anunță nimic util."
+
+msgid "Mark as resolved"
+msgstr "Marchează ca rezolvat"
+
+msgid "Marked as spam"
+msgstr "Marcat ca spam"
+
+msgid "Marked as spam by the recipient"
+msgstr "Marcat ca spam de destinatar"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Maschează cheile de resetare a parolei, de activare și de acces din legăturile înregistrate, precum și parolele, cheile API și numerele de card trimise ca text simplu"
+
+msgid "Maybe later"
+msgstr "Poate mai târziu"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Poate că emailul nu a fost trimis niciodată – verifică starea comenzii și setările emailurilor magazinului tău."
+
+msgid "Menu position"
+msgstr "Poziția în meniu"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Method"
+msgstr "Metodă"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online blochează autentificarea SMTP (autentificarea de bază) pentru această căsuță poștală sau pentru întreaga organizație."
+
+msgid "Minutes"
+msgstr "Minute"
+
+msgid "Monday"
+msgstr "Luni"
+
+msgid "Monitor again"
+msgstr "Monitorizează din nou"
+
+msgid "Monitoring alerts"
+msgstr "Alerte de monitorizare"
+
+msgid "More"
+msgstr "Mai multe"
+
+msgid "More actions"
+msgstr "Mai multe acțiuni"
+
+msgid "More filters"
+msgstr "Mai multe filtre"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Cel mai frecvent motiv (%1$s dintre ele): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Majoritatea serverelor acceptă în total 10–25 MB."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Au fost găsite mai multe înregistrări DMARC. În acest caz, destinatarii ignoră DMARC – păstrează doar una."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Au fost găsite mai multe înregistrări SPF. Destinatarii tratează acest lucru ca eroare (PermError) – combină-le într-o singură înregistrare."
+
+msgid "Needs attention"
+msgstr "Necesită atenție"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Nu a fost înregistrat nici un antet From, nici un expeditor. Mailerul revine la valoarea implicită, adesea wordpress@domeniultau."
+
+msgid "Never"
+msgstr "Niciodată"
+
+msgid "New"
+msgstr "Nou"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "URL nou creat. Actualizează-l la furnizorul tău de email."
+
+msgid "New email types"
+msgstr "Tipuri noi de email"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Emailurile noi sunt reținute până când le eliberezi sau le elimini. Emailurile de resetare a parolei pleacă în continuare."
+
+msgid "New sender"
+msgstr "Expeditor nou"
+
+msgid "New sender writes to many addresses"
+msgstr "Un expeditor nou scrie către multe adrese"
+
+msgid "Next email"
+msgstr "Emailul următor"
+
+msgid "Next email (j)"
+msgstr "Emailul următor (j)"
+
+msgid "Next page"
+msgstr "Pagina următoare"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Nu a fost găsită nicio cheie DKIM sub selectorii obișnuiți."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Nicio înregistrare DMARC pentru domeniul expeditorului %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Nu a fost găsită nicio înregistrare DMARC. Marii furnizori de email se așteaptă la una, iar fără ea oricine poate falsifica acest domeniu fără să fie observat."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Nicio înregistrare MX: acest domeniu nu poate primi răspunsuri sau bounce-uri, iar unii destinatari resping astfel de expeditori."
+
+msgid "No SMTP transcript for this email."
+msgstr "Nicio transcriere SMTP pentru acest email."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Nicio înregistrare SPF și nicio înregistrare DMARC pentru domeniul expeditorului %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Nicio înregistrare SPF pentru domeniul expeditorului %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Nu a fost găsită nicio înregistrare SPF. Destinatarii nu pot ști ce servere pot trimite pentru acest domeniu."
+
+msgid "No alerts sent yet."
+msgstr "Nu a fost trimisă încă nicio alertă."
+
+msgid "No connection to the SMTP server"
+msgstr "Nicio conexiune la serverul SMTP"
+
+msgid "No email logged for %s hours"
+msgstr "Niciun email înregistrat de %s ore"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "Niciun email nu a fost înregistrat în ultimele %1$s ore, deși acest site a trimis emailuri în acest interval orar în %2$s din ultimele %3$s zile (în medie %4$s)."
+
+msgid "No emails"
+msgstr "Niciun email"
+
+msgid "No emails found."
+msgstr "Nu s-au găsit emailuri."
+
+msgid "No emails in this period."
+msgstr "Niciun email în această perioadă."
+
+msgid "No emails logged for this order yet."
+msgstr "Încă nu s-a înregistrat niciun email pentru această comandă."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Încă nu s-a înregistrat niciun email. Tipurile de email apar aici imediat ce site-ul tău trimite emailuri."
+
+msgid "No emails match these filters."
+msgstr "Niciun email nu corespunde acestor filtre."
+
+msgid "No emails sent"
+msgstr "Niciun email trimis"
+
+msgid "No emails to this user in the log."
+msgstr "Niciun email către acest utilizator în jurnal."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "Niciun email nu a fost înregistrat în ultimele două săptămâni."
+
+msgid "No limit"
+msgstr "Fără limită"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Pe acest site nu a fost găsit jurnalul altui modul de jurnalizare a emailurilor."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Pe acest site nu a fost găsit jurnalul acestui modul."
+
+msgid "No problem recipients."
+msgstr "Niciun destinatar problematic."
+
+msgid "No problems found in this email."
+msgstr "Nu s-au găsit probleme în acest email."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Nu a fost găsit niciun domeniu public de expeditor (adresa site-ului nu este un nume de domeniu, iar jurnalul nu are încă expeditori)."
+
+msgid "No public sender domain to check"
+msgstr "Niciun domeniu public de expeditor de verificat"
+
+msgid "No regularly sent email has stopped"
+msgstr "Niciun email trimis regulat nu s-a oprit"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Nicio adresă pentru rapoarte (rua) – nu vei vedea cine trimite în numele tău."
+
+msgid "No sender address recorded"
+msgstr "Nicio adresă de expeditor înregistrată"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Nu este disponibilă nicio urmă pentru această intrare. A fost înregistrată înainte să existe urmărirea sau de o versiune fără ea."
+
+msgid "No unusual email failures"
+msgstr "Niciun eșec neobișnuit de email"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Nu, intenționat. „%1$s” către %2$s a fost reținut %3$s și nu a fost trimis. Motiv: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Nu. Fiecare email trimis regulat a plecat conform programului."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Nu. „%1$s” către %2$s a eșuat %3$s. Motiv: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Nu. „%1$s” către %2$s a plecat de pe site-ul tău %3$s, dar %4$s raportează că serverul destinatarului l-a respins."
+
+msgid "None"
+msgstr "Niciunul"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Trimis de obicei cel puțin o dată la %1$s zile, acum întârziat cu %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Nu toți selectorii au putut fi verificați la timp."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Neînregistrat: alt modul avea depanarea SMTP activată."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Neînregistrat: transcrierea SMTP este dezactivată în setări."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Neînregistrat: acest email nu a fost trimis prin SMTP."
+
+msgid "Not set up"
+msgstr "Neconfigurat"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Nestocat: transcrierile sunt păstrate doar pentru emailurile eșuate."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Încă nu. „%1$s” către %2$s a plecat de pe site-ul tău %3$s, dar %4$s raportează o problemă temporară."
+
+msgid "Notes"
+msgstr "Note"
+
+msgid "Notes in the latest email: %s"
+msgstr "Note în cel mai recent email: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Note: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Note: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Nu se mai așteaptă nimic azi."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Nimic nu a eșuat în ultimele 7 zile."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Încă nu e nimic de comparat: niciun email nu pleacă suficient de regulat pentru ca Mailspur să observe o întrerupere."
+
+msgid "Number of failed emails"
+msgstr "Numărul de emailuri eșuate"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Numerele sunt ignorate, așa că „Comanda #123” și „Comanda #124” se numără împreună."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Din ultimele %1$s emailuri trimise în timp ce cineva aștepta pagina, jumătate au durat mai mult de %2$s s (în medie %3$s s)."
+
+msgid "Off"
+msgstr "Dezactivat"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Dezactivat implicit. Fără el, „Descarcă .eml” reconstruiește mesajul din datele înregistrate (mascate). Sursa brută conține legăturile de resetare a parolei și alte date secrete exact cum au fost trimise – activeaz-o doar când ai nevoie și ambele căsuțe sunt bifate."
+
+msgid "Off – deliver emails normally"
+msgstr "Dezactivat – livrează emailurile normal"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "După ce remediezi cauza, poți retrimite emailul din jurnal."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "După ce rapoartele arată că emailurile legitime trec, comută pe p=quarantine (sau p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Unul dintre cele două emailuri a fost șters sau anonimizat de setările de păstrare, așa că nu mai pot fi comparate."
+
+msgid "Only administrators can empty the log."
+msgstr "Doar administratorii pot goli jurnalul."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Doar administratorii pot trimite emailuri către alte adrese."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Alertează doar când ultimele 14 zile arată că emailurile sunt trimise de obicei în acest interval orar (în cel puțin 10 din 14 zile, inclusiv aceeași zi a săptămânii), astfel încât nopțile sau weekendurile liniștite nu o declanșează."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Doar emailurile ai căror destinatari sunt toți problematici. Emailurile de resetare a parolei pleacă întotdeauna; emailurile reținute pot fi trimise în continuare din jurnal („Trimite acum”)."
+
+msgid "Only held emails can be released."
+msgstr "Doar emailurile reținute pot fi eliberate."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Listă de distribuție deschisă: %1$s destinatari externi își văd reciproc adresele"
+
+msgid "Open in log"
+msgstr "Deschide în jurnal"
+
+msgid "Open latest"
+msgstr "Deschide cel mai recent"
+
+msgid "Open staging mode"
+msgstr "Deschide modul de test"
+
+msgid "Open the email types"
+msgstr "Deschide tipurile de email"
+
+msgid "Open the emergency brake"
+msgstr "Deschide frâna de urgență"
+
+msgid "Open the log"
+msgstr "Deschide jurnalul"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Deschide jurnalul sau vizualizarea de depanare a modulului de trimitere pentru eroarea exactă."
+
+msgid "Open the mail log"
+msgstr "Deschide jurnalul de emailuri"
+
+msgid "Open the sender check"
+msgstr "Deschide verificarea expeditorului"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Opțional și dezactivat implicit. Când este activat, Mailspur verifică regulat jurnalul și te anunță despre valuri de eșecuri, liniște neobișnuită sau tipuri de email care nu se mai trimit. Alertele merg doar la adresele și la webhookul pe care le introduci aici; conțin numele site-ului, textul alertei (pentru un tip de email care nu se mai trimite: expeditorul și modelul subiectului) și o legătură către jurnal – niciodată conținutul emailurilor sau destinatarii."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Opțional, doar https. URL-urile de webhook Slack și Discord primesc un mesaj de chat, orice alt URL o cerere JSON POST. Cererea este făcută de serverul tău exact către acest URL – niciun alt serviciu nu este implicat."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Sau adaugă adresa ca alias / permisiune „trimite ca” la furnizorul tău de email."
+
+msgid "Order #%s"
+msgstr "Comanda #%s"
+
+msgid "Order data"
+msgstr "Datele comenzii"
+
+msgid "Origin"
+msgstr "Origine"
+
+msgid "Original Bcc"
+msgstr "Bcc original"
+
+msgid "Original Cc"
+msgstr "Cc original"
+
+msgid "Original recipients"
+msgstr "Destinatari originali"
+
+msgid "Other emails"
+msgstr "Alte emailuri"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Alți destinatari (de ex. vizitatori)"
+
+msgid "Overview"
+msgstr "Prezentare generală"
+
+msgid "Own top-level menu item"
+msgstr "Element propriu în meniul principal"
+
+msgid "PHP extension openssl is missing"
+msgstr "Lipsește extensia PHP openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer pregătit (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Paginare"
+
+msgid "Password sent in plain text"
+msgstr "Parolă trimisă în text simplu"
+
+msgid "Path"
+msgstr "Cale"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Număr de card de plată în text simplu: %1$s"
+
+msgid "Per page"
+msgstr "Pe pagină"
+
+msgid "Period"
+msgstr "Perioadă"
+
+msgid "Personal data"
+msgstr "Date personale"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Phone number"
+msgstr "Număr de telefon"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Lățimea unui telefon (375 px). Dacă poți derula lateral, emailul este mai lat decât majoritatea ecranelor de telefon."
+
+msgid "Plain text"
+msgstr "Text simplu"
+
+msgid "Please enter valid email addresses."
+msgstr "Introdu adrese de email valide."
+
+msgid "Plugin"
+msgstr "Modul"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Modulul sau tema care a trimis emailul."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Semnalează problemele care împiedică sosirea sau afișarea corectă a emailurilor"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Postal address"
+msgstr "Adresă poștală"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo sau Amazon SES pot raporta acestui site dacă un email a fost livrat, respins sau marcat ca spam. Starea este afișată la emailul înregistrat, iar hard bounce-urile contează pentru destinatarii problematici. Pentru a potrivi rapoartele, Mailspur adaugă un antet de referință emailurilor trimise."
+
+msgid "Preparation"
+msgstr "Pregătire"
+
+msgid "Preview"
+msgstr "Previzualizare"
+
+msgid "Previews"
+msgstr "Previzualizări"
+
+msgid "Previous email"
+msgstr "Emailul anterior"
+
+msgid "Previous email (k)"
+msgstr "Emailul anterior (k)"
+
+msgid "Previous page"
+msgstr "Pagina anterioară"
+
+msgid "Print"
+msgstr "Tipărește"
+
+msgid "Privacy"
+msgstr "Confidențialitate"
+
+msgid "Privacy & security"
+msgstr "Confidențialitate și securitate"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Probabil da: %s tip de email nu se mai trimite."
+msgstr[1] "Probabil da: %s tipuri de email nu se mai trimit."
+msgstr[2] "Probabil da: %s de tipuri de email nu se mai trimit."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Emailurile de test sunt trimise doar unui administrator."
+
+msgid "Problem"
+msgstr "Problemă"
+
+msgid "Problem recipients"
+msgstr "Destinatari problematici"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Îți protejează domeniul când pleacă mult mai multe emailuri decât de obicei, de ex. pentru că roboții de spam abuzează de un formular de contact. Alertele folosesc canalele alertelor de monitorizare; emailurile de resetare a parolei nu sunt niciodată reținute."
+
+msgid "Provider status"
+msgstr "Starea la furnizor"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Furnizori precum %2$s publică o politică DMARC strictă. Un email „de la” domeniul lor trimis de serverul tău web nu trece această verificare și este respins sau ajunge în spam."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Pune conținutul important în text real și folosește imaginile doar ca supliment."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Pune informațiile importante la început și păstrează subiectul sub aproximativ 80 de caractere."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "Rută REST"
+
+msgid "Rarely"
+msgstr "Rar"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Evaluează Mailspur pe WordPress.org"
+
+msgid "Raw source"
+msgstr "Sursă brută"
+
+msgid "Reason"
+msgstr "Motiv"
+
+msgid "Rebuild from the log"
+msgstr "Reconstruiește din jurnal"
+
+msgid "Recipient"
+msgstr "Destinatar"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Domeniul destinatarului nu poate primi emailuri: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Domeniul destinatarului nu acceptă emailuri: %1$s"
+
+msgid "Recipients"
+msgstr "Destinatari"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Recomandat. Altfel, oricine are acces la jurnal ar putea folosi o legătură de resetare sau o parolă înregistrată pentru a prelua un cont. Retrimiterea unui astfel de email trimite versiunea mascată."
+
+msgid "Record for every email"
+msgstr "Înregistrează pentru fiecare email"
+
+msgid "Record for failed emails only"
+msgstr "Înregistrează doar pentru emailurile eșuate"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Înregistrează conversația cu serverul SMTP (doar când emailurile sunt trimise prin SMTP). Datele de autentificare și conținutul mesajului nu sunt înregistrate niciodată. Este omisă cât timp alt modul are depanarea SMTP activată."
+
+msgid "Recovery"
+msgstr "Revenire"
+
+msgid "Redact secrets"
+msgstr "Ascunde datele secrete"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Redirecționează toate emailurile către adresele de mai jos"
+
+msgid "Redirect to"
+msgstr "Redirecționează către"
+
+msgid "Redirect to test addresses"
+msgstr "Redirecționează către adrese de test"
+
+msgid "Redirected by staging mode."
+msgstr "Redirecționat de modul de test."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Redu HTML-ul: elimină CSS-ul nefolosit, stilurile inline care se repetă, comentariile și URL-urile lungi de urmărire. Imaginile nu sunt luate în calcul, doar HTML-ul însuși."
+
+msgid "Registered users"
+msgstr "Utilizatori înregistrați"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Respins de SPF, DKIM sau DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Legături sau imagini relative (%1$s), de ex. %2$s"
+
+msgid "Release held emails"
+msgstr "Eliberează emailurile reținute"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Eliberat din modul de test (intrarea reținută #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Eliberat de frâna de urgență (intrarea reținută #%s)."
+
+msgid "Remote content"
+msgstr "Conținut extern"
+
+msgid "Remote content is loaded."
+msgstr "Conținutul extern este încărcat."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Imaginile și fonturile externe sunt blocate, astfel încât expeditorii să nu poată urmări când deschizi această intrare."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Elimini toate intrările importate din %s? Datele din celălalt modul nu sunt afectate."
+
+msgid "Remove imported entries"
+msgstr "Elimină intrările importate"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Elimină câmpul cardului din notificarea formularului sau a modulului care a trimis acest email – datele cardului aparțin doar procesatorului de plăți. Afișează cel mult ultimele patru cifre. Roagă destinatarul să șteargă emailul."
+
+msgid "Removed:"
+msgstr "Eliminat:"
+
+msgid "Repeat alerts after"
+msgstr "Repetă alertele după"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Răspunsurile nu ajung la tine: trimis de la %1$s fără Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Raportat de furnizorul tău de email în ultimele 30 de zile; contează doar emailurile despre care a raportat."
+
+msgid "Request"
+msgstr "Cerere"
+
+msgid "Request failed: %s"
+msgstr "Cererea a eșuat: %s"
+
+msgid "Resend"
+msgstr "Retrimite"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Retrimite emailul din jurnal peste câteva minute."
+
+msgid "Resend the email from the log later."
+msgstr "Retrimite emailul din jurnal mai târziu."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Retrimite emailul din jurnal după ce livrarea funcționează."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Retrimite emailurile eșuate după ce limita se resetează."
+
+msgid "Resent from log"
+msgstr "Retrimis din jurnal"
+
+msgid "Reset filters"
+msgstr "Resetează filtrele"
+
+msgid "Result"
+msgstr "Rezultat"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Rezultat din cache – folosește „Verifică din nou” după modificarea înregistrărilor DNS."
+
+msgid "Retention"
+msgstr "Păstrare"
+
+msgid "Retention in the log"
+msgstr "Păstrarea în jurnal"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Perioada de păstrare pentru acest tip de email a fost salvată. Se aplică la următoarea curățare zilnică."
+
+msgid "Review held emails"
+msgstr "Revizuiește emailurile reținute"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Revizuiește notele acestui email (legături, expeditor, substituenți)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Revocă cheia în panoul serviciului și creează una nouă. Apoi află de ce a ajuns într-un email (rapoarte de depanare sau de erori, un formular care afișează setări) și oprește asta."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Chei revocate (p= gol): %s."
+
+msgid "Rhythm"
+msgstr "Ritm"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Rulează o căutare și înlocuire a vechiului domeniu în baza de date și verifică URL-urile scrise direct în șabloanele de email și în setările modulelor."
+
+msgid "Run the full sender check"
+msgstr "Rulează verificarea completă a expeditorului"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH este dezactivat în Microsoft 365"
+
+msgid "SMTP host"
+msgstr "Gazdă SMTP"
+
+msgid "SMTP login failed"
+msgstr "Autentificarea SMTP a eșuat"
+
+msgid "SMTP transcript"
+msgstr "Transcriere SMTP"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "Înregistrarea SPF permite oricărui server din lume să trimită pentru acest domeniu (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "Înregistrarea SPF se termină cu ?all (neutru): nu protejează domeniul împotriva falsificării."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "Înregistrare SPF găsită (redirect= către altă politică)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "Înregistrare SPF găsită. Celelalte servere sunt marcate ca suspecte (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "Înregistrare SPF găsită. Celelalte servere sunt respinse (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "Înregistrarea SPF nu are un termen „all”, așa că emailurile de pe alte servere sunt tratate ca neutre."
+
+msgid "Saturday"
+msgstr "Sâmbătă"
+
+msgid "Save"
+msgstr "Salvează"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Salvat – lasă gol pentru a-l păstra"
+
+msgid "Scheduled for later today:"
+msgstr "Programate pentru mai târziu azi:"
+
+msgid "Search recipient or subject"
+msgstr "Caută destinatarul sau subiectul"
+
+msgid "Search recipient or subject …"
+msgstr "Caută destinatarul sau subiectul …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Caută vechea adresă în șablonul de email, în setările modulelor și în baza de date (de ex. după migrarea site-ului) și înlocuiește-o cu domeniul de producție."
+
+msgid "See why"
+msgstr "Vezi de ce"
+
+msgid "Seen"
+msgstr "Văzut"
+
+msgid "Select all"
+msgstr "Selectează tot"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Nici selectorul „%s” nu are o cheie."
+
+msgid "Send"
+msgstr "Trimite"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Trimite în schimb o legătură prin care utilizatorul își setează parola – exact asta face emailul WordPress pentru utilizatori noi. Caută o opțiune precum „Trimite parola prin email” sau „Include parola” în modulul care a trimis acest email și dezactiveaz-o."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Trimite un mesaj când problema este rezolvată"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Trimite un email de test din setările modulului de trimitere."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Trimite un raport săptămânal prin email la adresele de mai sus"
+
+msgid "Send again"
+msgstr "Trimite din nou"
+
+msgid "Send alerts by email to"
+msgstr "Trimite alertele prin email către"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Trimiți acum toate cele %s emailuri reținute către destinatarii lor originali?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Trimite fișierele mari ca legătură de descărcare în loc de atașament."
+
+msgid "Send latest to me"
+msgstr "Trimite-mi cel mai recent"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Trimite newsletterele cu un modul sau serviciu de newsletter care adaugă antetele List-Unsubscribe și List-Unsubscribe-Post și nu trimite către multe persoane într-un singur email prin Bcc."
+
+msgid "Send now"
+msgstr "Trimite acum"
+
+msgid "Send report now"
+msgstr "Trimite raportul acum"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Trimite astfel de emailuri fiecărui destinatar separat sau pune destinatarii în Bcc. Pentru newslettere folosește un modul care trimite câte un email pentru fiecare destinatar. Dacă adresele clienților au fost dezvăluite, verifică împreună cu responsabilul cu protecția datelor dacă incidentul trebuie raportat."
+
+msgid "Send test alert"
+msgstr "Trimite o alertă de test"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Trimite emailul cu antetul „Content-Type: text/html; charset=UTF-8” sau setează tipul de conținut cu filtrul wp_mail_content_type. Multe module de formulare și de magazin au o opțiune „Email HTML”."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Trimiți cel mai recent email de acest tip către %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Retrimiți acest email către %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Trimite acest email către (până la 10 adrese, separate prin virgule):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Trimiți acum acest email reținut către %s? Modul de test este ocolit pentru acest singur email."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Trimite printr-un serviciu SMTP de încredere în loc de serverul web, mai ales pe găzduire partajată."
+
+msgid "Send to…"
+msgstr "Trimite către…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Verificarea expeditorului (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Domeniul expeditorului %1$s diferă de site (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Domeniul expeditorului (SPF și DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Domeniul sau adresa expeditorului nu este verificată"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Expeditorul pentru %s din ultimele 200 de emailuri"
+
+msgid "Sending failed – see the log."
+msgstr "Trimiterea a eșuat – vezi jurnalul."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Trimiterea a eșuat – vezi noua intrare din jurnal pentru detalii."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Trimiterea în fundal (un modul de trimitere cu coadă) permite paginii să se încarce fără să aștepte."
+
+msgid "Sending limit or quota reached"
+msgstr "Limita de trimitere sau cota a fost atinsă"
+
+msgid "Sending report …"
+msgstr "Se trimite raportul …"
+
+msgid "Sending test alert …"
+msgstr "Se trimite alerta de test …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Trimiterea funcționează din nou: nu mai există un val de eșecuri."
+
+msgid "Sending…"
+msgstr "Se trimite…"
+
+msgid "Sent"
+msgstr "Trimis"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Trimis ca adresă de email gratuită: %1$s"
+
+msgid "Sent by"
+msgstr "Trimis de"
+
+msgid "Sent by WP-Cron."
+msgstr "Trimis de WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Trimis de evenimentul cron %1$s – este întârziat cu %2$s, deși WP-Cron rulează alte evenimente; poate eșua cu o eroare."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Trimis de evenimentul cron %1$s – este programat (următoarea rulare peste %2$s) și WP-Cron rulează, așa că evenimentul nu mai trimite acest email."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Trimis de evenimentul cron %s – acest eveniment nu mai este programat."
+
+msgid "Sent by the cron event %s."
+msgstr "Trimis de evenimentul cron %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Trimis repetat: încă %1$s emailuri identice în %2$s minute"
+
+msgid "Sent to %s."
+msgstr "Trimis către %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Trimis la aceeași adresă în jurul datei comenzii, dar nelegat de această comandă (de exemplu înregistrat înainte să existe legătura sau importat)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Setează o adresă Reply-To pe care o citește cineva, de ex. în WooCommerce → Setări → Emailuri sau în setările de email ale modulului de formulare. Sau trimite de pe o adresă care poate primi răspunsuri."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Setează o adresă de expeditor pe domeniul tău în modulul SMTP sau prin filtrul wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Setează o adresă de expeditor pe domeniul tău real, de ex. în modulul SMTP sau prin filtrul wp_mail_from, și verifică adresa site-ului în Setări → Generale."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Setează un subiect în setările șablonului sau ale formularului din modulul care trimite."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Setează adresa De la din modulul SMTP pe căsuța poștală cu care te autentifici și activează „forțează adresa De la”."
+
+msgid "Set up staging mode"
+msgstr "Configurează modul de test"
+
+msgid "Settings"
+msgstr "Setări"
+
+msgid "Settings › Discussion"
+msgstr "Setări › Discuții"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Mai multe semne de exclamare sunt tipice spamului publicitar. Filtrele de spam pot considera asta un minus pentru email, ceea ce poate înrăutăți livrarea."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Mai multe dintre cele mai recente emailuri de acest tip au eșuat."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Ponderea emailurilor eșuate pe zi (pe săptămână pentru perioade lungi)."
+
+msgid "Shop managers and above"
+msgstr "Manageri de magazin și peste"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Legăturile scurtate ascund unde duc. Spammerii le folosesc mult, așa că filtrele de spam le pot considera un minus pentru email, ceea ce poate înrăutăți livrarea."
+
+msgid "Show all email types"
+msgstr "Arată toate tipurile de email"
+
+msgid "Show all in Mail Log"
+msgstr "Arată tot în jurnalul de emailuri"
+
+msgid "Show as"
+msgstr "Afișează ca"
+
+msgid "Show data as table"
+msgstr "Arată datele ca tabel"
+
+msgid "Show email types"
+msgstr "Arată tipurile de email"
+
+msgid "Show emails"
+msgstr "Arată emailurile"
+
+msgid "Show emails for %s in the log"
+msgstr "Arată emailurile pentru %s în jurnal"
+
+msgid "Show failed emails"
+msgstr "Arată emailurile eșuate"
+
+msgid "Show held emails"
+msgstr "Arată emailurile reținute"
+
+msgid "Show these emails in the log"
+msgstr "Arată aceste emailuri în jurnal"
+
+msgid "Silence"
+msgstr "Liniște"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Mod întunecat simulat, folosind stilurile pentru modul întunecat ale emailului însuși. Fiecare aplicație de email tratează modul întunecat puțin diferit."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Simularea aplicațiilor care forțează modul întunecat prin inversarea culorilor. Imaginile își păstrează culorile; aplicațiile reale diferă în detalii."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Din 2024, Gmail și Yahoo cer o dezabonare cu un singur clic (antetul List-Unsubscribe) pentru emailurile în masă. Fără ea, newsletterele sunt mai des respinse sau filtrate."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Eșecurile izolate, de ex. din cauza unei adrese scrise greșit, sunt normale."
+
+msgid "Some emails could not be sent recently"
+msgstr "Unele emailuri nu au putut fi trimise recent"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Unele interogări au fost sărite, deoarece DNS a răspuns prea încet."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Nu ai permisiunea de a accesa această pagină."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Nu ai permisiunea să faci asta."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Nu ai permisiunea de a exporta jurnalul de emailuri."
+
+msgid "Source"
+msgstr "Sursă"
+
+msgid "Staging"
+msgstr "Mod de test"
+
+msgid "Staging mode"
+msgstr "Mod de test"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Modul de test este activ: toate emailurile sunt redirecționate către %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Modul de test este activ: emailurile sunt înregistrate în jurnal, dar nu sunt livrate."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Modul de test este activ: emailurile ar trebui redirecționate, dar nu este setată nicio adresă de redirecționare validă – toate emailurile sunt reținute și nelivrate."
+
+msgid "Staging mode is off"
+msgstr "Modul de test este dezactivat"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Modul de test este activ deși acesta este un site de producție"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Modul de test este activ pentru acest site de test"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Modul de test este activ: toate emailurile merg la adresele tale de test, nu la destinatarii reali."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Modul de test este activ: emailurile sunt înregistrate în jurnal, dar nu sunt trimise."
+
+msgid "Staging mode settings"
+msgstr "Setările modului de test"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Începe cu p=none pentru a primi rapoarte, apoi înăsprește la quarantine sau reject după ce SPF și DKIM trec."
+
+msgid "Statistics"
+msgstr "Statistici"
+
+msgid "Status"
+msgstr "Stare"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "Încă se sortează în fundal %s emailuri mai vechi pe tipuri. Reîncarcă pagina peste un minut."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Nu mai aduna (trimite acum ce așteaptă)"
+
+msgid "Stop these emails"
+msgstr "Oprește aceste emailuri"
+
+msgid "Stopped"
+msgstr "Oprit"
+
+msgid "Stopped by Mailspur."
+msgstr "Oprit de Mailspur."
+
+msgid "Stopped email types"
+msgstr "Tipuri de email oprite"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Stochează sursa MIME brută exactă a fiecărui email"
+
+msgid "Subject"
+msgstr "Subiect"
+
+msgid "Subject mostly in capital letters"
+msgstr "Subiect scris în mare parte cu majuscule"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Subiectele scrise cu majuscule par strigate și sunt frecvente în spam. Filtrele de spam pot considera asta un minus pentru email, ceea ce poate înrăutăți livrarea."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Subiectele conțin adesea nume sau numere de comandă."
+
+msgid "Suggested TXT record for %s"
+msgstr "Înregistrare TXT sugerată pentru %s"
+
+msgid "Sunday"
+msgstr "Duminică"
+
+msgid "Supported: %s."
+msgstr "Suportate: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Dezactivează-l în %1$s: „%2$s”."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Scos din rezumatul zilnic și trimis separat."
+
+msgid "Temporary rejection – try again later"
+msgstr "Respingere temporară – încearcă din nou mai târziu"
+
+msgid "Test"
+msgstr "Test"
+
+msgid "Test alert"
+msgstr "Alertă de test"
+
+msgid "Text changes"
+msgstr "Modificări de text"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Versiune text derivată din HTML. Nu s-a înregistrat dacă emailul avea și o versiune proprie în text simplu."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Este în regulă dacă serverul tău de email are voie să trimită pentru acel domeniu. Altfel, SPF și DMARC eșuează și emailul ajunge în spam."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Este corect pentru o copie de test, dar pe un site de producție clienții nu primesc confirmări de comandă, resetări de parolă sau răspunsuri la formulare. Dezactivează modul de test dacă acesta este site-ul de producție."
+
+msgid "The API key was rejected"
+msgstr "Cheia API a fost respinsă"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "Interogarea DNS a eșuat sau a expirat. Încearcă verificarea expeditorului din nou mai târziu."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "Emailul HTML conține imagini, dar aproape deloc text. Filtrele de spam nu pot citi imaginile și nu au încredere în astfel de emailuri, ceea ce poate înrăutăți livrarea. Dacă programul de email blochează imaginile, cititorul vede un email aproape gol."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "Contul SMTP poate trimite doar cu propria adresă (sau cu aliasuri verificate). WordPress sau un modul a folosit o altă adresă De la."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Conversația cu serverul SMTP a fost goală."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "Serverul SMTP nu a putut fi contactat deloc: nume de gazdă sau port greșit, serverul este oprit sau furnizorul de găzduire blochează porturile de email de ieșire."
+
+msgid "The SMTP server refuses to relay"
+msgstr "Serverul SMTP refuză retransmiterea"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "Serverul SMTP a respins numele de utilizator sau parola (cod de răspuns 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "Serverul SMTP necesită autentificare sau criptare"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Adresa pare invalidă – verific-o pentru greșeli de scriere sau cere alta."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Corpul conține etichete HTML, dar emailul a fost trimis ca text/plain (implicit în WordPress). Destinatarii văd etichetele brute în loc de text formatat."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Conexiunea sau transferul a durat prea mult. De obicei un firewall întrerupe conexiunea fără avertisment sau gazda și portul sunt greșite."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Adresa implicită a expeditorului nu are un domeniu public sau acest server nu poate interoga înregistrări DNS."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Domeniul nu are nici înregistrare MX, nici înregistrare A în DNS. Emailurile către el sunt respinse. De obicei adresa este scrisă greșit sau domeniul nu mai există."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Domeniul publică o înregistrare „null MX”, care spune explicit că nu primește emailuri. Orice email către el este respins."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "API-ul de email răspunde încet: verifică regiunea sau endpointul configurat în modulul de trimitere."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "Emailul vine de la o adresă no-reply și nu are antet Reply-To. Când un client dă clic pe „Răspunde”, răspunsul ajunge la o adresă pe care nu o citește nimeni sau este respins."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "Emailul conține o parolă în formă lizibilă. Emailurile rămân ani de zile în căsuțe poștale, copii de siguranță și conversații redirecționate – oricine pune mâna pe unul dintre ele se poate autentifica. Jurnalul de emailuri o stochează și el, cu excepția cazului în care „Ascunde datele secrete” este activ (atunci jurnalul păstrează o copie mascată, dar destinatarul a primit oricum parola)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Emailul conține o cheie de acces (de ex. pentru Stripe, GitHub, Slack, AWS, Google sau SendGrid) sau o cheie privată. Oricine citește emailul – acum sau peste ani într-o căsuță poștală sau copie de siguranță – o poate folosi. Jurnalul de emailuri o stochează și el, cu excepția cazului în care „Ascunde datele secrete” este activ."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "Emailul conține variabile de șablon care nu au fost completate. Destinatarii le văd ca atare."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Emailul conține ceva ce pare a fi un număr complet de card de plată (trece testul cifrei de control). Numerele de card nu trebuie trimise niciodată prin email (PCI DSS): căsuțele poștale le păstrează ani de zile. Jurnalul de emailuri îl stochează și el, cu excepția cazului în care „Ascunde datele secrete” este activ."
+
+msgid "The email is too large"
+msgstr "Emailul este prea mare"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "Emailul conține legături către fișiere WordPress de pe o gazdă înrudită. Asta se întâmplă de obicei pe o copie de test care încă conține URL-urile site-ului de producție – sau invers."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "Emailul conține o legătură către o adresă de pe acest site care răspunde „pagina nu a fost găsită” (404). Asta se întâmplă de obicei după ce o pagină sau un produs a fost redenumit sau șters: șablonul indică încă vechea adresă și fiecare destinatar ajunge pe o pagină de eroare."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Tipurile de email sunt reconstruite din jurnal."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "Emailul a mers la mai multe persoane din afara domeniului tău în câmpul Către sau Cc. Fiecare destinatar vede toate celelalte adrese. În cazul clienților sau membrilor, asta dezvăluie date personale unor străini – conform GDPR, de obicei o încălcare a securității datelor."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "Emailul „%1$s” către %2$s din %3$s, ora %4$s, a fost reținut pentru scurt timp de o verificare de securitate din partea noastră și trimis apoi. Vă rugăm să verificați și dosarul de spam."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "Emailul „%1$s” către %2$s din %3$s, ora %4$s, a fost reținut de o verificare de securitate din partea noastră și nu a fost trimis. Îl vom trimite din nou."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "Emailul „%1$s” către %2$s din %3$s, ora %4$s, nu a fost trimis, deoarece trimiterea emailurilor era întreruptă atunci din partea noastră. Îl vom trimite din nou."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "Emailul „%1$s” către %2$s din %3$s, ora %4$s, nu a putut fi livrat. Îl vom trimite din nou."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "Emailul „%1$s” către %2$s a fost creat pe %3$s la ora %4$s, dar nu putem confirma dacă a fost livrat. Vom verifica acest lucru și îl vom retrimite dacă e nevoie."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "Emailul „%1$s” a fost trimis către %2$s pe %3$s la ora %4$s și a fost acceptat de serverul de email. Vă rugăm să verificați și dosarul de spam."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Frâna de urgență reține emailurile trimise până când le eliberezi sau le elimini."
+
+msgid "The emergency brake is holding emails"
+msgstr "Frâna de urgență reține emailuri"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Frâna de urgență nu reține niciun email"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Frâna de urgență este activă: site-ul tău a trimis brusc mult mai multe emailuri decât de obicei."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Frâna de urgență a observat un număr neobișnuit de emailuri într-o oră. Un formular de contact poate fi folosit abuziv. Emailurile sunt încă trimise."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Este stocată sursa brută exactă – „Descarcă .eml” o returnează neschimbată (nemascată)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Ultimele %s emailuri au eșuat toate. Trimiterea de pe acest site poate fi defectă, de ex. din cauza unei autentificări SMTP greșite sau a unui serviciu de email care refuză site-ul. Este posibil ca clienții să nu primească confirmări de comandă sau resetări de parolă."
+
+msgid "The latest emails could not be sent"
+msgstr "Cele mai recente emailuri nu au putut fi trimise"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Jurnalul păstrează emailurile %s zi."
+msgstr[1] "Jurnalul păstrează emailurile %s zile."
+msgstr[2] "Jurnalul păstrează emailurile %s de zile."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Jurnalul arată motivul pentru fiecare email eșuat."
+
+msgid "The mail log requires JavaScript."
+msgstr "Jurnalul de emailuri necesită JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Serverul de email nu a răspuns la timp"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Serverul de email este temporar indisponibil"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Serverul de email a respins dimensiunea emailului (cod de răspuns 552). Atașamentele cresc cu aproximativ o treime la codificare."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Serviciul de email trimite doar de pe domeniile sau adresele pe care le-ai verificat acolo."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Serviciul de email sau căsuța poștală a refuzat alte emailuri, deoarece a fost atinsă o limită de rată, o cotă zilnică sau o limită a planului."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Serviciul de email a refuzat cererea, deoarece cheia API este greșită, expirată, revocată sau nu are permisiunea de a trimite."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Modulul de trimitere a raportat un eșec"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Politica se aplică doar la %s%% din emailuri (pct)."
+
+msgid "The reason: %s."
+msgstr "Motivul: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Serverul destinatarului a cerut o reîncercare mai târziu (cod de răspuns 450/451/452): greylisting, o căsuță poștală plină sau prea multe emailuri într-un timp scurt."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Serverul destinatarului nu a putut confirma că serverul tău are voie să trimită pentru domeniul expeditorului."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Serverul destinatarului nu cunoaște această căsuță poștală (cod de răspuns 550 / 5.1.1) – adresa este scrisă greșit sau nu mai există."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Serverul destinatarului îl poate accepta totuși la o încercare ulterioară."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Serverul destinatarului a respins emailul din cauza conținutului său sau pentru că adresa IP a serverului expeditor este pe o listă de blocare."
+
+msgid "The recipient address was rejected"
+msgstr "Adresa destinatarului a fost respinsă"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Domeniul destinatarului nu acceptă emailuri (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Domeniul destinatarului nu are server de email"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Domeniul destinatarului pare o greșeală de scriere a unui furnizor de email popular. Astfel de emailuri sunt respinse – sau ajung la un străin care a înregistrat domeniul cu greșeala."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Același subiect a mers la aceiași destinatari de mai multe ori într-un timp scurt. Cauze tipice sunt confirmările de comandă duble, un formular trimis de două ori, o sarcină cron care rulează în paralel sau o buclă într-un modul."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Conexiunea securizată la serverul SMTP nu a putut fi stabilită: certificatul nu corespunde numelui gazdei, a expirat sau serverul nu acceptă criptarea aleasă."
+
+msgid "The sender address is not allowed"
+msgstr "Adresa expeditorului nu este permisă"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Verificarea expeditorului a găsit o problemă la %s. Emailurile pot ajunge în spam."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Domeniul expeditorului %s are înregistrări SPF și DMARC"
+
+msgid "The sender domain could not be checked"
+msgstr "Domeniul expeditorului nu a putut fi verificat"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Expeditorul nu are un domeniu public (de ex. wordpress@localhost). Majoritatea serverelor de email resping astfel de emailuri sau le pun în spam."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Serverul nu poate trimite emailuri cu PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Serverul a închis conexiunea (cod de răspuns 421), de ex. din cauza mentenanței, a supraîncărcării sau a prea multor conexiuni de la serverul tău."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Serverul nu retransmite emailuri pentru tine, de obicei pentru că nu ești autentificat sau adresa expeditorului nu aparține contului."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Serverul acceptă emailuri doar după autentificare sau după trecerea la o conexiune criptată (cod de răspuns 530)."
+
+msgid "The server rejected the content"
+msgstr "Serverul a respins conținutul"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Programul de email local al serverului răspunde încet: un modul de trimitere prin SMTP sau API predă în schimb emailurile unui furnizor."
+
+msgid "The start date must not be after the end date."
+msgstr "Data de început nu poate fi după data de sfârșit."
+
+msgid "The statistics require JavaScript."
+msgstr "Statisticile necesită JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Textul este același; s-a schimbat doar aspectul. Compară previzualizările."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Numele de utilizator este de obicei adresa de email completă. Atenție la spațiile copiate odată cu parola."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "URL-ul webhookului a fost eliminat: sunt permise doar URL-uri https valide."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Raportul săptămânal este activat, dar nu are destinatar: introdu o adresă de email la „Trimite alertele prin email către”."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Aceste emailuri se trimit din nou; tipul lor de email este monitorizat din nou."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Aceste feluri de email nu au mai fost trimise de mai mult timp decât de obicei. Motivul poate fi o actualizare de modul, o setare modificată sau o sarcină programată blocată."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Acest email are propria versiune în text simplu, dar jurnalul nu o stochează. Afișată aici: o versiune text derivată din HTML."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Acest email nu are stiluri proprii pentru modul întunecat. Unele aplicații îl afișează neschimbat, altele îl recolorează – vezi Întunecat forțat."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Acest email nu are o versiune în text simplu – unele programe de email și filtre de spam preferă una. Afișată aici: o versiune text derivată din HTML."
+
+msgid "This email type has no content change."
+msgstr "Acest tip de email nu are nicio modificare de conținut."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Acest tip de email este acum ignorat: fără stare, fără alerte."
+
+msgid "This email type is monitored again."
+msgstr "Acest tip de email este monitorizat din nou."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Această intrare a fost anonimizată; conținutul ei nu mai poate fi trimis."
+
+msgid "This import is already running in another tab."
+msgstr "Acest import rulează deja în altă filă."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Aceasta este o alertă de test. Canalele tale de alertă funcționează."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Acest site de producție a trimis o legătură către o adresă locală sau de test. Destinatarii nu o pot deschide."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Această întrebare necesită JavaScript. Poți căuta în jurnal în schimb."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Acest site păstrează un jurnal al emailurilor pe care le trimite (destinatar, subiect, conținut și starea livrării) pentru a verifica livrarea și a depana problemele. Intrările din jurnal sunt șterse automat după perioada de păstrare configurată."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Acest site rulează ca mediu %s, iar modul de test împiedică emailurile sale să ajungă la persoane reale."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Acest site rulează ca mediu %s. Activează modul de test, astfel încât niciun client real să nu primească emailuri de la el."
+
+msgid "Threshold (emails per hour)"
+msgstr "Prag (emailuri pe oră)"
+
+msgid "Thursday"
+msgstr "Joi"
+
+msgid "Timeline"
+msgstr "Cronologie"
+
+msgid "To"
+msgstr "Către"
+
+msgid "To date"
+msgstr "Până la data"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Pentru a le păstra, dar a primi doar un email pe zi, alege „Adună într-un singur email zilnic” în meniul … al tipului."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Clasamentele se bazează pe cele mai recente %s emailuri din această perioadă."
+
+msgid "Top recipient domains"
+msgstr "Domeniile destinatarilor principale"
+
+msgid "Top recipients: %s"
+msgstr "Destinatari principali: %s"
+
+msgid "Top sources"
+msgstr "Surse principale"
+
+msgid "Top subjects"
+msgstr "Subiecte principale"
+
+msgid "Total"
+msgstr "Total"
+
+msgid "Total: %s ms"
+msgstr "Total: %s ms"
+
+msgid "Trace"
+msgstr "Urmă"
+
+msgid "Transcript copied."
+msgstr "Transcriere copiată."
+
+msgid "Transport"
+msgstr "Transport"
+
+msgid "Trigger"
+msgstr "Declanșează"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Declanșezi un email real de resetare a parolei pentru propriul cont? WordPress creează pentru tine o nouă legătură de resetare, așa că legăturile de resetare anterioare nu mai funcționează; parola ta rămâne aceeași. Doar %s îl primește."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Declanșezi notificările pentru utilizator nou pentru propriul cont (notificarea către administrator și datele de autentificare)? WordPress creează pentru tine o nouă legătură pentru parolă, așa că legăturile anterioare nu mai funcționează. Nu este creat niciun utilizator; doar %s le primește."
+
+msgid "Trigger to me"
+msgstr "Declanșează un test către mine"
+
+msgid "Triggering…"
+msgstr "Se declanșează…"
+
+msgid "Tuesday"
+msgstr "Marți"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Tipurile sunt actualizate în fiecare oră și ori de câte ori deschizi această pagină. Sunt stocate doar contoare, modele de subiect și amprente ale conținutului (fără destinatari, fără conținut), iar acestea urmează perioada de păstrare a jurnalului."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Greșeală de scriere în domeniul destinatarului? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Diacriticele sau ghilimelele apar ca niște caractere stricate, precum \"Ã¤\" sau \"â€™\". Textul UTF-8 a fost citit undeva pe parcurs ca alt set de caractere – într-un șablon, la un import sau în baza de date."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Neclar. „%1$s” către %2$s a fost predat pentru trimitere %3$s, dar Mailspur nu a primit niciun rezultat."
+
+msgid "Under Tools"
+msgstr "În meniul Unelte"
+
+msgid "Uninstall"
+msgstr "Dezinstalare"
+
+msgid "Unknown"
+msgstr "Necunoscut"
+
+msgid "Unknown probe."
+msgstr "Email de test necunoscut."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Necunoscut: nu a fost raportat niciun rezultat al livrării (funcția wp_mail() înlocuită?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Substituenți neînlocuiți: %1$s"
+
+msgid "Until the log limit"
+msgstr "Până la limita jurnalului"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Până la 10 adrese, separate prin virgule. Cc și Bcc sunt eliminate, iar subiectul arată destinatarii originali. Fără o adresă validă, emailurile sunt reținute."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Până la 5 adrese, separate prin virgule. Emailurile de alertă apar în jurnal cu sursa „Alerte Mailspur” și nu declanșează niciodată ele însele alerte."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Actualizează legătura în șablonul de email sau în setările modulului care trimite acest email, ori adaugă o redirecționare de la vechea adresă către noua pagină (de ex. cu un modul de redirecționare)."
+
+msgid "Updated in between: %s"
+msgstr "Actualizate între timp: %s"
+
+msgid "Updated since the last one:"
+msgstr "Actualizate de la ultimul:"
+
+msgid "Updated since then: %s."
+msgstr "Actualizate de atunci: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Folosește TLS pe portul 587 sau SSL pe portul 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Folosește un text descriptiv pentru legătură (de ex. „Vezi comanda”) sau afișează adresa către care duce de fapt legătura."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Folosește o adresă de expeditor pe propriul domeniu și pune adresa gratuită în Reply-To. Este în regulă doar dacă trimiți cu adevărat prin serverul SMTP propriu al acelui furnizor, cu datele lui de autentificare."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Folosește URL-uri absolute, inclusiv https:// și domeniul, de ex. cu home_url() sau wp_get_attachment_url() în șablon."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Folosește exact numele de gazdă pentru care a fost emis certificatul (de ex. gazda smtp.… a furnizorului în loc de un IP sau propriul domeniu)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Folosește cel mult un semn de exclamare."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Folosește tastele săgeți pentru a te deplasa între celule."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Folosește tastele săgeți pentru a te deplasa între valori și Enter pentru a le deschide în jurnal."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Folosește adresa căsuței poștale a contului SMTP ca expeditor (De la)."
+
+msgid "User"
+msgstr "Utilizator"
+
+msgid "User: %s"
+msgstr "Utilizator: %s"
+
+msgid "Username"
+msgstr "Nume de utilizator"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Folosește setările salvate – salvează mai întâi modificările."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Verifică domeniul expeditorului la serviciul de email (adaugă înregistrările DNS ale acestuia) sau folosește o adresă de expeditor deja verificată."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Foarte probabil. „%1$s” a plecat către %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Subiect foarte lung (%1$s caractere)"
+
+msgid "View"
+msgstr "Vezi"
+
+msgid "View %s failed emails"
+msgstr "Vezi %s emailuri eșuate"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron nu a mai rulat de %s (DISABLE_WP_CRON este setat – verifică sarcina cron a serverului)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron nu a mai rulat de %s – rulează doar când site-ul are vizite sau eșuează cu o eroare."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron rulează normal."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Așteaptă rezumatul zilnic – nu este trimis separat."
+
+msgid "Waits %s s for the mail server"
+msgstr "Așteaptă %s s după serverul de email"
+
+msgid "Warnings"
+msgstr "Avertismente"
+
+msgid "Webhook URL"
+msgstr "URL webhook"
+
+msgid "Webhook signing key"
+msgstr "Cheie de semnare webhook"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "Miercuri"
+
+msgid "Week"
+msgstr "Săptămână"
+
+msgid "Week of %s"
+msgstr "Săptămâna din %s"
+
+msgid "Weekday"
+msgstr "Zi a săptămânii"
+
+msgid "Weekly"
+msgstr "Săptămânal"
+
+msgid "Weekly email report"
+msgstr "Raport săptămânal prin email"
+
+msgid "Weekly report"
+msgstr "Raport săptămânal"
+
+msgid "What to do"
+msgstr "Ce trebuie făcut"
+
+msgid "When emails are sent"
+msgstr "Când sunt trimise emailurile"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Când sunt trimise mult mai multe emailuri decât de obicei, frâna de urgență te avertizează și poate reține emailurile următoare."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Când este dezactivat, pixelii de urmărire nu pot afla când deschizi o intrare. Poți încărca în continuare conținutul extern pentru un singur email. Scripturile și formularele sunt întotdeauna blocate."
+
+msgid "Who can view the log"
+msgstr "Cine poate vedea jurnalul"
+
+msgid "Why did an email fail?"
+msgstr "De ce a eșuat un email?"
+
+msgid "With attachments"
+msgstr "Cu atașamente"
+
+msgid "With notes"
+msgstr "Cu note"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Fără aceste înregistrări DNS, furnizorii de email nu pot verifica dacă site-ul tău are voie să trimită emailuri pentru acest domeniu, așa că emailurile ajung mai ușor în spam. Verificarea expeditorului sugerează înregistrări pe care le poți adăuga la furnizorul domeniului."
+
+msgid "WooCommerce email"
+msgstr "Email WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Setări › Emailuri"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "Emailurile din nucleul WordPress nu au editor; pot fi modificate cu filtre."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress nu a trimis niciun email – poate un modul a dezactivat acest email."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress nu are nicio setare pentru acest email. Mailspur poate opri notificarea către administratori; utilizatorul nou își primește în continuare propriul email."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress nu are nicio setare pentru acest email. Mailspur poate opri notificările de succes ale actualizărilor automate; notificările despre actualizările eșuate sosesc în continuare."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress trimite implicit prin funcția PHP mail(). Pe acest server este dezactivată sau nu este instalat niciun program de email (sendmail) – lucru frecvent la instalările locale, în Docker și la mulți furnizori de găzduire administrată."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Scrie subiectul normal, cu litere mari și mici, și evidențiază cel mult un singur cuvânt."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Da, dar „%1$s” către %2$s (%3$s) a fost marcat ca spam de destinatar, conform %4$s."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Da. „%1$s” a plecat către %2$s %3$s, iar %4$s a confirmat livrarea."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Îl poți trimite în continuare din jurnal („Trimite acum”)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Primești acest rezumat deoarece aceste tipuri de email sunt adunate de Mailspur într-un singur email zilnic. Fiecare email rămâne în jurnal."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Primești acest email deoarece alertele de monitorizare sunt activate în setările Mailspur ale acestui site."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Primești acest email deoarece raportul săptămânal este activat în setările Mailspur ale acestui site. Conține doar numere și modele de subiect – niciun conținut de email sau destinatari."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Selectorul tău DKIM (opțional)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Site-ul tău nu a trimis niciun email în ultimele 7 zile."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s notificări: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 notificare: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Raport săptămânal prin email %2$s"
+
+msgid "address"
+msgstr "adresă"
+
+msgid "and %s more"
+msgstr "și încă %s"
+
+msgid "and %s more – see the log"
+msgstr "și încă %s – vezi jurnalul"
+
+msgid "another plugin stopped it"
+msgstr "un alt modul l-a oprit"
+
+msgid "code"
+msgstr "cod"
+
+msgid "date"
+msgstr "dată"
+
+msgid "days"
+msgstr "zile"
+
+msgid "deleted after %s days"
+msgstr "șterse după %s zile"
+
+msgid "emails to this address failed several times before"
+msgstr "emailurile către această adresă au eșuat de mai multe ori până acum"
+
+msgid "entries"
+msgstr "intrări"
+
+msgid "failing"
+msgstr "cu erori"
+
+msgid "failure spikes"
+msgstr "valuri de eșecuri"
+
+msgid "first seen %s"
+msgstr "văzut prima dată %s"
+
+msgid "from a new sender"
+msgstr "de la un expeditor nou"
+
+msgid "holding emails right now"
+msgstr "reține emailuri chiar acum"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "păstrate până la ștergerea manuală"
+
+msgid "link"
+msgstr "legătură"
+
+msgid "minutes"
+msgstr "minute"
+
+msgid "name"
+msgstr "nume"
+
+msgid "new this week"
+msgstr "nou săptămâna aceasta"
+
+msgid "no"
+msgstr "nu"
+
+msgid "none"
+msgstr "niciunul"
+
+msgid "none in %1$s – %2$s"
+msgstr "niciunul în %1$s – %2$s"
+
+msgid "number"
+msgstr "număr"
+
+msgid "of %s"
+msgstr "din %s"
+
+msgid "often to administrators"
+msgstr "des către administratori"
+
+msgid "on %1$s at %2$s"
+msgstr "pe %1$s la %2$s"
+
+msgid "same recipient"
+msgstr "același destinatar"
+
+msgid "slow to send"
+msgstr "trimitere lentă"
+
+msgid "staging mode is on"
+msgstr "modul de test este activ"
+
+msgid "stopped"
+msgstr "oprit"
+
+msgid "stopped email types"
+msgstr "tipuri de email oprite"
+
+msgid "text"
+msgstr "text"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "frâna de urgență a oprit un val de emailuri"
+
+msgid "time"
+msgstr "oră"
+
+msgid "today at %s"
+msgstr "azi la %s"
+
+msgid "triggered %s times"
+msgstr "declanșat de %s ori"
+
+msgid "unchanged"
+msgstr "neschimbat"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "necunoscut – mailerul nu a dat niciun mesaj de eroare"
+
+msgid "unusual silence"
+msgstr "liniște neobișnuită"
+
+msgid "usually sent: %s"
+msgstr "trimis de obicei: %s"
+
+msgid "wp_mail() called"
+msgstr "wp_mail() apelată"
+
+msgid "yes"
+msgstr "da"
+
+msgid "yesterday at %s"
+msgstr "ieri la %s"
+
+msgid "your email provider"
+msgstr "furnizorul tău de email"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "„%1$s” (%2$s) la %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "„%1$s” (%2$s) se trimite din nou."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "„%1$s” (%2$s) pleacă de obicei cel puțin o dată la %3$s zile. Ultimul a fost trimis acum %4$s."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "„%1$s” (%2$s) a fost trimis ultima dată acum %3$s. Până atunci a fost trimis cel puțin o dată la %4$s zile."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "„%1$s” (%2$s) – de obicei săptămânal (%4$s), ultimul %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "„%1$s” (%2$s) – de obicei zilnic, ultimul %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "„%1$s” – %2$s – %3$s"

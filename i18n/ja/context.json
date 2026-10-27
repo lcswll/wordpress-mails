@@ -1,0 +1,13 @@
+{
+	"%s notes": "注意点 %s 件",
+	"Belongs to": "関連先",
+	"Emails to this user": "このユーザー宛てのメール",
+	"No emails logged for this order yet.": "この注文のメールはまだ記録されていません。",
+	"No emails to this user in the log.": "このユーザー宛てのメールはログにありません。",
+	"Order #%s": "注文 #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "注文日前後に同じアドレスへ送信されましたが、この注文とは関連付けられていません（例: 関連付けの導入前に記録された、またはインポートされたメール）。",
+	"Show all in Mail Log": "メールログですべて表示",
+	"User: %s": "ユーザー: %s",
+	"WooCommerce email": "WooCommerce のメール",
+	"same recipient": "同じ受信者"
+}

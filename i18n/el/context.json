@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s σημειώσεις",
+	"Belongs to": "Ανήκει σε",
+	"Emails to this user": "Email προς αυτόν τον χρήστη",
+	"No emails logged for this order yet.": "Δεν έχουν καταγραφεί ακόμη email για αυτή την παραγγελία.",
+	"No emails to this user in the log.": "Δεν υπάρχουν email προς αυτόν τον χρήστη στο αρχείο καταγραφής.",
+	"Order #%s": "Παραγγελία #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Στάλθηκε στην ίδια διεύθυνση γύρω από την ημερομηνία της παραγγελίας, αλλά δεν συνδέεται με αυτή την παραγγελία (για παράδειγμα καταγράφηκε πριν υπάρξει η σύνδεση ή εισήχθη).",
+	"Show all in Mail Log": "Εμφάνιση όλων στο αρχείο καταγραφής email",
+	"User: %s": "Χρήστης: %s",
+	"WooCommerce email": "Email του WooCommerce",
+	"same recipient": "ίδιος παραλήπτης"
+}

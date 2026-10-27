@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s یادداشت",
+	"Belongs to": "متعلق به",
+	"Emails to this user": "ایمیل‌های ارسال‌شده به این کاربر",
+	"No emails logged for this order yet.": "هنوز هیچ ایمیلی برای این سفارش در لاگ ثبت نشده است.",
+	"No emails to this user in the log.": "هیچ ایمیلی به این کاربر در لاگ نیست.",
+	"Order #%s": "سفارش #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "در حوالی تاریخ سفارش به همین نشانی ارسال شده، اما به این سفارش پیوند نخورده است (برای نمونه پیش از وجود این پیوند ثبت شده یا درون‌ریزی شده است).",
+	"Show all in Mail Log": "نمایش همه در لاگ ایمیل",
+	"User: %s": "کاربر: %s",
+	"WooCommerce email": "ایمیل WooCommerce",
+	"same recipient": "همان گیرنده"
+}

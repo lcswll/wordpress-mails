@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s megjegyzés",
+	"Belongs to": "Ehhez tartozik",
+	"Emails to this user": "E-mailek ennek a felhasználónak",
+	"No emails logged for this order yet.": "Ehhez a rendeléshez még nincs naplózott e-mail.",
+	"No emails to this user in the log.": "A naplóban nincs e-mail ennek a felhasználónak.",
+	"Order #%s": "#%s számú rendelés",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Ugyanarra a címre ment a rendelés dátuma körül, de nincs összekapcsolva ezzel a rendeléssel (például a kapcsolat létrejötte előtt naplózták, vagy importálták).",
+	"Show all in Mail Log": "Összes megjelenítése az e-mail-naplóban",
+	"User: %s": "Felhasználó: %s",
+	"WooCommerce email": "WooCommerce e-mail",
+	"same recipient": "ugyanaz a címzett"
+}

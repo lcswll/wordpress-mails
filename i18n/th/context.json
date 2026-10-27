@@ -1,0 +1,13 @@
+{
+	"%s notes": "หมายเหตุ %s รายการ",
+	"Belongs to": "เป็นของ",
+	"Emails to this user": "อีเมลถึงผู้ใช้นี้",
+	"No emails logged for this order yet.": "ยังไม่มีอีเมลที่บันทึกไว้สำหรับคำสั่งซื้อนี้",
+	"No emails to this user in the log.": "ไม่มีอีเมลถึงผู้ใช้นี้ในบันทึก",
+	"Order #%s": "คำสั่งซื้อ #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "ส่งไปยังที่อยู่เดียวกันในช่วงวันที่สั่งซื้อ แต่ไม่ได้เชื่อมโยงกับคำสั่งซื้อนี้ (เช่น บันทึกไว้ก่อนที่จะมีการเชื่อมโยง หรือนำเข้ามา)",
+	"Show all in Mail Log": "แสดงทั้งหมดในบันทึกอีเมล",
+	"User: %s": "ผู้ใช้: %s",
+	"WooCommerce email": "อีเมล WooCommerce",
+	"same recipient": "ผู้รับเดียวกัน"
+}

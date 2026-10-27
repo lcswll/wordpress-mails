@@ -1,0 +1,3253 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: da_DK\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "»Download .eml« genopbygger beskeden ud fra de loggede, maskerede data (uden vedhæftede filer)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (forrige uge: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (planlagt til %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s e-mailtype er stoppet: %2$s."
+msgstr[1] "%1$s e-mailtyper er stoppet, fx %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%1$s e-mailtyper fra %2$s afsendere"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "%1$s e-mails mislykkedes inden for de seneste %2$s minutter."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%1$s e-mails på %2$s dage"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "%1$s e-mails inden for de seneste 30 dage, %2$s mislykkedes"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "Der blev sendt %1$s e-mails inden for en time – langt flere end normalt (grænse: %2$s pr. time). En kontaktformular kan være misbrugt, eller webstedet kan være kompromitteret."
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s poster, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s importeret, %2$s dubletter, %3$s for gamle"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s af %2$s afvist (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "%1$s af %2$s e-mails i de seneste %3$s dage kunne ikke sendes."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "%1$s af %2$s poster behandlet …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s procentpoint vs. %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s sendte sin første e-mail den %2$s og har skrevet til %3$s forskellige eksterne adresser inden for de seneste 24 timer. Hvis du ikke har installeret eller sat noget op, der sender sådanne e-mails, så tjek webstedet: en ny afsender kan være tegn på et hacket websted."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "%1$s sendt, %2$s stadig tilbageholdt …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s vs. %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · %2$s e-mails samlet siden den seneste oversigt"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · pr. %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – fejlrate %2$s %% (forrige uge: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – rapporteret af %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (must-use-plugin)"
+
+msgid "%s (theme)"
+msgstr "%s (tema)"
+
+msgid "%s ago"
+msgstr "for %s siden"
+
+msgid "%s days"
+msgstr "%s dage"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s e-mail mislykkedes inden for de seneste 7 dage."
+msgstr[1] "%s e-mails mislykkedes inden for de seneste 7 dage."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s e-mail venter på din beslutning."
+msgstr[1] "%s e-mails venter på din beslutning."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s e-mail blev tilbageholdt og ikke sendt inden for de seneste 7 dage."
+msgstr[1] "%s e-mails blev tilbageholdt og ikke sendt inden for de seneste 7 dage."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "%s e-mails er tilbageholdt af nødbremsen."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s e-mails venter og er ikke blevet leveret."
+
+msgid "%s entries"
+msgstr "%s poster"
+
+msgid "%s failed"
+msgstr "%s mislykkedes"
+
+msgid "%s held emails discarded."
+msgstr "%s tilbageholdte e-mails kasseret."
+
+msgid "%s imported entries removed."
+msgstr "%s importerede poster fjernet."
+
+msgid "%s in 30 days"
+msgstr "%s på 30 dage"
+
+msgid "%s marked as spam"
+msgstr "%s markeret som spam"
+
+msgid "%s more on the Email types page."
+msgstr "%s mere på siden E-mailtyper."
+
+msgid "%s notes"
+msgstr "%s bemærkninger"
+
+msgid "%s of all emails"
+msgstr "%s af alle e-mails"
+
+msgid "%s of them in the last 24 hours."
+msgstr "%s af dem inden for de seneste 24 timer."
+
+msgid "%s s"
+msgstr "%s s"
+
+msgid "%s selected"
+msgstr "%s valgt"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s ting kræver opmærksomhed:"
+msgstr[1] "%s ting kræver opmærksomhed:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s til administratorer på 30 dage"
+
+msgid "%s unchanged lines"
+msgstr "%s uændrede linjer"
+
+msgid "(no subject)"
+msgstr "(intet emne)"
+
+msgid "(no text content)"
+msgstr "(intet tekstindhold)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(e-mailene er ikke længere i loggen)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all er strengere; ~all er almindeligt og fint sammen med DMARC."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 beholder poster for altid. Oprydningen kører én gang om dagen."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 betyder ingen grænse. De ældste poster fjernes først."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 slår det fra. Fjerner indhold, headers og vedhæftede filer fra ældre poster og maskerer adresserne (a***@example.com). Dato, status, kilde, format, størrelse og bemærkninger bevares til statistikken. Kører sammen med den daglige oprydning, før poster slettes – så det har kun effekt, hvis perioden er kortere end sletteperioden ovenfor."
+
+msgid "12 months"
+msgstr "12 måneder"
+
+msgid "30 days"
+msgstr "30 dage"
+
+msgid "7 days"
+msgstr "7 dage"
+
+msgid "90 days"
+msgstr "90 dage"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "En DKIM-selektor må kun indeholde bogstaver, cifre, punktummer, bindestreger og understregninger."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Et mailer-plugin, der sender via en API, overtog leveringen og rapporterede, at afsendelsen mislykkedes, uden at angive en årsag."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "En offentliggjort nøgle beviser ikke, at dine e-mails signeres med den – tjek DKIM-resultatet i headerne på en modtaget e-mail."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "En modtager eller afsenderadressen er ikke en gyldig e-mailadresse, så PHPMailer nægtede at sende."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "API-nøgle eller privat nøgle i ren tekst: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Der kræves ca. %1$s DNS-opslag for at evaluere denne post – flere end de tilladte %2$s, så modtagere kan ignorere den (PermError). Fjern ubrugte include:-angivelser."
+
+msgid "Access"
+msgstr "Adgang"
+
+msgid "Actions"
+msgstr "Handlinger"
+
+msgid "Active: alerts on %s."
+msgstr "Aktiv: advarsler ved %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Tilføj en kort alt-attribut til hvert billede i skabelonen, fx alt=\"Logo Eksempelbutik\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Tilføj din mailudbyders include: (fx include:_spf.google.com), hvis du sender via en udbyder."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Tilføj din mailserver eller mailtjeneste til SPF-posten for afsenderdomænet."
+
+msgid "Added:"
+msgstr "Tilføjet:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Adresser med mindst %s hårde fejl: den modtagende server afviste postkassen, domænet har ingen mailserver, eller din e-mailudbyder rapporterede en hard bounce. Posterne udløber med loggens opbevaringsperiode."
+
+msgid "Admin screen"
+msgstr "Administrationsskærm"
+
+msgid "Administrators"
+msgstr "Administratorer"
+
+msgid "Aggregate reports go to %s."
+msgstr "Samlede rapporter sendes til %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Advarsel"
+
+msgid "Alert and hold further emails"
+msgstr "Advar og tilbagehold yderligere e-mails"
+
+msgid "Alert only"
+msgstr "Kun advarsel"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Advar, når en e-mailtype, der sendes regelmæssigt, stopper"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Advar, når e-mails mislykkes gentagne gange"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Advar, når webstedet uventet holder op med at sende e-mails"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Advarsler er slået til, men har ingen kanal: indtast en e-mailadresse eller en webhook-URL."
+
+msgid "Alerts are off."
+msgstr "Advarsler er slået fra."
+
+msgid "All"
+msgstr "Alle"
+
+msgid "All email types look healthy."
+msgstr "Alle e-mailtyper ser sunde ud."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Alle e-mails omdirigeres til testadresser."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Alle e-mails går til testadresser i stedet for de rigtige modtagere."
+
+msgid "All sources"
+msgstr "Alle kilder"
+
+msgid "Allow again"
+msgstr "Tillad igen"
+
+msgid "Allowed again."
+msgstr "Tilladt igen."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Advarer også én gang, når et plugin eller tema, der aldrig før har sendt en e-mail, skriver til mange forskellige eksterne adresser inden for en dag – et muligt tegn på et hacket websted. De første to uger efter installation af Mailspur er udgangspunktet."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Fjern også emnet ved anonymisering"
+
+msgid "Also search content"
+msgstr "Søg også i indhold"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Alternativt kan du bede din webhost om at aktivere mail() / sendmail for dette websted."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Indlæs altid eksterne billeder og skrifttyper i forhåndsvisningen"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (via SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "En e-mailudbyder med en HTTP-API i stedet for SMTP kræver færre forespørgsler frem og tilbage pr. e-mail."
+
+msgid "Anonymisation"
+msgstr "Anonymisering"
+
+msgid "Anonymise entries after"
+msgstr "Anonymisér poster efter"
+
+msgid "Anonymised"
+msgstr "Anonymiseret"
+
+msgid "Any format"
+msgstr "Alle formater"
+
+msgid "Any status"
+msgstr "Alle statusser"
+
+msgid "Apply"
+msgstr "Anvend"
+
+msgid "Ask the recipient for a working address."
+msgstr "Bed modtageren om en adresse, der virker."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Bed din webhost om at aktivere openssl-udvidelsen (eller aktivér den i PHP-indstillingerne i dit hostingpanel)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Bed din webhost om at opdatere serverens CA-certifikater og OpenSSL."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Spørg din webhost, om udgående SMTP-forbindelser er blokeret."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Spørg din webhost, om udgående forbindelser til den port er tilladt (firewall)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Mindst %1$s mislykkede e-mails inden for %2$s minutter"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Højst én advarsel pr. type inden for dette tidsrum, selv hvis problemet fortsætter."
+
+msgid "Attachments"
+msgstr "Vedhæftede filer"
+
+msgid "Attachments no longer available: %s"
+msgstr "Vedhæftede filer er ikke længere tilgængelige: %s"
+
+msgid "Authentication"
+msgstr "Godkendelse"
+
+msgid "Automatic TLS"
+msgstr "Automatisk TLS"
+
+msgid "Average per day"
+msgstr "Gennemsnit pr. dag"
+
+msgid "Back to the email types"
+msgstr "Tilbage til e-mailtyperne"
+
+msgid "Belongs to"
+msgstr "Hører til"
+
+msgid "Block again"
+msgstr "Bloker igen"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Blokeret som spam eller af en blokeringsliste"
+
+msgid "Bounced (permanent)"
+msgstr "Afvist (permanent)"
+
+msgid "Bounced (temporary)"
+msgstr "Afvist (midlertidigt)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Ødelagte tegn (kodning): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Masseudsendelse uden afmeldingsheader (%1$s modtagere)"
+
+msgid "Bundle into one daily email"
+msgstr "Saml i én daglig e-mail"
+
+msgid "Bundled into one daily email"
+msgstr "Samlet i én daglig e-mail"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Samling er slået fra. E-mails, der ventede, er nu sendt i én oversigt."
+
+msgid "Busiest day"
+msgstr "Travleste dag"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Annullér"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Bemærk: e-mails til denne adresse er mislykkedes flere gange før."
+
+msgid "Change in the email types"
+msgstr "Ændring i e-mailtyperne"
+
+msgid "Change staging mode"
+msgstr "Skift staging-tilstand"
+
+msgid "Check"
+msgstr "Tjek"
+
+msgid "Check again"
+msgstr "Tjek igen"
+
+msgid "Check emails"
+msgstr "Kontrollér e-mails"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Tjek vært og port; prøv 587 (TLS) i stedet for 465 (SSL) eller omvendt."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Tjek vært, port, kryptering, brugernavn og adgangskode i dit SMTP-plugin, og send en test-e-mail derfra."
+
+msgid "Check sender domains"
+msgstr "Tjek afsenderdomæner"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Tjek, at krypteringen passer til porten: TLS til 587, SSL til 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Tjek, at nøglen hører til den rigtige region / konto (fx EU- vs. US-endpoint)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Tjek SMTP-værten og porten: en forkert port eller en blokeret forbindelse ender ofte i timeout, før en reserveløsning virker."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Tjek SPF-, DKIM- og DMARC-posterne for afsenderdomænet, eller brug en afsenderadresse på det domæne, du sender fra."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Tjek adressen for slåfejl – eller også blev e-mailen aldrig sendt af dit websted."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Tjek adressen med modtageren, og ret den der, hvor den er gemt (brugerprofil, ordre, formularindsendelse)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Tjek adressen med modtageren, og ret den der, hvor den er gemt."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Tjek værtsnavn og port: 587 med STARTTLS (TLS) eller 465 med SSL. Port 25 blokeres af de fleste webhosts."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Tjek grænserne og det aktuelle forbrug på din konto hos mailtjenesten; opgradér planen om nødvendigt."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Tjek modtageradresserne i denne post for slåfejl, mellemrum eller manglende dele."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Tjek afsenderadressen i dit SMTP-plugin og filteret wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Tjek afsendelsesgrænserne for din mailkonto og bemærkningerne til denne e-mail."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Tjek serverens IP-adresse med et blokeringslisteværktøj, og anmod om fjernelse."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Tjek stavningen af pladsholderen i skabelonen, og om pluginnet understøtter den for denne e-mailtype. Shortcodes behandles ikke i e-mails, medmindre det afsendende plugin kører do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Tjekket %s."
+
+msgid "Checked just now"
+msgstr "Tjekket for et øjeblik siden"
+
+msgid "Checking DNS records …"
+msgstr "Tjekker DNS-poster …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Tjekker DNS-posterne for de domæner, dit websted sender fra: standardafsenderadressen og de hyppigste afsendere i loggen. Manglende eller svage poster er den mest almindelige årsag til, at e-mails havner i spam. Kun din servers egen DNS-resolver bruges; resultaterne gemmes i en time."
+
+msgid "Choose a range of at most %s days."
+msgstr "Vælg et interval på højst %s dage."
+
+msgid "Clear selection"
+msgstr "Ryd markering"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Klik på en søjle for at åbne disse e-mails i loggen."
+
+msgid "Close"
+msgstr "Luk"
+
+msgid "Close (Esc)"
+msgstr "Luk (Esc)"
+
+msgid "Colour scheme"
+msgstr "Farveskema"
+
+msgid "Command line"
+msgstr "Kommandolinje"
+
+msgid "Compare"
+msgstr "Sammenlign"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Sammenlign kilderne for disse poster. Tjek, om to plugins sender den samme notifikation, eller om en hook (fx ændring af ordrestatus) udløses mere end én gang."
+
+msgid "Component"
+msgstr "Komponent"
+
+msgid "Configure alerts"
+msgstr "Konfigurér advarsler"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Indhold anonymiseret efter %1$s dage, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Indholdsændring markeret som set."
+
+msgid "Content changed"
+msgstr "Indhold ændret"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Indhold ændret den %1$s efter opdateringen af %2$s."
+
+msgid "Content changed on %s."
+msgstr "Indhold ændret den %s."
+
+msgid "Content removed"
+msgstr "Indhold fjernet"
+
+msgid "Content removed after %s days"
+msgstr "Indhold fjernet efter %s dage"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Indhold, headers og vedhæftede filer er fjernet, og adresserne er maskeret af indstillingen for anonymisering."
+
+msgid "Copied"
+msgstr "Kopieret"
+
+msgid "Copied – paste it into your reply."
+msgstr "Kopieret – indsæt det i dit svar."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Kopierer en kort sætning til dit svar til kunden: hvornår e-mailen blev sendt til hvem, og om den kom frem – uden tekniske detaljer."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Kopierer den eksisterende log fra et andet plugin til e-maillogning ind i Mailspur, så gamle e-mails kan søges i og forhåndsvises her. Det andet plugin og dets data forbliver urørt; kører du importen igen, tilføjes kun nye poster."
+
+msgid "Copy"
+msgstr "Kopiér"
+
+msgid "Copy for support"
+msgstr "Kopiér til support"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Kopiering er ikke mulig i denne browser. Markér teksten, og kopiér den:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Ret adressen (fx i brugerprofilen eller ordren), og overvej validering af e-mailadresser i dine formularer."
+
+msgid "Counted once per email."
+msgstr "Tælles én gang pr. e-mail."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Opret en ny API-nøgle med afsendelsestilladelse hos din mailtjeneste, og indtast den i mailer-pluginnet."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Opret en ny webhook-URL? Den nuværende URL holder straks op med at virke – indsæt den nye URL i webhook-indstillingerne hos din e-mailudbyder."
+
+msgid "Create new URL"
+msgstr "Opret ny URL"
+
+msgid "Current page"
+msgstr "Nuværende side"
+
+msgid "Current record"
+msgstr "Nuværende post"
+
+msgid "Current size"
+msgstr "Nuværende størrelse"
+
+msgid "Custom"
+msgstr "Brugerdefineret"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "DKIM-nøgle fundet (selektor: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "DMARC-post fundet med p=none: kun rapporter, forfalskede e-mails leveres stadig."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "DMARC-post fundet med politik p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "DMARC-posten har ingen gyldig politik (p=none, quarantine eller reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "DNS-opslag mislykkedes eller fik timeout. Prøv igen senere."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "DNS-opslag er ikke tilgængelige på denne server (dns_get_record() er deaktiveret), så afsendertjekket kan ikke køre her."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Nødvendige DNS-opslag: ca. %1$s af %2$s tilladte."
+
+msgid "Daily"
+msgstr "Dagligt"
+
+msgid "Daily digest"
+msgstr "Daglig oversigt"
+
+msgid "Dark"
+msgstr "Mørk"
+
+msgid "Date"
+msgstr "Dato"
+
+msgid "Default (%s days)"
+msgstr "Standard (%s dage)"
+
+msgid "Default (no time limit)"
+msgstr "Standard (ingen tidsgrænse)"
+
+msgid "Default sender"
+msgstr "Standardafsender"
+
+msgid "Delete"
+msgstr "Slet"
+
+msgid "Delete %s selected log entries?"
+msgstr "Slet %s valgte logposter?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Slet ALLE logposter? Dette kan ikke fortrydes."
+
+msgid "Delete entries after"
+msgstr "Slet poster efter"
+
+msgid "Delete selected"
+msgstr "Slet valgte"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Slet logtabellen og indstillingerne, når pluginnet slettes"
+
+msgid "Delete this log entry?"
+msgstr "Slet denne logpost?"
+
+msgid "Deleted."
+msgstr "Slettet."
+
+msgid "Delivered"
+msgstr "Leveret"
+
+msgid "Delivered by %s (API)"
+msgstr "Leveret af %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Leveret af kode koblet på pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Leveret i den daglige oversigt den %s."
+
+msgid "Delivery"
+msgstr "Levering"
+
+msgid "Delivery status from your email provider"
+msgstr "Leveringsstatus fra din e-mailudbyder"
+
+msgid "Desktop"
+msgstr "Computer"
+
+msgid "Did my email arrive?"
+msgstr "Kom min e-mail frem?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Deaktivér e-mailen, eller skift modtager"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Kassér alle tilbageholdte e-mails? De bliver i loggen, men sendes ikke."
+
+msgid "Discard held emails"
+msgstr "Kassér tilbageholdte e-mails"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Send ikke »fra« gratis mailadresser (gmail.com, gmx.de …) via din egen server."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Færdig: %1$s e-mails sendt, %2$s mislykkedes."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Færdig: %1$s importeret, %2$s dubletter, %3$s for gamle."
+
+msgid "Download .eml"
+msgstr "Download .eml"
+
+msgid "Download as CSV"
+msgstr "Download som CSV"
+
+msgid "Download started."
+msgstr "Download startet."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Download posterne, der matcher de aktuelle filtre, som %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Hver e-mail kontrolleres én gang, når den logges eller importeres (ingen eksterne forespørgsler). Ændringer her påvirker kun e-mails, der logges bagefter; ældre poster kontrolleres ikke igen. DNS-tjek og tjek for gentagen afsendelse køres, når du åbner en post."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Tidligere e-mails til %s mislykkedes hårdt mere end én gang."
+
+msgid "Edit template"
+msgstr "Redigér skabelon"
+
+msgid "Editors and above"
+msgstr "Redaktører og højere"
+
+msgid "Email address"
+msgstr "E-mailadresse"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "E-mailadresse (den seneste e-mail er ikke længere i loggen)"
+
+msgid "Email address or order number"
+msgstr "E-mailadresse eller ordrenummer"
+
+msgid "Email consists almost only of images"
+msgstr "E-mailen består næsten kun af billeder"
+
+msgid "Email failure spike"
+msgstr "Pludselig stigning i mislykkede e-mails"
+
+msgid "Email failures"
+msgstr "Mislykkede e-mails"
+
+msgid "Email failures resolved"
+msgstr "Mislykkede e-mails løst"
+
+msgid "Email inventory"
+msgstr "E-mailoversigt"
+
+msgid "Email log"
+msgstr "E-maillog"
+
+msgid "Email log: problem recipients"
+msgstr "E-maillog: problemmodtagere"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Send mig en e-mail, når en kommentar afventer godkendelse"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Send mig en e-mail, når nogen skriver en kommentar"
+
+msgid "Email provider"
+msgstr "E-mailudbyder"
+
+msgid "Email sent again."
+msgstr "E-mail sendt igen."
+
+msgid "Email sent to %s."
+msgstr "E-mail sendt til %s."
+
+msgid "Email type"
+msgstr "E-mailtype"
+
+msgid "Email type is sent again"
+msgstr "E-mailtypen sendes igen"
+
+msgid "Email type stopped"
+msgstr "E-mailtype stoppet"
+
+msgid "Email types"
+msgstr "E-mailtyper"
+
+msgid "Email volume back to normal"
+msgstr "E-mailmængden er normal igen"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "E-mailmængden er normal igen: nødbremsen er ikke længere aktiv."
+
+msgid "Email: failed"
+msgstr "E-mail: mislykkedes"
+
+msgid "Email: failed – see the log"
+msgstr "E-mail: mislykkedes – se loggen"
+
+msgid "Email: sent"
+msgstr "E-mail: sendt"
+
+msgid "Emails"
+msgstr "E-mails"
+
+msgid "Emails are being logged again."
+msgstr "E-mails logges igen."
+
+msgid "Emails are delivered to their recipients."
+msgstr "E-mails leveres til modtagerne."
+
+msgid "Emails are flowing again"
+msgstr "E-mails sendes igen"
+
+msgid "Emails are logged but not delivered."
+msgstr "E-mails logges, men leveres ikke."
+
+msgid "Emails are still being sent."
+msgstr "E-mails bliver stadig sendt."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "E-mails bliver stadig sendt. Tjek hovedkilden; sæt nødbremsen til »Advar og tilbagehold yderligere e-mails« for at stoppe dem."
+
+msgid "Emails in 30 days"
+msgstr "E-mails på 30 dage"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "E-mails af denne type, der kun går til administratorer, samles nu og sendes én gang om dagen i én oversigt."
+
+msgid "Emails over time"
+msgstr "E-mails over tid"
+
+msgid "Emails per day and status"
+msgstr "E-mails pr. dag og status"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "E-mails pr. ugedag og time (webstedets tidszone)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "E-mails, der allerede er i loggen – logget af Mailspur selv eller importeret fra et andet plugin – genkendes på modtagere, emne og afsendelsestidspunkt og springes over som dubletter."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "E-mails, der sendes regelmæssigt, er stoppet (%s)"
+
+msgid "Emails to this user"
+msgstr "E-mails til denne bruger"
+
+msgid "Emails with notes"
+msgstr "E-mails med bemærkninger"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "E-mails uden emne ligner spam og er svære at finde i indbakken."
+
+msgid "Emails – last 7 days"
+msgstr "E-mails – seneste 7 dage"
+
+msgid "Emergency brake"
+msgstr "Nødbremse"
+
+msgid "Emergency brake reset."
+msgstr "Nødbremsen er nulstillet."
+
+msgid "Emergency brake settings"
+msgstr "Indstillinger for nødbremse"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Nødbremse: %1$s e-mails i den seneste time – langt flere end normalt (grænse: %2$s pr. time)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Nødbremse: usædvanlig strøm af e-mails"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Tom = automatisk: tre gange den travleste time i de seneste 14 dage, mindst 50 – i øjeblikket %s."
+
+msgid "Empty log"
+msgstr "Tøm loggen"
+
+msgid "Empty subject"
+msgstr "Tomt emne"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Aktivér totrinsbekræftelse for Google-kontoen, og opret en app-adgangskode (Google-konto → Sikkerhed → App-adgangskoder)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Aktivér DKIM-signering hos din mailudbyder eller vært, og offentliggør den nøgle, du får. Hvis du allerede signerer, så indtast din selektor (s=-værdien i DKIM-Signature-headeren), og tjek igen."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Aktivér DKIM-signering hos din mailtjeneste, og offentliggør dens DNS-post."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Aktivér godkendelse i dit SMTP-plugin, og indtast brugernavn og adgangskode."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Aktivér godkendelse i dit SMTP-plugin."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Krypterede SMTP-forbindelser (TLS/SSL) kræver PHP-udvidelsen openssl, som ikke er installeret eller aktiveret på denne server."
+
+msgid "Encryption"
+msgstr "Kryptering"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Kryptering (TLS/SSL) mislykkedes"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Indtast først en e-mailadresse eller en webhook-URL, og gem indstillingerne."
+
+msgid "Enter an email address or an order number."
+msgstr "Indtast en e-mailadresse eller et ordrenummer."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Indtast først en e-mailadresse under »Send advarsler via e-mail til«, og gem indstillingerne."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Indtast mellem 1 og 10 e-mailadresser."
+
+msgid "Enter one or more email addresses."
+msgstr "Indtast en eller flere e-mailadresser."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Indtast app-adgangskoden i dit SMTP-plugin, eller brug pluginnets »Log ind med Google«-forbindelse (OAuth)."
+
+msgid "Entries"
+msgstr "Poster"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Poster ældre end %s dage springes over, fordi opbevaringsindstillingen alligevel ville slette dem. Ændr først opbevaringen ovenfor for at importere alt."
+
+msgid "Error"
+msgstr "Fejl"
+
+msgid "Errors"
+msgstr "Fejl"
+
+msgid "Every %s days"
+msgstr "Hver %s. dag"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "Hvert 15. minut (Mailspur-advarsler)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Hver mandag morgen, kun når der er noget at rapportere: e-mails og fejlrate sammenlignet med forrige uge, nye, stoppede og ændrede e-mailtyper, e-mails med bemærkninger og nødbremsehændelser. Kun antal og emnemønstre."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Alle slags e-mails, som dette websted sender, genereret ud fra Mailspurs e-maillog – fx til en fortegnelse over behandlingsaktiviteter eller en overdragelse. Modtagergrupper udledes af de seneste e-mails fra hver afsender, datakategorier af den seneste e-mail af hver type. Listen indeholder intet e-mailindhold og ingen adresser."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Alle slags e-mails, dit websted sender, fundet automatisk i loggen: grupperet efter det plugin, der sender dem, og efter emne, med tal, adresser og navne som pladsholdere. Mailspur lærer, hvor ofte hver type sendes, og opdager, når en stopper – fx efter en plugin-opdatering."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Alt ser fint ud: %s e-mail inden for de seneste 7 dage, uden fejl."
+msgstr[1] "Alt ser fint ud: %s e-mails inden for de seneste 7 dage, ingen mislykkedes."
+
+msgid "Expected today and not sent yet:"
+msgstr "Forventet i dag og endnu ikke sendt:"
+
+msgid "Export"
+msgstr "Eksportér"
+
+msgid "Export started – your download begins shortly."
+msgstr "Eksporten er startet – din download begynder om lidt."
+
+msgid "Failed"
+msgstr "Mislykket"
+
+msgid "Failed (%s %%)"
+msgstr "Mislykkedes (%s %%)"
+
+msgid "Failing"
+msgstr "Mislykkes"
+
+msgid "Failure rate"
+msgstr "Fejlrate"
+
+msgid "Failure spike"
+msgstr "Pludselig stigning i fejl"
+
+msgid "Far more emails than usual were sent"
+msgstr "Der blev sendt langt flere e-mails end normalt"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Der blev sendt langt flere e-mails end normalt, så Mailspur tilbageholder yderligere e-mails, indtil du frigiver eller kasserer dem."
+
+msgid "Fewer"
+msgstr "Færre"
+
+msgid "File"
+msgstr "Fil"
+
+msgid "Filter by status"
+msgstr "Filtrér efter status"
+
+msgid "Filter email types"
+msgstr "Filtrér e-mailtyper"
+
+msgid "First email after the change"
+msgstr "Første e-mail efter ændringen"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Første e-mail fra denne afsender den %s. Med typeadvarsler slået til advarer Mailspur, når en ny afsender skriver til mange eksterne adresser."
+
+msgid "First page"
+msgstr "Første side"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Ved store vedhæftede filer kan timeout også ramme under overførslen – send mindre filer eller links."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Til staging- og udviklingskopier af et websted: sørg for, at kunder aldrig får e-mails fra kopien. Alle e-mails logges stadig."
+
+msgid "Forced dark"
+msgstr "Tvunget mørk"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Free text from forms"
+msgstr "Fritekst fra formularer"
+
+msgid "Friday"
+msgstr "fredag"
+
+msgid "From"
+msgstr "Fra"
+
+msgid "From date"
+msgstr "Fra dato"
+
+msgid "Front end"
+msgstr "Frontend"
+
+msgid "Function"
+msgstr "Funktion"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Yderligere e-mails tilbageholdes, indtil en administrator frigiver eller kasserer dem."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail og Google Workspace accepterer ikke længere den normale kontoadgangskode til SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail afkorter HTML-e-mails større end 102 KB og viser »[Message clipped]«. Alt efter klippet – ofte sidefoden, afmeldingslinket eller de juridiske oplysninger – skjules."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail vil afkorte denne e-mail (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google afviste login"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML sendt som ren tekst"
+
+msgid "Handler"
+msgstr "Handler"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Hard bounce rapporteret af din e-mailudbyder"
+
+msgid "Hard failures"
+msgstr "Hårde fejl"
+
+msgid "Headers"
+msgstr "Headers"
+
+msgid "Held"
+msgstr "Tilbageholdt"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Tilbageholdt af nødbremsen – kasseret."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Tilbageholdt af nødbremsen – ikke leveret."
+
+msgid "Held by emergency brake – released later."
+msgstr "Tilbageholdt af nødbremsen – frigivet senere."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Tilbageholdt af staging-tilstand – ikke leveret."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Tilbageholdt e-mail sendt. Den er logget som en ny post."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Tilbageholdte e-mails får status »Tilbageholdt« og kan stadig sendes én ad gangen fra loggen (»Send nu«)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Tilbageholdt: alle modtagere har tidligere haft hårde fejl (problemmodtagere)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Tilbageholdt: staging-tilstand er sat til omdirigering, men der er ikke konfigureret en gyldig omdirigeringsadresse."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Tip om problemer, der kan forhindre, at denne e-mail kommer frem eller vises korrekt."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Tilbagehold yderligere e-mails til problemmodtagere"
+
+msgid "Hooks"
+msgstr "Hooks"
+
+msgid "Hours"
+msgstr "Timer"
+
+msgid "How to fix:"
+msgstr "Sådan løser du det:"
+
+msgid "I already did"
+msgstr "Det har jeg allerede gjort"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Jeg forstår, at den rå kilde IKKE er maskeret og omtrent fordobler lagerforbruget pr. e-mail"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Hvis det sker ofte, så tjek afsendelsesgrænserne hos din mailudbyder."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Hvis det bliver ved, så send færre e-mails ad gangen eller via en mailtjeneste med kø."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Hvis sikkerhedsstandarderne blokerer det, så brug i stedet dit SMTP-plugins Microsoft-forbindelse (OAuth / Graph API)."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Hvis flere modtagere mislykkedes, angiver serverens svar efter adressen årsagen."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Hvis kontoen bruger totrinsgodkendelse, så opret en app-adgangskode, og brug den i stedet."
+
+msgid "Ignore"
+msgstr "Ignorér"
+
+msgid "Ignored"
+msgstr "Ignoreret"
+
+msgid "Ignored notes"
+msgstr "Ignorerede bemærkninger"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Ignorerede bemærkninger registreres ikke længere for nye e-mails og skjules for eksisterende poster."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Billeder uden alt-tekst (%1$s)"
+
+msgid "Import"
+msgstr "Importér"
+
+msgid "Import failed: %s"
+msgstr "Import mislykkedes: %s"
+
+msgid "Import from other plugins"
+msgstr "Importér fra andre plugins"
+
+msgid "Import new entries"
+msgstr "Importér nye poster"
+
+msgid "Imported"
+msgstr "Importeret"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Importerede poster har ingen sporing: det andet plugin registrerede ikke disse detaljer."
+
+msgid "Imported from %s"
+msgstr "Importeret fra %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "I Amazon SNS skal du abonnere URL'en (protokol HTTPS) på det emne, der modtager Delivery-, Bounce- og Complaint-notifikationerne fra Amazon SES. Mailspur bekræfter abonnementet automatisk."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "Åbn Transactional → Settings → Webhook i Brevo, tilføj URL'en, og vælg Delivered, Hard bounce, Soft bounce, Invalid email og Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "Åbn Sending → Webhooks i Mailgun, tilføj URL'en for Delivered, Permanent failure, Temporary failure og Spam complaints, og indsæt HTTP webhook signing key nedenfor."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "Åbn din server → Webhooks → Add webhook i Postmark, indsæt URL'en, og vælg Delivery, Bounce og Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "Åbn brugeren → Mail → Manage email apps i Microsoft 365 admin center, og aktivér »Authenticated SMTP«."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Indbakker viser omkring de første 40–80 tegn; resten skæres af, på telefoner endnu tidligere."
+
+msgid "Include content"
+msgstr "Medtag indhold"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Installér et SMTP-plugin, og send via en rigtig postkasse eller en mailtjeneste til dit domæne."
+
+msgid "Invalid date."
+msgstr "Ugyldig dato."
+
+msgid "Invalid email address"
+msgstr "Ugyldig e-mailadresse"
+
+msgid "Invalid email address: %s"
+msgstr "Ugyldig e-mailadresse: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Ugyldig afsenderadresse: %1$s"
+
+msgid "Irregular"
+msgstr "Uregelmæssig"
+
+msgid "Is Mailspur helping you?"
+msgstr "Hjælper Mailspur dig?"
+
+msgid "Is an email missing?"
+msgstr "Mangler der en e-mail?"
+
+msgid "Is everything running?"
+msgstr "Kører alt?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Behold højst"
+
+msgid "Keep for"
+msgstr "Behold i"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Hold denne URL privat: den indeholder en hemmelig nøgle til dette websted. Gem indstillingerne, før du tester webhooken."
+
+msgid "Kept: %s"
+msgstr "Beholdes: %s"
+
+msgid "Key figures"
+msgstr "Nøgletal"
+
+msgid "Last 30 days"
+msgstr "Seneste 30 dage"
+
+msgid "Last email before the change"
+msgstr "Sidste e-mail før ændringen"
+
+msgid "Last failure"
+msgstr "Seneste fejl"
+
+msgid "Last page"
+msgstr "Sidste side"
+
+msgid "Last sent"
+msgstr "Senest sendt"
+
+msgid "Leave a review"
+msgstr "Skriv en anmeldelse"
+
+msgid "Light"
+msgstr "Lys"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Linkteksten viser %1$s, men fører til %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Link til en udviklingsadresse: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Link til en side, der ikke findes på dit websted: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Link direkte til den fulde adresse. Brug i stedet UTM-parametre på dit eget domæne til kliksporing."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Link via en URL-forkorter: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Links og billeder, der starter med »/«, virker kun på webstedet. I et mailprogram er der ingen webstedsadresse til at fuldende dem, så billeder forbliver tomme, og links fører ingen steder hen."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Links til en anden kopi af webstedet: %1$s (dette websted: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Links, hvis synlige adresse afviger fra det rigtige mål, ligner phishing. Spamfiltre straffer dem, og nogle mailprogrammer advarer læseren."
+
+msgid "Load remote content"
+msgstr "Indlæs eksternt indhold"
+
+msgid "Loading…"
+msgstr "Indlæser…"
+
+msgid "Log"
+msgstr "Log"
+
+msgid "Log entries %s"
+msgstr "Logposter %s"
+
+msgid "Log entry not found."
+msgstr "Logposten blev ikke fundet."
+
+msgid "Log only – do not send any email"
+msgstr "Kun log – send ingen e-mails"
+
+msgid "Log size"
+msgstr "Logstørrelse"
+
+msgid "Logged emails"
+msgstr "Loggede e-mails"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Loggede e-mails kan indeholde persondata. Giv så begrænset adgang som muligt. Indstillingerne kræver altid administratorrettigheder."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Login og modtagere blev accepteret, men selve e-mailen blev afvist – typisk på grund af spamfiltrering, en afsendelsesgrænse eller udbyderens politik (svarkode 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Logger udgående e-mails, kortlægger de typer e-mails, dit websted sender, og advarer dig, når en stopper. Sikker forhåndsvisning, leveringsdiagnostik, statistik."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Kig efter en mulighed for at slå den fra eller skifte modtager i e-mailindstillingerne for %s – eller ignorér typen her."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Find serverens svar i fejlmeddelelsen; det angiver som regel årsagen."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Kig efter uventet masseudsendelse (spam via formularer, løkker) i loggen."
+
+msgid "Looking it up …"
+msgstr "Slår op …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "E-maillog"
+
+msgid "Mail Log sections"
+msgstr "E-maillog-sektioner"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Mailservere til svar og bounces er sat op."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Mailudbydere kan bekræfte, at dit websted må sende e-mails for dette domæne. Det fulde afsendertjek ser også på DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Postkassen er ukendt eller utilgængelig"
+
+msgid "Mailer"
+msgstr "Mailer"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun signerer hver webhook med denne nøgle (Sending → Webhooks → HTTP webhook signing key); rapporter uden gyldig signatur afvises."
+
+msgid "Mailspur alerts"
+msgstr "Mailspur-advarsler"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur gennemgår loggen for e-mails, der ikke kunne sendes."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur fandt ingen ordre #%s i din butik."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur har indtil nu logget %s leverede e-mails på dette websted. Hvis det sparer dig tid, ville en kort anmeldelse på WordPress.org betyde meget – det hjælper andre med at finde pluginnet og holder det gratis."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur har ingen e-mail for ordre #%s i loggen."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur har ingen e-mail til %s i loggen."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur er lavet af %1$s. Kan du lide det? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur lærer, hvor ofte hver slags e-mail sendes, fx ordrebekræftelser, og giver besked her, når en stopper."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur lærer rytmen for hver e-mailtype ud fra de seneste 8 uger – en daglig ordrebekræftelse er forsinket efter 2 dage, en ugentlig rapport efter 2 uger. Advarslen nævner typen, dens afsender og de plugins, der er opdateret siden dens seneste e-mail. Bruger kanalerne ovenfor; ignorerede typer advarer aldrig."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur kan se, at dit websted sendte den, men ikke selve indbakken. Hvis den ikke er der, så bed modtageren om at tjekke spammappen."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur stopper disse e-mails nu; deres e-mailtype ignoreres."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – E-maillog"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: e-mails tilbageholdt"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: staging-tilstand"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Hovedkilde: %1$s (%2$s e-mails)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Sørg for, at Fra-adressen i mailer-pluginnet matcher det verificerede domæne."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Sørg for, at e-mailen sendes med »charset=UTF-8«, at skabelonfiler er gemt som UTF-8, og at databasetabellerne bruger utf8mb4. Ret tekster, der allerede er gemt i ødelagt form."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Sørg for, at krypteringsindstillingen passer til porten."
+
+msgid "Many emails could not be sent recently"
+msgstr "Mange e-mails kunne ikke sendes for nylig"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Mange udråbstegn i emnet (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Mange mailprogrammer blokerer billeder, indtil læseren tillader dem. Uden alt-tekst ser læseren kun tomme felter; skærmlæsere oplæser intet brugbart."
+
+msgid "Mark as resolved"
+msgstr "Markér som løst"
+
+msgid "Marked as spam"
+msgstr "Markeret som spam"
+
+msgid "Marked as spam by the recipient"
+msgstr "Markeret som spam af modtageren"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Maskér nøgler til nulstilling af adgangskode, aktivering og adgang i loggede links samt adgangskoder, API-nøgler og kortnumre sendt som ren tekst"
+
+msgid "Maybe later"
+msgstr "Måske senere"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Måske blev e-mailen aldrig sendt – tjek ordrestatus og indstillingerne for din butiks e-mails."
+
+msgid "Menu position"
+msgstr "Menuplacering"
+
+msgid "Message"
+msgstr "Besked"
+
+msgid "Method"
+msgstr "Metode"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online blokerer SMTP-login (basisgodkendelse) for denne postkasse eller hele organisationen."
+
+msgid "Minutes"
+msgstr "Minutter"
+
+msgid "Monday"
+msgstr "mandag"
+
+msgid "Monitor again"
+msgstr "Overvåg igen"
+
+msgid "Monitoring alerts"
+msgstr "Overvågningsadvarsler"
+
+msgid "More"
+msgstr "Flere"
+
+msgid "More actions"
+msgstr "Flere handlinger"
+
+msgid "More filters"
+msgstr "Flere filtre"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Hyppigste årsag (%1$s af dem): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "De fleste servere accepterer 10–25 MB i alt."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Flere DMARC-poster fundet. Modtagere ignorerer DMARC i så fald – behold kun én."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Flere SPF-poster fundet. Modtagere behandler det som en fejl (PermError) – flet dem sammen til én post."
+
+msgid "Needs attention"
+msgstr "Kræver opmærksomhed"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Hverken en From-header eller en afsender blev registreret. Maileren falder tilbage på sin standard, ofte wordpress@ditdomæne."
+
+msgid "Never"
+msgstr "Aldrig"
+
+msgid "New"
+msgstr "Ny"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Ny URL oprettet. Opdatér den hos din e-mailudbyder."
+
+msgid "New email types"
+msgstr "Nye e-mailtyper"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Nye e-mails tilbageholdes, indtil du frigiver eller kasserer dem. E-mails til nulstilling af adgangskode sendes stadig."
+
+msgid "New sender"
+msgstr "Ny afsender"
+
+msgid "New sender writes to many addresses"
+msgstr "Ny afsender skriver til mange adresser"
+
+msgid "Next email"
+msgstr "Næste e-mail"
+
+msgid "Next email (j)"
+msgstr "Næste e-mail (j)"
+
+msgid "Next page"
+msgstr "Næste side"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Ingen DKIM-nøgle fundet under de almindelige selektorer."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Ingen DMARC-post for afsenderdomænet %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Ingen DMARC-post fundet. Store mailudbydere forventer en, og uden den kan alle forfalske dette domæne ubemærket."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Ingen MX-post: dette domæne kan ikke modtage svar eller bounces, og nogle modtagere afviser sådanne afsendere."
+
+msgid "No SMTP transcript for this email."
+msgstr "Ingen SMTP-udskrift for denne e-mail."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Hverken SPF- eller DMARC-post for afsenderdomænet %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Ingen SPF-post for afsenderdomænet %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Ingen SPF-post fundet. Modtagere kan ikke se, hvilke servere der må sende for dette domæne."
+
+msgid "No alerts sent yet."
+msgstr "Der er endnu ikke sendt nogen advarsler."
+
+msgid "No connection to the SMTP server"
+msgstr "Ingen forbindelse til SMTP-serveren"
+
+msgid "No email logged for %s hours"
+msgstr "Ingen e-mails logget i %s timer"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "Der er ikke logget nogen e-mail i de seneste %1$s timer, selvom dette websted sendte e-mails i dette tidsrum på %2$s af de seneste %3$s dage (i gennemsnit %4$s)."
+
+msgid "No emails"
+msgstr "Ingen e-mails"
+
+msgid "No emails found."
+msgstr "Ingen e-mails fundet."
+
+msgid "No emails in this period."
+msgstr "Ingen e-mails i denne periode."
+
+msgid "No emails logged for this order yet."
+msgstr "Der er endnu ikke logget nogen e-mails for denne ordre."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Ingen e-mails logget endnu. E-mailtyper vises her, så snart dit websted sender e-mails."
+
+msgid "No emails match these filters."
+msgstr "Ingen e-mails matcher disse filtre."
+
+msgid "No emails sent"
+msgstr "Ingen e-mails sendt"
+
+msgid "No emails to this user in the log."
+msgstr "Ingen e-mails til denne bruger i loggen."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "Der er ikke logget nogen e-mails inden for de seneste to uger."
+
+msgid "No limit"
+msgstr "Ingen grænse"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Der blev ikke fundet nogen log fra et andet plugin til e-maillogning på dette websted."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Der blev ikke fundet nogen log fra dette plugin på dette websted."
+
+msgid "No problem recipients."
+msgstr "Ingen problemmodtagere."
+
+msgid "No problems found in this email."
+msgstr "Ingen problemer fundet i denne e-mail."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Intet offentligt afsenderdomæne fundet (webstedets adresse er ikke et domænenavn, og loggen har endnu ingen afsendere)."
+
+msgid "No public sender domain to check"
+msgstr "Intet offentligt afsenderdomæne at kontrollere"
+
+msgid "No regularly sent email has stopped"
+msgstr "Ingen regelmæssigt sendte e-mails er stoppet"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Ingen rapportadresse (rua) – du kan ikke se, hvem der sender i dit navn."
+
+msgid "No sender address recorded"
+msgstr "Ingen afsenderadresse registreret"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Der er ingen sporing for denne post. Den blev logget, før sporingen fandtes, eller af en version uden den."
+
+msgid "No unusual email failures"
+msgstr "Ingen usædvanlige e-mailfejl"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Nej, med vilje. »%1$s« til %2$s blev tilbageholdt %3$s og ikke sendt. Årsag: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Nej. Alle e-mails, der sendes regelmæssigt, er sendt som planlagt."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Nej. »%1$s« til %2$s mislykkedes %3$s. Årsag: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Nej. »%1$s« til %2$s forlod dit websted %3$s, men %4$s rapporterer, at den modtagende server afviste den."
+
+msgid "None"
+msgstr "Ingen"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Sendes normalt mindst hver %1$s. dag, nu %2$s forsinket."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Ikke alle selektorer kunne tjekkes i tide."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Ikke registreret: et andet plugin havde SMTP-fejlfinding slået til."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Ikke registreret: SMTP-udskriften er slået fra i indstillingerne."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Ikke registreret: denne e-mail blev ikke sendt via SMTP."
+
+msgid "Not set up"
+msgstr "Ikke konfigureret"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Ikke gemt: udskrifter gemmes kun for mislykkede e-mails."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Ikke endnu. »%1$s« til %2$s forlod dit websted %3$s, men %4$s rapporterer et midlertidigt problem."
+
+msgid "Notes"
+msgstr "Bemærkninger"
+
+msgid "Notes in the latest email: %s"
+msgstr "Bemærkninger i den seneste e-mail: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Bemærkninger: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Bemærkninger: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Der forventes ikke andet i dag."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Intet mislykkedes inden for de seneste 7 dage."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Intet at sammenligne med endnu: ingen e-mails sendes regelmæssigt nok til, at Mailspur kan opdage et hul."
+
+msgid "Number of failed emails"
+msgstr "Antal mislykkede e-mails"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Tal ignoreres, så »Ordre #123« og »Ordre #124« tælles sammen."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Af de seneste %1$s e-mails, der blev sendt, mens nogen ventede på siden, tog halvdelen længere end %2$s s (gennemsnit %3$s s)."
+
+msgid "Off"
+msgstr "Fra"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Fra som standard. Uden den genopbygger »Download .eml« beskeden ud fra de loggede (maskerede) data. Den rå kilde indeholder links til nulstilling af adgangskode og andre hemmeligheder præcis som sendt – slå det kun til, når du har brug for det, og begge felter er markeret."
+
+msgid "Off – deliver emails normally"
+msgstr "Fra – lever e-mails normalt"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Når årsagen er rettet, kan du sende e-mailen igen fra loggen."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Når dine rapporter viser, at legitime e-mails består, skal du skifte til p=quarantine (eller p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "En af de to e-mails er slettet eller anonymiseret af opbevaringsindstillingerne, så de kan ikke længere sammenlignes."
+
+msgid "Only administrators can empty the log."
+msgstr "Kun administratorer kan tømme loggen."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Kun administratorer kan sende e-mails til andre adresser."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Advarer kun, når de seneste 14 dage viser, at der normalt sendes e-mails i dette tidsrum (på mindst 10 af 14 dage, inklusive samme ugedag), så stille nætter eller weekender ikke udløser den."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Kun e-mails, hvor alle modtagere er problemmodtagere. E-mails til nulstilling af adgangskode sendes altid; tilbageholdte e-mails kan stadig sendes fra loggen (»Send nu«)."
+
+msgid "Only held emails can be released."
+msgstr "Kun tilbageholdte e-mails kan frigives."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Åben distributionsliste: %1$s eksterne modtagere kan se hinandens adresser"
+
+msgid "Open in log"
+msgstr "Åbn i loggen"
+
+msgid "Open latest"
+msgstr "Åbn seneste"
+
+msgid "Open staging mode"
+msgstr "Åbn staging-tilstand"
+
+msgid "Open the email types"
+msgstr "Åbn e-mailtyperne"
+
+msgid "Open the emergency brake"
+msgstr "Åbn nødbremsen"
+
+msgid "Open the log"
+msgstr "Åbn loggen"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Åbn loggen eller fejlfindingsvisningen i dit mailer-plugin for at se den præcise fejl."
+
+msgid "Open the mail log"
+msgstr "Åbn e-mailloggen"
+
+msgid "Open the sender check"
+msgstr "Åbn afsendertjekket"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Valgfrit og slået fra som standard. Når det er slået til, gennemgår Mailspur loggen regelmæssigt og giver dig besked om pludselige stigninger i fejl, usædvanlig stilhed eller stoppede e-mailtyper. Advarsler sendes kun til de adresser og den webhook, du angiver her; de indeholder webstedets navn, advarselsteksten (for en stoppet e-mailtype: dens afsender og emnemønster) og et link til loggen – aldrig e-mailindhold eller modtagere."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Valgfrit, kun https. Webhook-URL'er fra Slack og Discord modtager en chatbesked, alle andre URL'er en JSON POST-forespørgsel. Forespørgslen sendes af din server til præcis denne URL – ingen anden tjeneste er involveret."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Eller tilføj adressen som alias / »send som«-tilladelse hos din mailudbyder."
+
+msgid "Order #%s"
+msgstr "Ordre #%s"
+
+msgid "Order data"
+msgstr "Ordredata"
+
+msgid "Origin"
+msgstr "Oprindelse"
+
+msgid "Original Bcc"
+msgstr "Oprindelig Bcc"
+
+msgid "Original Cc"
+msgstr "Oprindelig Cc"
+
+msgid "Original recipients"
+msgstr "Oprindelige modtagere"
+
+msgid "Other emails"
+msgstr "Andre e-mails"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Andre modtagere (fx gæster)"
+
+msgid "Overview"
+msgstr "Oversigt"
+
+msgid "Own top-level menu item"
+msgstr "Eget menupunkt på øverste niveau"
+
+msgid "PHP extension openssl is missing"
+msgstr "PHP-udvidelsen openssl mangler"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer klar (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Sideinddeling"
+
+msgid "Password sent in plain text"
+msgstr "Adgangskode sendt i ren tekst"
+
+msgid "Path"
+msgstr "Sti"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Betalingskortnummer i ren tekst: %1$s"
+
+msgid "Per page"
+msgstr "Pr. side"
+
+msgid "Period"
+msgstr "Periode"
+
+msgid "Personal data"
+msgstr "Persondata"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Telefonbredde (375 px). Hvis du kan rulle sidelæns, er e-mailen bredere end de fleste telefonskærme."
+
+msgid "Plain text"
+msgstr "Ren tekst"
+
+msgid "Please enter valid email addresses."
+msgstr "Indtast gyldige e-mailadresser."
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Plugin eller tema, der sendte e-mailen."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Påpeg problemer, der forhindrer, at e-mails kommer frem eller vises korrekt"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Postal address"
+msgstr "Postadresse"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo eller Amazon SES kan rapportere til dette websted, om en e-mail blev leveret, afvist eller markeret som spam. Status vises på den loggede e-mail, og hard bounces tæller med for problemmodtagerne. For at matche rapporterne tilføjer Mailspur en referenceheader til udgående e-mails."
+
+msgid "Preparation"
+msgstr "Forberedelse"
+
+msgid "Preview"
+msgstr "Forhåndsvisning"
+
+msgid "Previews"
+msgstr "Forhåndsvisninger"
+
+msgid "Previous email"
+msgstr "Forrige e-mail"
+
+msgid "Previous email (k)"
+msgstr "Forrige e-mail (k)"
+
+msgid "Previous page"
+msgstr "Forrige side"
+
+msgid "Print"
+msgstr "Udskriv"
+
+msgid "Privacy"
+msgstr "Privatliv"
+
+msgid "Privacy & security"
+msgstr "Privatliv og sikkerhed"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Sandsynligvis ja: %s e-mailtype er stoppet."
+msgstr[1] "Sandsynligvis ja: %s e-mailtyper er stoppet."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Test-e-mails sendes kun til en administrator."
+
+msgid "Problem"
+msgstr "Problem"
+
+msgid "Problem recipients"
+msgstr "Problemmodtagere"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Beskytter dit domæne, når der sendes langt flere e-mails end normalt, fx fordi spambots misbruger en kontaktformular. Advarsler bruger kanalerne fra overvågningsadvarslerne; e-mails til nulstilling af adgangskode tilbageholdes aldrig."
+
+msgid "Provider status"
+msgstr "Udbyderstatus"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Udbydere som %2$s offentliggør en streng DMARC-politik. En e-mail »fra« deres domæne, der er sendt af din webserver, fejler det tjek og afvises eller havner i spam."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Skriv det vigtige indhold som rigtig tekst, og brug kun billeder som supplement."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Sæt de vigtige oplysninger først, og hold emnet under ca. 80 tegn."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "REST-rute"
+
+msgid "Rarely"
+msgstr "Sjældent"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Bedøm Mailspur på WordPress.org"
+
+msgid "Raw source"
+msgstr "Rå kilde"
+
+msgid "Reason"
+msgstr "Årsag"
+
+msgid "Rebuild from the log"
+msgstr "Genopbyg ud fra loggen"
+
+msgid "Recipient"
+msgstr "Modtager"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Modtagerdomænet kan ikke modtage e-mails: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Modtagerdomænet accepterer ikke e-mails: %1$s"
+
+msgid "Recipients"
+msgstr "Modtagere"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Anbefales. Ellers kan alle med adgang til loggen bruge et logget nulstillingslink eller en logget adgangskode til at overtage en konto. Gensendes en sådan e-mail, sendes den maskerede version."
+
+msgid "Record for every email"
+msgstr "Registrér for alle e-mails"
+
+msgid "Record for failed emails only"
+msgstr "Registrér kun for mislykkede e-mails"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Registrerer kommunikationen med SMTP-serveren (kun når e-mails sendes via SMTP). Loginoplysninger og beskedens indhold registreres aldrig. Springes over, mens et andet plugin har SMTP-fejlfinding slået til."
+
+msgid "Recovery"
+msgstr "Gendannelse"
+
+msgid "Redact secrets"
+msgstr "Maskér hemmeligheder"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Omdiriger alle e-mails til adresserne nedenfor"
+
+msgid "Redirect to"
+msgstr "Omdiriger til"
+
+msgid "Redirect to test addresses"
+msgstr "Omdiriger til testadresser"
+
+msgid "Redirected by staging mode."
+msgstr "Omdirigeret af staging-tilstand."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Reducér HTML'en: fjern ubrugt CSS, gentagne inline-stilarter, kommentarer og lange sporings-URL'er. Billeder tælles ikke med, kun selve HTML'en."
+
+msgid "Registered users"
+msgstr "Registrerede brugere"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Afvist af SPF, DKIM eller DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Relative links eller billeder (%1$s), fx %2$s"
+
+msgid "Release held emails"
+msgstr "Frigiv tilbageholdte e-mails"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Frigivet fra staging (tilbageholdt post #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Frigivet fra nødbremsen (tilbageholdt post #%s)."
+
+msgid "Remote content"
+msgstr "Eksternt indhold"
+
+msgid "Remote content is loaded."
+msgstr "Eksternt indhold er indlæst."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Eksterne billeder og skrifttyper blokeres, så afsendere ikke kan spore, hvornår du åbner denne post."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Fjern alle poster importeret fra %s? Dataene i det andet plugin påvirkes ikke."
+
+msgid "Remove imported entries"
+msgstr "Fjern importerede poster"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Fjern kortfeltet fra notifikationen i den formular eller det plugin, der sendte denne e-mail – kortdata hører kun til hos betalingsudbyderen. Vis højst de sidste fire cifre. Bed modtageren om at slette e-mailen."
+
+msgid "Removed:"
+msgstr "Fjernet:"
+
+msgid "Repeat alerts after"
+msgstr "Gentag advarsler efter"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Svar kan ikke nå dig: sendt fra %1$s uden Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Rapporteret af din e-mailudbyder inden for de seneste 30 dage; kun e-mails, den har rapporteret om, tæller med."
+
+msgid "Request"
+msgstr "Forespørgsel"
+
+msgid "Request failed: %s"
+msgstr "Forespørgslen mislykkedes: %s"
+
+msgid "Resend"
+msgstr "Gensend"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Send e-mailen igen fra loggen om et par minutter."
+
+msgid "Resend the email from the log later."
+msgstr "Send e-mailen igen fra loggen senere."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Send e-mailen igen fra loggen, når leveringen virker."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Send de mislykkede e-mails igen, når grænsen nulstilles."
+
+msgid "Resent from log"
+msgstr "Gensendt fra loggen"
+
+msgid "Reset filters"
+msgstr "Nulstil filtre"
+
+msgid "Result"
+msgstr "Resultat"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Resultat fra cachen – brug »Tjek igen«, når du har ændret DNS-poster."
+
+msgid "Retention"
+msgstr "Opbevaring"
+
+msgid "Retention in the log"
+msgstr "Opbevaring i loggen"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Opbevaring for denne e-mailtype er gemt. Den gælder fra næste daglige oprydning."
+
+msgid "Review held emails"
+msgstr "Gennemgå tilbageholdte e-mails"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Gennemgå bemærkningerne til denne e-mail (links, afsender, pladsholdere)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Tilbagekald nøglen i tjenestens kontrolpanel, og opret en ny. Find derefter ud af, hvordan den endte i en e-mail (fejlfindings- eller fejlrapporter, en formular, der gengiver indstillinger), og stop det."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Tilbagekaldte nøgler (tom p=): %s."
+
+msgid "Rhythm"
+msgstr "Rytme"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Kør en søg og erstat af det gamle domæne i databasen, og tjek hardkodede URL'er i e-mailskabeloner og plugin-indstillinger."
+
+msgid "Run the full sender check"
+msgstr "Kør det fulde afsendertjek"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH er deaktiveret i Microsoft 365"
+
+msgid "SMTP host"
+msgstr "SMTP-vært"
+
+msgid "SMTP login failed"
+msgstr "SMTP-login mislykkedes"
+
+msgid "SMTP transcript"
+msgstr "SMTP-udskrift"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "SPF-posten tillader alle servere i verden at sende for dette domæne (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "SPF-posten slutter med ?all (neutral): den beskytter ikke domænet mod forfalskning."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "SPF-post fundet (redirect= til en anden politik)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "SPF-post fundet. Andre servere markeres som mistænkelige (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "SPF-post fundet. Andre servere afvises (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "SPF-posten har intet »all«-led, så e-mails fra andre servere behandles som neutrale."
+
+msgid "Saturday"
+msgstr "lørdag"
+
+msgid "Save"
+msgstr "Gem"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Gemt – lad feltet stå tomt for at beholde den"
+
+msgid "Scheduled for later today:"
+msgstr "Planlagt til senere i dag:"
+
+msgid "Search recipient or subject"
+msgstr "Søg efter modtager eller emne"
+
+msgid "Search recipient or subject …"
+msgstr "Søg efter modtager eller emne …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Søg i e-mailskabelonen, plugin-indstillingerne og databasen efter den gamle adresse (fx efter flytning af webstedet), og erstat den med live-domænet."
+
+msgid "See why"
+msgstr "Se hvorfor"
+
+msgid "Seen"
+msgstr "Set"
+
+msgid "Select all"
+msgstr "Vælg alle"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Selektoren »%s« har heller ingen nøgle."
+
+msgid "Send"
+msgstr "Send"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Send i stedet et link, hvor brugeren selv vælger en adgangskode – WordPress' egen e-mail til nye brugere gør netop det. Kig efter en mulighed som »Send adgangskode via e-mail« eller »Medtag adgangskode« i det plugin, der sendte denne e-mail, og slå den fra."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Send en besked, når problemet er løst"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Send en test-e-mail fra mailer-pluginnets indstillinger."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Send en ugentlig e-mailrapport til adresserne ovenfor"
+
+msgid "Send again"
+msgstr "Send igen"
+
+msgid "Send alerts by email to"
+msgstr "Send advarsler via e-mail til"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Send alle %s tilbageholdte e-mails til deres oprindelige modtagere nu?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Send store filer som downloadlink i stedet for som vedhæftet fil."
+
+msgid "Send latest to me"
+msgstr "Send seneste til mig"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Send nyhedsbreve med et nyhedsbrevsplugin eller en tjeneste, der tilføjer List-Unsubscribe- og List-Unsubscribe-Post-headers, og send ikke til mange personer i én e-mail via Bcc."
+
+msgid "Send now"
+msgstr "Send nu"
+
+msgid "Send report now"
+msgstr "Send rapport nu"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Send sådanne e-mails til hver modtager for sig, eller sæt modtagerne i Bcc. Brug et nyhedsbrevsplugin til nyhedsbreve, der sender én e-mail pr. modtager. Hvis kunders adresser er blevet afsløret, så afklar med din databeskyttelsesrådgiver, om hændelsen skal anmeldes."
+
+msgid "Send test alert"
+msgstr "Send testadvarsel"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Send e-mailen med headeren »Content-Type: text/html; charset=UTF-8«, eller angiv indholdstypen med filteret wp_mail_content_type. Mange formular- og butiksplugins har en »HTML-e-mail«-indstilling."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Send den seneste e-mail af denne type til %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Send denne e-mail igen til %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Send denne e-mail til (op til 10 adresser adskilt af kommaer):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Send denne tilbageholdte e-mail til %s nu? Staging-tilstand omgås for denne ene e-mail."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Send via en velrenommeret SMTP-tjeneste i stedet for webserveren, især på delt hosting."
+
+msgid "Send to…"
+msgstr "Send til…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Afsendertjek (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Afsenderdomænet %1$s afviger fra webstedet (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Afsenderdomæne (SPF og DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Afsenderdomæne eller -adresse ikke verificeret"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Afsender af %s af de seneste 200 e-mails"
+
+msgid "Sending failed – see the log."
+msgstr "Afsendelsen mislykkedes – se loggen."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Afsendelsen mislykkedes – se den nye logpost for detaljer."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Afsendelse i baggrunden (et mailer-plugin med kø) lader siden blive færdig uden at vente."
+
+msgid "Sending limit or quota reached"
+msgstr "Afsendelsesgrænse eller kvote nået"
+
+msgid "Sending report …"
+msgstr "Sender rapport …"
+
+msgid "Sending test alert …"
+msgstr "Sender testadvarsel …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Afsendelse virker igen: ingen pludselig stigning i fejl længere."
+
+msgid "Sending…"
+msgstr "Sender…"
+
+msgid "Sent"
+msgstr "Sendt"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Sendt som gratis mailadresse: %1$s"
+
+msgid "Sent by"
+msgstr "Sendt af"
+
+msgid "Sent by WP-Cron."
+msgstr "Sendt af WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Sendt af cron-hændelsen %1$s – den er %2$s forsinket, mens WP-Cron kører andre hændelser; den fejler muligvis."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Sendt af cron-hændelsen %1$s – den er planlagt (næste kørsel om %2$s), og WP-Cron kører, så hændelsen sender ikke længere denne e-mail."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Sendt af cron-hændelsen %s – denne hændelse er ikke længere planlagt."
+
+msgid "Sent by the cron event %s."
+msgstr "Sendt af cron-hændelsen %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Sendt gentagne gange: %1$s flere identiske e-mails inden for %2$s minutter"
+
+msgid "Sent to %s."
+msgstr "Sendt til %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Sendt til samme adresse omkring ordredatoen, men ikke knyttet til denne ordre (fx logget før koblingen fandtes, eller importeret)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Angiv en Reply-To-adresse, som nogen læser, fx i WooCommerce → Indstillinger → E-mails eller i e-mailindstillingerne for dit formularplugin. Eller send fra en adresse, der kan modtage svar."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Angiv en afsenderadresse på dit domæne i dit SMTP-plugin eller via filteret wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Angiv en afsenderadresse på dit rigtige domæne, fx i dit SMTP-plugin eller via filteret wp_mail_from, og tjek webstedets adresse under Indstillinger → Generelt."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Angiv et emne i skabelon- eller formularindstillingerne for det afsendende plugin."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Sæt Fra-adressen i dit SMTP-plugin til den postkasse, du logger ind med, og aktivér »gennemtving Fra-adresse«."
+
+msgid "Set up staging mode"
+msgstr "Konfigurér staging-tilstand"
+
+msgid "Settings"
+msgstr "Indstillinger"
+
+msgid "Settings › Discussion"
+msgstr "Indstillinger › Diskussion"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Flere udråbstegn er typisk for reklamespam. Spamfiltre kan lægge det e-mailen til last, hvilket kan forringe leveringen."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Flere af de seneste e-mails af denne type mislykkedes."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Andel mislykkede e-mails pr. dag (pr. uge for lange perioder)."
+
+msgid "Shop managers and above"
+msgstr "Butiksadministratorer og højere"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Forkortede links skjuler, hvor de fører hen. Spammere bruger dem meget, så spamfiltre kan lægge dem e-mailen til last, hvilket kan forringe leveringen."
+
+msgid "Show all email types"
+msgstr "Vis alle e-mailtyper"
+
+msgid "Show all in Mail Log"
+msgstr "Vis alle i E-maillog"
+
+msgid "Show as"
+msgstr "Vis som"
+
+msgid "Show data as table"
+msgstr "Vis data som tabel"
+
+msgid "Show email types"
+msgstr "Vis e-mailtyper"
+
+msgid "Show emails"
+msgstr "Vis e-mails"
+
+msgid "Show emails for %s in the log"
+msgstr "Vis e-mails for %s i loggen"
+
+msgid "Show failed emails"
+msgstr "Vis mislykkede e-mails"
+
+msgid "Show held emails"
+msgstr "Vis tilbageholdte e-mails"
+
+msgid "Show these emails in the log"
+msgstr "Vis disse e-mails i loggen"
+
+msgid "Silence"
+msgstr "Stilhed"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Simuleret mørk tilstand med e-mailens egne stilarter til mørk tilstand. Alle mailapps håndterer mørk tilstand lidt forskelligt."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Simulering af apps, der tvinger mørk tilstand ved at invertere farverne. Billeder beholder deres farver; rigtige apps afviger i detaljer."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Siden 2024 kræver Gmail og Yahoo afmelding med ét klik (List-Unsubscribe-header) for masseudsendelser. Uden den bliver nyhedsbreve oftere afvist eller filtreret."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Enkelte fejl, fx på grund af en fejlskrevet adresse, er normale."
+
+msgid "Some emails could not be sent recently"
+msgstr "Nogle e-mails kunne ikke sendes for nylig"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Nogle opslag blev sprunget over, fordi DNS svarede for langsomt."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Du har desværre ikke adgang til denne side."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Du har desværre ikke tilladelse til at gøre dette."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Du har desværre ikke tilladelse til at eksportere e-mailloggen."
+
+msgid "Source"
+msgstr "Kilde"
+
+msgid "Staging"
+msgstr "Staging"
+
+msgid "Staging mode"
+msgstr "Staging-tilstand"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Staging-tilstand er aktiv: alle e-mails omdirigeres til %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Staging-tilstand er aktiv: e-mails logges, men leveres ikke."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Staging-tilstand er aktiv: e-mails skulle omdirigeres, men der er ikke angivet en gyldig omdirigeringsadresse – alle e-mails tilbageholdes og leveres ikke."
+
+msgid "Staging mode is off"
+msgstr "Staging-tilstand er slået fra"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Staging-tilstand er slået til, selvom dette er et live-websted"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Staging-tilstand er slået til for dette staging-websted"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Staging-tilstand er slået til: alle e-mails går til dine testadresser, ikke til de rigtige modtagere."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Staging-tilstand er slået til: e-mails logges, men sendes ikke."
+
+msgid "Staging mode settings"
+msgstr "Indstillinger for staging-tilstand"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Start med p=none for at modtage rapporter, og stram derefter op til quarantine eller reject, når SPF og DKIM består."
+
+msgid "Statistics"
+msgstr "Statistik"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "Sorterer stadig %s ældre e-mails i typer i baggrunden. Genindlæs siden om et minut."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Stop samling (sender det ventende nu)"
+
+msgid "Stop these emails"
+msgstr "Stop disse e-mails"
+
+msgid "Stopped"
+msgstr "Stoppet"
+
+msgid "Stopped by Mailspur."
+msgstr "Stoppet af Mailspur."
+
+msgid "Stopped email types"
+msgstr "Stoppede e-mailtyper"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Gem den nøjagtige rå MIME-kilde for hver e-mail"
+
+msgid "Subject"
+msgstr "Emne"
+
+msgid "Subject mostly in capital letters"
+msgstr "Emnet er mest med store bogstaver"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Emner med store bogstaver læses som råb og er almindelige i spam. Spamfiltre kan lægge det e-mailen til last, hvilket kan forringe leveringen."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Emner indeholder ofte navne eller ordrenumre."
+
+msgid "Suggested TXT record for %s"
+msgstr "Foreslået TXT-post for %s"
+
+msgid "Sunday"
+msgstr "søndag"
+
+msgid "Supported: %s."
+msgstr "Understøttet: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Slå den fra under %1$s: »%2$s«."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Taget ud af den daglige oversigt og sendt for sig selv."
+
+msgid "Temporary rejection – try again later"
+msgstr "Midlertidigt afvist – prøv igen senere"
+
+msgid "Test"
+msgstr "Test"
+
+msgid "Test alert"
+msgstr "Testadvarsel"
+
+msgid "Text changes"
+msgstr "Tekstændringer"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Tekstversion afledt af HTML'en. Om e-mailen også havde sin egen ren tekst-version, blev ikke registreret."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Det er fint, hvis din mailserver må sende for det domæne. Ellers fejler SPF og DMARC, og e-mailen havner i spam."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Det er korrekt for en testkopi, men på et live-websted modtager kunderne ingen ordrebekræftelser, nulstillinger af adgangskode eller svar på deres formularer. Slå staging-tilstand fra, hvis dette er live-webstedet."
+
+msgid "The API key was rejected"
+msgstr "API-nøglen blev afvist"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "DNS-opslaget mislykkedes eller fik timeout. Prøv afsendertjekket igen senere."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "HTML-e-mailen indeholder billeder, men næsten ingen tekst. Spamfiltre kan ikke læse billeder og mistror sådanne e-mails, hvilket kan forringe leveringen. Hvis mailprogrammet blokerer billeder, ser læseren en næsten tom e-mail."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "SMTP-kontoen må kun sende med sin egen adresse (eller verificerede aliaser). WordPress eller et plugin brugte en anden Fra-adresse."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Kommunikationen med SMTP-serveren var tom."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "SMTP-serveren kunne slet ikke nås: forkert værtsnavn eller port, serveren er nede, eller webhosten blokerer udgående mailporte."
+
+msgid "The SMTP server refuses to relay"
+msgstr "SMTP-serveren nægter at videresende"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "SMTP-serveren afviste brugernavnet eller adgangskoden (svarkode 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "SMTP-serveren kræver login eller kryptering"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Adressen ser ud til at være ugyldig – tjek den for slåfejl, eller bed om en anden."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Indholdet indeholder HTML-tags, men e-mailen blev sendt som text/plain (WordPress' standard). Modtagerne ser de rå tags i stedet for formateret tekst."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Forbindelsen eller overførslen tog for lang tid. Som regel afbryder en firewall forbindelsen i stilhed, eller vært og port er forkerte."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Standardafsenderadressen har intet offentligt domæne, eller denne server kan ikke slå DNS-poster op."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Domænet har hverken en MX- eller en A-post i DNS. E-mails til det bliver afvist. Som regel er adressen stavet forkert, eller domænet findes ikke længere."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Domænet offentliggør en »null MX«-post, som udtrykkeligt angiver, at det ikke modtager e-mails. Alle e-mails til det bliver afvist."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "E-mail-API'en svarer langsomt: tjek den region eller det endpoint, der er konfigureret i dit mailer-plugin."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "E-mailen kommer fra en no-reply-adresse og har ingen Reply-To-header. Når en kunde klikker på »Svar«, går svaret til en adresse, som ingen læser, eller det bliver afvist."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "E-mailen indeholder en adgangskode i læsbar form. E-mails bliver i indbakker, sikkerhedskopier og videresendte tråde i årevis – alle, der får fat i en af dem, kan logge ind. E-mailloggen gemmer den også, medmindre »Maskér hemmeligheder« er slået til (så gemmer loggen en maskeret kopi, men modtageren har stadig fået adgangskoden)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-mailen indeholder en adgangsnøgle (fx til Stripe, GitHub, Slack, AWS, Google eller SendGrid) eller en privat nøgle. Den, der læser e-mailen – nu eller år senere i en indbakke eller sikkerhedskopi – kan bruge den. E-mailloggen gemmer den også, medmindre »Maskér hemmeligheder« er slået til."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "E-mailen indeholder skabelonvariabler, der ikke blev udfyldt. Modtagerne ser dem bogstaveligt."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-mailen indeholder noget, der ligner et fuldt betalingskortnummer (det består kontrolciffertesten). Kortnumre må aldrig sendes via e-mail (PCI DSS): indbakker gemmer dem i årevis. E-mailloggen gemmer det også, medmindre »Maskér hemmeligheder« er slået til."
+
+msgid "The email is too large"
+msgstr "E-mailen er for stor"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "E-mailen linker til WordPress-filer på en relateret vært. Det sker typisk på en staging-kopi, der stadig indeholder URL'er fra live-webstedet – eller omvendt."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "E-mailen linker til en adresse på dette websted, der svarer »siden blev ikke fundet« (404). Det sker typisk, efter at en side eller et produkt er omdøbt eller slettet: skabelonen peger stadig på den gamle adresse, og alle modtagere lander på en fejlside."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "E-mailtyperne genopbygges ud fra loggen."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "E-mailen gik til flere personer uden for dit domæne i Til eller Cc. Alle modtagere kan se alle de andre adresser. Ved kunder eller medlemmer videregiver det persondata til fremmede – efter GDPR som regel et brud på persondatasikkerheden."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "E-mailen »%1$s« til %2$s fra %3$s kl. %4$s blev kortvarigt tilbageholdt af et sikkerhedstjek hos os og derefter sendt. Tjek også din spammappe."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "E-mailen »%1$s« til %2$s fra %3$s kl. %4$s blev tilbageholdt af et sikkerhedstjek hos os og er ikke blevet sendt. Vi sender den igen."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "E-mailen »%1$s« til %2$s fra %3$s kl. %4$s blev ikke sendt, fordi afsendelse af e-mails var sat på pause hos os på det tidspunkt. Vi sender den igen."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "E-mailen »%1$s« til %2$s den %3$s kl. %4$s kunne ikke leveres. Vi sender den igen."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "E-mailen »%1$s« til %2$s blev oprettet den %3$s kl. %4$s, men vi kan ikke bekræfte, om den blev leveret. Vi undersøger det og sender den igen om nødvendigt."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "E-mailen »%1$s« blev sendt til %2$s den %3$s kl. %4$s og accepteret af mailserveren. Tjek også din spammappe."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Nødbremsen tilbageholder udgående e-mails, indtil du frigiver eller kasserer dem."
+
+msgid "The emergency brake is holding emails"
+msgstr "Nødbremsen tilbageholder e-mails"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Nødbremsen tilbageholder ingen e-mails"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Nødbremsen er aktiveret: dit websted sendte pludselig langt flere e-mails end normalt."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Nødbremsen har registreret et usædvanligt antal e-mails inden for en time. En kontaktformular kan være misbrugt. E-mails bliver stadig sendt."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Den nøjagtige rå kilde er gemt – »Download .eml« returnerer den uændret (ikke maskeret)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "De seneste %s e-mails mislykkedes alle. Afsendelse fra dette websted kan være i stykker, fx på grund af et forkert SMTP-login eller en mailtjeneste, der afviser webstedet. Kunder modtager måske ikke ordrebekræftelser eller nulstillinger af adgangskode."
+
+msgid "The latest emails could not be sent"
+msgstr "De seneste e-mails kunne ikke sendes"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Loggen gemmer e-mails i %s dag."
+msgstr[1] "Loggen gemmer e-mails i %s dage."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Loggen viser årsagen til hver mislykket e-mail."
+
+msgid "The mail log requires JavaScript."
+msgstr "E-mailloggen kræver JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Mailserveren svarede ikke i tide"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Mailserveren er midlertidigt utilgængelig"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Mailserveren afviste e-mailens størrelse (svarkode 552). Vedhæftede filer vokser med ca. en tredjedel, når de kodes."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Mailtjenesten sender kun fra domæner eller adresser, du har verificeret der."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Mailtjenesten eller postkassen afviste yderligere e-mails, fordi en hastighedsgrænse, en daglig kvote eller en plangrænse blev nået."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Mailtjenesten afviste forespørgslen, fordi API-nøglen er forkert, udløbet, tilbagekaldt eller mangler tilladelse til at sende."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Mailer-pluginnet rapporterede en fejl"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Politikken gælder kun for %s%% af e-mails (pct)."
+
+msgid "The reason: %s."
+msgstr "Årsagen: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Den modtagende server bad om et nyt forsøg senere (svarkode 450/451/452): greylisting, en fuld postkasse eller for mange e-mails på kort tid."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Den modtagende server kunne ikke bekræfte, at din server må sende for afsenderdomænet."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Den modtagende server kender ikke denne postkasse (svarkode 550 / 5.1.1) – adressen er stavet forkert eller findes ikke længere."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Den modtagende server accepterer den måske stadig ved et senere forsøg."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Den modtagende server afviste e-mailen på grund af indholdet, eller fordi den afsendende servers IP-adresse står på en blokeringsliste."
+
+msgid "The recipient address was rejected"
+msgstr "Modtageradressen blev afvist"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Modtagerdomænet accepterer ingen e-mails (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Modtagerdomænet har ingen mailserver"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Modtagerdomænet ligner en stavefejl af en populær e-mailudbyder. Sådanne e-mails bliver afvist – eller når en fremmed, der har registreret stavefejlsdomænet."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Det samme emne gik til de samme modtagere flere gange på kort tid. Typiske årsager er dobbelte ordrebekræftelser, en formular, der blev indsendt to gange, et cronjob, der kører parallelt, eller en løkke i et plugin."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Den sikre forbindelse til SMTP-serveren kunne ikke oprettes: certifikatet passer ikke til værtsnavnet, er udløbet, eller serveren understøtter ikke den valgte kryptering."
+
+msgid "The sender address is not allowed"
+msgstr "Afsenderadressen er ikke tilladt"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Afsendertjekket fandt et problem med %s. E-mails kan havne i spam."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Afsenderdomænet %s har SPF- og DMARC-poster"
+
+msgid "The sender domain could not be checked"
+msgstr "Afsenderdomænet kunne ikke kontrolleres"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Afsenderen har intet offentligt domæne (fx wordpress@localhost). De fleste mailservere afviser sådanne e-mails eller lægger dem i spam."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Serveren kan ikke sende e-mails med PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Serveren lukkede forbindelsen (svarkode 421), fx på grund af vedligeholdelse, overbelastning eller for mange forbindelser fra din server."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Serveren videresender ikke e-mails for dig, som regel fordi du ikke er logget ind, eller afsenderadressen ikke hører til kontoen."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Serveren accepterer kun e-mails efter godkendelse eller efter skift til en krypteret forbindelse (svarkode 530)."
+
+msgid "The server rejected the content"
+msgstr "Serveren afviste indholdet"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Serverens lokale mailprogram svarer langsomt: et SMTP- eller API-mailer-plugin giver i stedet e-mails videre til en udbyder."
+
+msgid "The start date must not be after the end date."
+msgstr "Startdatoen må ikke ligge efter slutdatoen."
+
+msgid "The statistics require JavaScript."
+msgstr "Statistikken kræver JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Teksten er den samme; kun layoutet er ændret. Sammenlign forhåndsvisningerne."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Brugernavnet er som regel den fulde e-mailadresse. Pas på mellemrum, der er kopieret med adgangskoden."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "Webhook-URL'en blev fjernet: kun gyldige https-URL'er er tilladt."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Den ugentlige rapport er slået til, men har ingen modtager: indtast en e-mailadresse under »Send advarsler via e-mail til«."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Disse e-mails sendes igen; deres e-mailtype overvåges igen."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Disse slags e-mails er ikke blevet sendt i længere tid end normalt. En plugin-opdatering, en ændret indstilling eller en fastlåst planlagt opgave kan være årsagen."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Denne e-mail har sin egen ren tekst-version, men loggen gemmer den ikke. Vist her: en tekstversion afledt af HTML'en."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Denne e-mail har ingen egne stilarter til mørk tilstand. Nogle apps viser den uændret, andre farver den om – se Tvunget mørk."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Denne e-mail har ingen ren tekst-version – nogle mailprogrammer og spamfiltre foretrækker en. Vist her: en tekstversion afledt af HTML'en."
+
+msgid "This email type has no content change."
+msgstr "Denne e-mailtype har ingen indholdsændring."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Denne e-mailtype ignoreres nu: ingen status, ingen advarsler."
+
+msgid "This email type is monitored again."
+msgstr "Denne e-mailtype overvåges igen."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Denne post er anonymiseret; dens indhold kan ikke længere sendes."
+
+msgid "This import is already running in another tab."
+msgstr "Denne import kører allerede i en anden fane."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Dette er en testadvarsel. Dine advarselskanaler virker."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Dette produktionswebsted sendte et link til en lokal adresse eller testadresse. Modtagerne kan ikke åbne det."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Dette spørgsmål kræver JavaScript. Du kan søge i loggen i stedet."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Dette websted fører en log over de e-mails, det sender (modtager, emne, indhold og leveringsstatus), for at kontrollere leveringen og fejlfinde problemer. Logposter slettes automatisk efter den konfigurerede opbevaringsperiode."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Dette websted kører som et %s-miljø, og staging-tilstand forhindrer, at dets e-mails når rigtige personer."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Dette websted kører som et %s-miljø. Slå staging-tilstand til, så ingen rigtige kunder får en e-mail fra det."
+
+msgid "Threshold (emails per hour)"
+msgstr "Grænse (e-mails pr. time)"
+
+msgid "Thursday"
+msgstr "torsdag"
+
+msgid "Timeline"
+msgstr "Tidslinje"
+
+msgid "To"
+msgstr "Til"
+
+msgid "To date"
+msgstr "Til dato"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "For at beholde dem, men kun få én e-mail om dagen, skal du vælge »Saml i én daglig e-mail« i typens …-menu."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Toplisterne er baseret på de seneste %s e-mails i denne periode."
+
+msgid "Top recipient domains"
+msgstr "Hyppigste modtagerdomæner"
+
+msgid "Top recipients: %s"
+msgstr "Hyppigste modtagere: %s"
+
+msgid "Top sources"
+msgstr "Hyppigste kilder"
+
+msgid "Top subjects"
+msgstr "Hyppigste emner"
+
+msgid "Total"
+msgstr "I alt"
+
+msgid "Total: %s ms"
+msgstr "I alt: %s ms"
+
+msgid "Trace"
+msgstr "Sporing"
+
+msgid "Transcript copied."
+msgstr "Udskrift kopieret."
+
+msgid "Transport"
+msgstr "Transport"
+
+msgid "Trigger"
+msgstr "Udløs"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Udløs en rigtig e-mail til nulstilling af adgangskode for din egen konto? WordPress opretter et nyt nulstillingslink til dig, så tidligere nulstillingslinks holder op med at virke; din adgangskode forbliver den samme. Kun %s modtager den."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Udløs notifikationerne om ny bruger for din egen konto (beskeden til administratoren og loginoplysningerne)? WordPress opretter et nyt adgangskodelink til dig, så tidligere links holder op med at virke. Der oprettes ingen bruger; kun %s modtager dem."
+
+msgid "Trigger to me"
+msgstr "Udløs til mig"
+
+msgid "Triggering…"
+msgstr "Udløser…"
+
+msgid "Tuesday"
+msgstr "tirsdag"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Typerne opdateres hver time, og hver gang du åbner denne side. Kun tællere, emnemønstre og indholdsfingeraftryk gemmes (ingen modtagere, intet indhold), og de følger loggens opbevaringsperiode."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Stavefejl i modtagerdomænet? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Specialtegn eller anførselstegn vises som forvanskede tegn som »Ã¤« eller »â€™«. UTF-8-tekst er et sted undervejs blevet læst som et andet tegnsæt – i en skabelon, en import eller databasen."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Uklart. »%1$s« til %2$s blev overgivet til afsendelse %3$s, men Mailspur fik intet resultat tilbage."
+
+msgid "Under Tools"
+msgstr "Under Værktøjer"
+
+msgid "Uninstall"
+msgstr "Afinstallér"
+
+msgid "Unknown"
+msgstr "Ukendt"
+
+msgid "Unknown probe."
+msgstr "Ukendt test."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Ukendt: der blev ikke rapporteret noget leveringsresultat (erstattet wp_mail()-funktion?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Ikke-erstattede pladsholdere: %1$s"
+
+msgid "Until the log limit"
+msgstr "Indtil loggens grænse"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Op til 10 adresser adskilt af kommaer. Cc og Bcc fjernes, og emnet viser de oprindelige modtagere. Uden en gyldig adresse tilbageholdes e-mails i stedet."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Op til 5 adresser adskilt af kommaer. Advarselsmails vises i loggen med kilden »Mailspur-advarsler« og udløser aldrig selv advarsler."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Opdatér linket i e-mailskabelonen eller i indstillingerne for det plugin, der sender denne e-mail, eller tilføj en omdirigering fra den gamle adresse til den nye side (fx med et omdirigeringsplugin)."
+
+msgid "Updated in between: %s"
+msgstr "Opdateret i mellemtiden: %s"
+
+msgid "Updated since the last one:"
+msgstr "Opdateret siden den seneste:"
+
+msgid "Updated since then: %s."
+msgstr "Opdateret siden da: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Brug TLS på port 587 eller SSL på port 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Brug en beskrivende linktekst (fx »Se ordre«), eller vis den adresse, linket faktisk fører til."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Brug en afsenderadresse på dit eget domæne, og sæt den gratis adresse i Reply-To. Kun hvis du rent faktisk sender via udbyderens egen SMTP-server med dens login, er det i orden."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Brug absolutte URL'er inklusive https:// og domænet, fx med home_url() eller wp_get_attachment_url() i skabelonen."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Brug præcis det værtsnavn, certifikatet er udstedt til (fx udbyderens smtp.…-vært i stedet for en IP-adresse eller dit eget domæne)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Brug højst ét udråbstegn."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Brug piletasterne til at flytte mellem cellerne."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Brug piletasterne til at flytte mellem værdierne og Enter til at åbne dem i loggen."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Brug SMTP-kontoens postkasseadresse som afsender (Fra)."
+
+msgid "User"
+msgstr "Bruger"
+
+msgid "User: %s"
+msgstr "Bruger: %s"
+
+msgid "Username"
+msgstr "Brugernavn"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Bruger de gemte indstillinger – gem dine ændringer først."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Verificér afsenderdomænet hos din mailtjeneste (tilføj dens DNS-poster), eller brug en allerede verificeret afsenderadresse."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Meget sandsynligt. »%1$s« blev sendt til %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Meget langt emne (%1$s tegn)"
+
+msgid "View"
+msgstr "Vis"
+
+msgid "View %s failed emails"
+msgstr "Se %s mislykkede e-mails"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron har ikke kørt i %s (DISABLE_WP_CRON er sat – tjek din servers cronjob)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron har ikke kørt i %s – den kører kun, når webstedet får besøg, eller den fejler."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron kører normalt."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Venter på den daglige oversigt – sendes ikke for sig selv."
+
+msgid "Waits %s s for the mail server"
+msgstr "Venter %s s på mailserveren"
+
+msgid "Warnings"
+msgstr "Advarsler"
+
+msgid "Webhook URL"
+msgstr "Webhook-URL"
+
+msgid "Webhook signing key"
+msgstr "Signeringsnøgle til webhook"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "onsdag"
+
+msgid "Week"
+msgstr "Uge"
+
+msgid "Week of %s"
+msgstr "Ugen fra %s"
+
+msgid "Weekday"
+msgstr "Ugedag"
+
+msgid "Weekly"
+msgstr "Ugentligt"
+
+msgid "Weekly email report"
+msgstr "Ugentlig e-mailrapport"
+
+msgid "Weekly report"
+msgstr "Ugerapport"
+
+msgid "What to do"
+msgstr "Hvad du kan gøre"
+
+msgid "When emails are sent"
+msgstr "Hvornår e-mails sendes"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Når der sendes langt flere e-mails end normalt, advarer nødbremsen dig og kan tilbageholde yderligere e-mails."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Når det er slået fra, kan sporingspixels ikke se, hvornår du åbner en post. Du kan stadig indlæse eksternt indhold for en enkelt e-mail. Scripts og formularer blokeres altid."
+
+msgid "Who can view the log"
+msgstr "Hvem kan se loggen"
+
+msgid "Why did an email fail?"
+msgstr "Hvorfor mislykkedes en e-mail?"
+
+msgid "With attachments"
+msgstr "Med vedhæftede filer"
+
+msgid "With notes"
+msgstr "Med bemærkninger"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Uden disse DNS-poster kan mailudbydere ikke bekræfte, at dit websted må sende e-mails for dette domæne, så e-mails havner lettere i spam. Afsendertjekket foreslår poster, du kan tilføje hos din domæneudbyder."
+
+msgid "WooCommerce email"
+msgstr "WooCommerce-e-mail"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Indstillinger › E-mails"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "WordPress' egne e-mails har ingen editor; de kan ændres med filtre."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress sendte ingen e-mail – et plugin kan have slået denne e-mail fra."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress har ingen indstilling for denne e-mail. Mailspur kan stoppe beskeden til administratorer; den nye bruger modtager stadig sin egen e-mail."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress har ingen indstilling for denne e-mail. Mailspur kan stoppe succesbeskederne fra automatiske opdateringer; beskeder om mislykkede opdateringer kommer stadig."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress sender som standard via PHP-funktionen mail(). På denne server er den deaktiveret, eller der er ikke installeret noget mailprogram (sendmail) – almindeligt på lokale opsætninger, Docker og mange administrerede hostingløsninger."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Skriv emnet med normale store og små bogstaver, og fremhæv højst et enkelt ord."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Ja, men »%1$s« til %2$s (%3$s) blev markeret som spam af modtageren, siger %4$s."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Ja. »%1$s« gik til %2$s %3$s, og %4$s bekræftede leveringen."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Du kan stadig sende den fra loggen (»Send nu«)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Du modtager denne oversigt, fordi disse e-mailtyper er samlet i én daglig e-mail i Mailspur. Hver e-mail forbliver i loggen."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Du modtager denne e-mail, fordi overvågningsadvarsler er slået til i Mailspur-indstillingerne på dette websted."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Du modtager denne e-mail, fordi ugerapporten er slået til i Mailspur-indstillingerne på dette websted. Den indeholder kun antal og emnemønstre – intet e-mailindhold eller modtagere."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Din DKIM-selektor (valgfri)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Dit websted har ikke sendt nogen e-mails inden for de seneste 7 dage."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s notifikationer: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 notifikation: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Ugentlig e-mailrapport %2$s"
+
+msgid "address"
+msgstr "adresse"
+
+msgid "and %s more"
+msgstr "og %s mere"
+
+msgid "and %s more – see the log"
+msgstr "og %s mere – se loggen"
+
+msgid "another plugin stopped it"
+msgstr "et andet plugin stoppede den"
+
+msgid "code"
+msgstr "kode"
+
+msgid "date"
+msgstr "dato"
+
+msgid "days"
+msgstr "dage"
+
+msgid "deleted after %s days"
+msgstr "slettes efter %s dage"
+
+msgid "emails to this address failed several times before"
+msgstr "e-mails til denne adresse er mislykkedes flere gange før"
+
+msgid "entries"
+msgstr "poster"
+
+msgid "failing"
+msgstr "mislykkes"
+
+msgid "failure spikes"
+msgstr "pludselige stigninger i fejl"
+
+msgid "first seen %s"
+msgstr "først set %s"
+
+msgid "from a new sender"
+msgstr "fra en ny afsender"
+
+msgid "holding emails right now"
+msgstr "tilbageholder e-mails lige nu"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "beholdes, indtil de slettes manuelt"
+
+msgid "link"
+msgstr "link"
+
+msgid "minutes"
+msgstr "minutter"
+
+msgid "name"
+msgstr "navn"
+
+msgid "new this week"
+msgstr "ny i denne uge"
+
+msgid "no"
+msgstr "nej"
+
+msgid "none"
+msgstr "ingen"
+
+msgid "none in %1$s – %2$s"
+msgstr "ingen i %1$s – %2$s"
+
+msgid "number"
+msgstr "tal"
+
+msgid "of %s"
+msgstr "af %s"
+
+msgid "often to administrators"
+msgstr "ofte til administratorer"
+
+msgid "on %1$s at %2$s"
+msgstr "den %1$s kl. %2$s"
+
+msgid "same recipient"
+msgstr "samme modtager"
+
+msgid "slow to send"
+msgstr "langsom afsendelse"
+
+msgid "staging mode is on"
+msgstr "staging-tilstand er slået til"
+
+msgid "stopped"
+msgstr "stoppet"
+
+msgid "stopped email types"
+msgstr "stoppede e-mailtyper"
+
+msgid "text"
+msgstr "tekst"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "nødbremsen stoppede en strøm af e-mails"
+
+msgid "time"
+msgstr "tid"
+
+msgid "today at %s"
+msgstr "i dag kl. %s"
+
+msgid "triggered %s times"
+msgstr "udløst %s gange"
+
+msgid "unchanged"
+msgstr "uændret"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "ukendt – maileren gav ingen fejlmeddelelse"
+
+msgid "unusual silence"
+msgstr "usædvanlig stilhed"
+
+msgid "usually sent: %s"
+msgstr "sendes normalt: %s"
+
+msgid "wp_mail() called"
+msgstr "wp_mail() kaldt"
+
+msgid "yes"
+msgstr "ja"
+
+msgid "yesterday at %s"
+msgstr "i går kl. %s"
+
+msgid "your email provider"
+msgstr "din e-mailudbyder"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "»%1$s« (%2$s) kl. %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "»%1$s« (%2$s) sendes igen."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "»%1$s« (%2$s) sendes normalt mindst hver %3$s. dag. Den seneste blev sendt for %4$s siden."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "»%1$s« (%2$s) blev senest sendt for %3$s siden. Indtil da blev den sendt mindst hver %4$s. dag."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "»%1$s« (%2$s) – normalt hver %4$s, seneste %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "»%1$s« (%2$s) – normalt hver dag, seneste %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "»%1$s« – %2$s – %3$s"

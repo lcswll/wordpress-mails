@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s notes",
+	"Belongs to": "Pertany a",
+	"Emails to this user": "Correus a aquest usuari",
+	"No emails logged for this order yet.": "Encara no s'ha registrat cap correu per a aquesta comanda.",
+	"No emails to this user in the log.": "No hi ha cap correu a aquest usuari al registre.",
+	"Order #%s": "Comanda #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Enviat a la mateixa adreça al voltant de la data de la comanda, però no vinculat a aquesta comanda (per exemple, registrat abans que existís el vincle o importat).",
+	"Show all in Mail Log": "Mostra-ho tot al Registre de correu",
+	"User: %s": "Usuari: %s",
+	"WooCommerce email": "Correu del WooCommerce",
+	"same recipient": "mateix destinatari"
+}

@@ -1,0 +1,3261 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n >= 2 && n <= 4) ? 1 : 2);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "„Stáhnout .eml“ sestaví zprávu znovu ze zaznamenaných, maskovaných dat (bez příloh)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (předchozí týden: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (naplánováno na %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s typ e-mailu se přestal odesílat: %2$s."
+msgstr[1] "%1$s typy e-mailů se přestaly odesílat, např. %2$s."
+msgstr[2] "%1$s typů e-mailů se přestalo odesílat, např. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "Typy e-mailů: %1$s, odesílatelé: %2$s"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "Za posledních %2$s minut selhalo %1$s e-mailů."
+
+msgid "%1$s emails in %2$s days"
+msgstr "E-maily: %1$s za %2$s dní"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "E-maily za posledních 30 dní: %1$s, neúspěšné: %2$s"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "Během jedné hodiny bylo odesláno %1$s e-mailů – mnohem více než obvykle (limit: %2$s za hodinu). Kontaktní formulář může být zneužíván nebo může být web napaden."
+
+msgid "%1$s entries, %2$s"
+msgstr "Záznamy: %1$s, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "Importováno: %1$s, duplicity: %2$s, příliš staré: %3$s"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "Vráceno %1$s z %2$s (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "Za posledních %3$s dní se nepodařilo odeslat %1$s z %2$s e-mailů."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "Zpracováno %1$s z %2$s záznamů …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s p. b. oproti %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s odeslal první e-mail %2$s a za posledních 24 hodin napsal na %3$s různých externích adres. Pokud jste neinstalovali ani nenastavovali nic, co takové e-maily odesílá, zkontrolujte web: nový odesílatel může být známkou napadeného webu."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "Odesláno %1$s, stále zadrženo %2$s …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s oproti %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · e-maily shromážděné od posledního souhrnu: %2$s"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · stav k %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – míra selhání %2$s %% (předchozí týden: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – nahlásil %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (plugin must-use)"
+
+msgid "%s (theme)"
+msgstr "%s (šablona)"
+
+msgid "%s ago"
+msgstr "před %s"
+
+msgid "%s days"
+msgstr "%s dní"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s e-mail se za posledních 7 dní nepodařilo odeslat."
+msgstr[1] "%s e-maily se za posledních 7 dní nepodařilo odeslat."
+msgstr[2] "%s e-mailů se za posledních 7 dní nepodařilo odeslat."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s e-mail čeká na vaše rozhodnutí."
+msgstr[1] "%s e-maily čekají na vaše rozhodnutí."
+msgstr[2] "%s e-mailů čeká na vaše rozhodnutí."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s e-mail byl za posledních 7 dní zadržen a neodeslán."
+msgstr[1] "%s e-maily byly za posledních 7 dní zadrženy a neodeslány."
+msgstr[2] "%s e-mailů bylo za posledních 7 dní zadrženo a neodesláno."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "Nouzová brzda zadržuje e-maily: %s."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "Čekající a nedoručené e-maily: %s."
+
+msgid "%s entries"
+msgstr "Záznamy: %s"
+
+msgid "%s failed"
+msgstr "Neúspěšné: %s"
+
+msgid "%s held emails discarded."
+msgstr "Zahozené zadržené e-maily: %s."
+
+msgid "%s imported entries removed."
+msgstr "Odstraněné importované záznamy: %s."
+
+msgid "%s in 30 days"
+msgstr "%s za 30 dní"
+
+msgid "%s marked as spam"
+msgstr "Označeno jako spam: %s"
+
+msgid "%s more on the Email types page."
+msgstr "Dalších %s na stránce Typy e-mailů."
+
+msgid "%s notes"
+msgstr "Poznámky: %s"
+
+msgid "%s of all emails"
+msgstr "%s všech e-mailů"
+
+msgid "%s of them in the last 24 hours."
+msgstr "Z toho %s za posledních 24 hodin."
+
+msgid "%s s"
+msgstr "%s s"
+
+msgid "%s selected"
+msgstr "Vybráno: %s"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s věc vyžaduje pozornost:"
+msgstr[1] "%s věci vyžadují pozornost:"
+msgstr[2] "%s věcí vyžaduje pozornost:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s administrátorům za 30 dní"
+
+msgid "%s unchanged lines"
+msgstr "Nezměněné řádky: %s"
+
+msgid "(no subject)"
+msgstr "(bez předmětu)"
+
+msgid "(no text content)"
+msgstr "(bez textového obsahu)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(tyto e-maily už nejsou v protokolu)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all je přísnější; ~all je běžné a ve spojení s DMARC v pořádku."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 uchovává záznamy navždy. Čištění probíhá jednou denně."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 znamená bez omezení. Nejstarší záznamy se odstraňují jako první."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 ji vypne. Odstraní obsah, hlavičky a přílohy starších záznamů a zamaskuje adresy (a***@example.com). Datum, stav, zdroj, formát, velikost a poznámky zůstanou pro statistiky. Běží s denním čištěním, před smazáním záznamů – má tedy účinek jen tehdy, je-li kratší než výše uvedená doba pro mazání."
+
+msgid "12 months"
+msgstr "12 měsíců"
+
+msgid "30 days"
+msgstr "30 dní"
+
+msgid "7 days"
+msgstr "7 dní"
+
+msgid "90 days"
+msgstr "90 dní"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "Selektor DKIM smí obsahovat jen písmena, číslice, tečky, pomlčky a podtržítka."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Plugin maileru, který odesílá přes API, převzal doručení a nahlásil, že odeslání selhalo, aniž by uvedl důvod."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Zveřejněný klíč nedokazuje, že jsou jím vaše e-maily podepsány – zkontrolujte výsledek DKIM v hlavičkách přijaté zprávy."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Příjemce nebo adresa odesílatele není platná e-mailová adresa, takže PHPMailer odmítl odeslat."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "Klíč API nebo soukromý klíč v prostém textu: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "K vyhodnocení tohoto záznamu je potřeba asi %1$s dotazů DNS – více než povolených %2$s, takže ho příjemci mohou ignorovat (PermError). Odstraňte nepoužívané položky include:."
+
+msgid "Access"
+msgstr "Přístup"
+
+msgid "Actions"
+msgstr "Akce"
+
+msgid "Active: alerts on %s."
+msgstr "Aktivní: upozornění při %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Ke každému obrázku v šabloně přidejte krátký atribut alt, např. alt=\"Logo Ukázkový obchod\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Pokud odesíláte přes poskytovatele e-mailu, přidejte jeho include: (např. include:_spf.google.com)."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Přidejte svůj poštovní server nebo poštovní službu do záznamu SPF domény odesílatele."
+
+msgid "Added:"
+msgstr "Přidáno:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Adresy s alespoň %s trvalými selháními: přijímající server odmítl schránku, doména nemá poštovní server nebo váš poskytovatel e-mailu nahlásil tvrdý bounce. Položky vyprší s dobou uchovávání protokolu."
+
+msgid "Admin screen"
+msgstr "Obrazovka administrace"
+
+msgid "Administrators"
+msgstr "Administrátoři"
+
+msgid "Aggregate reports go to %s."
+msgstr "Souhrnné zprávy chodí na %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Upozornění"
+
+msgid "Alert and hold further emails"
+msgstr "Upozornit a zadržet další e-maily"
+
+msgid "Alert only"
+msgstr "Pouze upozornit"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Upozornit, když se pravidelně odesílaný typ e-mailu přestane odesílat"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Upozornit, když e-maily opakovaně selhávají"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Upozornit, když web nečekaně přestane odesílat e-maily"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Upozornění jsou zapnutá, ale nemají žádný kanál: zadejte e-mailovou adresu nebo URL webhooku."
+
+msgid "Alerts are off."
+msgstr "Upozornění jsou vypnutá."
+
+msgid "All"
+msgstr "Vše"
+
+msgid "All email types look healthy."
+msgstr "Všechny typy e-mailů vypadají v pořádku."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Všechny e-maily jsou přesměrovány na testovací adresy."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Všechny e-maily jdou na testovací adresy místo skutečným příjemcům."
+
+msgid "All sources"
+msgstr "Všechny zdroje"
+
+msgid "Allow again"
+msgstr "Znovu povolit"
+
+msgid "Allowed again."
+msgstr "Znovu povoleno."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Upozorní také jednou, když plugin nebo šablona, která dosud nikdy neodeslala e-mail, během dne napíše na mnoho různých externích adres – možná známka napadeného webu. První dva týdny po instalaci Mailspuru slouží jako výchozí stav."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Při anonymizaci odstranit i předmět"
+
+msgid "Also search content"
+msgstr "Prohledávat i obsah"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Případně požádejte hostitele o povolení mail() / sendmail pro tento web."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "V náhledu vždy načítat externí obrázky a písma"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (přes SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Poskytovatel e-mailu s HTTP API místo SMTP potřebuje na jeden e-mail méně výměn."
+
+msgid "Anonymisation"
+msgstr "Anonymizace"
+
+msgid "Anonymise entries after"
+msgstr "Anonymizovat záznamy po"
+
+msgid "Anonymised"
+msgstr "Anonymizováno"
+
+msgid "Any format"
+msgstr "Libovolný formát"
+
+msgid "Any status"
+msgstr "Libovolný stav"
+
+msgid "Apply"
+msgstr "Použít"
+
+msgid "Ask the recipient for a working address."
+msgstr "Požádejte příjemce o funkční adresu."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Požádejte hostitele o povolení rozšíření openssl (nebo ho povolte v nastavení PHP v panelu hostingu)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Požádejte hostitele o aktualizaci certifikátů CA a OpenSSL na serveru."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Zeptejte se hostitele, zda nejsou blokována odchozí připojení SMTP."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Zeptejte se hostitele, zda jsou odchozí připojení na tento port povolena (firewall)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Alespoň %1$s neúspěšných e-mailů během %2$s minut"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Nejvýše jedno upozornění daného druhu v této době, i když problém trvá."
+
+msgid "Attachments"
+msgstr "Přílohy"
+
+msgid "Attachments no longer available: %s"
+msgstr "Přílohy již nejsou k dispozici: %s"
+
+msgid "Authentication"
+msgstr "Ověřování"
+
+msgid "Automatic TLS"
+msgstr "Automatické TLS"
+
+msgid "Average per day"
+msgstr "Průměr za den"
+
+msgid "Back to the email types"
+msgstr "Zpět na typy e-mailů"
+
+msgid "Belongs to"
+msgstr "Patří k"
+
+msgid "Block again"
+msgstr "Znovu blokovat"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Zablokováno jako spam nebo blocklistem"
+
+msgid "Bounced (permanent)"
+msgstr "Nedoručitelné (trvale)"
+
+msgid "Bounced (temporary)"
+msgstr "Nedoručitelné (dočasně)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Poškozené znaky (kódování): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Hromadný e-mail bez hlavičky pro odhlášení (příjemců: %1$s)"
+
+msgid "Bundle into one daily email"
+msgstr "Shromažďovat do jednoho denního e-mailu"
+
+msgid "Bundled into one daily email"
+msgstr "Shromažďováno do jednoho denního e-mailu"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Shromažďování je vypnuté. Čekající e-maily právě odešly v jednom souhrnu."
+
+msgid "Busiest day"
+msgstr "Nejrušnější den"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Zrušit"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Pozor: e-maily na tuto adresu už několikrát selhaly."
+
+msgid "Change in the email types"
+msgstr "Změnit v typech e-mailů"
+
+msgid "Change staging mode"
+msgstr "Změnit testovací režim"
+
+msgid "Check"
+msgstr "Zkontrolovat"
+
+msgid "Check again"
+msgstr "Zkontrolovat znovu"
+
+msgid "Check emails"
+msgstr "Zkontrolovat e-maily"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Zkontrolujte hostitele a port; zkuste 587 (TLS) místo 465 (SSL) nebo naopak."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Zkontrolujte hostitele, port, šifrování, uživatelské jméno a heslo ve svém pluginu SMTP a odešlete z něj testovací e-mail."
+
+msgid "Check sender domains"
+msgstr "Zkontrolovat domény odesílatele"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Zkontrolujte, zda šifrování odpovídá portu: TLS pro 587, SSL pro 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Zkontrolujte, zda klíč patří ke správnému regionu / účtu (např. koncový bod EU vs. US)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Zkontrolujte hostitele a port SMTP: chybný port nebo blokované připojení často skončí vypršením časového limitu dříve, než zafunguje záložní řešení."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Zkontrolujte záznamy SPF, DKIM a DMARC domény odesílatele nebo použijte adresu odesílatele v doméně, ze které odesíláte."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Zkontrolujte, zda adresa neobsahuje překlep – nebo váš web e-mail nikdy neodeslal."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Ověřte adresu u příjemce a opravte ji tam, kde je uložena (uživatelský profil, objednávka, záznam formuláře)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Ověřte adresu u příjemce a opravte ji tam, kde je uložena."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Zkontrolujte název hostitele a port: 587 se STARTTLS (TLS) nebo 465 se SSL. Port 25 většina hostitelů blokuje."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Zkontrolujte limity a aktuální využití v účtu poštovní služby; v případě potřeby přejděte na vyšší tarif."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Zkontrolujte adresy příjemců tohoto záznamu, zda neobsahují překlepy, mezery nebo chybějící části."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Zkontrolujte adresu odesílatele ve svém pluginu SMTP a filtr wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Zkontrolujte limity odesílání svého poštovního účtu a poznámky k tomuto e-mailu."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Zkontrolujte IP adresu serveru v nástroji pro kontrolu blocklistů a požádejte o vyřazení."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Zkontrolujte pravopis zástupného symbolu v šabloně a zda ho plugin pro tento typ e-mailu podporuje. Shortcody se v e-mailech nezpracovávají, pokud odesílající plugin nespouští do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Zkontrolováno %s."
+
+msgid "Checked just now"
+msgstr "Zkontrolováno právě teď"
+
+msgid "Checking DNS records …"
+msgstr "Kontrola záznamů DNS …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Kontroluje záznamy DNS domén, ze kterých váš web odesílá: výchozí adresu odesílatele a nejčastější odesílatele v protokolu. Chybějící nebo slabé záznamy jsou nejčastějším důvodem, proč e-maily končí ve spamu. Používá se pouze DNS resolver vašeho serveru; výsledky se uchovávají jednu hodinu."
+
+msgid "Choose a range of at most %s days."
+msgstr "Zvolte rozsah nejvýše %s dní."
+
+msgid "Clear selection"
+msgstr "Zrušit výběr"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Kliknutím na sloupec otevřete tyto e-maily v protokolu."
+
+msgid "Close"
+msgstr "Zavřít"
+
+msgid "Close (Esc)"
+msgstr "Zavřít (Esc)"
+
+msgid "Colour scheme"
+msgstr "Barevné schéma"
+
+msgid "Command line"
+msgstr "Příkazový řádek"
+
+msgid "Compare"
+msgstr "Porovnat"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Porovnejte zdroje těchto záznamů. Zkontrolujte, zda dva pluginy neposílají stejné oznámení nebo zda se hook (např. změna stavu objednávky) nespouští vícekrát."
+
+msgid "Component"
+msgstr "Komponenta"
+
+msgid "Configure alerts"
+msgstr "Nastavit upozornění"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Obsah anonymizován po %1$s dnech, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Změna obsahu označena jako zobrazená."
+
+msgid "Content changed"
+msgstr "Obsah změněn"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Obsah změněn %1$s, po aktualizaci %2$s."
+
+msgid "Content changed on %s."
+msgstr "Obsah změněn %s."
+
+msgid "Content removed"
+msgstr "Obsah odstraněn"
+
+msgid "Content removed after %s days"
+msgstr "Obsah odstraněn po %s dnech"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Obsah, hlavičky a přílohy byly odstraněny a adresy zamaskovány nastavením anonymizace."
+
+msgid "Copied"
+msgstr "Zkopírováno"
+
+msgid "Copied – paste it into your reply."
+msgstr "Zkopírováno – vložte to do své odpovědi."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Zkopíruje krátkou větu pro odpověď zákazníkovi: kdy a komu byl e-mail odeslán a zda dorazil – bez technických podrobností."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Zkopíruje stávající protokol jiného pluginu pro protokolování e-mailů do Mailspuru, takže staré e-maily lze zde prohledávat a zobrazit v náhledu. Druhý plugin a jeho data zůstanou nedotčeny; opakovaný import přidá jen nové záznamy."
+
+msgid "Copy"
+msgstr "Kopírovat"
+
+msgid "Copy for support"
+msgstr "Kopírovat pro podporu"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "V tomto prohlížeči nelze kopírovat. Označte text a zkopírujte ho:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Opravte adresu (např. v uživatelském profilu nebo objednávce) a zvažte validaci e-mailů ve svých formulářích."
+
+msgid "Counted once per email."
+msgstr "Počítáno jednou za e-mail."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Vytvořte v poštovní službě nový klíč API s oprávněním k odesílání a zadejte ho do pluginu maileru."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Vytvořit novou URL webhooku? Současná URL okamžitě přestane fungovat – vložte novou URL do nastavení webhooku u svého poskytovatele e-mailu."
+
+msgid "Create new URL"
+msgstr "Vytvořit novou URL"
+
+msgid "Current page"
+msgstr "Aktuální stránka"
+
+msgid "Current record"
+msgstr "Aktuální záznam"
+
+msgid "Current size"
+msgstr "Aktuální velikost"
+
+msgid "Custom"
+msgstr "Vlastní"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "Nalezen klíč DKIM (selektor: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "Nalezen záznam DMARC s p=none: pouze zprávy, podvržená pošta se stále doručuje."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "Nalezen záznam DMARC se zásadou p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "Záznam DMARC nemá platnou zásadu (p=none, quarantine nebo reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "Dotaz DNS selhal nebo vypršel. Zkuste to později."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Dotazy DNS nejsou na tomto serveru dostupné (dns_get_record() je zakázána), takže kontrolu odesílatele zde nelze spustit."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Potřebné dotazy DNS: asi %1$s z povolených %2$s."
+
+msgid "Daily"
+msgstr "Denně"
+
+msgid "Daily digest"
+msgstr "Denní souhrn"
+
+msgid "Dark"
+msgstr "Tmavé"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Default (%s days)"
+msgstr "Výchozí (%s dní)"
+
+msgid "Default (no time limit)"
+msgstr "Výchozí (bez časového omezení)"
+
+msgid "Default sender"
+msgstr "Výchozí odesílatel"
+
+msgid "Delete"
+msgstr "Smazat"
+
+msgid "Delete %s selected log entries?"
+msgstr "Smazat vybrané záznamy protokolu (%s)?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Smazat VŠECHNY záznamy protokolu? Tuto akci nelze vrátit zpět."
+
+msgid "Delete entries after"
+msgstr "Mazat záznamy po"
+
+msgid "Delete selected"
+msgstr "Smazat vybrané"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Při smazání pluginu smazat tabulku protokolu a nastavení"
+
+msgid "Delete this log entry?"
+msgstr "Smazat tento záznam protokolu?"
+
+msgid "Deleted."
+msgstr "Smazáno."
+
+msgid "Delivered"
+msgstr "Doručeno"
+
+msgid "Delivered by %s (API)"
+msgstr "Doručeno přes %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Doručeno kódem napojeným na pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Doručeno v denním souhrnu %s."
+
+msgid "Delivery"
+msgstr "Doručování"
+
+msgid "Delivery status from your email provider"
+msgstr "Stav doručení od vašeho poskytovatele e-mailu"
+
+msgid "Desktop"
+msgstr "Počítač"
+
+msgid "Did my email arrive?"
+msgstr "Dorazil můj e-mail?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Vypnout e-mail nebo změnit jeho příjemce"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Zahodit všechny zadržené e-maily? Zůstanou v protokolu, ale nebudou odeslány."
+
+msgid "Discard held emails"
+msgstr "Zahodit zadržené e-maily"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Neodesílejte „z“ adres bezplatné pošty (gmail.com, gmx.de …) přes vlastní server."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Hotovo: odesláno %1$s e-mailů, neúspěšných %2$s."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Hotovo: importováno %1$s, duplicity: %2$s, příliš staré: %3$s."
+
+msgid "Download .eml"
+msgstr "Stáhnout .eml"
+
+msgid "Download as CSV"
+msgstr "Stáhnout jako CSV"
+
+msgid "Download started."
+msgstr "Stahování zahájeno."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Stáhnout záznamy odpovídající aktuálním filtrům jako %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Každý e-mail je zkontrolován jednou při zaznamenání nebo importu (bez externích požadavků). Změny zde ovlivní jen e-maily zaznamenané později; starší záznamy se znovu nekontrolují. Kontroly DNS a opakovaného odesílání probíhají při otevření záznamu."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Dřívější e-maily na %s několikrát trvale selhaly."
+
+msgid "Edit template"
+msgstr "Upravit šablonu"
+
+msgid "Editors and above"
+msgstr "Editoři a vyšší"
+
+msgid "Email address"
+msgstr "E-mailová adresa"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "E-mailová adresa (poslední e-mail už není v protokolu)"
+
+msgid "Email address or order number"
+msgstr "E-mailová adresa nebo číslo objednávky"
+
+msgid "Email consists almost only of images"
+msgstr "E-mail se skládá téměř jen z obrázků"
+
+msgid "Email failure spike"
+msgstr "Nárůst neúspěšných e-mailů"
+
+msgid "Email failures"
+msgstr "Selhání e-mailů"
+
+msgid "Email failures resolved"
+msgstr "Selhání e-mailů vyřešena"
+
+msgid "Email inventory"
+msgstr "Soupis e-mailů"
+
+msgid "Email log"
+msgstr "Protokol e-mailů"
+
+msgid "Email log: problem recipients"
+msgstr "Protokol e-mailů: problémoví příjemci"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Poslat mi e-mail, když někdo napíše komentář"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Poslat mi e-mail, když komentář čeká na schválení"
+
+msgid "Email provider"
+msgstr "Poskytovatel e-mailu"
+
+msgid "Email sent again."
+msgstr "E-mail byl znovu odeslán."
+
+msgid "Email sent to %s."
+msgstr "E-mail odeslán na %s."
+
+msgid "Email type"
+msgstr "Typ e-mailu"
+
+msgid "Email type is sent again"
+msgstr "Typ e-mailu se znovu odesílá"
+
+msgid "Email type stopped"
+msgstr "Typ e-mailu se přestal odesílat"
+
+msgid "Email types"
+msgstr "Typy e-mailů"
+
+msgid "Email volume back to normal"
+msgstr "Objem e-mailů je opět normální"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Objem e-mailů je opět normální: nouzová brzda už není aktivní."
+
+msgid "Email: failed"
+msgstr "E-mail: neúspěšný"
+
+msgid "Email: failed – see the log"
+msgstr "E-mail: neúspěšný – viz protokol"
+
+msgid "Email: sent"
+msgstr "E-mail: odeslán"
+
+msgid "Emails"
+msgstr "E-maily"
+
+msgid "Emails are being logged again."
+msgstr "E-maily se opět zapisují do protokolu."
+
+msgid "Emails are delivered to their recipients."
+msgstr "E-maily se doručují příjemcům."
+
+msgid "Emails are flowing again"
+msgstr "E-maily opět odcházejí"
+
+msgid "Emails are logged but not delivered."
+msgstr "E-maily se zapisují do protokolu, ale nedoručují se."
+
+msgid "Emails are still being sent."
+msgstr "E-maily se stále odesílají."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "E-maily se stále odesílají. Zkontrolujte hlavní zdroj; pro jejich zastavení přepněte nouzovou brzdu na „Upozornit a zadržet další e-maily“."
+
+msgid "Emails in 30 days"
+msgstr "E-maily za 30 dní"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "E-maily tohoto typu, které jdou jen administrátorům, se nyní shromažďují a odesílají jednou denně v jednom souhrnu."
+
+msgid "Emails over time"
+msgstr "E-maily v čase"
+
+msgid "Emails per day and status"
+msgstr "E-maily za den podle stavu"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "E-maily podle dne v týdnu a hodiny (časové pásmo webu)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "E-maily, které už v protokolu jsou – zaznamenané samotným Mailspurem nebo importované z jiného pluginu – se rozpoznají podle příjemců, předmětu a času odeslání a přeskočí se jako duplicity."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Pravidelně odesílané e-maily se přestaly odesílat (%s)"
+
+msgid "Emails to this user"
+msgstr "E-maily tomuto uživateli"
+
+msgid "Emails with notes"
+msgstr "E-maily s poznámkami"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "E-maily bez předmětu vypadají jako spam a ve schránce se těžko hledají."
+
+msgid "Emails – last 7 days"
+msgstr "E-maily – posledních 7 dní"
+
+msgid "Emergency brake"
+msgstr "Nouzová brzda"
+
+msgid "Emergency brake reset."
+msgstr "Nouzová brzda resetována."
+
+msgid "Emergency brake settings"
+msgstr "Nastavení nouzové brzdy"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Nouzová brzda: %1$s e-mailů za poslední hodinu – mnohem více než obvykle (limit: %2$s za hodinu)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Nouzová brzda: neobvyklá záplava e-mailů"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Prázdné = automaticky: trojnásobek nejvytíženější hodiny za posledních 14 dní, nejméně 50 – nyní %s."
+
+msgid "Empty log"
+msgstr "Vyprázdnit protokol"
+
+msgid "Empty subject"
+msgstr "Prázdný předmět"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Zapněte pro účet Google dvoufázové ověření a vytvořte heslo aplikace (Účet Google → Zabezpečení → Hesla aplikací)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Zapněte podepisování DKIM u svého poskytovatele e-mailu nebo hostingu a zveřejněte klíč, který vám poskytne. Pokud již podepisujete, zadejte svůj selektor (hodnotu s= z hlavičky DKIM-Signature) a zkontrolujte znovu."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Zapněte podepisování DKIM ve své poštovní službě a zveřejněte její záznam DNS."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Zapněte ve svém pluginu SMTP ověřování a zadejte uživatelské jméno a heslo."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Zapněte ve svém pluginu SMTP ověřování."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Šifrovaná připojení SMTP (TLS/SSL) potřebují rozšíření PHP openssl, které na tomto serveru není nainstalováno nebo povoleno."
+
+msgid "Encryption"
+msgstr "Šifrování"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Šifrování (TLS/SSL) selhalo"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Nejprve zadejte e-mailovou adresu nebo URL webhooku a uložte nastavení."
+
+msgid "Enter an email address or an order number."
+msgstr "Zadejte e-mailovou adresu nebo číslo objednávky."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Nejprve zadejte e-mailovou adresu do pole „Posílat upozornění e-mailem na“ a uložte nastavení."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Zadejte 1 až 10 e-mailových adres."
+
+msgid "Enter one or more email addresses."
+msgstr "Zadejte jednu nebo více e-mailových adres."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Zadejte heslo aplikace do svého pluginu SMTP nebo použijte jeho připojení „Přihlásit se přes Google“ (OAuth)."
+
+msgid "Entries"
+msgstr "Záznamy"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Záznamy starší než %s dní se přeskočí, protože by je nastavení uchovávání stejně smazalo. Chcete-li importovat vše, nejprve výše změňte dobu uchovávání."
+
+msgid "Error"
+msgstr "Chyba"
+
+msgid "Errors"
+msgstr "Chyby"
+
+msgid "Every %s days"
+msgstr "Každých %s dní"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "Každých 15 minut (upozornění Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Každé pondělí ráno, jen když je co hlásit: e-maily a míra selhání ve srovnání s předchozím týdnem, nové, zastavené a změněné typy e-mailů, e-maily s poznámkami a zásahy nouzové brzdy. Pouze počty a vzory předmětů."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Každý druh e-mailu, který tento web odesílá, vygenerovaný z protokolu e-mailů Mailspur – např. pro záznamy o činnostech zpracování nebo předání webu. Skupiny příjemců se odvozují z posledních e-mailů každého odesílatele, kategorie údajů z posledního e-mailu každého typu. Seznam neobsahuje obsah e-mailů ani adresy."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Každý druh e-mailu, který váš web odesílá, automaticky nalezený v protokolu: seskupený podle pluginu, který ho odesílá, a podle předmětu, s čísly, adresami a jmény jako zástupnými symboly. Mailspur se učí, jak často se který typ odesílá, a pozná, když se některý přestane odesílat – například po aktualizaci pluginu."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Vše v pořádku: %s e-mail za posledních 7 dní, bez chyb."
+msgstr[1] "Vše v pořádku: %s e-maily za posledních 7 dní, žádný neselhal."
+msgstr[2] "Vše v pořádku: %s e-mailů za posledních 7 dní, žádný neselhal."
+
+msgid "Expected today and not sent yet:"
+msgstr "Očekáváno dnes a zatím neodesláno:"
+
+msgid "Export"
+msgstr "Export"
+
+msgid "Export started – your download begins shortly."
+msgstr "Export zahájen – stahování brzy začne."
+
+msgid "Failed"
+msgstr "Neúspěšné"
+
+msgid "Failed (%s %%)"
+msgstr "Neúspěšné (%s %%)"
+
+msgid "Failing"
+msgstr "Selhává"
+
+msgid "Failure rate"
+msgstr "Míra selhání"
+
+msgid "Failure spike"
+msgstr "Nárůst selhání"
+
+msgid "Far more emails than usual were sent"
+msgstr "Bylo odesláno mnohem více e-mailů než obvykle"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Bylo odesláno mnohem více e-mailů než obvykle, proto Mailspur zadržuje další e-maily, dokud je neuvolníte nebo nezahodíte."
+
+msgid "Fewer"
+msgstr "Méně"
+
+msgid "File"
+msgstr "Soubor"
+
+msgid "Filter by status"
+msgstr "Filtrovat podle stavu"
+
+msgid "Filter email types"
+msgstr "Filtrovat typy e-mailů"
+
+msgid "First email after the change"
+msgstr "První e-mail po změně"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "První e-mail od tohoto odesílatele %s. Se zapnutými upozorněními na typy Mailspur upozorní, když nový odesílatel píše na mnoho externích adres."
+
+msgid "First page"
+msgstr "První stránka"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "U velkých příloh může časový limit vypršet i během přenosu – posílejte menší soubory nebo odkazy."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Pro testovací a vývojové kopie webu: zajistěte, aby zákazníci nikdy nedostali e-maily z kopie. Každý e-mail se i nadále zapisuje do protokolu."
+
+msgid "Forced dark"
+msgstr "Vynucené tmavé"
+
+msgid "Format"
+msgstr "Formát"
+
+msgid "Free text from forms"
+msgstr "Volný text z formulářů"
+
+msgid "Friday"
+msgstr "Pátek"
+
+msgid "From"
+msgstr "Od"
+
+msgid "From date"
+msgstr "Od data"
+
+msgid "Front end"
+msgstr "Frontend"
+
+msgid "Function"
+msgstr "Funkce"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Další e-maily jsou zadrženy, dokud je administrátor neuvolní nebo nezahodí."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail a Google Workspace už pro SMTP nepřijímají běžné heslo k účtu."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail zkracuje HTML e-maily větší než 102 KB a zobrazuje „[Zpráva zkrácena]“. Vše za místem zkrácení – často patička, odkaz na odhlášení nebo právní upozornění – je skryto."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail tento e-mail zkrátí (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google odmítl přihlášení"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML odesláno jako prostý text"
+
+msgid "Handler"
+msgstr "Obslužná rutina"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Tvrdý bounce nahlášený vaším poskytovatelem e-mailu"
+
+msgid "Hard failures"
+msgstr "Trvalá selhání"
+
+msgid "Headers"
+msgstr "Hlavičky"
+
+msgid "Held"
+msgstr "Zadržené"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Zadrženo nouzovou brzdou – zahozeno."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Zadrženo nouzovou brzdou – nedoručeno."
+
+msgid "Held by emergency brake – released later."
+msgstr "Zadrženo nouzovou brzdou – později uvolněno."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Zadrženo testovacím režimem – nedoručeno."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Zadržený e-mail byl odeslán. Je zaznamenán jako nový záznam."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Zadržené e-maily dostanou stav „Zadržené“ a lze je i nadále odeslat jednotlivě z protokolu („Odeslat nyní“)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Zadrženo: všichni příjemci již dříve trvale selhali (problémoví příjemci)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Zadrženo: testovací režim je nastaven na přesměrování, ale není nastavena platná adresa pro přesměrování."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Upozornění na problémy, které mohou bránit doručení nebo správnému zobrazení tohoto e-mailu."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Zadržet další e-maily problémovým příjemcům"
+
+msgid "Hooks"
+msgstr "Hooky"
+
+msgid "Hours"
+msgstr "Hodiny"
+
+msgid "How to fix:"
+msgstr "Jak to opravit:"
+
+msgid "I already did"
+msgstr "Už jsem to udělal"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Rozumím, že nezpracovaný zdroj NENÍ maskován a zhruba zdvojnásobí úložný prostor na e-mail"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Pokud se to stává často, zkontrolujte limity odesílání svého poskytovatele e-mailu."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Pokud se to opakuje, posílejte méně e-mailů najednou nebo přes poštovní službu s frontou."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Pokud to blokují výchozí nastavení zabezpečení, použijte místo toho připojení Microsoft (OAuth / Graph API) ve svém pluginu SMTP."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Pokud selhalo více příjemců, odpověď serveru za adresou uvádí důvod."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Pokud účet používá dvoufázové ověření, vytvořte heslo aplikace a použijte ho místo hesla."
+
+msgid "Ignore"
+msgstr "Ignorovat"
+
+msgid "Ignored"
+msgstr "Ignorováno"
+
+msgid "Ignored notes"
+msgstr "Ignorované poznámky"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Ignorované poznámky se u nových e-mailů již nezaznamenávají a u stávajících záznamů jsou skryté."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Obrázky bez alternativního textu (%1$s)"
+
+msgid "Import"
+msgstr "Importovat"
+
+msgid "Import failed: %s"
+msgstr "Import selhal: %s"
+
+msgid "Import from other plugins"
+msgstr "Import z jiných pluginů"
+
+msgid "Import new entries"
+msgstr "Importovat nové záznamy"
+
+msgid "Imported"
+msgstr "Importované"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Importované záznamy nemají stopu: druhý plugin tyto podrobnosti nezaznamenával."
+
+msgid "Imported from %s"
+msgstr "Importováno z %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "V Amazon SNS přihlaste URL (protokol HTTPS) k odběru tématu, které přijímá oznámení Delivery, Bounce a Complaint z Amazon SES. Mailspur odběr potvrdí automaticky."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "V Brevo otevřete Transactional → Settings → Webhook, přidejte URL a vyberte Delivered, Hard bounce, Soft bounce, Invalid email a Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "V Mailgunu otevřete Sending → Webhooks, přidejte URL pro Delivered, Permanent failure, Temporary failure a Spam complaints a níže vložte HTTP webhook signing key."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "V Postmarku otevřete svůj server → Webhooks → Add webhook, vložte URL a vyberte Delivery, Bounce a Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "V centru pro správu Microsoft 365 otevřete uživatele → Pošta → Spravovat e-mailové aplikace a zapněte „Ověřený protokol SMTP“."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Schránky zobrazují zhruba prvních 40–80 znaků; zbytek je oříznut, na telefonech ještě dříve."
+
+msgid "Include content"
+msgstr "Včetně obsahu"
+
+msgid "Information"
+msgstr "Informace"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Nainstalujte plugin SMTP a odesílejte přes skutečnou poštovní schránku nebo poštovní službu své domény."
+
+msgid "Invalid date."
+msgstr "Neplatné datum."
+
+msgid "Invalid email address"
+msgstr "Neplatná e-mailová adresa"
+
+msgid "Invalid email address: %s"
+msgstr "Neplatná e-mailová adresa: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Neplatná adresa odesílatele: %1$s"
+
+msgid "Irregular"
+msgstr "Nepravidelně"
+
+msgid "Is Mailspur helping you?"
+msgstr "Pomáhá vám Mailspur?"
+
+msgid "Is an email missing?"
+msgstr "Chybí nějaký e-mail?"
+
+msgid "Is everything running?"
+msgstr "Funguje všechno?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Uchovávat nejvýše"
+
+msgid "Keep for"
+msgstr "Uchovávat"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Tuto URL uchovejte v tajnosti: obsahuje tajný klíč tohoto webu. Před otestováním webhooku uložte nastavení."
+
+msgid "Kept: %s"
+msgstr "Uchováno: %s"
+
+msgid "Key figures"
+msgstr "Klíčové ukazatele"
+
+msgid "Last 30 days"
+msgstr "Posledních 30 dní"
+
+msgid "Last email before the change"
+msgstr "Poslední e-mail před změnou"
+
+msgid "Last failure"
+msgstr "Poslední selhání"
+
+msgid "Last page"
+msgstr "Poslední stránka"
+
+msgid "Last sent"
+msgstr "Naposledy odesláno"
+
+msgid "Leave a review"
+msgstr "Napsat hodnocení"
+
+msgid "Light"
+msgstr "Světlé"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Text odkazu ukazuje %1$s, ale vede na %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Odkaz na vývojovou adresu: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Odkaz na stránku, která na vašem webu neexistuje: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Odkazujte přímo na úplnou adresu. Pro sledování kliknutí použijte místo toho parametry UTM ve vlastní doméně."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Odkaz přes zkracovač URL: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Odkazy a obrázky začínající „/“ fungují jen na webu. V e-mailovém programu není adresa webu, která by je doplnila, takže obrázky zůstanou prázdné a odkazy nikam nevedou."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Odkazy na jinou kopii webu: %1$s (tento web: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Odkazy, jejichž viditelná adresa se liší od skutečného cíle, vypadají jako phishing. Spamové filtry je penalizují a některé e-mailové programy čtenáře varují."
+
+msgid "Load remote content"
+msgstr "Načíst externí obsah"
+
+msgid "Loading…"
+msgstr "Načítání…"
+
+msgid "Log"
+msgstr "Protokol"
+
+msgid "Log entries %s"
+msgstr "Záznamy protokolu %s"
+
+msgid "Log entry not found."
+msgstr "Záznam protokolu nebyl nalezen."
+
+msgid "Log only – do not send any email"
+msgstr "Pouze zaznamenávat – neodesílat žádné e-maily"
+
+msgid "Log size"
+msgstr "Velikost protokolu"
+
+msgid "Logged emails"
+msgstr "Zaznamenané e-maily"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Zaznamenané e-maily mohou obsahovat osobní údaje. Udělujte přístup co nejúžeji. Nastavení vždy vyžaduje oprávnění administrátora."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Přihlášení a příjemci byli přijati, ale samotný e-mail byl odmítnut – obvykle spamovým filtrem, limitem odesílání nebo pravidly poskytovatele (kód odpovědi 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Zaznamenává odchozí e-maily, mapuje typy e-mailů, které váš web odesílá, a upozorní vás, když se některý přestane odesílat. Bezpečný náhled, diagnostika doručování, statistiky."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "V nastavení e-mailů %s vyhledejte možnost, jak ho vypnout nebo změnit jeho příjemce – nebo zde typ ignorujte."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Vyhledejte v chybové zprávě odpověď serveru; obvykle uvádí důvod."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Vyhledejte v protokolu nečekané hromadné odesílání (spamové odeslání formulářů, smyčky)."
+
+msgid "Looking it up …"
+msgstr "Vyhledávání …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Protokol e-mailů"
+
+msgid "Mail Log sections"
+msgstr "Sekce protokolu e-mailů"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Poštovní servery pro odpovědi a bounce jsou nastaveny."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Poskytovatelé schránek mohou ověřit, že váš web smí za tuto doménu odesílat e-maily. Úplná kontrola odesílatele zkoumá také DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Schránka neznámá nebo nedostupná"
+
+msgid "Mailer"
+msgstr "Mailer"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun podepisuje každý webhook tímto klíčem (Sending → Webhooks → HTTP webhook signing key); zprávy bez platného podpisu jsou odmítnuty."
+
+msgid "Mailspur alerts"
+msgstr "Upozornění Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur v protokolu kontroluje e-maily, které se nepodařilo odeslat."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur ve vašem obchodě nenašel objednávku #%s."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur na tomto webu zatím zaznamenal %s doručených e-mailů. Pokud vám šetří čas, krátké hodnocení na WordPress.org by hodně znamenalo – pomůže ostatním plugin najít a udrží ho zdarma."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur nemá v protokolu žádný e-mail k objednávce #%s."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur nemá v protokolu žádný e-mail pro %s."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur vytváří %1$s. Líbí se vám? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur se učí, jak často se který druh e-mailu odesílá, např. potvrzení objednávek, a zde ohlásí, když se některý přestane odesílat."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur se učí rytmus každého typu e-mailu z posledních 8 týdnů – denní potvrzení objednávky je po 2 dnech zpožděné, týdenní přehled po 2 týdnech. Upozornění uvádí typ, jeho odesílatele a pluginy aktualizované od jeho posledního e-mailu. Používá výše uvedené kanály; ignorované typy nikdy neupozorňují."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur vidí, že ho váš web odeslal, ale nevidí do schránky příjemce. Pokud tam není, požádejte příjemce, aby zkontroloval složku se spamem."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur tyto e-maily nyní zastaví; jejich typ e-mailu je ignorován."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – protokol e-mailů"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: e-maily zadrženy"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: testovací režim"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Hlavní zdroj: %1$s (e-mailů: %2$s)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Zajistěte, aby adresa Od v pluginu maileru odpovídala ověřené doméně."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Zajistěte, aby se e-mail odesílal s „charset=UTF-8“, soubory šablon byly uloženy v UTF-8 a databázové tabulky používaly utf8mb4. Opravte texty, které už byly uloženy poškozené."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Zajistěte, aby nastavení šifrování odpovídalo portu."
+
+msgid "Many emails could not be sent recently"
+msgstr "V poslední době se nepodařilo odeslat mnoho e-mailů"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Mnoho vykřičníků v předmětu (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Mnoho e-mailových programů blokuje obrázky, dokud je čtenář nepovolí. Bez alternativního textu čtenář vidí jen prázdná pole; čtečky obrazovky neoznámí nic užitečného."
+
+msgid "Mark as resolved"
+msgstr "Označit jako vyřešené"
+
+msgid "Marked as spam"
+msgstr "Označeno jako spam"
+
+msgid "Marked as spam by the recipient"
+msgstr "Příjemce označil jako spam"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Maskovat klíče pro obnovení hesla, aktivaci a přístup v zaznamenaných odkazech a také hesla, klíče API a čísla karet odeslaná jako prostý text"
+
+msgid "Maybe later"
+msgstr "Možná později"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Možná nebyl e-mail nikdy odeslán – zkontrolujte stav objednávky a nastavení e-mailů vašeho obchodu."
+
+msgid "Menu position"
+msgstr "Umístění v menu"
+
+msgid "Message"
+msgstr "Zpráva"
+
+msgid "Method"
+msgstr "Metoda"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online blokuje přihlášení SMTP (základní ověřování) pro tuto schránku nebo celou organizaci."
+
+msgid "Minutes"
+msgstr "Minuty"
+
+msgid "Monday"
+msgstr "Pondělí"
+
+msgid "Monitor again"
+msgstr "Znovu sledovat"
+
+msgid "Monitoring alerts"
+msgstr "Upozornění monitorování"
+
+msgid "More"
+msgstr "Více"
+
+msgid "More actions"
+msgstr "Další akce"
+
+msgid "More filters"
+msgstr "Další filtry"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Nejčastější důvod (%1$s z nich): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Většina serverů přijímá celkem 10–25 MB."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Nalezeno více záznamů DMARC. Příjemci v tom případě DMARC ignorují – ponechte jen jeden."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Nalezeno více záznamů SPF. Příjemci to považují za chybu (PermError) – slučte je do jednoho záznamu."
+
+msgid "Needs attention"
+msgstr "Vyžaduje pozornost"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Nebyla zaznamenána hlavička From ani odesílatel. Mailer použije výchozí hodnotu, často wordpress@vasedomena."
+
+msgid "Never"
+msgstr "Nikdy"
+
+msgid "New"
+msgstr "Nový"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Nová URL vytvořena. Aktualizujte ji u svého poskytovatele e-mailu."
+
+msgid "New email types"
+msgstr "Nové typy e-mailů"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Nové e-maily jsou zadrženy, dokud je neuvolníte nebo nezahodíte. E-maily pro obnovení hesla stále odcházejí."
+
+msgid "New sender"
+msgstr "Nový odesílatel"
+
+msgid "New sender writes to many addresses"
+msgstr "Nový odesílatel píše na mnoho adres"
+
+msgid "Next email"
+msgstr "Další e-mail"
+
+msgid "Next email (j)"
+msgstr "Další e-mail (j)"
+
+msgid "Next page"
+msgstr "Další stránka"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Pod běžnými selektory nebyl nalezen žádný klíč DKIM."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Pro doménu odesílatele %s chybí záznam DMARC"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Nebyl nalezen záznam DMARC. Velcí poskytovatelé schránek ho očekávají a bez něj může kdokoli tuto doménu nepozorovaně podvrhnout."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Žádný záznam MX: tato doména nemůže přijímat odpovědi ani bounce a někteří příjemci takové odesílatele odmítají."
+
+msgid "No SMTP transcript for this email."
+msgstr "Pro tento e-mail neexistuje záznam komunikace SMTP."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Pro doménu odesílatele %s chybí záznam SPF i DMARC"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Pro doménu odesílatele %s chybí záznam SPF"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Nebyl nalezen záznam SPF. Příjemci nemohou zjistit, které servery smějí za tuto doménu odesílat."
+
+msgid "No alerts sent yet."
+msgstr "Zatím nebyla odeslána žádná upozornění."
+
+msgid "No connection to the SMTP server"
+msgstr "Žádné připojení k serveru SMTP"
+
+msgid "No email logged for %s hours"
+msgstr "Již %s hodin nebyl zaznamenán žádný e-mail"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "Za posledních %1$s hodin nebyl zaznamenán žádný e-mail, přestože tento web v tomto časovém okně odesílal e-maily v %2$s z posledních %3$s dní (v průměru %4$s)."
+
+msgid "No emails"
+msgstr "Žádné e-maily"
+
+msgid "No emails found."
+msgstr "Nebyly nalezeny žádné e-maily."
+
+msgid "No emails in this period."
+msgstr "V tomto období žádné e-maily."
+
+msgid "No emails logged for this order yet."
+msgstr "K této objednávce zatím nebyly zaznamenány žádné e-maily."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Zatím nebyly zaznamenány žádné e-maily. Typy e-mailů se zde zobrazí, jakmile váš web začne odesílat e-maily."
+
+msgid "No emails match these filters."
+msgstr "Těmto filtrům neodpovídají žádné e-maily."
+
+msgid "No emails sent"
+msgstr "Nebyly odeslány žádné e-maily"
+
+msgid "No emails to this user in the log."
+msgstr "V protokolu nejsou žádné e-maily tomuto uživateli."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "Za poslední dva týdny nebyly zaznamenány žádné e-maily."
+
+msgid "No limit"
+msgstr "Bez omezení"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Na tomto webu nebyl nalezen protokol jiného pluginu pro protokolování e-mailů."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Na tomto webu nebyl nalezen protokol tohoto pluginu."
+
+msgid "No problem recipients."
+msgstr "Žádní problémoví příjemci."
+
+msgid "No problems found in this email."
+msgstr "V tomto e-mailu nebyly nalezeny žádné problémy."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Nebyla nalezena veřejná doména odesílatele (adresa webu není doménové jméno a protokol zatím neobsahuje odesílatele)."
+
+msgid "No public sender domain to check"
+msgstr "Žádná veřejná doména odesílatele ke kontrole"
+
+msgid "No regularly sent email has stopped"
+msgstr "Žádný pravidelně odesílaný e-mail se nepřestal odesílat"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Žádná adresa pro zprávy (rua) – neuvidíte, kdo odesílá vaším jménem."
+
+msgid "No sender address recorded"
+msgstr "Nebyla zaznamenána adresa odesílatele"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Pro tento záznam není k dispozici žádná stopa. Byl zaznamenán dříve, než stopa existovala, nebo verzí bez ní."
+
+msgid "No unusual email failures"
+msgstr "Žádná neobvyklá selhání e-mailů"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Ne, záměrně. „%1$s“ pro %2$s byl %3$s zadržen a neodeslán. Důvod: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Ne. Každý pravidelně odesílaný e-mail přišel podle plánu."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Ne. „%1$s“ pro %2$s %3$s selhal. Důvod: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Ne. „%1$s“ pro %2$s opustil váš web %3$s, ale podle %4$s ho přijímající server odmítl."
+
+msgid "None"
+msgstr "Žádné"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Obvykle odesílán alespoň každých %1$s dní, nyní se zpožděním %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Ne všechny selektory bylo možné včas zkontrolovat."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Nezaznamenáno: jiný plugin měl zapnuté ladění SMTP."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Nezaznamenáno: záznam komunikace SMTP je v nastavení vypnutý."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Nezaznamenáno: tento e-mail nebyl odeslán přes SMTP."
+
+msgid "Not set up"
+msgstr "Nenastaveno"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Neuloženo: záznamy komunikace se uchovávají jen u neúspěšných e-mailů."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Zatím ne. „%1$s“ pro %2$s opustil váš web %3$s, ale %4$s hlásí dočasný problém."
+
+msgid "Notes"
+msgstr "Poznámky"
+
+msgid "Notes in the latest email: %s"
+msgstr "Poznámky v posledním e-mailu: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Poznámky: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Poznámky: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Na dnešek se nic dalšího neočekává."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Za posledních 7 dní nic neselhalo."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Zatím není s čím porovnávat: žádný e-mail neodchází dost pravidelně na to, aby Mailspur poznal výpadek."
+
+msgid "Number of failed emails"
+msgstr "Počet neúspěšných e-mailů"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Čísla se ignorují, takže „Objednávka #123“ a „Objednávka #124“ se počítají dohromady."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Z posledních %1$s e-mailů odeslaných, zatímco někdo čekal na stránku, trvala polovina déle než %2$s s (průměr %3$s s)."
+
+msgid "Off"
+msgstr "Vypnuto"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Ve výchozím stavu vypnuto. Bez toho „Stáhnout .eml“ sestaví zprávu znovu ze zaznamenaných (maskovaných) dat. Nezpracovaný zdroj obsahuje odkazy pro obnovení hesla a další citlivé údaje přesně tak, jak byly odeslány – zapínejte jen v případě potřeby a když jsou zaškrtnuta obě pole."
+
+msgid "Off – deliver emails normally"
+msgstr "Vypnuto – doručovat e-maily normálně"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Jakmile příčinu odstraníte, můžete e-mail z protokolu odeslat znovu."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Jakmile zprávy ukážou, že legitimní pošta prochází, přepněte na p=quarantine (nebo p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Jeden z obou e-mailů byl smazán nebo anonymizován nastavením uchovávání, takže je již nelze porovnat."
+
+msgid "Only administrators can empty the log."
+msgstr "Protokol mohou vyprázdnit jen administrátoři."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Pouze administrátoři mohou odesílat e-maily na jiné adresy."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Upozorní pouze tehdy, když posledních 14 dní ukazuje, že se e-maily v tomto časovém okně běžně odesílají (alespoň ve 10 ze 14 dní, včetně stejného dne v týdnu), takže klidné noci nebo víkendy ho nespustí."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Pouze e-maily, jejichž příjemci jsou všichni problémoví. E-maily pro obnovení hesla odcházejí vždy; zadržené e-maily lze stále odeslat z protokolu („Odeslat nyní“)."
+
+msgid "Only held emails can be released."
+msgstr "Uvolnit lze pouze zadržené e-maily."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Otevřený rozesílací seznam: externí příjemci (%1$s) vidí navzájem své adresy"
+
+msgid "Open in log"
+msgstr "Otevřít v protokolu"
+
+msgid "Open latest"
+msgstr "Otevřít nejnovější"
+
+msgid "Open staging mode"
+msgstr "Otevřít testovací režim"
+
+msgid "Open the email types"
+msgstr "Otevřít typy e-mailů"
+
+msgid "Open the emergency brake"
+msgstr "Otevřít nouzovou brzdu"
+
+msgid "Open the log"
+msgstr "Otevřít protokol"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Pro přesnou chybu otevřete protokol nebo ladicí zobrazení svého pluginu maileru."
+
+msgid "Open the mail log"
+msgstr "Otevřít protokol e-mailů"
+
+msgid "Open the sender check"
+msgstr "Otevřít kontrolu odesílatele"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Volitelné a ve výchozím stavu vypnuté. Po zapnutí Mailspur pravidelně kontroluje protokol a upozorní vás na nárůsty selhání, neobvyklé ticho nebo typy e-mailů, které se přestaly odesílat. Upozornění chodí jen na adresy a webhook, které zde zadáte; obsahují název webu, text upozornění (u typu e-mailu, který se přestal odesílat: jeho odesílatele a vzor předmětu) a odkaz na protokol – nikdy obsah e-mailů ani příjemce."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Volitelné, pouze https. URL webhooků Slacku a Discordu dostanou zprávu do chatu, jakákoli jiná URL požadavek JSON POST. Požadavek odesílá váš server přesně na tuto URL – žádná jiná služba se neúčastní."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Nebo přidejte adresu jako alias / oprávnění „odeslat jako“ u svého poskytovatele e-mailu."
+
+msgid "Order #%s"
+msgstr "Objednávka #%s"
+
+msgid "Order data"
+msgstr "Údaje objednávky"
+
+msgid "Origin"
+msgstr "Původ"
+
+msgid "Original Bcc"
+msgstr "Původní Bcc"
+
+msgid "Original Cc"
+msgstr "Původní Cc"
+
+msgid "Original recipients"
+msgstr "Původní příjemci"
+
+msgid "Other emails"
+msgstr "Další e-maily"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Ostatní příjemci (např. hosté)"
+
+msgid "Overview"
+msgstr "Přehled"
+
+msgid "Own top-level menu item"
+msgstr "Vlastní položka hlavního menu"
+
+msgid "PHP extension openssl is missing"
+msgstr "Chybí rozšíření PHP openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer připraven (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Stránkování"
+
+msgid "Password sent in plain text"
+msgstr "Heslo odesláno v prostém textu"
+
+msgid "Path"
+msgstr "Cesta"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Číslo platební karty v prostém textu: %1$s"
+
+msgid "Per page"
+msgstr "Na stránku"
+
+msgid "Period"
+msgstr "Období"
+
+msgid "Personal data"
+msgstr "Osobní údaje"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Phone number"
+msgstr "Telefonní číslo"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Šířka telefonu (375 px). Pokud můžete posouvat do strany, je e-mail širší než většina obrazovek telefonů."
+
+msgid "Plain text"
+msgstr "Prostý text"
+
+msgid "Please enter valid email addresses."
+msgstr "Zadejte platné e-mailové adresy."
+
+msgid "Plugin"
+msgstr "Plugin"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Plugin nebo šablona, která e-mail odeslala."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Upozorňovat na problémy, které brání doručení nebo správnému zobrazení e-mailů"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Postal address"
+msgstr "Poštovní adresa"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo nebo Amazon SES mohou tomuto webu hlásit, zda byl e-mail doručen, vrácen nebo označen jako spam. Stav se zobrazí u zaznamenaného e-mailu a tvrdé bounce se započítávají do problémových příjemců. Pro přiřazení zpráv přidává Mailspur do odchozích e-mailů referenční hlavičku."
+
+msgid "Preparation"
+msgstr "Příprava"
+
+msgid "Preview"
+msgstr "Náhled"
+
+msgid "Previews"
+msgstr "Náhledy"
+
+msgid "Previous email"
+msgstr "Předchozí e-mail"
+
+msgid "Previous email (k)"
+msgstr "Předchozí e-mail (k)"
+
+msgid "Previous page"
+msgstr "Předchozí stránka"
+
+msgid "Print"
+msgstr "Tisk"
+
+msgid "Privacy"
+msgstr "Soukromí"
+
+msgid "Privacy & security"
+msgstr "Soukromí a zabezpečení"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Nejspíš ano: %s typ e-mailu se přestal odesílat."
+msgstr[1] "Nejspíš ano: %s typy e-mailů se přestaly odesílat."
+msgstr[2] "Nejspíš ano: %s typů e-mailů se přestalo odesílat."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Testovací e-maily se odesílají pouze administrátorovi."
+
+msgid "Problem"
+msgstr "Problém"
+
+msgid "Problem recipients"
+msgstr "Problémoví příjemci"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Chrání vaši doménu, když odchází mnohem více e-mailů než obvykle, např. protože spamboti zneužívají kontaktní formulář. Upozornění používají kanály upozornění monitorování; e-maily pro obnovení hesla nejsou nikdy zadrženy."
+
+msgid "Provider status"
+msgstr "Stav u poskytovatele"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Poskytovatelé jako %2$s zveřejňují přísnou zásadu DMARC. E-mail „z“ jejich domény odeslaný vaším webovým serverem touto kontrolou neprojde a je odmítnut nebo skončí ve spamu."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Důležitý obsah dejte do skutečného textu a obrázky používejte jen jako doplněk."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Důležité informace uveďte jako první a předmět udržte pod zhruba 80 znaky."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "Trasa REST"
+
+msgid "Rarely"
+msgstr "Zřídka"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Ohodnoťte Mailspur na WordPress.org"
+
+msgid "Raw source"
+msgstr "Nezpracovaný zdroj"
+
+msgid "Reason"
+msgstr "Důvod"
+
+msgid "Rebuild from the log"
+msgstr "Znovu sestavit z protokolu"
+
+msgid "Recipient"
+msgstr "Příjemce"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Doména příjemce nemůže přijímat e-maily: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Doména příjemce nepřijímá e-maily: %1$s"
+
+msgid "Recipients"
+msgstr "Příjemci"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Doporučeno. Jinak by kdokoli s přístupem k protokolu mohl pomocí zaznamenaného odkazu pro obnovení nebo hesla převzít účet. Opětovné odeslání takového e-mailu odešle maskovanou verzi."
+
+msgid "Record for every email"
+msgstr "Zaznamenávat u každého e-mailu"
+
+msgid "Record for failed emails only"
+msgstr "Zaznamenávat jen u neúspěšných e-mailů"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Zaznamenává komunikaci se serverem SMTP (jen když se e-maily odesílají přes SMTP). Přihlašovací údaje a obsah zprávy se nikdy nezaznamenávají. Přeskočí se, pokud má jiný plugin zapnuté ladění SMTP."
+
+msgid "Recovery"
+msgstr "Obnovení"
+
+msgid "Redact secrets"
+msgstr "Skrýt citlivé údaje"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Přesměrovat všechny e-maily na níže uvedené adresy"
+
+msgid "Redirect to"
+msgstr "Přesměrovat na"
+
+msgid "Redirect to test addresses"
+msgstr "Přesměrovat na testovací adresy"
+
+msgid "Redirected by staging mode."
+msgstr "Přesměrováno testovacím režimem."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Zmenšete HTML: odstraňte nepoužívané CSS, opakující se inline styly, komentáře a dlouhé sledovací URL. Obrázky se nepočítají, jen samotné HTML."
+
+msgid "Registered users"
+msgstr "Registrovaní uživatelé"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Odmítnuto kvůli SPF, DKIM nebo DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Relativní odkazy nebo obrázky (%1$s), např. %2$s"
+
+msgid "Release held emails"
+msgstr "Uvolnit zadržené e-maily"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Uvolněno z testovacího režimu (zadržený záznam #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Uvolněno z nouzové brzdy (zadržený záznam #%s)."
+
+msgid "Remote content"
+msgstr "Externí obsah"
+
+msgid "Remote content is loaded."
+msgstr "Externí obsah je načten."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Externí obrázky a písma jsou blokovány, aby odesílatelé nemohli sledovat, kdy tento záznam otevřete."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Odstranit všechny záznamy importované z %s? Data v druhém pluginu nebudou dotčena."
+
+msgid "Remove imported entries"
+msgstr "Odstranit importované záznamy"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Odstraňte pole karty z oznámení formuláře nebo pluginu, který tento e-mail odeslal – údaje karty patří pouze poskytovateli plateb. Zobrazujte nejvýše poslední čtyři číslice. Požádejte příjemce, aby e-mail smazal."
+
+msgid "Removed:"
+msgstr "Odebráno:"
+
+msgid "Repeat alerts after"
+msgstr "Opakovat upozornění po"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Odpovědi se k vám nedostanou: odesláno z %1$s bez Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Nahlášeno vaším poskytovatelem e-mailu za posledních 30 dní; počítají se jen e-maily, o kterých podal hlášení."
+
+msgid "Request"
+msgstr "Požadavek"
+
+msgid "Request failed: %s"
+msgstr "Požadavek selhal: %s"
+
+msgid "Resend"
+msgstr "Odeslat znovu"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Odešlete e-mail z protokolu znovu za několik minut."
+
+msgid "Resend the email from the log later."
+msgstr "Odešlete e-mail z protokolu znovu později."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Jakmile doručování funguje, odešlete e-mail z protokolu znovu."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Po obnovení limitu odešlete neúspěšné e-maily znovu."
+
+msgid "Resent from log"
+msgstr "Znovu odesláno z protokolu"
+
+msgid "Reset filters"
+msgstr "Obnovit filtry"
+
+msgid "Result"
+msgstr "Výsledek"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Výsledek z mezipaměti – po změně záznamů DNS použijte „Zkontrolovat znovu“."
+
+msgid "Retention"
+msgstr "Uchovávání"
+
+msgid "Retention in the log"
+msgstr "Uchovávání v protokolu"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Doba uchovávání tohoto typu e-mailu byla uložena. Uplatní se při příštím denním čištění."
+
+msgid "Review held emails"
+msgstr "Prohlédnout zadržené e-maily"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Prohlédněte si poznámky k tomuto e-mailu (odkazy, odesílatel, zástupné symboly)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Zneplatněte klíč v administraci služby a vytvořte nový. Pak zjistěte, proč se dostal do e-mailu (ladicí nebo chybová hlášení, formulář vypisující nastavení), a zabraňte tomu."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Zneplatněné klíče (prázdné p=): %s."
+
+msgid "Rhythm"
+msgstr "Rytmus"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Proveďte v databázi vyhledání a nahrazení staré domény a zkontrolujte pevně zadané URL v e-mailových šablonách a nastavení pluginů."
+
+msgid "Run the full sender check"
+msgstr "Spustit úplnou kontrolu odesílatele"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH je v Microsoft 365 vypnuté"
+
+msgid "SMTP host"
+msgstr "Hostitel SMTP"
+
+msgid "SMTP login failed"
+msgstr "Přihlášení SMTP selhalo"
+
+msgid "SMTP transcript"
+msgstr "Záznam komunikace SMTP"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "Záznam SPF povoluje odesílat za tuto doménu každému serveru na světě (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "Záznam SPF končí ?all (neutrální): nechrání doménu před podvržením."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "Nalezen záznam SPF (redirect= na jinou zásadu)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "Nalezen záznam SPF. Ostatní servery jsou označeny jako podezřelé (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "Nalezen záznam SPF. Ostatní servery jsou odmítnuty (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "Záznam SPF nemá výraz „all“, takže pošta z jiných serverů je považována za neutrální."
+
+msgid "Saturday"
+msgstr "Sobota"
+
+msgid "Save"
+msgstr "Uložit"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Uloženo – ponechte prázdné, chcete-li ho zachovat"
+
+msgid "Scheduled for later today:"
+msgstr "Naplánováno na později dnes:"
+
+msgid "Search recipient or subject"
+msgstr "Hledat příjemce nebo předmět"
+
+msgid "Search recipient or subject …"
+msgstr "Hledat příjemce nebo předmět …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Vyhledejte starou adresu v šabloně e-mailu, nastavení pluginů a databázi (např. po migraci webu) a nahraďte ji ostrou doménou."
+
+msgid "See why"
+msgstr "Zobrazit proč"
+
+msgid "Seen"
+msgstr "Zobrazeno"
+
+msgid "Select all"
+msgstr "Vybrat vše"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Ani selektor „%s“ nemá klíč."
+
+msgid "Send"
+msgstr "Odeslat"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Místo toho pošlete odkaz, přes který si uživatel nastaví heslo – přesně to dělá e-mail WordPressu pro nové uživatele. V pluginu, který tento e-mail odeslal, vyhledejte možnost jako „Poslat heslo e-mailem“ nebo „Přiložit heslo“ a vypněte ji."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Odeslat zprávu, když je problém vyřešen"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Odešlete testovací e-mail z nastavení pluginu maileru."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Posílat týdenní e-mailový přehled na výše uvedené adresy"
+
+msgid "Send again"
+msgstr "Odeslat znovu"
+
+msgid "Send alerts by email to"
+msgstr "Posílat upozornění e-mailem na"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Odeslat nyní všechny zadržené e-maily (%s) jejich původním příjemcům?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Velké soubory posílejte jako odkaz ke stažení místo přílohy."
+
+msgid "Send latest to me"
+msgstr "Poslat nejnovější mně"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Newslettery posílejte pomocí pluginu nebo služby pro newslettery, která přidává hlavičky List-Unsubscribe a List-Unsubscribe-Post, a neposílejte jeden e-mail mnoha lidem přes Bcc."
+
+msgid "Send now"
+msgstr "Odeslat nyní"
+
+msgid "Send report now"
+msgstr "Odeslat přehled nyní"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Takové e-maily posílejte každému příjemci zvlášť nebo dejte příjemce do Bcc. Pro newslettery použijte plugin, který posílá jeden e-mail na příjemce. Pokud byly prozrazeny adresy zákazníků, ověřte u svého pověřence pro ochranu osobních údajů, zda je nutné incident nahlásit."
+
+msgid "Send test alert"
+msgstr "Odeslat testovací upozornění"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Odešlete e-mail s hlavičkou „Content-Type: text/html; charset=UTF-8“ nebo nastavte typ obsahu filtrem wp_mail_content_type. Mnoho pluginů pro formuláře a obchody má možnost „HTML e-mail“."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Odeslat nejnovější e-mail tohoto typu na %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Odeslat tento e-mail znovu na %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Odeslat tento e-mail na (až 10 adres oddělených čárkami):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Odeslat tento zadržený e-mail nyní na %s? Testovací režim bude pro tento jeden e-mail obejit."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Odesílejte přes renomovanou službu SMTP místo webového serveru, zejména na sdíleném hostingu."
+
+msgid "Send to…"
+msgstr "Odeslat na…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Kontrola odesílatele (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Doména odesílatele %1$s se liší od webu (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Doména odesílatele (SPF a DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Doména nebo adresa odesílatele není ověřená"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Odesílatel %s z posledních 200 e-mailů"
+
+msgid "Sending failed – see the log."
+msgstr "Odeslání selhalo – viz protokol."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Odeslání selhalo – podrobnosti najdete v novém záznamu protokolu."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Odesílání na pozadí (plugin maileru s frontou) umožní stránce dokončit načítání bez čekání."
+
+msgid "Sending limit or quota reached"
+msgstr "Dosažen limit odesílání nebo kvóta"
+
+msgid "Sending report …"
+msgstr "Odesílání přehledu …"
+
+msgid "Sending test alert …"
+msgstr "Odesílání testovacího upozornění …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Odesílání opět funguje: žádný další nárůst selhání."
+
+msgid "Sending…"
+msgstr "Odesílání…"
+
+msgid "Sent"
+msgstr "Odesláno"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Odesláno jako adresa bezplatné pošty: %1$s"
+
+msgid "Sent by"
+msgstr "Odesílá"
+
+msgid "Sent by WP-Cron."
+msgstr "Odesláno přes WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Odesláno událostí cron %1$s – je zpožděná o %2$s, přestože WP-Cron spouští jiné události; může končit chybou."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Odesláno událostí cron %1$s – je naplánovaná (další spuštění za %2$s) a WP-Cron běží, takže tato událost už tento e-mail neodesílá."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Odesláno událostí cron %s – tato událost už není naplánovaná."
+
+msgid "Sent by the cron event %s."
+msgstr "Odesláno událostí cron %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Odesláno opakovaně: %1$s dalších stejných e-mailů během %2$s minut"
+
+msgid "Sent to %s."
+msgstr "Odesláno na %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Odesláno na stejnou adresu kolem data objednávky, ale nepropojeno s touto objednávkou (například zaznamenáno dříve, než propojení existovalo, nebo importováno)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Nastavte adresu Reply-To, kterou někdo čte, např. ve WooCommerce → Nastavení → E-maily nebo v nastavení e-mailů svého pluginu pro formuláře. Nebo odesílejte z adresy, která může přijímat odpovědi."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Nastavte ve svém pluginu SMTP nebo filtrem wp_mail_from adresu odesílatele ve své doméně."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Nastavte adresu odesílatele ve své skutečné doméně, např. v pluginu SMTP nebo filtrem wp_mail_from, a zkontrolujte adresu webu v Nastavení → Obecné."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Nastavte předmět v nastavení šablony nebo formuláře odesílajícího pluginu."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Nastavte adresu Od ve svém pluginu SMTP na schránku, kterou se přihlašujete, a zapněte „vynutit adresu Od“."
+
+msgid "Set up staging mode"
+msgstr "Nastavit testovací režim"
+
+msgid "Settings"
+msgstr "Nastavení"
+
+msgid "Settings › Discussion"
+msgstr "Nastavení › Komentáře"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Několik vykřičníků je typických pro reklamní spam. Spamové filtry to mohou e-mailu přičíst k tíži, což může zhoršit doručitelnost."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Několik posledních e-mailů tohoto typu selhalo."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Podíl neúspěšných e-mailů za den (u dlouhých období za týden)."
+
+msgid "Shop managers and above"
+msgstr "Správci obchodu a vyšší"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Zkrácené odkazy skrývají, kam vedou. Spammeři je hojně používají, takže je spamové filtry mohou e-mailu přičíst k tíži, což může zhoršit doručitelnost."
+
+msgid "Show all email types"
+msgstr "Zobrazit všechny typy e-mailů"
+
+msgid "Show all in Mail Log"
+msgstr "Zobrazit vše v protokolu e-mailů"
+
+msgid "Show as"
+msgstr "Zobrazit jako"
+
+msgid "Show data as table"
+msgstr "Zobrazit data jako tabulku"
+
+msgid "Show email types"
+msgstr "Zobrazit typy e-mailů"
+
+msgid "Show emails"
+msgstr "Zobrazit e-maily"
+
+msgid "Show emails for %s in the log"
+msgstr "Zobrazit e-maily pro %s v protokolu"
+
+msgid "Show failed emails"
+msgstr "Zobrazit neúspěšné e-maily"
+
+msgid "Show held emails"
+msgstr "Zobrazit zadržené e-maily"
+
+msgid "Show these emails in the log"
+msgstr "Zobrazit tyto e-maily v protokolu"
+
+msgid "Silence"
+msgstr "Ticho"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Simulovaný tmavý režim pomocí stylů tmavého režimu samotného e-mailu. Každá e-mailová aplikace zpracovává tmavý režim trochu jinak."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Simulace aplikací, které vynucují tmavý režim převrácením barev. Obrázky si zachovají barvy; skutečné aplikace se v detailech liší."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "Od roku 2024 Gmail a Yahoo vyžadují u hromadné pošty odhlášení jedním kliknutím (hlavička List-Unsubscribe). Bez něj jsou newslettery častěji odmítnuty nebo odfiltrovány."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Jednotlivá selhání, např. kvůli překlepu v adrese, jsou normální."
+
+msgid "Some emails could not be sent recently"
+msgstr "V poslední době se nepodařilo odeslat některé e-maily"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Některé dotazy byly přeskočeny, protože DNS odpovídal příliš pomalu."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Nemáte oprávnění pro přístup k této stránce."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Nemáte oprávnění to provést."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Nemáte oprávnění exportovat protokol e-mailů."
+
+msgid "Source"
+msgstr "Zdroj"
+
+msgid "Staging"
+msgstr "Testovací režim"
+
+msgid "Staging mode"
+msgstr "Testovací režim"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Testovací režim je aktivní: všechny e-maily jsou přesměrovány na %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Testovací režim je aktivní: e-maily se zapisují do protokolu, ale nedoručují se."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Testovací režim je aktivní: e-maily mají být přesměrovány, ale není nastavena platná adresa pro přesměrování – všechny e-maily jsou zadrženy a nedoručeny."
+
+msgid "Staging mode is off"
+msgstr "Testovací režim je vypnutý"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Testovací režim je zapnutý, ačkoli jde o ostrý web"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Testovací režim je pro tento testovací web zapnutý"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Testovací režim je zapnutý: všechny e-maily jdou na vaše testovací adresy, ne skutečným příjemcům."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Testovací režim je zapnutý: e-maily se zapisují do protokolu, ale neodesílají se."
+
+msgid "Staging mode settings"
+msgstr "Nastavení testovacího režimu"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Začněte s p=none, abyste dostávali zprávy, a jakmile SPF a DKIM procházejí, zpřísněte na quarantine nebo reject."
+
+msgid "Statistics"
+msgstr "Statistiky"
+
+msgid "Status"
+msgstr "Stav"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "Na pozadí se ještě třídí %s starších e-mailů do typů. Za minutu stránku obnovte."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Přestat shromažďovat (odešle čekající hned)"
+
+msgid "Stop these emails"
+msgstr "Zastavit tyto e-maily"
+
+msgid "Stopped"
+msgstr "Zastaveno"
+
+msgid "Stopped by Mailspur."
+msgstr "Zastaveno Mailspurem."
+
+msgid "Stopped email types"
+msgstr "Zastavené typy e-mailů"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Ukládat přesný nezpracovaný zdroj MIME každého e-mailu"
+
+msgid "Subject"
+msgstr "Předmět"
+
+msgid "Subject mostly in capital letters"
+msgstr "Předmět převážně velkými písmeny"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Předměty velkými písmeny působí jako křik a jsou běžné ve spamu. Spamové filtry to mohou e-mailu přičíst k tíži, což může zhoršit doručitelnost."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Předměty často obsahují jména nebo čísla objednávek."
+
+msgid "Suggested TXT record for %s"
+msgstr "Navrhovaný záznam TXT pro %s"
+
+msgid "Sunday"
+msgstr "Neděle"
+
+msgid "Supported: %s."
+msgstr "Podporováno: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Vypnout v %1$s: „%2$s“."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Vyjmuto z denního souhrnu a odesláno samostatně."
+
+msgid "Temporary rejection – try again later"
+msgstr "Dočasné odmítnutí – zkuste to později"
+
+msgid "Test"
+msgstr "Test"
+
+msgid "Test alert"
+msgstr "Testovací upozornění"
+
+msgid "Text changes"
+msgstr "Změny textu"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Textová verze odvozená z HTML. Zda měl e-mail také vlastní verzi v prostém textu, nebylo zaznamenáno."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "To je v pořádku, pokud váš poštovní server smí za tuto doménu odesílat. Jinak SPF a DMARC neprojdou a e-mail skončí ve spamu."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Pro testovací kopii je to správně, ale na ostrém webu zákazníci nedostávají potvrzení objednávek, obnovení hesla ani odpovědi na formuláře. Pokud jde o ostrý web, testovací režim vypněte."
+
+msgid "The API key was rejected"
+msgstr "Klíč API byl odmítnut"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "Dotaz DNS selhal nebo vypršel. Spusťte kontrolu odesílatele později znovu."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "HTML e-mail obsahuje obrázky, ale téměř žádný text. Spamové filtry obrázky nepřečtou a takovým e-mailům nedůvěřují, což může zhoršit doručitelnost. Pokud e-mailový program obrázky blokuje, čtenář vidí téměř prázdný e-mail."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "Účet SMTP smí odesílat jen ze své vlastní adresy (nebo ověřených aliasů). WordPress nebo plugin použil jinou adresu Od."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Komunikace se serverem SMTP byla prázdná."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "K serveru SMTP se vůbec nepodařilo připojit: chybný název hostitele nebo port, server nefunguje nebo webhosting blokuje odchozí poštovní porty."
+
+msgid "The SMTP server refuses to relay"
+msgstr "Server SMTP odmítá předávat poštu"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "Server SMTP odmítl uživatelské jméno nebo heslo (kód odpovědi 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "Server SMTP vyžaduje přihlášení nebo šifrování"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Adresa se zdá být neplatná – zkontrolujte ji, zda neobsahuje překlep, nebo požádejte o jinou."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Tělo obsahuje značky HTML, ale e-mail byl odeslán jako text/plain (výchozí ve WordPressu). Příjemci vidí surové značky místo formátovaného textu."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Připojení nebo přenos trvaly příliš dlouho. Obvykle firewall potichu zahodí připojení nebo jsou hostitel a port chybné."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Výchozí adresa odesílatele nemá veřejnou doménu nebo tento server nemůže vyhledávat záznamy DNS."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Doména nemá v DNS záznam MX ani A. E-maily na ni se vracejí. Obvykle je adresa překlepnutá nebo doména už neexistuje."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Doména zveřejňuje záznam „null MX“, který výslovně říká, že nepřijímá žádné e-maily. Každý e-mail na ni se vrátí."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "E-mailové API odpovídá pomalu: zkontrolujte region nebo koncový bod nastavený v pluginu maileru."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "E-mail pochází z adresy no-reply a nemá hlavičku Reply-To. Když zákazník klikne na „Odpovědět“, odpověď jde na adresu, kterou nikdo nečte, nebo se vrátí."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "E-mail obsahuje heslo v čitelné podobě. E-maily zůstávají léta ve schránkách, zálohách a přeposlaných vláknech – kdokoli, kdo některý z nich získá, se může přihlásit. Protokol e-mailů ho také ukládá, pokud není zapnuto „Skrýt citlivé údaje“ (pak protokol uchová maskovanou kopii, ale příjemce heslo i tak dostal)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-mail obsahuje přístupový klíč (např. ke Stripe, GitHub, Slack, AWS, Google nebo SendGrid) nebo soukromý klíč. Kdokoli e-mail přečte – nyní nebo za roky ve schránce či záloze – může ho použít. Protokol e-mailů ho také ukládá, pokud není zapnuto „Skrýt citlivé údaje“."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "E-mail obsahuje proměnné šablony, které nebyly vyplněny. Příjemci je vidí doslova."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-mail obsahuje něco, co vypadá jako úplné číslo platební karty (projde kontrolou kontrolní číslice). Čísla karet se nikdy nesmějí posílat e-mailem (PCI DSS): schránky je uchovávají léta. Protokol e-mailů ho také ukládá, pokud není zapnuto „Skrýt citlivé údaje“."
+
+msgid "The email is too large"
+msgstr "E-mail je příliš velký"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "E-mail odkazuje na soubory WordPressu na příbuzném hostiteli. Obvykle se to stává na testovací kopii, která stále obsahuje URL ostrého webu – nebo naopak."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "E-mail odkazuje na adresu na tomto webu, která odpovídá „stránka nenalezena“ (404). Obvykle se to stane po přejmenování nebo smazání stránky či produktu: šablona stále odkazuje na starou adresu a každý příjemce skončí na chybové stránce."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Typy e-mailů se znovu sestavují z protokolu."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "E-mail šel několika lidem mimo vaši doménu v poli Komu nebo Cc. Každý příjemce vidí všechny ostatní adresy. U zákazníků nebo členů to prozrazuje osobní údaje cizím lidem – podle GDPR obvykle porušení zabezpečení osobních údajů."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "E-mail „%1$s“ pro %2$s ze dne %3$s v %4$s byl krátce zadržen bezpečnostní kontrolou na naší straně a poté odeslán. Zkontrolujte prosím také složku se spamem."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "E-mail „%1$s“ pro %2$s ze dne %3$s v %4$s byl zadržen bezpečnostní kontrolou na naší straně a nebyl odeslán. Odešleme ho znovu."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "E-mail „%1$s“ pro %2$s ze dne %3$s v %4$s nebyl odeslán, protože odesílání e-mailů bylo v té době na naší straně pozastaveno. Odešleme ho znovu."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "E-mail „%1$s“ pro %2$s ze dne %3$s v %4$s se nepodařilo doručit. Odešleme ho znovu."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "E-mail „%1$s“ pro %2$s byl vytvořen dne %3$s v %4$s, ale nemůžeme potvrdit, zda byl doručen. Prověříme to a v případě potřeby ho odešleme znovu."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "E-mail „%1$s“ byl odeslán na %2$s dne %3$s v %4$s a přijat poštovním serverem. Zkontrolujte prosím také složku se spamem."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Nouzová brzda zadržuje odchozí e-maily, dokud je neuvolníte nebo nezahodíte."
+
+msgid "The emergency brake is holding emails"
+msgstr "Nouzová brzda zadržuje e-maily"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Nouzová brzda nezadržuje žádné e-maily"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Nouzová brzda je zapnutá: váš web náhle odeslal mnohem více e-mailů než obvykle."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Nouzová brzda zaznamenala neobvyklý počet e-mailů během jedné hodiny. Kontaktní formulář může být zneužíván. E-maily se stále odesílají."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Ukládá se přesný nezpracovaný zdroj – „Stáhnout .eml“ ho vrátí beze změny (nemaskovaný)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Všech posledních %s e-mailů selhalo. Odesílání z tohoto webu může být nefunkční, např. kvůli chybnému přihlášení SMTP nebo poštovní službě, která web odmítá. Zákazníci nemusí dostávat potvrzení objednávek ani obnovení hesla."
+
+msgid "The latest emails could not be sent"
+msgstr "Poslední e-maily se nepodařilo odeslat"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Protokol uchovává e-maily %s den."
+msgstr[1] "Protokol uchovává e-maily %s dny."
+msgstr[2] "Protokol uchovává e-maily %s dní."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Protokol ukazuje důvod každého neúspěšného e-mailu."
+
+msgid "The mail log requires JavaScript."
+msgstr "Protokol e-mailů vyžaduje JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Poštovní server neodpověděl včas"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Poštovní server je dočasně nedostupný"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Poštovní server odmítl velikost e-mailu (kód odpovědi 552). Přílohy se při kódování zvětší asi o třetinu."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Poštovní služba odesílá jen z domén nebo adres, které jste v ní ověřili."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Poštovní služba nebo schránka odmítla další e-maily, protože byl dosažen limit rychlosti, denní kvóta nebo limit tarifu."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Poštovní služba odmítla požadavek, protože klíč API je chybný, vypršel, byl zneplatněn nebo nemá oprávnění k odesílání."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Plugin maileru nahlásil selhání"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Zásada se vztahuje pouze na %s%% pošty (pct)."
+
+msgid "The reason: %s."
+msgstr "Důvod: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Přijímající server požádal o pozdější opakování (kód odpovědi 450/451/452): greylisting, plná schránka nebo příliš mnoho e-mailů v krátké době."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Přijímající server nemohl potvrdit, že váš server smí odesílat za doménu odesílatele."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Přijímající server tuto schránku nezná (kód odpovědi 550 / 5.1.1) – adresa je překlepnutá nebo už neexistuje."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Přijímající server ho může při dalším pokusu ještě přijmout."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Přijímající server odmítl e-mail kvůli jeho obsahu nebo proto, že IP adresa odesílajícího serveru je na blocklistu."
+
+msgid "The recipient address was rejected"
+msgstr "Adresa příjemce byla odmítnuta"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Doména příjemce nepřijímá e-maily (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Doména příjemce nemá poštovní server"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Doména příjemce vypadá jako překlep v názvu oblíbeného poskytovatele e-mailu. Takové e-maily se vracejí – nebo dorazí cizímu člověku, který si překlepnutou doménu zaregistroval."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Stejný předmět šel stejným příjemcům několikrát v krátké době. Typickými příčinami jsou dvojitá potvrzení objednávky, dvakrát odeslaný formulář, paralelně běžící úloha cron nebo smyčka v pluginu."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Zabezpečené připojení k serveru SMTP nebylo možné navázat: certifikát neodpovídá názvu hostitele, vypršel nebo server nepodporuje zvolené šifrování."
+
+msgid "The sender address is not allowed"
+msgstr "Adresa odesílatele není povolena"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Kontrola odesílatele našla problém s %s. E-maily mohou končit ve spamu."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Doména odesílatele %s má záznamy SPF a DMARC"
+
+msgid "The sender domain could not be checked"
+msgstr "Doménu odesílatele nebylo možné zkontrolovat"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Odesílatel nemá veřejnou doménu (např. wordpress@localhost). Většina poštovních serverů takové e-maily odmítá nebo je dává do spamu."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Server nemůže odesílat e-maily přes PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Server ukončil připojení (kód odpovědi 421), např. kvůli údržbě, přetížení nebo příliš mnoha připojením z vašeho serveru."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Server za vás poštu nepředává, obvykle proto, že nejste přihlášeni nebo adresa odesílatele nepatří k účtu."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Server přijímá poštu až po ověření nebo po přepnutí na šifrované připojení (kód odpovědi 530)."
+
+msgid "The server rejected the content"
+msgstr "Server odmítl obsah"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Místní poštovní program serveru odpovídá pomalu: plugin maileru pro SMTP nebo API místo toho předává e-maily poskytovateli."
+
+msgid "The start date must not be after the end date."
+msgstr "Počáteční datum nesmí být po koncovém datu."
+
+msgid "The statistics require JavaScript."
+msgstr "Statistiky vyžadují JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Text je stejný; změnilo se jen rozvržení. Porovnejte náhledy."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Uživatelské jméno je obvykle celá e-mailová adresa. Dejte pozor na mezery zkopírované spolu s heslem."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "URL webhooku byla odstraněna: povoleny jsou pouze platné URL s https."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Týdenní přehled je zapnutý, ale nemá příjemce: zadejte e-mailovou adresu do pole „Posílat upozornění e-mailem na“."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Tyto e-maily se znovu odesílají; jejich typ e-mailu je znovu sledován."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Tyto druhy e-mailů nebyly odeslány déle než obvykle. Příčinou může být aktualizace pluginu, změněné nastavení nebo zaseknutá naplánovaná úloha."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Tento e-mail má vlastní verzi v prostém textu, ale protokol ji neukládá. Zobrazeno: textová verze odvozená z HTML."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Tento e-mail nemá vlastní styly pro tmavý režim. Některé aplikace ho zobrazí beze změny, jiné ho přebarví – viz Vynucené tmavé."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Tento e-mail nemá verzi v prostém textu – některé e-mailové programy a spamové filtry ji upřednostňují. Zobrazeno: textová verze odvozená z HTML."
+
+msgid "This email type has no content change."
+msgstr "Tento typ e-mailu nemá žádnou změnu obsahu."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Tento typ e-mailu je nyní ignorován: žádný stav, žádná upozornění."
+
+msgid "This email type is monitored again."
+msgstr "Tento typ e-mailu je znovu sledován."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Tento záznam byl anonymizován; jeho obsah již nelze odeslat."
+
+msgid "This import is already running in another tab."
+msgstr "Tento import již běží na jiné kartě."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Toto je testovací upozornění. Vaše kanály upozornění fungují."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Tento ostrý web odeslal odkaz na lokální nebo testovací adresu. Příjemci ho nemohou otevřít."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Tato otázka vyžaduje JavaScript. Místo toho můžete prohledat protokol."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Tento web vede protokol odesílaných e-mailů (příjemce, předmět, obsah a stav doručení), aby mohl ověřit doručení a řešit problémy. Záznamy protokolu se automaticky mažou po uplynutí nastavené doby uchovávání."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Tento web běží jako prostředí %s a testovací režim brání tomu, aby se jeho e-maily dostaly ke skutečným lidem."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Tento web běží jako prostředí %s. Zapněte testovací režim, aby z něj žádný skutečný zákazník nedostal e-mail."
+
+msgid "Threshold (emails per hour)"
+msgstr "Limit (e-mailů za hodinu)"
+
+msgid "Thursday"
+msgstr "Čtvrtek"
+
+msgid "Timeline"
+msgstr "Časová osa"
+
+msgid "To"
+msgstr "Komu"
+
+msgid "To date"
+msgstr "Do data"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Chcete-li je zachovat, ale dostávat jen jeden e-mail denně, zvolte v nabídce … daného typu „Shromažďovat do jednoho denního e-mailu“."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Žebříčky vycházejí z nejnovějších %s e-mailů tohoto období."
+
+msgid "Top recipient domains"
+msgstr "Nejčastější domény příjemců"
+
+msgid "Top recipients: %s"
+msgstr "Nejčastější příjemci: %s"
+
+msgid "Top sources"
+msgstr "Nejčastější zdroje"
+
+msgid "Top subjects"
+msgstr "Nejčastější předměty"
+
+msgid "Total"
+msgstr "Celkem"
+
+msgid "Total: %s ms"
+msgstr "Celkem: %s ms"
+
+msgid "Trace"
+msgstr "Stopa"
+
+msgid "Transcript copied."
+msgstr "Záznam komunikace zkopírován."
+
+msgid "Transport"
+msgstr "Přenos"
+
+msgid "Trigger"
+msgstr "Spustit"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Spustit skutečný e-mail pro obnovení hesla pro váš vlastní účet? WordPress pro vás vytvoří nový odkaz pro obnovení, takže dřívější odkazy přestanou fungovat; vaše heslo zůstane stejné. Dostane ho pouze %s."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Spustit oznámení o novém uživateli pro váš vlastní účet (oznámení administrátorovi a přihlašovací údaje)? WordPress pro vás vytvoří nový odkaz na heslo, takže dřívější odkazy přestanou fungovat. Žádný uživatel se nevytvoří; dostane je pouze %s."
+
+msgid "Trigger to me"
+msgstr "Spustit test pro mě"
+
+msgid "Triggering…"
+msgstr "Spouštění…"
+
+msgid "Tuesday"
+msgstr "Úterý"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Typy se aktualizují každou hodinu a při každém otevření této stránky. Ukládají se jen počítadla, vzory předmětů a otisky obsahu (žádní příjemci, žádný obsah) a řídí se dobou uchovávání protokolu."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Překlep v doméně příjemce? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Diakritika nebo uvozovky se zobrazují jako zkomolené znaky, např. \"Ã¤\" nebo \"â€™\". Text v UTF-8 byl někde po cestě přečten v jiné znakové sadě – v šabloně, importu nebo databázi."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Nejasné. „%1$s“ pro %2$s byl %3$s předán k odeslání, ale Mailspur nedostal žádný výsledek."
+
+msgid "Under Tools"
+msgstr "V menu Nástroje"
+
+msgid "Uninstall"
+msgstr "Odinstalace"
+
+msgid "Unknown"
+msgstr "Neznámé"
+
+msgid "Unknown probe."
+msgstr "Neznámý testovací e-mail."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Neznámé: nebyl nahlášen žádný výsledek doručení (nahrazená funkce wp_mail()?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Nenahrazené zástupné symboly: %1$s"
+
+msgid "Until the log limit"
+msgstr "Do limitu protokolu"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Až 10 adres oddělených čárkami. Cc a Bcc se odstraní a předmět zobrazí původní příjemce. Bez platné adresy jsou e-maily místo toho zadrženy."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Až 5 adres oddělených čárkami. E-maily s upozorněními se v protokolu zobrazují se zdrojem „Upozornění Mailspur“ a samy nikdy upozornění nespouštějí."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Aktualizujte odkaz v šabloně e-mailu nebo v nastavení pluginu, který tento e-mail odesílá, nebo přidejte přesměrování ze staré adresy na novou stránku (např. pluginem pro přesměrování)."
+
+msgid "Updated in between: %s"
+msgstr "Mezitím aktualizováno: %s"
+
+msgid "Updated since the last one:"
+msgstr "Aktualizováno od posledního:"
+
+msgid "Updated since then: %s."
+msgstr "Od té doby aktualizováno: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Použijte TLS na portu 587 nebo SSL na portu 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Použijte popisný text odkazu (např. „Zobrazit objednávku“) nebo zobrazte adresu, na kterou odkaz skutečně vede."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Použijte adresu odesílatele ve vlastní doméně a bezplatnou adresu dejte do Reply-To. V pořádku je to jen tehdy, když opravdu odesíláte přes vlastní SMTP server daného poskytovatele s jeho přihlášením."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Používejte absolutní URL včetně https:// a domény, např. pomocí home_url() nebo wp_get_attachment_url() v šabloně."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Použijte přesně ten název hostitele, pro který byl certifikát vydán (např. hostitele smtp.… poskytovatele místo IP adresy nebo vlastní domény)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Použijte nejvýše jeden vykřičník."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Mezi buňkami se pohybujte klávesami se šipkami."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Mezi hodnotami se pohybujte klávesami se šipkami, klávesou Enter je otevřete v protokolu."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Jako odesílatele (Od) použijte adresu schránky účtu SMTP."
+
+msgid "User"
+msgstr "Uživatel"
+
+msgid "User: %s"
+msgstr "Uživatel: %s"
+
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Používá uložené nastavení – nejprve uložte změny."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Ověřte doménu odesílatele ve své poštovní službě (přidejte její záznamy DNS) nebo použijte již ověřenou adresu odesílatele."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Velmi pravděpodobně. „%1$s“ odešel %3$s na %2$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Velmi dlouhý předmět (znaků: %1$s)"
+
+msgid "View"
+msgstr "Zobrazit"
+
+msgid "View %s failed emails"
+msgstr "Zobrazit neúspěšné e-maily (%s)"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron neběžel %s (je nastaveno DISABLE_WP_CRON – zkontrolujte úlohu cron na serveru)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron neběžel %s – běží jen tehdy, když web má návštěvy, nebo končí chybou."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron běží normálně."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Čeká na denní souhrn – neodesílá se samostatně."
+
+msgid "Waits %s s for the mail server"
+msgstr "Čeká %s s na poštovní server"
+
+msgid "Warnings"
+msgstr "Varování"
+
+msgid "Webhook URL"
+msgstr "URL webhooku"
+
+msgid "Webhook signing key"
+msgstr "Podpisový klíč webhooku"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "Středa"
+
+msgid "Week"
+msgstr "Týden"
+
+msgid "Week of %s"
+msgstr "Týden od %s"
+
+msgid "Weekday"
+msgstr "Den v týdnu"
+
+msgid "Weekly"
+msgstr "Týdně"
+
+msgid "Weekly email report"
+msgstr "Týdenní e-mailový přehled"
+
+msgid "Weekly report"
+msgstr "Týdenní přehled"
+
+msgid "What to do"
+msgstr "Co dělat"
+
+msgid "When emails are sent"
+msgstr "Kdy se e-maily odesílají"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Když se odesílá mnohem více e-mailů než obvykle, nouzová brzda vás varuje a může další e-maily zadržet."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Když je vypnuto, sledovací pixely nepoznají, kdy záznam otevřete. Externí obsah můžete stále načíst pro jednotlivý e-mail. Skripty a formuláře jsou vždy blokovány."
+
+msgid "Who can view the log"
+msgstr "Kdo může zobrazit protokol"
+
+msgid "Why did an email fail?"
+msgstr "Proč e-mail selhal?"
+
+msgid "With attachments"
+msgstr "S přílohami"
+
+msgid "With notes"
+msgstr "S poznámkami"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Bez těchto záznamů DNS nemohou poskytovatelé schránek ověřit, že váš web smí za tuto doménu odesílat e-maily, takže e-maily častěji končí ve spamu. Kontrola odesílatele navrhne záznamy, které můžete přidat u svého poskytovatele domény."
+
+msgid "WooCommerce email"
+msgstr "E-mail WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Nastavení › E-maily"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "E-maily jádra WordPressu nemají editor; lze je měnit pomocí filtrů."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress neodeslal žádný e-mail – tento e-mail možná vypnul nějaký plugin."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress pro tento e-mail nemá žádné nastavení. Mailspur může zastavit oznámení administrátorům; nový uživatel svůj e-mail dostane i nadále."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress pro tento e-mail nemá žádné nastavení. Mailspur může zastavit oznámení o úspěšných automatických aktualizacích; oznámení o neúspěšných aktualizacích budou chodit i nadále."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress ve výchozím stavu odesílá přes funkci PHP mail(). Na tomto serveru je vypnutá nebo není nainstalován poštovní program (sendmail) – to je běžné u lokálních instalací, Dockeru a mnoha spravovaných hostingů."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Pište předmět normálně velkými a malými písmeny a zdůrazněte nejvýše jedno slovo."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Ano, ale podle %4$s příjemce označil „%1$s“ pro %2$s (%3$s) jako spam."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Ano. „%1$s“ odešel %3$s na %2$s a %4$s potvrdil doručení."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Stále ho můžete odeslat z protokolu („Odeslat nyní“)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Tento souhrn dostáváte, protože jsou tyto typy e-mailů v Mailspuru shromažďovány do jednoho denního e-mailu. Každý e-mail zůstává v protokolu."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Tento e-mail dostáváte, protože jsou v nastavení Mailspuru tohoto webu zapnutá upozornění monitorování."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Tento e-mail dostáváte, protože je v nastavení Mailspuru tohoto webu zapnutý týdenní přehled. Obsahuje pouze počty a vzory předmětů – žádný obsah e-mailů ani příjemce."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Váš selektor DKIM (volitelné)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Váš web za posledních 7 dní neodeslal žádné e-maily."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] Oznámení (%2$s): %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 oznámení: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Týdenní e-mailový přehled %2$s"
+
+msgid "address"
+msgstr "adresa"
+
+msgid "and %s more"
+msgstr "a %s dalších"
+
+msgid "and %s more – see the log"
+msgstr "a %s dalších – viz protokol"
+
+msgid "another plugin stopped it"
+msgstr "zastavil ho jiný plugin"
+
+msgid "code"
+msgstr "kód"
+
+msgid "date"
+msgstr "datum"
+
+msgid "days"
+msgstr "dnech"
+
+msgid "deleted after %s days"
+msgstr "smazáno po %s dnech"
+
+msgid "emails to this address failed several times before"
+msgstr "e-maily na tuto adresu už několikrát selhaly"
+
+msgid "entries"
+msgstr "záznamů"
+
+msgid "failing"
+msgstr "selhává"
+
+msgid "failure spikes"
+msgstr "nárůstech selhání"
+
+msgid "first seen %s"
+msgstr "poprvé zaznamenáno %s"
+
+msgid "from a new sender"
+msgstr "od nového odesílatele"
+
+msgid "holding emails right now"
+msgstr "právě zadržuje e-maily"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "uchováváno do ručního smazání"
+
+msgid "link"
+msgstr "odkaz"
+
+msgid "minutes"
+msgstr "minutách"
+
+msgid "name"
+msgstr "jméno"
+
+msgid "new this week"
+msgstr "nové tento týden"
+
+msgid "no"
+msgstr "ne"
+
+msgid "none"
+msgstr "žádné"
+
+msgid "none in %1$s – %2$s"
+msgstr "žádné v %1$s – %2$s"
+
+msgid "number"
+msgstr "číslo"
+
+msgid "of %s"
+msgstr "z %s"
+
+msgid "often to administrators"
+msgstr "často administrátorům"
+
+msgid "on %1$s at %2$s"
+msgstr "%1$s v %2$s"
+
+msgid "same recipient"
+msgstr "stejný příjemce"
+
+msgid "slow to send"
+msgstr "pomalé odesílání"
+
+msgid "staging mode is on"
+msgstr "je zapnutý testovací režim"
+
+msgid "stopped"
+msgstr "zastaveno"
+
+msgid "stopped email types"
+msgstr "zastavených typech e-mailů"
+
+msgid "text"
+msgstr "text"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "nouzová brzda zastavila záplavu e-mailů"
+
+msgid "time"
+msgstr "čas"
+
+msgid "today at %s"
+msgstr "dnes v %s"
+
+msgid "triggered %s times"
+msgstr "spuštěno %s×"
+
+msgid "unchanged"
+msgstr "beze změny"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "neznámý – mailer nevrátil žádnou chybovou zprávu"
+
+msgid "unusual silence"
+msgstr "neobvyklém tichu"
+
+msgid "usually sent: %s"
+msgstr "obvykle odesílán: %s"
+
+msgid "wp_mail() called"
+msgstr "zavolána wp_mail()"
+
+msgid "yes"
+msgstr "ano"
+
+msgid "yesterday at %s"
+msgstr "včera v %s"
+
+msgid "your email provider"
+msgstr "váš poskytovatel e-mailu"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "„%1$s“ (%2$s) v %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "„%1$s“ (%2$s) se znovu odesílá."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "„%1$s“ (%2$s) obvykle odchází alespoň jednou za %3$s dní. Poslední byl odeslán před %4$s."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "„%1$s“ (%2$s) byl naposledy odeslán před %3$s. Do té doby se odesílal alespoň každých %4$s dní."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "„%1$s“ (%2$s) – obvykle každý týden (%4$s), naposledy %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "„%1$s“ (%2$s) – obvykle každý den, naposledy %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "„%1$s“ – %2$s – %3$s"

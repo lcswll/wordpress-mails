@@ -1,0 +1,3253 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "\".eml indir\", iletiyi kaydedilmiş ve gizlenmiş verilerden yeniden oluşturur (ekler olmadan)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (önceki hafta: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (%2$s için zamanlandı)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s e-posta türünün gönderimi durdu: %2$s."
+msgstr[1] "%1$s e-posta türünün gönderimi durdu, örneğin %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%2$s gönderenden %1$s e-posta türü"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "Son %2$s dakika içinde %1$s e-posta başarısız oldu."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%2$s günde %1$s e-posta"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "Son 30 günde %1$s e-posta, %2$s başarısız"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "Bir saat içinde %1$s e-posta gönderildi – normalden çok daha fazla (eşik: saatte %2$s). Bir iletişim formu kötüye kullanılıyor veya site ele geçirilmiş olabilir."
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s kayıt, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s içe aktarıldı, %2$s yinelenen, %3$s çok eski"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%2$s e-postadan %1$s tanesi geri döndü (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "Son %3$s günde %2$s e-postadan %1$s tanesi gönderilemedi."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "%2$s kayıttan %1$s tanesi işlendi …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%2$s – %3$s dönemine göre %1$s puan"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s ilk e-postasını %2$s tarihinde gönderdi ve son 24 saatte %3$s farklı harici adrese yazdı. Bu tür e-postalar gönderen bir şey kurmadıysanız veya ayarlamadıysanız siteyi kontrol edin: yeni bir gönderen, sitenin hacklendiğinin bir işareti olabilir."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "%1$s gönderildi, %2$s hâlâ bekletiliyor …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%2$s – %3$s dönemine göre %1$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · son özetten bu yana toplanan %2$s e-posta"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · %2$s itibarıyla"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – hata oranı %2$s %% (önceki hafta: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – %2$s tarafından bildirildi, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (zorunlu eklenti)"
+
+msgid "%s (theme)"
+msgstr "%s (tema)"
+
+msgid "%s ago"
+msgstr "%s önce"
+
+msgid "%s days"
+msgstr "%s gün"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "Son 7 günde %s e-posta başarısız oldu."
+msgstr[1] "Son 7 günde %s e-posta başarısız oldu."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s e-posta kararınızı bekliyor."
+msgstr[1] "%s e-posta kararınızı bekliyor."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "Son 7 günde %s e-posta bekletildi ve gönderilmedi."
+msgstr[1] "Son 7 günde %s e-posta bekletildi ve gönderilmedi."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "Acil durum freni %s e-postayı bekletiyor."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s e-posta bekliyor ve teslim edilmedi."
+
+msgid "%s entries"
+msgstr "%s kayıt"
+
+msgid "%s failed"
+msgstr "%s başarısız"
+
+msgid "%s held emails discarded."
+msgstr "Bekletilen %s e-posta iptal edildi."
+
+msgid "%s imported entries removed."
+msgstr "İçe aktarılan %s kayıt kaldırıldı."
+
+msgid "%s in 30 days"
+msgstr "30 günde %s"
+
+msgid "%s marked as spam"
+msgstr "%s istenmeyen posta olarak işaretlendi"
+
+msgid "%s more on the Email types page."
+msgstr "E-posta türleri sayfasında %s tane daha."
+
+msgid "%s notes"
+msgstr "%s not"
+
+msgid "%s of all emails"
+msgstr "Tüm e-postaların %s kadarı"
+
+msgid "%s of them in the last 24 hours."
+msgstr "Bunların %s tanesi son 24 saatte."
+
+msgid "%s s"
+msgstr "%s sn"
+
+msgid "%s selected"
+msgstr "%s seçildi"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s konu ilgi bekliyor:"
+msgstr[1] "%s konu ilgi bekliyor:"
+
+msgid "%s to administrators in 30 days"
+msgstr "30 günde yöneticilere %s"
+
+msgid "%s unchanged lines"
+msgstr "%s değişmemiş satır"
+
+msgid "(no subject)"
+msgstr "(konu yok)"
+
+msgid "(no text content)"
+msgstr "(metin içeriği yok)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(e-postalar artık günlükte değil)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all daha katıdır; ~all yaygındır ve DMARC ile birlikte uygundur."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 kayıtları sonsuza dek saklar. Temizlik günde bir kez çalışır."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 sınırsız demektir. Önce en eski kayıtlar kaldırılır."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 bunu kapatır. Eski kayıtların içeriğini, üst bilgilerini ve eklerini kaldırır ve adresleri maskeler (a***@example.com). Tarih, durum, kaynak, biçim, boyut ve notlar istatistikler için kalır. Kayıtlar silinmeden önce günlük temizlikle birlikte çalışır – bu nedenle yalnızca yukarıdaki silme süresinden kısaysa etkisi olur."
+
+msgid "12 months"
+msgstr "12 ay"
+
+msgid "30 days"
+msgstr "30 gün"
+
+msgid "7 days"
+msgstr "7 gün"
+
+msgid "90 days"
+msgstr "90 gün"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "DKIM seçicisi yalnızca harf, rakam, nokta, kısa çizgi ve alt çizgi içerebilir."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "API üzerinden gönderen bir posta gönderme eklentisi teslimatı devraldı ve neden belirtmeden gönderimin başarısız olduğunu bildirdi."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Yayımlanmış bir anahtar, e-postalarınızın onunla imzalandığını kanıtlamaz – alınan bir e-postanın üst bilgilerindeki DKIM sonucunu kontrol edin."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Bir alıcı veya gönderen adresi geçerli bir e-posta adresi değil, bu yüzden PHPMailer göndermeyi reddetti."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "Düz metin olarak API anahtarı veya özel anahtar: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "Bu kaydı değerlendirmek için yaklaşık %1$s DNS sorgusu gerekiyor – izin verilen %2$s sınırından fazla, bu yüzden alıcılar onu yok sayabilir (PermError). Kullanılmayan include: girdilerini kaldırın."
+
+msgid "Access"
+msgstr "Erişim"
+
+msgid "Actions"
+msgstr "İşlemler"
+
+msgid "Active: alerts on %s."
+msgstr "Etkin: %s için uyarılar."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Şablondaki her görsele kısa bir alt özniteliği ekleyin, örn. alt=\"Logo Example Shop\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Bir posta sağlayıcısı üzerinden gönderiyorsanız onun include: girdisini ekleyin (ör. include:_spf.google.com)."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Posta sunucunuzu veya posta hizmetinizi gönderen alan adının SPF kaydına ekleyin."
+
+msgid "Added:"
+msgstr "Eklenen:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "En az %s kalıcı hatası olan adresler: alıcı sunucu posta kutusunu reddetti, alan adının posta sunucusu yok veya e-posta sağlayıcınız kalıcı geri dönme (hard bounce) bildirdi. Kayıtlar günlüğün saklama süresiyle birlikte sona erer."
+
+msgid "Admin screen"
+msgstr "Yönetim ekranı"
+
+msgid "Administrators"
+msgstr "Yöneticiler"
+
+msgid "Aggregate reports go to %s."
+msgstr "Toplu raporlar %s adresine gider."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Uyarı"
+
+msgid "Alert and hold further emails"
+msgstr "Uyar ve sonraki e-postaları beklet"
+
+msgid "Alert only"
+msgstr "Yalnızca uyar"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Düzenli gönderilen bir e-posta türü durduğunda uyar"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "E-postalar tekrar tekrar başarısız olduğunda uyar"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Site beklenmedik şekilde e-posta göndermeyi bıraktığında uyar"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Uyarılar etkin ancak kanal yok: bir e-posta adresi veya webhook URL'si girin."
+
+msgid "Alerts are off."
+msgstr "Uyarılar kapalı."
+
+msgid "All"
+msgstr "Tümü"
+
+msgid "All email types look healthy."
+msgstr "Tüm e-posta türleri sağlıklı görünüyor."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Tüm e-postalar test adreslerine yönlendiriliyor."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Tüm e-postalar gerçek alıcılar yerine test adreslerine gidiyor."
+
+msgid "All sources"
+msgstr "Tüm kaynaklar"
+
+msgid "Allow again"
+msgstr "Yeniden izin ver"
+
+msgid "Allowed again."
+msgstr "Yeniden izin verildi."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Daha önce hiç e-posta göndermemiş bir eklenti veya tema bir gün içinde çok sayıda farklı harici adrese yazdığında da bir kez uyarır – sitenin hacklendiğine dair olası bir işaret. Mailspur kurulduktan sonraki ilk iki hafta temel referans olarak kullanılır."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Anonimleştirirken konuyu da kaldır"
+
+msgid "Also search content"
+msgstr "İçerikte de ara"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Alternatif olarak barındırma sağlayıcınızdan bu site için mail() / sendmail özelliğini etkinleştirmesini isteyin."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Önizlemede uzak görselleri ve yazı tiplerini her zaman yükle"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (SNS üzerinden)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "SMTP yerine HTTP API kullanan bir e-posta sağlayıcısı, e-posta başına daha az gidiş-dönüş gerektirir."
+
+msgid "Anonymisation"
+msgstr "Anonimleştirme"
+
+msgid "Anonymise entries after"
+msgstr "Kayıtları şu süreden sonra anonimleştir"
+
+msgid "Anonymised"
+msgstr "Anonimleştirildi"
+
+msgid "Any format"
+msgstr "Herhangi bir biçim"
+
+msgid "Any status"
+msgstr "Herhangi bir durum"
+
+msgid "Apply"
+msgstr "Uygula"
+
+msgid "Ask the recipient for a working address."
+msgstr "Alıcıdan çalışan bir adres isteyin."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Barındırma sağlayıcınızdan openssl uzantısını etkinleştirmesini isteyin (veya barındırma panelinizin PHP ayarlarından etkinleştirin)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Barındırma sağlayıcınızdan sunucunun CA sertifikalarını ve OpenSSL'i güncellemesini isteyin."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Barındırma sağlayıcınıza giden SMTP bağlantılarının engellenip engellenmediğini sorun."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Barındırma sağlayıcınıza bu porta giden bağlantılara izin verilip verilmediğini sorun (güvenlik duvarı)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "%2$s dakika içinde en az %1$s başarısız e-posta"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Sorun devam etse bile bu süre içinde tür başına en fazla bir uyarı."
+
+msgid "Attachments"
+msgstr "Ekler"
+
+msgid "Attachments no longer available: %s"
+msgstr "Ekler artık mevcut değil: %s"
+
+msgid "Authentication"
+msgstr "Kimlik doğrulama"
+
+msgid "Automatic TLS"
+msgstr "Otomatik TLS"
+
+msgid "Average per day"
+msgstr "Günlük ortalama"
+
+msgid "Back to the email types"
+msgstr "E-posta türlerine dön"
+
+msgid "Belongs to"
+msgstr "Ait olduğu"
+
+msgid "Block again"
+msgstr "Yeniden engelle"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "İstenmeyen posta olarak veya bir engel listesi tarafından engellendi"
+
+msgid "Bounced (permanent)"
+msgstr "Geri döndü (kalıcı)"
+
+msgid "Bounced (temporary)"
+msgstr "Geri döndü (geçici)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Bozuk karakterler (kodlama): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Abonelikten çıkma başlığı olmayan toplu e-posta (%1$s alıcı)"
+
+msgid "Bundle into one daily email"
+msgstr "Tek bir günlük e-postada topla"
+
+msgid "Bundled into one daily email"
+msgstr "Tek bir günlük e-postada toplandı"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Toplama kapatıldı. Bekleyen e-postalar şimdi tek bir özet hâlinde gönderildi."
+
+msgid "Busiest day"
+msgstr "En yoğun gün"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "İptal"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Dikkat: bu adrese giden e-postalar daha önce birkaç kez başarısız oldu."
+
+msgid "Change in the email types"
+msgstr "E-posta türlerinde değiştir"
+
+msgid "Change staging mode"
+msgstr "Test modunu değiştir"
+
+msgid "Check"
+msgstr "Denetle"
+
+msgid "Check again"
+msgstr "Yeniden denetle"
+
+msgid "Check emails"
+msgstr "E-postaları denetle"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Sunucuyu ve portu kontrol edin; 465 (SSL) yerine 587 (TLS) deneyin veya tam tersini."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "SMTP eklentinizde sunucu, port, şifreleme, kullanıcı adı ve parolayı kontrol edin ve oradan bir test e-postası gönderin."
+
+msgid "Check sender domains"
+msgstr "Gönderen alan adlarını denetle"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Şifrelemenin portla eşleştiğini kontrol edin: 587 için TLS, 465 için SSL."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Anahtarın doğru bölgeye / hesaba ait olduğunu kontrol edin (örn. EU veya US uç noktası)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "SMTP sunucusunu ve portunu kontrol edin: yanlış bir port veya engellenmiş bir bağlantı, yedek yöntem devreye girmeden önce çoğu zaman zaman aşımıyla sonuçlanır."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Gönderen alan adının SPF, DKIM ve DMARC kayıtlarını kontrol edin veya gönderim yaptığınız alan adında bir gönderen adresi kullanın."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Adreste yazım hatası olup olmadığını kontrol edin – ya da e-posta siteniz tarafından hiç gönderilmedi."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Adresi alıcıyla teyit edin ve saklandığı yerde düzeltin (kullanıcı profili, sipariş, form kaydı)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Adresi alıcıyla teyit edin ve saklandığı yerde düzeltin."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Sunucu adını ve portu kontrol edin: STARTTLS (TLS) ile 587 veya SSL ile 465. Port 25 çoğu barındırma sağlayıcısı tarafından engellenir."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Posta hizmeti hesabınızdaki limitleri ve mevcut kullanımı kontrol edin; gerekirse planı yükseltin."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Bu kaydın alıcı adreslerinde yazım hatası, boşluk veya eksik kısım olup olmadığını kontrol edin."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "SMTP eklentinizdeki gönderen adresini ve wp_mail_from filtresini kontrol edin."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Posta hesabınızın gönderim limitlerini ve bu e-postanın notlarını kontrol edin."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Sunucu IP'sini bir engel listesi denetleyicisinde kontrol edin ve listeden çıkarılmayı talep edin."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Şablondaki yer tutucunun yazımını ve eklentinin bunu bu e-posta türü için destekleyip desteklemediğini kontrol edin. Gönderen eklenti do_shortcode() çalıştırmadıkça kısa kodlar e-postalarda işlenmez."
+
+msgid "Checked %s."
+msgstr "%s denetlendi."
+
+msgid "Checked just now"
+msgstr "Az önce denetlendi"
+
+msgid "Checking DNS records …"
+msgstr "DNS kayıtları denetleniyor …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Sitenizin gönderdiği alan adlarının DNS kayıtlarını denetler: varsayılan gönderen adresi ve günlükteki en sık gönderenler. Eksik veya zayıf kayıtlar, e-postaların istenmeyen postaya düşmesinin en yaygın nedenidir. Yalnızca sunucunuzun kendi DNS çözümleyicisi kullanılır; sonuçlar bir saat saklanır."
+
+msgid "Choose a range of at most %s days."
+msgstr "En fazla %s günlük bir aralık seçin."
+
+msgid "Clear selection"
+msgstr "Seçimi temizle"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Bu e-postaları günlükte açmak için bir çubuğa tıklayın."
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Close (Esc)"
+msgstr "Kapat (Esc)"
+
+msgid "Colour scheme"
+msgstr "Renk düzeni"
+
+msgid "Command line"
+msgstr "Komut satırı"
+
+msgid "Compare"
+msgstr "Karşılaştır"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Bu kayıtların kaynaklarını karşılaştırın. İki eklentinin aynı bildirimi gönderip göndermediğini veya bir kancanın (örn. sipariş durumu değişikliği) birden fazla kez tetiklenip tetiklenmediğini kontrol edin."
+
+msgid "Component"
+msgstr "Bileşen"
+
+msgid "Configure alerts"
+msgstr "Uyarıları yapılandır"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "İçerik %1$s gün sonra anonimleştirildi, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "İçerik değişikliği görüldü olarak işaretlendi."
+
+msgid "Content changed"
+msgstr "İçerik değişti"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "İçerik %1$s tarihinde, %2$s güncellemesinden sonra değişti."
+
+msgid "Content changed on %s."
+msgstr "İçerik %s tarihinde değişti."
+
+msgid "Content removed"
+msgstr "İçerik kaldırıldı"
+
+msgid "Content removed after %s days"
+msgstr "İçerik %s gün sonra kaldırıldı"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "İçerik, üst bilgiler ve ekler kaldırıldı ve adresler anonimleştirme ayarıyla maskelendi."
+
+msgid "Copied"
+msgstr "Kopyalandı"
+
+msgid "Copied – paste it into your reply."
+msgstr "Kopyalandı – yanıtınıza yapıştırın."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Müşteriye yanıt vermek için kısa bir cümle kopyalar: e-postanın ne zaman kime gönderildiği ve ulaşıp ulaşmadığı – teknik ayrıntılar olmadan."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Başka bir e-posta günlüğü eklentisinin mevcut günlüğünü Mailspur'a kopyalar; böylece eski e-postalar burada aranabilir ve önizlenebilir. Diğer eklenti ve verileri değişmeden kalır; içe aktarmayı yeniden çalıştırmak yalnızca yeni kayıtları ekler."
+
+msgid "Copy"
+msgstr "Kopyala"
+
+msgid "Copy for support"
+msgstr "Destek için kopyala"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Bu tarayıcıda kopyalama yapılamıyor. Metni seçip kopyalayın:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Adresi düzeltin (örn. kullanıcı profilinde veya siparişte) ve formlarınızda e-posta doğrulaması kullanmayı değerlendirin."
+
+msgid "Counted once per email."
+msgstr "E-posta başına bir kez sayılır."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Posta hizmetinizde gönderme izni olan yeni bir API anahtarı oluşturun ve bunu posta gönderme eklentisine girin."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Yeni bir webhook URL'si oluşturulsun mu? Geçerli URL hemen çalışmayı durdurur – yeni URL'yi e-posta sağlayıcınızın webhook ayarlarına yapıştırın."
+
+msgid "Create new URL"
+msgstr "Yeni URL oluştur"
+
+msgid "Current page"
+msgstr "Geçerli sayfa"
+
+msgid "Current record"
+msgstr "Geçerli kayıt"
+
+msgid "Current size"
+msgstr "Geçerli boyut"
+
+msgid "Custom"
+msgstr "Özel"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "DKIM anahtarı bulundu (seçici: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "p=none içeren DMARC kaydı bulundu: yalnızca rapor verir, sahte e-postalar yine de teslim edilir."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "p=%s ilkesine sahip DMARC kaydı bulundu."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "DMARC kaydının geçerli bir ilkesi yok (p=none, quarantine veya reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "DNS sorgusu başarısız oldu veya zaman aşımına uğradı. Daha sonra yeniden deneyin."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Bu sunucuda DNS sorguları kullanılamıyor (dns_get_record() devre dışı), bu yüzden gönderen denetimi burada çalışamaz."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Gereken DNS sorgusu: izin verilen %2$s sorgudan yaklaşık %1$s."
+
+msgid "Daily"
+msgstr "Günlük"
+
+msgid "Daily digest"
+msgstr "Günlük özet"
+
+msgid "Dark"
+msgstr "Koyu"
+
+msgid "Date"
+msgstr "Tarih"
+
+msgid "Default (%s days)"
+msgstr "Varsayılan (%s gün)"
+
+msgid "Default (no time limit)"
+msgstr "Varsayılan (süre sınırı yok)"
+
+msgid "Default sender"
+msgstr "Varsayılan gönderen"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Delete %s selected log entries?"
+msgstr "Seçili %s günlük kaydı silinsin mi?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "TÜM günlük kayıtları silinsin mi? Bu işlem geri alınamaz."
+
+msgid "Delete entries after"
+msgstr "Kayıtları şu süreden sonra sil"
+
+msgid "Delete selected"
+msgstr "Seçilenleri sil"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Eklenti silindiğinde günlük tablosunu ve ayarları sil"
+
+msgid "Delete this log entry?"
+msgstr "Bu günlük kaydı silinsin mi?"
+
+msgid "Deleted."
+msgstr "Silindi."
+
+msgid "Delivered"
+msgstr "Teslim edildi"
+
+msgid "Delivered by %s (API)"
+msgstr "%s tarafından teslim edildi (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "pre_wp_mail kancasına bağlı kod tarafından teslim edildi (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "%s tarihinde günlük özette teslim edildi."
+
+msgid "Delivery"
+msgstr "Teslimat"
+
+msgid "Delivery status from your email provider"
+msgstr "E-posta sağlayıcınızdan teslimat durumu"
+
+msgid "Desktop"
+msgstr "Masaüstü"
+
+msgid "Did my email arrive?"
+msgstr "E-postam ulaştı mı?"
+
+msgid "Disable the email or change its recipient"
+msgstr "E-postayı devre dışı bırak veya alıcısını değiştir"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Bekletilen tüm e-postalar iptal edilsin mi? Günlükte kalırlar ancak gönderilmezler."
+
+msgid "Discard held emails"
+msgstr "Bekletilen e-postaları iptal et"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Ücretsiz e-posta adresleri (gmail.com, gmx.de …) “adına” kendi sunucunuz üzerinden e-posta göndermeyin."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Tamamlandı: %1$s e-posta gönderildi, %2$s başarısız oldu."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Tamamlandı: %1$s içe aktarıldı, %2$s yinelenen, %3$s çok eski."
+
+msgid "Download .eml"
+msgstr ".eml indir"
+
+msgid "Download as CSV"
+msgstr "CSV olarak indir"
+
+msgid "Download started."
+msgstr "İndirme başladı."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Geçerli filtrelerle eşleşen kayıtları %s olarak indir"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Her e-posta, günlüğe kaydedildiğinde veya içe aktarıldığında bir kez denetlenir (harici istek yapılmaz). Buradaki değişiklikler yalnızca sonradan kaydedilen e-postaları etkiler; eski kayıtlar yeniden denetlenmez. DNS ve tekrarlanan gönderim denetimleri bir kaydı açtığınızda çalışır."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "%s adresine giden önceki e-postalar birden fazla kez kalıcı olarak başarısız oldu."
+
+msgid "Edit template"
+msgstr "Şablonu düzenle"
+
+msgid "Editors and above"
+msgstr "Editörler ve üstü"
+
+msgid "Email address"
+msgstr "E-posta adresi"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "E-posta adresi (en son e-posta artık günlükte değil)"
+
+msgid "Email address or order number"
+msgstr "E-posta adresi veya sipariş numarası"
+
+msgid "Email consists almost only of images"
+msgstr "E-posta neredeyse yalnızca görsellerden oluşuyor"
+
+msgid "Email failure spike"
+msgstr "E-posta hatası artışı"
+
+msgid "Email failures"
+msgstr "E-posta hataları"
+
+msgid "Email failures resolved"
+msgstr "E-posta hataları giderildi"
+
+msgid "Email inventory"
+msgstr "E-posta envanteri"
+
+msgid "Email log"
+msgstr "E-posta günlüğü"
+
+msgid "Email log: problem recipients"
+msgstr "E-posta günlüğü: sorunlu alıcılar"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Bir yorum denetim için bekletildiğinde bana e-posta gönder"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Biri yorum yazdığında bana e-posta gönder"
+
+msgid "Email provider"
+msgstr "E-posta sağlayıcısı"
+
+msgid "Email sent again."
+msgstr "E-posta yeniden gönderildi."
+
+msgid "Email sent to %s."
+msgstr "E-posta %s adresine gönderildi."
+
+msgid "Email type"
+msgstr "E-posta türü"
+
+msgid "Email type is sent again"
+msgstr "E-posta türü yeniden gönderiliyor"
+
+msgid "Email type stopped"
+msgstr "E-posta türünün gönderimi durdu"
+
+msgid "Email types"
+msgstr "E-posta türleri"
+
+msgid "Email volume back to normal"
+msgstr "E-posta hacmi normale döndü"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "E-posta hacmi normale döndü: acil durum freni artık etkin değil."
+
+msgid "Email: failed"
+msgstr "E-posta: başarısız"
+
+msgid "Email: failed – see the log"
+msgstr "E-posta: başarısız – günlüğe bakın"
+
+msgid "Email: sent"
+msgstr "E-posta: gönderildi"
+
+msgid "Emails"
+msgstr "E-postalar"
+
+msgid "Emails are being logged again."
+msgstr "E-postalar yeniden günlüğe kaydediliyor."
+
+msgid "Emails are delivered to their recipients."
+msgstr "E-postalar alıcılarına teslim ediliyor."
+
+msgid "Emails are flowing again"
+msgstr "E-postalar yeniden akıyor"
+
+msgid "Emails are logged but not delivered."
+msgstr "E-postalar günlüğe kaydediliyor ancak teslim edilmiyor."
+
+msgid "Emails are still being sent."
+msgstr "E-postalar hâlâ gönderiliyor."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "E-postalar hâlâ gönderiliyor. Ana kaynağı kontrol edin; durdurmak için acil durum frenini \"Uyar ve sonraki e-postaları beklet\" olarak değiştirin."
+
+msgid "Emails in 30 days"
+msgstr "30 günde e-postalar"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Bu türden yalnızca yöneticilere giden e-postalar artık toplanıyor ve günde bir kez tek bir özet hâlinde gönderiliyor."
+
+msgid "Emails over time"
+msgstr "Zaman içinde e-postalar"
+
+msgid "Emails per day and status"
+msgstr "Güne ve duruma göre e-postalar"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "Haftanın gününe ve saate göre e-postalar (site saat dilimi)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "Günlükte zaten bulunan e-postalar – Mailspur'un kendisi tarafından kaydedilen veya başka bir eklentiden içe aktarılanlar – alıcılara, konuya ve gönderim zamanına göre tanınır ve yinelenen olarak atlanır."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Düzenli gönderilen e-postalar durdu (%s)"
+
+msgid "Emails to this user"
+msgstr "Bu kullanıcıya giden e-postalar"
+
+msgid "Emails with notes"
+msgstr "Notlu e-postalar"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "Konusu olmayan e-postalar istenmeyen posta gibi görünür ve gelen kutusunda zor bulunur."
+
+msgid "Emails – last 7 days"
+msgstr "E-postalar – son 7 gün"
+
+msgid "Emergency brake"
+msgstr "Acil durum freni"
+
+msgid "Emergency brake reset."
+msgstr "Acil durum freni sıfırlandı."
+
+msgid "Emergency brake settings"
+msgstr "Acil durum freni ayarları"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Acil durum freni: son bir saatte %1$s e-posta – normalden çok daha fazla (eşik: saatte %2$s)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Acil durum freni: olağan dışı e-posta seli"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Boş = otomatik: son 14 günün en yoğun saatinin üç katı, en az 50 – şu anda %s."
+
+msgid "Empty log"
+msgstr "Günlüğü boşalt"
+
+msgid "Empty subject"
+msgstr "Boş konu"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Google hesabı için 2 adımlı doğrulamayı etkinleştirin ve bir uygulama şifresi oluşturun (Google account → Security → App passwords)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Posta sağlayıcınızda veya barındırma hizmetinizde DKIM imzalamayı etkinleştirin ve size verdiği anahtarı yayımlayın. Zaten imzalıyorsanız seçicinizi (DKIM-Signature üst bilgisinin s= değeri) girip yeniden denetleyin."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Posta hizmetinizde DKIM imzalamayı etkinleştirin ve DNS kaydını yayımlayın."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "SMTP eklentinizde kimlik doğrulamayı etkinleştirin ve kullanıcı adı ile parolayı girin."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "SMTP eklentinizde kimlik doğrulamayı etkinleştirin."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Şifreli SMTP bağlantıları (TLS/SSL), bu sunucuda kurulu veya etkin olmayan openssl PHP uzantısını gerektirir."
+
+msgid "Encryption"
+msgstr "Şifreleme"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Şifreleme (TLS/SSL) başarısız"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Önce bir e-posta adresi veya webhook URL'si girip ayarları kaydedin."
+
+msgid "Enter an email address or an order number."
+msgstr "Bir e-posta adresi veya sipariş numarası girin."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Önce “Uyarıları e-postayla şuraya gönder” alanına bir e-posta adresi girip ayarları kaydedin."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "1 ile 10 arasında e-posta adresi girin."
+
+msgid "Enter one or more email addresses."
+msgstr "Bir veya daha fazla e-posta adresi girin."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Uygulama şifresini SMTP eklentinize girin veya eklentinin “Sign in with Google” (OAuth) bağlantısını kullanın."
+
+msgid "Entries"
+msgstr "Kayıtlar"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "%s günden eski kayıtlar atlanır, çünkü saklama ayarı onları zaten silecektir. Her şeyi içe aktarmak için önce yukarıdaki saklama süresini değiştirin."
+
+msgid "Error"
+msgstr "Hata"
+
+msgid "Errors"
+msgstr "Hatalar"
+
+msgid "Every %s days"
+msgstr "Her %s günde bir"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "15 dakikada bir (Mailspur uyarıları)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Her pazartesi sabahı, yalnızca bildirilecek bir şey olduğunda: önceki haftaya göre e-postalar ve hata oranı, yeni, durmuş ve değişmiş e-posta türleri, notlu e-postalar ve acil durum freni olayları. Yalnızca sayılar ve konu kalıpları."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Bu sitenin gönderdiği her tür e-posta, Mailspur e-posta günlüğünden oluşturulmuştur – örn. bir işleme faaliyetleri kaydı veya devir teslim için. Alıcı grupları her gönderenin en son e-postalarından, veri kategorileri her türün en son e-postasından türetilir. Liste e-posta içeriği ve adres içermez."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Sitenizin gönderdiği her tür e-posta, günlükte otomatik olarak bulunur: gönderen eklentiye ve konuya göre gruplanır; sayılar, adresler ve adlar yer tutucu olarak gösterilir. Mailspur her türün ne sıklıkla gönderildiğini öğrenir ve biri durduğunda bunu fark eder – örneğin bir eklenti güncellemesinden sonra."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Her şey yolunda görünüyor: son 7 günde %s e-posta, hatasız."
+msgstr[1] "Her şey yolunda görünüyor: son 7 günde %s e-posta, hiçbiri başarısız olmadı."
+
+msgid "Expected today and not sent yet:"
+msgstr "Bugün bekleniyor ve henüz gönderilmedi:"
+
+msgid "Export"
+msgstr "Dışa aktar"
+
+msgid "Export started – your download begins shortly."
+msgstr "Dışa aktarma başladı – indirmeniz birazdan başlayacak."
+
+msgid "Failed"
+msgstr "Başarısız"
+
+msgid "Failed (%s %%)"
+msgstr "Başarısız (%s %%)"
+
+msgid "Failing"
+msgstr "Hatalı"
+
+msgid "Failure rate"
+msgstr "Hata oranı"
+
+msgid "Failure spike"
+msgstr "Hata artışı"
+
+msgid "Far more emails than usual were sent"
+msgstr "Normalden çok daha fazla e-posta gönderildi"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Normalden çok daha fazla e-posta gönderildi, bu yüzden Mailspur sonraki e-postaları siz serbest bırakana veya silene kadar bekletiyor."
+
+msgid "Fewer"
+msgstr "Daha az"
+
+msgid "File"
+msgstr "Dosya"
+
+msgid "Filter by status"
+msgstr "Duruma göre süz"
+
+msgid "Filter email types"
+msgstr "E-posta türlerini filtrele"
+
+msgid "First email after the change"
+msgstr "Değişiklikten sonraki ilk e-posta"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Bu gönderenden ilk e-posta: %s. Tür uyarıları açıkken Mailspur, yeni bir gönderen çok sayıda harici adrese yazdığında uyarır."
+
+msgid "First page"
+msgstr "İlk sayfa"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Büyük eklerde zaman aşımı aktarım sırasında da yaşanabilir – daha küçük dosyalar veya bağlantılar gönderin."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "Bir sitenin hazırlık ve geliştirme kopyaları için: müşterilerin kopyadan asla e-posta almamasını sağlar. Her e-posta yine de günlüğe kaydedilir."
+
+msgid "Forced dark"
+msgstr "Zorunlu koyu"
+
+msgid "Format"
+msgstr "Biçim"
+
+msgid "Free text from forms"
+msgstr "Formlardan serbest metin"
+
+msgid "Friday"
+msgstr "Cuma"
+
+msgid "From"
+msgstr "Kimden"
+
+msgid "From date"
+msgstr "Başlangıç tarihi"
+
+msgid "Front end"
+msgstr "Ön yüz"
+
+msgid "Function"
+msgstr "Fonksiyon"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Sonraki e-postalar bir yönetici serbest bırakana veya iptal edene kadar bekletilir."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail ve Google Workspace artık SMTP için normal hesap parolasını kabul etmiyor."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail, 102 KB'tan büyük HTML e-postaları kırpar ve “[Message clipped]” gösterir. Kırpılan yerden sonraki her şey – çoğu zaman alt bilgi, abonelikten çıkma bağlantısı veya yasal bildirim – gizlenir."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail bu e-postayı kırpacak (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google oturum açmayı reddetti"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML düz metin olarak gönderildi"
+
+msgid "Handler"
+msgstr "İşleyici"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "E-posta sağlayıcınız kalıcı geri dönme (hard bounce) bildirdi"
+
+msgid "Hard failures"
+msgstr "Kalıcı hatalar"
+
+msgid "Headers"
+msgstr "Üst bilgiler"
+
+msgid "Held"
+msgstr "Bekletildi"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Acil durum freni tarafından bekletildi – iptal edildi."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Acil durum freni tarafından bekletildi – teslim edilmedi."
+
+msgid "Held by emergency brake – released later."
+msgstr "Acil durum freni tarafından bekletildi – daha sonra serbest bırakıldı."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Test modu tarafından bekletildi – teslim edilmedi."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Bekletilen e-posta gönderildi. Yeni bir kayıt olarak günlüğe eklendi."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Bekletilen e-postalar \"Bekletildi\" durumunu alır ve yine de günlükten tek tek gönderilebilir (\"Şimdi gönder\")."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Bekletildi: her alıcı daha önce kalıcı hata verdi (sorunlu alıcılar)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Bekletildi: test modu yönlendirmeye ayarlı ancak geçerli bir yönlendirme adresi yapılandırılmamış."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Bu e-postanın ulaşmasını veya doğru görüntülenmesini engelleyebilecek sorunlarla ilgili ipuçları."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Sorunlu alıcılara giden sonraki e-postaları beklet"
+
+msgid "Hooks"
+msgstr "Kancalar"
+
+msgid "Hours"
+msgstr "Saat"
+
+msgid "How to fix:"
+msgstr "Nasıl düzeltilir:"
+
+msgid "I already did"
+msgstr "Zaten yaptım"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Ham kaynağın gizlenmediğini ve e-posta başına depolama alanını yaklaşık iki katına çıkardığını anlıyorum"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Sık oluyorsa posta sağlayıcınızın gönderim limitlerini kontrol edin."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Tekrarlamaya devam ederse aynı anda daha az e-posta gönderin veya kuyruğu olan bir posta hizmeti kullanın."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Güvenlik varsayılanları (security defaults) bunu engelliyorsa, bunun yerine SMTP eklentinizin Microsoft (OAuth / Graph API) bağlantısını kullanın."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Birden fazla alıcı başarısız olduysa, adresten sonra gelen sunucu yanıtı nedeni belirtir."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Hesap iki faktörlü kimlik doğrulama kullanıyorsa bir uygulama şifresi oluşturun ve onun yerine bunu kullanın."
+
+msgid "Ignore"
+msgstr "Yok say"
+
+msgid "Ignored"
+msgstr "Yok sayıldı"
+
+msgid "Ignored notes"
+msgstr "Yok sayılan notlar"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Yok sayılan notlar yeni e-postalar için artık kaydedilmez ve mevcut kayıtlarda gizlenir."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Alternatif metni olmayan görseller (%1$s)"
+
+msgid "Import"
+msgstr "İçe aktar"
+
+msgid "Import failed: %s"
+msgstr "İçe aktarma başarısız oldu: %s"
+
+msgid "Import from other plugins"
+msgstr "Diğer eklentilerden içe aktar"
+
+msgid "Import new entries"
+msgstr "Yeni kayıtları içe aktar"
+
+msgid "Imported"
+msgstr "İçe aktarıldı"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "İçe aktarılan kayıtların izi yok: diğer eklenti bu ayrıntıları kaydetmedi."
+
+msgid "Imported from %s"
+msgstr "%s kaynağından içe aktarıldı"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "Amazon SNS'te URL'yi (HTTPS protokolü), Amazon SES'in Delivery, Bounce ve Complaint bildirimlerini alan konuya abone edin. Mailspur aboneliği otomatik olarak onaylar."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "Brevo'da Transactional → Settings → Webhook bölümünü açın, URL'yi ekleyin ve Delivered, Hard bounce, Soft bounce, Invalid email ve Complaint seçeneklerini işaretleyin."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "Mailgun'da Sending → Webhooks bölümünü açın, URL'yi Delivered, Permanent failure, Temporary failure ve Spam complaints için ekleyin ve HTTP webhook signing key değerini aşağıya yapıştırın."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "Postmark'ta sunucunuzu açın → Webhooks → Add webhook, URL'yi yapıştırın ve Delivery, Bounce ve Spam complaint seçeneklerini işaretleyin."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "Microsoft 365 yönetim merkezinde kullanıcıyı açın → Mail → Manage email apps ve “Authenticated SMTP” seçeneğini etkinleştirin."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Gelen kutuları yaklaşık ilk 40–80 karakteri gösterir; geri kalanı kesilir, telefonlarda daha da erken."
+
+msgid "Include content"
+msgstr "İçeriği dahil et"
+
+msgid "Information"
+msgstr "Bilgi"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Bir SMTP eklentisi kurun ve alan adınıza ait gerçek bir posta kutusu veya posta hizmeti üzerinden gönderin."
+
+msgid "Invalid date."
+msgstr "Geçersiz tarih."
+
+msgid "Invalid email address"
+msgstr "Geçersiz e-posta adresi"
+
+msgid "Invalid email address: %s"
+msgstr "Geçersiz e-posta adresi: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Geçersiz gönderen adresi: %1$s"
+
+msgid "Irregular"
+msgstr "Düzensiz"
+
+msgid "Is Mailspur helping you?"
+msgstr "Mailspur işinize yarıyor mu?"
+
+msgid "Is an email missing?"
+msgstr "Eksik bir e-posta var mı?"
+
+msgid "Is everything running?"
+msgstr "Her şey çalışıyor mu?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "En fazla sakla"
+
+msgid "Keep for"
+msgstr "Saklama süresi"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Bu URL'yi gizli tutun: bu sitenin gizli bir anahtarını içerir. Webhook'u test etmeden önce ayarları kaydedin."
+
+msgid "Kept: %s"
+msgstr "Saklama: %s"
+
+msgid "Key figures"
+msgstr "Temel rakamlar"
+
+msgid "Last 30 days"
+msgstr "Son 30 gün"
+
+msgid "Last email before the change"
+msgstr "Değişiklikten önceki son e-posta"
+
+msgid "Last failure"
+msgstr "Son hata"
+
+msgid "Last page"
+msgstr "Son sayfa"
+
+msgid "Last sent"
+msgstr "Son gönderim"
+
+msgid "Leave a review"
+msgstr "Değerlendirme yazın"
+
+msgid "Light"
+msgstr "Açık"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Bağlantı metni %1$s gösteriyor ancak %2$s adresine gidiyor"
+
+msgid "Link to a development address: %1$s"
+msgstr "Geliştirme adresine bağlantı: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Sitenizde bulunmayan bir sayfaya bağlantı: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Doğrudan tam adrese bağlantı verin. Tıklama takibi için bunun yerine kendi alan adınızda UTM parametreleri kullanın."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "URL kısaltıcı üzerinden bağlantı: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "“/” ile başlayan bağlantılar ve görseller yalnızca web sitesinde çalışır. E-posta istemcisinde bunları tamamlayacak bir site adresi yoktur; bu yüzden görseller boş kalır ve bağlantılar hiçbir yere gitmez."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Sitenin başka bir kopyasına bağlantılar: %1$s (bu site: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Görünen adresi gerçek hedeften farklı olan bağlantılar kimlik avı gibi görünür. İstenmeyen posta filtreleri bunları cezalandırır ve bazı e-posta istemcileri okuyucuyu uyarır."
+
+msgid "Load remote content"
+msgstr "Uzak içeriği yükle"
+
+msgid "Loading…"
+msgstr "Yükleniyor…"
+
+msgid "Log"
+msgstr "Günlük"
+
+msgid "Log entries %s"
+msgstr "Günlük kayıtları %s"
+
+msgid "Log entry not found."
+msgstr "Günlük kaydı bulunamadı."
+
+msgid "Log only – do not send any email"
+msgstr "Yalnızca günlüğe kaydet – hiçbir e-posta gönderme"
+
+msgid "Log size"
+msgstr "Günlük boyutu"
+
+msgid "Logged emails"
+msgstr "Kaydedilen e-postalar"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Kaydedilen e-postalar kişisel veriler içerebilir. Erişimi olabildiğince dar tutun. Ayarlar her zaman yönetici yetkisi gerektirir."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Oturum açma ve alıcılar kabul edildi, ancak e-postanın kendisi reddedildi – genellikle istenmeyen posta filtresi, gönderim limiti veya sağlayıcının bir politikası nedeniyle (yanıt kodu 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Giden e-postaları kaydeder, sitenizin gönderdiği e-posta türlerini çıkarır ve biri durduğunda sizi uyarır. Güvenli önizleme, teslimat tanılama, istatistikler."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "%s e-posta ayarlarında bunu kapatmak veya alıcısını değiştirmek için bir seçenek arayın – ya da türü burada yok sayın."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Hata iletisindeki sunucu yanıtına bakın; genellikle nedeni belirtir."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Günlükte beklenmedik toplu gönderim olup olmadığına bakın (istenmeyen form gönderimleri, döngüler)."
+
+msgid "Looking it up …"
+msgstr "Aranıyor …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "E-posta Günlüğü"
+
+msgid "Mail Log sections"
+msgstr "E-posta Günlüğü bölümleri"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Yanıtlar ve geri dönen e-postalar için posta sunucuları ayarlanmış."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Posta kutusu sağlayıcıları sitenizin bu alan adı için e-posta gönderebileceğini doğrulayabilir. Tam gönderen denetimi DKIM'e de bakar."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Posta kutusu bilinmiyor veya kullanılamıyor"
+
+msgid "Mailer"
+msgstr "Gönderici"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun her webhook'u bu anahtarla imzalar (Sending → Webhooks → HTTP webhook signing key); geçerli imzası olmayan raporlar reddedilir."
+
+msgid "Mailspur alerts"
+msgstr "Mailspur uyarıları"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur, günlükte gönderilemeyen e-postaları kontrol eder."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur mağazanızda #%s numaralı siparişi bulamadı."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur bu sitede şimdiye kadar %s teslim edilmiş e-posta kaydetti. Size zaman kazandırıyorsa WordPress.org'da kısa bir değerlendirme çok şey ifade eder – başkalarının eklentiyi bulmasına yardımcı olur ve onu ücretsiz tutar."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur günlüğünde #%s numaralı sipariş için e-posta yok."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur günlüğünde %s adresine giden e-posta yok."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur, %1$s tarafından geliştirildi. Beğendiniz mi? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur, sipariş onayları gibi her e-posta türünün ne sıklıkla gönderildiğini öğrenir ve biri durduğunda burada bildirir."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur her e-posta türünün ritmini son 8 haftadan öğrenir – günlük bir sipariş onayı 2 gün sonra, haftalık bir rapor 2 hafta sonra gecikmiş sayılır. Uyarı türü, göndereni ve son e-postasından bu yana güncellenen eklentileri belirtir. Yukarıdaki kanalları kullanır; yok sayılan türler asla uyarı vermez."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur, sitenizin e-postayı gönderdiğini görür, gelen kutusunun kendisini değil. Orada değilse alıcıdan istenmeyen posta klasörünü kontrol etmesini isteyin."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur artık bu e-postaları durduruyor; e-posta türleri yok sayılıyor."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – E-posta Günlüğü"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: e-postalar bekletiliyor"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: test modu"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Ana kaynak: %1$s (%2$s e-posta)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Posta gönderme eklentisindeki From adresinin doğrulanmış alan adıyla eşleştiğinden emin olun."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "E-postanın “charset=UTF-8” ile gönderildiğinden, şablon dosyalarının UTF-8 olarak kaydedildiğinden ve veritabanı tablolarının utf8mb4 kullandığından emin olun. Zaten bozuk kaydedilmiş metinleri düzeltin."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Şifreleme ayarının portla eşleştiğinden emin olun."
+
+msgid "Many emails could not be sent recently"
+msgstr "Son zamanlarda birçok e-posta gönderilemedi"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Konuda çok sayıda ünlem işareti (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Birçok e-posta istemcisi, okuyucu izin verene kadar görselleri engeller. Alternatif metin olmadan okuyucu yalnızca boş kutular görür; ekran okuyucular işe yarar bir şey seslendirmez."
+
+msgid "Mark as resolved"
+msgstr "Çözüldü olarak işaretle"
+
+msgid "Marked as spam"
+msgstr "İstenmeyen posta olarak işaretlendi"
+
+msgid "Marked as spam by the recipient"
+msgstr "Alıcı tarafından istenmeyen posta olarak işaretlendi"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Kaydedilen bağlantılardaki parola sıfırlama, etkinleştirme ve erişim anahtarlarını, ayrıca düz metin olarak gönderilen parolaları, API anahtarlarını ve kart numaralarını maskele"
+
+msgid "Maybe later"
+msgstr "Belki daha sonra"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "E-posta hiç gönderilmemiş olabilir – sipariş durumunu ve mağazanızın e-posta ayarlarını kontrol edin."
+
+msgid "Menu position"
+msgstr "Menü konumu"
+
+msgid "Message"
+msgstr "İleti"
+
+msgid "Method"
+msgstr "Yöntem"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online bu posta kutusu veya tüm kuruluş için SMTP oturum açmayı (temel kimlik doğrulama) engelliyor."
+
+msgid "Minutes"
+msgstr "Dakika"
+
+msgid "Monday"
+msgstr "Pazartesi"
+
+msgid "Monitor again"
+msgstr "Yeniden izle"
+
+msgid "Monitoring alerts"
+msgstr "İzleme uyarıları"
+
+msgid "More"
+msgstr "Daha fazla"
+
+msgid "More actions"
+msgstr "Diğer işlemler"
+
+msgid "More filters"
+msgstr "Diğer filtreler"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "En yaygın neden (%1$s tanesi): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Çoğu sunucu toplamda 10–25 MB kabul eder."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Birden fazla DMARC kaydı bulundu. Bu durumda alıcılar DMARC'ı yok sayar – yalnızca birini tutun."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Birden fazla SPF kaydı bulundu. Alıcılar bunu hata olarak değerlendirir (PermError) – bunları tek bir kayıtta birleştirin."
+
+msgid "Needs attention"
+msgstr "İlgi bekliyor"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Ne From başlığı ne de gönderen kaydedildi. Posta gönderici varsayılanına döner, çoğu zaman wordpress@yourdomain."
+
+msgid "Never"
+msgstr "Hiçbir zaman"
+
+msgid "New"
+msgstr "Yeni"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Yeni URL oluşturuldu. E-posta sağlayıcınızda güncelleyin."
+
+msgid "New email types"
+msgstr "Yeni e-posta türleri"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Yeni e-postalar siz serbest bırakana veya iptal edene kadar bekletilir. Parola sıfırlama e-postaları yine de gönderilir."
+
+msgid "New sender"
+msgstr "Yeni gönderen"
+
+msgid "New sender writes to many addresses"
+msgstr "Yeni gönderen çok sayıda adrese yazıyor"
+
+msgid "Next email"
+msgstr "Sonraki e-posta"
+
+msgid "Next email (j)"
+msgstr "Sonraki e-posta (j)"
+
+msgid "Next page"
+msgstr "Sonraki sayfa"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Yaygın seçicilerde DKIM anahtarı bulunamadı."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "%s gönderen alan adı için DMARC kaydı yok"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "DMARC kaydı bulunamadı. Büyük posta kutusu sağlayıcıları bunu bekler; o olmadan herkes bu alan adını fark edilmeden taklit edebilir."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "MX kaydı yok: bu alan adı yanıt veya geri dönen e-posta alamaz ve bazı alıcılar bu tür gönderenleri reddeder."
+
+msgid "No SMTP transcript for this email."
+msgstr "Bu e-posta için SMTP dökümü yok."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "%s gönderen alan adı için SPF ve DMARC kaydı yok"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "%s gönderen alan adı için SPF kaydı yok"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "SPF kaydı bulunamadı. Alıcılar bu alan adı için hangi sunucuların gönderebileceğini bilemez."
+
+msgid "No alerts sent yet."
+msgstr "Henüz uyarı gönderilmedi."
+
+msgid "No connection to the SMTP server"
+msgstr "SMTP sunucusuyla bağlantı yok"
+
+msgid "No email logged for %s hours"
+msgstr "%s saattir hiç e-posta kaydedilmedi"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "Bu site son %3$s günün %2$s gününde bu zaman aralığında e-posta göndermiş olmasına rağmen son %1$s saatte hiç e-posta kaydedilmedi (ortalama %4$s)."
+
+msgid "No emails"
+msgstr "E-posta yok"
+
+msgid "No emails found."
+msgstr "E-posta bulunamadı."
+
+msgid "No emails in this period."
+msgstr "Bu dönemde e-posta yok."
+
+msgid "No emails logged for this order yet."
+msgstr "Bu sipariş için henüz kaydedilmiş e-posta yok."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Henüz kaydedilmiş e-posta yok. Siteniz e-posta gönderir göndermez e-posta türleri burada görünür."
+
+msgid "No emails match these filters."
+msgstr "Bu filtrelerle eşleşen e-posta yok."
+
+msgid "No emails sent"
+msgstr "Gönderilen e-posta yok"
+
+msgid "No emails to this user in the log."
+msgstr "Günlükte bu kullanıcıya giden e-posta yok."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "Son iki haftada hiç e-posta kaydedilmedi."
+
+msgid "No limit"
+msgstr "Sınırsız"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Bu sitede başka bir e-posta günlüğü eklentisine ait günlük bulunamadı."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Bu sitede bu eklentiye ait günlük bulunamadı."
+
+msgid "No problem recipients."
+msgstr "Sorunlu alıcı yok."
+
+msgid "No problems found in this email."
+msgstr "Bu e-postada sorun bulunamadı."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Herkese açık gönderen alan adı bulunamadı (site adresi bir alan adı değil ve günlükte henüz gönderen yok)."
+
+msgid "No public sender domain to check"
+msgstr "Denetlenecek herkese açık gönderen alan adı yok"
+
+msgid "No regularly sent email has stopped"
+msgstr "Düzenli gönderilen hiçbir e-posta durmadı"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Rapor adresi (rua) yok – sizin adınıza kimin gönderdiğini göremezsiniz."
+
+msgid "No sender address recorded"
+msgstr "Gönderen adresi kaydedilmedi"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Bu kayıt için iz yok. İz özelliği yokken veya bu özelliği olmayan bir sürümle kaydedildi."
+
+msgid "No unusual email failures"
+msgstr "Olağan dışı e-posta hatası yok"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Hayır, bilerek. %2$s adresine “%1$s” %3$s bekletildi ve gönderilmedi. Neden: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Hayır. Düzenli giden her e-posta zamanında gönderildi."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Hayır. %2$s adresine “%1$s” %3$s başarısız oldu. Neden: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Hayır. %2$s adresine “%1$s” sitenizden %3$s çıktı, ancak %4$s alıcı sunucunun onu reddettiğini bildiriyor."
+
+msgid "None"
+msgstr "Yok"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Normalde en az %1$s günde bir gönderilir, şu anda %2$s gecikmede."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Tüm seçiciler zamanında denetlenemedi."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Kaydedilmedi: başka bir eklentide SMTP hata ayıklama açıktı."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Kaydedilmedi: SMTP dökümü ayarlarda kapalı."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Kaydedilmedi: bu e-posta SMTP ile gönderilmedi."
+
+msgid "Not set up"
+msgstr "Ayarlanmadı"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Saklanmadı: dökümler yalnızca başarısız e-postalar için tutulur."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Henüz değil. %2$s adresine “%1$s” sitenizden %3$s çıktı, ancak %4$s geçici bir sorun bildiriyor."
+
+msgid "Notes"
+msgstr "Notlar"
+
+msgid "Notes in the latest email: %s"
+msgstr "En son e-postadaki notlar: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Notlar: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Notlar: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Bugün başka bir şey beklenmiyor."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Son 7 günde başarısız olan bir şey yok."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Henüz karşılaştırılacak bir şey yok: hiçbir e-posta Mailspur'un bir boşluk fark edeceği kadar düzenli gönderilmiyor."
+
+msgid "Number of failed emails"
+msgstr "Başarısız e-posta sayısı"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Sayılar yok sayılır, bu nedenle “Sipariş #123” ve “Sipariş #124” birlikte sayılır."
+
+msgid "OK"
+msgstr "Tamam"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Birisi sayfayı beklerken gönderilen son %1$s e-postanın yarısı %2$s sn'den uzun sürdü (ortalama %3$s sn)."
+
+msgid "Off"
+msgstr "Kapalı"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Varsayılan olarak kapalıdır. Kapalıyken \".eml indir\", iletiyi kaydedilmiş (gizlenmiş) verilerden yeniden oluşturur. Ham kaynak, parola sıfırlama bağlantılarını ve diğer gizli bilgileri tam gönderildiği gibi içerir – yalnızca gerektiğinde ve iki kutu da işaretliyken etkinleştirin."
+
+msgid "Off – deliver emails normally"
+msgstr "Kapalı – e-postaları normal şekilde teslim et"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Neden giderildikten sonra e-postayı günlükten yeniden gönderebilirsiniz."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Raporlarınız meşru e-postaların geçtiğini gösterdiğinde p=quarantine (veya p=reject) değerine geçin."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "İki e-postadan biri saklama ayarları nedeniyle silindi veya anonimleştirildi, bu yüzden artık karşılaştırılamazlar."
+
+msgid "Only administrators can empty the log."
+msgstr "Günlüğü yalnızca yöneticiler boşaltabilir."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Yalnızca yöneticiler başka adreslere e-posta gönderebilir."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Yalnızca son 14 gün bu zaman aralığında normalde e-posta gönderildiğini gösterdiğinde uyarır (14 günün en az 10'unda, aynı hafta günü dahil); böylece sakin geceler veya hafta sonları uyarıyı tetiklemez."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Yalnızca tüm alıcıları sorunlu alıcı olan e-postalar. Parola sıfırlama e-postaları her zaman gönderilir; bekletilen e-postalar yine de günlükten gönderilebilir (\"Şimdi gönder\")."
+
+msgid "Only held emails can be released."
+msgstr "Yalnızca bekletilen e-postalar serbest bırakılabilir."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Açık dağıtım listesi: %1$s harici alıcı birbirinin adresini görüyor"
+
+msgid "Open in log"
+msgstr "Günlükte aç"
+
+msgid "Open latest"
+msgstr "En sonuncuyu aç"
+
+msgid "Open staging mode"
+msgstr "Test modunu aç"
+
+msgid "Open the email types"
+msgstr "E-posta türlerini aç"
+
+msgid "Open the emergency brake"
+msgstr "Acil durum frenini aç"
+
+msgid "Open the log"
+msgstr "Günlüğü aç"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Tam hatayı görmek için posta gönderme eklentinizin günlüğünü veya hata ayıklama görünümünü açın."
+
+msgid "Open the mail log"
+msgstr "E-posta günlüğünü aç"
+
+msgid "Open the sender check"
+msgstr "Gönderen denetimini aç"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "İsteğe bağlıdır ve varsayılan olarak kapalıdır. Etkinleştirildiğinde Mailspur günlüğü düzenli olarak kontrol eder ve hata artışları, olağan dışı sessizlik veya durmuş e-posta türleri hakkında sizi bilgilendirir. Uyarılar yalnızca burada girdiğiniz adreslere ve webhook'a gider; site adını, uyarı metnini (durmuş bir e-posta türü için: göndereni ve konu kalıbı) ve günlüğe bir bağlantıyı içerir – asla e-posta içeriği veya alıcılar içermez."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "İsteğe bağlı, yalnızca https. Slack ve Discord webhook URL'leri bir sohbet iletisi alır, diğer tüm URL'ler bir JSON POST isteği. İstek sunucunuz tarafından tam olarak bu URL'ye yapılır – başka hiçbir hizmet dahil değildir."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Veya adresi posta sağlayıcınızda takma ad / “farklı gönder” izni olarak ekleyin."
+
+msgid "Order #%s"
+msgstr "Sipariş #%s"
+
+msgid "Order data"
+msgstr "Sipariş verileri"
+
+msgid "Origin"
+msgstr "Köken"
+
+msgid "Original Bcc"
+msgstr "Asıl Bcc"
+
+msgid "Original Cc"
+msgstr "Asıl Cc"
+
+msgid "Original recipients"
+msgstr "Asıl alıcılar"
+
+msgid "Other emails"
+msgstr "Diğer e-postalar"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Diğer alıcılar (örn. misafirler)"
+
+msgid "Overview"
+msgstr "Genel bakış"
+
+msgid "Own top-level menu item"
+msgstr "Ayrı üst düzey menü öğesi"
+
+msgid "PHP extension openssl is missing"
+msgstr "openssl PHP uzantısı eksik"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer hazır (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Sayfalama"
+
+msgid "Password sent in plain text"
+msgstr "Parola düz metin olarak gönderildi"
+
+msgid "Path"
+msgstr "Yol"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Düz metin olarak ödeme kartı numarası: %1$s"
+
+msgid "Per page"
+msgstr "Sayfa başına"
+
+msgid "Period"
+msgstr "Dönem"
+
+msgid "Personal data"
+msgstr "Kişisel veriler"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Phone number"
+msgstr "Telefon numarası"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Telefon genişliği (375 px). Yana kaydırabiliyorsanız e-posta çoğu telefon ekranından daha geniştir."
+
+msgid "Plain text"
+msgstr "Düz metin"
+
+msgid "Please enter valid email addresses."
+msgstr "Lütfen geçerli e-posta adresleri girin."
+
+msgid "Plugin"
+msgstr "Eklenti"
+
+msgid "Plugin or theme that sent the email."
+msgstr "E-postayı gönderen eklenti veya tema."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "E-postaların ulaşmasını veya doğru görüntülenmesini engelleyen sorunları belirt"
+
+msgid "Port"
+msgstr "Bağlantı noktası"
+
+msgid "Postal address"
+msgstr "Posta adresi"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo veya Amazon SES bu siteye bir e-postanın teslim edilip edilmediğini, geri dönüp dönmediğini veya istenmeyen posta olarak işaretlenip işaretlenmediğini bildirebilir. Durum, kaydedilen e-postada gösterilir ve kalıcı geri dönmeler sorunlu alıcılar için sayılır. Raporları eşleştirmek için Mailspur giden e-postalara bir referans üst bilgisi ekler."
+
+msgid "Preparation"
+msgstr "Hazırlık"
+
+msgid "Preview"
+msgstr "Önizleme"
+
+msgid "Previews"
+msgstr "Önizlemeler"
+
+msgid "Previous email"
+msgstr "Önceki e-posta"
+
+msgid "Previous email (k)"
+msgstr "Önceki e-posta (k)"
+
+msgid "Previous page"
+msgstr "Önceki sayfa"
+
+msgid "Print"
+msgstr "Yazdır"
+
+msgid "Privacy"
+msgstr "Gizlilik"
+
+msgid "Privacy & security"
+msgstr "Gizlilik ve güvenlik"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Muhtemelen evet: %s e-posta türünün gönderimi durdu."
+msgstr[1] "Muhtemelen evet: %s e-posta türünün gönderimi durdu."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Test e-postaları yalnızca bir yöneticiye gönderilir."
+
+msgid "Problem"
+msgstr "Sorun"
+
+msgid "Problem recipients"
+msgstr "Sorunlu alıcılar"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Örneğin spam botları bir iletişim formunu kötüye kullandığı için normalden çok daha fazla e-posta çıktığında alan adınızı korur. Uyarılar izleme uyarılarının kanallarını kullanır; parola sıfırlama e-postaları asla bekletilmez."
+
+msgid "Provider status"
+msgstr "Sağlayıcı durumu"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "%2$s gibi sağlayıcılar katı bir DMARC politikası yayımlar. Web sunucunuz tarafından gönderilen ve onların alan adından “gelen” bir e-posta bu denetimi geçemez ve reddedilir ya da istenmeyen postaya düşer."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Önemli içeriği gerçek metin olarak yazın ve görselleri yalnızca ek olarak kullanın."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Önemli bilgiyi başa koyun ve konuyu yaklaşık 80 karakterin altında tutun."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "REST yolu"
+
+msgid "Rarely"
+msgstr "Nadiren"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Mailspur'u WordPress.org'da değerlendirin"
+
+msgid "Raw source"
+msgstr "Ham kaynak"
+
+msgid "Reason"
+msgstr "Neden"
+
+msgid "Rebuild from the log"
+msgstr "Günlükten yeniden oluştur"
+
+msgid "Recipient"
+msgstr "Alıcı"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Alıcı alan adı e-posta alamıyor: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Alıcı alan adı e-posta kabul etmiyor: %1$s"
+
+msgid "Recipients"
+msgstr "Alıcılar"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Önerilir. Aksi halde günlüğe erişimi olan herkes kaydedilmiş bir sıfırlama bağlantısını veya parolayı kullanarak bir hesabı ele geçirebilir. Böyle bir e-postayı yeniden göndermek maskelenmiş sürümü gönderir."
+
+msgid "Record for every email"
+msgstr "Her e-posta için kaydet"
+
+msgid "Record for failed emails only"
+msgstr "Yalnızca başarısız e-postalar için kaydet"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "SMTP sunucusuyla yapılan konuşmayı kaydeder (yalnızca e-postalar SMTP ile gönderildiğinde). Giriş bilgileri ve ileti içeriği asla kaydedilmez. Başka bir eklentide SMTP hata ayıklama açıkken atlanır."
+
+msgid "Recovery"
+msgstr "Düzelme"
+
+msgid "Redact secrets"
+msgstr "Gizli bilgileri gizle"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Tüm e-postaları aşağıdaki adreslere yönlendir"
+
+msgid "Redirect to"
+msgstr "Şuraya yönlendir"
+
+msgid "Redirect to test addresses"
+msgstr "Test adreslerine yönlendir"
+
+msgid "Redirected by staging mode."
+msgstr "Test modu tarafından yönlendirildi."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "HTML'i küçültün: kullanılmayan CSS'i, tekrar eden satır içi stilleri, yorumları ve uzun izleme URL'lerini kaldırın. Görseller sayılmaz, yalnızca HTML'in kendisi sayılır."
+
+msgid "Registered users"
+msgstr "Kayıtlı kullanıcılar"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "SPF, DKIM veya DMARC tarafından reddedildi"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Göreli bağlantılar veya görseller (%1$s), örn. %2$s"
+
+msgid "Release held emails"
+msgstr "Bekletilen e-postaları serbest bırak"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Test modundan serbest bırakıldı (bekletilen kayıt #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Acil durum freninden serbest bırakıldı (bekletilen kayıt #%s)."
+
+msgid "Remote content"
+msgstr "Uzak içerik"
+
+msgid "Remote content is loaded."
+msgstr "Uzak içerik yüklendi."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Uzak görseller ve yazı tipleri engellenir; böylece gönderenler bu kaydı ne zaman açtığınızı izleyemez."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "%s kaynağından içe aktarılan tüm kayıtlar kaldırılsın mı? Diğer eklentideki veriler etkilenmez."
+
+msgid "Remove imported entries"
+msgstr "İçe aktarılan kayıtları kaldır"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Kart alanını bu e-postayı gönderen formun veya eklentinin bildiriminden kaldırın – kart verileri yalnızca ödeme sağlayıcısına aittir. En fazla son dört haneyi gösterin. Alıcıdan e-postayı silmesini isteyin."
+
+msgid "Removed:"
+msgstr "Kaldırılan:"
+
+msgid "Repeat alerts after"
+msgstr "Uyarıları şu süreden sonra tekrarla"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Yanıtlar size ulaşamaz: %1$s adresinden Reply-To olmadan gönderildi"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Son 30 günde e-posta sağlayıcınız tarafından bildirildi; yalnızca bildirimde bulunduğu e-postalar sayılır."
+
+msgid "Request"
+msgstr "İstek"
+
+msgid "Request failed: %s"
+msgstr "İstek başarısız oldu: %s"
+
+msgid "Resend"
+msgstr "Yeniden gönder"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Birkaç dakika sonra e-postayı günlükten yeniden gönderin."
+
+msgid "Resend the email from the log later."
+msgstr "E-postayı daha sonra günlükten yeniden gönderin."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Teslimat çalışır hale geldiğinde e-postayı günlükten yeniden gönderin."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Limit sıfırlandığında başarısız e-postaları yeniden gönderin."
+
+msgid "Resent from log"
+msgstr "Günlükten yeniden gönderildi"
+
+msgid "Reset filters"
+msgstr "Filtreleri sıfırla"
+
+msgid "Result"
+msgstr "Sonuç"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Önbellekten sonuç – DNS kayıtlarını değiştirdikten sonra \"Yeniden denetle\" seçeneğini kullanın."
+
+msgid "Retention"
+msgstr "Saklama süresi"
+
+msgid "Retention in the log"
+msgstr "Günlükte saklama"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Bu e-posta türünün saklama süresi kaydedildi. Bir sonraki günlük temizlikte uygulanır."
+
+msgid "Review held emails"
+msgstr "Bekletilen e-postaları incele"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Bu e-postanın notlarını gözden geçirin (bağlantılar, gönderen, yer tutucular)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Anahtarı hizmetin kontrol panelinde iptal edin ve yeni bir tane oluşturun. Ardından bir e-postaya nasıl girdiğini bulun (hata ayıklama veya hata raporları, ayarları yansıtan bir form) ve bunu durdurun."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "İptal edilmiş anahtarlar (boş p=): %s."
+
+msgid "Rhythm"
+msgstr "Ritim"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Veritabanında eski alan adı için ara ve değiştir yapın ve e-posta şablonlarındaki ve eklenti ayarlarındaki sabit kodlanmış URL'leri kontrol edin."
+
+msgid "Run the full sender check"
+msgstr "Tam gönderen denetimini çalıştır"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "Microsoft 365'te SMTP AUTH devre dışı"
+
+msgid "SMTP host"
+msgstr "SMTP sunucusu"
+
+msgid "SMTP login failed"
+msgstr "SMTP oturum açma başarısız"
+
+msgid "SMTP transcript"
+msgstr "SMTP dökümü"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "SPF kaydı dünyadaki her sunucunun bu alan adı için göndermesine izin veriyor (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "SPF kaydı ?all (nötr) ile bitiyor: alan adını sahteciliğe karşı korumaz."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "SPF kaydı bulundu (başka bir ilkeye redirect=)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "SPF kaydı bulundu. Diğer sunucular şüpheli olarak işaretlenir (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "SPF kaydı bulundu. Diğer sunucular reddedilir (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "SPF kaydında \"all\" terimi yok, bu yüzden diğer sunuculardan gelen e-postalar nötr kabul edilir."
+
+msgid "Saturday"
+msgstr "Cumartesi"
+
+msgid "Save"
+msgstr "Kaydet"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Kaydedildi – korumak için boş bırakın"
+
+msgid "Scheduled for later today:"
+msgstr "Bugün daha sonrası için zamanlandı:"
+
+msgid "Search recipient or subject"
+msgstr "Alıcı veya konu ara"
+
+msgid "Search recipient or subject …"
+msgstr "Alıcı veya konu ara …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Eski adresi e-posta şablonunda, eklenti ayarlarında ve veritabanında arayın (örn. siteyi taşıdıktan sonra) ve canlı alan adıyla değiştirin."
+
+msgid "See why"
+msgstr "Nedenini gör"
+
+msgid "Seen"
+msgstr "Görüldü"
+
+msgid "Select all"
+msgstr "Tümünü seç"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "\"%s\" seçicisinin de anahtarı yok."
+
+msgid "Send"
+msgstr "Gönder"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Bunun yerine kullanıcının parolayı kendisinin belirlediği bir bağlantı gönderin – WordPress çekirdeğinin yeni kullanıcı e-postası tam olarak bunu yapar. Bu e-postayı gönderen eklentide “Parolayı e-postayla gönder” veya “Parolayı ekle” gibi bir seçenek arayın ve kapatın."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Sorun çözüldüğünde ileti gönder"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Posta gönderme eklentisinin ayarlarından bir test e-postası gönderin."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Yukarıdaki adreslere haftalık e-posta raporu gönder"
+
+msgid "Send again"
+msgstr "Yeniden gönder"
+
+msgid "Send alerts by email to"
+msgstr "Uyarıları e-postayla şuraya gönder"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Bekletilen %s e-postanın tümü şimdi asıl alıcılarına gönderilsin mi?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Büyük dosyaları ek yerine indirme bağlantısı olarak gönderin."
+
+msgid "Send latest to me"
+msgstr "En sonuncuyu bana gönder"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Bültenleri List-Unsubscribe ve List-Unsubscribe-Post başlıklarını ekleyen bir bülten eklentisi veya hizmetiyle gönderin ve tek bir e-postayı Bcc ile çok sayıda kişiye göndermeyin."
+
+msgid "Send now"
+msgstr "Şimdi gönder"
+
+msgid "Send report now"
+msgstr "Raporu şimdi gönder"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Bu tür e-postaları her alıcıya ayrı ayrı gönderin veya alıcıları Bcc'ye koyun. Bültenler için alıcı başına bir e-posta gönderen bir bülten eklentisi kullanın. Müşteri adresleri ifşa olduysa, olayın bildirilmesi gerekip gerekmediğini veri koruma görevlinizle kontrol edin."
+
+msgid "Send test alert"
+msgstr "Test uyarısı gönder"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "E-postayı “Content-Type: text/html; charset=UTF-8” başlığıyla gönderin veya içerik türünü wp_mail_content_type filtresiyle ayarlayın. Birçok form ve mağaza eklentisinde “HTML e-posta” seçeneği vardır."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Bu türün en son e-postası %s adresine gönderilsin mi?"
+
+msgid "Send this email again to %s?"
+msgstr "Bu e-posta %s adresine yeniden gönderilsin mi?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Bu e-postayı şuraya gönder (virgülle ayrılmış en fazla 10 adres):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Bekletilen bu e-posta şimdi %s adresine gönderilsin mi? Test modu yalnızca bu e-posta için atlanır."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Özellikle paylaşımlı barındırmada web sunucusu yerine saygın bir SMTP hizmeti üzerinden gönderin."
+
+msgid "Send to…"
+msgstr "Şuraya gönder…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Gönderen denetimi (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Gönderen alan adı %1$s siteden (%2$s) farklı"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Gönderen alan adı (SPF ve DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Gönderen alan adı veya adresi doğrulanmadı"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Son 200 e-postanın %s tanesinin göndereni"
+
+msgid "Sending failed – see the log."
+msgstr "Gönderim başarısız – günlüğe bakın."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Gönderim başarısız oldu – ayrıntılar için yeni günlük kaydına bakın."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Arka planda gönderim (kuyruğu olan bir posta gönderme eklentisi), sayfanın beklemeden tamamlanmasını sağlar."
+
+msgid "Sending limit or quota reached"
+msgstr "Gönderim limitine veya kotaya ulaşıldı"
+
+msgid "Sending report …"
+msgstr "Rapor gönderiliyor …"
+
+msgid "Sending test alert …"
+msgstr "Test uyarısı gönderiliyor …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Gönderim yeniden çalışıyor: artık hata artışı yok."
+
+msgid "Sending…"
+msgstr "Gönderiliyor…"
+
+msgid "Sent"
+msgstr "Gönderildi"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Ücretsiz bir e-posta adresi adına gönderildi: %1$s"
+
+msgid "Sent by"
+msgstr "Gönderen"
+
+msgid "Sent by WP-Cron."
+msgstr "WP-Cron tarafından gönderildi."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "%1$s cron olayı tarafından gönderildi – WP-Cron diğer olayları çalıştırırken bu olay %2$s gecikmede; bir hatayla başarısız oluyor olabilir."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "%1$s cron olayı tarafından gönderildi – olay zamanlanmış (sonraki çalışma %2$s sonra) ve WP-Cron çalışıyor; yani olay artık bu e-postayı göndermiyor."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "%s cron olayı tarafından gönderildi – bu olay artık zamanlanmış değil."
+
+msgid "Sent by the cron event %s."
+msgstr "%s cron olayı tarafından gönderildi."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Tekrar tekrar gönderildi: %2$s dakika içinde %1$s özdeş e-posta daha"
+
+msgid "Sent to %s."
+msgstr "%s adresine gönderildi."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Sipariş tarihi civarında aynı adrese gönderildi ancak bu siparişle ilişkilendirilmedi (örneğin ilişki oluşmadan önce kaydedildi veya içe aktarıldı)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Birinin okuduğu bir Reply-To adresi ayarlayın, örn. WooCommerce → Ayarlar → E-postalar bölümünde veya form eklentinizin e-posta ayarlarında. Ya da yanıt alabilen bir adresten gönderin."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "SMTP eklentinizde veya wp_mail_from filtresiyle alan adınızda bir gönderen adresi ayarlayın."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Gerçek alan adınızda bir gönderen adresi ayarlayın, örn. SMTP eklentinizde veya wp_mail_from filtresiyle, ve site adresini Ayarlar → Genel bölümünde kontrol edin."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Gönderen eklentinin şablonunda veya form ayarlarında bir konu belirleyin."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "SMTP eklentinizde From adresini oturum açtığınız posta kutusu olarak ayarlayın ve “From adresini zorla” seçeneğini etkinleştirin."
+
+msgid "Set up staging mode"
+msgstr "Test modunu ayarla"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Settings › Discussion"
+msgstr "Ayarlar › Tartışma"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Birden fazla ünlem işareti reklam amaçlı istenmeyen postalara özgüdür. İstenmeyen posta filtreleri bunu e-postanın aleyhine sayabilir, bu da teslimatı kötüleştirebilir."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Bu türün son e-postalarından birkaçı başarısız oldu."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Günlük başarısız e-posta oranı (uzun dönemler için haftalık)."
+
+msgid "Shop managers and above"
+msgstr "Mağaza yöneticileri ve üstü"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Kısaltılmış bağlantılar nereye gittiklerini gizler. İstenmeyen posta gönderenler bunları çok kullanır; bu yüzden istenmeyen posta filtreleri bunları e-postanın aleyhine sayabilir, bu da teslimatı kötüleştirebilir."
+
+msgid "Show all email types"
+msgstr "Tüm e-posta türlerini göster"
+
+msgid "Show all in Mail Log"
+msgstr "Tümünü e-posta günlüğünde göster"
+
+msgid "Show as"
+msgstr "Şu şekilde göster"
+
+msgid "Show data as table"
+msgstr "Verileri tablo olarak göster"
+
+msgid "Show email types"
+msgstr "E-posta türlerini göster"
+
+msgid "Show emails"
+msgstr "E-postaları göster"
+
+msgid "Show emails for %s in the log"
+msgstr "%s için e-postaları günlükte göster"
+
+msgid "Show failed emails"
+msgstr "Başarısız e-postaları göster"
+
+msgid "Show held emails"
+msgstr "Bekletilen e-postaları göster"
+
+msgid "Show these emails in the log"
+msgstr "Bu e-postaları günlükte göster"
+
+msgid "Silence"
+msgstr "Sessizlik"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "E-postanın kendi koyu mod stillerini kullanan benzetilmiş koyu mod. Her posta uygulaması koyu modu biraz farklı işler."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Renkleri tersine çevirerek koyu modu zorlayan uygulamaların benzetimi. Görseller renklerini korur; gerçek uygulamalar ayrıntılarda farklılık gösterir."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "2024'ten beri Gmail ve Yahoo, toplu e-postalar için tek tıkla abonelikten çıkmayı (List-Unsubscribe başlığı) zorunlu tutuyor. Bu olmadan bültenlerin reddedilme veya filtrelenme olasılığı daha yüksektir."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Yanlış yazılmış bir adres gibi nedenlerle tek tük hatalar normaldir."
+
+msgid "Some emails could not be sent recently"
+msgstr "Son zamanlarda bazı e-postalar gönderilemedi"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "DNS çok yavaş yanıt verdiği için bazı sorgular atlandı."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Üzgünüz, bu sayfaya erişim izniniz yok."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Üzgünüz, bunu yapmanıza izin verilmiyor."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Üzgünüz, e-posta günlüğünü dışa aktarma izniniz yok."
+
+msgid "Source"
+msgstr "Kaynak"
+
+msgid "Staging"
+msgstr "Hazırlık"
+
+msgid "Staging mode"
+msgstr "Test modu"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Test modu etkin: tüm e-postalar %s adresine yönlendiriliyor."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Test modu etkin: e-postalar günlüğe kaydediliyor ancak teslim edilmiyor."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Test modu etkin: e-postalar yönlendirilmeli ancak geçerli bir yönlendirme adresi ayarlanmamış – tüm e-postalar bekletiliyor ve teslim edilmiyor."
+
+msgid "Staging mode is off"
+msgstr "Test modu kapalı"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Bu canlı bir site olmasına rağmen test modu açık"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Bu hazırlık sitesi için test modu açık"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Test modu açık: tüm e-postalar gerçek alıcılara değil, test adreslerinize gidiyor."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Test modu açık: e-postalar günlüğe kaydediliyor ancak gönderilmiyor."
+
+msgid "Staging mode settings"
+msgstr "Test modu ayarları"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Rapor almak için p=none ile başlayın, SPF ve DKIM geçtiğinde quarantine veya reject olarak sıkılaştırın."
+
+msgid "Statistics"
+msgstr "İstatistikler"
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "%s eski e-posta arka planda hâlâ türlere ayrılıyor. Bir dakika sonra sayfayı yeniden yükleyin."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Toplamayı durdur (bekleyenleri şimdi gönderir)"
+
+msgid "Stop these emails"
+msgstr "Bu e-postaları durdur"
+
+msgid "Stopped"
+msgstr "Durdu"
+
+msgid "Stopped by Mailspur."
+msgstr "Mailspur tarafından durduruldu."
+
+msgid "Stopped email types"
+msgstr "Gönderimi durmuş e-posta türleri"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Her e-postanın tam ham MIME kaynağını sakla"
+
+msgid "Subject"
+msgstr "Konu"
+
+msgid "Subject mostly in capital letters"
+msgstr "Konu çoğunlukla büyük harflerle"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Büyük harfli konular bağırıyormuş gibi okunur ve istenmeyen postalarda yaygındır. İstenmeyen posta filtreleri bunu e-postanın aleyhine sayabilir, bu da teslimatı kötüleştirebilir."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Konular genellikle adlar veya sipariş numaraları içerir."
+
+msgid "Suggested TXT record for %s"
+msgstr "%s için önerilen TXT kaydı"
+
+msgid "Sunday"
+msgstr "Pazar"
+
+msgid "Supported: %s."
+msgstr "Desteklenenler: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "%1$s altında kapatın: “%2$s”."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Günlük özetten çıkarıldı ve ayrı olarak gönderildi."
+
+msgid "Temporary rejection – try again later"
+msgstr "Geçici ret – daha sonra tekrar deneyin"
+
+msgid "Test"
+msgstr "Test"
+
+msgid "Test alert"
+msgstr "Test uyarısı"
+
+msgid "Text changes"
+msgstr "Metin değişiklikleri"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "HTML'den türetilmiş metin sürümü. E-postanın kendi düz metin sürümü olup olmadığı kaydedilmedi."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Posta sunucunuzun bu alan adı adına göndermesine izin veriliyorsa sorun yoktur. Aksi takdirde SPF ve DMARC başarısız olur ve e-posta istenmeyen postaya düşer."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Bir test kopyası için bu doğrudur, ancak canlı bir sitede müşteriler sipariş onayı, parola sıfırlama veya formlarına yanıt almaz. Bu canlı siteyse test modunu kapatın."
+
+msgid "The API key was rejected"
+msgstr "API anahtarı reddedildi"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "DNS sorgusu başarısız oldu veya zaman aşımına uğradı. Gönderen denetimini daha sonra yeniden deneyin."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "HTML e-posta görseller içeriyor ancak neredeyse hiç metin yok. İstenmeyen posta filtreleri görselleri okuyamaz ve bu tür e-postalara güvenmez, bu da teslimatı kötüleştirebilir. E-posta istemcisi görselleri engellerse okuyucu neredeyse boş bir e-posta görür."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "SMTP hesabı yalnızca kendi adresiyle (veya doğrulanmış takma adlarla) gönderebilir. WordPress veya bir eklenti farklı bir From adresi kullandı."
+
+msgid "The SMTP server conversation was empty."
+msgstr "SMTP sunucusuyla konuşma boştu."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "SMTP sunucusuna hiç ulaşılamadı: sunucu adı veya port yanlış, sunucu çalışmıyor ya da barındırma sağlayıcısı giden posta portlarını engelliyor."
+
+msgid "The SMTP server refuses to relay"
+msgstr "SMTP sunucusu aktarmayı reddediyor"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "SMTP sunucusu kullanıcı adını veya parolayı reddetti (yanıt kodu 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "SMTP sunucusu oturum açma veya şifreleme gerektiriyor"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Adres geçersiz görünüyor – yazım hatalarını kontrol edin veya başka bir adres isteyin."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Gövde HTML etiketleri içeriyor, ancak e-posta text/plain olarak gönderildi (WordPress varsayılanı). Alıcılar biçimlendirilmiş metin yerine ham etiketleri görür."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Bağlantı veya aktarım çok uzun sürdü. Genellikle bir güvenlik duvarı bağlantıyı sessizce düşürür ya da sunucu ve port yanlıştır."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Varsayılan gönderen adresinin herkese açık bir alan adı yok veya bu sunucu DNS kayıtlarını sorgulayamıyor."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Alan adının DNS'te ne MX ne de A kaydı var. Bu alan adına giden e-postalar geri döner. Genellikle adres yanlış yazılmıştır veya alan adı artık mevcut değildir."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Alan adı, hiç e-posta almadığını açıkça belirten bir “null MX” kaydı yayımlıyor. Bu alan adına giden her e-posta geri döner."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "E-posta API'si yavaş yanıt veriyor: posta gönderme eklentinizde yapılandırılan bölgeyi veya uç noktayı kontrol edin."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "E-posta bir no-reply adresinden geliyor ve Reply-To başlığı yok. Bir müşteri “Yanıtla”ya tıkladığında yanıt kimsenin okumadığı bir adrese gider ya da geri döner."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "E-posta okunabilir biçimde bir parola içeriyor. E-postalar yıllarca gelen kutularında, yedeklerde ve iletilen yazışmalarda kalır – bunlardan birine erişen herkes oturum açabilir. “Gizli bilgileri gizle” açık değilse e-posta günlüğü de parolayı saklar (açıksa günlük maskelenmiş bir kopya tutar, ancak alıcı parolayı yine de almıştır)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-posta bir erişim anahtarı (örn. Stripe, GitHub, Slack, AWS, Google veya SendGrid için) ya da özel anahtar içeriyor. E-postayı okuyan herkes – şimdi ya da yıllar sonra bir gelen kutusunda veya yedekte – bunu kullanabilir. “Gizli bilgileri gizle” açık değilse e-posta günlüğü de bunu saklar."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "E-posta doldurulmamış şablon değişkenleri içeriyor. Alıcılar bunları olduğu gibi görür."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "E-posta tam bir ödeme kartı numarasına benzeyen bir şey içeriyor (kontrol basamağı testini geçiyor). Kart numaraları asla e-postayla gönderilmemelidir (PCI DSS): gelen kutuları bunları yıllarca saklar. “Gizli bilgileri gizle” açık değilse e-posta günlüğü de bunu saklar."
+
+msgid "The email is too large"
+msgstr "E-posta çok büyük"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "E-posta, ilişkili bir sunucudaki WordPress dosyalarına bağlantı veriyor. Bu genellikle hâlâ canlı sitenin URL'lerini içeren bir test kopyasında olur – ya da tam tersi."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "E-posta, bu sitede “sayfa bulunamadı” (404) yanıtı veren bir adrese bağlantı veriyor. Bu genellikle bir sayfa veya ürün yeniden adlandırıldıktan ya da silindikten sonra olur: şablon hâlâ eski adresi gösterir ve her alıcı bir hata sayfasına düşer."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "E-posta türleri günlükten yeniden oluşturuluyor."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "E-posta, alan adınızın dışındaki birkaç kişiye To veya Cc alanında gönderildi. Her alıcı diğer tüm adresleri görür. Müşteriler veya üyeler söz konusuysa bu, kişisel verileri yabancılara ifşa eder – GDPR kapsamında genellikle bir veri ihlalidir."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "%2$s adresine %3$s, %4$s tarihli “%1$s” e-postası bizim tarafımızdaki bir güvenlik kontrolü nedeniyle kısa süre bekletildi ve ardından gönderildi. Lütfen istenmeyen posta klasörünüzü de kontrol edin."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "%2$s adresine %3$s, %4$s tarihli “%1$s” e-postası bizim tarafımızdaki bir güvenlik kontrolü nedeniyle bekletildi ve gönderilmedi. Yeniden göndereceğiz."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "%2$s adresine %3$s, %4$s tarihli “%1$s” e-postası, o sırada bizim tarafımızda e-posta gönderimi duraklatıldığı için gönderilmedi. Yeniden göndereceğiz."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "%2$s adresine %3$s, %4$s tarihinde gönderilen “%1$s” e-postası teslim edilemedi. Yeniden göndereceğiz."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "%2$s adresine giden “%1$s” e-postası %3$s, %4$s tarihinde oluşturuldu ancak teslim edilip edilmediğini doğrulayamıyoruz. Bunu kontrol edip gerekirse yeniden göndereceğiz."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "“%1$s” e-postası %3$s, %4$s tarihinde %2$s adresine gönderildi ve posta sunucusu tarafından kabul edildi. Lütfen istenmeyen posta klasörünüzü de kontrol edin."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Acil durum freni, giden e-postaları siz serbest bırakana veya iptal edene kadar bekletir."
+
+msgid "The emergency brake is holding emails"
+msgstr "Acil durum freni e-postaları bekletiyor"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Acil durum freni hiçbir e-postayı bekletmiyor"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Acil durum freni devrede: siteniz aniden normalden çok daha fazla e-posta gönderdi."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Acil durum freni bir saat içinde olağan dışı sayıda e-posta fark etti. Bir iletişim formu kötüye kullanılıyor olabilir. E-postalar hâlâ gönderiliyor."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Tam ham kaynak saklanıyor – \".eml indir\" onu değiştirmeden (gizlemeden) döndürür."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Son %s e-postanın tümü başarısız oldu. Bu siteden gönderim bozulmuş olabilir; örneğin yanlış bir SMTP girişi veya siteyi reddeden bir posta hizmeti nedeniyle. Müşteriler sipariş onaylarını veya parola sıfırlamalarını alamayabilir."
+
+msgid "The latest emails could not be sent"
+msgstr "En son e-postalar gönderilemedi"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Günlük e-postaları %s gün saklar."
+msgstr[1] "Günlük e-postaları %s gün saklar."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Günlük, başarısız her e-postanın nedenini gösterir."
+
+msgid "The mail log requires JavaScript."
+msgstr "E-posta günlüğü JavaScript gerektirir."
+
+msgid "The mail server did not answer in time"
+msgstr "Posta sunucusu zamanında yanıt vermedi"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Posta sunucusu geçici olarak kullanılamıyor"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Posta sunucusu e-postanın boyutunu reddetti (yanıt kodu 552). Ekler kodlandığında yaklaşık üçte bir oranında büyür."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Posta hizmeti yalnızca orada doğruladığınız alan adlarından veya adreslerden gönderir."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Bir hız limitine, günlük kotaya veya plan limitine ulaşıldığı için posta hizmeti ya da posta kutusu yeni e-postaları reddetti."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "API anahtarı yanlış, süresi dolmuş, iptal edilmiş veya gönderme izni olmadığı için posta hizmeti isteği reddetti."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Posta gönderme eklentisi bir hata bildirdi"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "İlke yalnızca e-postaların %%%s kadarına uygulanır (pct)."
+
+msgid "The reason: %s."
+msgstr "Neden: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Alıcı sunucu daha sonra yeniden denenmesini istedi (yanıt kodu 450/451/452): gri listeleme, dolu posta kutusu veya kısa sürede çok fazla e-posta."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Alıcı sunucu, sunucunuzun gönderen alan adı adına gönderme izni olduğunu doğrulayamadı."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Alıcı sunucu bu posta kutusunu tanımıyor (yanıt kodu 550 / 5.1.1) – adres yanlış yazılmış veya artık mevcut değil."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Alıcı sunucu sonraki bir denemede onu yine de kabul edebilir."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Alıcı sunucu, içeriği nedeniyle veya gönderen sunucunun IP adresi bir engel listesinde olduğu için e-postayı reddetti."
+
+msgid "The recipient address was rejected"
+msgstr "Alıcı adresi reddedildi"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Alıcı alan adı e-posta kabul etmiyor (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Alıcı alan adının posta sunucusu yok"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Alıcı alan adı, popüler bir e-posta sağlayıcısının yanlış yazılmış hâline benziyor. Bu tür e-postalar geri döner – ya da yazım hatalı alan adını kaydettirmiş bir yabancıya ulaşır."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Aynı konu kısa sürede aynı alıcılara birkaç kez gönderildi. Tipik nedenler çift sipariş onayları, iki kez gönderilen bir form, paralel çalışan bir cron işi veya bir eklentideki döngüdür."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "SMTP sunucusuyla güvenli bağlantı kurulamadı: sertifika sunucu adıyla eşleşmiyor, süresi dolmuş veya sunucu seçilen şifrelemeyi desteklemiyor."
+
+msgid "The sender address is not allowed"
+msgstr "Gönderen adresine izin verilmiyor"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Gönderen denetimi %s ile ilgili bir sorun buldu. E-postalar istenmeyen postaya düşebilir."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "%s gönderen alan adının SPF ve DMARC kayıtları var"
+
+msgid "The sender domain could not be checked"
+msgstr "Gönderen alan adı denetlenemedi"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Gönderenin herkese açık bir alan adı yok (örn. wordpress@localhost). Çoğu posta sunucusu bu tür e-postaları reddeder veya istenmeyen postaya koyar."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Sunucu PHP mail() ile e-posta gönderemiyor"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Sunucu bağlantıyı kapattı (yanıt kodu 421), örn. bakım, aşırı yük veya sunucunuzdan gelen çok fazla bağlantı nedeniyle."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Sunucu sizin için e-posta iletmiyor; genellikle oturum açmadığınız veya gönderen adresi hesaba ait olmadığı için."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Sunucu e-postayı yalnızca kimlik doğrulamasından veya şifreli bir bağlantıya geçildikten sonra kabul ediyor (yanıt kodu 530)."
+
+msgid "The server rejected the content"
+msgstr "Sunucu içeriği reddetti"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Sunucunun yerel posta programı yavaş yanıt veriyor: SMTP veya API ile çalışan bir posta gönderme eklentisi bunun yerine e-postaları bir sağlayıcıya iletir."
+
+msgid "The start date must not be after the end date."
+msgstr "Başlangıç tarihi bitiş tarihinden sonra olamaz."
+
+msgid "The statistics require JavaScript."
+msgstr "İstatistikler JavaScript gerektirir."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Metin aynı; yalnızca düzen değişti. Önizlemeleri karşılaştırın."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Kullanıcı adı genellikle tam e-posta adresidir. Parolayla birlikte kopyalanan boşluklara dikkat edin."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "Webhook URL'si kaldırıldı: yalnızca geçerli https URL'lerine izin verilir."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Haftalık rapor etkin ancak alıcısı yok: “Uyarıları e-postayla şuraya gönder” alanına bir e-posta adresi girin."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Bu e-postalar yeniden gönderiliyor; e-posta türleri yeniden izleniyor."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Bu e-posta türleri normalden uzun süredir gönderilmedi. Nedeni bir eklenti güncellemesi, değişen bir ayar veya takılan bir zamanlanmış görev olabilir."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Bu e-postanın kendi düz metin sürümü var ancak günlük onu saklamıyor. Burada gösterilen: HTML'den türetilmiş bir metin sürümü."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Bu e-postanın kendi koyu mod stilleri yok. Bazı uygulamalar onu değiştirmeden gösterir, bazıları yeniden renklendirir – bkz. Zorunlu koyu."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Bu e-postanın düz metin sürümü yok – bazı istemciler ve istenmeyen posta filtreleri bunu tercih eder. Burada gösterilen: HTML'den türetilmiş bir metin sürümü."
+
+msgid "This email type has no content change."
+msgstr "Bu e-posta türünde içerik değişikliği yok."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Bu e-posta türü artık yok sayılıyor: durum yok, uyarı yok."
+
+msgid "This email type is monitored again."
+msgstr "Bu e-posta türü yeniden izleniyor."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Bu kayıt anonimleştirildi; içeriği artık gönderilemez."
+
+msgid "This import is already running in another tab."
+msgstr "Bu içe aktarma zaten başka bir sekmede çalışıyor."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Bu bir test uyarısıdır. Uyarı kanallarınız çalışıyor."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Bu canlı site yerel veya test adresine bir bağlantı gönderdi. Alıcılar bunu açamaz."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Bu soru JavaScript gerektirir. Bunun yerine günlükte arama yapabilirsiniz."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Bu site, teslimatı doğrulamak ve sorunları gidermek için gönderdiği e-postaların günlüğünü (alıcı, konu, içerik ve teslimat durumu) tutar. Günlük kayıtları, ayarlanan saklama süresinden sonra otomatik olarak silinir."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Bu site %s ortamı olarak çalışıyor ve test modu e-postalarının gerçek kişilere ulaşmasını engelliyor."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Bu site %s ortamı olarak çalışıyor. Hiçbir gerçek müşterinin buradan e-posta almaması için test modunu açın."
+
+msgid "Threshold (emails per hour)"
+msgstr "Eşik (saatte e-posta)"
+
+msgid "Thursday"
+msgstr "Perşembe"
+
+msgid "Timeline"
+msgstr "Zaman çizelgesi"
+
+msgid "To"
+msgstr "Kime"
+
+msgid "To date"
+msgstr "Bitiş tarihi"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Bunları tutup günde yalnızca bir e-posta almak için türün … menüsünde “Tek bir günlük e-postada topla” seçeneğini seçin."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Üst listeler bu dönemin en son %s e-postasına dayanır."
+
+msgid "Top recipient domains"
+msgstr "En sık alıcı alan adları"
+
+msgid "Top recipients: %s"
+msgstr "En sık alıcılar: %s"
+
+msgid "Top sources"
+msgstr "En sık kaynaklar"
+
+msgid "Top subjects"
+msgstr "En sık konular"
+
+msgid "Total"
+msgstr "Toplam"
+
+msgid "Total: %s ms"
+msgstr "Toplam: %s ms"
+
+msgid "Trace"
+msgstr "İz"
+
+msgid "Transcript copied."
+msgstr "Döküm kopyalandı."
+
+msgid "Transport"
+msgstr "Taşıma"
+
+msgid "Trigger"
+msgstr "Tetikle"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Kendi hesabınız için gerçek bir parola sıfırlama e-postası tetiklensin mi? WordPress sizin için yeni bir sıfırlama bağlantısı oluşturur, bu nedenle önceki sıfırlama bağlantıları çalışmaz; parolanız aynı kalır. Bunu yalnızca %s alır."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Kendi hesabınız için yeni kullanıcı bildirimleri (yöneticiye giden bildirim ve oturum açma bilgileri) tetiklensin mi? WordPress sizin için yeni bir parola bağlantısı oluşturur, bu nedenle önceki bağlantılar çalışmaz. Kullanıcı oluşturulmaz; bunları yalnızca %s alır."
+
+msgid "Trigger to me"
+msgstr "Testi bana gönder"
+
+msgid "Triggering…"
+msgstr "Tetikleniyor…"
+
+msgid "Tuesday"
+msgstr "Salı"
+
+msgid "Type"
+msgstr "Tür"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Türler saatte bir ve bu sayfayı her açtığınızda güncellenir. Yalnızca sayaçlar, konu kalıpları ve içerik parmak izleri saklanır (alıcı yok, içerik yok) ve bunlar günlüğün saklama süresine tabidir."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Alıcı alan adında yazım hatası mı? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Özel karakterler veya tırnak işaretleri “Ã¤” ya da “â€™” gibi bozuk karakterler olarak görünüyor. UTF-8 metin yol üzerinde bir yerde – bir şablonda, içe aktarmada veya veritabanında – farklı bir karakter kümesiyle okundu."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Belirsiz. %2$s adresine “%1$s” %3$s gönderilmek üzere teslim edildi, ancak Mailspur bir sonuç almadı."
+
+msgid "Under Tools"
+msgstr "Araçlar altında"
+
+msgid "Uninstall"
+msgstr "Kaldırma"
+
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+msgid "Unknown probe."
+msgstr "Bilinmeyen test e-postası."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Bilinmiyor: teslimat sonucu bildirilmedi (wp_mail() fonksiyonu değiştirilmiş olabilir mi?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Değiştirilmemiş yer tutucular: %1$s"
+
+msgid "Until the log limit"
+msgstr "Günlük sınırına kadar"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Virgülle ayrılmış en fazla 10 adres. Cc ve Bcc kaldırılır ve konu asıl alıcıları gösterir. Geçerli bir adres yoksa e-postalar bunun yerine bekletilir."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Virgülle ayrılmış en fazla 5 adres. Uyarı e-postaları günlükte “Mailspur uyarıları” kaynağıyla görünür ve kendileri asla uyarı tetiklemez."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Bağlantıyı e-posta şablonunda veya bu e-postayı gönderen eklentinin ayarlarında güncelleyin ya da eski adresten yeni sayfaya bir yönlendirme ekleyin (örn. bir yönlendirme eklentisiyle)."
+
+msgid "Updated in between: %s"
+msgstr "Arada güncellenenler: %s"
+
+msgid "Updated since the last one:"
+msgstr "Sonuncusundan bu yana güncellenenler:"
+
+msgid "Updated since then: %s."
+msgstr "O zamandan beri güncellenenler: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "587 numaralı portta TLS veya 465 numaralı portta SSL kullanın."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Açıklayıcı bir bağlantı metni kullanın (örn. “Siparişi görüntüle”) veya bağlantının gerçekten gittiği adresi gösterin."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Kendi alan adınızda bir gönderen adresi kullanın ve ücretsiz adresi Reply-To'ya yazın. Bu, yalnızca gerçekten o sağlayıcının kendi SMTP sunucusu üzerinden onun oturum bilgileriyle gönderiyorsanız sorun değildir."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Şablonda https:// ve alan adını içeren mutlak URL'ler kullanın, örn. home_url() veya wp_get_attachment_url() ile."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Tam olarak sertifikanın verildiği sunucu adını kullanın (örn. IP veya kendi alan adınız yerine sağlayıcının smtp.… sunucusu)."
+
+msgid "Use one exclamation mark at most."
+msgstr "En fazla bir ünlem işareti kullanın."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Hücreler arasında gezinmek için ok tuşlarını kullanın."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Değerler arasında gezinmek için ok tuşlarını, günlükte açmak için Enter tuşunu kullanın."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Gönderen (From) olarak SMTP hesabının posta kutusu adresini kullanın."
+
+msgid "User"
+msgstr "Kullanıcı"
+
+msgid "User: %s"
+msgstr "Kullanıcı: %s"
+
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Kaydedilmiş ayarları kullanır – önce değişikliklerinizi kaydedin."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Gönderen alan adını posta hizmetinizde doğrulayın (DNS kayıtlarını ekleyin) veya önceden doğrulanmış bir gönderen adresi kullanın."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Büyük olasılıkla. “%1$s” %2$s adresine %3$s gönderildi."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Çok uzun konu (%1$s karakter)"
+
+msgid "View"
+msgstr "Görüntüle"
+
+msgid "View %s failed emails"
+msgstr "%s başarısız e-postayı görüntüle"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron %s süredir çalışmadı (DISABLE_WP_CRON ayarlı – sunucunuzdaki cron işini kontrol edin)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron %s süredir çalışmadı – yalnızca site ziyaret aldığında çalışır ya da bir hatayla başarısız oluyor."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron normal çalışıyor."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Günlük özeti bekliyor – ayrı olarak gönderilmiyor."
+
+msgid "Waits %s s for the mail server"
+msgstr "Posta sunucusu için %s sn bekliyor"
+
+msgid "Warnings"
+msgstr "Uyarılar"
+
+msgid "Webhook URL"
+msgstr "Webhook URL'si"
+
+msgid "Webhook signing key"
+msgstr "Webhook imzalama anahtarı"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "Çarşamba"
+
+msgid "Week"
+msgstr "Hafta"
+
+msgid "Week of %s"
+msgstr "%s haftası"
+
+msgid "Weekday"
+msgstr "Haftanın günü"
+
+msgid "Weekly"
+msgstr "Haftalık"
+
+msgid "Weekly email report"
+msgstr "Haftalık e-posta raporu"
+
+msgid "Weekly report"
+msgstr "Haftalık rapor"
+
+msgid "What to do"
+msgstr "Ne yapmalı"
+
+msgid "When emails are sent"
+msgstr "E-postalar ne zaman gönderiliyor"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Normalden çok daha fazla e-posta gönderildiğinde acil durum freni sizi uyarır ve sonraki e-postaları bekletebilir."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Kapalıyken izleme pikselleri bir kaydı ne zaman açtığınızı anlayamaz. Tek bir e-posta için uzak içeriği yine de yükleyebilirsiniz. Betikler ve formlar her zaman engellenir."
+
+msgid "Who can view the log"
+msgstr "Günlüğü kimler görüntüleyebilir"
+
+msgid "Why did an email fail?"
+msgstr "Bir e-posta neden başarısız oldu?"
+
+msgid "With attachments"
+msgstr "Ekli"
+
+msgid "With notes"
+msgstr "Notlu"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Bu DNS kayıtları olmadan posta kutusu sağlayıcıları sitenizin bu alan adı için e-posta gönderebileceğini doğrulayamaz, bu yüzden e-postaların istenmeyen postaya düşme olasılığı artar. Gönderen denetimi, alan adı sağlayıcınızda ekleyebileceğiniz kayıtlar önerir."
+
+msgid "WooCommerce email"
+msgstr "WooCommerce e-postası"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Ayarlar › E-postalar"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "WordPress çekirdek e-postalarının düzenleyicisi yoktur; filtrelerle değiştirilebilirler."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress e-posta göndermedi – bir eklenti bu e-postayı kapatmış olabilir."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress'te bu e-posta için bir ayar yok. Mailspur yöneticilere giden bildirimi durdurabilir; yeni kullanıcı kendi e-postasını yine de alır."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress'te bu e-posta için bir ayar yok. Mailspur otomatik güncellemelerin başarı bildirimlerini durdurabilir; başarısız güncellemelerle ilgili bildirimler gelmeye devam eder."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress varsayılan olarak PHP mail() işleviyle gönderir. Bu sunucuda işlev devre dışı veya bir posta programı (sendmail) kurulu değil – yerel kurulumlarda, Docker'da ve birçok yönetilen barındırmada yaygındır."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Konuyu normal büyük ve küçük harflerle yazın ve en fazla tek bir kelimeyi vurgulayın."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Evet, ancak %4$s'e göre %2$s adresine giden “%1$s” (%3$s) alıcı tarafından istenmeyen posta olarak işaretlendi."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Evet. “%1$s” %2$s adresine %3$s gönderildi ve %4$s teslimatı doğruladı."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Yine de günlükten gönderebilirsiniz (“Şimdi gönder”)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Bu özeti alıyorsunuz çünkü bu e-posta türleri Mailspur'da tek bir günlük e-postada toplanıyor. Her e-posta günlükte kalır."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Bu e-postayı, bu sitenin Mailspur ayarlarında izleme uyarıları etkin olduğu için alıyorsunuz."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Bu e-postayı, bu sitenin Mailspur ayarlarında haftalık rapor etkin olduğu için alıyorsunuz. Yalnızca sayılar ve konu kalıpları içerir – e-posta içeriği veya alıcılar içermez."
+
+msgid "Your DKIM selector (optional)"
+msgstr "DKIM seçiciniz (isteğe bağlı)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Siteniz son 7 günde hiç e-posta göndermedi."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s bildirim: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 bildirim: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Haftalık e-posta raporu %2$s"
+
+msgid "address"
+msgstr "adres"
+
+msgid "and %s more"
+msgstr "ve %s tane daha"
+
+msgid "and %s more – see the log"
+msgstr "ve %s tane daha – günlüğe bakın"
+
+msgid "another plugin stopped it"
+msgstr "başka bir eklenti durdurdu"
+
+msgid "code"
+msgstr "kod"
+
+msgid "date"
+msgstr "tarih"
+
+msgid "days"
+msgstr "gün"
+
+msgid "deleted after %s days"
+msgstr "%s gün sonra silinir"
+
+msgid "emails to this address failed several times before"
+msgstr "bu adrese giden e-postalar daha önce birkaç kez başarısız oldu"
+
+msgid "entries"
+msgstr "kayıt"
+
+msgid "failing"
+msgstr "hatalı"
+
+msgid "failure spikes"
+msgstr "hata artışları"
+
+msgid "first seen %s"
+msgstr "ilk görülme %s"
+
+msgid "from a new sender"
+msgstr "yeni bir gönderenden"
+
+msgid "holding emails right now"
+msgstr "şu anda e-postaları bekletiyor"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "elle silinene kadar saklanır"
+
+msgid "link"
+msgstr "bağlantı"
+
+msgid "minutes"
+msgstr "dakika"
+
+msgid "name"
+msgstr "ad"
+
+msgid "new this week"
+msgstr "bu hafta yeni"
+
+msgid "no"
+msgstr "hayır"
+
+msgid "none"
+msgstr "yok"
+
+msgid "none in %1$s – %2$s"
+msgstr "%1$s – %2$s döneminde yok"
+
+msgid "number"
+msgstr "sayı"
+
+msgid "of %s"
+msgstr "/ %s"
+
+msgid "often to administrators"
+msgstr "sık sık yöneticilere"
+
+msgid "on %1$s at %2$s"
+msgstr "%1$s, %2$s tarihinde"
+
+msgid "same recipient"
+msgstr "aynı alıcı"
+
+msgid "slow to send"
+msgstr "yavaş gönderim"
+
+msgid "staging mode is on"
+msgstr "test modu açık"
+
+msgid "stopped"
+msgstr "durdu"
+
+msgid "stopped email types"
+msgstr "gönderimi durmuş e-posta türleri"
+
+msgid "text"
+msgstr "metin"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "acil durum freni bir e-posta selini durdurdu"
+
+msgid "time"
+msgstr "saat"
+
+msgid "today at %s"
+msgstr "bugün %s saatinde"
+
+msgid "triggered %s times"
+msgstr "%s kez tetiklendi"
+
+msgid "unchanged"
+msgstr "değişmedi"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "bilinmiyor – gönderici bir hata iletisi vermedi"
+
+msgid "unusual silence"
+msgstr "olağan dışı sessizlik"
+
+msgid "usually sent: %s"
+msgstr "genellikle gönderilir: %s"
+
+msgid "wp_mail() called"
+msgstr "wp_mail() çağrıldı"
+
+msgid "yes"
+msgstr "evet"
+
+msgid "yesterday at %s"
+msgstr "dün %s saatinde"
+
+msgid "your email provider"
+msgstr "e-posta sağlayıcınız"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "“%1$s” (%2$s), saat %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "“%1$s” (%2$s) yeniden gönderiliyor."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "“%1$s” (%2$s) genellikle en az %3$s günde bir gönderilir. Sonuncusu %4$s önce gönderildi."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "“%1$s” (%2$s) en son %3$s önce gönderildi. O zamana kadar en az %4$s günde bir gönderiliyordu."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "“%1$s” (%2$s) – genellikle her %4$s, sonuncusu %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "“%1$s” (%2$s) – genellikle her gün, sonuncusu %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "“%1$s” – %2$s – %3$s"

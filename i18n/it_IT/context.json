@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s note",
+	"Belongs to": "Appartiene a",
+	"Emails to this user": "Email a questo utente",
+	"No emails logged for this order yet.": "Nessuna email registrata finora per questo ordine.",
+	"No emails to this user in the log.": "Nessuna email a questo utente nel registro.",
+	"Order #%s": "Ordine #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Inviata allo stesso indirizzo intorno alla data dell'ordine, ma non collegata a questo ordine (ad esempio registrata prima che esistesse il collegamento, oppure importata).",
+	"Show all in Mail Log": "Mostra tutto nel registro email",
+	"User: %s": "Utente: %s",
+	"WooCommerce email": "Email WooCommerce",
+	"same recipient": "stesso destinatario"
+}

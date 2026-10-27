@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s catatan",
+	"Belongs to": "Milik",
+	"Emails to this user": "Email ke pengguna ini",
+	"No emails logged for this order yet.": "Belum ada email yang dicatat untuk pesanan ini.",
+	"No emails to this user in the log.": "Tidak ada email ke pengguna ini di log.",
+	"Order #%s": "Pesanan #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "Dikirim ke alamat yang sama sekitar tanggal pesanan, tetapi tidak ditautkan ke pesanan ini (misalnya dicatat sebelum tautan ada, atau diimpor).",
+	"Show all in Mail Log": "Tampilkan semua di Log Email",
+	"User: %s": "Pengguna: %s",
+	"WooCommerce email": "Email WooCommerce",
+	"same recipient": "penerima yang sama"
+}

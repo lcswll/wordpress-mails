@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s ملاحظات",
+	"Belongs to": "ينتمي إلى",
+	"Emails to this user": "رسائل البريد إلى هذا المستخدم",
+	"No emails logged for this order yet.": "لم تُسجَّل أي رسائل لهذا الطلب بعد.",
+	"No emails to this user in the log.": "لا توجد رسائل إلى هذا المستخدم في السجل.",
+	"Order #%s": "الطلب #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "أُرسلت إلى العنوان نفسه في وقت قريب من تاريخ الطلب، لكنها غير مرتبطة بهذا الطلب (مثلًا سُجّلت قبل وجود الربط، أو تم استيرادها).",
+	"Show all in Mail Log": "عرض الكل في سجل البريد",
+	"User: %s": "المستخدم: %s",
+	"WooCommerce email": "رسالة WooCommerce",
+	"same recipient": "المستلم نفسه"
+}

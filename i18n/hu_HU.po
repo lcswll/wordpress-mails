@@ -1,0 +1,3253 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu_HU\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "Az „.eml letöltése” a naplózott, maszkolt adatokból építi újra az üzenetet (mellékletek nélkül)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (előző hét: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (ütemezve: %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s e-mail-típus kiküldése leállt: %2$s."
+msgstr[1] "%1$s e-mail-típus kiküldése leállt, pl. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%1$s e-mail-típus %2$s feladótól"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "Az elmúlt %2$s percben %1$s e-mail küldése volt sikertelen."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%1$s e-mail %2$s nap alatt"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "%1$s e-mail az elmúlt 30 napban, ebből %2$s sikertelen"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "Egy órán belül %1$s e-mail ment ki – sokkal több a szokásosnál (küszöb: %2$s óránként). Lehet, hogy visszaélnek egy kapcsolatfelvételi űrlappal, vagy a honlapot feltörték."
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s bejegyzés, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s importálva, %2$s ismétlődés, %3$s túl régi"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%2$s e-mailből %1$s visszapattant (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "Az elmúlt %3$s napban %2$s e-mailből %1$s nem lett elküldve."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "%1$s / %2$s bejegyzés feldolgozva …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s százalékpont vs. %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "A(z) %1$s %2$s napon küldte első e-mailjét, és az elmúlt 24 órában %3$s különböző külső címre írt. Ha nem telepítettél vagy állítottál be semmit, ami ilyen e-maileket küld, ellenőrizd a honlapot: egy új feladó feltört honlapra utalhat."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "%1$s elküldve, még %2$s visszatartva …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s vs. %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · %2$s e-mail összegyűjtve az utolsó összesítő óta"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · állapot: %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – hibaarány %2$s %% (előző hét: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – jelentette: %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (must-use bővítmény)"
+
+msgid "%s (theme)"
+msgstr "%s (sablon)"
+
+msgid "%s ago"
+msgstr "%s ezelőtt"
+
+msgid "%s days"
+msgstr "%s nap"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s e-mail küldése sikertelen volt az elmúlt 7 napban."
+msgstr[1] "%s e-mail küldése sikertelen volt az elmúlt 7 napban."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s e-mail vár a döntésedre."
+msgstr[1] "%s e-mail vár a döntésedre."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s e-mailt visszatartottunk és nem küldtünk el az elmúlt 7 napban."
+msgstr[1] "%s e-mailt visszatartottunk és nem küldtünk el az elmúlt 7 napban."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "%s e-mailt tart vissza a vészfék."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s e-mail várakozik, és nincs kézbesítve."
+
+msgid "%s entries"
+msgstr "%s bejegyzés"
+
+msgid "%s failed"
+msgstr "%s sikertelen"
+
+msgid "%s held emails discarded."
+msgstr "%s visszatartott e-mail elvetve."
+
+msgid "%s imported entries removed."
+msgstr "%s importált bejegyzés eltávolítva."
+
+msgid "%s in 30 days"
+msgstr "%s 30 nap alatt"
+
+msgid "%s marked as spam"
+msgstr "%s spamnek jelölve"
+
+msgid "%s more on the Email types page."
+msgstr "Még %s az E-mail-típusok oldalon."
+
+msgid "%s notes"
+msgstr "%s megjegyzés"
+
+msgid "%s of all emails"
+msgstr "az összes e-mail %s-a"
+
+msgid "%s of them in the last 24 hours."
+msgstr "Ebből %s az elmúlt 24 órában."
+
+msgid "%s s"
+msgstr "%s mp"
+
+msgid "%s selected"
+msgstr "%s kiválasztva"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s dolog figyelmet igényel:"
+msgstr[1] "%s dolog figyelmet igényel:"
+
+msgid "%s to administrators in 30 days"
+msgstr "%s adminisztrátoroknak 30 nap alatt"
+
+msgid "%s unchanged lines"
+msgstr "%s változatlan sor"
+
+msgid "(no subject)"
+msgstr "(nincs tárgy)"
+
+msgid "(no text content)"
+msgstr "(nincs szöveges tartalom)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(az e-mailek már nincsenek a naplóban)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "A -all szigorúbb; a ~all elterjedt, és DMARC-kal együtt rendben van."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 esetén a bejegyzések örökre megmaradnak. A takarítás naponta egyszer fut."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 esetén nincs korlát. A legrégebbi bejegyzések törlődnek először."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 esetén kikapcsolva. Eltávolítja a régebbi bejegyzések tartalmát, fejléceit és mellékleteit, és maszkolja a címeket (a***@example.com). A dátum, az állapot, a forrás, a formátum, a méret és a megjegyzések a statisztikák miatt megmaradnak. A napi takarítással fut, a bejegyzések törlése előtt – így csak akkor van hatása, ha rövidebb a fenti törlési időnél."
+
+msgid "12 months"
+msgstr "12 hónap"
+
+msgid "30 days"
+msgstr "30 nap"
+
+msgid "7 days"
+msgstr "7 nap"
+
+msgid "90 days"
+msgstr "90 nap"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "A DKIM-szelektor csak betűket, számjegyeket, pontokat, kötőjeleket és aláhúzásjeleket tartalmazhat."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Egy API-n keresztül küldő levelező bővítmény vette át a kézbesítést, és sikertelen küldést jelzett, ok megadása nélkül."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Egy közzétett kulcs nem bizonyítja, hogy az e-mailjeid alá vannak vele írva – ellenőrizd a DKIM eredményét egy fogadott levél fejléceiben."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Egy címzett vagy a feladó címe nem érvényes e-mail-cím, ezért a PHPMailer megtagadta a küldést."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "API-kulcs vagy privát kulcs nyílt szövegként: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "A rekord kiértékeléséhez kb. %1$s DNS-lekérdezés kell – több a megengedett %2$s-nál, így a fogadók figyelmen kívül hagyhatják (PermError). Távolítsd el a nem használt include: bejegyzéseket."
+
+msgid "Access"
+msgstr "Hozzáférés"
+
+msgid "Actions"
+msgstr "Műveletek"
+
+msgid "Active: alerts on %s."
+msgstr "Aktív: értesítés ezekről: %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Adj rövid alt attribútumot a sablon minden képéhez, pl. alt=\"Példa Bolt logója\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Ha levelezési szolgáltatón keresztül küldesz, add hozzá annak include: bejegyzését (pl. include:_spf.google.com)."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Add hozzá a levelezőszerveredet vagy levelezési szolgáltatásodat a feladó domainjének SPF-rekordjához."
+
+msgid "Added:"
+msgstr "Hozzáadva:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Legalább %s végleges hibával rendelkező címek: a fogadó szerver elutasította a postafiókot, a domainnek nincs levelezőszervere, vagy az e-mail-szolgáltatód kemény visszapattanást jelzett. A bejegyzések a napló megőrzési idejével járnak le."
+
+msgid "Admin screen"
+msgstr "Admin képernyő"
+
+msgid "Administrators"
+msgstr "Adminisztrátorok"
+
+msgid "Aggregate reports go to %s."
+msgstr "Az összesítő jelentések ide mennek: %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Értesítés"
+
+msgid "Alert and hold further emails"
+msgstr "Értesítés és további e-mailek visszatartása"
+
+msgid "Alert only"
+msgstr "Csak értesítés"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Értesítés, ha egy rendszeresen küldött e-mail-típus leáll"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Értesítés, ha az e-mailek ismételten sikertelenek"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Értesítés, ha a honlap váratlanul leáll az e-mailek küldésével"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Az értesítések be vannak kapcsolva, de nincs csatornájuk: adj meg egy e-mail-címet vagy egy webhook URL-t."
+
+msgid "Alerts are off."
+msgstr "Az értesítések ki vannak kapcsolva."
+
+msgid "All"
+msgstr "Összes"
+
+msgid "All email types look healthy."
+msgstr "Minden e-mail-típus rendben van."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Minden e-mail tesztcímekre van átirányítva."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Minden e-mail tesztcímekre megy a valódi címzettek helyett."
+
+msgid "All sources"
+msgstr "Összes forrás"
+
+msgid "Allow again"
+msgstr "Újra engedélyezés"
+
+msgid "Allowed again."
+msgstr "Újra engedélyezve."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Egyszer akkor is értesít, ha egy bővítmény vagy sablon, amely korábban soha nem küldött e-mailt, egy napon belül sok különböző külső címre ír – ez feltört honlapra utalhat. A Mailspur telepítése utáni első két hét szolgál alapként."
+
+msgid "Also remove the subject when anonymising"
+msgstr "A tárgy eltávolítása is anonimizáláskor"
+
+msgid "Also search content"
+msgstr "Keresés a tartalomban is"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Vagy kérd meg a tárhelyszolgáltatót, hogy engedélyezze a mail() / sendmail használatát ennél a honlapnál."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Külső képek és betűtípusok mindig betöltése az előnézetben"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (SNS-en keresztül)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Egy SMTP helyett HTTP API-t használó e-mail-szolgáltatónak e-mailenként kevesebb oda-vissza kommunikáció kell."
+
+msgid "Anonymisation"
+msgstr "Anonimizálás"
+
+msgid "Anonymise entries after"
+msgstr "Bejegyzések anonimizálása"
+
+msgid "Anonymised"
+msgstr "Anonimizálva"
+
+msgid "Any format"
+msgstr "Bármely formátum"
+
+msgid "Any status"
+msgstr "Bármely állapot"
+
+msgid "Apply"
+msgstr "Alkalmazás"
+
+msgid "Ask the recipient for a working address."
+msgstr "Kérj a címzettől egy működő címet."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Kérd meg a tárhelyszolgáltatót, hogy engedélyezze az openssl kiterjesztést (vagy engedélyezd a tárhelypanel PHP-beállításaiban)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Kérd meg a tárhelyszolgáltatót, hogy frissítse a szerver CA-tanúsítványait és az OpenSSL-t."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Kérdezd meg a tárhelyszolgáltatót, hogy blokkolja-e a kimenő SMTP-kapcsolatokat."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Kérdezd meg a tárhelyszolgáltatót, hogy engedélyezettek-e a kimenő kapcsolatok erre a portra (tűzfal)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Legalább %1$s sikertelen e-mail %2$s percen belül"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Ezen az időn belül típusonként legfeljebb egy értesítés, még ha a probléma fennáll is."
+
+msgid "Attachments"
+msgstr "Mellékletek"
+
+msgid "Attachments no longer available: %s"
+msgstr "Már nem elérhető mellékletek: %s"
+
+msgid "Authentication"
+msgstr "Hitelesítés"
+
+msgid "Automatic TLS"
+msgstr "Automatikus TLS"
+
+msgid "Average per day"
+msgstr "Napi átlag"
+
+msgid "Back to the email types"
+msgstr "Vissza az e-mail-típusokhoz"
+
+msgid "Belongs to"
+msgstr "Ehhez tartozik"
+
+msgid "Block again"
+msgstr "Újra blokkolás"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Spamként vagy tiltólista miatt blokkolva"
+
+msgid "Bounced (permanent)"
+msgstr "Visszapattant (végleges)"
+
+msgid "Bounced (temporary)"
+msgstr "Visszapattant (átmeneti)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Hibás karakterek (kódolás): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Tömeges e-mail leiratkozási fejléc nélkül (%1$s címzett)"
+
+msgid "Bundle into one daily email"
+msgstr "Összegyűjtés egy napi e-mailbe"
+
+msgid "Bundled into one daily email"
+msgstr "Egy napi e-mailbe gyűjtve"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Az összegyűjtés ki van kapcsolva. A várakozó e-mailek most egy összesítőben kimentek."
+
+msgid "Busiest day"
+msgstr "Legforgalmasabb nap"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Mégse"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Figyelem: az erre a címre küldött e-mailek már többször sikertelenek voltak."
+
+msgid "Change in the email types"
+msgstr "Módosítás az e-mail-típusoknál"
+
+msgid "Change staging mode"
+msgstr "Teszt mód módosítása"
+
+msgid "Check"
+msgstr "Ellenőrzés"
+
+msgid "Check again"
+msgstr "Újraellenőrzés"
+
+msgid "Check emails"
+msgstr "E-mailek ellenőrzése"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Ellenőrizd a hosztot és a portot; próbáld a 587-et (TLS) a 465 (SSL) helyett, vagy fordítva."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Ellenőrizd a hosztot, a portot, a titkosítást, a felhasználónevet és a jelszót az SMTP-bővítményedben, és küldj onnan egy teszt e-mailt."
+
+msgid "Check sender domains"
+msgstr "Feladó domainek ellenőrzése"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Ellenőrizd, hogy a titkosítás illik-e a porthoz: TLS a 587-hez, SSL a 465-höz."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Ellenőrizd, hogy a kulcs a megfelelő régióhoz / fiókhoz tartozik-e (pl. EU vs. US végpont)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Ellenőrizd az SMTP-hosztot és a portot: egy hibás port vagy blokkolt kapcsolat gyakran időtúllépéssel végződik, mielőtt egy tartalékmegoldás működésbe lépne."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Ellenőrizd a feladó domainjének SPF-, DKIM- és DMARC-rekordjait, vagy használj olyan feladócímet, amely azon a domainen van, ahonnan küldesz."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Ellenőrizd, nincs-e elírás a címben – vagy a honlapod el sem küldte az e-mailt."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Egyeztesd a címet a címzettel, és javítsd ott, ahol tárolva van (felhasználói profil, rendelés, űrlapbejegyzés)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Egyeztesd a címet a címzettel, és javítsd ott, ahol tárolva van."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Ellenőrizd a hosztnevet és a portot: 587 STARTTLS-sel (TLS) vagy 465 SSL-lel. A 25-ös portot a legtöbb tárhelyszolgáltató blokkolja."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Ellenőrizd a korlátokat és az aktuális használatot a levelezési szolgáltatásod fiókjában; szükség esetén válts nagyobb csomagra."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Ellenőrizd ennek a bejegyzésnek a címzettjeit elírások, szóközök vagy hiányzó részek szempontjából."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Ellenőrizd a feladó címét az SMTP-bővítményedben és a wp_mail_from szűrőt."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Ellenőrizd a levelezőfiókod küldési korlátait és ennek az e-mailnek a megjegyzéseit."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Ellenőrizd a szerver IP-címét egy tiltólista-ellenőrzővel, és kérd a törlést a listáról."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Ellenőrizd a helyőrző helyesírását a sablonban, és hogy a bővítmény támogatja-e ennél az e-mail-típusnál. A rövidkódokat az e-mailekben nem dolgozza fel a rendszer, hacsak a küldő bővítmény nem futtatja a do_shortcode() függvényt."
+
+msgid "Checked %s."
+msgstr "Ellenőrizve: %s."
+
+msgid "Checked just now"
+msgstr "Épp most ellenőrizve"
+
+msgid "Checking DNS records …"
+msgstr "DNS-rekordok ellenőrzése …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Ellenőrzi azoknak a domaineknek a DNS-rekordjait, amelyekről a honlapod küld: az alapértelmezett feladócímet és a naplóban leggyakoribb feladókat. A hiányzó vagy gyenge rekordok a leggyakoribb okai annak, hogy az e-mailek a spam mappában landolnak. Csak a szervered saját DNS-feloldóját használjuk; az eredményeket egy óráig őrizzük meg."
+
+msgid "Choose a range of at most %s days."
+msgstr "Legfeljebb %s napos időszakot válassz."
+
+msgid "Clear selection"
+msgstr "Kijelölés törlése"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Kattints egy oszlopra, hogy megnyisd ezeket az e-maileket a naplóban."
+
+msgid "Close"
+msgstr "Bezárás"
+
+msgid "Close (Esc)"
+msgstr "Bezárás (Esc)"
+
+msgid "Colour scheme"
+msgstr "Színséma"
+
+msgid "Command line"
+msgstr "Parancssor"
+
+msgid "Compare"
+msgstr "Összehasonlítás"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Hasonlítsd össze ezeknek a bejegyzéseknek a forrását. Ellenőrizd, hogy nem küldi-e két bővítmény ugyanazt az értesítést, vagy nem fut-e le egy hook (pl. rendelési állapot változása) többször."
+
+msgid "Component"
+msgstr "Összetevő"
+
+msgid "Configure alerts"
+msgstr "Értesítések beállítása"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Tartalom anonimizálva %1$s nap után, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "A tartalomváltozás megjelölve látottként."
+
+msgid "Content changed"
+msgstr "Tartalom megváltozott"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "A tartalom megváltozott: %1$s, a(z) %2$s frissítése után."
+
+msgid "Content changed on %s."
+msgstr "A tartalom megváltozott: %s."
+
+msgid "Content removed"
+msgstr "Tartalom eltávolítva"
+
+msgid "Content removed after %s days"
+msgstr "Tartalom eltávolítva %s nap után"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "A tartalmat, a fejléceket és a mellékleteket az anonimizálási beállítás eltávolította, a címeket pedig maszkolta."
+
+msgid "Copied"
+msgstr "Másolva"
+
+msgid "Copied – paste it into your reply."
+msgstr "Másolva – illeszd be a válaszodba."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Egy rövid mondatot másol az ügyfélnek adott válaszhoz: mikor és kinek ment ki az e-mail, és megérkezett-e – technikai részletek nélkül."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Átmásolja egy másik e-mail-naplózó bővítmény meglévő naplóját a Mailspurba, így a régi e-mailek itt is kereshetők és előnézhetők. A másik bővítmény és annak adatai érintetlenek maradnak; az importálás ismételt futtatása csak az új bejegyzéseket adja hozzá."
+
+msgid "Copy"
+msgstr "Másolás"
+
+msgid "Copy for support"
+msgstr "Másolás ügyfélszolgálathoz"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Ebben a böngészőben nem lehet másolni. Jelöld ki a szöveget, és másold ki:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Javítsd a címet (pl. a felhasználói profilban vagy a rendelésben), és fontold meg az e-mail-címek ellenőrzését az űrlapjaidban."
+
+msgid "Counted once per email."
+msgstr "E-mailenként egyszer számolva."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Hozz létre a levelezési szolgáltatásnál egy új, küldési jogosultsággal rendelkező API-kulcsot, és add meg a levelező bővítményben."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Új webhook URL létrehozása? A jelenlegi URL azonnal megszűnik működni – illeszd be az új URL-t az e-mail-szolgáltatód webhook-beállításaiba."
+
+msgid "Create new URL"
+msgstr "Új URL létrehozása"
+
+msgid "Current page"
+msgstr "Aktuális oldal"
+
+msgid "Current record"
+msgstr "Jelenlegi rekord"
+
+msgid "Current size"
+msgstr "Jelenlegi méret"
+
+msgid "Custom"
+msgstr "Egyéni"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "DKIM-kulcs található (szelektor: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "DMARC-rekord található p=none értékkel: csak jelentések, a hamisított levelek továbbra is kézbesítődnek."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "DMARC-rekord található p=%s házirenddel."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "A DMARC-rekordnak nincs érvényes házirendje (p=none, quarantine vagy reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "A DNS-lekérdezés sikertelen volt vagy túllépte az időkorlátot. Próbáld újra később."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "Ezen a szerveren nem érhetők el DNS-lekérdezések (a dns_get_record() le van tiltva), így a feladó-ellenőrzés itt nem futtatható."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Szükséges DNS-lekérdezések: kb. %1$s a megengedett %2$s-ból."
+
+msgid "Daily"
+msgstr "Naponta"
+
+msgid "Daily digest"
+msgstr "Napi összesítő"
+
+msgid "Dark"
+msgstr "Sötét"
+
+msgid "Date"
+msgstr "Dátum"
+
+msgid "Default (%s days)"
+msgstr "Alapértelmezett (%s nap)"
+
+msgid "Default (no time limit)"
+msgstr "Alapértelmezett (időkorlát nélkül)"
+
+msgid "Default sender"
+msgstr "Alapértelmezett feladó"
+
+msgid "Delete"
+msgstr "Törlés"
+
+msgid "Delete %s selected log entries?"
+msgstr "Törlöd a kiválasztott %s naplóbejegyzést?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Törlöd az ÖSSZES naplóbejegyzést? Ez nem vonható vissza."
+
+msgid "Delete entries after"
+msgstr "Bejegyzések törlése"
+
+msgid "Delete selected"
+msgstr "Kijelöltek törlése"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "A naplótábla és a beállítások törlése a bővítmény törlésekor"
+
+msgid "Delete this log entry?"
+msgstr "Törlöd ezt a naplóbejegyzést?"
+
+msgid "Deleted."
+msgstr "Törölve."
+
+msgid "Delivered"
+msgstr "Kézbesítve"
+
+msgid "Delivered by %s (API)"
+msgstr "Kézbesítette: %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "A pre_wp_mail-re csatlakozó kód kézbesítette (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Kézbesítve a napi összesítőben: %s."
+
+msgid "Delivery"
+msgstr "Kézbesítés"
+
+msgid "Delivery status from your email provider"
+msgstr "Kézbesítési állapot az e-mail-szolgáltatódtól"
+
+msgid "Desktop"
+msgstr "Asztali"
+
+msgid "Did my email arrive?"
+msgstr "Megérkezett az e-mailem?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Az e-mail kikapcsolása vagy címzettjének módosítása"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Elveted az összes visszatartott e-mailt? A naplóban maradnak, de nem lesznek elküldve."
+
+msgid "Discard held emails"
+msgstr "Visszatartott e-mailek elvetése"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Ne küldj ingyenes e-mail-címekről (gmail.com, gmx.de …) a saját szervereden keresztül."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Kész: %1$s e-mail elküldve, %2$s sikertelen."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Kész: %1$s importálva, %2$s ismétlődés, %3$s túl régi."
+
+msgid "Download .eml"
+msgstr ".eml letöltése"
+
+msgid "Download as CSV"
+msgstr "Letöltés CSV-ként"
+
+msgid "Download started."
+msgstr "A letöltés elindult."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Az aktuális szűrőknek megfelelő bejegyzések letöltése %s formátumban"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Minden e-mailt egyszer ellenőrzünk, amikor naplózásra vagy importálásra kerül (külső kérések nélkül). Az itteni módosítások csak az ezután naplózott e-mailekre hatnak; a régebbi bejegyzéseket nem ellenőrizzük újra. A DNS- és ismételt küldési ellenőrzések egy bejegyzés megnyitásakor futnak."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "A korábbi e-mailek a(z) %s címre többször véglegesen sikertelenek voltak."
+
+msgid "Edit template"
+msgstr "Sablon szerkesztése"
+
+msgid "Editors and above"
+msgstr "Szerkesztők és felettük"
+
+msgid "Email address"
+msgstr "E-mail-cím"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "E-mail-cím (a legutóbbi e-mail már nincs a naplóban)"
+
+msgid "Email address or order number"
+msgstr "E-mail-cím vagy rendelésszám"
+
+msgid "Email consists almost only of images"
+msgstr "Az e-mail szinte csak képekből áll"
+
+msgid "Email failure spike"
+msgstr "Sikertelen e-mailek hulláma"
+
+msgid "Email failures"
+msgstr "E-mail-hibák"
+
+msgid "Email failures resolved"
+msgstr "Az e-mail-hibák megszűntek"
+
+msgid "Email inventory"
+msgstr "E-mail-jegyzék"
+
+msgid "Email log"
+msgstr "E-mail-napló"
+
+msgid "Email log: problem recipients"
+msgstr "E-mail-napló: problémás címzettek"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "E-mail küldése, ha valaki hozzászólást ír"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "E-mail küldése, ha egy hozzászólás moderálásra vár"
+
+msgid "Email provider"
+msgstr "E-mail-szolgáltató"
+
+msgid "Email sent again."
+msgstr "Az e-mail újra el lett küldve."
+
+msgid "Email sent to %s."
+msgstr "E-mail elküldve ide: %s."
+
+msgid "Email type"
+msgstr "E-mail-típus"
+
+msgid "Email type is sent again"
+msgstr "Az e-mail-típus ismét kimegy"
+
+msgid "Email type stopped"
+msgstr "Az e-mail-típus leállt"
+
+msgid "Email types"
+msgstr "E-mail-típusok"
+
+msgid "Email volume back to normal"
+msgstr "Az e-mail-forgalom ismét normális"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Az e-mail-forgalom ismét normális: a vészfék már nem aktív."
+
+msgid "Email: failed"
+msgstr "E-mail: sikertelen"
+
+msgid "Email: failed – see the log"
+msgstr "E-mail: sikertelen – lásd a naplót"
+
+msgid "Email: sent"
+msgstr "E-mail: elküldve"
+
+msgid "Emails"
+msgstr "E-mailek"
+
+msgid "Emails are being logged again."
+msgstr "Az e-mailek ismét bekerülnek a naplóba."
+
+msgid "Emails are delivered to their recipients."
+msgstr "Az e-mailek eljutnak a címzettekhez."
+
+msgid "Emails are flowing again"
+msgstr "Az e-mailek ismét kimennek"
+
+msgid "Emails are logged but not delivered."
+msgstr "Az e-mailek bekerülnek a naplóba, de nem lesznek kézbesítve."
+
+msgid "Emails are still being sent."
+msgstr "Az e-mailek küldése továbbra is folyik."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "Az e-mailek küldése továbbra is folyik. Ellenőrizd a fő forrást; a leállításukhoz állítsd a vészféket „Értesítés és további e-mailek visszatartása” módra."
+
+msgid "Emails in 30 days"
+msgstr "E-mailek 30 nap alatt"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Az ilyen típusú, csak adminisztrátoroknak szóló e-maileket mostantól összegyűjtjük, és naponta egyszer, egy összesítőben küldjük el."
+
+msgid "Emails over time"
+msgstr "E-mailek időben"
+
+msgid "Emails per day and status"
+msgstr "E-mailek naponta, állapot szerint"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "E-mailek a hét napjai és órái szerint (a honlap időzónája)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "A naplóban már szereplő e-maileket – akár a Mailspur naplózta, akár egy másik bővítményből importáltuk – a címzettek, a tárgy és a küldés ideje alapján ismerjük fel, és ismétlődésként kihagyjuk."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Rendszeresen küldött e-mailek kiküldése leállt (%s)"
+
+msgid "Emails to this user"
+msgstr "E-mailek ennek a felhasználónak"
+
+msgid "Emails with notes"
+msgstr "Megjegyzéses e-mailek"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "A tárgy nélküli e-mailek spamnek tűnnek, és nehéz megtalálni őket a postafiókban."
+
+msgid "Emails – last 7 days"
+msgstr "E-mailek – elmúlt 7 nap"
+
+msgid "Emergency brake"
+msgstr "Vészfék"
+
+msgid "Emergency brake reset."
+msgstr "Vészfék visszaállítva."
+
+msgid "Emergency brake settings"
+msgstr "Vészfék-beállítások"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Vészfék: %1$s e-mail az elmúlt órában – sokkal több a szokásosnál (küszöb: %2$s óránként)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Vészfék: szokatlan e-mail-áradat"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Üres = automatikus: az elmúlt 14 nap legforgalmasabb órájának háromszorosa, legalább 50 – jelenleg %s."
+
+msgid "Empty log"
+msgstr "Napló ürítése"
+
+msgid "Empty subject"
+msgstr "Üres tárgy"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Kapcsold be a kétlépcsős azonosítást a Google-fiókhoz, és hozz létre egy alkalmazásjelszót (Google-fiók → Biztonság → Alkalmazásjelszavak)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Kapcsold be a DKIM-aláírást a levelezési szolgáltatódnál vagy tárhelyszolgáltatódnál, és tedd közzé a kapott kulcsot. Ha már aláírsz, add meg a szelektorodat (a DKIM-Signature fejléc s= értékét), és ellenőrizd újra."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Kapcsold be a DKIM-aláírást a levelezési szolgáltatásodnál, és tedd közzé a DNS-rekordját."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Kapcsold be a hitelesítést az SMTP-bővítményedben, és add meg a felhasználónevet és a jelszót."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Kapcsold be a hitelesítést az SMTP-bővítményedben."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "A titkosított SMTP-kapcsolatokhoz (TLS/SSL) az openssl PHP-kiterjesztés szükséges, amely ezen a szerveren nincs telepítve vagy engedélyezve."
+
+msgid "Encryption"
+msgstr "Titkosítás"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "A titkosítás (TLS/SSL) sikertelen"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Előbb adj meg egy e-mail-címet vagy egy webhook URL-t, és mentsd a beállításokat."
+
+msgid "Enter an email address or an order number."
+msgstr "Adj meg egy e-mail-címet vagy rendelésszámot."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Előbb adj meg egy e-mail-címet az „Értesítések küldése e-mailben ide:” mezőben, és mentsd a beállításokat."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Adj meg 1–10 e-mail-címet."
+
+msgid "Enter one or more email addresses."
+msgstr "Adj meg egy vagy több e-mail-címet."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Add meg az alkalmazásjelszót az SMTP-bővítményedben, vagy használd a bővítmény „Bejelentkezés Google-fiókkal” (OAuth) kapcsolatát."
+
+msgid "Entries"
+msgstr "Bejegyzések"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "A(z) %s napnál régebbi bejegyzéseket kihagyjuk, mert a megőrzési beállítás úgyis törölné őket. Ha mindent importálni szeretnél, előbb módosítsd fent a megőrzési időt."
+
+msgid "Error"
+msgstr "Hiba"
+
+msgid "Errors"
+msgstr "Hibák"
+
+msgid "Every %s days"
+msgstr "%s naponta"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "15 percenként (Mailspur-értesítések)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Minden hétfő reggel, csak ha van mit jelenteni: e-mailek és hibaarány az előző héthez képest, új, leállt és megváltozott e-mail-típusok, megjegyzéses e-mailek és vészfék-események. Csak számok és tárgyminták."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Minden e-mail-fajta, amelyet ez a honlap küld, a Mailspur e-mail-naplójából előállítva – pl. adatkezelési nyilvántartáshoz vagy átadáshoz. A címzettcsoportok az egyes feladók legutóbbi e-mailjeiből, az adatkategóriák az egyes típusok legutóbbi e-mailjéből származnak. A lista nem tartalmaz e-mail-tartalmat és címeket."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Minden e-mail-fajta, amelyet a honlapod küld, automatikusan kigyűjtve a naplóból: a küldő bővítmény és a tárgy szerint csoportosítva, a számok, címek és nevek helyőrzőként. A Mailspur megtanulja, milyen gyakran megy ki egy-egy típus, és észreveszi, ha valamelyik leáll – például egy bővítményfrissítés után."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Minden rendben: %s e-mail az elmúlt 7 napban, hiba nélkül."
+msgstr[1] "Minden rendben: %s e-mail az elmúlt 7 napban, egyik sem volt sikertelen."
+
+msgid "Expected today and not sent yet:"
+msgstr "Ma várható, de még nem ment ki:"
+
+msgid "Export"
+msgstr "Exportálás"
+
+msgid "Export started – your download begins shortly."
+msgstr "Az exportálás elindult – a letöltés hamarosan megkezdődik."
+
+msgid "Failed"
+msgstr "Sikertelen"
+
+msgid "Failed (%s %%)"
+msgstr "Sikertelen (%s %%)"
+
+msgid "Failing"
+msgstr "Hibás"
+
+msgid "Failure rate"
+msgstr "Hibaarány"
+
+msgid "Failure spike"
+msgstr "Hibahullám"
+
+msgid "Far more emails than usual were sent"
+msgstr "A szokásosnál sokkal több e-mail ment ki"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "A szokásosnál sokkal több e-mail ment ki, ezért a Mailspur visszatartja a további e-maileket, amíg fel nem szabadítod vagy el nem veted őket."
+
+msgid "Fewer"
+msgstr "Kevesebb"
+
+msgid "File"
+msgstr "Fájl"
+
+msgid "Filter by status"
+msgstr "Szűrés állapot szerint"
+
+msgid "Filter email types"
+msgstr "E-mail-típusok szűrése"
+
+msgid "First email after the change"
+msgstr "Első e-mail a változás után"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Az első e-mail ettől a feladótól: %s. Bekapcsolt típusértesítéseknél a Mailspur értesít, ha egy új feladó sok külső címre ír."
+
+msgid "First page"
+msgstr "Első oldal"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "Nagy mellékleteknél az időkorlát az átvitel közben is lejárhat – küldj kisebb fájlokat vagy linkeket."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "A honlap teszt- és fejlesztői másolataihoz: gondoskodj róla, hogy az ügyfelek soha ne kapjanak e-mailt a másolatból. Minden e-mail továbbra is naplózásra kerül."
+
+msgid "Forced dark"
+msgstr "Kényszerített sötét"
+
+msgid "Format"
+msgstr "Formátum"
+
+msgid "Free text from forms"
+msgstr "Szabad szöveg űrlapokból"
+
+msgid "Friday"
+msgstr "Péntek"
+
+msgid "From"
+msgstr "Feladó"
+
+msgid "From date"
+msgstr "Dátumtól"
+
+msgid "Front end"
+msgstr "Látogatói oldal"
+
+msgid "Function"
+msgstr "Függvény"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "A további e-maileket visszatartjuk, amíg egy adminisztrátor fel nem szabadítja vagy el nem veti őket."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "A Gmail és a Google Workspace már nem fogadja el a normál fiókjelszót SMTP-hez."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "A Gmail levágja a 102 KB-nál nagyobb HTML e-maileket, és „[Üzenet levágva]” szöveget jelenít meg. Minden, ami a vágás után van – gyakran a lábléc, a leiratkozási link vagy a jogi nyilatkozat –, rejtve marad."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "A Gmail le fogja vágni ezt az e-mailt (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "A Google elutasította a bejelentkezést"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML egyszerű szövegként elküldve"
+
+msgid "Handler"
+msgstr "Kezelő"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Kemény visszapattanás az e-mail-szolgáltatód jelentése szerint"
+
+msgid "Hard failures"
+msgstr "Végleges hibák"
+
+msgid "Headers"
+msgstr "Fejlécek"
+
+msgid "Held"
+msgstr "Visszatartva"
+
+msgid "Held by emergency brake – discarded."
+msgstr "A vészfék visszatartotta – elvetve."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "A vészfék visszatartotta – nincs kézbesítve."
+
+msgid "Held by emergency brake – released later."
+msgstr "A vészfék visszatartotta – később felszabadítva."
+
+msgid "Held by staging mode – not delivered."
+msgstr "A teszt mód visszatartotta – nincs kézbesítve."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "A visszatartott e-mail elküldve. Új bejegyzésként került a naplóba."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "A visszatartott e-mailek „Visszatartva” állapotot kapnak, és a naplóból egyenként továbbra is elküldhetők („Küldés most”)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Visszatartva: minden címzettnél volt már korábban végleges hiba (problémás címzettek)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Visszatartva: a teszt mód átirányításra van állítva, de nincs érvényes átirányítási cím beállítva."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Tippek olyan problémákról, amelyek miatt ez az e-mail nem érkezhet meg vagy nem jelenhet meg helyesen."
+
+msgid "Hold further emails to problem recipients"
+msgstr "További e-mailek visszatartása a problémás címzetteknek"
+
+msgid "Hooks"
+msgstr "Hookok"
+
+msgid "Hours"
+msgstr "Órák"
+
+msgid "How to fix:"
+msgstr "Megoldás:"
+
+msgid "I already did"
+msgstr "Már megtettem"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Tudomásul veszem, hogy a nyers forrás NINCS maszkolva, és nagyjából megduplázza az e-mailenkénti tárhelyigényt"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Ha gyakran előfordul, ellenőrizd az e-mail-szolgáltatód küldési korlátait."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Ha továbbra is előfordul, küldj egyszerre kevesebb e-mailt, vagy egy várólistát használó levelezési szolgáltatáson keresztül."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Ha a biztonsági alapértékek blokkolják, használd helyette az SMTP-bővítményed Microsoft (OAuth / Graph API) kapcsolatát."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Ha több címzett is sikertelen volt, a cím utáni szerverválasz megnevezi az okot."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Ha a fiók kétlépcsős azonosítást használ, hozz létre egy alkalmazásjelszót, és azt használd helyette."
+
+msgid "Ignore"
+msgstr "Figyelmen kívül hagyás"
+
+msgid "Ignored"
+msgstr "Figyelmen kívül hagyva"
+
+msgid "Ignored notes"
+msgstr "Figyelmen kívül hagyott megjegyzések"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "A figyelmen kívül hagyott megjegyzéseket az új e-maileknél már nem rögzítjük, a meglévő bejegyzéseknél pedig rejtve maradnak."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Képek helyettesítő szöveg nélkül (%1$s)"
+
+msgid "Import"
+msgstr "Importálás"
+
+msgid "Import failed: %s"
+msgstr "Sikertelen importálás: %s"
+
+msgid "Import from other plugins"
+msgstr "Importálás más bővítményekből"
+
+msgid "Import new entries"
+msgstr "Új bejegyzések importálása"
+
+msgid "Imported"
+msgstr "Importálva"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Az importált bejegyzéseknek nincs nyomkövetése: a másik bővítmény nem rögzítette ezeket a részleteket."
+
+msgid "Imported from %s"
+msgstr "Importálva innen: %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "Az Amazon SNS-ben iratkoztasd fel az URL-t (HTTPS protokoll) arra a témára, amely az Amazon SES Delivery, Bounce és Complaint értesítéseit kapja. A Mailspur automatikusan megerősíti a feliratkozást."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "A Brevóban nyisd meg a Transactional → Settings → Webhook menüt, add hozzá az URL-t, és válaszd ki a Delivered, Hard bounce, Soft bounce, Invalid email és Complaint eseményeket."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "A Mailgunban nyisd meg a Sending → Webhooks menüt, add hozzá az URL-t a Delivered, Permanent failure, Temporary failure és Spam complaints eseményekhez, és illeszd be lent a HTTP webhook signing key értékét."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "A Postmarkban nyisd meg a szerveredet → Webhooks → Add webhook, illeszd be az URL-t, és válaszd ki a Delivery, Bounce és Spam complaint eseményeket."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "A Microsoft 365 Felügyeleti központban nyisd meg a felhasználót → Levelezés → E-mail-alkalmazások kezelése, és kapcsold be a „Hitelesített SMTP” lehetőséget."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "A postafiókok nagyjából az első 40–80 karaktert mutatják; a többit levágják, telefonon még hamarabb."
+
+msgid "Include content"
+msgstr "Tartalommal együtt"
+
+msgid "Information"
+msgstr "Információ"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Telepíts egy SMTP-bővítményt, és küldj egy valódi postafiókon vagy a domained levelezési szolgáltatásán keresztül."
+
+msgid "Invalid date."
+msgstr "Érvénytelen dátum."
+
+msgid "Invalid email address"
+msgstr "Érvénytelen e-mail-cím"
+
+msgid "Invalid email address: %s"
+msgstr "Érvénytelen e-mail-cím: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Érvénytelen feladócím: %1$s"
+
+msgid "Irregular"
+msgstr "Rendszertelen"
+
+msgid "Is Mailspur helping you?"
+msgstr "Segít neked a Mailspur?"
+
+msgid "Is an email missing?"
+msgstr "Hiányzik egy e-mail?"
+
+msgid "Is everything running?"
+msgstr "Minden működik?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Legfeljebb megtartott"
+
+msgid "Keep for"
+msgstr "Megőrzés"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Tartsd titokban ezt az URL-t: a honlap titkos kulcsát tartalmazza. Mentsd a beállításokat, mielőtt teszteled a webhookot."
+
+msgid "Kept: %s"
+msgstr "Megőrzés: %s"
+
+msgid "Key figures"
+msgstr "Főbb mutatók"
+
+msgid "Last 30 days"
+msgstr "Elmúlt 30 nap"
+
+msgid "Last email before the change"
+msgstr "Utolsó e-mail a változás előtt"
+
+msgid "Last failure"
+msgstr "Utolsó hiba"
+
+msgid "Last page"
+msgstr "Utolsó oldal"
+
+msgid "Last sent"
+msgstr "Utoljára elküldve"
+
+msgid "Leave a review"
+msgstr "Értékelés írása"
+
+msgid "Light"
+msgstr "Világos"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "A link szövege %1$s, de ide vezet: %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Link fejlesztői címre: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Link a honlapodon nem létező oldalra: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Linkelj közvetlenül a teljes címre. Kattintáskövetéshez inkább UTM-paramétereket használj a saját domaineden."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Link URL-rövidítőn keresztül: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "A „/” jellel kezdődő linkek és képek csak a honlapon működnek. A levelezőprogramban nincs honlapcím, amely kiegészítené őket, így a képek üresek maradnak, a linkek pedig sehova sem vezetnek."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Linkek a honlap egy másik példányára: %1$s (ez a honlap: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Azok a linkek, amelyek látható címe eltér a valódi céltól, adathalászatnak tűnnek. A spamszűrők büntetik őket, és egyes levelezőprogramok figyelmeztetik az olvasót."
+
+msgid "Load remote content"
+msgstr "Külső tartalom betöltése"
+
+msgid "Loading…"
+msgstr "Betöltés…"
+
+msgid "Log"
+msgstr "Napló"
+
+msgid "Log entries %s"
+msgstr "Naplóbejegyzések %s"
+
+msgid "Log entry not found."
+msgstr "A naplóbejegyzés nem található."
+
+msgid "Log only – do not send any email"
+msgstr "Csak naplózás – semmilyen e-mailt ne küldjön"
+
+msgid "Log size"
+msgstr "Napló mérete"
+
+msgid "Logged emails"
+msgstr "Naplózott e-mailek"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "A naplózott e-mailek személyes adatokat tartalmazhatnak. A hozzáférést a lehető legszűkebb körnek add meg. A beállításokhoz mindig adminisztrátori jogosultság kell."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "A bejelentkezést és a címzetteket elfogadta, de magát az e-mailt elutasította – jellemzően spamszűrés, küldési korlát vagy a szolgáltató szabályzata miatt (554-es válaszkód)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Naplózza a kimenő e-maileket, feltérképezi, milyen típusú e-maileket küld a honlapod, és figyelmeztet, ha valamelyik leáll. Biztonságos előnézet, kézbesítési diagnosztika, statisztikák."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Keress a(z) %s e-mail-beállításaiban egy opciót a kikapcsolására vagy a címzett módosítására – vagy hagyd itt figyelmen kívül a típust."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Keresd meg a hibaüzenetben a szerver válaszát; általában megnevezi az okot."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Keress a naplóban váratlan tömeges küldést (spam űrlapbeküldések, hurkok)."
+
+msgid "Looking it up …"
+msgstr "Keresés …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "E-mail-napló"
+
+msgid "Mail Log sections"
+msgstr "Az e-mail-napló részei"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "A válaszokhoz és visszapattanásokhoz szükséges levelezőszerverek be vannak állítva."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "A postafiók-szolgáltatók ellenőrizhetik, hogy a honlapod küldhet-e e-mailt ennek a domainnek a nevében. A teljes feladó-ellenőrzés a DKIM-et is megvizsgálja."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Ismeretlen vagy nem elérhető postafiók"
+
+msgid "Mailer"
+msgstr "Levélküldő"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "A Mailgun minden webhookot ezzel a kulccsal ír alá (Sending → Webhooks → HTTP webhook signing key); az érvényes aláírás nélküli jelentéseket elutasítjuk."
+
+msgid "Mailspur alerts"
+msgstr "Mailspur-értesítések"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "A Mailspur a naplóban keresi azokat az e-maileket, amelyeket nem sikerült elküldeni."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "A Mailspur nem talált %s számú rendelést az áruházadban."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "A Mailspur eddig %s kézbesített e-mailt naplózott ezen a honlapon. Ha időt spórol neked, egy rövid értékelés a WordPress.org-on sokat jelentene – segít másoknak megtalálni a bővítményt, és ingyenesen tartja."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "A Mailspur naplójában nincs e-mail a(z) %s számú rendeléshez."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "A Mailspur naplójában nincs e-mail a következő címre: %s."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "A Mailspurt %1$s készíti. Tetszik? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "A Mailspur megtanulja, milyen gyakran megy ki egy-egy e-mail-fajta, pl. a rendelés-visszaigazolások, és itt jelzi, ha valamelyik leáll."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "A Mailspur az elmúlt 8 hét alapján megtanulja minden e-mail-típus ritmusát – egy napi rendelés-visszaigazolás 2 nap után, egy heti jelentés 2 hét után számít késésnek. Az értesítés megnevezi a típust, a feladóját és a legutóbbi e-mailje óta frissített bővítményeket. A fenti csatornákat használja; a figyelmen kívül hagyott típusok soha nem váltanak ki értesítést."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "A Mailspur azt látja, hogy a honlapod elküldte, magát a postafiókot nem. Ha nincs ott, kérd meg a címzettet, hogy nézze meg a spam mappát."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "A Mailspur most leállítja ezeket az e-maileket; az e-mail-típusukat figyelmen kívül hagyja."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – e-mail-napló"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: e-mailek visszatartva"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: teszt mód"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Fő forrás: %1$s (%2$s e-mail)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Győződj meg róla, hogy a levelező bővítményben megadott feladócím illeszkedik az ellenőrzött domainhez."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Győződj meg róla, hogy az e-mail „charset=UTF-8” beállítással megy ki, a sablonfájlok UTF-8 kódolással vannak mentve, és az adatbázistáblák utf8mb4-et használnak. Javítsd a már hibásan tárolt szövegeket."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Győződj meg róla, hogy a titkosítási beállítás illik a porthoz."
+
+msgid "Many emails could not be sent recently"
+msgstr "Az utóbbi időben sok e-mailt nem sikerült elküldeni"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Sok felkiáltójel a tárgyban (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Sok levelezőprogram blokkolja a képeket, amíg az olvasó nem engedélyezi őket. Helyettesítő szöveg nélkül az olvasó csak üres dobozokat lát; a képernyőolvasók semmi hasznosat nem olvasnak fel."
+
+msgid "Mark as resolved"
+msgstr "Megjelölés megoldottként"
+
+msgid "Marked as spam"
+msgstr "Spamnek jelölve"
+
+msgid "Marked as spam by the recipient"
+msgstr "A címzett spamnek jelölte"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "A jelszó-visszaállító, aktiváló és hozzáférési kulcsok maszkolása a naplózott linkekben, valamint a nyílt szövegként küldött jelszavak, API-kulcsok és kártyaszámok maszkolása"
+
+msgid "Maybe later"
+msgstr "Talán később"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Lehet, hogy az e-mail el sem ment – ellenőrizd a rendelés állapotát és az áruház e-mail-beállításait."
+
+msgid "Menu position"
+msgstr "Menüpozíció"
+
+msgid "Message"
+msgstr "Üzenet"
+
+msgid "Method"
+msgstr "Metódus"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "A Microsoft 365 / Exchange Online blokkolja az SMTP-bejelentkezést (alapszintű hitelesítés) ehhez a postafiókhoz vagy az egész szervezethez."
+
+msgid "Minutes"
+msgstr "Percek"
+
+msgid "Monday"
+msgstr "Hétfő"
+
+msgid "Monitor again"
+msgstr "Újra figyelés"
+
+msgid "Monitoring alerts"
+msgstr "Felügyeleti értesítések"
+
+msgid "More"
+msgstr "Több"
+
+msgid "More actions"
+msgstr "További műveletek"
+
+msgid "More filters"
+msgstr "További szűrők"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Leggyakoribb ok (%1$s esetben): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "A legtöbb szerver összesen 10–25 MB-ot fogad el."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Több DMARC-rekord található. Ilyenkor a fogadók figyelmen kívül hagyják a DMARC-ot – csak egyet tarts meg."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Több SPF-rekord található. A fogadók ezt hibának tekintik (PermError) – vond össze őket egy rekordba."
+
+msgid "Needs attention"
+msgstr "Figyelmet igényel"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Sem From fejléc, sem feladó nem lett rögzítve. A levélküldő ilyenkor az alapértelmezésére vált, ami gyakran wordpress@domained."
+
+msgid "Never"
+msgstr "Soha"
+
+msgid "New"
+msgstr "Új"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Új URL létrehozva. Frissítsd az e-mail-szolgáltatódnál."
+
+msgid "New email types"
+msgstr "Új e-mail-típusok"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Az új e-maileket visszatartjuk, amíg fel nem szabadítod vagy el nem veted őket. A jelszó-visszaállító e-mailek továbbra is kimennek."
+
+msgid "New sender"
+msgstr "Új feladó"
+
+msgid "New sender writes to many addresses"
+msgstr "Új feladó sok címre ír"
+
+msgid "Next email"
+msgstr "Következő e-mail"
+
+msgid "Next email (j)"
+msgstr "Következő e-mail (j)"
+
+msgid "Next page"
+msgstr "Következő oldal"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "A szokásos szelektorok alatt nem található DKIM-kulcs."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Nincs DMARC-rekord a(z) %s feladó domainhez"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Nem található DMARC-rekord. A nagy postafiók-szolgáltatók elvárják, és nélküle bárki észrevétlenül meghamisíthatja ezt a domaint."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Nincs MX-rekord: ez a domain nem tud válaszokat vagy visszapattanásokat fogadni, és egyes fogadók elutasítják az ilyen feladókat."
+
+msgid "No SMTP transcript for this email."
+msgstr "Ehhez az e-mailhez nincs SMTP-átirat."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Nincs SPF- és DMARC-rekord a(z) %s feladó domainhez"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Nincs SPF-rekord a(z) %s feladó domainhez"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Nem található SPF-rekord. A fogadók nem tudják megállapítani, mely szerverek küldhetnek e domain nevében."
+
+msgid "No alerts sent yet."
+msgstr "Még nem küldtünk értesítést."
+
+msgid "No connection to the SMTP server"
+msgstr "Nincs kapcsolat az SMTP-szerverrel"
+
+msgid "No email logged for %s hours"
+msgstr "%s órája nincs naplózott e-mail"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "Az elmúlt %1$s órában egy e-mail sem került a naplóba, pedig ez a honlap az elmúlt %3$s napból %2$s napon küldött e-mailt ebben az idősávban (átlagosan %4$s)."
+
+msgid "No emails"
+msgstr "Nincs e-mail"
+
+msgid "No emails found."
+msgstr "Nem található e-mail."
+
+msgid "No emails in this period."
+msgstr "Ebben az időszakban nincs e-mail."
+
+msgid "No emails logged for this order yet."
+msgstr "Ehhez a rendeléshez még nincs naplózott e-mail."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Még nincs naplózott e-mail. Az e-mail-típusok itt jelennek meg, amint a honlapod e-maileket küld."
+
+msgid "No emails match these filters."
+msgstr "Egy e-mail sem felel meg ezeknek a szűrőknek."
+
+msgid "No emails sent"
+msgstr "Nem ment ki e-mail"
+
+msgid "No emails to this user in the log."
+msgstr "A naplóban nincs e-mail ennek a felhasználónak."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "Az elmúlt két hétben egy e-mail sem került a naplóba."
+
+msgid "No limit"
+msgstr "Nincs korlát"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "Ezen a honlapon nem található másik e-mail-naplózó bővítmény naplója."
+
+msgid "No log of this plugin was found on this site."
+msgstr "Ezen a honlapon nem található ennek a bővítménynek a naplója."
+
+msgid "No problem recipients."
+msgstr "Nincsenek problémás címzettek."
+
+msgid "No problems found in this email."
+msgstr "Ebben az e-mailben nem található probléma."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Nem található nyilvános feladó domain (a honlap címe nem domainnév, és a naplóban még nincsenek feladók)."
+
+msgid "No public sender domain to check"
+msgstr "Nincs ellenőrizhető nyilvános feladó domain"
+
+msgid "No regularly sent email has stopped"
+msgstr "Egyetlen rendszeresen küldött e-mail kiküldése sem állt le"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Nincs jelentési cím (rua) – nem fogod látni, ki küld a nevedben."
+
+msgid "No sender address recorded"
+msgstr "Nincs rögzített feladócím"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "Ehhez a bejegyzéshez nem érhető el nyomkövetés. A nyomkövetés bevezetése előtt vagy egy azt nem tartalmazó verzióval került a naplóba."
+
+msgid "No unusual email failures"
+msgstr "Nincsenek szokatlan e-mail-hibák"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Nem, szándékosan. A(z) „%1$s” e-mailt (címzett: %2$s) %3$s visszatartottuk, és nem küldtük el. Ok: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Nem. Minden rendszeresen kimenő e-mail időben megérkezett."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Nem. A(z) „%1$s” e-mail (címzett: %2$s) küldése %3$s sikertelen volt. Ok: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Nem. A(z) „%1$s” e-mail (címzett: %2$s) %3$s elhagyta a honlapodat, de a(z) %4$s szerint a fogadó szerver elutasította."
+
+msgid "None"
+msgstr "Nincs"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Általában legalább %1$s naponta kimegy, most %2$s késésben van."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Nem minden szelektort sikerült időben ellenőrizni."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Nincs rögzítve: egy másik bővítményben be volt kapcsolva az SMTP-hibakeresés."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Nincs rögzítve: az SMTP-átirat ki van kapcsolva a beállításokban."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Nincs rögzítve: ez az e-mail nem SMTP-n keresztül ment ki."
+
+msgid "Not set up"
+msgstr "Nincs beállítva"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Nincs tárolva: az átiratokat csak a sikertelen e-maileknél őrizzük meg."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Még nem. A(z) „%1$s” e-mail (címzett: %2$s) %3$s elhagyta a honlapodat, de a(z) %4$s átmeneti problémát jelez."
+
+msgid "Notes"
+msgstr "Megjegyzések"
+
+msgid "Notes in the latest email: %s"
+msgstr "Megjegyzések a legutóbbi e-mailben: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Megjegyzések: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Megjegyzések: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Mára nincs több várható e-mail."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Az elmúlt 7 napban semmi sem volt sikertelen."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Még nincs mihez hasonlítani: egyetlen e-mail sem megy ki elég rendszeresen ahhoz, hogy a Mailspur észrevegyen egy kimaradást."
+
+msgid "Number of failed emails"
+msgstr "Sikertelen e-mailek száma"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "A számokat figyelmen kívül hagyjuk, így a „#123. rendelés” és a „#124. rendelés” együtt számít."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "Az utolsó %1$s olyan e-mail közül, amelynek küldése alatt valaki az oldalra várt, a fele %2$s mp-nél tovább tartott (átlagosan %3$s mp)."
+
+msgid "Off"
+msgstr "Ki"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Alapértelmezetten ki van kapcsolva. Enélkül az „.eml letöltése” a naplózott (maszkolt) adatokból építi újra az üzenetet. A nyers forrás pontosan úgy tartalmazza a jelszó-visszaállító linkeket és más titkos adatokat, ahogy elküldték őket – csak akkor kapcsold be, ha szükséged van rá, és mindkét jelölőnégyzet be van jelölve."
+
+msgid "Off – deliver emails normally"
+msgstr "Ki – az e-mailek normál kézbesítése"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "Ha az ok megszűnt, a naplóból újra elküldheted az e-mailt."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "Ha a jelentések azt mutatják, hogy a legitim levelek átmennek, válts p=quarantine (vagy p=reject) értékre."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "A két e-mail egyikét a megőrzési beállítások törölték vagy anonimizálták, így már nem hasonlíthatók össze."
+
+msgid "Only administrators can empty the log."
+msgstr "A naplót csak adminisztrátorok üríthetik."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Csak adminisztrátorok küldhetnek e-mailt más címekre."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Csak akkor értesít, ha az elmúlt 14 nap azt mutatja, hogy ebben az idősávban rendszerint mennek ki e-mailek (a 14 napból legalább 10 napon, a hét ugyanazon napját is beleértve), így a csendes éjszakák vagy hétvégék nem váltják ki."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Csak azok az e-mailek, amelyeknek minden címzettje problémás. A jelszó-visszaállító e-mailek mindig kimennek; a visszatartott e-mailek a naplóból továbbra is elküldhetők („Küldés most”)."
+
+msgid "Only held emails can be released."
+msgstr "Csak visszatartott e-mailek szabadíthatók fel."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Nyílt terjesztési lista: %1$s külső címzett látja egymás címét"
+
+msgid "Open in log"
+msgstr "Megnyitás a naplóban"
+
+msgid "Open latest"
+msgstr "Legutóbbi megnyitása"
+
+msgid "Open staging mode"
+msgstr "Teszt mód megnyitása"
+
+msgid "Open the email types"
+msgstr "E-mail-típusok megnyitása"
+
+msgid "Open the emergency brake"
+msgstr "Vészfék megnyitása"
+
+msgid "Open the log"
+msgstr "Napló megnyitása"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "A pontos hibáért nyisd meg a levelező bővítményed naplóját vagy hibakereső nézetét."
+
+msgid "Open the mail log"
+msgstr "E-mail-napló megnyitása"
+
+msgid "Open the sender check"
+msgstr "Feladó-ellenőrzés megnyitása"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "Nem kötelező, alapértelmezetten ki van kapcsolva. Bekapcsolva a Mailspur rendszeresen ellenőrzi a naplót, és értesít a hibahullámokról, a szokatlan csendről vagy a leállt e-mail-típusokról. Az értesítések csak az itt megadott címekre és webhookra mennek; tartalmazzák a honlap nevét, az értesítés szövegét (leállt e-mail-típusnál: a feladóját és a tárgymintáját) és egy linket a naplóhoz – soha nem az e-mailek tartalmát vagy címzettjeit."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "Nem kötelező, csak https. A Slack és Discord webhook URL-ek csevegőüzenetet kapnak, minden más URL egy JSON POST kérést. A kérést a szervered küldi pontosan erre az URL-re – más szolgáltatás nem vesz részt benne."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Vagy add hozzá a címet aliasként / „küldés más nevében” jogosultságként az e-mail-szolgáltatódnál."
+
+msgid "Order #%s"
+msgstr "#%s számú rendelés"
+
+msgid "Order data"
+msgstr "Rendelési adatok"
+
+msgid "Origin"
+msgstr "Eredet"
+
+msgid "Original Bcc"
+msgstr "Eredeti Bcc"
+
+msgid "Original Cc"
+msgstr "Eredeti Cc"
+
+msgid "Original recipients"
+msgstr "Eredeti címzettek"
+
+msgid "Other emails"
+msgstr "További e-mailek"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Egyéb címzettek (pl. vendégek)"
+
+msgid "Overview"
+msgstr "Áttekintés"
+
+msgid "Own top-level menu item"
+msgstr "Saját főmenüpont"
+
+msgid "PHP extension openssl is missing"
+msgstr "Hiányzik az openssl PHP-kiterjesztés"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer kész (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Lapozás"
+
+msgid "Password sent in plain text"
+msgstr "Jelszó nyílt szövegként elküldve"
+
+msgid "Path"
+msgstr "Útvonal"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Bankkártyaszám nyílt szövegként: %1$s"
+
+msgid "Per page"
+msgstr "Oldalanként"
+
+msgid "Period"
+msgstr "Időszak"
+
+msgid "Personal data"
+msgstr "Személyes adatok"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Phone number"
+msgstr "Telefonszám"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Telefonszélesség (375 px). Ha oldalra tudsz görgetni, az e-mail szélesebb, mint a legtöbb telefon kijelzője."
+
+msgid "Plain text"
+msgstr "Egyszerű szöveg"
+
+msgid "Please enter valid email addresses."
+msgstr "Adj meg érvényes e-mail-címeket."
+
+msgid "Plugin"
+msgstr "Bővítmény"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Az e-mailt küldő bővítmény vagy sablon."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Olyan problémák jelzése, amelyek miatt az e-mailek nem érkeznek meg vagy nem jelennek meg helyesen"
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Postal address"
+msgstr "Postacím"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "A Postmark, a Mailgun, a Brevo vagy az Amazon SES jelentheti ennek a honlapnak, hogy egy e-mail kézbesítve lett, visszapattant vagy spamnek jelölték. Az állapot a naplózott e-mailnél látható, és a kemény visszapattanások beszámítanak a problémás címzettekbe. A jelentések párosításához a Mailspur egy hivatkozási fejlécet ad a kimenő e-mailekhez."
+
+msgid "Preparation"
+msgstr "Előkészítés"
+
+msgid "Preview"
+msgstr "Előnézet"
+
+msgid "Previews"
+msgstr "Előnézetek"
+
+msgid "Previous email"
+msgstr "Előző e-mail"
+
+msgid "Previous email (k)"
+msgstr "Előző e-mail (k)"
+
+msgid "Previous page"
+msgstr "Előző oldal"
+
+msgid "Print"
+msgstr "Nyomtatás"
+
+msgid "Privacy"
+msgstr "Adatvédelem"
+
+msgid "Privacy & security"
+msgstr "Adatvédelem és biztonság"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Valószínűleg igen: %s e-mail-típus kiküldése leállt."
+msgstr[1] "Valószínűleg igen: %s e-mail-típus kiküldése leállt."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "A teszt e-maileket csak egy adminisztrátor kapja."
+
+msgid "Problem"
+msgstr "Probléma"
+
+msgid "Problem recipients"
+msgstr "Problémás címzettek"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Védi a domainedet, ha a szokásosnál sokkal több e-mail megy ki, pl. mert spamrobotok visszaélnek egy kapcsolatfelvételi űrlappal. Az értesítések a felügyeleti riasztások csatornáit használják; a jelszó-visszaállító e-maileket soha nem tartjuk vissza."
+
+msgid "Provider status"
+msgstr "Állapot a szolgáltatónál"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Az olyan szolgáltatók, mint a(z) %2$s, szigorú DMARC-házirendet tesznek közzé. A domainjükről „feladott”, de a webszervered által küldött e-mail nem megy át ezen az ellenőrzésen, és elutasítják vagy a spamben landol."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "A fontos tartalmat valódi szövegként írd meg, a képeket csak kiegészítésként használd."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "A fontos információt tedd előre, és a tárgyat tartsd kb. 80 karakter alatt."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "REST-útvonal"
+
+msgid "Rarely"
+msgstr "Ritkán"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Értékeld a Mailspurt a WordPress.org-on"
+
+msgid "Raw source"
+msgstr "Nyers forrás"
+
+msgid "Reason"
+msgstr "Ok"
+
+msgid "Rebuild from the log"
+msgstr "Újraépítés a naplóból"
+
+msgid "Recipient"
+msgstr "Címzett"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "A címzett domainje nem tud e-mailt fogadni: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "A címzett domainje nem fogad e-mailt: %1$s"
+
+msgid "Recipients"
+msgstr "Címzettek"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Ajánlott. Különben bárki, aki hozzáfér a naplóhoz, egy naplózott visszaállító link vagy jelszó segítségével átvehetne egy fiókot. Egy ilyen e-mail újraküldésekor a maszkolt változat megy ki."
+
+msgid "Record for every email"
+msgstr "Rögzítés minden e-mailnél"
+
+msgid "Record for failed emails only"
+msgstr "Rögzítés csak sikertelen e-maileknél"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Rögzíti az SMTP-szerverrel folytatott kommunikációt (csak ha az e-mailek SMTP-n keresztül mennek ki). A bejelentkezési adatokat és az üzenet tartalmát soha nem rögzíti. Kimarad, ha egy másik bővítményben be van kapcsolva az SMTP-hibakeresés."
+
+msgid "Recovery"
+msgstr "Helyreállás"
+
+msgid "Redact secrets"
+msgstr "Titkos adatok kitakarása"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Minden e-mail átirányítása az alábbi címekre"
+
+msgid "Redirect to"
+msgstr "Átirányítás ide"
+
+msgid "Redirect to test addresses"
+msgstr "Átirányítás tesztcímekre"
+
+msgid "Redirected by staging mode."
+msgstr "A teszt mód átirányította."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Csökkentsd a HTML-t: távolítsd el a nem használt CSS-t, az ismétlődő inline stílusokat, a megjegyzéseket és a hosszú követő URL-eket. A képek nem számítanak bele, csak maga a HTML."
+
+msgid "Registered users"
+msgstr "Regisztrált felhasználók"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "SPF, DKIM vagy DMARC miatt elutasítva"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Relatív linkek vagy képek (%1$s), pl. %2$s"
+
+msgid "Release held emails"
+msgstr "Visszatartott e-mailek felszabadítása"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Felszabadítva a teszt módból (visszatartott bejegyzés: #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Felszabadítva a vészfékből (visszatartott bejegyzés: #%s)."
+
+msgid "Remote content"
+msgstr "Külső tartalom"
+
+msgid "Remote content is loaded."
+msgstr "A külső tartalom betöltve."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "A külső képek és betűtípusok blokkolva vannak, így a feladók nem követhetik, mikor nyitod meg ezt a bejegyzést."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Eltávolítod az összes innen importált bejegyzést: %s? A másik bővítmény adatait ez nem érinti."
+
+msgid "Remove imported entries"
+msgstr "Importált bejegyzések eltávolítása"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Távolítsd el a kártyamezőt annak az űrlapnak vagy bővítménynek az értesítéséből, amely ezt az e-mailt küldte – a kártyaadatok csak a fizetési szolgáltatóra tartoznak. Legfeljebb az utolsó négy számjegyet mutasd. Kérd meg a címzettet, hogy törölje az e-mailt."
+
+msgid "Removed:"
+msgstr "Eltávolítva:"
+
+msgid "Repeat alerts after"
+msgstr "Értesítések ismétlése ennyi idő után:"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "A válaszok nem érnek el hozzád: %1$s címről küldve Reply-To nélkül"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Az e-mail-szolgáltatód jelentése az elmúlt 30 napból; csak azok az e-mailek számítanak, amelyekről jelentett."
+
+msgid "Request"
+msgstr "Kérés"
+
+msgid "Request failed: %s"
+msgstr "Sikertelen kérés: %s"
+
+msgid "Resend"
+msgstr "Újraküldés"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Néhány perc múlva küldd újra az e-mailt a naplóból."
+
+msgid "Resend the email from the log later."
+msgstr "Később küldd újra az e-mailt a naplóból."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Küldd újra az e-mailt a naplóból, amint a kézbesítés működik."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Küldd újra a sikertelen e-maileket, amint a korlát visszaáll."
+
+msgid "Resent from log"
+msgstr "Újraküldve a naplóból"
+
+msgid "Reset filters"
+msgstr "Szűrők visszaállítása"
+
+msgid "Result"
+msgstr "Eredmény"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Gyorsítótárból származó eredmény – a DNS-rekordok módosítása után használd az „Újraellenőrzés” gombot."
+
+msgid "Retention"
+msgstr "Megőrzés"
+
+msgid "Retention in the log"
+msgstr "Megőrzés a naplóban"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Ennek az e-mail-típusnak a megőrzési ideje mentve. A következő napi takarításkor lép érvénybe."
+
+msgid "Review held emails"
+msgstr "Visszatartott e-mailek áttekintése"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Nézd át ennek az e-mailnek a megjegyzéseit (linkek, feladó, helyőrzők)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Vond vissza a kulcsot a szolgáltatás vezérlőpultján, és hozz létre újat. Ezután derítsd ki, miért került egy e-mailbe (hibakeresési vagy hibajelentések, egy beállításokat kiíró űrlap), és szüntesd meg."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Visszavont kulcsok (üres p=): %s."
+
+msgid "Rhythm"
+msgstr "Ritmus"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Futtass keresést és cserét a régi domainre az adatbázisban, és ellenőrizd a beégetett URL-eket az e-mail-sablonokban és a bővítménybeállításokban."
+
+msgid "Run the full sender check"
+msgstr "Teljes feladó-ellenőrzés futtatása"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "Az SMTP AUTH ki van kapcsolva a Microsoft 365-ben"
+
+msgid "SMTP host"
+msgstr "SMTP-hoszt"
+
+msgid "SMTP login failed"
+msgstr "Sikertelen SMTP-bejelentkezés"
+
+msgid "SMTP transcript"
+msgstr "SMTP-átirat"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "Az SPF-rekord a világ bármely szerverének megengedi, hogy e domain nevében küldjön (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "Az SPF-rekord ?all-ra végződik (semleges): nem védi a domaint a hamisítás ellen."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "SPF-rekord található (redirect= egy másik házirendre)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "SPF-rekord található. A többi szerver gyanúsként van megjelölve (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "SPF-rekord található. A többi szervert elutasítják (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "Az SPF-rekordnak nincs „all” záró eleme, így a más szerverekről érkező leveleket semlegesként kezelik."
+
+msgid "Saturday"
+msgstr "Szombat"
+
+msgid "Save"
+msgstr "Mentés"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Mentve – hagyd üresen a megtartásához"
+
+msgid "Scheduled for later today:"
+msgstr "Mára későbbre ütemezve:"
+
+msgid "Search recipient or subject"
+msgstr "Címzett vagy tárgy keresése"
+
+msgid "Search recipient or subject …"
+msgstr "Címzett vagy tárgy keresése …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Keresd meg a régi címet az e-mail-sablonban, a bővítménybeállításokban és az adatbázisban (pl. a honlap költöztetése után), és cseréld le az éles domainre."
+
+msgid "See why"
+msgstr "Miért?"
+
+msgid "Seen"
+msgstr "Látott"
+
+msgid "Select all"
+msgstr "Összes kijelölése"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "A(z) „%s” szelektornak sincs kulcsa."
+
+msgid "Send"
+msgstr "Küldés"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Helyette küldj egy linket, amellyel a felhasználó beállíthatja a jelszavát – a WordPress új felhasználóknak szóló e-mailje pontosan ezt teszi. Keress egy „Jelszó küldése e-mailben” vagy „Jelszó mellékelése” jellegű opciót abban a bővítményben, amely ezt az e-mailt küldte, és kapcsold ki."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Üzenet küldése, ha a probléma megoldódott"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Küldj egy teszt e-mailt a levelező bővítmény beállításaiból."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Heti e-mail-jelentés küldése a fenti címekre"
+
+msgid "Send again"
+msgstr "Újraküldés"
+
+msgid "Send alerts by email to"
+msgstr "Értesítések küldése e-mailben ide:"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Elküldöd most mind a(z) %s visszatartott e-mailt az eredeti címzetteknek?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "A nagy fájlokat letöltési linkként küldd melléklet helyett."
+
+msgid "Send latest to me"
+msgstr "Legutóbbi küldése nekem"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "A hírleveleket olyan hírlevél-bővítménnyel vagy -szolgáltatással küldd, amely List-Unsubscribe és List-Unsubscribe-Post fejlécet ad hozzá, és ne küldj egy e-mailt sok embernek Bcc-ben."
+
+msgid "Send now"
+msgstr "Küldés most"
+
+msgid "Send report now"
+msgstr "Jelentés küldése most"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Az ilyen e-maileket minden címzettnek külön küldd el, vagy tedd a címzetteket Bcc-be. Hírlevelekhez olyan bővítményt használj, amely címzettenként egy e-mailt küld. Ha ügyfelek címei kiszivárogtak, egyeztesd az adatvédelmi tisztviselőddel, hogy be kell-e jelenteni az incidenst."
+
+msgid "Send test alert"
+msgstr "Tesztértesítés küldése"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Küldd az e-mailt „Content-Type: text/html; charset=UTF-8” fejléccel, vagy állítsd be a tartalomtípust a wp_mail_content_type szűrővel. Sok űrlap- és webáruház-bővítménynek van „HTML e-mail” opciója."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Elküldöd az ilyen típusú legutóbbi e-mailt ide: %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Újraküldöd ezt az e-mailt a következő címre: %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "E-mail küldése ide (legfeljebb 10 cím, vesszővel elválasztva):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Elküldöd most ezt a visszatartott e-mailt ide: %s? Ennél az egy e-mailnél a teszt mód nem érvényesül."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Megbízható SMTP-szolgáltatáson keresztül küldj a webszerver helyett, különösen megosztott tárhelyen."
+
+msgid "Send to…"
+msgstr "Küldés ide…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Feladó-ellenőrzés (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "A(z) %1$s feladó domain eltér a honlaptól (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Feladó domain (SPF és DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "A feladó domainje vagy címe nincs ellenőrizve"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Az utolsó 200 e-mailből %s feladója"
+
+msgid "Sending failed – see the log."
+msgstr "Sikertelen küldés – lásd a naplót."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Sikertelen küldés – a részleteket lásd az új naplóbejegyzésben."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "A háttérben történő küldés (várólistás levelező bővítmény) lehetővé teszi, hogy az oldal várakozás nélkül betöltődjön."
+
+msgid "Sending limit or quota reached"
+msgstr "Elérte a küldési korlátot vagy kvótát"
+
+msgid "Sending report …"
+msgstr "Jelentés küldése …"
+
+msgid "Sending test alert …"
+msgstr "Tesztértesítés küldése …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "A küldés ismét működik: nincs több hibahullám."
+
+msgid "Sending…"
+msgstr "Küldés…"
+
+msgid "Sent"
+msgstr "Elküldve"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Ingyenes e-mail-címként küldve: %1$s"
+
+msgid "Sent by"
+msgstr "Küldő"
+
+msgid "Sent by WP-Cron."
+msgstr "A WP-Cron küldte."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "A(z) %1$s cron esemény küldte – %2$s késésben van, miközben a WP-Cron más eseményeket futtat; lehet, hogy hibával leáll."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "A(z) %1$s cron esemény küldte – ütemezve van (következő futás: %2$s múlva), és a WP-Cron fut, tehát az esemény már nem küldi ezt az e-mailt."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "A(z) %s cron esemény küldte – ez az esemény már nincs ütemezve."
+
+msgid "Sent by the cron event %s."
+msgstr "A(z) %s cron esemény küldte."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Ismételten elküldve: további %1$s azonos e-mail %2$s percen belül"
+
+msgid "Sent to %s."
+msgstr "Elküldve ide: %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Ugyanarra a címre ment a rendelés dátuma körül, de nincs összekapcsolva ezzel a rendeléssel (például a kapcsolat létrejötte előtt naplózták, vagy importálták)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Állíts be egy olyan Reply-To címet, amelyet valaki olvas, pl. a WooCommerce → Beállítások → E-mailek menüben vagy az űrlapbővítményed e-mail-beállításaiban. Vagy küldj olyan címről, amely tud válaszokat fogadni."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Állíts be egy saját domaines feladócímet az SMTP-bővítményedben vagy a wp_mail_from szűrővel."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Állíts be egy valódi domaines feladócímet, pl. az SMTP-bővítményedben vagy a wp_mail_from szűrővel, és ellenőrizd a honlap címét a Beállítások → Általános menüben."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Állíts be tárgyat a küldő bővítmény sablon- vagy űrlapbeállításaiban."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Az SMTP-bővítményedben állítsd a feladócímet arra a postafiókra, amellyel bejelentkezel, és kapcsold be a „feladócím kényszerítése” opciót."
+
+msgid "Set up staging mode"
+msgstr "Teszt mód beállítása"
+
+msgid "Settings"
+msgstr "Beállítások"
+
+msgid "Settings › Discussion"
+msgstr "Beállítások › Interakció"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "A több felkiáltójel a reklámspamre jellemző. A spamszűrők ezt az e-mail terhére írhatják, ami ronthatja a kézbesítést."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Az ilyen típusú legutóbbi e-mailek közül több sikertelen volt."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "A sikertelen e-mailek aránya naponta (hosszú időszaknál hetente)."
+
+msgid "Shop managers and above"
+msgstr "Boltkezelők és felettük"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "A rövidített linkek elrejtik, hová vezetnek. A spammerek sokat használják őket, ezért a spamszűrők az e-mail terhére írhatják őket, ami ronthatja a kézbesítést."
+
+msgid "Show all email types"
+msgstr "Összes e-mail-típus megjelenítése"
+
+msgid "Show all in Mail Log"
+msgstr "Összes megjelenítése az e-mail-naplóban"
+
+msgid "Show as"
+msgstr "Megjelenítés mint"
+
+msgid "Show data as table"
+msgstr "Adatok megjelenítése táblázatként"
+
+msgid "Show email types"
+msgstr "E-mail-típusok megjelenítése"
+
+msgid "Show emails"
+msgstr "E-mailek megjelenítése"
+
+msgid "Show emails for %s in the log"
+msgstr "%s e-mailjeinek megjelenítése a naplóban"
+
+msgid "Show failed emails"
+msgstr "Sikertelen e-mailek megjelenítése"
+
+msgid "Show held emails"
+msgstr "Visszatartott e-mailek megjelenítése"
+
+msgid "Show these emails in the log"
+msgstr "E-mailek megjelenítése a naplóban"
+
+msgid "Silence"
+msgstr "Csend"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Szimulált sötét mód, az e-mail saját sötét módú stílusaival. Minden levelezőalkalmazás kicsit másképp kezeli a sötét módot."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Olyan alkalmazások szimulációja, amelyek a színek invertálásával kényszerítik a sötét módot. A képek megtartják a színeiket; a valódi alkalmazások részleteiben eltérnek."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "2024 óta a Gmail és a Yahoo egykattintásos leiratkozást (List-Unsubscribe fejléc) követel meg a tömeges leveleknél. Enélkül a hírleveleket nagyobb eséllyel utasítják el vagy szűrik ki."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Az egyedi hibák, pl. egy elírt cím miatt, normálisak."
+
+msgid "Some emails could not be sent recently"
+msgstr "Az utóbbi időben néhány e-mailt nem sikerült elküldeni"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Néhány lekérdezés kimaradt, mert a DNS túl lassan válaszolt."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "Nincs jogosultságod az oldal megtekintéséhez."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Ehhez nincs jogosultságod."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "Nincs jogosultságod az e-mail-napló exportálásához."
+
+msgid "Source"
+msgstr "Forrás"
+
+msgid "Staging"
+msgstr "Teszt mód"
+
+msgid "Staging mode"
+msgstr "Teszt mód"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "A teszt mód aktív: minden e-mail ide van átirányítva: %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "A teszt mód aktív: az e-mailek bekerülnek a naplóba, de nem lesznek kézbesítve."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "A teszt mód aktív: az e-maileket át kellene irányítani, de nincs érvényes átirányítási cím beállítva – minden e-mail vissza van tartva, és nem lesz kézbesítve."
+
+msgid "Staging mode is off"
+msgstr "A teszt mód ki van kapcsolva"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "A teszt mód be van kapcsolva, pedig ez egy éles honlap"
+
+msgid "Staging mode is on for this staging site"
+msgstr "A teszt mód be van kapcsolva ennél a teszthonlapnál"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "A teszt mód be van kapcsolva: minden e-mail a tesztcímeidre megy, nem a valódi címzettekhez."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "A teszt mód be van kapcsolva: az e-mailek bekerülnek a naplóba, de nem mennek ki."
+
+msgid "Staging mode settings"
+msgstr "Teszt mód beállításai"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Kezdd p=none értékkel, hogy jelentéseket kapj, majd szigoríts quarantine vagy reject értékre, ha az SPF és a DKIM átmegy."
+
+msgid "Statistics"
+msgstr "Statisztika"
+
+msgid "Status"
+msgstr "Állapot"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "A háttérben még %s régebbi e-mail típusokba sorolása folyik. Egy perc múlva töltsd újra az oldalt."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Összegyűjtés leállítása (a várakozókat most elküldi)"
+
+msgid "Stop these emails"
+msgstr "Ezen e-mailek leállítása"
+
+msgid "Stopped"
+msgstr "Leállt"
+
+msgid "Stopped by Mailspur."
+msgstr "A Mailspur leállította."
+
+msgid "Stopped email types"
+msgstr "Leállt e-mail-típusok"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Minden e-mail pontos nyers MIME-forrásának tárolása"
+
+msgid "Subject"
+msgstr "Tárgy"
+
+msgid "Subject mostly in capital letters"
+msgstr "A tárgy többnyire nagybetűs"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "A nagybetűs tárgy kiabálásnak hat, és gyakori a spamben. A spamszűrők ezt az e-mail terhére írhatják, ami ronthatja a kézbesítést."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "A tárgyak gyakran tartalmaznak neveket vagy rendelésszámokat."
+
+msgid "Suggested TXT record for %s"
+msgstr "Javasolt TXT-rekord ehhez: %s"
+
+msgid "Sunday"
+msgstr "Vasárnap"
+
+msgid "Supported: %s."
+msgstr "Támogatott: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Kikapcsolás itt: %1$s: „%2$s”."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Kivéve a napi összesítőből és külön elküldve."
+
+msgid "Temporary rejection – try again later"
+msgstr "Átmeneti elutasítás – próbáld újra később"
+
+msgid "Test"
+msgstr "Teszt"
+
+msgid "Test alert"
+msgstr "Tesztértesítés"
+
+msgid "Text changes"
+msgstr "Szövegváltozások"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "A HTML-ből előállított szöveges változat. Nem lett rögzítve, hogy az e-mailnek volt-e saját egyszerű szöveges változata."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Ez rendben van, ha a levelezőszervered küldhet ennek a domainnek a nevében. Ellenkező esetben az SPF és a DMARC nem megy át, és az e-mail a spamben landol."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Ez egy tesztpéldánynál helyes, de egy éles honlapon az ügyfelek nem kapnak rendelés-visszaigazolást, jelszó-visszaállítást vagy választ az űrlapjaikra. Kapcsold ki a teszt módot, ha ez az éles honlap."
+
+msgid "The API key was rejected"
+msgstr "Az API-kulcsot elutasították"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "A DNS-lekérdezés sikertelen volt vagy túllépte az időkorlátot. Később futtasd újra a feladó-ellenőrzést."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "A HTML e-mail képeket tartalmaz, de alig van benne szöveg. A spamszűrők nem tudják olvasni a képeket, és nem bíznak az ilyen e-mailekben, ami ronthatja a kézbesítést. Ha a levelezőprogram blokkolja a képeket, az olvasó szinte üres e-mailt lát."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "Az SMTP-fiók csak a saját címével (vagy ellenőrzött aliasaival) küldhet. A WordPress vagy egy bővítmény más feladócímet használt."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Az SMTP-szerverrel folytatott kommunikáció üres volt."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "Az SMTP-szerver egyáltalán nem volt elérhető: hibás hosztnév vagy port, a szerver nem működik, vagy a tárhelyszolgáltató blokkolja a kimenő levelezési portokat."
+
+msgid "The SMTP server refuses to relay"
+msgstr "Az SMTP-szerver megtagadja a továbbítást"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "Az SMTP-szerver elutasította a felhasználónevet vagy a jelszót (535-ös válaszkód)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "Az SMTP-szerver bejelentkezést vagy titkosítást igényel"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "A cím érvénytelennek tűnik – ellenőrizd, nincs-e benne elírás, vagy kérj egy másikat."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "A törzs HTML-címkéket tartalmaz, de az e-mail text/plain típusként ment ki (a WordPress alapértelmezése). A címzettek a nyers címkéket látják formázott szöveg helyett."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "A kapcsolat vagy az átvitel túl sokáig tartott. Általában egy tűzfal csendben eldobja a kapcsolatot, vagy hibás a hoszt és a port."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Az alapértelmezett feladócímnek nincs nyilvános domainje, vagy ez a szerver nem tud DNS-rekordokat lekérdezni."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "A domainnek sem MX-, sem A-rekordja nincs a DNS-ben. A neki küldött e-mailek visszapattannak. Általában el van írva a cím, vagy a domain már nem létezik."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "A domain „null MX” rekordot tesz közzé, amely kifejezetten jelzi, hogy nem fogad e-mailt. Minden neki küldött e-mail visszapattan."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "Az e-mail API lassan válaszol: ellenőrizd a levelező bővítményben beállított régiót vagy végpontot."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "Az e-mail no-reply címről érkezik, és nincs Reply-To fejléce. Ha egy ügyfél a „Válasz” gombra kattint, a válasz egy olyan címre megy, amelyet senki sem olvas, vagy visszapattan."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "Az e-mail olvasható formában tartalmaz egy jelszót. Az e-mailek évekig megmaradnak a postafiókokban, biztonsági mentésekben és továbbított szálakban – aki bármelyikhez hozzájut, be tud jelentkezni. Az e-mail-napló is tárolja, hacsak nincs bekapcsolva a „Titkos adatok kitakarása” (ekkor a napló maszkolt másolatot őriz, de a címzett így is megkapta a jelszót)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Az e-mail hozzáférési kulcsot (pl. Stripe, GitHub, Slack, AWS, Google vagy SendGrid kulcsot) vagy privát kulcsot tartalmaz. Aki elolvassa az e-mailt – most vagy évek múlva egy postafiókban vagy mentésben –, használhatja. Az e-mail-napló is tárolja, hacsak nincs bekapcsolva a „Titkos adatok kitakarása”."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "Az e-mail ki nem töltött sablonváltozókat tartalmaz. A címzettek szó szerint látják őket."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Az e-mail olyasmit tartalmaz, ami teljes bankkártyaszámnak tűnik (átmegy az ellenőrzőszám-teszten). Kártyaszámokat soha nem szabad e-mailben küldeni (PCI DSS): a postafiókok évekig megőrzik őket. Az e-mail-napló is tárolja, hacsak nincs bekapcsolva a „Titkos adatok kitakarása”."
+
+msgid "The email is too large"
+msgstr "Az e-mail túl nagy"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "Az e-mail egy kapcsolódó hoszton lévő WordPress-fájlokra mutat. Ez jellemzően egy tesztpéldányon fordul elő, amely még az éles honlap URL-jeit tartalmazza – vagy fordítva."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "Az e-mail egy olyan címre mutat ezen a honlapon, amely „az oldal nem található” (404) választ ad. Ez jellemzően egy oldal vagy termék átnevezése vagy törlése után fordul elő: a sablon még a régi címre mutat, és minden címzett egy hibaoldalra jut."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Az e-mail-típusok újraépítése folyik a naplóból."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "Az e-mail a Címzett vagy a Cc mezőben több, a domaineden kívüli személynek ment. Minden címzett látja az összes többi címet. Ügyfelek vagy tagok esetén ez személyes adatokat fed fel idegeneknek – a GDPR szerint ez általában adatvédelmi incidens."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "A(z) „%1$s” tárgyú, %2$s címre szóló e-mailt (%3$s, %4$s) egy biztonsági ellenőrzés nálunk rövid időre visszatartotta, majd elküldtük. Kérjük, nézze meg a spam mappát is."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "A(z) „%1$s” tárgyú, %2$s címre szóló e-mailt (%3$s, %4$s) egy biztonsági ellenőrzés nálunk visszatartotta, és nem lett elküldve. Újra elküldjük."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "A(z) „%1$s” tárgyú, %2$s címre szóló e-mail (%3$s, %4$s) nem lett elküldve, mert az e-mailek küldése akkor nálunk szünetelt. Újra elküldjük."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "A(z) „%1$s” tárgyú, %2$s címre szóló e-mailt (%3$s, %4$s) nem sikerült kézbesíteni. Újra elküldjük."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "A(z) „%1$s” tárgyú, %2$s címre szóló e-mail %3$s, %4$s időpontban készült el, de nem tudjuk megerősíteni, hogy kézbesítették-e. Ellenőrizzük, és szükség esetén újra elküldjük."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "A(z) „%1$s” tárgyú e-mailt %3$s, %4$s időpontban elküldtük a(z) %2$s címre, és a levelezőszerver elfogadta. Kérjük, nézze meg a spam mappát is."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "A vészfék visszatartja a kimenő e-maileket, amíg fel nem szabadítod vagy el nem veted őket."
+
+msgid "The emergency brake is holding emails"
+msgstr "A vészfék e-maileket tart vissza"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "A vészfék nem tart vissza e-mailt"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "A vészfék be van kapcsolva: a honlapod hirtelen sokkal több e-mailt küldött a szokásosnál."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "A vészfék szokatlanul sok e-mailt észlelt egy órán belül. Lehet, hogy visszaélnek egy kapcsolatfelvételi űrlappal. Az e-mailek küldése továbbra is folyik."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "A pontos nyers forrás tárolva van – az „.eml letöltése” változatlanul adja vissza (nem maszkolva)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Az utolsó %s e-mail mind sikertelen volt. Lehet, hogy a honlapról nem működik a küldés, pl. hibás SMTP-bejelentkezés vagy a honlapot elutasító levelezési szolgáltatás miatt. Előfordulhat, hogy az ügyfelek nem kapnak rendelés-visszaigazolást vagy jelszó-visszaállítást."
+
+msgid "The latest emails could not be sent"
+msgstr "A legutóbbi e-maileket nem sikerült elküldeni"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "A napló %s napig őrzi meg az e-maileket."
+msgstr[1] "A napló %s napig őrzi meg az e-maileket."
+
+msgid "The log shows the reason for each failed email."
+msgstr "A napló minden sikertelen e-mailnél megmutatja az okot."
+
+msgid "The mail log requires JavaScript."
+msgstr "Az e-mail-naplóhoz JavaScript szükséges."
+
+msgid "The mail server did not answer in time"
+msgstr "A levelezőszerver nem válaszolt időben"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "A levelezőszerver átmenetileg nem érhető el"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "A levelezőszerver elutasította az e-mail méretét (552-es válaszkód). A mellékletek kódoláskor nagyjából harmadával nőnek."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "A levelezési szolgáltatás csak az ott ellenőrzött domainekről vagy címekről küld."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "A levelezési szolgáltatás vagy a postafiók megtagadta a további e-maileket, mert elérte a sebességkorlátot, a napi kvótát vagy a csomag korlátját."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "A levelezési szolgáltatás elutasította a kérést, mert az API-kulcs hibás, lejárt, vissza lett vonva, vagy nincs küldési jogosultsága."
+
+msgid "The mailer plugin reported a failure"
+msgstr "A levelező bővítmény hibát jelzett"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "A házirend csak a levelek %s%%-ára vonatkozik (pct)."
+
+msgid "The reason: %s."
+msgstr "Az ok: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "A fogadó szerver későbbi újrapróbálkozást kért (450/451/452-es válaszkód): szürkelistázás, megtelt postafiók vagy túl sok e-mail rövid idő alatt."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "A fogadó szerver nem tudta megerősíteni, hogy a szervered küldhet a feladó domainjének nevében."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "A fogadó szerver nem ismeri ezt a postafiókot (550 / 5.1.1-es válaszkód) – a cím el van írva, vagy már nem létezik."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "A fogadó szerver egy későbbi próbálkozáskor még elfogadhatja."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "A fogadó szerver elutasította az e-mailt a tartalma miatt, vagy mert a küldő szerver IP-címe tiltólistán van."
+
+msgid "The recipient address was rejected"
+msgstr "A címzett címét elutasították"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "A címzett domainje nem fogad e-mailt (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "A címzett domainjének nincs levelezőszervere"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "A címzett domainje egy népszerű e-mail-szolgáltató elírt nevének tűnik. Az ilyen e-mailek visszapattannak – vagy egy idegenhez jutnak, aki regisztrálta az elírt domaint."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Ugyanaz a tárgy rövid időn belül többször ment ugyanazoknak a címzetteknek. Jellemző okok: dupla rendelésvisszaigazolás, kétszer beküldött űrlap, párhuzamosan futó cron feladat vagy egy hurok egy bővítményben."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Nem sikerült biztonságos kapcsolatot létesíteni az SMTP-szerverrel: a tanúsítvány nem egyezik a hosztnévvel, lejárt, vagy a szerver nem támogatja a választott titkosítást."
+
+msgid "The sender address is not allowed"
+msgstr "A feladó címe nem engedélyezett"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "A feladó-ellenőrzés problémát talált: %s. Az e-mailek a spam mappában landolhatnak."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "A(z) %s feladó domainnek van SPF- és DMARC-rekordja"
+
+msgid "The sender domain could not be checked"
+msgstr "A feladó domaint nem sikerült ellenőrizni"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "A feladónak nincs nyilvános domainje (pl. wordpress@localhost). A legtöbb levelezőszerver elutasítja az ilyen e-maileket, vagy a spambe teszi őket."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "A szerver nem tud e-mailt küldeni a PHP mail() függvénnyel"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "A szerver lezárta a kapcsolatot (421-es válaszkód), pl. karbantartás, túlterhelés vagy a szerveredről érkező túl sok kapcsolat miatt."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "A szerver nem továbbít leveleket a nevedben, általában mert nem vagy bejelentkezve, vagy a feladócím nem a fiókhoz tartozik."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "A szerver csak hitelesítés vagy titkosított kapcsolatra váltás után fogad leveleket (530-as válaszkód)."
+
+msgid "The server rejected the content"
+msgstr "A szerver elutasította a tartalmat"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "A szerver helyi levelezőprogramja lassan válaszol: egy SMTP- vagy API-alapú levelező bővítmény ehelyett egy szolgáltatónak adja át az e-maileket."
+
+msgid "The start date must not be after the end date."
+msgstr "A kezdő dátum nem lehet a záró dátum után."
+
+msgid "The statistics require JavaScript."
+msgstr "A statisztikához JavaScript szükséges."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "A szöveg ugyanaz; csak az elrendezés változott. Hasonlítsd össze az előnézeteket."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "A felhasználónév általában a teljes e-mail-cím. Figyelj a jelszóval együtt kimásolt szóközökre."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "A webhook URL el lett távolítva: csak érvényes https URL-ek engedélyezettek."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "A heti jelentés be van kapcsolva, de nincs címzettje: adj meg egy e-mail-címet az „Értesítések küldése e-mailben ide:” mezőben."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Ezek az e-mailek ismét kimennek; az e-mail-típusukat ismét figyeljük."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Ezek az e-mail-fajták a szokásosnál hosszabb ideje nem mentek ki. Ennek oka lehet egy bővítményfrissítés, egy módosított beállítás vagy egy elakadt ütemezett feladat."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Ennek az e-mailnek van saját egyszerű szöveges változata, de a napló nem tárolja. Itt látható: a HTML-ből előállított szöveges változat."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Ennek az e-mailnek nincsenek saját sötét módú stílusai. Egyes alkalmazások változatlanul jelenítik meg, mások átszínezik – lásd: Kényszerített sötét."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Ennek az e-mailnek nincs egyszerű szöveges változata – egyes levelezőprogramok és spamszűrők előnyben részesítik. Itt látható: a HTML-ből előállított szöveges változat."
+
+msgid "This email type has no content change."
+msgstr "Ennél az e-mail-típusnál nincs tartalomváltozás."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Ezt az e-mail-típust mostantól figyelmen kívül hagyjuk: nincs állapot, nincs értesítés."
+
+msgid "This email type is monitored again."
+msgstr "Ezt az e-mail-típust ismét figyeljük."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Ezt a bejegyzést anonimizáltuk; a tartalma már nem küldhető el."
+
+msgid "This import is already running in another tab."
+msgstr "Ez az importálás már fut egy másik lapon."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Ez egy tesztértesítés. Az értesítési csatornáid működnek."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Ez az éles honlap egy helyi vagy tesztcímre mutató linket küldött. A címzettek nem tudják megnyitni."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Ehhez a kérdéshez JavaScript szükséges. Helyette kereshetsz a naplóban."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Ez a honlap naplózza az általa küldött e-maileket (címzett, tárgy, tartalom és kézbesítési állapot), hogy ellenőrizhesse a kézbesítést és elháríthassa a hibákat. A naplóbejegyzések a beállított megőrzési idő után automatikusan törlődnek."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Ez a honlap %s környezetként fut, és a teszt mód megakadályozza, hogy az e-mailjei valódi emberekhez jussanak."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Ez a honlap %s környezetként fut. Kapcsold be a teszt módot, hogy egyetlen valódi ügyfél se kapjon belőle e-mailt."
+
+msgid "Threshold (emails per hour)"
+msgstr "Küszöb (e-mail óránként)"
+
+msgid "Thursday"
+msgstr "Csütörtök"
+
+msgid "Timeline"
+msgstr "Idővonal"
+
+msgid "To"
+msgstr "Címzett"
+
+msgid "To date"
+msgstr "Dátumig"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "Ha meg akarod tartani őket, de naponta csak egy e-mailt szeretnél, válaszd az „Összegyűjtés egy napi e-mailbe” lehetőséget a típus … menüjében."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "A toplisták ennek az időszaknak a legutóbbi %s e-mailjén alapulnak."
+
+msgid "Top recipient domains"
+msgstr "Leggyakoribb címzett domainek"
+
+msgid "Top recipients: %s"
+msgstr "Leggyakoribb címzettek: %s"
+
+msgid "Top sources"
+msgstr "Leggyakoribb források"
+
+msgid "Top subjects"
+msgstr "Leggyakoribb tárgyak"
+
+msgid "Total"
+msgstr "Összesen"
+
+msgid "Total: %s ms"
+msgstr "Összesen: %s ms"
+
+msgid "Trace"
+msgstr "Nyomkövetés"
+
+msgid "Transcript copied."
+msgstr "Átirat másolva."
+
+msgid "Transport"
+msgstr "Átvitel"
+
+msgid "Trigger"
+msgstr "Kiváltás"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Kiváltasz egy valódi jelszó-visszaállító e-mailt a saját fiókodhoz? A WordPress új visszaállító linket hoz létre neked, így a korábbi visszaállító linkek nem működnek tovább; a jelszavad változatlan marad. Csak %s kapja meg."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Kiváltod az új felhasználó értesítéseit a saját fiókodhoz (az adminisztrátornak szóló értesítést és a bejelentkezési adatokat)? A WordPress új jelszólinket hoz létre neked, így a korábbi linkek nem működnek tovább. Új felhasználó nem jön létre; csak %s kapja meg őket."
+
+msgid "Trigger to me"
+msgstr "Teszt küldése nekem"
+
+msgid "Triggering…"
+msgstr "Kiváltás…"
+
+msgid "Tuesday"
+msgstr "Kedd"
+
+msgid "Type"
+msgstr "Típus"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "A típusok óránként és az oldal minden megnyitásakor frissülnek. Csak számlálókat, tárgymintákat és tartalom-ujjlenyomatokat tárolunk (címzetteket és tartalmat nem), és ezek a napló megőrzési idejét követik."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Elírás a címzett domainjében? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Az ékezetes betűk vagy idézőjelek olyan zagyva karakterekként jelennek meg, mint \"Ã¤\" vagy \"â€™\". Az UTF-8 szöveget valahol útközben más karakterkészletként olvasták be – egy sablonban, importáláskor vagy az adatbázisban."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Nem egyértelmű. A(z) „%1$s” e-mailt (címzett: %2$s) %3$s átadtuk küldésre, de a Mailspur nem kapott eredményt."
+
+msgid "Under Tools"
+msgstr "Az Eszközök menüben"
+
+msgid "Uninstall"
+msgstr "Eltávolítás"
+
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+msgid "Unknown probe."
+msgstr "Ismeretlen teszt e-mail."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Ismeretlen: nem érkezett kézbesítési eredmény (lecserélt wp_mail() függvény?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Ki nem cserélt helyőrzők: %1$s"
+
+msgid "Until the log limit"
+msgstr "A napló korlátjáig"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "Legfeljebb 10 cím, vesszővel elválasztva. A Cc és a Bcc eltávolításra kerül, a tárgy pedig az eredeti címzetteket mutatja. Érvényes cím nélkül az e-maileket inkább visszatartjuk."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "Legfeljebb 5 cím, vesszővel elválasztva. Az értesítő e-mailek „Mailspur-értesítések” forrással jelennek meg a naplóban, és maguk soha nem váltanak ki értesítést."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Frissítsd a linket az e-mail-sablonban vagy az e-mailt küldő bővítmény beállításaiban, vagy adj hozzá egy átirányítást a régi címről az új oldalra (pl. egy átirányító bővítménnyel)."
+
+msgid "Updated in between: %s"
+msgstr "Közben frissítve: %s"
+
+msgid "Updated since the last one:"
+msgstr "A legutóbbi óta frissítve:"
+
+msgid "Updated since then: %s."
+msgstr "Azóta frissítve: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Használj TLS-t a 587-es porton vagy SSL-t a 465-ös porton."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Használj beszédes linkszöveget (pl. „Rendelés megtekintése”), vagy mutasd meg, hová vezet valójában a link."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Használj saját domaines feladócímet, az ingyenes címet pedig tedd a Reply-To mezőbe. Csak akkor rendben ez, ha valóban a szolgáltató saját SMTP-szerverén keresztül, annak bejelentkezésével küldesz."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Használj abszolút URL-eket https:// előtaggal és domainnel, pl. a home_url() vagy a wp_get_attachment_url() függvénnyel a sablonban."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Pontosan azt a hosztnevet használd, amelyre a tanúsítványt kiállították (pl. a szolgáltató smtp.… hosztját IP-cím vagy saját domain helyett)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Legfeljebb egy felkiáltójelet használj."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "A cellák között a nyílbillentyűkkel mozoghatsz."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Az értékek között a nyílbillentyűkkel mozoghatsz, Enterrel megnyithatod őket a naplóban."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Az SMTP-fiók postafiókcímét használd feladóként (From)."
+
+msgid "User"
+msgstr "Felhasználó"
+
+msgid "User: %s"
+msgstr "Felhasználó: %s"
+
+msgid "Username"
+msgstr "Felhasználónév"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "A mentett beállításokat használja – előbb mentsd a módosításokat."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Ellenőriztesd a feladó domainjét a levelezési szolgáltatásodnál (add hozzá a DNS-rekordjait), vagy használj egy már ellenőrzött feladócímet."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Nagyon valószínű. A(z) „%1$s” e-mail %3$s kiment a következő címre: %2$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Nagyon hosszú tárgy (%1$s karakter)"
+
+msgid "View"
+msgstr "Megtekintés"
+
+msgid "View %s failed emails"
+msgstr "%s sikertelen e-mail megtekintése"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "A WP-Cron %s óta nem futott (a DISABLE_WP_CRON be van állítva – ellenőrizd a szerver cron feladatát)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "A WP-Cron %s óta nem futott – csak akkor fut, ha a honlapnak látogatói vannak, vagy hibával leáll."
+
+msgid "WP-Cron runs normally."
+msgstr "A WP-Cron normálisan fut."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "A napi összesítőre vár – külön nem megy ki."
+
+msgid "Waits %s s for the mail server"
+msgstr "%s mp-et vár a levelezőszerverre"
+
+msgid "Warnings"
+msgstr "Figyelmeztetések"
+
+msgid "Webhook URL"
+msgstr "Webhook URL"
+
+msgid "Webhook signing key"
+msgstr "Webhook-aláírókulcs"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "Szerda"
+
+msgid "Week"
+msgstr "Hét"
+
+msgid "Week of %s"
+msgstr "%s kezdetű hét"
+
+msgid "Weekday"
+msgstr "A hét napja"
+
+msgid "Weekly"
+msgstr "Hetente"
+
+msgid "Weekly email report"
+msgstr "Heti e-mail-jelentés"
+
+msgid "Weekly report"
+msgstr "Heti jelentés"
+
+msgid "What to do"
+msgstr "Teendők"
+
+msgid "When emails are sent"
+msgstr "Mikor mennek ki az e-mailek"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Ha a szokásosnál sokkal több e-mail megy ki, a vészfék figyelmeztet, és vissza tudja tartani a további e-maileket."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Ha ki van kapcsolva, a követőpixelek nem tudják megállapítani, mikor nyitsz meg egy bejegyzést. Egy-egy e-mailnél továbbra is betöltheted a külső tartalmat. A szkriptek és űrlapok mindig blokkolva vannak."
+
+msgid "Who can view the log"
+msgstr "Ki láthatja a naplót"
+
+msgid "Why did an email fail?"
+msgstr "Miért volt sikertelen egy e-mail?"
+
+msgid "With attachments"
+msgstr "Melléklettel"
+
+msgid "With notes"
+msgstr "Megjegyzéssel"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "E DNS-rekordok nélkül a postafiók-szolgáltatók nem tudják ellenőrizni, hogy a honlapod küldhet-e e-mailt ennek a domainnek a nevében, így az e-mailek nagyobb eséllyel kerülnek a spambe. A feladó-ellenőrzés javasol rekordokat, amelyeket hozzáadhatsz a domainszolgáltatódnál."
+
+msgid "WooCommerce email"
+msgstr "WooCommerce e-mail"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Beállítások › E-mailek"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "A WordPress alapvető e-mailjeinek nincs szerkesztője; szűrőkkel módosíthatók."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "A WordPress nem küldött e-mailt – lehet, hogy egy bővítmény kikapcsolta ezt az e-mailt."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "A WordPressben nincs beállítás ehhez az e-mailhez. A Mailspur leállíthatja az adminisztrátoroknak szóló értesítést; az új felhasználó továbbra is megkapja a saját e-mailjét."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "A WordPressben nincs beállítás ehhez az e-mailhez. A Mailspur leállíthatja a sikeres automatikus frissítésekről szóló értesítéseket; a sikertelen frissítésekről szóló értesítések továbbra is megérkeznek."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "A WordPress alapértelmezetten a PHP mail() függvényével küld. Ezen a szerveren ez le van tiltva, vagy nincs telepítve levelezőprogram (sendmail) – ez gyakori helyi telepítéseknél, Dockerben és sok menedzselt tárhelyen."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "A tárgyat normál kis- és nagybetűkkel írd, és legfeljebb egyetlen szót emelj ki."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Igen, de a(z) %4$s szerint a címzett spamnek jelölte a(z) „%1$s” e-mailt (címzett: %2$s, %3$s)."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Igen. A(z) „%1$s” e-mail %3$s kiment a következő címre: %2$s, és a(z) %4$s megerősítette a kézbesítést."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "A naplóból még elküldheted („Küldés most”)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Azért kapod ezt az összesítőt, mert ezeket az e-mail-típusokat a Mailspur egy napi e-mailbe gyűjti. Minden e-mail megmarad a naplóban."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Azért kapod ezt az e-mailt, mert ennek a honlapnak a Mailspur-beállításaiban be vannak kapcsolva a felügyeleti értesítések."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Azért kapod ezt az e-mailt, mert ennek a honlapnak a Mailspur-beállításaiban be van kapcsolva a heti jelentés. Csak számokat és tárgymintákat tartalmaz – sem az e-mailek tartalmát, sem a címzetteket."
+
+msgid "Your DKIM selector (optional)"
+msgstr "DKIM-szelektorod (nem kötelező)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "A honlapod az elmúlt 7 napban nem küldött e-mailt."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s értesítés: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 értesítés: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Heti e-mail-jelentés %2$s"
+
+msgid "address"
+msgstr "cím"
+
+msgid "and %s more"
+msgstr "és még %s"
+
+msgid "and %s more – see the log"
+msgstr "és még %s – lásd a naplót"
+
+msgid "another plugin stopped it"
+msgstr "egy másik bővítmény leállította"
+
+msgid "code"
+msgstr "kód"
+
+msgid "date"
+msgstr "dátum"
+
+msgid "days"
+msgstr "nap után"
+
+msgid "deleted after %s days"
+msgstr "%s nap után törölve"
+
+msgid "emails to this address failed several times before"
+msgstr "az erre a címre küldött e-mailek már többször sikertelenek voltak"
+
+msgid "entries"
+msgstr "bejegyzés"
+
+msgid "failing"
+msgstr "hibás"
+
+msgid "failure spikes"
+msgstr "hibahullámok"
+
+msgid "first seen %s"
+msgstr "először látva: %s"
+
+msgid "from a new sender"
+msgstr "új feladótól"
+
+msgid "holding emails right now"
+msgstr "éppen e-maileket tart vissza"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "kézi törlésig megőrizve"
+
+msgid "link"
+msgstr "link"
+
+msgid "minutes"
+msgstr "perc"
+
+msgid "name"
+msgstr "név"
+
+msgid "new this week"
+msgstr "új a héten"
+
+msgid "no"
+msgstr "nem"
+
+msgid "none"
+msgstr "nincs"
+
+msgid "none in %1$s – %2$s"
+msgstr "nincs: %1$s – %2$s"
+
+msgid "number"
+msgstr "szám"
+
+msgid "of %s"
+msgstr "/ %s"
+
+msgid "often to administrators"
+msgstr "gyakran adminisztrátoroknak"
+
+msgid "on %1$s at %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "same recipient"
+msgstr "ugyanaz a címzett"
+
+msgid "slow to send"
+msgstr "lassú küldés"
+
+msgid "staging mode is on"
+msgstr "a teszt mód be van kapcsolva"
+
+msgid "stopped"
+msgstr "leállt"
+
+msgid "stopped email types"
+msgstr "leállt e-mail-típusok"
+
+msgid "text"
+msgstr "szöveg"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "a vészfék megállított egy e-mail-áradatot"
+
+msgid "time"
+msgstr "időpont"
+
+msgid "today at %s"
+msgstr "ma %s-kor"
+
+msgid "triggered %s times"
+msgstr "%s alkalommal aktiválódott"
+
+msgid "unchanged"
+msgstr "változatlan"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "ismeretlen – a levélküldő nem adott hibaüzenetet"
+
+msgid "unusual silence"
+msgstr "szokatlan csend"
+
+msgid "usually sent: %s"
+msgstr "szokásos ritmus: %s"
+
+msgid "wp_mail() called"
+msgstr "wp_mail() meghívva"
+
+msgid "yes"
+msgstr "igen"
+
+msgid "yesterday at %s"
+msgstr "tegnap %s-kor"
+
+msgid "your email provider"
+msgstr "az e-mail-szolgáltatód"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "„%1$s” (%2$s), %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "A(z) „%1$s” (%2$s) ismét kimegy."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "A(z) „%1$s” (%2$s) általában legalább %3$s naponta kimegy. Az utolsót %4$s ezelőtt küldtük el."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "A(z) „%1$s” (%2$s) utoljára %3$s ezelőtt ment ki. Addig legalább %4$s naponta kiment."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "„%1$s” (%2$s) – általában hetente (%4$s), utoljára %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "„%1$s” (%2$s) – általában naponta, utoljára %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "„%1$s” – %2$s – %3$s"

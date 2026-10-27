@@ -1,0 +1,3253 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: bg_BG\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "„Изтегляне на .eml“ пресъздава съобщението от записаните, редактирани данни (без прикачени файлове)."
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s (предходна седмица: %2$s)"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s (планиран за %2$s)"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s тип имейл вече не се изпраща: %2$s."
+msgstr[1] "%1$s типа имейли вече не се изпращат, напр. %2$s."
+
+msgid "%1$s email types from %2$s senders"
+msgstr "Типове имейли: %1$s, податели: %2$s"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "%1$s имейла бяха неуспешни през последните %2$s минути."
+
+msgid "%1$s emails in %2$s days"
+msgstr "%1$s имейла за %2$s дни"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "Имейли през последните 30 дни: %1$s, неуспешни: %2$s"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "За един час бяха изпратени %1$s имейла – много повече от обикновено (праг: %2$s на час). Възможно е формуляр за контакт да се злоупотребява или сайтът да е компрометиран."
+
+msgid "%1$s entries, %2$s"
+msgstr "Записи: %1$s, %2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "импортирани: %1$s, дубликати: %2$s, твърде стари: %3$s"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%1$s от %2$s върнати (%3$s)"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "%1$s от %2$s имейла през последните %3$s дни не можаха да бъдат изпратени."
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "Обработени %1$s от %2$s записа …"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s п.п. спрямо %2$s – %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s изпрати първия си имейл на %2$s и през последните 24 часа е писал до различни външни адреси (брой: %3$s). Ако не сте инсталирали или настроили нищо, което изпраща такива имейли, проверете сайта: нов подател може да е признак за хакнат сайт."
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "Изпратени: %1$s, все още задържани: %2$s …"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s спрямо %2$s – %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · обединени имейли от последния обобщен имейл: %2$s"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · към %2$s"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s – процент неуспешни %2$s %% (предходна седмица: %3$s %%)"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s – съобщено от %2$s, %3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s (задължително разширение)"
+
+msgid "%s (theme)"
+msgstr "%s (тема)"
+
+msgid "%s ago"
+msgstr "преди %s"
+
+msgid "%s days"
+msgstr "%s дни"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "%s имейл е неуспешен през последните 7 дни."
+msgstr[1] "%s имейла са неуспешни през последните 7 дни."
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s имейл чака вашето решение."
+msgstr[1] "%s имейла чакат вашето решение."
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "%s имейл беше задържан и не е изпратен през последните 7 дни."
+msgstr[1] "%s имейла бяха задържани и не са изпратени през последните 7 дни."
+
+msgid "%s emails are held by the emergency brake."
+msgstr "Аварийната спирачка задържа %s имейла."
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s имейла чакат и не са доставени."
+
+msgid "%s entries"
+msgstr "Записи: %s"
+
+msgid "%s failed"
+msgstr "Неуспешни: %s"
+
+msgid "%s held emails discarded."
+msgstr "Отхвърлени задържани имейли: %s."
+
+msgid "%s imported entries removed."
+msgstr "Премахнати импортирани записи: %s."
+
+msgid "%s in 30 days"
+msgstr "%s за 30 дни"
+
+msgid "%s marked as spam"
+msgstr "Маркирани като спам: %s"
+
+msgid "%s more on the Email types page."
+msgstr "Още %s на страницата „Типове имейли“."
+
+msgid "%s notes"
+msgstr "%s бележки"
+
+msgid "%s of all emails"
+msgstr "%s от всички имейли"
+
+msgid "%s of them in the last 24 hours."
+msgstr "%s от тях през последните 24 часа."
+
+msgid "%s s"
+msgstr "%s сек."
+
+msgid "%s selected"
+msgstr "Избрани: %s"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "%s нещо изисква внимание:"
+msgstr[1] "%s неща изискват внимание:"
+
+msgid "%s to administrators in 30 days"
+msgstr "До администратори за 30 дни: %s"
+
+msgid "%s unchanged lines"
+msgstr "Непроменени редове: %s"
+
+msgid "(no subject)"
+msgstr "(без тема)"
+
+msgid "(no text content)"
+msgstr "(няма текстово съдържание)"
+
+msgid "(the emails are no longer in the log)"
+msgstr "(имейлите вече не са в дневника)"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all е по-строг; ~all е често срещан и е добре заедно с DMARC."
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 запазва записите завинаги. Почистването се изпълнява веднъж дневно."
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 означава без ограничение. Най-старите записи се премахват първи."
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 го изключва. Премахва съдържанието, заглавките и прикачените файлове на по-старите записи и маскира адресите (a***@example.com). Датата, състоянието, източникът, форматът, размерът и бележките остават за статистиката. Изпълнява се с ежедневното почистване, преди записите да бъдат изтрити – затова има ефект само ако е по-кратко от периода за изтриване по-горе."
+
+msgid "12 months"
+msgstr "12 месеца"
+
+msgid "30 days"
+msgstr "30 дни"
+
+msgid "7 days"
+msgstr "7 дни"
+
+msgid "90 days"
+msgstr "90 дни"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "DKIM селекторът може да съдържа само букви, цифри, точки, тирета и долни черти."
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "Разширение за изпращане на поща чрез API пое доставката и съобщи, че изпращането е неуспешно, без да посочи причина."
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "Публикуваният ключ не доказва, че имейлите ви се подписват с него – проверете резултата от DKIM в заглавките на получен имейл."
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "Адресът на получател или на подателя не е валиден имейл адрес, затова PHPMailer отказа изпращането."
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "API ключ или частен ключ в открит текст: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "За оценката на този запис са нужни около %1$s DNS заявки – повече от позволените %2$s, затова получателите може да го пренебрегнат (PermError). Премахнете неизползваните записи include:."
+
+msgid "Access"
+msgstr "Достъп"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Active: alerts on %s."
+msgstr "Активно: предупреждения при %s."
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "Добавете кратък атрибут alt към всяко изображение в шаблона, напр. alt=\"Logo Example Shop\"."
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "Добавете include: на вашия пощенски доставчик (напр. include:_spf.google.com), ако изпращате чрез такъв."
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "Добавете вашия пощенски сървър или пощенска услуга в SPF записа на домейна на подателя."
+
+msgid "Added:"
+msgstr "Добавено:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "Адреси с поне %s трайни неуспеха: получаващият сървър е отхвърлил пощенската кутия, домейнът няма пощенски сървър или вашият имейл доставчик е съобщил за твърдо връщане. Записите изтичат със срока на съхранение на дневника."
+
+msgid "Admin screen"
+msgstr "Административен екран"
+
+msgid "Administrators"
+msgstr "Администратори"
+
+msgid "Aggregate reports go to %s."
+msgstr "Обобщените отчети отиват до %s."
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "Предупреждение"
+
+msgid "Alert and hold further emails"
+msgstr "Предупреждение и задържане на следващите имейли"
+
+msgid "Alert only"
+msgstr "Само предупреждение"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "Известяване, когато тип имейл, който се изпраща редовно, спре"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "Предупреждение при многократно неуспешни имейли"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "Предупреждение, когато сайтът неочаквано спре да изпраща имейли"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "Предупрежденията са включени, но нямат канал: въведете имейл адрес или URL адрес на уебкук."
+
+msgid "Alerts are off."
+msgstr "Предупрежденията са изключени."
+
+msgid "All"
+msgstr "Всички"
+
+msgid "All email types look healthy."
+msgstr "Всички типове имейли изглеждат наред."
+
+msgid "All emails are redirected to test addresses."
+msgstr "Всички имейли се пренасочват към тестови адреси."
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "Всички имейли отиват до тестови адреси вместо до истинските получатели."
+
+msgid "All sources"
+msgstr "Всички източници"
+
+msgid "Allow again"
+msgstr "Разрешаване отново"
+
+msgid "Allowed again."
+msgstr "Отново е разрешено."
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "Също така известява еднократно, когато разширение или тема, които досега не са изпращали имейли, пишат до много различни външни адреси в рамките на един ден – възможен признак за хакнат сайт. Първите две седмици след инсталирането на Mailspur служат за база за сравнение."
+
+msgid "Also remove the subject when anonymising"
+msgstr "Премахване и на темата при анонимизиране"
+
+msgid "Also search content"
+msgstr "Търсене и в съдържанието"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "Като алтернатива помолете хостинг доставчика си да активира mail() / sendmail за този сайт."
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "Винаги зареждане на външни изображения и шрифтове в прегледа"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES (чрез SNS)"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "Имейл доставчик с HTTP API вместо SMTP изисква по-малко обмени на данни за всеки имейл."
+
+msgid "Anonymisation"
+msgstr "Анонимизиране"
+
+msgid "Anonymise entries after"
+msgstr "Анонимизиране на записите след"
+
+msgid "Anonymised"
+msgstr "Анонимизиран"
+
+msgid "Any format"
+msgstr "Всеки формат"
+
+msgid "Any status"
+msgstr "Всяко състояние"
+
+msgid "Apply"
+msgstr "Прилагане"
+
+msgid "Ask the recipient for a working address."
+msgstr "Помолете получателя за работещ адрес."
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "Помолете хостинг доставчика да активира PHP разширението openssl (или го активирайте в PHP настройките на хостинг панела)."
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "Помолете хостинг доставчика да обнови CA сертификатите и OpenSSL на сървъра."
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "Попитайте хостинг доставчика дали изходящите SMTP връзки са блокирани."
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "Попитайте хостинг доставчика дали изходящите връзки към този порт са разрешени (защитна стена)."
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "Поне %1$s неуспешни имейла в рамките на %2$s минути"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "Най-много едно предупреждение от вид за това време, дори ако проблемът продължава."
+
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+msgid "Attachments no longer available: %s"
+msgstr "Прикачените файлове вече не са налични: %s"
+
+msgid "Authentication"
+msgstr "Удостоверяване"
+
+msgid "Automatic TLS"
+msgstr "Автоматичен TLS"
+
+msgid "Average per day"
+msgstr "Средно на ден"
+
+msgid "Back to the email types"
+msgstr "Обратно към типовете имейли"
+
+msgid "Belongs to"
+msgstr "Принадлежи към"
+
+msgid "Block again"
+msgstr "Блокиране отново"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "Блокиран като спам или от черен списък"
+
+msgid "Bounced (permanent)"
+msgstr "Върнат (трайно)"
+
+msgid "Bounced (temporary)"
+msgstr "Върнат (временно)"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "Повредени символи (кодировка): %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "Масов имейл без заглавка за отписване (получатели: %1$s)"
+
+msgid "Bundle into one daily email"
+msgstr "Обединяване в един ежедневен имейл"
+
+msgid "Bundled into one daily email"
+msgstr "Обединени в един ежедневен имейл"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "Обединяването е изключено. Чакащите имейли бяха изпратени сега в един обобщен имейл."
+
+msgid "Busiest day"
+msgstr "Най-натоварен ден"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Отказ"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "Внимание: имейлите до този адрес вече са били неуспешни няколко пъти."
+
+msgid "Change in the email types"
+msgstr "Промяна в типовете имейли"
+
+msgid "Change staging mode"
+msgstr "Промяна на тестовия режим"
+
+msgid "Check"
+msgstr "Проверка"
+
+msgid "Check again"
+msgstr "Нова проверка"
+
+msgid "Check emails"
+msgstr "Проверка на имейлите"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "Проверете хоста и порта; опитайте 587 (TLS) вместо 465 (SSL) или обратното."
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "Проверете хоста, порта, шифроването, потребителското име и паролата във вашето SMTP разширение и изпратете тестов имейл оттам."
+
+msgid "Check sender domains"
+msgstr "Проверка на домейните на подателите"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "Проверете дали шифроването съответства на порта: TLS за 587, SSL за 465."
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "Проверете дали ключът принадлежи на правилния регион / акаунт (напр. крайна точка EU или US)."
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "Проверете SMTP хоста и порта: грешен порт или блокирана връзка често завършват с изтичане на времето, преди да сработи резервен вариант."
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "Проверете SPF, DKIM и DMARC записите на домейна на подателя или използвайте адрес на подател в домейна, от който изпращате."
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "Проверете адреса за грешки – или имейлът никога не е бил изпратен от сайта ви."
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "Проверете адреса с получателя и го коригирайте там, където е записан (потребителски профил, поръчка, запис от формуляр)."
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "Проверете адреса с получателя и го коригирайте там, където е записан."
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "Проверете името на хоста и порта: 587 със STARTTLS (TLS) или 465 със SSL. Порт 25 е блокиран от повечето хостинг доставчици."
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "Проверете лимитите и текущото използване в акаунта на пощенската услуга; при нужда надградете плана."
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "Проверете адресите на получателите в този запис за грешки, интервали или липсващи части."
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "Проверете адреса на подателя във вашето SMTP разширение и филтъра wp_mail_from."
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "Проверете лимитите за изпращане на пощенския си акаунт и бележките към този имейл."
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "Проверете IP адреса на сървъра в услуга за проверка на черни списъци и поискайте премахване."
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "Проверете изписването на заместителя в шаблона и дали разширението го поддържа за този тип имейл. Кратките кодове не се обработват в имейли, освен ако изпращащото разширение не извиква do_shortcode()."
+
+msgid "Checked %s."
+msgstr "Проверено %s."
+
+msgid "Checked just now"
+msgstr "Проверено току-що"
+
+msgid "Checking DNS records …"
+msgstr "Проверка на DNS записите …"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "Проверява DNS записите на домейните, от които изпраща сайтът ви: адреса на подателя по подразбиране и най-честите податели в дневника. Липсващите или слаби записи са най-честата причина имейлите да попадат в спам. Използва се само собственият DNS резолвер на сървъра ви; резултатите се пазят един час."
+
+msgid "Choose a range of at most %s days."
+msgstr "Изберете период от най-много %s дни."
+
+msgid "Clear selection"
+msgstr "Изчистване на избора"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "Щракнете върху стълбче, за да отворите тези имейли в дневника."
+
+msgid "Close"
+msgstr "Затваряне"
+
+msgid "Close (Esc)"
+msgstr "Затваряне (Esc)"
+
+msgid "Colour scheme"
+msgstr "Цветова схема"
+
+msgid "Command line"
+msgstr "Команден ред"
+
+msgid "Compare"
+msgstr "Сравняване"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "Сравнете източниците на тези записи. Проверете дали две разширения не изпращат едно и също известие или дали кука (напр. промяна на статуса на поръчка) не се задейства повече от веднъж."
+
+msgid "Component"
+msgstr "Компонент"
+
+msgid "Configure alerts"
+msgstr "Настройване на предупрежденията"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "Съдържанието е анонимизирано след %1$s дни, %2$s"
+
+msgid "Content change marked as seen."
+msgstr "Промяната в съдържанието е маркирана като видяна."
+
+msgid "Content changed"
+msgstr "Съдържанието е променено"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "Съдържанието е променено на %1$s, след обновяването на %2$s."
+
+msgid "Content changed on %s."
+msgstr "Съдържанието е променено на %s."
+
+msgid "Content removed"
+msgstr "Съдържанието е премахнато"
+
+msgid "Content removed after %s days"
+msgstr "Съдържанието е премахнато след %s дни"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "Съдържанието, заглавките и прикачените файлове са премахнати, а адресите са маскирани от настройката за анонимизиране."
+
+msgid "Copied"
+msgstr "Копирано"
+
+msgid "Copied – paste it into your reply."
+msgstr "Копирано е – поставете го в отговора си."
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "Копира кратко изречение за отговор на клиента: кога и до кого е изпратен имейлът и дали е пристигнал – без технически подробности."
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "Копира съществуващия дневник на друго разширение за записване на имейли в Mailspur, за да можете да търсите и преглеждате старите имейли тук. Другото разширение и данните му остават непокътнати; повторното импортиране добавя само нови записи."
+
+msgid "Copy"
+msgstr "Копиране"
+
+msgid "Copy for support"
+msgstr "Копиране за поддръжката"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "Копирането не е възможно в този браузър. Маркирайте текста и го копирайте:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "Коригирайте адреса (напр. в потребителския профил или поръчката) и обмислете проверка на имейл адресите във формулярите си."
+
+msgid "Counted once per email."
+msgstr "Брои се веднъж на имейл."
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "Създайте нов API ключ с право за изпращане в пощенската услуга и го въведете в разширението за изпращане на поща."
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "Създаване на нов URL адрес за уебкука? Текущият адрес спира да работи веднага – поставете новия адрес в настройките за уебкука на вашия имейл доставчик."
+
+msgid "Create new URL"
+msgstr "Създаване на нов URL адрес"
+
+msgid "Current page"
+msgstr "Текуща страница"
+
+msgid "Current record"
+msgstr "Текущ запис"
+
+msgid "Current size"
+msgstr "Текущ размер"
+
+msgid "Custom"
+msgstr "Персонализиран"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "Намерен е DKIM ключ (селектор: %s)."
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "Намерен е DMARC запис с p=none: само отчети, подправените имейли все пак се доставят."
+
+msgid "DMARC record found with policy p=%s."
+msgstr "Намерен е DMARC запис с политика p=%s."
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "DMARC записът няма валидна политика (p=none, quarantine или reject)."
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "DNS заявката е неуспешна или изтече времето. Опитайте отново по-късно."
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "DNS заявките не са налични на този сървър (dns_get_record() е изключена), затова проверката на подателя не може да се изпълни тук."
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "Нужни DNS заявки: около %1$s от позволените %2$s."
+
+msgid "Daily"
+msgstr "Ежедневно"
+
+msgid "Daily digest"
+msgstr "Ежедневен обобщен имейл"
+
+msgid "Dark"
+msgstr "Тъмна"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Default (%s days)"
+msgstr "По подразбиране (%s дни)"
+
+msgid "Default (no time limit)"
+msgstr "По подразбиране (без времево ограничение)"
+
+msgid "Default sender"
+msgstr "Подател по подразбиране"
+
+msgid "Delete"
+msgstr "Изтриване"
+
+msgid "Delete %s selected log entries?"
+msgstr "Изтриване на %s избрани записа от дневника?"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "Изтриване на ВСИЧКИ записи в дневника? Това не може да бъде отменено."
+
+msgid "Delete entries after"
+msgstr "Изтриване на записите след"
+
+msgid "Delete selected"
+msgstr "Изтриване на избраните"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "Изтриване на таблицата на дневника и настройките при изтриване на разширението"
+
+msgid "Delete this log entry?"
+msgstr "Изтриване на този запис от дневника?"
+
+msgid "Deleted."
+msgstr "Изтрито."
+
+msgid "Delivered"
+msgstr "Доставен"
+
+msgid "Delivered by %s (API)"
+msgstr "Доставен чрез %s (API)"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "Доставен от код, закачен към pre_wp_mail (API)"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "Доставен в ежедневния обобщен имейл на %s."
+
+msgid "Delivery"
+msgstr "Доставка"
+
+msgid "Delivery status from your email provider"
+msgstr "Състояние на доставката от вашия имейл доставчик"
+
+msgid "Desktop"
+msgstr "Настолен компютър"
+
+msgid "Did my email arrive?"
+msgstr "Пристигна ли имейлът ми?"
+
+msgid "Disable the email or change its recipient"
+msgstr "Деактивиране на имейла или промяна на получателя му"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "Отхвърляне на всички задържани имейли? Те остават в дневника, но не се изпращат."
+
+msgid "Discard held emails"
+msgstr "Отхвърляне на задържаните имейли"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "Не изпращайте имейли „от“ безплатни пощенски адреси (gmail.com, gmx.de …) през собствения си сървър."
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "Готово: изпратени имейли: %1$s, неуспешни: %2$s."
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "Готово: импортирани: %1$s, дубликати: %2$s, твърде стари: %3$s."
+
+msgid "Download .eml"
+msgstr "Изтегляне на .eml"
+
+msgid "Download as CSV"
+msgstr "Изтегляне като CSV"
+
+msgid "Download started."
+msgstr "Изтеглянето започна."
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "Изтегляне на записите, отговарящи на текущите филтри, като %s"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "Всеки имейл се проверява веднъж, когато бъде записан в дневника или импортиран (без външни заявки). Промените тук засягат само имейлите, записани след това; по-старите записи не се проверяват отново. Проверките на DNS и за повторно изпращане се изпълняват, когато отворите запис."
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "Предишни имейли до %s са били трайно неуспешни повече от веднъж."
+
+msgid "Edit template"
+msgstr "Редактиране на шаблона"
+
+msgid "Editors and above"
+msgstr "Редактори и нагоре"
+
+msgid "Email address"
+msgstr "Имейл адрес"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "Имейл адрес (последният имейл вече не е в дневника)"
+
+msgid "Email address or order number"
+msgstr "Имейл адрес или номер на поръчка"
+
+msgid "Email consists almost only of images"
+msgstr "Имейлът се състои почти само от изображения"
+
+msgid "Email failure spike"
+msgstr "Скок на неуспешните имейли"
+
+msgid "Email failures"
+msgstr "Неуспешни имейли"
+
+msgid "Email failures resolved"
+msgstr "Неуспешните имейли са отстранени"
+
+msgid "Email inventory"
+msgstr "Регистър на имейлите"
+
+msgid "Email log"
+msgstr "Дневник на имейлите"
+
+msgid "Email log: problem recipients"
+msgstr "Дневник на имейлите: проблемни получатели"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "Изпращане на имейл до мен, когато коментар е задържан за модериране"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "Изпращане на имейл до мен, когато някой публикува коментар"
+
+msgid "Email provider"
+msgstr "Имейл доставчик"
+
+msgid "Email sent again."
+msgstr "Имейлът е изпратен отново."
+
+msgid "Email sent to %s."
+msgstr "Имейлът е изпратен до %s."
+
+msgid "Email type"
+msgstr "Тип имейл"
+
+msgid "Email type is sent again"
+msgstr "Типът имейл отново се изпраща"
+
+msgid "Email type stopped"
+msgstr "Типът имейл вече не се изпраща"
+
+msgid "Email types"
+msgstr "Типове имейли"
+
+msgid "Email volume back to normal"
+msgstr "Обемът имейли се върна към нормалното"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "Обемът имейли се върна към нормалното: аварийната спирачка вече не е активна."
+
+msgid "Email: failed"
+msgstr "Имейл: неуспешен"
+
+msgid "Email: failed – see the log"
+msgstr "Имейл: неуспешен – вижте дневника"
+
+msgid "Email: sent"
+msgstr "Имейл: изпратен"
+
+msgid "Emails"
+msgstr "Имейли"
+
+msgid "Emails are being logged again."
+msgstr "Имейлите отново се записват."
+
+msgid "Emails are delivered to their recipients."
+msgstr "Имейлите се доставят до получателите си."
+
+msgid "Emails are flowing again"
+msgstr "Имейлите отново се изпращат"
+
+msgid "Emails are logged but not delivered."
+msgstr "Имейлите се записват, но не се доставят."
+
+msgid "Emails are still being sent."
+msgstr "Имейлите все още се изпращат."
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "Имейлите все още се изпращат. Проверете основния източник; превключете аварийната спирачка на „Предупреждение и задържане на следващите имейли“, за да ги спрете."
+
+msgid "Emails in 30 days"
+msgstr "Имейли за 30 дни"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "Имейлите от този тип, които отиват само до администратори, вече се събират и се изпращат веднъж дневно в един обобщен имейл."
+
+msgid "Emails over time"
+msgstr "Имейли във времето"
+
+msgid "Emails per day and status"
+msgstr "Имейли по дни и състояние"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "Имейли по ден от седмицата и час (часова зона на сайта)."
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "Имейлите, които вече са в дневника – записани от самия Mailspur или импортирани от друго разширение – се разпознават по получатели, тема и час на изпращане и се пропускат като дубликати."
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "Редовно изпращани имейли вече не се изпращат (%s)"
+
+msgid "Emails to this user"
+msgstr "Имейли до този потребител"
+
+msgid "Emails with notes"
+msgstr "Имейли с бележки"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "Имейлите без тема изглеждат като спам и трудно се намират във входящата поща."
+
+msgid "Emails – last 7 days"
+msgstr "Имейли – последните 7 дни"
+
+msgid "Emergency brake"
+msgstr "Аварийна спирачка"
+
+msgid "Emergency brake reset."
+msgstr "Аварийната спирачка е нулирана."
+
+msgid "Emergency brake settings"
+msgstr "Настройки на аварийната спирачка"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "Аварийна спирачка: %1$s имейла през последния час – много повече от обикновено (праг: %2$s на час)."
+
+msgid "Emergency brake: unusual email flood"
+msgstr "Аварийна спирачка: необичаен поток от имейли"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "Празно = автоматично: три пъти най-натоварения час от последните 14 дни, най-малко 50 – в момента %s."
+
+msgid "Empty log"
+msgstr "Изпразване на дневника"
+
+msgid "Empty subject"
+msgstr "Празна тема"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Активирайте потвърждаването в две стъпки за профила в Google и създайте парола за приложение (Google account → Security → App passwords)."
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "Включете DKIM подписване при вашия пощенски доставчик или хостинг и публикувайте ключа, който ви дава. Ако вече подписвате, въведете селектора си (стойността s= на заглавката DKIM-Signature) и проверете отново."
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "Активирайте DKIM подписването в пощенската услуга и публикувайте нейния DNS запис."
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "Активирайте удостоверяването във вашето SMTP разширение и въведете потребителско име и парола."
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "Активирайте удостоверяването във вашето SMTP разширение."
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "Шифрованите SMTP връзки (TLS/SSL) изискват PHP разширението openssl, което не е инсталирано или не е активирано на този сървър."
+
+msgid "Encryption"
+msgstr "Криптиране"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "Неуспешно шифроване (TLS/SSL)"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "Първо въведете имейл адрес или URL адрес на уебкук и запазете настройките."
+
+msgid "Enter an email address or an order number."
+msgstr "Въведете имейл адрес или номер на поръчка."
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "Първо въведете имейл адрес в „Изпращане на предупреждения по имейл до“ и запазете настройките."
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "Въведете между 1 и 10 имейл адреса."
+
+msgid "Enter one or more email addresses."
+msgstr "Въведете един или повече имейл адреса."
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "Въведете паролата за приложение във вашето SMTP разширение или използвайте връзката „Sign in with Google“ (OAuth) на разширението."
+
+msgid "Entries"
+msgstr "Записи"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "Записи, по-стари от %s дни, се пропускат, защото настройката за срок на съхранение така или иначе би ги изтрила. Първо променете срока на съхранение по-горе, за да импортирате всичко."
+
+msgid "Error"
+msgstr "Грешка"
+
+msgid "Errors"
+msgstr "Грешки"
+
+msgid "Every %s days"
+msgstr "На всеки %s дни"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "На всеки 15 минути (предупреждения на Mailspur)"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "Всеки понеделник сутрин, само когато има какво да се докладва: имейли и процент неуспешни спрямо предходната седмица, нови, спрели и променени типове имейли, имейли с бележки и случаи на аварийната спирачка. Само бройки и шаблони на теми."
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "Всички видове имейли, които този сайт изпраща, генерирани от дневника на имейлите на Mailspur – напр. за регистър на дейностите по обработване или за предаване на работа. Групите получатели се извличат от последните имейли на всеки подател, категориите данни – от последния имейл от всеки тип. Списъкът не съдържа съдържание на имейли и адреси."
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "Всички видове имейли, които сайтът ви изпраща, открити автоматично в дневника: групирани по разширението, което ги изпраща, и по тема, с числа, адреси и имена като заместители. Mailspur научава колко често се изпраща всеки тип и забелязва, когато някой спре – например след обновяване на разширение."
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "Всичко изглежда наред: %s имейл през последните 7 дни, без грешки."
+msgstr[1] "Всичко изглежда наред: %s имейла през последните 7 дни, нито един неуспешен."
+
+msgid "Expected today and not sent yet:"
+msgstr "Очаквани днес и все още неизпратени:"
+
+msgid "Export"
+msgstr "Експортиране"
+
+msgid "Export started – your download begins shortly."
+msgstr "Експортирането започна – изтеглянето ще започне скоро."
+
+msgid "Failed"
+msgstr "Неуспешни"
+
+msgid "Failed (%s %%)"
+msgstr "Неуспешни (%s %%)"
+
+msgid "Failing"
+msgstr "С грешки"
+
+msgid "Failure rate"
+msgstr "Процент неуспешни"
+
+msgid "Failure spike"
+msgstr "Скок на неуспехите"
+
+msgid "Far more emails than usual were sent"
+msgstr "Изпратени са много повече имейли от обикновено"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "Изпратени са много повече имейли от обикновено, затова Mailspur задържа следващите имейли, докато не ги освободите или отхвърлите."
+
+msgid "Fewer"
+msgstr "По-малко"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Filter by status"
+msgstr "Филтриране по състояние"
+
+msgid "Filter email types"
+msgstr "Филтриране на типовете имейли"
+
+msgid "First email after the change"
+msgstr "Първи имейл след промяната"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "Първи имейл от този подател на %s. Когато известията за типовете са включени, Mailspur известява, ако нов подател пише до много външни адреси."
+
+msgid "First page"
+msgstr "Първа страница"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "При големи прикачени файлове времето за изчакване може да изтече и по време на прехвърлянето – изпращайте по-малки файлове или връзки."
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "За тестови и развойни копия на сайт: гарантира, че клиентите никога няма да получат имейли от копието. Всеки имейл все пак се записва."
+
+msgid "Forced dark"
+msgstr "Принудително тъмна"
+
+msgid "Format"
+msgstr "Формат"
+
+msgid "Free text from forms"
+msgstr "Свободен текст от формуляри"
+
+msgid "Friday"
+msgstr "Петък"
+
+msgid "From"
+msgstr "От"
+
+msgid "From date"
+msgstr "От дата"
+
+msgid "Front end"
+msgstr "Публична част"
+
+msgid "Function"
+msgstr "Функция"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "Следващите имейли се задържат, докато администратор не ги освободи или отхвърли."
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail и Google Workspace вече не приемат обикновената парола на акаунта за SMTP."
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail отрязва HTML имейли, по-големи от 102 KB, и показва „[Message clipped]“. Всичко след отрязването – често долният колонтитул, връзката за отписване или правната информация – е скрито."
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail ще отреже този имейл (%1$s KB)"
+
+msgid "Google rejected the login"
+msgstr "Google отхвърли влизането"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML е изпратен като обикновен текст"
+
+msgid "Handler"
+msgstr "Обработчик"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "Вашият имейл доставчик съобщи за твърдо връщане"
+
+msgid "Hard failures"
+msgstr "Трайни неуспехи"
+
+msgid "Headers"
+msgstr "Заглавки"
+
+msgid "Held"
+msgstr "Задържан"
+
+msgid "Held by emergency brake – discarded."
+msgstr "Задържан от аварийната спирачка – отхвърлен."
+
+msgid "Held by emergency brake – not delivered."
+msgstr "Задържан от аварийната спирачка – не е доставен."
+
+msgid "Held by emergency brake – released later."
+msgstr "Задържан от аварийната спирачка – освободен по-късно."
+
+msgid "Held by staging mode – not delivered."
+msgstr "Задържан от тестовия режим – не е доставен."
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "Задържаният имейл е изпратен. Записан е като нов запис."
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "Задържаните имейли получават състояние „Задържан“ и все пак могат да бъдат изпратени един по един от дневника („Изпращане сега“)."
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "Задържан: всеки получател е имал трайни неуспехи преди (проблемни получатели)."
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "Задържан: тестовият режим е настроен за пренасочване, но не е зададен валиден адрес за пренасочване."
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "Подсказки за проблеми, поради които този имейл може да не пристигне или да не се показва правилно."
+
+msgid "Hold further emails to problem recipients"
+msgstr "Задържане на следващите имейли до проблемни получатели"
+
+msgid "Hooks"
+msgstr "Куки (hooks)"
+
+msgid "Hours"
+msgstr "Часове"
+
+msgid "How to fix:"
+msgstr "Как да се поправи:"
+
+msgid "I already did"
+msgstr "Вече го направих"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "Разбирам, че суровият източник НЕ е редактиран и приблизително удвоява мястото за съхранение на всеки имейл"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "Ако това се случва често, проверете лимитите за изпращане на пощенския си доставчик."
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "Ако продължава да се случва, изпращайте по-малко имейли наведнъж или чрез пощенска услуга с опашка."
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "Ако стандартните настройки за защита (security defaults) го блокират, използвайте вместо това връзката Microsoft (OAuth / Graph API) на вашето SMTP разширение."
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "Ако изпращането до няколко получатели е неуспешно, отговорът на сървъра след адреса посочва причината."
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "Ако акаунтът използва двуфакторно удостоверяване, създайте парола за приложение и я използвайте вместо това."
+
+msgid "Ignore"
+msgstr "Игнориране"
+
+msgid "Ignored"
+msgstr "Игнориран"
+
+msgid "Ignored notes"
+msgstr "Игнорирани бележки"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "Игнорираните бележки вече не се записват за нови имейли и са скрити за съществуващите записи."
+
+msgid "Images without alt text (%1$s)"
+msgstr "Изображения без алтернативен текст (%1$s)"
+
+msgid "Import"
+msgstr "Импортиране"
+
+msgid "Import failed: %s"
+msgstr "Неуспешно импортиране: %s"
+
+msgid "Import from other plugins"
+msgstr "Импортиране от други разширения"
+
+msgid "Import new entries"
+msgstr "Импортиране на нови записи"
+
+msgid "Imported"
+msgstr "Импортиран"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "Импортираните записи нямат проследяване: другото разширение не е записвал тези данни."
+
+msgid "Imported from %s"
+msgstr "Импортиран от %s"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "В Amazon SNS абонирайте URL адреса (протокол HTTPS) за темата, която получава известията Delivery, Bounce и Complaint на Amazon SES. Mailspur потвърждава абонамента автоматично."
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "В Brevo отворете Transactional → Settings → Webhook, добавете URL адреса и изберете Delivered, Hard bounce, Soft bounce, Invalid email и Complaint."
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "В Mailgun отворете Sending → Webhooks, добавете URL адреса за Delivered, Permanent failure, Temporary failure и Spam complaints и поставете HTTP webhook signing key по-долу."
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "В Postmark отворете вашия сървър → Webhooks → Add webhook, поставете URL адреса и изберете Delivery, Bounce и Spam complaint."
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "В центъра за администриране на Microsoft 365 отворете потребителя → Mail → Manage email apps и активирайте „Authenticated SMTP“."
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "Пощенските кутии показват около първите 40–80 знака; останалото се отрязва, а на телефоните – още по-рано."
+
+msgid "Include content"
+msgstr "Включване на съдържанието"
+
+msgid "Information"
+msgstr "Информация"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "Инсталирайте SMTP разширение и изпращайте чрез истинска пощенска кутия или пощенска услуга на вашия домейн."
+
+msgid "Invalid date."
+msgstr "Невалидна дата."
+
+msgid "Invalid email address"
+msgstr "Невалиден имейл адрес"
+
+msgid "Invalid email address: %s"
+msgstr "Невалиден имейл адрес: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "Невалиден адрес на подателя: %1$s"
+
+msgid "Irregular"
+msgstr "Нередовно"
+
+msgid "Is Mailspur helping you?"
+msgstr "Помага ли ви Mailspur?"
+
+msgid "Is an email missing?"
+msgstr "Липсва ли имейл?"
+
+msgid "Is everything running?"
+msgstr "Всичко ли работи?"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "Пазене на най-много"
+
+msgid "Keep for"
+msgstr "Съхраняване за"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "Пазете този URL адрес в тайна: той съдържа таен ключ на този сайт. Запазете настройките, преди да тествате уебкука."
+
+msgid "Kept: %s"
+msgstr "Съхранява се: %s"
+
+msgid "Key figures"
+msgstr "Основни показатели"
+
+msgid "Last 30 days"
+msgstr "Последните 30 дни"
+
+msgid "Last email before the change"
+msgstr "Последен имейл преди промяната"
+
+msgid "Last failure"
+msgstr "Последен неуспех"
+
+msgid "Last page"
+msgstr "Последна страница"
+
+msgid "Last sent"
+msgstr "Последно изпратен"
+
+msgid "Leave a review"
+msgstr "Оставете отзив"
+
+msgid "Light"
+msgstr "Светла"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "Текстът на връзката показва %1$s, но води към %2$s"
+
+msgid "Link to a development address: %1$s"
+msgstr "Връзка към адрес за разработка: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "Връзка към страница, която не съществува на сайта ви: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "Поставяйте връзка директно към пълния адрес. За проследяване на кликванията използвайте вместо това UTM параметри на собствения си домейн."
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "Връзка чрез услуга за съкращаване на URL адреси: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "Връзките и изображенията, които започват с „/“, работят само на уебсайта. В пощенския клиент няма адрес на сайт, с който да се допълнят, затова изображенията остават празни, а връзките не водят никъде."
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "Връзки към друго копие на сайта: %1$s (този сайт: %2$s)"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "Връзките, чийто видим адрес се различава от истинската цел, изглеждат като фишинг. Спам филтрите ги наказват, а някои пощенски клиенти предупреждават читателя."
+
+msgid "Load remote content"
+msgstr "Зареждане на външно съдържание"
+
+msgid "Loading…"
+msgstr "Зареждане…"
+
+msgid "Log"
+msgstr "Дневник"
+
+msgid "Log entries %s"
+msgstr "Записи в дневника %s"
+
+msgid "Log entry not found."
+msgstr "Записът в дневника не е намерен."
+
+msgid "Log only – do not send any email"
+msgstr "Само записване – без изпращане на имейли"
+
+msgid "Log size"
+msgstr "Размер на дневника"
+
+msgid "Logged emails"
+msgstr "Записани имейли"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "Записаните имейли може да съдържат лични данни. Давайте достъп възможно най-ограничено. Настройките винаги изискват администраторски права."
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "Влизането и получателите бяха приети, но самият имейл беше отказан – обикновено заради спам филтър, лимит за изпращане или политика на доставчика (код на отговор 554)."
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "Записва изходящите имейли, разпознава типовете имейли, които сайтът ви изпраща, и ви предупреждава, когато някой спре. Безопасен преглед, диагностика на доставката, статистика."
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "Потърсете опция за изключването му или за промяна на получателя в имейл настройките на %s – или игнорирайте типа тук."
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "Потърсете отговора на сървъра в съобщението за грешка; обикновено в него е посочена причината."
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "Потърсете в дневника неочаквано масово изпращане (спам през формуляри, зацикляния)."
+
+msgid "Looking it up …"
+msgstr "Търсене …"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "Дневник на имейлите"
+
+msgid "Mail Log sections"
+msgstr "Раздели на дневника на имейлите"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "Пощенските сървъри за отговори и върнати имейли са настроени."
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "Доставчиците на пощенски кутии могат да потвърдят, че сайтът ви има право да изпраща имейли за този домейн. Пълната проверка на подателя проверява и DKIM."
+
+msgid "Mailbox unknown or unavailable"
+msgstr "Пощенската кутия е неизвестна или недостъпна"
+
+msgid "Mailer"
+msgstr "Пощенски модул"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun подписва всеки уебкук с този ключ (Sending → Webhooks → HTTP webhook signing key); отчетите без валиден подпис се отхвърлят."
+
+msgid "Mailspur alerts"
+msgstr "Предупреждения на Mailspur"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur проверява дневника за имейли, които не са могли да бъдат изпратени."
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "Mailspur не намери поръчка #%s във вашия магазин."
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur вече е записал %s доставени имейла на този сайт. Ако ви спестява време, кратък отзив в WordPress.org би означавал много – помага на другите да намерят разширението и го запазва безплатно."
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "Mailspur няма имейл за поръчка #%s в дневника."
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "Mailspur няма имейл до %s в дневника."
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur е създаден от %1$s. Харесва ли ви? %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur научава колко често се изпраща всеки вид имейл, напр. потвърждения на поръчки, и съобщава тук, когато някой спре."
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur научава ритъма на всеки тип имейл от последните 8 седмици – ежедневно потвърждение на поръчка закъснява след 2 дни, седмичен отчет – след 2 седмици. Известието посочва типа, подателя му и разширенията, обновени след последния му имейл. Използва каналите по-горе; за игнорирани типове никога не се известява."
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur вижда, че сайтът ви го е изпратил, но не и самата пощенска кутия. Ако го няма там, помолете получателя да провери папката за спам."
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur вече спира тези имейли; техният тип имейл се игнорира."
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – Дневник на имейлите"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: задържани имейли"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: тестов режим"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "Основен източник: %1$s (%2$s имейла)."
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "Уверете се, че адресът From в разширението за изпращане на поща съответства на потвърдения домейн."
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "Уверете се, че имейлът се изпраща с „charset=UTF-8“, файловете на шаблоните са записани като UTF-8, а таблиците на базата данни използват utf8mb4. Поправете текстовете, които вече са записани повредени."
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "Уверете се, че настройката за шифроване съответства на порта."
+
+msgid "Many emails could not be sent recently"
+msgstr "Напоследък много имейли не можаха да бъдат изпратени"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "Много удивителни знаци в темата (%1$s)"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "Много пощенски клиенти блокират изображенията, докато читателят не ги разреши. Без алтернативен текст читателят вижда само празни полета, а екранните четци не съобщават нищо полезно."
+
+msgid "Mark as resolved"
+msgstr "Маркиране като решено"
+
+msgid "Marked as spam"
+msgstr "Маркиран като спам"
+
+msgid "Marked as spam by the recipient"
+msgstr "Маркиран като спам от получателя"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "Маскиране на ключове за смяна на парола, активиране и достъп в записаните връзки, както и на пароли, API ключове и номера на карти, изпратени като обикновен текст"
+
+msgid "Maybe later"
+msgstr "Може би по-късно"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "Може би имейлът никога не е изпращан – проверете състоянието на поръчката и настройките на имейлите на магазина."
+
+msgid "Menu position"
+msgstr "Позиция в менюто"
+
+msgid "Message"
+msgstr "Съобщение"
+
+msgid "Method"
+msgstr "Метод"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online блокира SMTP влизането (основно удостоверяване) за тази пощенска кутия или за цялата организация."
+
+msgid "Minutes"
+msgstr "Минути"
+
+msgid "Monday"
+msgstr "Понеделник"
+
+msgid "Monitor again"
+msgstr "Повторно наблюдение"
+
+msgid "Monitoring alerts"
+msgstr "Предупреждения от наблюдението"
+
+msgid "More"
+msgstr "Повече"
+
+msgid "More actions"
+msgstr "Още действия"
+
+msgid "More filters"
+msgstr "Още филтри"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "Най-честа причина (%1$s от тях): %2$s."
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "Повечето сървъри приемат общо 10–25 MB."
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "Намерени са няколко DMARC записа. В този случай получателите пренебрегват DMARC – оставете само един."
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "Намерени са няколко SPF записа. Получателите смятат това за грешка (PermError) – обединете ги в един запис."
+
+msgid "Needs attention"
+msgstr "Изисква внимание"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "Не е записана нито заглавка From, нито подател. Програмата за изпращане използва стойността си по подразбиране, често wordpress@yourdomain."
+
+msgid "Never"
+msgstr "Никога"
+
+msgid "New"
+msgstr "Нов"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "Създаден е нов URL адрес. Обновете го при вашия имейл доставчик."
+
+msgid "New email types"
+msgstr "Нови типове имейли"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "Новите имейли се задържат, докато не ги освободите или отхвърлите. Имейлите за смяна на парола все пак се изпращат."
+
+msgid "New sender"
+msgstr "Нов подател"
+
+msgid "New sender writes to many addresses"
+msgstr "Нов подател пише до много адреси"
+
+msgid "Next email"
+msgstr "Следващ имейл"
+
+msgid "Next email (j)"
+msgstr "Следващ имейл (j)"
+
+msgid "Next page"
+msgstr "Следваща страница"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "Не е намерен DKIM ключ под обичайните селектори."
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "Няма DMARC запис за домейна на подателя %s"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "Не е намерен DMARC запис. Големите доставчици на пощенски кутии очакват такъв, а без него всеки може незабелязано да подправи този домейн."
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "Няма MX запис: този домейн не може да получава отговори или върнати имейли и някои получатели отхвърлят такива податели."
+
+msgid "No SMTP transcript for this email."
+msgstr "Няма SMTP протокол за този имейл."
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "Няма SPF и DMARC запис за домейна на подателя %s"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "Няма SPF запис за домейна на подателя %s"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "Не е намерен SPF запис. Получателите не могат да разберат кои сървъри могат да изпращат за този домейн."
+
+msgid "No alerts sent yet."
+msgstr "Все още няма изпратени предупреждения."
+
+msgid "No connection to the SMTP server"
+msgstr "Няма връзка със SMTP сървъра"
+
+msgid "No email logged for %s hours"
+msgstr "Няма записан имейл от %s часа"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "През последните %1$s часа не е записан нито един имейл, въпреки че този сайт е изпращал имейли в този интервал в %2$s от последните %3$s дни (средно %4$s)."
+
+msgid "No emails"
+msgstr "Няма имейли"
+
+msgid "No emails found."
+msgstr "Не са намерени имейли."
+
+msgid "No emails in this period."
+msgstr "Няма имейли за този период."
+
+msgid "No emails logged for this order yet."
+msgstr "Все още няма записани имейли за тази поръчка."
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "Все още няма записани имейли. Типовете имейли ще се появят тук, щом сайтът ви започне да изпраща имейли."
+
+msgid "No emails match these filters."
+msgstr "Няма имейли, отговарящи на тези филтри."
+
+msgid "No emails sent"
+msgstr "Няма изпратени имейли"
+
+msgid "No emails to this user in the log."
+msgstr "В дневника няма имейли до този потребител."
+
+msgid "No emails were logged in the last two weeks."
+msgstr "През последните две седмици не са записани имейли."
+
+msgid "No limit"
+msgstr "Без ограничение"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "На този сайт не е намерен дневник на друго разширение за записване на имейли."
+
+msgid "No log of this plugin was found on this site."
+msgstr "На този сайт не е намерен дневник на това разширение."
+
+msgid "No problem recipients."
+msgstr "Няма проблемни получатели."
+
+msgid "No problems found in this email."
+msgstr "Не са открити проблеми в този имейл."
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "Не е намерен публичен домейн на подателя (адресът на сайта не е име на домейн, а в дневника все още няма податели)."
+
+msgid "No public sender domain to check"
+msgstr "Няма публичен домейн на подателя за проверка"
+
+msgid "No regularly sent email has stopped"
+msgstr "Нито един редовно изпращан имейл не е спрял"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "Няма адрес за отчети (rua) – няма да виждате кой изпраща от ваше име."
+
+msgid "No sender address recorded"
+msgstr "Не е записан адрес на подателя"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "За този запис няма проследяване. Записан е преди проследяването да съществува или от версия без него."
+
+msgid "No unusual email failures"
+msgstr "Няма необичайни неуспешни имейли"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "Не, умишлено. „%1$s“ до %2$s беше задържан %3$s и не е изпратен. Причина: %4$s."
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "Не. Всеки редовно изпращан имейл е излязъл по график."
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "Не. „%1$s“ до %2$s беше неуспешен %3$s. Причина: %4$s."
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "Не. „%1$s“ до %2$s напусна сайта ви %3$s, но %4$s съобщава, че получаващият сървър го е отхвърлил."
+
+msgid "None"
+msgstr "Няма"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "Обикновено се изпраща поне на всеки %1$s дни, сега закъснява с %2$s."
+
+msgid "Not all selectors could be checked in time."
+msgstr "Не всички селектори можаха да бъдат проверени навреме."
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "Не е записано: друго разширение е имало включено отстраняване на грешки в SMTP."
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "Не е записано: SMTP протоколът е изключен в настройките."
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "Не е записано: този имейл не е изпратен чрез SMTP."
+
+msgid "Not set up"
+msgstr "Не е настроено"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "Не е запазено: протоколите се пазят само за неуспешни имейли."
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "Още не. „%1$s“ до %2$s напусна сайта ви %3$s, но %4$s съобщава за временен проблем."
+
+msgid "Notes"
+msgstr "Бележки"
+
+msgid "Notes in the latest email: %s"
+msgstr "Бележки в последния имейл: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "Бележки: %1$s. %2$s"
+
+msgid "Notes: %s"
+msgstr "Бележки: %s"
+
+msgid "Nothing else is expected today."
+msgstr "Днес не се очаква нищо друго."
+
+msgid "Nothing failed in the last 7 days."
+msgstr "Нищо не е било неуспешно през последните 7 дни."
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "Все още няма с какво да се сравни: никой имейл не се изпраща достатъчно редовно, за да забележи Mailspur пропуск."
+
+msgid "Number of failed emails"
+msgstr "Брой неуспешни имейли"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "Числата се пренебрегват, така че „Поръчка #123“ и „Поръчка #124“ се броят заедно."
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "От последните %1$s имейла, изпратени докато някой е чакал страницата, половината са отнели повече от %2$s сек. (средно %3$s сек.)."
+
+msgid "Off"
+msgstr "Изключено"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "Изключено по подразбиране. Без него „Изтегляне на .eml“ пресъздава съобщението от записаните (редактирани) данни. Суровият източник съдържа връзки за смяна на парола и други тайни точно както са изпратени – включвайте го само ако е нужно и двете отметки са поставени."
+
+msgid "Off – deliver emails normally"
+msgstr "Изключено – доставяне на имейлите нормално"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "След като причината бъде отстранена, можете да изпратите имейла отново от дневника."
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "След като отчетите ви покажат, че легитимните имейли преминават, превключете на p=quarantine (или p=reject)."
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "Един от двата имейла е изтрит или анонимизиран от настройките за съхранение, затова вече не могат да бъдат сравнени."
+
+msgid "Only administrators can empty the log."
+msgstr "Само администраторите могат да изпразват дневника."
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "Само администраторите могат да изпращат имейли до други адреси."
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "Предупреждава само когато последните 14 дни показват, че обикновено се изпращат имейли в този интервал (в поне 10 от 14 дни, включително същия ден от седмицата), така че тихите нощи или почивните дни не го задействат."
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "Само имейли, чиито получатели са все проблемни получатели. Имейлите за смяна на парола винаги се изпращат; задържаните имейли все пак могат да бъдат изпратени от дневника („Изпращане сега“)."
+
+msgid "Only held emails can be released."
+msgstr "Могат да бъдат освободени само задържани имейли."
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "Отворен списък за разпращане: външните получатели (%1$s) виждат адресите си един на друг"
+
+msgid "Open in log"
+msgstr "Отваряне в дневника"
+
+msgid "Open latest"
+msgstr "Отваряне на последния"
+
+msgid "Open staging mode"
+msgstr "Отваряне на тестовия режим"
+
+msgid "Open the email types"
+msgstr "Отваряне на типовете имейли"
+
+msgid "Open the emergency brake"
+msgstr "Отваряне на аварийната спирачка"
+
+msgid "Open the log"
+msgstr "Отваряне на дневника"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "Отворете дневника или изгледа за отстраняване на грешки на разширението за изпращане на поща, за да видите точната грешка."
+
+msgid "Open the mail log"
+msgstr "Отваряне на дневника на имейлите"
+
+msgid "Open the sender check"
+msgstr "Отваряне на проверката на подателя"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "По избор и изключено по подразбиране. Когато е включено, Mailspur редовно проверява дневника и ви уведомява за скокове на неуспехите, необичайна тишина или спрели типове имейли. Предупрежденията отиват само до адресите и уебкука, които въведете тук; съдържат името на сайта, текста на предупреждението (за спрял тип имейл: подателя и шаблона на темата му) и връзка към дневника – никога съдържание на имейли или получатели."
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "По избор, само https. URL адресите на уебкуки на Slack и Discord получават съобщение в чата, всеки друг URL адрес – JSON POST заявка. Заявката се прави от вашия сървър точно до този URL адрес – не участва друга услуга."
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "Или добавете адреса като псевдоним / право „изпращане като“ при пощенския си доставчик."
+
+msgid "Order #%s"
+msgstr "Поръчка #%s"
+
+msgid "Order data"
+msgstr "Данни за поръчката"
+
+msgid "Origin"
+msgstr "Произход"
+
+msgid "Original Bcc"
+msgstr "Оригинално Bcc"
+
+msgid "Original Cc"
+msgstr "Оригинално Cc"
+
+msgid "Original recipients"
+msgstr "Оригинални получатели"
+
+msgid "Other emails"
+msgstr "Други имейли"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "Други получатели (напр. гости)"
+
+msgid "Overview"
+msgstr "Общ преглед"
+
+msgid "Own top-level menu item"
+msgstr "Собствен елемент в главното меню"
+
+msgid "PHP extension openssl is missing"
+msgstr "Липсва PHP разширението openssl"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer е готов (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "Странициране"
+
+msgid "Password sent in plain text"
+msgstr "Паролата е изпратена в открит текст"
+
+msgid "Path"
+msgstr "Път"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "Номер на платежна карта в открит текст: %1$s"
+
+msgid "Per page"
+msgstr "На страница"
+
+msgid "Period"
+msgstr "Период"
+
+msgid "Personal data"
+msgstr "Лични данни"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Phone number"
+msgstr "Телефонен номер"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "Ширина на телефон (375 px). Ако можете да превъртате настрани, имейлът е по-широк от повечето екрани на телефони."
+
+msgid "Plain text"
+msgstr "Обикновен текст"
+
+msgid "Please enter valid email addresses."
+msgstr "Моля, въведете валидни имейл адреси."
+
+msgid "Plugin"
+msgstr "Разширение"
+
+msgid "Plugin or theme that sent the email."
+msgstr "Разширение или тема, изпратили имейла."
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "Посочване на проблеми, поради които имейлите може да не пристигнат или да не се показват правилно"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Postal address"
+msgstr "Пощенски адрес"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark, Mailgun, Brevo или Amazon SES могат да съобщават на този сайт дали имейл е доставен, върнат или маркиран като спам. Състоянието се показва при записания имейл, а твърдите връщания се броят за проблемните получатели. За да съпоставя отчетите, Mailspur добавя референтна заглавка към изходящите имейли."
+
+msgid "Preparation"
+msgstr "Подготовка"
+
+msgid "Preview"
+msgstr "Преглед"
+
+msgid "Previews"
+msgstr "Прегледи"
+
+msgid "Previous email"
+msgstr "Предишен имейл"
+
+msgid "Previous email (k)"
+msgstr "Предишен имейл (k)"
+
+msgid "Previous page"
+msgstr "Предишна страница"
+
+msgid "Print"
+msgstr "Отпечатване"
+
+msgid "Privacy"
+msgstr "Поверителност"
+
+msgid "Privacy & security"
+msgstr "Поверителност и сигурност"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "Вероятно да: %s тип имейл вече не се изпраща."
+msgstr[1] "Вероятно да: %s типа имейли вече не се изпращат."
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "Тестовите имейли се изпращат само до администратор."
+
+msgid "Problem"
+msgstr "Проблем"
+
+msgid "Problem recipients"
+msgstr "Проблемни получатели"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "Защитава домейна ви, когато излизат много повече имейли от обикновено, напр. защото спам ботове злоупотребяват с формуляр за контакт. Предупрежденията използват каналите на известията за наблюдение; имейлите за смяна на парола никога не се задържат."
+
+msgid "Provider status"
+msgstr "Състояние от доставчика"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "Доставчици като %2$s публикуват строга DMARC политика. Имейл „от“ техния домейн, изпратен от вашия уеб сървър, не преминава тази проверка и бива отхвърлен или попада в спама."
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "Поставете важното съдържание като истински текст и използвайте изображенията само като допълнение."
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "Поставете важната информация в началото и дръжте темата под около 80 знака."
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "REST маршрут"
+
+msgid "Rarely"
+msgstr "Рядко"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "Оценете Mailspur в WordPress.org"
+
+msgid "Raw source"
+msgstr "Суров източник"
+
+msgid "Reason"
+msgstr "Причина"
+
+msgid "Rebuild from the log"
+msgstr "Повторно изграждане от дневника"
+
+msgid "Recipient"
+msgstr "Получател"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "Домейнът на получателя не може да получава имейли: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "Домейнът на получателя не приема имейли: %1$s"
+
+msgid "Recipients"
+msgstr "Получатели"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "Препоръчително. В противен случай всеки с достъп до дневника може да използва записана връзка за смяна или парола, за да превземе акаунт. Повторното изпращане на такъв имейл изпраща маскираната версия."
+
+msgid "Record for every email"
+msgstr "Записване за всеки имейл"
+
+msgid "Record for failed emails only"
+msgstr "Записване само за неуспешни имейли"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "Записва комуникацията със SMTP сървъра (само когато имейлите се изпращат чрез SMTP). Данните за вход и съдържанието на съобщението никога не се записват. Пропуска се, докато друго разширение има включено отстраняване на грешки в SMTP."
+
+msgid "Recovery"
+msgstr "Възстановяване"
+
+msgid "Redact secrets"
+msgstr "Скриване на тайни"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "Пренасочване на всички имейли към адресите по-долу"
+
+msgid "Redirect to"
+msgstr "Пренасочване към"
+
+msgid "Redirect to test addresses"
+msgstr "Пренасочване към тестови адреси"
+
+msgid "Redirected by staging mode."
+msgstr "Пренасочен от тестовия режим."
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "Намалете HTML кода: премахнете неизползвания CSS, повтарящите се вградени стилове, коментарите и дългите URL адреси за проследяване. Изображенията не се броят, а само самият HTML."
+
+msgid "Registered users"
+msgstr "Регистрирани потребители"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "Отхвърлен от SPF, DKIM или DMARC"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "Относителни връзки или изображения (%1$s), напр. %2$s"
+
+msgid "Release held emails"
+msgstr "Освобождаване на задържаните имейли"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "Освободен от тестовия режим (задържан запис #%s)."
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "Освободен от аварийната спирачка (задържан запис #%s)."
+
+msgid "Remote content"
+msgstr "Външно съдържание"
+
+msgid "Remote content is loaded."
+msgstr "Външното съдържание е заредено."
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "Външните изображения и шрифтове са блокирани, за да не могат подателите да проследят кога отваряте този запис."
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "Премахване на всички записи, импортирани от %s? Данните в другото разширение не се засягат."
+
+msgid "Remove imported entries"
+msgstr "Премахване на импортираните записи"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "Премахнете полето за картата от известието на формуляра или разширението, изпратило този имейл – данните на картата са само за доставчика на плащания. Показвайте най-много последните четири цифри. Помолете получателя да изтрие имейла."
+
+msgid "Removed:"
+msgstr "Премахнато:"
+
+msgid "Repeat alerts after"
+msgstr "Повтаряне на предупрежденията след"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "Отговорите не могат да стигнат до вас: изпратен от %1$s без Reply-To"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "Съобщено от имейл доставчика ви през последните 30 дни; броят се само имейлите, за които е съобщил."
+
+msgid "Request"
+msgstr "Заявка"
+
+msgid "Request failed: %s"
+msgstr "Заявката е неуспешна: %s"
+
+msgid "Resend"
+msgstr "Повторно изпращане"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "Изпратете имейла отново от дневника след няколко минути."
+
+msgid "Resend the email from the log later."
+msgstr "Изпратете имейла отново от дневника по-късно."
+
+msgid "Resend the email from the log once delivery works."
+msgstr "Изпратете имейла отново от дневника, щом доставката заработи."
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "Изпратете отново неуспешните имейли, щом лимитът се нулира."
+
+msgid "Resent from log"
+msgstr "Изпратен повторно от дневника"
+
+msgid "Reset filters"
+msgstr "Нулиране на филтрите"
+
+msgid "Result"
+msgstr "Резултат"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "Резултат от кеша – използвайте „Нова проверка“ след промяна на DNS записите."
+
+msgid "Retention"
+msgstr "Срок на съхранение"
+
+msgid "Retention in the log"
+msgstr "Съхранение в дневника"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "Срокът за съхранение на този тип имейл е запазен. Той се прилага при следващото ежедневно почистване."
+
+msgid "Review held emails"
+msgstr "Преглед на задържаните имейли"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "Прегледайте бележките към този имейл (връзки, подател, заместители)."
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "Отменете ключа в таблото на услугата и създайте нов. След това разберете как е попаднал в имейл (отчети за отстраняване на грешки или за грешки, формуляр, който показва настройки) и спрете това."
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "Отменени ключове (празно p=): %s."
+
+msgid "Rhythm"
+msgstr "Ритъм"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "Изпълнете търсене и замяна на стария домейн в базата данни и проверете твърдо зададените URL адреси в шаблоните на имейлите и настройките на разширенията."
+
+msgid "Run the full sender check"
+msgstr "Пускане на пълната проверка на подателя"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "SMTP AUTH е деактивиран в Microsoft 365"
+
+msgid "SMTP host"
+msgstr "SMTP хост"
+
+msgid "SMTP login failed"
+msgstr "Неуспешно SMTP влизане"
+
+msgid "SMTP transcript"
+msgstr "SMTP протокол"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "SPF записът позволява на всеки сървър в света да изпраща за този домейн (+all)."
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "SPF записът завършва с ?all (неутрално): не защитава домейна от подправяне."
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "Намерен е SPF запис (redirect= към друга политика)."
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "Намерен е SPF запис. Другите сървъри се маркират като подозрителни (~all, softfail)."
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "Намерен е SPF запис. Другите сървъри се отхвърлят (-all)."
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "SPF записът няма термин „all“, затова имейлите от други сървъри се третират като неутрални."
+
+msgid "Saturday"
+msgstr "Събота"
+
+msgid "Save"
+msgstr "Запазване"
+
+msgid "Saved – leave empty to keep it"
+msgstr "Запазено – оставете празно, за да го запазите"
+
+msgid "Scheduled for later today:"
+msgstr "Планирани за по-късно днес:"
+
+msgid "Search recipient or subject"
+msgstr "Търсене по получател или тема"
+
+msgid "Search recipient or subject …"
+msgstr "Търсене по получател или тема …"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "Потърсете стария адрес в шаблона на имейла, настройките на разширенията и базата данни (напр. след миграция на сайта) и го заменете с работния домейн."
+
+msgid "See why"
+msgstr "Вижте защо"
+
+msgid "Seen"
+msgstr "Видяно"
+
+msgid "Select all"
+msgstr "Избиране на всички"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "Селекторът „%s“ също няма ключ."
+
+msgid "Send"
+msgstr "Изпращане"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "Вместо това изпращайте връзка, чрез която потребителят сам задава парола – точно това прави имейлът за нов потребител в ядрото на WordPress. Потърсете в разширението, изпратило този имейл, опция като „Изпращане на паролата по имейл“ или „Включване на паролата“ и я изключете."
+
+msgid "Send a message when the problem is resolved"
+msgstr "Изпращане на съобщение, когато проблемът е решен"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "Изпратете тестов имейл от настройките на разширението за изпращане на поща."
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "Изпращане на седмичен отчет за имейлите до адресите по-горе"
+
+msgid "Send again"
+msgstr "Повторно изпращане"
+
+msgid "Send alerts by email to"
+msgstr "Изпращане на предупреждения по имейл до"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "Изпращане сега на всички %s задържани имейла до оригиналните им получатели?"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "Изпращайте големите файлове като връзка за изтегляне вместо като прикачен файл."
+
+msgid "Send latest to me"
+msgstr "Изпращане на последния до мен"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "Изпращайте бюлетини с разширение или услуга за бюлетини, която добавя заглавките List-Unsubscribe и List-Unsubscribe-Post, и не изпращайте един имейл до много хора чрез Bcc."
+
+msgid "Send now"
+msgstr "Изпращане сега"
+
+msgid "Send report now"
+msgstr "Изпращане на отчета сега"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "Изпращайте такива имейли до всеки получател поотделно или поставяйте получателите в Bcc. За бюлетини използвайте разширение, което изпраща по един имейл на получател. Ако са разкрити адреси на клиенти, проверете с длъжностното лице по защита на данните дали инцидентът трябва да бъде докладван."
+
+msgid "Send test alert"
+msgstr "Изпращане на тестово предупреждение"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "Изпращайте имейла със заглавката „Content-Type: text/html; charset=UTF-8“ или задайте типа съдържание с филтъра wp_mail_content_type. Много разширения за формуляри и магазини имат опция „HTML имейл“."
+
+msgid "Send the latest email of this type to %s?"
+msgstr "Да се изпрати ли последният имейл от този тип до %s?"
+
+msgid "Send this email again to %s?"
+msgstr "Изпращане на този имейл отново до %s?"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "Изпращане на този имейл до (до 10 адреса, разделени със запетаи):"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "Изпращане на този задържан имейл до %s сега? Тестовият режим се заобикаля само за този имейл."
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "Изпращайте чрез реномирана SMTP услуга вместо през уеб сървъра, особено при споделен хостинг."
+
+msgid "Send to…"
+msgstr "Изпращане до…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "Проверка на подателя (SPF, DKIM, DMARC)"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "Домейнът на подателя %1$s се различава от този на сайта (%2$s)"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "Домейн на подателя (SPF и DMARC)"
+
+msgid "Sender domain or address not verified"
+msgstr "Домейнът или адресът на подателя не е потвърден"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "Подател на %s от последните 200 имейла"
+
+msgid "Sending failed – see the log."
+msgstr "Изпращането е неуспешно – вижте дневника."
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "Изпращането е неуспешно – вижте новия запис в дневника за подробности."
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "Изпращането във фонов режим (разширение за изпращане на поща с опашка) позволява на страницата да се зареди без чакане."
+
+msgid "Sending limit or quota reached"
+msgstr "Достигнат лимит за изпращане или квота"
+
+msgid "Sending report …"
+msgstr "Изпращане на отчета …"
+
+msgid "Sending test alert …"
+msgstr "Изпращане на тестово предупреждение …"
+
+msgid "Sending works again: no more failure spike."
+msgstr "Изпращането отново работи: няма повече скок на неуспехите."
+
+msgid "Sending…"
+msgstr "Изпращане…"
+
+msgid "Sent"
+msgstr "Изпратен"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "Изпратен от името на безплатен пощенски адрес: %1$s"
+
+msgid "Sent by"
+msgstr "Изпратен от"
+
+msgid "Sent by WP-Cron."
+msgstr "Изпратен от WP-Cron."
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "Изпратен от cron събитието %1$s – то закъснява с %2$s, докато WP-Cron изпълнява други събития; възможно е да завършва с грешка."
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "Изпратен от cron събитието %1$s – то е планирано (следващо изпълнение след %2$s) и WP-Cron работи, значи събитието вече не изпраща този имейл."
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "Изпратен от cron събитието %s – това събитие вече не е планирано."
+
+msgid "Sent by the cron event %s."
+msgstr "Изпратен от cron събитието %s."
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "Изпратен многократно: още еднакви имейли – %1$s, в рамките на %2$s мин."
+
+msgid "Sent to %s."
+msgstr "Изпратен до %s."
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "Изпратен до същия адрес около датата на поръчката, но не е свързан с тази поръчка (например записан преди връзката да съществува или импортиран)."
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "Задайте адрес за Reply-To, който някой чете, напр. в WooCommerce → Настройки → Имейли или в имейл настройките на разширението за формуляри. Или изпращайте от адрес, който може да получава отговори."
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "Задайте адрес на подател във вашия домейн в SMTP разширението или чрез филтъра wp_mail_from."
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "Задайте адрес на подател в истинския си домейн, напр. в SMTP разширението или чрез филтъра wp_mail_from, и проверете адреса на сайта в Настройки → Общи."
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "Задайте тема в шаблона или в настройките на формуляра на изпращащото разширение."
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "Задайте в SMTP разширението адреса From да е пощенската кутия, с която влизате, и активирайте „принудителен адрес From“."
+
+msgid "Set up staging mode"
+msgstr "Настройване на тестовия режим"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Settings › Discussion"
+msgstr "Настройки › Дискусия"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Няколко удивителни знака са типични за рекламния спам. Спам филтрите може да го отчетат срещу имейла, което може да влоши доставката."
+
+msgid "Several of the latest emails of this type failed."
+msgstr "Няколко от последните имейли от този тип са неуспешни."
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "Дял на неуспешните имейли на ден (на седмица за дълги периоди)."
+
+msgid "Shop managers and above"
+msgstr "Мениджъри на магазина и нагоре"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "Съкратените връзки скриват накъде водят. Спамърите ги използват често, затова спам филтрите може да ги отчетат срещу имейла, което може да влоши доставката."
+
+msgid "Show all email types"
+msgstr "Показване на всички типове имейли"
+
+msgid "Show all in Mail Log"
+msgstr "Показване на всички в дневника на имейлите"
+
+msgid "Show as"
+msgstr "Показване като"
+
+msgid "Show data as table"
+msgstr "Показване на данните като таблица"
+
+msgid "Show email types"
+msgstr "Показване на типовете имейли"
+
+msgid "Show emails"
+msgstr "Показване на имейлите"
+
+msgid "Show emails for %s in the log"
+msgstr "Показване на имейлите за %s в дневника"
+
+msgid "Show failed emails"
+msgstr "Показване на неуспешните имейли"
+
+msgid "Show held emails"
+msgstr "Показване на задържаните имейли"
+
+msgid "Show these emails in the log"
+msgstr "Показване на тези имейли в дневника"
+
+msgid "Silence"
+msgstr "Тишина"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "Симулиран тъмен режим, използващ стиловете за тъмен режим на самия имейл. Всяко пощенско приложение обработва тъмния режим малко по-различно."
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "Симулация на приложения, които налагат тъмен режим чрез обръщане на цветовете. Изображенията запазват цветовете си; истинските приложения се различават в подробностите."
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "От 2024 г. Gmail и Yahoo изискват отписване с едно кликване (заглавка List-Unsubscribe) за масовите имейли. Без него бюлетините по-често биват отхвърлени или филтрирани."
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "Единични неуспехи, напр. заради грешно изписан адрес, са нормални."
+
+msgid "Some emails could not be sent recently"
+msgstr "Напоследък някои имейли не можаха да бъдат изпратени"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "Някои заявки бяха пропуснати, защото DNS отговаряше твърде бавно."
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "За съжаление нямате права за достъп до тази страница."
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "Нямате права да извършите това действие."
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "За съжаление нямате права да експортирате дневника на имейлите."
+
+msgid "Source"
+msgstr "Източник"
+
+msgid "Staging"
+msgstr "Тестова среда"
+
+msgid "Staging mode"
+msgstr "Тестов режим"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "Тестовият режим е активен: всички имейли се пренасочват към %s."
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "Тестовият режим е активен: имейлите се записват, но не се доставят."
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "Тестовият режим е активен: имейлите трябва да се пренасочват, но не е зададен валиден адрес за пренасочване – всички имейли се задържат и не се доставят."
+
+msgid "Staging mode is off"
+msgstr "Тестовият режим е изключен"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "Тестовият режим е включен, въпреки че това е работещ сайт"
+
+msgid "Staging mode is on for this staging site"
+msgstr "Тестовият режим е включен за този тестов сайт"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "Тестовият режим е включен: всички имейли отиват до тестовите ви адреси, а не до истинските получатели."
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "Тестовият режим е включен: имейлите се записват, но не се изпращат."
+
+msgid "Staging mode settings"
+msgstr "Настройки на тестовия режим"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "Започнете с p=none, за да получавате отчети, след което затегнете до quarantine или reject, когато SPF и DKIM преминават."
+
+msgid "Statistics"
+msgstr "Статистика"
+
+msgid "Status"
+msgstr "Състояние"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "Все още във фонов режим се разпределят по типове по-стари имейли (%s). Презаредете страницата след минута."
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "Спиране на обединяването (изпраща чакащите сега)"
+
+msgid "Stop these emails"
+msgstr "Спиране на тези имейли"
+
+msgid "Stopped"
+msgstr "Спрял"
+
+msgid "Stopped by Mailspur."
+msgstr "Спрян от Mailspur."
+
+msgid "Stopped email types"
+msgstr "Типове имейли, които вече не се изпращат"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "Съхраняване на точния суров MIME източник на всеки имейл"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Subject mostly in capital letters"
+msgstr "Темата е предимно с главни букви"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "Темите с главни букви звучат като викане и са често срещани в спама. Спам филтрите може да го отчетат срещу имейла, което може да влоши доставката."
+
+msgid "Subjects often contain names or order numbers."
+msgstr "Темите често съдържат имена или номера на поръчки."
+
+msgid "Suggested TXT record for %s"
+msgstr "Предложен TXT запис за %s"
+
+msgid "Sunday"
+msgstr "Неделя"
+
+msgid "Supported: %s."
+msgstr "Поддържани: %s."
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "Изключете го в %1$s: „%2$s“."
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "Изваден от ежедневния обобщен имейл и изпратен самостоятелно."
+
+msgid "Temporary rejection – try again later"
+msgstr "Временен отказ – опитайте отново по-късно"
+
+msgid "Test"
+msgstr "Тест"
+
+msgid "Test alert"
+msgstr "Тестово предупреждение"
+
+msgid "Text changes"
+msgstr "Промени в текста"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "Текстова версия, получена от HTML. Дали имейлът е имал и собствена версия в обикновен текст, не е записано."
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "Това е наред, ако пощенският ви сървър има право да изпраща от името на този домейн. В противен случай SPF и DMARC са неуспешни и имейлът попада в спама."
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "Това е правилно за тестово копие, но на работещ сайт клиентите не получават потвърждения на поръчки, смяна на парола или отговори на формулярите си. Изключете тестовия режим, ако това е работещият сайт."
+
+msgid "The API key was rejected"
+msgstr "API ключът беше отхвърлен"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "DNS заявката е неуспешна или изтече времето. Опитайте проверката на подателя отново по-късно."
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "HTML имейлът съдържа изображения, но почти никакъв текст. Спам филтрите не могат да четат изображения и не се доверяват на такива имейли, което може да влоши доставката. Ако пощенският клиент блокира изображенията, читателят вижда почти празен имейл."
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "SMTP акаунтът може да изпраща само със собствения си адрес (или потвърдени псевдоними). WordPress или разширение е използвало друг адрес From."
+
+msgid "The SMTP server conversation was empty."
+msgstr "Комуникацията със SMTP сървъра беше празна."
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "SMTP сървърът изобщо не можа да бъде достигнат: грешно име на хост или порт, сървърът не работи или хостинг доставчикът блокира изходящите пощенски портове."
+
+msgid "The SMTP server refuses to relay"
+msgstr "SMTP сървърът отказва препращане"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "SMTP сървърът отхвърли потребителското име или паролата (код на отговор 535)."
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "SMTP сървърът изисква влизане или шифроване"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "Адресът изглежда невалиден – проверете го за грешки или поискайте друг."
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "Тялото съдържа HTML тагове, но имейлът е изпратен като text/plain (по подразбиране в WordPress). Получателите виждат суровите тагове вместо форматиран текст."
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "Връзката или прехвърлянето отне твърде дълго. Обикновено защитна стена тихо прекъсва връзката или хостът и портът са грешни."
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "Адресът на подателя по подразбиране няма публичен домейн или този сървър не може да търси DNS записи."
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "Домейнът няма нито MX, нито A запис в DNS. Имейлите до него се връщат. Обикновено адресът е изписан грешно или домейнът вече не съществува."
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "Домейнът публикува запис „null MX“, който изрично указва, че не получава имейли. Всеки имейл до него се връща."
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "Имейл API отговаря бавно: проверете региона или крайната точка, настроени в разширението за изпращане на поща."
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "Имейлът идва от адрес no-reply и няма заглавка Reply-To. Когато клиент натисне „Отговор“, отговорът отива на адрес, който никой не чете, или се връща."
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "Имейлът съдържа парола в четим вид. Имейлите остават в пощенските кутии, резервните копия и препратените разговори с години – всеки, който се добере до някой от тях, може да влезе. Дневникът на имейлите също я съхранява, освен ако не е включено „Скриване на тайни“ (тогава дневникът пази маскирано копие, но получателят все пак е получил паролата)."
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Имейлът съдържа ключ за достъп (напр. за Stripe, GitHub, Slack, AWS, Google или SendGrid) или частен ключ. Всеки, който прочете имейла – сега или след години в пощенска кутия или резервно копие – може да го използва. Дневникът на имейлите също го съхранява, освен ако не е включено „Скриване на тайни“."
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "Имейлът съдържа променливи от шаблона, които не са попълнени. Получателите ги виждат буквално."
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "Имейлът съдържа нещо, което прилича на пълен номер на платежна карта (преминава проверката на контролната цифра). Номерата на карти никога не бива да се изпращат по имейл (PCI DSS): пощенските кутии ги пазят с години. Дневникът на имейлите също го съхранява, освен ако не е включено „Скриване на тайни“."
+
+msgid "The email is too large"
+msgstr "Имейлът е твърде голям"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "Имейлът съдържа връзки към файлове на WordPress на свързан хост. Това обикновено се случва при тестово копие, което все още съдържа URL адреси на работния сайт – или обратното."
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "Имейлът съдържа връзка към адрес на този сайт, който отговаря „страницата не е намерена“ (404). Това обикновено се случва, след като страница или продукт е преименуван или изтрит: шаблонът все още сочи към стария адрес и всеки получател попада на страница за грешка."
+
+msgid "The email types are being rebuilt from the log."
+msgstr "Типовете имейли се изграждат наново от дневника."
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "Имейлът е изпратен до няколко души извън вашия домейн в To или Cc. Всеки получател вижда всички останали адреси. При клиенти или членове това разкрива лични данни на непознати – съгласно GDPR обикновено това е нарушение на сигурността на данните."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "Имейлът „%1$s“ до %2$s от %3$s в %4$s беше задържан за кратко от проверка за сигурност от наша страна и изпратен след това. Моля, проверете и папката за спам."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "Имейлът „%1$s“ до %2$s от %3$s в %4$s беше задържан от проверка за сигурност от наша страна и не е изпратен. Ще го изпратим отново."
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "Имейлът „%1$s“ до %2$s от %3$s в %4$s не беше изпратен, защото по това време изпращането на имейли беше на пауза от наша страна. Ще го изпратим отново."
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "Имейлът „%1$s“ до %2$s на %3$s в %4$s не можа да бъде доставен. Ще го изпратим отново."
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "Имейлът „%1$s“ до %2$s беше създаден на %3$s в %4$s, но не можем да потвърдим дали е доставен. Ще проверим това и при нужда ще го изпратим отново."
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "Имейлът „%1$s“ беше изпратен до %2$s на %3$s в %4$s и приет от пощенския сървър. Моля, проверете и папката за спам."
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "Аварийната спирачка задържа изходящите имейли, докато не ги освободите или отхвърлите."
+
+msgid "The emergency brake is holding emails"
+msgstr "Аварийната спирачка задържа имейли"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "Аварийната спирачка не задържа имейли"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "Аварийната спирачка е включена: сайтът ви внезапно изпрати много повече имейли от обикновено."
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "Аварийната спирачка забеляза необичаен брой имейли в рамките на един час. Възможно е формуляр за контакт да се злоупотребява. Имейлите все още се изпращат."
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "Точният суров източник е запазен – „Изтегляне на .eml“ го връща непроменен (без редактиране)."
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "Всички последни %s имейла са неуспешни. Изпращането от този сайт може да е повредено, напр. заради грешен SMTP вход или пощенска услуга, която отказва сайта. Клиентите може да не получават потвърждения на поръчки или смяна на парола."
+
+msgid "The latest emails could not be sent"
+msgstr "Последните имейли не можаха да бъдат изпратени"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "Дневникът пази имейлите %s ден."
+msgstr[1] "Дневникът пази имейлите %s дни."
+
+msgid "The log shows the reason for each failed email."
+msgstr "Дневникът показва причината за всеки неуспешен имейл."
+
+msgid "The mail log requires JavaScript."
+msgstr "Дневникът на имейлите изисква JavaScript."
+
+msgid "The mail server did not answer in time"
+msgstr "Пощенският сървър не отговори навреме"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "Пощенският сървър е временно недостъпен"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "Пощенският сървър отхвърли размера на имейла (код на отговор 552). При кодиране прикачените файлове нарастват с около една трета."
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "Пощенската услуга изпраща само от домейни или адреси, които сте потвърдили там."
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "Пощенската услуга или кутия отказа нови имейли, защото е достигнат лимит на честотата, дневна квота или лимит на плана."
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "Пощенската услуга отказа заявката, защото API ключът е грешен, изтекъл, отменен или няма право за изпращане."
+
+msgid "The mailer plugin reported a failure"
+msgstr "Разширението за изпращане на поща съобщи за грешка"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "Политиката се прилага само за %s%% от имейлите (pct)."
+
+msgid "The reason: %s."
+msgstr "Причината: %s."
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "Получаващият сървър поиска повторен опит по-късно (код на отговор 450/451/452): сив списък, пълна пощенска кутия или твърде много имейли за кратко време."
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "Получаващият сървър не успя да потвърди, че вашият сървър има право да изпраща от името на домейна на подателя."
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "Получаващият сървър не познава тази пощенска кутия (код на отговор 550 / 5.1.1) – адресът е изписан грешно или вече не съществува."
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "Получаващият сървър може все още да го приеме при следващ опит."
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "Получаващият сървър отхвърли имейла заради съдържанието му или защото IP адресът на изпращащия сървър е в черен списък."
+
+msgid "The recipient address was rejected"
+msgstr "Адресът на получателя беше отхвърлен"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "Домейнът на получателя не приема имейли (null MX)"
+
+msgid "The recipient domain has no mail server"
+msgstr "Домейнът на получателя няма пощенски сървър"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "Домейнът на получателя прилича на грешно изписване на популярен имейл доставчик. Такива имейли се връщат – или стигат до непознат, регистрирал домейна с грешката."
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "Една и съща тема е изпратена до едни и същи получатели няколко пъти за кратко време. Типични причини са двойни потвърждения на поръчки, формуляр, изпратен два пъти, паралелно изпълнение на cron задача или цикъл в разширение."
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "Не можа да се установи защитена връзка със SMTP сървъра: сертификатът не съответства на името на хоста, изтекъл е или сървърът не поддържа избраното шифроване."
+
+msgid "The sender address is not allowed"
+msgstr "Адресът на подателя не е разрешен"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "Проверката на подателя откри проблем с %s. Имейлите може да попаднат в спам."
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "Домейнът на подателя %s има SPF и DMARC записи"
+
+msgid "The sender domain could not be checked"
+msgstr "Домейнът на подателя не можа да бъде проверен"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "Подателят няма публичен домейн (напр. wordpress@localhost). Повечето пощенски сървъри отхвърлят такива имейли или ги слагат в спама."
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "Сървърът не може да изпраща имейли с PHP mail()"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "Сървърът затвори връзката (код на отговор 421), напр. заради поддръжка, претоварване или твърде много връзки от вашия сървър."
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "Сървърът не препраща имейли от ваше име, обикновено защото не сте влезли или адресът на подателя не принадлежи на акаунта."
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "Сървърът приема имейли само след удостоверяване или след превключване към шифрована връзка (код на отговор 530)."
+
+msgid "The server rejected the content"
+msgstr "Сървърът отхвърли съдържанието"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "Локалната пощенска програма на сървъра отговаря бавно: разширение за изпращане чрез SMTP или API вместо това предава имейлите на доставчик."
+
+msgid "The start date must not be after the end date."
+msgstr "Началната дата не може да е след крайната дата."
+
+msgid "The statistics require JavaScript."
+msgstr "Статистиката изисква JavaScript."
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "Текстът е същият; променено е само оформлението. Сравнете прегледите."
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "Потребителското име обикновено е пълният имейл адрес. Внимавайте за интервали, копирани заедно с паролата."
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "URL адресът на уебкука е премахнат: разрешени са само валидни https адреси."
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "Седмичният отчет е включен, но няма получател: въведете имейл адрес в „Изпращане на предупреждения по имейл до“."
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "Тези имейли отново се изпращат; техният тип имейл отново се наблюдава."
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "Тези видове имейли не са изпращани по-дълго от обикновено. Причината може да е обновяване на разширение, променена настройка или блокирала планирана задача."
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "Този имейл има собствена версия в обикновен текст, но дневникът не я съхранява. Тук е показана текстова версия, получена от HTML."
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "Този имейл няма собствени стилове за тъмен режим. Някои приложения го показват непроменен, други го преоцветяват – вижте „Принудително тъмна“."
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "Този имейл няма версия в обикновен текст – някои клиенти и спам филтри предпочитат такава. Тук е показана текстова версия, получена от HTML."
+
+msgid "This email type has no content change."
+msgstr "Този тип имейл няма промяна в съдържанието."
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "Този тип имейл вече се игнорира: без статус, без известия."
+
+msgid "This email type is monitored again."
+msgstr "Този тип имейл отново се наблюдава."
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "Този запис е анонимизиран; съдържанието му вече не може да бъде изпратено."
+
+msgid "This import is already running in another tab."
+msgstr "Това импортиране вече се изпълнява в друг раздел."
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "Това е тестово предупреждение. Каналите ви за предупреждения работят."
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "Този работен сайт изпрати връзка към локален или тестов адрес. Получателите не могат да я отворят."
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "Този въпрос изисква JavaScript. Вместо това можете да търсите в дневника."
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "Този сайт води дневник на имейлите, които изпраща (получател, тема, съдържание и състояние на доставката), за да проверява доставката и да отстранява проблеми. Записите в дневника се изтриват автоматично след настроения срок на съхранение."
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "Този сайт работи като %s среда и тестовият режим пречи имейлите му да достигат до истински хора."
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "Този сайт работи като %s среда. Включете тестовия режим, за да не получи нито един истински клиент имейл от него."
+
+msgid "Threshold (emails per hour)"
+msgstr "Праг (имейли на час)"
+
+msgid "Thursday"
+msgstr "Четвъртък"
+
+msgid "Timeline"
+msgstr "Хронология"
+
+msgid "To"
+msgstr "До"
+
+msgid "To date"
+msgstr "До дата"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "За да ги запазите, но да получавате само един имейл на ден, изберете „Обединяване в един ежедневен имейл“ в менюто … на типа."
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "Класациите се базират на последните %s имейла от този период."
+
+msgid "Top recipient domains"
+msgstr "Най-чести домейни на получатели"
+
+msgid "Top recipients: %s"
+msgstr "Най-чести получатели: %s"
+
+msgid "Top sources"
+msgstr "Най-чести източници"
+
+msgid "Top subjects"
+msgstr "Най-чести теми"
+
+msgid "Total"
+msgstr "Общо"
+
+msgid "Total: %s ms"
+msgstr "Общо: %s ms"
+
+msgid "Trace"
+msgstr "Проследяване"
+
+msgid "Transcript copied."
+msgstr "Протоколът е копиран."
+
+msgid "Transport"
+msgstr "Транспорт"
+
+msgid "Trigger"
+msgstr "Задействане"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "Да се задейства ли истински имейл за нулиране на паролата за собствения ви акаунт? WordPress създава нова връзка за нулиране за вас, така че по-ранните връзки за нулиране спират да работят; паролата ви остава същата. Получава го само %s."
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "Да се задействат ли известията за нов потребител за собствения ви акаунт (известието до администратора и данните за вход)? WordPress създава нова връзка за парола за вас, така че по-ранните връзки спират да работят. Не се създава потребител; получава ги само %s."
+
+msgid "Trigger to me"
+msgstr "Задействане на тест към мен"
+
+msgid "Triggering…"
+msgstr "Задействане…"
+
+msgid "Tuesday"
+msgstr "Вторник"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "Типовете се обновяват на всеки час и всеки път, когато отворите тази страница. Съхраняват се само броячи, модели на темите и отпечатъци на съдържанието (без получатели, без съдържание), като за тях важи срокът за съхранение на дневника."
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "Грешка в домейна на получателя? %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "Буквите с диакритични знаци или кавичките се показват като неразбираеми символи, напр. „Ã¤“ или „â€™“. Някъде по пътя – в шаблон, импорт или базата данни – текст в UTF-8 е прочетен като друго кодиране."
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "Неясно. „%1$s“ до %2$s беше предаден за изпращане %3$s, но Mailspur не получи резултат."
+
+msgid "Under Tools"
+msgstr "Под „Инструменти“"
+
+msgid "Uninstall"
+msgstr "Деинсталиране"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Unknown probe."
+msgstr "Неизвестен тестов имейл."
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "Неизвестно: не е докладван резултат от доставката (заменена функция wp_mail()?)."
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "Незаменени заместители: %1$s"
+
+msgid "Until the log limit"
+msgstr "До лимита на дневника"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "До 10 адреса, разделени със запетаи. Cc и Bcc се премахват, а темата показва оригиналните получатели. Без валиден адрес имейлите се задържат."
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "До 5 адреса, разделени със запетаи. Имейлите с предупреждения се появяват в дневника с източник „Предупреждения на Mailspur“ и никога не задействат предупреждения сами."
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "Обновете връзката в шаблона на имейла или в настройките на разширението, което изпраща този имейл, или добавете пренасочване от стария адрес към новата страница (напр. с разширение за пренасочвания)."
+
+msgid "Updated in between: %s"
+msgstr "Обновени междувременно: %s"
+
+msgid "Updated since the last one:"
+msgstr "Обновени след последния:"
+
+msgid "Updated since then: %s."
+msgstr "Обновени оттогава: %s."
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "Използвайте TLS на порт 587 или SSL на порт 465."
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "Използвайте описателен текст на връзката (напр. „Преглед на поръчката“) или показвайте адреса, към който връзката действително води."
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "Използвайте адрес на подател в собствения си домейн и поставете безплатния адрес в Reply-To. Това е наред само ако наистина изпращате през собствения SMTP сървър на този доставчик с неговите данни за вход."
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "Използвайте абсолютни URL адреси с https:// и домейна, напр. с home_url() или wp_get_attachment_url() в шаблона."
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "Използвайте точно името на хоста, за което е издаден сертификатът (напр. хоста smtp.… на доставчика вместо IP адрес или собствения ви домейн)."
+
+msgid "Use one exclamation mark at most."
+msgstr "Използвайте най-много един удивителен знак."
+
+msgid "Use the arrow keys to move between cells."
+msgstr "Използвайте клавишите със стрелки, за да се придвижвате между клетките."
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "Използвайте клавишите със стрелки, за да се придвижвате между стойностите, и Enter, за да ги отворите в дневника."
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "Използвайте адреса на пощенската кутия на SMTP акаунта като подател (From)."
+
+msgid "User"
+msgstr "Потребител"
+
+msgid "User: %s"
+msgstr "Потребител: %s"
+
+msgid "Username"
+msgstr "Потребителско име"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "Използва запазените настройки – първо запазете промените си."
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "Потвърдете домейна на подателя в пощенската услуга (добавете DNS записите му) или използвайте вече потвърден адрес на подател."
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "Много вероятно. „%1$s“ беше изпратен до %2$s %3$s."
+
+msgid "Very long subject (%1$s characters)"
+msgstr "Много дълга тема (знаци: %1$s)"
+
+msgid "View"
+msgstr "Преглед"
+
+msgid "View %s failed emails"
+msgstr "Преглед на %s неуспешни имейла"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron не е изпълняван от %s (зададено е DISABLE_WP_CRON – проверете cron задачата на сървъра)."
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron не е изпълняван от %s – той се изпълнява само когато сайтът има посещения, или завършва с грешка."
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron работи нормално."
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "Чака ежедневния обобщен имейл – не се изпраща самостоятелно."
+
+msgid "Waits %s s for the mail server"
+msgstr "Чака пощенския сървър %s сек."
+
+msgid "Warnings"
+msgstr "Предупреждения"
+
+msgid "Webhook URL"
+msgstr "URL адрес на уебкук"
+
+msgid "Webhook signing key"
+msgstr "Ключ за подписване на уебкука"
+
+msgid "Webhook: %s"
+msgstr "Уебкук: %s"
+
+msgid "Wednesday"
+msgstr "Сряда"
+
+msgid "Week"
+msgstr "Седмица"
+
+msgid "Week of %s"
+msgstr "Седмица от %s"
+
+msgid "Weekday"
+msgstr "Ден от седмицата"
+
+msgid "Weekly"
+msgstr "Ежеседмично"
+
+msgid "Weekly email report"
+msgstr "Седмичен отчет за имейлите"
+
+msgid "Weekly report"
+msgstr "Седмичен отчет"
+
+msgid "What to do"
+msgstr "Какво да направите"
+
+msgid "When emails are sent"
+msgstr "Кога се изпращат имейли"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "Когато се изпращат много повече имейли от обикновено, аварийната спирачка ви предупреждава и може да задържи следващите имейли."
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "Когато е изключено, проследяващите пиксели не могат да разберат кога отваряте запис. Все пак можете да заредите външно съдържание за отделен имейл. Скриптовете и формулярите винаги са блокирани."
+
+msgid "Who can view the log"
+msgstr "Кой може да преглежда дневника"
+
+msgid "Why did an email fail?"
+msgstr "Защо имейл е неуспешен?"
+
+msgid "With attachments"
+msgstr "С прикачени файлове"
+
+msgid "With notes"
+msgstr "С бележки"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "Без тези DNS записи доставчиците на пощенски кутии не могат да потвърдят, че сайтът ви има право да изпраща имейли за този домейн, затова имейлите по-често попадат в спам. Проверката на подателя предлага записи, които можете да добавите при доставчика на домейна си."
+
+msgid "WooCommerce email"
+msgstr "Имейл на WooCommerce"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › Настройки › Имейли"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "Имейлите от ядрото на WordPress нямат редактор; могат да се променят с филтри."
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress не изпрати имейл – възможно е разширение да е изключило този имейл."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress няма настройка за този имейл. Mailspur може да спре известието до администраторите; новият потребител пак получава своя имейл."
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress няма настройка за този имейл. Mailspur може да спре известията за успешни автоматични обновявания; известията за неуспешни обновявания продължават да пристигат."
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "По подразбиране WordPress изпраща чрез PHP функцията mail(). На този сървър тя е деактивирана или няма инсталирана пощенска програма (sendmail) – често срещано при локални среди, Docker и много управлявани хостинги."
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "Пишете темата с нормални главни и малки букви и подчертавайте най-много една дума."
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "Да, но според %4$s получателят е маркирал „%1$s“ до %2$s (%3$s) като спам."
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "Да. „%1$s“ беше изпратен до %2$s %3$s и %4$s потвърди доставката."
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "Все още можете да го изпратите от дневника („Изпращане сега“)."
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Получавате този обобщен имейл, защото тези типове имейли са обединени в един ежедневен имейл в Mailspur. Всеки имейл остава в дневника."
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "Получавате този имейл, защото предупрежденията от наблюдението са включени в настройките на Mailspur на този сайт."
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "Получавате този имейл, защото седмичният отчет е включен в настройките на Mailspur на този сайт. Той съдържа само бройки и шаблони на теми – без съдържание на имейли или получатели."
+
+msgid "Your DKIM selector (optional)"
+msgstr "Вашият DKIM селектор (по избор)"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "Сайтът ви не е изпратил имейли през последните 7 дни."
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s известия: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1 известие: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] Седмичен отчет за имейлите %2$s"
+
+msgid "address"
+msgstr "адрес"
+
+msgid "and %s more"
+msgstr "и още %s"
+
+msgid "and %s more – see the log"
+msgstr "и още %s – вижте дневника"
+
+msgid "another plugin stopped it"
+msgstr "друго разширение го е спряло"
+
+msgid "code"
+msgstr "код"
+
+msgid "date"
+msgstr "дата"
+
+msgid "days"
+msgstr "дни"
+
+msgid "deleted after %s days"
+msgstr "изтриват се след %s дни"
+
+msgid "emails to this address failed several times before"
+msgstr "имейлите до този адрес вече са били неуспешни няколко пъти"
+
+msgid "entries"
+msgstr "записа"
+
+msgid "failing"
+msgstr "с грешки"
+
+msgid "failure spikes"
+msgstr "скокове на неуспехите"
+
+msgid "first seen %s"
+msgstr "за първи път видян %s"
+
+msgid "from a new sender"
+msgstr "от нов подател"
+
+msgid "holding emails right now"
+msgstr "в момента задържа имейли"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "съхраняват се, докато не бъдат изтрити ръчно"
+
+msgid "link"
+msgstr "връзка"
+
+msgid "minutes"
+msgstr "минути"
+
+msgid "name"
+msgstr "име"
+
+msgid "new this week"
+msgstr "нов тази седмица"
+
+msgid "no"
+msgstr "не"
+
+msgid "none"
+msgstr "няма"
+
+msgid "none in %1$s – %2$s"
+msgstr "няма за %1$s – %2$s"
+
+msgid "number"
+msgstr "число"
+
+msgid "of %s"
+msgstr "от %s"
+
+msgid "often to administrators"
+msgstr "често до администратори"
+
+msgid "on %1$s at %2$s"
+msgstr "на %1$s в %2$s"
+
+msgid "same recipient"
+msgstr "същият получател"
+
+msgid "slow to send"
+msgstr "бавно изпращане"
+
+msgid "staging mode is on"
+msgstr "тестовият режим е включен"
+
+msgid "stopped"
+msgstr "спрял"
+
+msgid "stopped email types"
+msgstr "типове имейли, които вече не се изпращат"
+
+msgid "text"
+msgstr "текст"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "аварийната спирачка спря поток от имейли"
+
+msgid "time"
+msgstr "час"
+
+msgid "today at %s"
+msgstr "днес в %s"
+
+msgid "triggered %s times"
+msgstr "задействана %s пъти"
+
+msgid "unchanged"
+msgstr "без промяна"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "неизвестно – пощенският модул не даде съобщение за грешка"
+
+msgid "unusual silence"
+msgstr "необичайна тишина"
+
+msgid "usually sent: %s"
+msgstr "обичайно се изпраща: %s"
+
+msgid "wp_mail() called"
+msgstr "Извикана е wp_mail()"
+
+msgid "yes"
+msgstr "да"
+
+msgid "yesterday at %s"
+msgstr "вчера в %s"
+
+msgid "your email provider"
+msgstr "вашият имейл доставчик"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "„%1$s“ (%2$s) в %3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "„%1$s“ (%2$s) отново се изпраща."
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "„%1$s“ (%2$s) обикновено се изпраща поне на всеки %3$s дни. Последният беше изпратен преди %4$s."
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "„%1$s“ (%2$s) е изпратен за последно преди %3$s. Дотогава се изпращаше поне на всеки %4$s дни."
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "„%1$s“ (%2$s) – обикновено на всеки %4$s, последният %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "„%1$s“ (%2$s) – обикновено всеки ден, последният %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "„%1$s“ – %2$s – %3$s"

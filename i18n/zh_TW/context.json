@@ -1,0 +1,13 @@
+{
+	"%s notes": "%s 則提示",
+	"Belongs to": "所屬項目",
+	"Emails to this user": "寄給這位使用者的郵件",
+	"No emails logged for this order yet.": "尚未記錄這筆訂單的郵件。",
+	"No emails to this user in the log.": "記錄中沒有寄給這位使用者的郵件。",
+	"Order #%s": "訂單 #%s",
+	"Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported).": "在訂購日期前後寄到同一個地址，但未與這筆訂單建立關聯 (例如在關聯功能推出前記錄，或是匯入的郵件)。",
+	"Show all in Mail Log": "在郵件記錄中檢視全部",
+	"User: %s": "使用者：%s",
+	"WooCommerce email": "WooCommerce 郵件",
+	"same recipient": "相同收件者"
+}

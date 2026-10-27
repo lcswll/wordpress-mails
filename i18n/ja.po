@@ -1,0 +1,3245 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Domain: mailspur-email-log\n"
+
+msgid "\"Download .eml\" rebuilds the message from the logged, redacted data (without attachments)."
+msgstr "「.eml をダウンロード」は、記録されたマスク済みのデータからメッセージを再構築します（添付ファイルなし）。"
+
+msgid "%1$s (previous week: %2$s)"
+msgstr "%1$s（前週: %2$s）"
+
+msgid "%1$s (scheduled for %2$s)"
+msgstr "%1$s（%2$s に予定）"
+
+msgid "%1$s email type has stopped: %2$s."
+msgid_plural "%1$s email types have stopped, e.g. %2$s."
+msgstr[0] "%1$s 種類のメールが止まっています: %2$s。"
+
+msgid "%1$s email types from %2$s senders"
+msgstr "%2$s 件の送信元から %1$s 種類のメール"
+
+msgid "%1$s emails failed within the last %2$s minutes."
+msgstr "過去 %2$s 分間に %1$s 件のメールが失敗しました。"
+
+msgid "%1$s emails in %2$s days"
+msgstr "%2$s 日間で %1$s 件のメール"
+
+msgid "%1$s emails in the last 30 days, %2$s failed"
+msgstr "過去30日間に %1$s 件のメール、%2$s 件失敗"
+
+msgid "%1$s emails were sent within one hour – far more than usual (threshold: %2$s per hour). A contact form may be abused or the site may be compromised."
+msgstr "1時間以内に %1$s 件のメールが送信されました。通常よりはるかに多い数です（しきい値: 1時間あたり %2$s 件）。お問い合わせフォームが悪用されているか、サイトが侵害されている可能性があります。"
+
+msgid "%1$s entries, %2$s"
+msgstr "%1$s 件のエントリー、%2$s"
+
+msgid "%1$s imported, %2$s duplicates, %3$s too old"
+msgstr "%1$s 件インポート、%2$s 件重複、%3$s 件は古すぎ"
+
+msgid "%1$s of %2$s bounced (%3$s)"
+msgstr "%2$s 件中 %1$s 件がバウンス（%3$s）"
+
+msgid "%1$s of %2$s emails in the last %3$s days could not be sent."
+msgstr "過去 %3$s 日間のメール %2$s 件のうち %1$s 件を送信できませんでした。"
+
+msgid "%1$s of %2$s entries processed …"
+msgstr "%2$s 件中 %1$s 件のエントリーを処理しました…"
+
+msgid "%1$s pp vs. %2$s – %3$s"
+msgstr "%1$s ポイント（%2$s 比）- %3$s"
+
+msgid "%1$s sent its first email on %2$s and has written to %3$s different external addresses within the last 24 hours. If you did not install or set up anything that sends such emails, check the site: a new sender can be a sign of a hacked site."
+msgstr "%1$s は %2$s に最初のメールを送信し、過去24時間に %3$s 件の異なる外部アドレスに送信しています。このようなメールを送るものをインストールまたは設定した覚えがない場合は、サイトを確認してください。新しい送信元はサイトがハッキングされた兆候の可能性があります。"
+
+msgid "%1$s sent, %2$s still held …"
+msgstr "%1$s 件送信、%2$s 件はまだ保留中…"
+
+msgid "%1$s vs. %2$s – %3$s"
+msgstr "%1$s（%2$s 比）- %3$s"
+
+msgid "%1$s · %2$s emails bundled since the last digest"
+msgstr "%1$s · 前回のダイジェスト以降 %2$s 件のメールをまとめました"
+
+msgid "%1$s · as of %2$s"
+msgstr "%1$s · %2$s 時点"
+
+msgid "%1$s – failure rate %2$s %% (previous week: %3$s %%)"
+msgstr "%1$s - 失敗率 %2$s %%（前週: %3$s %%）"
+
+msgid "%1$s – reported by %2$s, %3$s"
+msgstr "%1$s - %2$s による報告、%3$s"
+
+msgid "%1$s, %2$s"
+msgstr "%1$s、%2$s"
+
+msgid "%s (must-use plugin)"
+msgstr "%s（MU プラグイン）"
+
+msgid "%s (theme)"
+msgstr "%s（テーマ）"
+
+msgid "%s ago"
+msgstr "%s 前"
+
+msgid "%s days"
+msgstr "%s 日"
+
+msgid "%s email failed in the last 7 days."
+msgid_plural "%s emails failed in the last 7 days."
+msgstr[0] "過去7日間に %s 件のメールが失敗しました。"
+
+msgid "%s email is waiting for your decision."
+msgid_plural "%s emails are waiting for your decision."
+msgstr[0] "%s 件のメールがあなたの判断を待っています。"
+
+msgid "%s email was held and not sent in the last 7 days."
+msgid_plural "%s emails were held and not sent in the last 7 days."
+msgstr[0] "過去7日間に %s 件のメールが保留され、送信されませんでした。"
+
+msgid "%s emails are held by the emergency brake."
+msgstr "%s 件のメールが緊急ブレーキによって保留されています。"
+
+msgid "%s emails are waiting and have not been delivered."
+msgstr "%s 件のメールが待機中で、配信されていません。"
+
+msgid "%s entries"
+msgstr "%s 件のエントリー"
+
+msgid "%s failed"
+msgstr "%s 件失敗"
+
+msgid "%s held emails discarded."
+msgstr "保留中のメール %s 件を破棄しました。"
+
+msgid "%s imported entries removed."
+msgstr "インポートしたエントリーを %s 件削除しました。"
+
+msgid "%s in 30 days"
+msgstr "30日間で %s"
+
+msgid "%s marked as spam"
+msgstr "%s 件が迷惑メールとしてマーク"
+
+msgid "%s more on the Email types page."
+msgstr "ほか %s 件は「メールの種類」ページにあります。"
+
+msgid "%s notes"
+msgstr "注意点 %s 件"
+
+msgid "%s of all emails"
+msgstr "全メールの %s"
+
+msgid "%s of them in the last 24 hours."
+msgstr "そのうち %s 件は過去24時間以内です。"
+
+msgid "%s s"
+msgstr "%s 秒"
+
+msgid "%s selected"
+msgstr "%s 件選択中"
+
+msgid "%s thing needs attention:"
+msgid_plural "%s things need attention:"
+msgstr[0] "対応が必要な項目が %s 件あります:"
+
+msgid "%s to administrators in 30 days"
+msgstr "30日間で管理者宛て %s"
+
+msgid "%s unchanged lines"
+msgstr "変更のない %s 行"
+
+msgid "(no subject)"
+msgstr "（件名なし）"
+
+msgid "(no text content)"
+msgstr "（テキストなし）"
+
+msgid "(the emails are no longer in the log)"
+msgstr "（メールはすでにログにありません）"
+
+msgid "-all is stricter; ~all is common and fine together with DMARC."
+msgstr "-all の方が厳格です。~all は一般的で、DMARC と組み合わせれば問題ありません。"
+
+msgid "0 keeps entries forever. Cleanup runs once a day."
+msgstr "0 にするとエントリーを無期限に保存します。クリーンアップは1日1回実行されます。"
+
+msgid "0 means no limit. The oldest entries are removed first."
+msgstr "0 は無制限です。古いエントリーから削除されます。"
+
+msgid "0 turns it off. Removes content, headers and attachments of older entries and masks the addresses (a***@example.com). Date, status, source, format, size and notes stay for statistics. Runs with the daily cleanup, before entries are deleted – so it only has an effect if it is shorter than the deletion period above."
+msgstr "0 で無効になります。古いエントリーの本文、ヘッダー、添付ファイルを削除し、アドレスをマスクします（a***@example.com）。日付、ステータス、送信元、形式、サイズ、注意点は統計のために残ります。毎日のクリーンアップでエントリーの削除前に実行されるため、上の削除期間より短い場合にのみ効果があります。"
+
+msgid "12 months"
+msgstr "12か月"
+
+msgid "30 days"
+msgstr "30日"
+
+msgid "7 days"
+msgstr "7日"
+
+msgid "90 days"
+msgstr "90日"
+
+msgid "A DKIM selector may only contain letters, digits, dots, hyphens and underscores."
+msgstr "DKIM セレクターに使用できるのは、英数字、ドット、ハイフン、アンダースコアのみです。"
+
+msgid "A mailer plugin that sends via an API took over delivery and reported that sending failed, without passing on a reason."
+msgstr "API で送信するメーラープラグインが配信を引き継ぎ、送信の失敗を報告しましたが、理由は伝えられませんでした。"
+
+msgid "A published key does not prove that your mails are signed with it – check the DKIM result in the headers of a received mail."
+msgstr "鍵が公開されていても、メールがその鍵で署名されている証明にはなりません。受信したメールのヘッダーで DKIM の結果を確認してください。"
+
+msgid "A recipient or the sender address is not a valid email address, so PHPMailer refused to send."
+msgstr "受信者または送信元のアドレスが有効なメールアドレスではないため、PHPMailer が送信を拒否しました。"
+
+msgid "API key or private key in plain text: %1$s"
+msgstr "プレーンテキストの API キーまたは秘密鍵: %1$s"
+
+msgid "About %1$s DNS lookups are needed to evaluate this record – more than the allowed %2$s, so receivers may ignore it (PermError). Remove unused include: entries."
+msgstr "このレコードの評価には約 %1$s 回の DNS 照会が必要です。上限の %2$s 回を超えているため、受信側に無視される可能性があります（PermError）。使っていない include: を削除してください。"
+
+msgid "Access"
+msgstr "アクセス"
+
+msgid "Actions"
+msgstr "操作"
+
+msgid "Active: alerts on %s."
+msgstr "有効: %s のアラート。"
+
+msgid "Add a short alt attribute to every image in the template, e.g. alt=\"Logo Example Shop\"."
+msgstr "テンプレート内のすべての画像に短い alt 属性を追加してください（例: alt=\"Logo Example Shop\"）。"
+
+msgid "Add the include: of your mail provider (e.g. include:_spf.google.com) if you send through one."
+msgstr "メールサービスを経由して送信している場合は、その include: を追加してください（例: include:_spf.google.com）。"
+
+msgid "Add your mail server or mail service to the SPF record of the sender domain."
+msgstr "送信元ドメインの SPF レコードに、使用しているメールサーバーまたはメールサービスを追加してください。"
+
+msgid "Added:"
+msgstr "追加:"
+
+msgid "Addresses with at least %s hard failures: the receiving server rejected the mailbox, the domain has no mail server, or your email provider reported a hard bounce. Entries expire with the retention period of the log."
+msgstr "ハードな失敗が %s 回以上あるアドレス: 受信側サーバーがメールボックスを拒否した、ドメインにメールサーバーがない、またはメールサービスがハードバウンスを報告したもの。エントリーはログの保存期間に従って期限切れになります。"
+
+msgid "Admin screen"
+msgstr "管理画面"
+
+msgid "Administrators"
+msgstr "管理者"
+
+msgid "Aggregate reports go to %s."
+msgstr "集計レポートの送信先: %s。"
+
+msgid "Ajax"
+msgstr "Ajax"
+
+msgid "Alert"
+msgstr "アラート"
+
+msgid "Alert and hold further emails"
+msgstr "警告し、以降のメールを保留"
+
+msgid "Alert only"
+msgstr "警告のみ"
+
+msgid "Alert when an email type that is sent regularly stops"
+msgstr "定期的に送信されているメールの種類が止まったときにアラートを送る"
+
+msgid "Alert when emails fail repeatedly"
+msgstr "メールが繰り返し失敗したときにアラートを送る"
+
+msgid "Alert when the site unexpectedly stops sending emails"
+msgstr "サイトのメール送信が予期せず止まったときにアラートを送る"
+
+msgid "Alerts are enabled but have no channel: enter an email address or a webhook URL."
+msgstr "アラートは有効ですが、通知先がありません。メールアドレスまたは Webhook URL を入力してください。"
+
+msgid "Alerts are off."
+msgstr "アラートはオフです。"
+
+msgid "All"
+msgstr "すべて"
+
+msgid "All email types look healthy."
+msgstr "すべてのメールの種類は正常です。"
+
+msgid "All emails are redirected to test addresses."
+msgstr "すべてのメールがテスト用アドレスに転送されます。"
+
+msgid "All emails go to test addresses instead of the real recipients."
+msgstr "すべてのメールが実際の受信者ではなくテスト用アドレスに送られます。"
+
+msgid "All sources"
+msgstr "すべての送信元"
+
+msgid "Allow again"
+msgstr "再び許可"
+
+msgid "Allowed again."
+msgstr "再び許可しました。"
+
+msgid "Also alerts once when a plugin or theme that never sent an email before writes to many different external addresses within a day – a possible sign of a hacked site. The first two weeks after installing Mailspur are the baseline."
+msgstr "これまでメールを送信したことのないプラグインやテーマが、1日のうちに多数の異なる外部アドレスへ送信した場合にも1回アラートを送ります。サイトがハッキングされた兆候の可能性があるためです。Mailspur のインストール後最初の2週間が基準になります。"
+
+msgid "Also remove the subject when anonymising"
+msgstr "匿名化の際に件名も削除する"
+
+msgid "Also search content"
+msgstr "本文も検索"
+
+msgid "Alternatively ask your host to enable mail() / sendmail for this site."
+msgstr "または、このサイトで mail() / sendmail を有効にするようホスティング会社に依頼してください。"
+
+msgid "Always load remote images and fonts in the preview"
+msgstr "プレビューで外部の画像とフォントを常に読み込む"
+
+msgid "Amazon SES (via SNS)"
+msgstr "Amazon SES（SNS 経由）"
+
+msgid "An email provider with an HTTP API instead of SMTP needs fewer round trips per email."
+msgstr "SMTP ではなく HTTP API を使うメールサービスなら、メール1件あたりのやり取りが少なくて済みます。"
+
+msgid "Anonymisation"
+msgstr "匿名化"
+
+msgid "Anonymise entries after"
+msgstr "エントリーを匿名化するまでの期間"
+
+msgid "Anonymised"
+msgstr "匿名化済み"
+
+msgid "Any format"
+msgstr "すべての形式"
+
+msgid "Any status"
+msgstr "すべてのステータス"
+
+msgid "Apply"
+msgstr "適用"
+
+msgid "Ask the recipient for a working address."
+msgstr "受信者に有効なアドレスを尋ねてください。"
+
+msgid "Ask your host to enable the openssl extension (or enable it in the PHP settings of your hosting panel)."
+msgstr "openssl 拡張機能を有効にするようホスティング会社に依頼してください（またはホスティングの管理パネルの PHP 設定で有効にしてください）。"
+
+msgid "Ask your host to update the CA certificates and OpenSSL of the server."
+msgstr "サーバーの CA 証明書と OpenSSL を更新するようホスティング会社に依頼してください。"
+
+msgid "Ask your host whether outgoing SMTP connections are blocked."
+msgstr "外向きの SMTP 接続がブロックされていないかホスティング会社に確認してください。"
+
+msgid "Ask your host whether outgoing connections to that port are allowed (firewall)."
+msgstr "そのポートへの外向きの接続が許可されているか（ファイアウォール）ホスティング会社に確認してください。"
+
+msgid "At least %1$s failed emails within %2$s minutes"
+msgstr "%2$s 分以内に失敗したメールが %1$s 件以上"
+
+msgid "At most one alert per type within this time, even if the problem persists."
+msgstr "問題が続いていても、この期間内に送るアラートは種類ごとに最大1回です。"
+
+msgid "Attachments"
+msgstr "添付ファイル"
+
+msgid "Attachments no longer available: %s"
+msgstr "利用できなくなった添付ファイル: %s"
+
+msgid "Authentication"
+msgstr "認証"
+
+msgid "Automatic TLS"
+msgstr "自動 TLS"
+
+msgid "Average per day"
+msgstr "1日あたりの平均"
+
+msgid "Back to the email types"
+msgstr "メールの種類に戻る"
+
+msgid "Belongs to"
+msgstr "関連先"
+
+msgid "Block again"
+msgstr "再びブロック"
+
+msgid "Blocked as spam or by a blocklist"
+msgstr "スパムとして、またはブロックリストによりブロック"
+
+msgid "Bounced (permanent)"
+msgstr "バウンス（恒久的）"
+
+msgid "Bounced (temporary)"
+msgstr "バウンス（一時的）"
+
+msgid "Broken characters (encoding): %1$s"
+msgstr "文字化け（エンコーディング）: %1$s"
+
+msgid "Bulk email without unsubscribe header (%1$s recipients)"
+msgstr "配信停止ヘッダーのない一斉送信メール（受信者 %1$s 人）"
+
+msgid "Bundle into one daily email"
+msgstr "1日1回のまとめメールにする"
+
+msgid "Bundled into one daily email"
+msgstr "1日1回のまとめメールにしています"
+
+msgid "Bundling is off. Emails that were waiting went out in one digest now."
+msgstr "まとめ送信をオフにしました。待機していたメールは今、1通のダイジェストで送信されました。"
+
+msgid "Busiest day"
+msgstr "最も多かった日"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Careful: emails to this address failed several times before."
+msgstr "注意: このアドレスへのメールは以前にも何度か失敗しています。"
+
+msgid "Change in the email types"
+msgstr "メールの種類の変更"
+
+msgid "Change staging mode"
+msgstr "ステージングモードを変更"
+
+msgid "Check"
+msgstr "確認"
+
+msgid "Check again"
+msgstr "再確認"
+
+msgid "Check emails"
+msgstr "メールを確認"
+
+msgid "Check host and port; try 587 (TLS) instead of 465 (SSL) or the other way round."
+msgstr "ホストとポートを確認してください。465（SSL）の代わりに 587（TLS）を、またはその逆を試してください。"
+
+msgid "Check host, port, encryption, user name and password in your SMTP plugin and send a test email from there."
+msgstr "SMTP プラグインでホスト、ポート、暗号化、ユーザー名、パスワードを確認し、そこからテストメールを送信してください。"
+
+msgid "Check sender domains"
+msgstr "送信元ドメインを確認"
+
+msgid "Check that the encryption matches the port: TLS for 587, SSL for 465."
+msgstr "暗号化がポートに合っているか確認してください: 587 は TLS、465 は SSL。"
+
+msgid "Check that the key belongs to the right region / account (e.g. EU vs. US endpoint)."
+msgstr "キーが正しいリージョンやアカウントのものか確認してください（例: EU と US のエンドポイント）。"
+
+msgid "Check the SMTP host and port: a wrong port or a blocked connection often ends in a timeout before a fallback works."
+msgstr "SMTP ホストとポートを確認してください: ポートの誤りや接続のブロックは、フォールバックが機能する前にタイムアウトで終わることがよくあります。"
+
+msgid "Check the SPF, DKIM and DMARC records of the sender domain, or use a sender address on the domain you send from."
+msgstr "送信元ドメインの SPF、DKIM、DMARC レコードを確認するか、送信に使っているドメインの送信元アドレスを使用してください。"
+
+msgid "Check the address for typos – or the email was never sent by your site."
+msgstr "アドレスに入力ミスがないか確認してください。あるいは、このメールはサイトから送信されていません。"
+
+msgid "Check the address with the recipient and correct it where it is stored (user profile, order, form entry)."
+msgstr "受信者にアドレスを確認し、保存されている場所（ユーザープロフィール、注文、フォームの入力内容）で修正してください。"
+
+msgid "Check the address with the recipient and correct it where it is stored."
+msgstr "受信者にアドレスを確認し、保存されている場所で修正してください。"
+
+msgid "Check the host name and port: 587 with STARTTLS (TLS) or 465 with SSL. Port 25 is blocked by most hosts."
+msgstr "ホスト名とポートを確認してください: 587 は STARTTLS（TLS）、465 は SSL。ポート 25 はほとんどのホスティング会社でブロックされています。"
+
+msgid "Check the limits and current usage in your mail service account; upgrade the plan if needed."
+msgstr "メールサービスのアカウントで上限と現在の使用量を確認し、必要に応じてプランをアップグレードしてください。"
+
+msgid "Check the recipient addresses of this entry for typos, spaces or missing parts."
+msgstr "このエントリーの受信者アドレスに入力ミス、スペース、欠けている部分がないか確認してください。"
+
+msgid "Check the sender address in your SMTP plugin and the wp_mail_from filter."
+msgstr "SMTP プラグインの送信元アドレスと wp_mail_from フィルターを確認してください。"
+
+msgid "Check the sending limits of your mail account and the notes of this email."
+msgstr "メールアカウントの送信上限と、このメールの注意点を確認してください。"
+
+msgid "Check the server IP on a blocklist checker and request delisting."
+msgstr "ブロックリストチェッカーでサーバーの IP を確認し、リストからの削除を依頼してください。"
+
+msgid "Check the spelling of the placeholder in the template and whether the plugin supports it for this email type. Shortcodes are not processed in emails unless the sending plugin runs do_shortcode()."
+msgstr "テンプレート内のプレースホルダーの綴りと、プラグインがこのメールの種類でそれに対応しているかを確認してください。送信するプラグインが do_shortcode() を実行しない限り、メール内のショートコードは処理されません。"
+
+msgid "Checked %s."
+msgstr "%s に確認しました。"
+
+msgid "Checked just now"
+msgstr "たった今確認しました"
+
+msgid "Checking DNS records …"
+msgstr "DNS レコードを確認しています…"
+
+msgid "Checks the DNS records of the domains your site sends from: the default sender address and the most frequent senders in the log. Missing or weak records are the most common reason why emails land in spam. Only your server's own DNS resolver is used; results are kept for one hour."
+msgstr "サイトが送信に使うドメイン（デフォルトの送信元アドレスと、ログで最も多い送信元）の DNS レコードを確認します。レコードの欠落や不備は、メールが迷惑メールになる最も一般的な原因です。使用するのはサーバー自身の DNS リゾルバーのみで、結果は1時間保持されます。"
+
+msgid "Choose a range of at most %s days."
+msgstr "最大 %s 日の範囲を選択してください。"
+
+msgid "Clear selection"
+msgstr "選択を解除"
+
+msgid "Click a bar to open these emails in the log."
+msgstr "バーをクリックすると、これらのメールをログで開けます。"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Close (Esc)"
+msgstr "閉じる (Esc)"
+
+msgid "Colour scheme"
+msgstr "配色"
+
+msgid "Command line"
+msgstr "コマンドライン"
+
+msgid "Compare"
+msgstr "比較"
+
+msgid "Compare the sources of these entries. Check whether two plugins send the same notification, or whether a hook (e.g. order status change) fires more than once."
+msgstr "これらのエントリーの送信元を比較してください。2つのプラグインが同じ通知を送っていないか、フック（例: 注文ステータスの変更）が複数回実行されていないか確認してください。"
+
+msgid "Component"
+msgstr "コンポーネント"
+
+msgid "Configure alerts"
+msgstr "アラートを設定"
+
+msgid "Content anonymised after %1$s days, %2$s"
+msgstr "%1$s 日後に本文を匿名化、%2$s"
+
+msgid "Content change marked as seen."
+msgstr "内容の変更を確認済みにしました。"
+
+msgid "Content changed"
+msgstr "内容の変更"
+
+msgid "Content changed on %1$s, after the %2$s update."
+msgstr "%2$s の更新後、%1$s に内容が変更されました。"
+
+msgid "Content changed on %s."
+msgstr "%s に内容が変更されました。"
+
+msgid "Content removed"
+msgstr "本文を削除済み"
+
+msgid "Content removed after %s days"
+msgstr "%s 日後に本文を削除"
+
+msgid "Content, headers and attachments were removed and the addresses masked by the anonymisation setting."
+msgstr "匿名化の設定により、本文、ヘッダー、添付ファイルが削除され、アドレスがマスクされました。"
+
+msgid "Copied"
+msgstr "コピーしました"
+
+msgid "Copied – paste it into your reply."
+msgstr "コピーしました。返信に貼り付けてください。"
+
+msgid "Copies a short sentence for answering the customer: when the email was sent to whom and whether it arrived – without technical details."
+msgstr "顧客への返答用の短い文をコピーします: いつ誰にメールが送信され、届いたかどうか。技術的な詳細は含みません。"
+
+msgid "Copies the existing log of another mail logging plugin into Mailspur, so old emails can be searched and previewed here. The other plugin and its data stay untouched; running the import again only adds new entries."
+msgstr "別のメールログプラグインの既存ログを Mailspur にコピーし、古いメールもここで検索・プレビューできるようにします。もう一方のプラグインとそのデータはそのまま残ります。インポートを再実行しても新しいエントリーだけが追加されます。"
+
+msgid "Copy"
+msgstr "コピー"
+
+msgid "Copy for support"
+msgstr "サポート用にコピー"
+
+msgid "Copying is not possible in this browser. Select the text and copy it:"
+msgstr "このブラウザーではコピーできません。テキストを選択してコピーしてください:"
+
+msgid "Correct the address (e.g. in the user profile or order) and consider an email validation in your forms."
+msgstr "アドレスを修正し（例: ユーザープロフィールや注文で）、フォームにメールアドレスの検証を加えることを検討してください。"
+
+msgid "Counted once per email."
+msgstr "メール1件につき1回カウントします。"
+
+msgid "Create a new API key with send permission at your mail service and enter it in the mailer plugin."
+msgstr "メールサービスで送信権限のある新しい API キーを作成し、メーラープラグインに入力してください。"
+
+msgid "Create a new webhook URL? The current URL stops working at once – paste the new URL into the webhook settings of your email provider."
+msgstr "新しい Webhook URL を作成しますか？ 現在の URL はすぐに使えなくなります。新しい URL をメールサービスの Webhook 設定に貼り付けてください。"
+
+msgid "Create new URL"
+msgstr "新しい URL を作成"
+
+msgid "Current page"
+msgstr "現在のページ"
+
+msgid "Current record"
+msgstr "現在のレコード"
+
+msgid "Current size"
+msgstr "現在のサイズ"
+
+msgid "Custom"
+msgstr "カスタム"
+
+msgid "DKIM key found (selector: %s)."
+msgstr "DKIM 鍵が見つかりました（セレクター: %s）。"
+
+msgid "DMARC record found with p=none: reports only, spoofed mail is still delivered."
+msgstr "p=none の DMARC レコードが見つかりました: レポートのみで、なりすましメールも配信されます。"
+
+msgid "DMARC record found with policy p=%s."
+msgstr "ポリシー p=%s の DMARC レコードが見つかりました。"
+
+msgid "DMARC record has no valid policy (p=none, quarantine or reject)."
+msgstr "DMARC レコードに有効なポリシー（p=none、quarantine、reject）がありません。"
+
+msgid "DNS lookup failed or timed out. Try again later."
+msgstr "DNS の照会に失敗したか、タイムアウトしました。後でもう一度お試しください。"
+
+msgid "DNS lookups are not available on this server (dns_get_record() is disabled), so the sender check cannot run here."
+msgstr "このサーバーでは DNS 照会を利用できない（dns_get_record() が無効）ため、ここでは送信元チェックを実行できません。"
+
+msgid "DNS lookups needed: about %1$s of %2$s allowed."
+msgstr "必要な DNS 照会: 約 %1$s 回（上限 %2$s 回）。"
+
+msgid "Daily"
+msgstr "毎日"
+
+msgid "Daily digest"
+msgstr "日次ダイジェスト"
+
+msgid "Dark"
+msgstr "ダーク"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Default (%s days)"
+msgstr "デフォルト（%s 日）"
+
+msgid "Default (no time limit)"
+msgstr "デフォルト（期限なし）"
+
+msgid "Default sender"
+msgstr "デフォルトの送信元"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete %s selected log entries?"
+msgstr "選択した %s 件のログエントリーを削除しますか？"
+
+msgid "Delete ALL log entries? This cannot be undone."
+msgstr "すべてのログエントリーを削除しますか？ この操作は取り消せません。"
+
+msgid "Delete entries after"
+msgstr "エントリーを削除するまでの期間"
+
+msgid "Delete selected"
+msgstr "選択項目を削除"
+
+msgid "Delete the log table and settings when the plugin is deleted"
+msgstr "プラグインの削除時にログテーブルと設定を削除する"
+
+msgid "Delete this log entry?"
+msgstr "このログエントリーを削除しますか？"
+
+msgid "Deleted."
+msgstr "削除しました。"
+
+msgid "Delivered"
+msgstr "配信済み"
+
+msgid "Delivered by %s (API)"
+msgstr "%s が配信（API）"
+
+msgid "Delivered by code hooked into pre_wp_mail (API)"
+msgstr "pre_wp_mail にフックされたコードが配信（API）"
+
+msgid "Delivered in the daily digest on %s."
+msgstr "%s の日次ダイジェストで配信されました。"
+
+msgid "Delivery"
+msgstr "配信"
+
+msgid "Delivery status from your email provider"
+msgstr "メールサービスからの配信ステータス"
+
+msgid "Desktop"
+msgstr "デスクトップ"
+
+msgid "Did my email arrive?"
+msgstr "メールは届きましたか？"
+
+msgid "Disable the email or change its recipient"
+msgstr "メールを無効にするか、受信者を変更する"
+
+msgid "Discard all held emails? They stay in the log but are not sent."
+msgstr "保留中のメールをすべて破棄しますか？ ログには残りますが、送信されません。"
+
+msgid "Discard held emails"
+msgstr "保留中のメールを破棄"
+
+msgid "Do not send \"from\" free mail addresses (gmail.com, gmx.de …) through your own server."
+msgstr "フリーメールのアドレス（gmail.com、gmx.de など）を「送信元」にして自分のサーバーから送信しないでください。"
+
+msgid "Done: %1$s emails sent, %2$s failed."
+msgstr "完了: %1$s 件送信、%2$s 件失敗。"
+
+msgid "Done: %1$s imported, %2$s duplicates, %3$s too old."
+msgstr "完了: %1$s 件インポート、%2$s 件重複、%3$s 件は古すぎ。"
+
+msgid "Download .eml"
+msgstr ".eml をダウンロード"
+
+msgid "Download as CSV"
+msgstr "CSV でダウンロード"
+
+msgid "Download started."
+msgstr "ダウンロードを開始しました。"
+
+msgid "Download the entries matching the current filters as %s"
+msgstr "現在の絞り込み条件に一致するエントリーを %s でダウンロード"
+
+msgid "Each email is checked once when it is logged or imported (no external requests). Changes here only affect emails logged afterwards; older entries are not checked again. DNS and repeated-sending checks run when you open an entry."
+msgstr "各メールは、記録またはインポートの際に1回だけチェックされます（外部へのリクエストはなし）。ここでの変更は、それ以降に記録されたメールにのみ適用され、古いエントリーは再チェックされません。DNS と繰り返し送信のチェックは、エントリーを開いたときに実行されます。"
+
+msgid "Earlier emails to %s failed hard more than once."
+msgstr "%s 宛ての以前のメールは、複数回ハードな失敗をしています。"
+
+msgid "Edit template"
+msgstr "テンプレートを編集"
+
+msgid "Editors and above"
+msgstr "編集者以上"
+
+msgid "Email address"
+msgstr "メールアドレス"
+
+msgid "Email address (the latest email is no longer in the log)"
+msgstr "メールアドレス（最新のメールはすでにログにありません）"
+
+msgid "Email address or order number"
+msgstr "メールアドレスまたは注文番号"
+
+msgid "Email consists almost only of images"
+msgstr "メールがほぼ画像だけで構成されています"
+
+msgid "Email failure spike"
+msgstr "メールの失敗が急増"
+
+msgid "Email failures"
+msgstr "メールの失敗"
+
+msgid "Email failures resolved"
+msgstr "メールの失敗が解消"
+
+msgid "Email inventory"
+msgstr "メール一覧表"
+
+msgid "Email log"
+msgstr "メールログ"
+
+msgid "Email log: problem recipients"
+msgstr "メールログ: 問題のある宛先"
+
+msgid "Email me whenever a comment is held for moderation"
+msgstr "コメントがモデレーション待ちになったときにメールで通知"
+
+msgid "Email me whenever anyone posts a comment"
+msgstr "コメントが投稿されたときにメールで通知"
+
+msgid "Email provider"
+msgstr "メールサービス"
+
+msgid "Email sent again."
+msgstr "メールを再送信しました。"
+
+msgid "Email sent to %s."
+msgstr "%s にメールを送信しました。"
+
+msgid "Email type"
+msgstr "メールの種類"
+
+msgid "Email type is sent again"
+msgstr "メールの種類が再び送信されています"
+
+msgid "Email type stopped"
+msgstr "メールの種類が止まりました"
+
+msgid "Email types"
+msgstr "メールの種類"
+
+msgid "Email volume back to normal"
+msgstr "メールの量が通常に戻りました"
+
+msgid "Email volume is back to normal: the emergency brake is no longer active."
+msgstr "メールの量が通常に戻りました: 緊急ブレーキは解除されています。"
+
+msgid "Email: failed"
+msgstr "メール: 失敗"
+
+msgid "Email: failed – see the log"
+msgstr "メール: 失敗 - ログを確認してください"
+
+msgid "Email: sent"
+msgstr "メール: 送信済み"
+
+msgid "Emails"
+msgstr "メール"
+
+msgid "Emails are being logged again."
+msgstr "メールが再び記録されています。"
+
+msgid "Emails are delivered to their recipients."
+msgstr "メールは受信者に配信されています。"
+
+msgid "Emails are flowing again"
+msgstr "メールが再び送信されています"
+
+msgid "Emails are logged but not delivered."
+msgstr "メールはログに記録されますが、配信されません。"
+
+msgid "Emails are still being sent."
+msgstr "メールは引き続き送信されています。"
+
+msgid "Emails are still being sent. Check the main source; switch the emergency brake to \"Alert and hold further emails\" to stop them."
+msgstr "メールは引き続き送信されています。主な送信元を確認し、送信を止めるには緊急ブレーキを「警告し、以降のメールを保留」に切り替えてください。"
+
+msgid "Emails in 30 days"
+msgstr "30日間のメール数"
+
+msgid "Emails of this type that go only to administrators are now collected and sent once a day in one digest."
+msgstr "管理者のみに送られるこの種類のメールは、まとめて1日1回1通のダイジェストで送信されるようになりました。"
+
+msgid "Emails over time"
+msgstr "メールの推移"
+
+msgid "Emails per day and status"
+msgstr "日別・ステータス別のメール数"
+
+msgid "Emails per weekday and hour (site time zone)."
+msgstr "曜日・時間帯別のメール数（サイトのタイムゾーン）。"
+
+msgid "Emails that are already in the log – logged by Mailspur itself or imported from another plugin – are recognized by recipients, subject and send time and skipped as duplicates."
+msgstr "ログにすでにあるメール（Mailspur 自身が記録したもの、または別のプラグインからインポートしたもの）は、受信者、件名、送信日時で判別され、重複としてスキップされます。"
+
+msgid "Emails that are sent regularly have stopped (%s)"
+msgstr "定期的に送信されているメールが止まっています（%s）"
+
+msgid "Emails to this user"
+msgstr "このユーザー宛てのメール"
+
+msgid "Emails with notes"
+msgstr "注意点のあるメール"
+
+msgid "Emails without a subject look like spam and are hard to find in the inbox."
+msgstr "件名のないメールはスパムのように見え、受信トレイで見つけにくくなります。"
+
+msgid "Emails – last 7 days"
+msgstr "メール - 過去7日間"
+
+msgid "Emergency brake"
+msgstr "緊急ブレーキ"
+
+msgid "Emergency brake reset."
+msgstr "緊急ブレーキをリセットしました。"
+
+msgid "Emergency brake settings"
+msgstr "緊急ブレーキの設定"
+
+msgid "Emergency brake: %1$s emails in the last hour – far more than usual (threshold: %2$s per hour)."
+msgstr "緊急ブレーキ: 過去1時間に %1$s 件のメール。通常よりはるかに多い数です（しきい値: 1時間あたり %2$s 件）。"
+
+msgid "Emergency brake: unusual email flood"
+msgstr "緊急ブレーキ: 異常なメールの大量送信"
+
+msgid "Empty = automatic: three times the busiest hour of the last 14 days, at least 50 – currently %s."
+msgstr "空欄 = 自動: 過去14日間で最も多かった1時間の3倍、最低 50。現在は %s。"
+
+msgid "Empty log"
+msgstr "ログを空にする"
+
+msgid "Empty subject"
+msgstr "件名が空です"
+
+msgid "Enable 2-step verification for the Google account and create an app password (Google account → Security → App passwords)."
+msgstr "Google アカウントで2段階認証プロセスを有効にし、アプリパスワードを作成してください（Google アカウント → セキュリティ → アプリパスワード）。"
+
+msgid "Enable DKIM signing at your mail provider or host and publish the key it gives you. If you already sign, enter your selector (the s= value of the DKIM-Signature header) and check again."
+msgstr "メールサービスまたはホスティング会社で DKIM 署名を有効にし、提供された鍵を公開してください。すでに署名している場合は、セレクター（DKIM-Signature ヘッダーの s= の値）を入力して再確認してください。"
+
+msgid "Enable DKIM signing at your mail service and publish its DNS record."
+msgstr "メールサービスで DKIM 署名を有効にし、その DNS レコードを公開してください。"
+
+msgid "Enable authentication in your SMTP plugin and enter user name and password."
+msgstr "SMTP プラグインで認証を有効にし、ユーザー名とパスワードを入力してください。"
+
+msgid "Enable authentication in your SMTP plugin."
+msgstr "SMTP プラグインで認証を有効にしてください。"
+
+msgid "Encrypted SMTP connections (TLS/SSL) need the PHP extension openssl, which is not installed or not enabled on this server."
+msgstr "暗号化された SMTP 接続（TLS/SSL）には PHP 拡張機能 openssl が必要ですが、このサーバーではインストールされていないか、有効になっていません。"
+
+msgid "Encryption"
+msgstr "暗号化"
+
+msgid "Encryption (TLS/SSL) failed"
+msgstr "暗号化（TLS/SSL）に失敗しました"
+
+msgid "Enter an email address or a webhook URL and save the settings first."
+msgstr "先にメールアドレスまたは Webhook URL を入力して設定を保存してください。"
+
+msgid "Enter an email address or an order number."
+msgstr "メールアドレスまたは注文番号を入力してください。"
+
+msgid "Enter an email address under “Send alerts by email to” and save the settings first."
+msgstr "先に「アラートの送信先メールアドレス」にメールアドレスを入力して設定を保存してください。"
+
+msgid "Enter between 1 and 10 email addresses."
+msgstr "メールアドレスを 1～10 件入力してください。"
+
+msgid "Enter one or more email addresses."
+msgstr "メールアドレスを1件以上入力してください。"
+
+msgid "Enter the app password in your SMTP plugin, or use the plugin's \"Sign in with Google\" (OAuth) connection."
+msgstr "SMTP プラグインにアプリパスワードを入力するか、プラグインの「Google でログイン」（OAuth）接続を使用してください。"
+
+msgid "Entries"
+msgstr "エントリー"
+
+msgid "Entries older than %s days are skipped because the retention setting would delete them anyway. Change the retention above first to import everything."
+msgstr "%s 日より古いエントリーは、保存期間の設定でいずれ削除されるためスキップされます。すべてをインポートするには、先に上の保存期間を変更してください。"
+
+msgid "Error"
+msgstr "エラー"
+
+msgid "Errors"
+msgstr "エラー"
+
+msgid "Every %s days"
+msgstr "%s 日ごと"
+
+msgid "Every 15 minutes (Mailspur alerts)"
+msgstr "15分ごと（Mailspur アラート）"
+
+msgid "Every Monday morning, only when there is something to report: emails and failure rate compared with the previous week, new, stopped and changed email types, emails with notes and emergency-brake incidents. Counts and subject patterns only."
+msgstr "毎週月曜日の朝、報告すべきことがある場合のみ: 前週と比較したメール数と失敗率、新しい・止まった・変更されたメールの種類、注意点のあるメール、緊急ブレーキの発動。件数と件名パターンのみです。"
+
+msgid "Every kind of email this site sends, generated from the Mailspur email log – e.g. for a record of processing activities or a handover. Recipient groups are derived from the latest emails of each sender, data categories from the latest email of each type. The list contains no email contents and no addresses."
+msgstr "このサイトが送信するすべての種類のメールを、Mailspur のメールログから生成した一覧です。処理活動の記録や引き継ぎなどに使えます。受信者グループは各送信元の最新メールから、データの種類は各種類の最新メールから推定しています。一覧にはメールの本文もアドレスも含まれません。"
+
+msgid "Every kind of email your site sends, found automatically in the log: grouped by the plugin that sends it and by subject, with numbers, addresses and names as placeholders. Mailspur learns how often each type is sent and notices when one stops – for example after a plugin update."
+msgstr "サイトが送信するすべての種類のメールを、ログから自動的に見つけて表示します。送信するプラグインと件名ごとにまとめ、数字・アドレス・名前はプレースホルダーに置き換えています。Mailspur は各種類の送信頻度を学習し、止まったものに気付きます（例: プラグインの更新後）。"
+
+msgid "Everything looks fine: %s email in the last 7 days, without errors."
+msgid_plural "Everything looks fine: %s emails in the last 7 days, none failed."
+msgstr[0] "問題ありません: 過去7日間に %s 件のメールがエラーなく送信されました。"
+
+msgid "Expected today and not sent yet:"
+msgstr "今日送信される予定で、まだ送信されていないもの:"
+
+msgid "Export"
+msgstr "エクスポート"
+
+msgid "Export started – your download begins shortly."
+msgstr "エクスポートを開始しました。まもなくダウンロードが始まります。"
+
+msgid "Failed"
+msgstr "失敗"
+
+msgid "Failed (%s %%)"
+msgstr "失敗（%s %%）"
+
+msgid "Failing"
+msgstr "失敗中"
+
+msgid "Failure rate"
+msgstr "失敗率"
+
+msgid "Failure spike"
+msgstr "失敗の急増"
+
+msgid "Far more emails than usual were sent"
+msgstr "通常よりはるかに多くのメールが送信されました"
+
+msgid "Far more emails than usual were sent, so Mailspur holds further emails until you release or discard them."
+msgstr "通常よりはるかに多くのメールが送信されたため、Mailspur は以降のメールを、あなたが解放または破棄するまで保留しています。"
+
+msgid "Fewer"
+msgstr "少ない"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "Filter by status"
+msgstr "ステータスで絞り込み"
+
+msgid "Filter email types"
+msgstr "メールの種類を絞り込む"
+
+msgid "First email after the change"
+msgstr "変更後の最初のメール"
+
+msgid "First email from this sender on %s. With type alerts on, Mailspur alerts when a new sender writes to many external addresses."
+msgstr "この送信元からの最初のメールは %s です。種類のアラートが有効な場合、新しい送信元が多数の外部アドレスに送信すると Mailspur がアラートを送ります。"
+
+msgid "First page"
+msgstr "最初のページ"
+
+msgid "For large attachments the timeout can also be hit during the transfer – send smaller files or links."
+msgstr "大きな添付ファイルでは転送中にタイムアウトすることもあります。小さなファイルかリンクを送ってください。"
+
+msgid "For staging and development copies of a site: make sure customers never get emails from the copy. Every email is still logged."
+msgstr "サイトのステージング用・開発用コピー向け: コピーから顧客にメールが届かないようにします。すべてのメールは引き続きログに記録されます。"
+
+msgid "Forced dark"
+msgstr "強制ダーク"
+
+msgid "Format"
+msgstr "形式"
+
+msgid "Free text from forms"
+msgstr "フォームの自由記入テキスト"
+
+msgid "Friday"
+msgstr "金曜日"
+
+msgid "From"
+msgstr "差出人"
+
+msgid "From date"
+msgstr "開始日"
+
+msgid "Front end"
+msgstr "フロントエンド"
+
+msgid "Function"
+msgstr "関数"
+
+msgid "Further emails are held until an administrator releases or discards them."
+msgstr "以降のメールは、管理者が解放または破棄するまで保留されます。"
+
+msgid "Gmail and Google Workspace no longer accept the normal account password for SMTP."
+msgstr "Gmail と Google Workspace は、SMTP で通常のアカウントパスワードを受け付けなくなりました。"
+
+msgid "Gmail cuts off HTML emails larger than 102 KB and shows \"[Message clipped]\". Everything after the cut – often the footer, unsubscribe link or legal notice – is hidden."
+msgstr "Gmail は 102 KB を超える HTML メールを途中で切り、「[メッセージの一部が表示されています]」と表示します。切られた後の部分（多くの場合フッター、配信停止リンク、法的表示）は表示されません。"
+
+msgid "Gmail will clip this email (%1$s KB)"
+msgstr "Gmail がこのメールを切り詰めます（%1$s KB）"
+
+msgid "Google rejected the login"
+msgstr "Google がログインを拒否しました"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "HTML sent as plain text"
+msgstr "HTML がプレーンテキストとして送信されています"
+
+msgid "Handler"
+msgstr "ハンドラー"
+
+msgid "Hard bounce reported by your email provider"
+msgstr "メールサービスが報告したハードバウンス"
+
+msgid "Hard failures"
+msgstr "ハードな失敗"
+
+msgid "Headers"
+msgstr "ヘッダー"
+
+msgid "Held"
+msgstr "保留"
+
+msgid "Held by emergency brake – discarded."
+msgstr "緊急ブレーキにより保留 - 破棄済み。"
+
+msgid "Held by emergency brake – not delivered."
+msgstr "緊急ブレーキにより保留 - 未配信。"
+
+msgid "Held by emergency brake – released later."
+msgstr "緊急ブレーキにより保留 - 後で解放。"
+
+msgid "Held by staging mode – not delivered."
+msgstr "ステージングモードにより保留 - 未配信。"
+
+msgid "Held email sent. It is logged as a new entry."
+msgstr "保留中のメールを送信しました。新しいエントリーとして記録されます。"
+
+msgid "Held emails get the status \"Held\" and can still be sent one by one from the log (\"Send now\")."
+msgstr "保留されたメールのステータスは「保留」になり、ログから1件ずつ送信できます（「今すぐ送信」）。"
+
+msgid "Held: every recipient failed hard before (problem recipients)."
+msgstr "保留: すべての受信者で以前にハードな失敗がありました（問題のある宛先）。"
+
+msgid "Held: staging mode is set to redirect, but no valid redirect address is configured."
+msgstr "保留: ステージングモードが転送に設定されていますが、有効な転送先アドレスが設定されていません。"
+
+msgid "Hints about problems that can keep this email from arriving or displaying correctly."
+msgstr "このメールが正しく届かない、または正しく表示されない原因となりうる問題についてのヒント。"
+
+msgid "Hold further emails to problem recipients"
+msgstr "問題のある宛先への以降のメールを保留"
+
+msgid "Hooks"
+msgstr "フック"
+
+msgid "Hours"
+msgstr "時間"
+
+msgid "How to fix:"
+msgstr "対処方法:"
+
+msgid "I already did"
+msgstr "もう済ませました"
+
+msgid "I understand that the raw source is NOT redacted and roughly doubles the storage per email"
+msgstr "生のソースはマスクされず、メール1件あたりの保存容量がおよそ2倍になることを理解しています"
+
+msgid "If it happens often, check the sending limits of your mail provider."
+msgstr "頻繁に起こる場合は、メールサービスの送信上限を確認してください。"
+
+msgid "If it keeps happening, send fewer emails at once or through a mail service with a queue."
+msgstr "繰り返し起こる場合は、一度に送るメールを減らすか、キューのあるメールサービス経由で送信してください。"
+
+msgid "If security defaults block it, use your SMTP plugin's Microsoft (OAuth / Graph API) connection instead."
+msgstr "セキュリティの既定値群によってブロックされる場合は、代わりに SMTP プラグインの Microsoft（OAuth / Graph API）接続を使用してください。"
+
+msgid "If several recipients failed, the server reply after the address names the reason."
+msgstr "複数の受信者で失敗した場合は、アドレスの後に続くサーバーの応答に理由が示されています。"
+
+msgid "If the account uses two-factor authentication, create an app password and use it instead."
+msgstr "アカウントで2要素認証を使っている場合は、アプリパスワードを作成して代わりに使用してください。"
+
+msgid "Ignore"
+msgstr "無視"
+
+msgid "Ignored"
+msgstr "無視中"
+
+msgid "Ignored notes"
+msgstr "無視する注意点"
+
+msgid "Ignored notes are no longer recorded for new emails and are hidden for existing entries."
+msgstr "無視する注意点は、新しいメールでは記録されなくなり、既存のエントリーでは非表示になります。"
+
+msgid "Images without alt text (%1$s)"
+msgstr "alt テキストのない画像（%1$s）"
+
+msgid "Import"
+msgstr "インポート"
+
+msgid "Import failed: %s"
+msgstr "インポートに失敗しました: %s"
+
+msgid "Import from other plugins"
+msgstr "他のプラグインからインポート"
+
+msgid "Import new entries"
+msgstr "新しいエントリーをインポート"
+
+msgid "Imported"
+msgstr "インポート済み"
+
+msgid "Imported entries have no trace: the other plugin did not record these details."
+msgstr "インポートしたエントリーにはトレースがありません: もう一方のプラグインはこれらの詳細を記録していませんでした。"
+
+msgid "Imported from %s"
+msgstr "%s からインポート"
+
+msgid "In Amazon SNS, subscribe the URL (protocol HTTPS) to the topic that receives the Delivery, Bounce and Complaint notifications of Amazon SES. Mailspur confirms the subscription automatically."
+msgstr "Amazon SNS で、Amazon SES の Delivery、Bounce、Complaint 通知を受け取るトピックに URL（プロトコル HTTPS）をサブスクライブしてください。Mailspur がサブスクリプションを自動的に確認します。"
+
+msgid "In Brevo, open Transactional → Settings → Webhook, add the URL and select Delivered, Hard bounce, Soft bounce, Invalid email and Complaint."
+msgstr "Brevo で Transactional → Settings → Webhook を開き、URL を追加して Delivered、Hard bounce、Soft bounce、Invalid email、Complaint を選択してください。"
+
+msgid "In Mailgun, open Sending → Webhooks, add the URL for Delivered, Permanent failure, Temporary failure and Spam complaints, and paste the HTTP webhook signing key below."
+msgstr "Mailgun で Sending → Webhooks を開き、Delivered、Permanent failure、Temporary failure、Spam complaints の URL を追加して、HTTP webhook signing key を下に貼り付けてください。"
+
+msgid "In Postmark, open your server → Webhooks → Add webhook, paste the URL and select Delivery, Bounce and Spam complaint."
+msgstr "Postmark でサーバー → Webhooks → Add webhook を開き、URL を貼り付けて Delivery、Bounce、Spam complaint を選択してください。"
+
+msgid "In the Microsoft 365 admin center, open the user → Mail → Manage email apps and enable \"Authenticated SMTP\"."
+msgstr "Microsoft 365 管理センターでユーザー → メール → メールアプリの管理を開き、「認証済み SMTP」を有効にしてください。"
+
+msgid "Inboxes show roughly the first 40–80 characters; the rest is cut off, on phones even earlier."
+msgstr "受信トレイに表示されるのは最初の約40～80文字で、残りは省略されます。スマートフォンではさらに短くなります。"
+
+msgid "Include content"
+msgstr "本文を含める"
+
+msgid "Information"
+msgstr "情報"
+
+msgid "Install an SMTP plugin and send through a real mailbox or a mail service of your domain."
+msgstr "SMTP プラグインをインストールし、自分のドメインの実在のメールボックスまたはメールサービス経由で送信してください。"
+
+msgid "Invalid date."
+msgstr "無効な日付です。"
+
+msgid "Invalid email address"
+msgstr "無効なメールアドレス"
+
+msgid "Invalid email address: %s"
+msgstr "無効なメールアドレス: %s"
+
+msgid "Invalid sender address: %1$s"
+msgstr "無効な送信元アドレス: %1$s"
+
+msgid "Irregular"
+msgstr "不定期"
+
+msgid "Is Mailspur helping you?"
+msgstr "Mailspur はお役に立っていますか？"
+
+msgid "Is an email missing?"
+msgstr "届いていないメールがありますか？"
+
+msgid "Is everything running?"
+msgstr "すべて正常に動いていますか？"
+
+msgid "JSON"
+msgstr "JSON"
+
+msgid "Keep at most"
+msgstr "最大保存件数"
+
+msgid "Keep for"
+msgstr "保存期間"
+
+msgid "Keep this URL private: it contains a secret key of this site. Save the settings before you test the webhook."
+msgstr "この URL は公開しないでください。このサイトの秘密鍵が含まれています。Webhook をテストする前に設定を保存してください。"
+
+msgid "Kept: %s"
+msgstr "保存: %s"
+
+msgid "Key figures"
+msgstr "主な指標"
+
+msgid "Last 30 days"
+msgstr "過去30日間"
+
+msgid "Last email before the change"
+msgstr "変更前の最後のメール"
+
+msgid "Last failure"
+msgstr "最後の失敗"
+
+msgid "Last page"
+msgstr "最後のページ"
+
+msgid "Last sent"
+msgstr "最終送信"
+
+msgid "Leave a review"
+msgstr "レビューを書く"
+
+msgid "Light"
+msgstr "ライト"
+
+msgid "Link text shows %1$s but leads to %2$s"
+msgstr "リンクテキストは %1$s ですが、リンク先は %2$s です"
+
+msgid "Link to a development address: %1$s"
+msgstr "開発用アドレスへのリンク: %1$s"
+
+msgid "Link to a page that does not exist on your site: %1$s"
+msgstr "サイトに存在しないページへのリンク: %1$s"
+
+msgid "Link to the full address directly. For click tracking, use UTM parameters on your own domain instead."
+msgstr "完全なアドレスに直接リンクしてください。クリックの計測には、代わりに自分のドメインで UTM パラメーターを使用してください。"
+
+msgid "Link via a URL shortener: %1$s"
+msgstr "短縮 URL 経由のリンク: %1$s"
+
+msgid "Links and images starting with \"/\" only work on the website. In a mail client there is no website address to complete them, so images stay empty and links lead nowhere."
+msgstr "\"/\" で始まるリンクや画像はウェブサイト上でしか機能しません。メールソフトには補完するためのウェブサイトのアドレスがないため、画像は空のままになり、リンクはどこにもつながりません。"
+
+msgid "Links to another copy of the site: %1$s (this site: %2$s)"
+msgstr "サイトの別のコピーへのリンク: %1$s（このサイト: %2$s）"
+
+msgid "Links whose visible address differs from the real target look like phishing. Spam filters penalize them and some mail clients warn the reader."
+msgstr "表示されているアドレスと実際のリンク先が異なるリンクは、フィッシングのように見えます。迷惑メールフィルターはこれを減点し、読者に警告するメールソフトもあります。"
+
+msgid "Load remote content"
+msgstr "外部コンテンツを読み込む"
+
+msgid "Loading…"
+msgstr "読み込み中…"
+
+msgid "Log"
+msgstr "ログ"
+
+msgid "Log entries %s"
+msgstr "ログエントリー %s"
+
+msgid "Log entry not found."
+msgstr "ログエントリーが見つかりません。"
+
+msgid "Log only – do not send any email"
+msgstr "記録のみ - メールは一切送信しない"
+
+msgid "Log size"
+msgstr "ログのサイズ"
+
+msgid "Logged emails"
+msgstr "記録されたメール"
+
+msgid "Logged emails can contain personal data. Grant access as narrowly as possible. Settings always require administrator rights."
+msgstr "記録されたメールには個人データが含まれる場合があります。アクセス権はできるだけ限定して付与してください。設定には常に管理者権限が必要です。"
+
+msgid "Login and recipients were accepted, but the email itself was refused – typically spam filtering, a sending limit or a policy of the provider (reply code 554)."
+msgstr "ログインと受信者は受け付けられましたが、メール自体が拒否されました。典型的には迷惑メールフィルター、送信上限、プロバイダーのポリシーによるものです（応答コード 554）。"
+
+msgid "Logs outgoing emails, maps the types of email your site sends and alerts you when one stops. Safe preview, delivery diagnostics, statistics."
+msgstr "送信メールを記録し、サイトが送信するメールの種類を把握して、止まったものがあればお知らせします。安全なプレビュー、配信診断、統計。"
+
+msgid "Look for an option to switch it off or to change its recipient in the email settings of %s – or ignore the type here."
+msgstr "%s のメール設定で、無効にするか受信者を変更するオプションを探してください。またはここでこの種類を無視してください。"
+
+msgid "Look for the server reply in the error message; it usually names the reason."
+msgstr "エラーメッセージ内のサーバーの応答を確認してください。通常、理由が示されています。"
+
+msgid "Look for unexpected mass sending (spam form submissions, loops) in the log."
+msgstr "ログで想定外の大量送信（スパムのフォーム送信、ループ）がないか確認してください。"
+
+msgid "Looking it up …"
+msgstr "確認しています…"
+
+msgid "Lucas Wille"
+msgstr "Lucas Wille"
+
+msgid "Mail Log"
+msgstr "メールログ"
+
+msgid "Mail Log sections"
+msgstr "メールログのセクション"
+
+msgid "Mail servers for replies and bounces are set up."
+msgstr "返信とバウンス用のメールサーバーが設定されています。"
+
+msgid "Mailbox providers can verify that your site may send emails for this domain. The full sender check also looks at DKIM."
+msgstr "メールボックスプロバイダーは、あなたのサイトがこのドメインでメールを送信してよいかを検証できます。完全な送信元チェックでは DKIM も確認します。"
+
+msgid "Mailbox unknown or unavailable"
+msgstr "メールボックスが不明か利用不可"
+
+msgid "Mailer"
+msgstr "メーラー"
+
+msgid "Mailgun signs every webhook with this key (Sending → Webhooks → HTTP webhook signing key); reports without a valid signature are rejected."
+msgstr "Mailgun はすべての Webhook にこの鍵で署名します（Sending → Webhooks → HTTP webhook signing key）。有効な署名のないレポートは拒否されます。"
+
+msgid "Mailspur alerts"
+msgstr "Mailspur アラート"
+
+msgid "Mailspur checks the log for emails that could not be sent."
+msgstr "Mailspur は送信できなかったメールがないかログを確認します。"
+
+msgid "Mailspur found no order #%s in your shop."
+msgstr "ショップに注文 #%s が見つかりませんでした。"
+
+msgid "Mailspur has logged %s delivered emails on this site so far. If it saves you time, a short review on WordPress.org would mean a lot – it helps others find the plugin and keeps it free."
+msgstr "Mailspur はこのサイトでこれまでに %s 件の配信済みメールを記録しました。時間の節約に役立っているなら、WordPress.org に短いレビューをいただけると大変うれしいです。他の人がプラグインを見つけやすくなり、無料で提供し続ける助けになります。"
+
+msgid "Mailspur has no email for order #%s in the log."
+msgstr "注文 #%s のメールはログにありません。"
+
+msgid "Mailspur has no email to %s in the log."
+msgstr "%s 宛てのメールはログにありません。"
+
+msgid "Mailspur is made by %1$s. Enjoying it? %2$s"
+msgstr "Mailspur の作者は %1$s です。気に入っていただけましたか？ %2$s"
+
+msgid "Mailspur learns how often each kind of email is sent, e.g. order confirmations, and reports here when one stops."
+msgstr "Mailspur は注文確認などのメールの種類ごとに送信頻度を学習し、止まったものがあればここで報告します。"
+
+msgid "Mailspur learns the rhythm of every email type from the last 8 weeks – a daily order confirmation is overdue after 2 days, a weekly report after 2 weeks. The alert names the type, its sender and the plugins updated since its last email. Uses the channels above; ignored types never alert."
+msgstr "Mailspur は過去8週間からメールの種類ごとのリズムを学習します。毎日の注文確認なら2日、週次レポートなら2週間で遅延とみなします。アラートには種類、その送信元、最後のメール以降に更新されたプラグインが示されます。上の通知先を使用し、無視した種類ではアラートは送られません。"
+
+msgid "Mailspur sees that your site sent it, not the inbox itself. If it is not there, ask the recipient to check the spam folder."
+msgstr "Mailspur が確認できるのはサイトから送信されたことまでで、受信トレイの中までは分かりません。届いていない場合は、迷惑メールフォルダーを確認するよう受信者に依頼してください。"
+
+msgid "Mailspur stops these emails now; their email type is ignored."
+msgstr "Mailspur がこれらのメールを今後止めます。このメールの種類は無視されます。"
+
+msgid "Mailspur – Email Log"
+msgstr "Mailspur – メールログ"
+
+msgid "Mailspur: emails held"
+msgstr "Mailspur: メールを保留中"
+
+msgid "Mailspur: staging mode"
+msgstr "Mailspur: ステージングモード"
+
+msgid "Main source: %1$s (%2$s emails)."
+msgstr "主な送信元: %1$s（%2$s 件のメール）。"
+
+msgid "Make sure the From address in the mailer plugin matches the verified domain."
+msgstr "メーラープラグインの From アドレスが検証済みのドメインと一致しているか確認してください。"
+
+msgid "Make sure the email is sent with \"charset=UTF-8\", template files are saved as UTF-8 and the database tables use utf8mb4. Fix texts that were already stored broken."
+msgstr "メールが \"charset=UTF-8\" で送信されていること、テンプレートファイルが UTF-8 で保存されていること、データベースのテーブルが utf8mb4 を使っていることを確認してください。すでに壊れた状態で保存されたテキストは修正してください。"
+
+msgid "Make sure the encryption setting matches the port."
+msgstr "暗号化の設定がポートに合っているか確認してください。"
+
+msgid "Many emails could not be sent recently"
+msgstr "最近、多くのメールを送信できませんでした"
+
+msgid "Many exclamation marks in the subject (%1$s)"
+msgstr "件名に感嘆符が多い（%1$s）"
+
+msgid "Many mail clients block images until the reader allows them. Without alt text the reader only sees empty boxes; screen readers announce nothing useful."
+msgstr "多くのメールソフトは、読者が許可するまで画像をブロックします。alt テキストがないと読者には空の枠しか見えず、スクリーンリーダーも役に立つことを読み上げません。"
+
+msgid "Mark as resolved"
+msgstr "解決済みにする"
+
+msgid "Marked as spam"
+msgstr "迷惑メールとしてマーク"
+
+msgid "Marked as spam by the recipient"
+msgstr "受信者により迷惑メールとしてマーク"
+
+msgid "Mask password-reset, activation and access keys in logged links as well as passwords, API keys and card numbers sent in plain text"
+msgstr "記録されたリンク内のパスワードリセット・有効化・アクセス用キー、およびプレーンテキストで送信されたパスワード、API キー、カード番号をマスクする"
+
+msgid "Maybe later"
+msgstr "また後で"
+
+msgid "Maybe the email was never sent – check the order status and the settings of your shop’s emails."
+msgstr "メールが送信されなかった可能性があります。注文ステータスとショップのメール設定を確認してください。"
+
+msgid "Menu position"
+msgstr "メニューの位置"
+
+msgid "Message"
+msgstr "メッセージ"
+
+msgid "Method"
+msgstr "メソッド"
+
+msgid "Microsoft 365 / Exchange Online blocks SMTP login (basic authentication) for this mailbox or the whole organization."
+msgstr "Microsoft 365 / Exchange Online が、このメールボックスまたは組織全体で SMTP ログイン（基本認証）をブロックしています。"
+
+msgid "Minutes"
+msgstr "分"
+
+msgid "Monday"
+msgstr "月曜日"
+
+msgid "Monitor again"
+msgstr "再び監視"
+
+msgid "Monitoring alerts"
+msgstr "監視アラート"
+
+msgid "More"
+msgstr "多い"
+
+msgid "More actions"
+msgstr "その他の操作"
+
+msgid "More filters"
+msgstr "その他の絞り込み"
+
+msgid "Most common reason (%1$s of them): %2$s."
+msgstr "最も多い原因（%1$s 件）: %2$s。"
+
+msgid "Most servers accept 10–25 MB in total."
+msgstr "ほとんどのサーバーは合計 10～25 MB まで受け付けます。"
+
+msgid "Multiple DMARC records found. Receivers ignore DMARC in this case – keep only one."
+msgstr "DMARC レコードが複数見つかりました。この場合、受信側は DMARC を無視します。1つだけ残してください。"
+
+msgid "Multiple SPF records found. Receivers treat this as an error (PermError) – merge them into one record."
+msgstr "SPF レコードが複数見つかりました。受信側はこれをエラー（PermError）として扱います。1つのレコードにまとめてください。"
+
+msgid "Needs attention"
+msgstr "要対応"
+
+msgid "Neither a From header nor a sender was recorded. The mailer falls back to its default, often wordpress@yourdomain."
+msgstr "From ヘッダーも送信者も記録されていません。メーラーはデフォルト（多くの場合 wordpress@yourdomain）を使用します。"
+
+msgid "Never"
+msgstr "なし"
+
+msgid "New"
+msgstr "新規"
+
+msgid "New URL created. Update it at your email provider."
+msgstr "新しい URL を作成しました。メールサービス側で更新してください。"
+
+msgid "New email types"
+msgstr "新しいメールの種類"
+
+msgid "New emails are held until you release or discard them. Password reset emails still go out."
+msgstr "新しいメールは、あなたが解放または破棄するまで保留されます。パスワードリセットのメールは引き続き送信されます。"
+
+msgid "New sender"
+msgstr "新しい送信元"
+
+msgid "New sender writes to many addresses"
+msgstr "新しい送信元が多数のアドレスに送信"
+
+msgid "Next email"
+msgstr "次のメール"
+
+msgid "Next email (j)"
+msgstr "次のメール (j)"
+
+msgid "Next page"
+msgstr "次のページ"
+
+msgid "No DKIM key found under the common selectors."
+msgstr "一般的なセレクターでは DKIM 鍵が見つかりませんでした。"
+
+msgid "No DMARC record for the sender domain %s"
+msgstr "送信元ドメイン %s に DMARC レコードがありません"
+
+msgid "No DMARC record found. Large mailbox providers expect one, and without it anyone can spoof this domain unnoticed."
+msgstr "DMARC レコードが見つかりません。大手メールボックスプロバイダーは DMARC を求めており、これがないと誰でも気付かれずにこのドメインになりすませます。"
+
+msgid "No MX record: this domain cannot receive replies or bounces, and some receivers reject such senders."
+msgstr "MX レコードがありません: このドメインは返信やバウンスを受け取れず、そのような送信元を拒否する受信側もあります。"
+
+msgid "No SMTP transcript for this email."
+msgstr "このメールの SMTP トランスクリプトはありません。"
+
+msgid "No SPF and no DMARC record for the sender domain %s"
+msgstr "送信元ドメイン %s に SPF レコードも DMARC レコードもありません"
+
+msgid "No SPF record for the sender domain %s"
+msgstr "送信元ドメイン %s に SPF レコードがありません"
+
+msgid "No SPF record found. Receivers cannot tell which servers may send for this domain."
+msgstr "SPF レコードが見つかりません。受信側は、どのサーバーがこのドメインで送信してよいか判断できません。"
+
+msgid "No alerts sent yet."
+msgstr "まだアラートは送信されていません。"
+
+msgid "No connection to the SMTP server"
+msgstr "SMTP サーバーに接続できません"
+
+msgid "No email logged for %s hours"
+msgstr "%s 時間メールが記録されていません"
+
+msgid "No email was logged in the last %1$s hours, although this site sent emails in this time window on %2$s of the last %3$s days (on average %4$s)."
+msgstr "過去 %1$s 時間にメールが1件も記録されていません。このサイトは過去 %3$s 日のうち %2$s 日、この時間帯にメールを送信していました（平均 %4$s 件）。"
+
+msgid "No emails"
+msgstr "メールなし"
+
+msgid "No emails found."
+msgstr "メールが見つかりません。"
+
+msgid "No emails in this period."
+msgstr "この期間のメールはありません。"
+
+msgid "No emails logged for this order yet."
+msgstr "この注文のメールはまだ記録されていません。"
+
+msgid "No emails logged yet. Email types appear here as soon as your site sends emails."
+msgstr "まだメールは記録されていません。サイトがメールを送信すると、すぐにここにメールの種類が表示されます。"
+
+msgid "No emails match these filters."
+msgstr "この絞り込み条件に一致するメールはありません。"
+
+msgid "No emails sent"
+msgstr "メールが送信されていません"
+
+msgid "No emails to this user in the log."
+msgstr "このユーザー宛てのメールはログにありません。"
+
+msgid "No emails were logged in the last two weeks."
+msgstr "過去2週間にメールは記録されていません。"
+
+msgid "No limit"
+msgstr "無制限"
+
+msgid "No log of another mail logging plugin was found on this site."
+msgstr "このサイトには他のメールログプラグインのログが見つかりませんでした。"
+
+msgid "No log of this plugin was found on this site."
+msgstr "このサイトにはこのプラグインのログが見つかりませんでした。"
+
+msgid "No problem recipients."
+msgstr "問題のある宛先はありません。"
+
+msgid "No problems found in this email."
+msgstr "このメールに問題は見つかりませんでした。"
+
+msgid "No public sender domain found (the site address is not a domain name and the log has no senders yet)."
+msgstr "公開送信元ドメインが見つかりません（サイトのアドレスがドメイン名ではなく、ログにまだ送信元がありません）。"
+
+msgid "No public sender domain to check"
+msgstr "確認できる公開送信元ドメインがありません"
+
+msgid "No regularly sent email has stopped"
+msgstr "定期的に送信されているメールで止まったものはありません"
+
+msgid "No report address (rua) – you will not see who sends in your name."
+msgstr "レポートの送信先（rua）がありません。誰があなたの名前で送信しているか分かりません。"
+
+msgid "No sender address recorded"
+msgstr "送信元アドレスが記録されていません"
+
+msgid "No trace is available for this entry. It was logged before the trace existed or by a version without it."
+msgstr "このエントリーにはトレースがありません。トレース機能の導入前、またはトレース機能のないバージョンで記録されました。"
+
+msgid "No unusual email failures"
+msgstr "異常なメールの失敗はありません"
+
+msgid "No, on purpose. “%1$s” to %2$s was held %3$s and not sent. Reason: %4$s."
+msgstr "いいえ、意図的なものです。%2$s 宛ての「%1$s」は %3$s に保留され、送信されませんでした。理由: %4$s。"
+
+msgid "No. Every email that goes out regularly arrived on schedule."
+msgstr "いいえ。定期的に送信されるメールはすべて予定どおりに届いています。"
+
+msgid "No. “%1$s” to %2$s failed %3$s. Reason: %4$s."
+msgstr "いいえ。%2$s 宛ての「%1$s」は %3$s に失敗しました。理由: %4$s。"
+
+msgid "No. “%1$s” to %2$s left your site %3$s, but %4$s reports that the receiving server rejected it."
+msgstr "いいえ。%2$s 宛ての「%1$s」は %3$s にサイトから送信されましたが、%4$s によると受信側サーバーに拒否されました。"
+
+msgid "None"
+msgstr "なし"
+
+msgid "Normally sent at least every %1$s days, now overdue by %2$s."
+msgstr "通常は少なくとも %1$s 日ごとに送信されますが、現在 %2$s 遅れています。"
+
+msgid "Not all selectors could be checked in time."
+msgstr "時間内にすべてのセレクターを確認できませんでした。"
+
+msgid "Not recorded: another plugin had SMTP debugging switched on."
+msgstr "記録なし: 別のプラグインが SMTP デバッグを有効にしていました。"
+
+msgid "Not recorded: the SMTP transcript is switched off in the settings."
+msgstr "記録なし: 設定で SMTP トランスクリプトが無効になっています。"
+
+msgid "Not recorded: this email was not sent via SMTP."
+msgstr "記録なし: このメールは SMTP で送信されませんでした。"
+
+msgid "Not set up"
+msgstr "未設定"
+
+msgid "Not stored: transcripts are only kept for failed emails."
+msgstr "保存なし: トランスクリプトは失敗したメールの分のみ保存されます。"
+
+msgid "Not yet. “%1$s” to %2$s left your site %3$s, but %4$s reports a temporary problem."
+msgstr "まだです。%2$s 宛ての「%1$s」は %3$s にサイトから送信されましたが、%4$s から一時的な問題が報告されています。"
+
+msgid "Notes"
+msgstr "注意点"
+
+msgid "Notes in the latest email: %s"
+msgstr "最新メールの注意点: %s"
+
+msgid "Notes: %1$s. %2$s"
+msgstr "注意点: %1$s。%2$s"
+
+msgid "Notes: %s"
+msgstr "注意点: %s"
+
+msgid "Nothing else is expected today."
+msgstr "今日はほかに予定されているメールはありません。"
+
+msgid "Nothing failed in the last 7 days."
+msgstr "過去7日間に失敗したメールはありません。"
+
+msgid "Nothing to compare yet: no email goes out regularly enough for Mailspur to notice a gap."
+msgstr "まだ比較できません: Mailspur が途切れに気付けるほど定期的に送信されているメールがありません。"
+
+msgid "Number of failed emails"
+msgstr "失敗したメールの件数"
+
+msgid "Numbers are ignored, so “Order #123” and “Order #124” count together."
+msgstr "数字は無視されるため、「注文 #123」と「注文 #124」はまとめてカウントされます。"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Of the last %1$s emails sent while someone waited for the page, half took longer than %2$s s (average %3$s s)."
+msgstr "誰かがページを待っている間に送信された直近 %1$s 件のメールのうち、半数は %2$s 秒以上かかりました（平均 %3$s 秒）。"
+
+msgid "Off"
+msgstr "オフ"
+
+msgid "Off by default. Without it, \"Download .eml\" rebuilds the message from the logged (redacted) data. The raw source contains password-reset links and other secrets exactly as sent – only enable it when you need it and both boxes are checked."
+msgstr "デフォルトではオフです。オフの場合、「.eml をダウンロード」は記録された（マスク済みの）データからメッセージを再構築します。生のソースには、パスワードリセットリンクなどの機密情報が送信時のまま含まれます。必要な場合にのみ、両方のチェックボックスをオンにして有効にしてください。"
+
+msgid "Off – deliver emails normally"
+msgstr "オフ - メールを通常どおり配信"
+
+msgid "Once the cause is fixed, you can send the email again from the log."
+msgstr "原因を解消したら、ログからメールを再送信できます。"
+
+msgid "Once your reports show that legitimate mail passes, switch to p=quarantine (or p=reject)."
+msgstr "正当なメールが通過していることをレポートで確認できたら、p=quarantine（または p=reject）に切り替えてください。"
+
+msgid "One of the two emails was deleted or anonymised by the retention settings, so they can no longer be compared."
+msgstr "2通のメールのうち1通が保存期間の設定により削除または匿名化されたため、比較できなくなりました。"
+
+msgid "Only administrators can empty the log."
+msgstr "ログを空にできるのは管理者のみです。"
+
+msgid "Only administrators can send emails to other addresses."
+msgstr "他のアドレスにメールを送信できるのは管理者のみです。"
+
+msgid "Only alerts when the last 14 days show that emails are normally sent in this time window (on at least 10 of 14 days, including the same weekday), so quiet nights or weekends do not trigger it."
+msgstr "過去14日間で、この時間帯に通常メールが送信されている（14日中10日以上、同じ曜日を含む）場合にのみアラートを送ります。そのため、静かな夜間や週末では作動しません。"
+
+msgid "Only emails whose recipients are all problem recipients. Password reset emails always go out; held emails can still be sent from the log (\"Send now\")."
+msgstr "すべての受信者が問題のある宛先であるメールのみ。パスワードリセットのメールは常に送信されます。保留されたメールはログから送信できます（「今すぐ送信」）。"
+
+msgid "Only held emails can be released."
+msgstr "解放できるのは保留中のメールのみです。"
+
+msgid "Open distribution list: %1$s external recipients see each other's addresses"
+msgstr "公開された宛先リスト: 外部の受信者 %1$s 人が互いのアドレスを見られます"
+
+msgid "Open in log"
+msgstr "ログで開く"
+
+msgid "Open latest"
+msgstr "最新を開く"
+
+msgid "Open staging mode"
+msgstr "ステージングモードを開く"
+
+msgid "Open the email types"
+msgstr "メールの種類を開く"
+
+msgid "Open the emergency brake"
+msgstr "緊急ブレーキを開く"
+
+msgid "Open the log"
+msgstr "ログを開く"
+
+msgid "Open the log or debug view of your mailer plugin for the exact error."
+msgstr "正確なエラーは、メーラープラグインのログまたはデバッグ表示で確認してください。"
+
+msgid "Open the mail log"
+msgstr "メールログを開く"
+
+msgid "Open the sender check"
+msgstr "送信元チェックを開く"
+
+msgid "Optional and off by default. When enabled, Mailspur checks the log regularly and notifies you about failure spikes, unusual silence or stopped email types. Alerts go only to the addresses and the webhook you enter here; they contain the site name, the alert text (for a stopped email type: its sender and subject pattern) and a link to the log – never email contents or recipients."
+msgstr "任意で、デフォルトではオフです。有効にすると、Mailspur は定期的にログを確認し、失敗の急増、異常な無送信、止まったメールの種類を通知します。アラートはここで入力したアドレスと Webhook にのみ送られ、サイト名、アラートの文面（止まったメールの種類の場合はその送信元と件名パターン）、ログへのリンクを含みます。メールの本文や受信者は一切含みません。"
+
+msgid "Optional, https only. Slack and Discord webhook URLs receive a chat message, any other URL a JSON POST request. The request is made by your server to exactly this URL – no other service is involved."
+msgstr "任意、https のみ。Slack と Discord の Webhook URL にはチャットメッセージが、それ以外の URL には JSON の POST リクエストが送られます。リクエストはサーバーからこの URL に直接送信され、他のサービスは関与しません。"
+
+msgid "Or add the address as an alias / \"send as\" permission at your mail provider."
+msgstr "または、メールサービスでそのアドレスをエイリアスや「代理送信」の権限として追加してください。"
+
+msgid "Order #%s"
+msgstr "注文 #%s"
+
+msgid "Order data"
+msgstr "注文データ"
+
+msgid "Origin"
+msgstr "発生元"
+
+msgid "Original Bcc"
+msgstr "元の Bcc"
+
+msgid "Original Cc"
+msgstr "元の Cc"
+
+msgid "Original recipients"
+msgstr "元の受信者"
+
+msgid "Other emails"
+msgstr "その他のメール"
+
+msgid "Other recipients (e.g. guests)"
+msgstr "その他の受信者（例: ゲスト）"
+
+msgid "Overview"
+msgstr "概要"
+
+msgid "Own top-level menu item"
+msgstr "独立したトップレベルのメニュー項目"
+
+msgid "PHP extension openssl is missing"
+msgstr "PHP 拡張機能 openssl がありません"
+
+msgid "PHPMailer ready (phpmailer_init)"
+msgstr "PHPMailer 準備完了 (phpmailer_init)"
+
+msgid "Pagination"
+msgstr "ページ送り"
+
+msgid "Password sent in plain text"
+msgstr "パスワードがプレーンテキストで送信されています"
+
+msgid "Path"
+msgstr "パス"
+
+msgid "Payment card number in plain text: %1$s"
+msgstr "プレーンテキストの支払いカード番号: %1$s"
+
+msgid "Per page"
+msgstr "1ページの表示件数"
+
+msgid "Period"
+msgstr "期間"
+
+msgid "Personal data"
+msgstr "個人データ"
+
+msgid "Phone"
+msgstr "スマートフォン"
+
+msgid "Phone number"
+msgstr "電話番号"
+
+msgid "Phone width (375 px). If you can scroll sideways, the email is wider than most phone screens."
+msgstr "スマートフォンの幅（375 px）。横にスクロールできる場合、メールはほとんどのスマートフォンの画面より幅が広いことになります。"
+
+msgid "Plain text"
+msgstr "プレーンテキスト"
+
+msgid "Please enter valid email addresses."
+msgstr "有効なメールアドレスを入力してください。"
+
+msgid "Plugin"
+msgstr "プラグイン"
+
+msgid "Plugin or theme that sent the email."
+msgstr "メールを送信したプラグインまたはテーマ。"
+
+msgid "Point out problems that keep emails from arriving or displaying correctly"
+msgstr "メールが正しく届かない、または正しく表示されない原因となる問題を指摘する"
+
+msgid "Port"
+msgstr "ポート"
+
+msgid "Postal address"
+msgstr "住所"
+
+msgid "Postmark, Mailgun, Brevo or Amazon SES can report to this site whether an email was delivered, bounced or marked as spam. The status is shown on the logged email, and hard bounces count for the problem recipients. To match the reports, Mailspur adds a reference header to outgoing emails."
+msgstr "Postmark、Mailgun、Brevo、Amazon SES は、メールが配信されたか、バウンスしたか、迷惑メールとしてマークされたかをこのサイトに報告できます。ステータスは記録されたメールに表示され、ハードバウンスは問題のある宛先に数えられます。レポートを照合するため、Mailspur は送信メールに参照用ヘッダーを追加します。"
+
+msgid "Preparation"
+msgstr "準備"
+
+msgid "Preview"
+msgstr "プレビュー"
+
+msgid "Previews"
+msgstr "プレビュー"
+
+msgid "Previous email"
+msgstr "前のメール"
+
+msgid "Previous email (k)"
+msgstr "前のメール (k)"
+
+msgid "Previous page"
+msgstr "前のページ"
+
+msgid "Print"
+msgstr "印刷"
+
+msgid "Privacy"
+msgstr "プライバシー"
+
+msgid "Privacy & security"
+msgstr "プライバシーとセキュリティ"
+
+msgid "Probably yes: %s email type has stopped."
+msgid_plural "Probably yes: %s email types have stopped."
+msgstr[0] "おそらくはい: %s 種類のメールが止まっています。"
+
+msgid "Probe emails are only sent to an administrator."
+msgstr "テスト送信のメールは管理者にのみ送られます。"
+
+msgid "Problem"
+msgstr "問題"
+
+msgid "Problem recipients"
+msgstr "問題のある宛先"
+
+msgid "Protects your domain when far more emails leave than usual, e.g. because spam bots abuse a contact form. Alerts use the channels of the monitoring alerts; password reset emails are never held."
+msgstr "スパムボットがお問い合わせフォームを悪用するなどして、通常よりはるかに多くのメールが送信されたときにドメインを守ります。警告には監視アラートのチャンネルを使います。パスワードリセットのメールは保留されません。"
+
+msgid "Provider status"
+msgstr "プロバイダーのステータス"
+
+msgid "Providers like %2$s publish a strict DMARC policy. An email \"from\" their domain that was sent by your web server fails that check and is rejected or lands in spam."
+msgstr "%2$s などのプロバイダーは厳格な DMARC ポリシーを公開しています。そのドメインを「送信元」とするメールをあなたのウェブサーバーから送ると、このチェックに失敗し、拒否されるか迷惑メールになります。"
+
+msgid "Put the important content into real text and use images only in addition to it."
+msgstr "重要な内容は実際のテキストで記述し、画像は補助的に使ってください。"
+
+msgid "Put the important information first and keep the subject under about 80 characters."
+msgstr "重要な情報を先頭に置き、件名は80文字程度以内に収めてください。"
+
+msgid "REST API"
+msgstr "REST API"
+
+msgid "REST route"
+msgstr "REST ルート"
+
+msgid "Rarely"
+msgstr "まれ"
+
+msgid "Rate Mailspur on WordPress.org"
+msgstr "WordPress.org で Mailspur を評価"
+
+msgid "Raw source"
+msgstr "生のソース"
+
+msgid "Reason"
+msgstr "理由"
+
+msgid "Rebuild from the log"
+msgstr "ログから再構築"
+
+msgid "Recipient"
+msgstr "受信者"
+
+msgid "Recipient domain cannot receive email: %1$s"
+msgstr "受信者のドメインはメールを受信できません: %1$s"
+
+msgid "Recipient domain does not accept email: %1$s"
+msgstr "受信者のドメインはメールを受け付けません: %1$s"
+
+msgid "Recipients"
+msgstr "受信者"
+
+msgid "Recommended. Otherwise anyone with log access could use a logged reset link or password to take over an account. Resending such an email sends the masked version."
+msgstr "推奨。無効にすると、ログにアクセスできる人が記録されたリセットリンクやパスワードを使ってアカウントを乗っ取れる可能性があります。このようなメールを再送信すると、マスクされた版が送信されます。"
+
+msgid "Record for every email"
+msgstr "すべてのメールで記録"
+
+msgid "Record for failed emails only"
+msgstr "失敗したメールのみ記録"
+
+msgid "Records the conversation with the SMTP server (only when emails are sent via SMTP). Login data and the message content are never recorded. Skipped while another plugin has SMTP debugging switched on."
+msgstr "SMTP サーバーとのやり取りを記録します（SMTP で送信する場合のみ）。ログイン情報とメッセージ本文は記録されません。別のプラグインが SMTP デバッグを有効にしている間はスキップされます。"
+
+msgid "Recovery"
+msgstr "回復"
+
+msgid "Redact secrets"
+msgstr "機密情報をマスク"
+
+msgid "Redirect all emails to the addresses below"
+msgstr "すべてのメールを下のアドレスに転送"
+
+msgid "Redirect to"
+msgstr "転送先"
+
+msgid "Redirect to test addresses"
+msgstr "テスト用アドレスに転送"
+
+msgid "Redirected by staging mode."
+msgstr "ステージングモードにより転送されました。"
+
+msgid "Reduce the HTML: remove unused CSS, inline styles that repeat, comments and long tracking URLs. Images are not counted, only the HTML itself."
+msgstr "HTML を削減してください: 使われていない CSS、繰り返されるインラインスタイル、コメント、長いトラッキング URL を削除します。画像はカウントされず、HTML 自体のみが対象です。"
+
+msgid "Registered users"
+msgstr "登録ユーザー"
+
+msgid "Rejected by SPF, DKIM or DMARC"
+msgstr "SPF、DKIM、DMARC によって拒否されました"
+
+msgid "Relative links or images (%1$s), e.g. %2$s"
+msgstr "相対リンクまたは相対パスの画像（%1$s）、例: %2$s"
+
+msgid "Release held emails"
+msgstr "保留中のメールを解放"
+
+msgid "Released from staging (held entry #%s)."
+msgstr "ステージングから解放（保留エントリー #%s）。"
+
+msgid "Released from the emergency brake (held entry #%s)."
+msgstr "緊急ブレーキから解放（保留エントリー #%s）。"
+
+msgid "Remote content"
+msgstr "外部コンテンツ"
+
+msgid "Remote content is loaded."
+msgstr "外部コンテンツを読み込みました。"
+
+msgid "Remote images and fonts are blocked so senders cannot track when you open this entry."
+msgstr "このエントリーを開いたことを送信者に追跡されないよう、外部の画像とフォントはブロックされています。"
+
+msgid "Remove all entries imported from %s? The data in the other plugin is not affected."
+msgstr "%s からインポートしたエントリーをすべて削除しますか？ もう一方のプラグインのデータには影響しません。"
+
+msgid "Remove imported entries"
+msgstr "インポートしたエントリーを削除"
+
+msgid "Remove the card field from the notification of the form or plugin that sent this email – card data belongs to the payment provider only. Show at most the last four digits. Ask the recipient to delete the email."
+msgstr "このメールを送信したフォームまたはプラグインの通知からカード番号の項目を削除してください。カード情報は決済サービスだけが扱うべきものです。表示するのは最大でも下4桁にしてください。受信者にメールの削除を依頼してください。"
+
+msgid "Removed:"
+msgstr "削除:"
+
+msgid "Repeat alerts after"
+msgstr "アラートを繰り返す間隔"
+
+msgid "Replies cannot reach you: sent from %1$s without Reply-To"
+msgstr "返信が届きません: Reply-To なしで %1$s から送信されています"
+
+msgid "Reported by your email provider in the last 30 days; only emails it reported on count."
+msgstr "過去30日間にメールサービスが報告したもの。報告があったメールのみ数えます。"
+
+msgid "Request"
+msgstr "リクエスト"
+
+msgid "Request failed: %s"
+msgstr "リクエストに失敗しました: %s"
+
+msgid "Resend"
+msgstr "再送信"
+
+msgid "Resend the email from the log in a few minutes."
+msgstr "数分後にログからメールを再送信してください。"
+
+msgid "Resend the email from the log later."
+msgstr "後でログからメールを再送信してください。"
+
+msgid "Resend the email from the log once delivery works."
+msgstr "配信が機能するようになったら、ログからメールを再送信してください。"
+
+msgid "Resend the failed emails once the limit resets."
+msgstr "上限がリセットされたら、失敗したメールを再送信してください。"
+
+msgid "Resent from log"
+msgstr "ログから再送信"
+
+msgid "Reset filters"
+msgstr "絞り込みをリセット"
+
+msgid "Result"
+msgstr "結果"
+
+msgid "Result from the cache – use \"Check again\" after changing DNS records."
+msgstr "キャッシュからの結果です。DNS レコードを変更した後は「再確認」を使ってください。"
+
+msgid "Retention"
+msgstr "保存期間"
+
+msgid "Retention in the log"
+msgstr "ログでの保存期間"
+
+msgid "Retention of this email type saved. It applies with the next daily cleanup."
+msgstr "このメールの種類の保存期間を保存しました。次回の毎日のクリーンアップから適用されます。"
+
+msgid "Review held emails"
+msgstr "保留中のメールを確認"
+
+msgid "Review the notes of this email (links, sender, placeholders)."
+msgstr "このメールの注意点（リンク、送信元、プレースホルダー）を確認してください。"
+
+msgid "Revoke the key in the service's dashboard and create a new one. Then find out why it ended up in an email (debug or error reports, a form that echoes settings) and stop that."
+msgstr "サービスの管理画面でキーを無効化し、新しいキーを作成してください。そのうえで、なぜメールに含まれたのか（デバッグやエラーのレポート、設定を出力するフォームなど）を調べ、止めてください。"
+
+msgid "Revoked keys (empty p=): %s."
+msgstr "失効した鍵（空の p=）: %s。"
+
+msgid "Rhythm"
+msgstr "リズム"
+
+msgid "Run a search & replace of the old domain in the database and check hard-coded URLs in email templates and plugin settings."
+msgstr "データベースで古いドメインを検索・置換し、メールテンプレートとプラグイン設定にハードコードされた URL を確認してください。"
+
+msgid "Run the full sender check"
+msgstr "完全な送信元チェックを実行"
+
+msgid "SMTP AUTH is disabled in Microsoft 365"
+msgstr "Microsoft 365 で SMTP AUTH が無効になっています"
+
+msgid "SMTP host"
+msgstr "SMTP ホスト"
+
+msgid "SMTP login failed"
+msgstr "SMTP ログインに失敗しました"
+
+msgid "SMTP transcript"
+msgstr "SMTP トランスクリプト"
+
+msgid "SPF record allows every server in the world to send for this domain (+all)."
+msgstr "SPF レコードが世界中のすべてのサーバーにこのドメインでの送信を許可しています（+all）。"
+
+msgid "SPF record ends with ?all (neutral): it does not protect the domain against spoofing."
+msgstr "SPF レコードが ?all（neutral）で終わっています: なりすましからドメインを守れません。"
+
+msgid "SPF record found (redirect= to another policy)."
+msgstr "SPF レコードが見つかりました（redirect= で別のポリシーを参照）。"
+
+msgid "SPF record found. Other servers are marked as suspicious (~all, softfail)."
+msgstr "SPF レコードが見つかりました。他のサーバーは疑わしいものとして扱われます（~all、softfail）。"
+
+msgid "SPF record found. Other servers are rejected (-all)."
+msgstr "SPF レコードが見つかりました。他のサーバーは拒否されます（-all）。"
+
+msgid "SPF record has no \"all\" term, so mail from other servers is treated as neutral."
+msgstr "SPF レコードに \"all\" の指定がないため、他のサーバーからのメールは neutral として扱われます。"
+
+msgid "Saturday"
+msgstr "土曜日"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Saved – leave empty to keep it"
+msgstr "保存済み - 変更しない場合は空欄のまま"
+
+msgid "Scheduled for later today:"
+msgstr "今日このあと送信予定:"
+
+msgid "Search recipient or subject"
+msgstr "受信者または件名を検索"
+
+msgid "Search recipient or subject …"
+msgstr "受信者または件名を検索…"
+
+msgid "Search the email template, plugin settings and database for the old address (e.g. after migrating the site) and replace it with the live domain."
+msgstr "メールテンプレート、プラグイン設定、データベースで古いアドレスを探し（例: サイト移行後）、本番ドメインに置き換えてください。"
+
+msgid "See why"
+msgstr "理由を見る"
+
+msgid "Seen"
+msgstr "確認済み"
+
+msgid "Select all"
+msgstr "すべて選択"
+
+msgid "Selector \"%s\" has no key either."
+msgstr "セレクター「%s」にも鍵がありません。"
+
+msgid "Send"
+msgstr "送信"
+
+msgid "Send a link where the user sets a password instead – WordPress core's new-user email does exactly that. Look for an option such as \"Send password by email\" or \"Include password\" in the plugin that sent this email and turn it off."
+msgstr "代わりに、ユーザーがパスワードを設定するリンクを送ってください。WordPress コアの新規ユーザー向けメールはまさにそうしています。このメールを送信したプラグインで「パスワードをメールで送信」や「パスワードを含める」のようなオプションを探し、オフにしてください。"
+
+msgid "Send a message when the problem is resolved"
+msgstr "問題が解消したらメッセージを送る"
+
+msgid "Send a test email from the mailer plugin's settings."
+msgstr "メーラープラグインの設定からテストメールを送信してください。"
+
+msgid "Send a weekly email report to the addresses above"
+msgstr "上のアドレスに週次メールレポートを送信する"
+
+msgid "Send again"
+msgstr "再送信"
+
+msgid "Send alerts by email to"
+msgstr "アラートの送信先メールアドレス"
+
+msgid "Send all %s held emails to their original recipients now?"
+msgstr "保留中の %s 件のメールすべてを、今すぐ元の受信者に送信しますか？"
+
+msgid "Send large files as a download link instead of an attachment."
+msgstr "大きなファイルは添付ではなくダウンロードリンクとして送ってください。"
+
+msgid "Send latest to me"
+msgstr "最新を自分に送信"
+
+msgid "Send newsletters with a newsletter plugin or service that adds List-Unsubscribe and List-Unsubscribe-Post headers, and do not send to many people in one email via Bcc."
+msgstr "ニュースレターは、List-Unsubscribe と List-Unsubscribe-Post ヘッダーを付けるニュースレター用のプラグインやサービスで送信し、Bcc で多数の人に1通のメールを送らないでください。"
+
+msgid "Send now"
+msgstr "今すぐ送信"
+
+msgid "Send report now"
+msgstr "今すぐレポートを送信"
+
+msgid "Send such emails to each recipient individually or put the recipients in Bcc. For newsletters use a newsletter plugin that sends one email per recipient. If customers' addresses were disclosed, check with your data protection officer whether the incident has to be reported."
+msgstr "このようなメールは受信者ごとに個別に送るか、受信者を Bcc に入れてください。ニュースレターには受信者ごとに1通ずつ送るニュースレタープラグインを使ってください。顧客のアドレスが開示された場合は、このインシデントの報告が必要かどうかをデータ保護責任者に確認してください。"
+
+msgid "Send test alert"
+msgstr "テストアラートを送信"
+
+msgid "Send the email with the header \"Content-Type: text/html; charset=UTF-8\" or set the content type with the wp_mail_content_type filter. Many form and shop plugins have an \"HTML email\" option."
+msgstr "\"Content-Type: text/html; charset=UTF-8\" ヘッダーを付けてメールを送信するか、wp_mail_content_type フィルターでコンテンツタイプを設定してください。多くのフォームやショップのプラグインには「HTML メール」のオプションがあります。"
+
+msgid "Send the latest email of this type to %s?"
+msgstr "この種類の最新メールを %s に送信しますか？"
+
+msgid "Send this email again to %s?"
+msgstr "このメールを %s に再送信しますか？"
+
+msgid "Send this email to (up to 10 addresses, separated by commas):"
+msgstr "このメールの送信先（最大10件、カンマ区切り）:"
+
+msgid "Send this held email now to %s? Staging mode is bypassed for this one email."
+msgstr "この保留中のメールを今すぐ %s に送信しますか？ このメールに限りステージングモードを経由しません。"
+
+msgid "Send through a reputable SMTP service instead of the web server, especially on shared hosting."
+msgstr "特に共有ホスティングでは、ウェブサーバーではなく信頼できる SMTP サービス経由で送信してください。"
+
+msgid "Send to…"
+msgstr "送信先を指定…"
+
+msgid "Sender check (SPF, DKIM, DMARC)"
+msgstr "送信元チェック（SPF、DKIM、DMARC）"
+
+msgid "Sender domain %1$s differs from the site (%2$s)"
+msgstr "送信元ドメイン %1$s がサイト（%2$s）と異なります"
+
+msgid "Sender domain (SPF and DMARC)"
+msgstr "送信元ドメイン（SPF と DMARC）"
+
+msgid "Sender domain or address not verified"
+msgstr "送信元ドメインまたはアドレスが検証されていません"
+
+msgid "Sender of %s of the last 200 emails"
+msgstr "直近200件のメールのうち %s 件の送信元"
+
+msgid "Sending failed – see the log."
+msgstr "送信に失敗しました。ログを確認してください。"
+
+msgid "Sending failed – see the new log entry for details."
+msgstr "送信に失敗しました。詳細は新しいログエントリーを確認してください。"
+
+msgid "Sending in the background (a mailer plugin with a queue) lets the page finish without waiting."
+msgstr "バックグラウンドで送信する（キューのあるメーラープラグイン）と、ページは待たずに処理を終えられます。"
+
+msgid "Sending limit or quota reached"
+msgstr "送信上限または割り当てに達しました"
+
+msgid "Sending report …"
+msgstr "レポートを送信しています…"
+
+msgid "Sending test alert …"
+msgstr "テストアラートを送信しています…"
+
+msgid "Sending works again: no more failure spike."
+msgstr "送信が再び機能しています: 失敗の急増は解消しました。"
+
+msgid "Sending…"
+msgstr "送信中…"
+
+msgid "Sent"
+msgstr "送信済み"
+
+msgid "Sent as a free mail address: %1$s"
+msgstr "フリーメールのアドレスで送信: %1$s"
+
+msgid "Sent by"
+msgstr "送信元"
+
+msgid "Sent by WP-Cron."
+msgstr "WP-Cron が送信。"
+
+msgid "Sent by the cron event %1$s – it is overdue by %2$s while WP-Cron runs other events; it may fail with an error."
+msgstr "cron イベント %1$s が送信。WP-Cron が他のイベントを実行している間に %2$s 遅れています。エラーで失敗している可能性があります。"
+
+msgid "Sent by the cron event %1$s – it is scheduled (next run in %2$s) and WP-Cron runs, so the event no longer sends this email."
+msgstr "cron イベント %1$s が送信。予約済み（次回実行まで %2$s）で WP-Cron も動いているため、このイベントはもうこのメールを送信していません。"
+
+msgid "Sent by the cron event %s – this event is no longer scheduled."
+msgstr "cron イベント %s が送信。このイベントはもう予約されていません。"
+
+msgid "Sent by the cron event %s."
+msgstr "cron イベント %s が送信。"
+
+msgid "Sent repeatedly: %1$s more identical emails within %2$s minutes"
+msgstr "繰り返し送信: %2$s 分以内に同じメールがさらに %1$s 件"
+
+msgid "Sent to %s."
+msgstr "%s に送信。"
+
+msgid "Sent to the same address around the order date, but not linked to this order (for example logged before the link existed, or imported)."
+msgstr "注文日前後に同じアドレスへ送信されましたが、この注文とは関連付けられていません（例: 関連付けの導入前に記録された、またはインポートされたメール）。"
+
+msgid "Set a Reply-To address that someone reads, e.g. in WooCommerce → Settings → Emails or in the email settings of your form plugin. Or send from an address that can receive replies."
+msgstr "読まれている Reply-To アドレスを設定してください（例: WooCommerce → 設定 → メール、またはフォームプラグインのメール設定）。または、返信を受け取れるアドレスから送信してください。"
+
+msgid "Set a sender address on your domain in your SMTP plugin or via the wp_mail_from filter."
+msgstr "SMTP プラグインまたは wp_mail_from フィルターで、自分のドメインの送信元アドレスを設定してください。"
+
+msgid "Set a sender address on your real domain, e.g. in your SMTP plugin or via the wp_mail_from filter, and check the site address under Settings → General."
+msgstr "SMTP プラグインまたは wp_mail_from フィルターなどで実際のドメインの送信元アドレスを設定し、設定 → 一般でサイトのアドレスを確認してください。"
+
+msgid "Set a subject in the template or form settings of the sending plugin."
+msgstr "送信するプラグインのテンプレートまたはフォームの設定で件名を設定してください。"
+
+msgid "Set the From address in your SMTP plugin to the mailbox you log in with and enable \"force From address\"."
+msgstr "SMTP プラグインの From アドレスをログインに使うメールボックスに設定し、「From アドレスを強制」を有効にしてください。"
+
+msgid "Set up staging mode"
+msgstr "ステージングモードを設定"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Settings › Discussion"
+msgstr "設定 › ディスカッション"
+
+msgid "Several exclamation marks are typical of advertising spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "感嘆符が複数あるのは広告スパムに典型的です。迷惑メールフィルターがこれを減点し、配信が悪化する可能性があります。"
+
+msgid "Several of the latest emails of this type failed."
+msgstr "この種類の最新メールのうち複数が失敗しました。"
+
+msgid "Share of failed emails per day (per week for long periods)."
+msgstr "日ごとの失敗したメールの割合（長い期間の場合は週ごと）。"
+
+msgid "Shop managers and above"
+msgstr "ショップマネージャー以上"
+
+msgid "Shortened links hide where they lead. Spammers use them a lot, so spam filters may count them against the email, which can make delivery worse."
+msgstr "短縮リンクはリンク先を隠します。スパム送信者がよく使うため、迷惑メールフィルターがこれを減点し、配信が悪化する可能性があります。"
+
+msgid "Show all email types"
+msgstr "すべてのメールの種類を表示"
+
+msgid "Show all in Mail Log"
+msgstr "メールログですべて表示"
+
+msgid "Show as"
+msgstr "表示形式"
+
+msgid "Show data as table"
+msgstr "データを表で表示"
+
+msgid "Show email types"
+msgstr "メールの種類を表示"
+
+msgid "Show emails"
+msgstr "メールを表示"
+
+msgid "Show emails for %s in the log"
+msgstr "%s のメールをログで表示"
+
+msgid "Show failed emails"
+msgstr "失敗したメールを表示"
+
+msgid "Show held emails"
+msgstr "保留中のメールを表示"
+
+msgid "Show these emails in the log"
+msgstr "これらのメールをログで表示"
+
+msgid "Silence"
+msgstr "無送信"
+
+msgid "Simulated dark mode, using the dark-mode styles of the email itself. Every mail app handles dark mode a little differently."
+msgstr "メール自体のダークモード用スタイルを使ったダークモードのシミュレーションです。ダークモードの扱いはメールアプリごとに少しずつ異なります。"
+
+msgid "Simulation of apps that force dark mode by inverting the colours. Images keep their colours; real apps differ in detail."
+msgstr "色を反転してダークモードを強制するアプリのシミュレーションです。画像の色はそのままです。実際のアプリとは細部が異なります。"
+
+msgid "Since 2024 Gmail and Yahoo require a one-click unsubscribe (List-Unsubscribe header) for bulk mail. Without it newsletters are more likely to be rejected or filtered."
+msgstr "2024年以降、Gmail と Yahoo は一斉送信メールにワンクリックの配信停止（List-Unsubscribe ヘッダー）を求めています。これがないと、ニュースレターは拒否されたりフィルターされたりしやすくなります。"
+
+msgid "Single failures, e.g. because of a mistyped address, are normal."
+msgstr "入力ミスのあるアドレスなどによる単発の失敗は普通のことです。"
+
+msgid "Some emails could not be sent recently"
+msgstr "最近、一部のメールを送信できませんでした"
+
+msgid "Some lookups were skipped because DNS answered too slowly."
+msgstr "DNS の応答が遅すぎたため、一部の照会をスキップしました。"
+
+msgid "Sorry, you are not allowed to access this page."
+msgstr "このページにアクセスする権限がありません。"
+
+msgid "Sorry, you are not allowed to do that."
+msgstr "この操作を行う権限がありません。"
+
+msgid "Sorry, you are not allowed to export the mail log."
+msgstr "メールログをエクスポートする権限がありません。"
+
+msgid "Source"
+msgstr "送信元"
+
+msgid "Staging"
+msgstr "ステージング"
+
+msgid "Staging mode"
+msgstr "ステージングモード"
+
+msgid "Staging mode is active: all emails are redirected to %s."
+msgstr "ステージングモードが有効です: すべてのメールは %s に転送されます。"
+
+msgid "Staging mode is active: emails are logged but not delivered."
+msgstr "ステージングモードが有効です: メールはログに記録されますが、配信されません。"
+
+msgid "Staging mode is active: emails should be redirected, but no valid redirect address is set – all emails are held and not delivered."
+msgstr "ステージングモードが有効です: メールを転送する設定ですが、有効な転送先アドレスがありません。すべてのメールは保留され、配信されません。"
+
+msgid "Staging mode is off"
+msgstr "ステージングモードは無効です"
+
+msgid "Staging mode is on although this is a live site"
+msgstr "本番サイトなのにステージングモードが有効です"
+
+msgid "Staging mode is on for this staging site"
+msgstr "このステージングサイトではステージングモードが有効です"
+
+msgid "Staging mode is on: all emails go to your test addresses, not to the real recipients."
+msgstr "ステージングモードが有効です: すべてのメールは実際の受信者ではなくテスト用アドレスに送られます。"
+
+msgid "Staging mode is on: emails are logged but not sent."
+msgstr "ステージングモードが有効です: メールはログに記録されますが、送信されません。"
+
+msgid "Staging mode settings"
+msgstr "ステージングモードの設定"
+
+msgid "Start with p=none to receive reports, then tighten to quarantine or reject once SPF and DKIM pass."
+msgstr "まず p=none でレポートを受け取り、SPF と DKIM が通過するようになったら quarantine または reject に強化してください。"
+
+msgid "Statistics"
+msgstr "統計"
+
+msgid "Status"
+msgstr "ステータス"
+
+msgid "Still sorting %s older emails into types in the background. Reload the page in a minute."
+msgstr "バックグラウンドで %s 件の古いメールを種類に分類しています。1分後にページを再読み込みしてください。"
+
+msgid "Stop bundling (sends what waits now)"
+msgstr "まとめ送信を停止（待機中のメールを今すぐ送信）"
+
+msgid "Stop these emails"
+msgstr "これらのメールを止める"
+
+msgid "Stopped"
+msgstr "停止"
+
+msgid "Stopped by Mailspur."
+msgstr "Mailspur が停止しました。"
+
+msgid "Stopped email types"
+msgstr "止まったメールの種類"
+
+msgid "Store the exact raw MIME source of every email"
+msgstr "すべてのメールの正確な生の MIME ソースを保存"
+
+msgid "Subject"
+msgstr "件名"
+
+msgid "Subject mostly in capital letters"
+msgstr "件名のほとんどが大文字です"
+
+msgid "Subjects in capitals read like shouting and are common in spam. Spam filters may count this against the email, which can make delivery worse."
+msgstr "大文字の件名は叫んでいるように読め、スパムによく見られます。迷惑メールフィルターがこれを減点し、配信が悪化する可能性があります。"
+
+msgid "Subjects often contain names or order numbers."
+msgstr "件名には名前や注文番号が含まれることがよくあります。"
+
+msgid "Suggested TXT record for %s"
+msgstr "%s 用の推奨 TXT レコード"
+
+msgid "Sunday"
+msgstr "日曜日"
+
+msgid "Supported: %s."
+msgstr "対応形式: %s。"
+
+msgid "Switch it off under %1$s: “%2$s”."
+msgstr "%1$s で無効にできます: 「%2$s」。"
+
+msgid "Taken out of the daily digest and sent on its own."
+msgstr "日次ダイジェストから外し、個別に送信しました。"
+
+msgid "Temporary rejection – try again later"
+msgstr "一時的な拒否 - 後で再試行"
+
+msgid "Test"
+msgstr "テスト"
+
+msgid "Test alert"
+msgstr "テストアラート"
+
+msgid "Text changes"
+msgstr "テキストの変更"
+
+msgid "Text version derived from the HTML. Whether the email also had its own plain-text version was not recorded."
+msgstr "HTML から生成したテキスト版です。メール自体にプレーンテキスト版があったかどうかは記録されていません。"
+
+msgid "That is fine if your mail server is allowed to send for that domain. Otherwise SPF and DMARC fail and the email lands in spam."
+msgstr "メールサーバーがそのドメインで送信を許可されていれば問題ありません。そうでない場合、SPF と DMARC に失敗し、メールは迷惑メールになります。"
+
+msgid "That is right for a test copy, but on a live site customers receive no order confirmations, password resets or answers to their forms. Turn staging mode off if this is the live site."
+msgstr "テスト用コピーではそれで問題ありませんが、本番サイトでは顧客に注文確認、パスワードリセット、フォームへの返信が届きません。これが本番サイトならステージングモードを無効にしてください。"
+
+msgid "The API key was rejected"
+msgstr "API キーが拒否されました"
+
+msgid "The DNS lookup failed or timed out. Try the sender check again later."
+msgstr "DNS の照会に失敗したか、タイムアウトしました。後で送信元チェックをもう一度お試しください。"
+
+msgid "The HTML email contains images but hardly any text. Spam filters cannot read images and distrust such emails, which can make delivery worse. If the mail client blocks images, the reader sees an almost empty email."
+msgstr "この HTML メールには画像が含まれていますが、テキストがほとんどありません。迷惑メールフィルターは画像を読めないためこのようなメールを信用せず、配信が悪化する可能性があります。メールソフトが画像をブロックすると、読者にはほぼ空のメールが表示されます。"
+
+msgid "The SMTP account may only send with its own address (or verified aliases). WordPress or a plugin used a different From address."
+msgstr "SMTP アカウントは自身のアドレス（または検証済みのエイリアス）でのみ送信できます。WordPress またはプラグインが別の From アドレスを使用しました。"
+
+msgid "The SMTP server conversation was empty."
+msgstr "SMTP サーバーとのやり取りは空でした。"
+
+msgid "The SMTP server could not be reached at all: wrong host name or port, the server is down, or the web host blocks outgoing mail ports."
+msgstr "SMTP サーバーにまったく接続できませんでした: ホスト名やポートの誤り、サーバーの停止、またはホスティング会社がメール送信用ポートをブロックしています。"
+
+msgid "The SMTP server refuses to relay"
+msgstr "SMTP サーバーが中継を拒否しています"
+
+msgid "The SMTP server rejected the user name or password (reply code 535)."
+msgstr "SMTP サーバーがユーザー名またはパスワードを拒否しました（応答コード 535）。"
+
+msgid "The SMTP server requires a login or encryption"
+msgstr "SMTP サーバーがログインまたは暗号化を要求しています"
+
+msgid "The address seems invalid – check it for typos or ask for another one."
+msgstr "アドレスが無効なようです。入力ミスがないか確認するか、別のアドレスを尋ねてください。"
+
+msgid "The body contains HTML tags, but the email was sent as text/plain (the WordPress default). Recipients see the raw tags instead of formatted text."
+msgstr "本文に HTML タグが含まれていますが、メールは text/plain（WordPress のデフォルト）で送信されました。受信者には整形されたテキストではなく、タグがそのまま表示されます。"
+
+msgid "The connection or the transfer took too long. Usually a firewall silently drops the connection, or host and port are wrong."
+msgstr "接続または転送に時間がかかりすぎました。通常はファイアウォールが接続を黙って破棄しているか、ホストとポートが間違っています。"
+
+msgid "The default sender address has no public domain, or this server cannot look up DNS records."
+msgstr "デフォルトの送信元アドレスに公開ドメインがないか、このサーバーで DNS レコードを照会できません。"
+
+msgid "The domain has neither an MX nor an A record in DNS. Emails to it bounce. Usually the address is misspelled or the domain no longer exists."
+msgstr "このドメインには DNS に MX レコードも A レコードもありません。このドメイン宛てのメールはバウンスします。通常はアドレスの綴りが間違っているか、ドメインがもう存在しません。"
+
+msgid "The domain publishes a \"null MX\" record, which explicitly says that it receives no email. Every email to it bounces."
+msgstr "このドメインは、メールを受信しないことを明示する「null MX」レコードを公開しています。このドメイン宛てのメールはすべてバウンスします。"
+
+msgid "The email API answers slowly: check the region or endpoint configured in your mailer plugin."
+msgstr "メール API の応答が遅いです: メーラープラグインで設定しているリージョンまたはエンドポイントを確認してください。"
+
+msgid "The email comes from a no-reply address and has no Reply-To header. When a customer clicks \"Reply\", the answer goes to an address nobody reads, or it bounces."
+msgstr "このメールは no-reply アドレスから送信され、Reply-To ヘッダーがありません。顧客が「返信」をクリックすると、誰も読まないアドレスに届くか、バウンスします。"
+
+msgid "The email contains a password in readable form. Emails stay in inboxes, backups and forwarded threads for years – anyone who gets hold of one of them can log in. The email log stores it as well, unless \"Redact secrets\" is on (then the log keeps a masked copy, but the recipient still got the password)."
+msgstr "このメールには読める形でパスワードが含まれています。メールは受信トレイ、バックアップ、転送されたスレッドに何年も残り、そのいずれかを入手した人は誰でもログインできます。メールログにも保存されます（「機密情報をマスク」がオンの場合はマスクされたコピーが残りますが、受信者にはパスワードが届いています）。"
+
+msgid "The email contains an access key (e.g. for Stripe, GitHub, Slack, AWS, Google or SendGrid) or a private key. Whoever reads the email – now or years later in an inbox or backup – can use it. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "このメールにはアクセスキー（例: Stripe、GitHub、Slack、AWS、Google、SendGrid 用）または秘密鍵が含まれています。メールを読んだ人は、今でも、何年も後に受信トレイやバックアップからでも、それを使えます。「機密情報をマスク」がオンでない限り、メールログにも保存されます。"
+
+msgid "The email contains template variables that were not filled in. Recipients see them literally."
+msgstr "このメールには値が入っていないテンプレート変数が含まれています。受信者にはそのまま表示されます。"
+
+msgid "The email contains what looks like a full payment card number (it passes the check-digit test). Card numbers must never be sent by email (PCI DSS): inboxes keep them for years. The email log stores it as well, unless \"Redact secrets\" is on."
+msgstr "このメールには完全な支払いカード番号と思われるものが含まれています（チェックディジットの検証に合格）。カード番号は決してメールで送ってはいけません（PCI DSS）。受信トレイに何年も残るためです。「機密情報をマスク」がオンでない限り、メールログにも保存されます。"
+
+msgid "The email is too large"
+msgstr "メールが大きすぎます"
+
+msgid "The email links to WordPress files on a related host. This typically happens on a staging copy that still contains URLs of the live site – or the other way round."
+msgstr "このメールは関連する別ホスト上の WordPress ファイルにリンクしています。典型的には、本番サイトの URL が残ったままのステージング用コピーで起こります（またはその逆）。"
+
+msgid "The email links to an address on this site that answers \"page not found\" (404). This typically happens after a page or product was renamed or deleted: the template still points to the old address and every recipient lands on an error page."
+msgstr "このメールは、このサイト上で「ページが見つかりません」（404）を返すアドレスにリンクしています。典型的にはページや商品の名前変更・削除の後に起こります。テンプレートが古いアドレスを指したままで、すべての受信者がエラーページにたどり着きます。"
+
+msgid "The email types are being rebuilt from the log."
+msgstr "ログからメールの種類を再構築しています。"
+
+msgid "The email went to several people outside your domain in To or Cc. Every recipient sees all other addresses. With customers or members this discloses personal data to strangers – under the GDPR usually a data breach."
+msgstr "このメールは To または Cc で、ドメイン外の複数の人に送信されました。受信者全員が他の全員のアドレスを見られます。顧客や会員の場合、これは個人データを第三者に開示することになり、GDPR では通常データ侵害にあたります。"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was briefly held back by a safety check on our side and sent afterwards. Please also check your spam folder."
+msgstr "%3$s %4$s に %2$s 宛てに送信されたメール「%1$s」は、当方の安全確認により一時的に保留された後、送信されました。迷惑メールフォルダーもご確認ください。"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was held back by a safety check on our side and has not been sent. We will send it again."
+msgstr "%3$s %4$s に %2$s 宛てに送信予定だったメール「%1$s」は、当方の安全確認により保留され、送信されていません。改めて送信いたします。"
+
+msgid "The email “%1$s” to %2$s from %3$s at %4$s was not sent because sending emails was paused on our side at that time. We will send it again."
+msgstr "%3$s %4$s に %2$s 宛てに送信予定だったメール「%1$s」は、その時点で当方のメール送信が一時停止されていたため送信されませんでした。改めて送信いたします。"
+
+msgid "The email “%1$s” to %2$s on %3$s at %4$s could not be delivered. We will send it again."
+msgstr "%3$s %4$s に %2$s 宛てに送信されたメール「%1$s」は配信できませんでした。改めて送信いたします。"
+
+msgid "The email “%1$s” to %2$s was created on %3$s at %4$s, but we cannot confirm whether it was delivered. We will check this and send it again if needed."
+msgstr "%2$s 宛てのメール「%1$s」は %3$s %4$s に作成されましたが、配信されたかどうかを確認できません。確認のうえ、必要に応じて改めて送信いたします。"
+
+msgid "The email “%1$s” was sent to %2$s on %3$s at %4$s and accepted by the mail server. Please also check your spam folder."
+msgstr "メール「%1$s」は %3$s %4$s に %2$s 宛てに送信され、メールサーバーに受け付けられました。迷惑メールフォルダーもご確認ください。"
+
+msgid "The emergency brake holds outgoing emails until you release or discard them."
+msgstr "緊急ブレーキは、あなたが解放または破棄するまで送信メールを保留します。"
+
+msgid "The emergency brake is holding emails"
+msgstr "緊急ブレーキがメールを保留しています"
+
+msgid "The emergency brake is not holding any emails"
+msgstr "緊急ブレーキは何もメールを保留していません"
+
+msgid "The emergency brake is on: your site suddenly sent far more emails than usual."
+msgstr "緊急ブレーキが作動中です: サイトから突然、通常よりはるかに多くのメールが送信されました。"
+
+msgid "The emergency brake noticed an unusual number of emails within one hour. A contact form may be abused. Emails are still being sent."
+msgstr "緊急ブレーキが1時間以内の異常な数のメールを検知しました。お問い合わせフォームが悪用されている可能性があります。メールは引き続き送信されています。"
+
+msgid "The exact raw source is stored – \"Download .eml\" returns it unchanged (not redacted)."
+msgstr "正確な生のソースが保存されています。「.eml をダウンロード」はそれをそのまま返します（マスクなし）。"
+
+msgid "The last %s emails all failed. Sending from this site may be broken, e.g. because of a wrong SMTP login or a mail service that refuses the site. Customers may not receive order confirmations or password resets."
+msgstr "直近の %s 件のメールがすべて失敗しました。SMTP ログイン情報の誤りや、メールサービスがサイトを拒否しているなどの理由で、このサイトからの送信が機能していない可能性があります。顧客に注文確認やパスワードリセットが届かないおそれがあります。"
+
+msgid "The latest emails could not be sent"
+msgstr "最新のメールを送信できませんでした"
+
+msgid "The log keeps emails for %s day."
+msgid_plural "The log keeps emails for %s days."
+msgstr[0] "ログにはメールが %s 日間保存されます。"
+
+msgid "The log shows the reason for each failed email."
+msgstr "失敗した各メールの理由はログで確認できます。"
+
+msgid "The mail log requires JavaScript."
+msgstr "メールログには JavaScript が必要です。"
+
+msgid "The mail server did not answer in time"
+msgstr "メールサーバーが時間内に応答しませんでした"
+
+msgid "The mail server is temporarily unavailable"
+msgstr "メールサーバーが一時的に利用できません"
+
+msgid "The mail server rejected the size of the email (reply code 552). Attachments grow by about a third when encoded."
+msgstr "メールサーバーがメールのサイズを拒否しました（応答コード 552）。添付ファイルはエンコードによって約3分の1大きくなります。"
+
+msgid "The mail service only sends from domains or addresses you have verified there."
+msgstr "メールサービスは、そこで検証したドメインまたはアドレスからのみ送信します。"
+
+msgid "The mail service or mailbox refused further emails because a rate limit, daily quota or plan limit was hit."
+msgstr "送信レート制限、1日の割り当て、またはプランの上限に達したため、メールサービスまたはメールボックスがそれ以上のメールを拒否しました。"
+
+msgid "The mail service refused the request because the API key is wrong, expired, revoked or lacks the permission to send."
+msgstr "API キーが間違っている、期限切れ、無効化済み、または送信権限がないため、メールサービスがリクエストを拒否しました。"
+
+msgid "The mailer plugin reported a failure"
+msgstr "メーラープラグインが失敗を報告しました"
+
+msgid "The policy only applies to %s%% of the mail (pct)."
+msgstr "このポリシーはメールの %s%% にのみ適用されます（pct）。"
+
+msgid "The reason: %s."
+msgstr "理由: %s。"
+
+msgid "The receiving server asked to retry later (reply code 450/451/452): greylisting, a full mailbox or too many emails in a short time."
+msgstr "受信側サーバーが後で再試行するよう求めました（応答コード 450/451/452）: グレイリスト、メールボックスの容量超過、または短時間に多すぎるメール。"
+
+msgid "The receiving server could not confirm that your server may send for the sender domain."
+msgstr "受信側サーバーは、あなたのサーバーが送信元ドメインで送信してよいことを確認できませんでした。"
+
+msgid "The receiving server does not know this mailbox (reply code 550 / 5.1.1) – the address is misspelled or no longer exists."
+msgstr "受信側サーバーがこのメールボックスを認識していません（応答コード 550 / 5.1.1）。アドレスの綴りが間違っているか、もう存在しません。"
+
+msgid "The receiving server may still accept it on a later try."
+msgstr "受信側サーバーが再試行時に受け付ける可能性があります。"
+
+msgid "The receiving server rejected the email because of its content or because the sending server's IP address is on a blocklist."
+msgstr "受信側サーバーが、内容のため、または送信サーバーの IP アドレスがブロックリストに載っているため、メールを拒否しました。"
+
+msgid "The recipient address was rejected"
+msgstr "受信者のアドレスが拒否されました"
+
+msgid "The recipient domain accepts no email (null MX)"
+msgstr "受信者のドメインはメールを受け付けません（null MX）"
+
+msgid "The recipient domain has no mail server"
+msgstr "受信者のドメインにメールサーバーがありません"
+
+msgid "The recipient domain looks like a misspelling of a popular email provider. Such emails bounce – or reach a stranger who registered the typo domain."
+msgstr "受信者のドメインは、人気のメールサービスのドメインの入力ミスのようです。このようなメールはバウンスするか、そのミスのドメインを登録した第三者に届きます。"
+
+msgid "The same subject went to the same recipients several times in a short time. Typical causes are double order confirmations, a form submitted twice, a cron job running in parallel or a loop in a plugin."
+msgstr "同じ件名のメールが短時間に同じ受信者へ何度も送信されました。典型的な原因は、注文確認の重複、フォームの二重送信、並行して動く cron ジョブ、プラグイン内のループです。"
+
+msgid "The secure connection to the SMTP server could not be established: the certificate does not match the host name, has expired, or the server does not support the chosen encryption."
+msgstr "SMTP サーバーとの安全な接続を確立できませんでした: 証明書がホスト名と一致しない、期限切れである、またはサーバーが選択した暗号化に対応していません。"
+
+msgid "The sender address is not allowed"
+msgstr "送信元アドレスが許可されていません"
+
+msgid "The sender check found a problem with %s. Emails may land in spam."
+msgstr "送信元チェックで %s に問題が見つかりました。メールが迷惑メールになる可能性があります。"
+
+msgid "The sender domain %s has SPF and DMARC records"
+msgstr "送信元ドメイン %s には SPF レコードと DMARC レコードがあります"
+
+msgid "The sender domain could not be checked"
+msgstr "送信元ドメインを確認できませんでした"
+
+msgid "The sender has no public domain (e.g. wordpress@localhost). Most mail servers reject such emails or put them in spam."
+msgstr "送信元に公開ドメインがありません（例: wordpress@localhost）。ほとんどのメールサーバーはこのようなメールを拒否するか、迷惑メールにします。"
+
+msgid "The server cannot send email with PHP mail()"
+msgstr "サーバーが PHP の mail() でメールを送信できません"
+
+msgid "The server closed the connection (reply code 421), e.g. because of maintenance, overload or too many connections from your server."
+msgstr "サーバーが接続を切断しました（応答コード 421）。メンテナンス、過負荷、またはあなたのサーバーからの接続が多すぎることなどが原因です。"
+
+msgid "The server does not forward email for you, usually because you are not logged in or the sender address does not belong to the account."
+msgstr "サーバーがメールを中継しません。通常はログインしていないか、送信元アドレスがアカウントに属していないためです。"
+
+msgid "The server only accepts email after authentication or after switching to an encrypted connection (reply code 530)."
+msgstr "サーバーは、認証後または暗号化接続への切り替え後にのみメールを受け付けます（応答コード 530）。"
+
+msgid "The server rejected the content"
+msgstr "サーバーが内容を拒否しました"
+
+msgid "The server’s local mail program answers slowly: an SMTP or API mailer plugin hands emails to a provider instead."
+msgstr "サーバーのローカルのメールプログラムの応答が遅いです: SMTP または API のメーラープラグインなら、メールをプロバイダーに引き渡せます。"
+
+msgid "The start date must not be after the end date."
+msgstr "開始日を終了日より後にすることはできません。"
+
+msgid "The statistics require JavaScript."
+msgstr "統計には JavaScript が必要です。"
+
+msgid "The text is the same; only the layout changed. Compare the previews."
+msgstr "テキストは同じで、レイアウトだけが変更されています。プレビューを比較してください。"
+
+msgid "The user name is usually the full email address. Watch for spaces copied along with the password."
+msgstr "ユーザー名は通常、完全なメールアドレスです。パスワードと一緒にスペースをコピーしていないか注意してください。"
+
+msgid "The webhook URL was removed: only valid https URLs are allowed."
+msgstr "Webhook URL を削除しました: 有効な https の URL のみ使用できます。"
+
+msgid "The weekly report is enabled but has no recipient: enter an email address under “Send alerts by email to”."
+msgstr "週次レポートは有効ですが、受信者がいません。「アラートの送信先メールアドレス」にメールアドレスを入力してください。"
+
+msgid "These emails are sent again; their email type is monitored again."
+msgstr "これらのメールは再び送信されます。このメールの種類は再び監視されます。"
+
+msgid "These kinds of email have not been sent for longer than usual. A plugin update, a changed setting or a stuck scheduled task may be the reason."
+msgstr "これらの種類のメールが、通常より長い間送信されていません。プラグインの更新、設定の変更、止まった予約タスクなどが原因の可能性があります。"
+
+msgid "This email has its own plain-text version, but the log does not store it. Shown here: a text version derived from the HTML."
+msgstr "このメールには独自のプレーンテキスト版がありますが、ログには保存されていません。ここに表示しているのは HTML から生成したテキスト版です。"
+
+msgid "This email has no dark-mode styles of its own. Some apps show it unchanged, others recolour it – see Forced dark."
+msgstr "このメールには独自のダークモード用スタイルがありません。そのまま表示するアプリもあれば、色を変えるアプリもあります。「強制ダーク」を参照してください。"
+
+msgid "This email has no plain-text version – some clients and spam filters prefer one. Shown here: a text version derived from the HTML."
+msgstr "このメールにはプレーンテキスト版がありません。一部のメールソフトや迷惑メールフィルターはこれを好みます。ここに表示しているのは HTML から生成したテキスト版です。"
+
+msgid "This email type has no content change."
+msgstr "このメールの種類には内容の変更はありません。"
+
+msgid "This email type is ignored now: no status, no alerts."
+msgstr "このメールの種類は現在無視されています: ステータスもアラートもありません。"
+
+msgid "This email type is monitored again."
+msgstr "このメールの種類は再び監視されています。"
+
+msgid "This entry was anonymised; its content can no longer be sent."
+msgstr "このエントリーは匿名化されたため、本文を送信できません。"
+
+msgid "This import is already running in another tab."
+msgstr "このインポートはすでに別のタブで実行中です。"
+
+msgid "This is a test alert. Your alert channels work."
+msgstr "これはテストアラートです。アラートの通知先は正常に機能しています。"
+
+msgid "This production site sent a link to a local or test address. Recipients cannot open it."
+msgstr "この本番サイトが、ローカルまたはテスト用のアドレスへのリンクを送信しました。受信者は開けません。"
+
+msgid "This question requires JavaScript. You can search the log instead."
+msgstr "この機能には JavaScript が必要です。代わりにログを検索できます。"
+
+msgid "This site keeps a log of emails it sends (recipient, subject, content and delivery status) to verify delivery and troubleshoot problems. Log entries are deleted automatically after the configured retention period."
+msgstr "このサイトでは、配信の確認と問題の調査のために、送信したメールのログ（受信者、件名、本文、配信ステータス）を保存しています。ログエントリーは設定された保存期間を過ぎると自動的に削除されます。"
+
+msgid "This site runs as a %s environment, and staging mode keeps its emails from reaching real people."
+msgstr "このサイトは %s 環境として動作しており、ステージングモードによってメールが実在の人に届かないようになっています。"
+
+msgid "This site runs as a %s environment. Turn on staging mode so that no real customer gets an email from it."
+msgstr "このサイトは %s 環境として動作しています。実際の顧客にメールが届かないよう、ステージングモードを有効にしてください。"
+
+msgid "Threshold (emails per hour)"
+msgstr "しきい値（1時間あたりのメール数）"
+
+msgid "Thursday"
+msgstr "木曜日"
+
+msgid "Timeline"
+msgstr "タイムライン"
+
+msgid "To"
+msgstr "宛先"
+
+msgid "To date"
+msgstr "終了日"
+
+msgid "To keep them but get only one email a day, choose “Bundle into one daily email” in the … menu of the type."
+msgstr "受け取り続けつつ1日1通にまとめたい場合は、その種類の … メニューで「1日1回のまとめメールにする」を選んでください。"
+
+msgid "Top lists are based on the latest %s emails of this period."
+msgstr "ランキングは、この期間の最新 %s 件のメールに基づいています。"
+
+msgid "Top recipient domains"
+msgstr "受信者ドメインのランキング"
+
+msgid "Top recipients: %s"
+msgstr "主な受信者: %s"
+
+msgid "Top sources"
+msgstr "送信元のランキング"
+
+msgid "Top subjects"
+msgstr "件名のランキング"
+
+msgid "Total"
+msgstr "合計"
+
+msgid "Total: %s ms"
+msgstr "合計: %s ms"
+
+msgid "Trace"
+msgstr "トレース"
+
+msgid "Transcript copied."
+msgstr "トランスクリプトをコピーしました。"
+
+msgid "Transport"
+msgstr "トランスポート"
+
+msgid "Trigger"
+msgstr "送信をトリガー"
+
+msgid "Trigger a real password reset email for your own account? WordPress creates a new reset link for you, so earlier reset links stop working; your password stays the same. Only %s receives it."
+msgstr "自分のアカウントで実際のパスワードリセットメールを送信しますか？ WordPress が新しいリセットリンクを作成するため、以前のリセットリンクは使えなくなります。パスワードは変わりません。受け取るのは %s のみです。"
+
+msgid "Trigger the new user notifications for your own account (the notice to the administrator and the login details)? WordPress creates a new password link for you, so earlier links stop working. No user is created; only %s receives them."
+msgstr "自分のアカウントで新規ユーザー通知（管理者への通知とログイン情報）を送信しますか？ WordPress が新しいパスワードリンクを作成するため、以前のリンクは使えなくなります。ユーザーは作成されず、受け取るのは %s のみです。"
+
+msgid "Trigger to me"
+msgstr "自分宛てに送信"
+
+msgid "Triggering…"
+msgstr "送信中…"
+
+msgid "Tuesday"
+msgstr "火曜日"
+
+msgid "Type"
+msgstr "種類"
+
+msgid "Types are updated hourly and whenever you open this page. Only counters, subject patterns and content fingerprints are stored (no recipients, no contents), and they follow the retention period of the log."
+msgstr "種類は1時間ごとと、このページを開いたときに更新されます。保存されるのはカウンター、件名パターン、内容のフィンガープリントのみで（受信者や本文はなし）、ログの保存期間に従います。"
+
+msgid "Typo in recipient domain? %1$s → %2$s"
+msgstr "受信者のドメインの入力ミス？ %1$s → %2$s"
+
+msgid "Umlauts or quotes appear as garbled characters such as \"Ã¤\" or \"â€™\". UTF-8 text was read as a different character set somewhere on the way – in a template, an import or the database."
+msgstr "ウムラウトや引用符が \"Ã¤\" や \"â€™\" のような文字化けで表示されます。UTF-8 のテキストが途中のどこか（テンプレート、インポート、データベース）で別の文字コードとして読み込まれました。"
+
+msgid "Unclear. “%1$s” to %2$s was handed over for sending %3$s, but Mailspur got no result back."
+msgstr "不明です。%2$s 宛ての「%1$s」は %3$s に送信処理に渡されましたが、Mailspur に結果が返ってきませんでした。"
+
+msgid "Under Tools"
+msgstr "「ツール」の下"
+
+msgid "Uninstall"
+msgstr "アンインストール"
+
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Unknown probe."
+msgstr "不明なテスト送信です。"
+
+msgid "Unknown: no delivery result was reported (replaced wp_mail() function?)."
+msgstr "不明: 配信結果が報告されませんでした（wp_mail() 関数が置き換えられている？）。"
+
+msgid "Unreplaced placeholders: %1$s"
+msgstr "置換されていないプレースホルダー: %1$s"
+
+msgid "Until the log limit"
+msgstr "ログの上限まで"
+
+msgid "Up to 10 addresses, separated by commas. Cc and Bcc are removed and the subject shows the original recipients. Without a valid address, emails are held instead."
+msgstr "最大10件のアドレスをカンマ区切りで入力します。Cc と Bcc は削除され、件名に元の受信者が表示されます。有効なアドレスがない場合、メールは代わりに保留されます。"
+
+msgid "Up to 5 addresses, separated by commas. Alert emails appear in the log with the source “Mailspur alerts” and never trigger alerts themselves."
+msgstr "最大5件のアドレスをカンマ区切りで入力します。アラートのメールは送信元「Mailspur アラート」としてログに表示され、それ自体がアラートを発生させることはありません。"
+
+msgid "Update the link in the email template or in the settings of the plugin that sends this email, or add a redirect from the old address to the new page (e.g. with a redirection plugin)."
+msgstr "メールテンプレートまたはこのメールを送信するプラグインの設定でリンクを更新するか、古いアドレスから新しいページへのリダイレクトを追加してください（例: リダイレクト用プラグインで）。"
+
+msgid "Updated in between: %s"
+msgstr "その間の更新: %s"
+
+msgid "Updated since the last one:"
+msgstr "前回以降の更新:"
+
+msgid "Updated since then: %s."
+msgstr "それ以降の更新: %s。"
+
+msgid "Use TLS on port 587 or SSL on port 465."
+msgstr "ポート 587 で TLS、またはポート 465 で SSL を使用してください。"
+
+msgid "Use a descriptive link text (e.g. \"View order\") or show the address the link really leads to."
+msgstr "内容が分かるリンクテキスト（例: \"注文を表示\"）を使うか、リンクが実際に向かうアドレスを表示してください。"
+
+msgid "Use a sender address on your own domain and put the free address in Reply-To. Only if you really send through that provider's own SMTP server with its login is this fine."
+msgstr "自分のドメインの送信元アドレスを使い、フリーメールのアドレスは Reply-To に入れてください。そのプロバイダー自身の SMTP サーバーにそのログイン情報で実際に送信している場合に限り、問題ありません。"
+
+msgid "Use absolute URLs including https:// and the domain, e.g. with home_url() or wp_get_attachment_url() in the template."
+msgstr "テンプレートで home_url() や wp_get_attachment_url() などを使い、https:// とドメインを含む絶対 URL を使用してください。"
+
+msgid "Use exactly the host name the certificate was issued for (e.g. the provider's smtp.… host instead of an IP or your own domain)."
+msgstr "証明書が発行されたホスト名をそのまま使用してください（例: IP や自分のドメインではなく、プロバイダーの smtp.… ホスト）。"
+
+msgid "Use one exclamation mark at most."
+msgstr "感嘆符は多くても1つにしてください。"
+
+msgid "Use the arrow keys to move between cells."
+msgstr "矢印キーでセル間を移動できます。"
+
+msgid "Use the arrow keys to move between values, Enter to open them in the log."
+msgstr "矢印キーで値の間を移動し、Enter でログを開けます。"
+
+msgid "Use the mailbox address of the SMTP account as sender (From)."
+msgstr "SMTP アカウントのメールボックスのアドレスを送信元（From）として使用してください。"
+
+msgid "User"
+msgstr "ユーザー"
+
+msgid "User: %s"
+msgstr "ユーザー: %s"
+
+msgid "Username"
+msgstr "ユーザー名"
+
+msgid "Uses the saved settings – save your changes first."
+msgstr "保存済みの設定を使用します。先に変更を保存してください。"
+
+msgid "Verify the sender domain at your mail service (add its DNS records) or use an already verified sender address."
+msgstr "メールサービスで送信元ドメインを検証する（DNS レコードを追加する）か、検証済みの送信元アドレスを使用してください。"
+
+msgid "Very likely. “%1$s” went out to %2$s %3$s."
+msgstr "おそらく届いています。「%1$s」は %3$s に %2$s へ送信されました。"
+
+msgid "Very long subject (%1$s characters)"
+msgstr "件名が非常に長い（%1$s 文字）"
+
+msgid "View"
+msgstr "表示"
+
+msgid "View %s failed emails"
+msgstr "失敗したメール %s 件を表示"
+
+msgid "WP-Cron"
+msgstr "WP-Cron"
+
+msgid "WP-Cron has not run for %s (DISABLE_WP_CRON is set – check your server cron job)."
+msgstr "WP-Cron が %s 実行されていません（DISABLE_WP_CRON が設定されています。サーバーの cron ジョブを確認してください）。"
+
+msgid "WP-Cron has not run for %s – it only runs when the site gets visits, or it fails with an error."
+msgstr "WP-Cron が %s 実行されていません。サイトへのアクセスがあるときにしか実行されないか、エラーで失敗しています。"
+
+msgid "WP-Cron runs normally."
+msgstr "WP-Cron は正常に動作しています。"
+
+msgid "Waiting for the daily digest – not sent on its own."
+msgstr "日次ダイジェストを待機中 - 個別には送信されません。"
+
+msgid "Waits %s s for the mail server"
+msgstr "メールサーバーを %s 秒待っています"
+
+msgid "Warnings"
+msgstr "警告"
+
+msgid "Webhook URL"
+msgstr "Webhook URL"
+
+msgid "Webhook signing key"
+msgstr "Webhook 署名鍵"
+
+msgid "Webhook: %s"
+msgstr "Webhook: %s"
+
+msgid "Wednesday"
+msgstr "水曜日"
+
+msgid "Week"
+msgstr "週"
+
+msgid "Week of %s"
+msgstr "%s の週"
+
+msgid "Weekday"
+msgstr "曜日"
+
+msgid "Weekly"
+msgstr "毎週"
+
+msgid "Weekly email report"
+msgstr "週次メールレポート"
+
+msgid "Weekly report"
+msgstr "週次レポート"
+
+msgid "What to do"
+msgstr "対処方法"
+
+msgid "When emails are sent"
+msgstr "メールが送信される時間帯"
+
+msgid "When far more emails than usual are sent, the emergency brake warns you and can hold further emails."
+msgstr "通常よりはるかに多くのメールが送信されると、緊急ブレーキが警告し、以降のメールを保留できます。"
+
+msgid "When off, tracking pixels cannot tell when you open an entry. You can still load remote content for a single email. Scripts and forms are always blocked."
+msgstr "オフの場合、トラッキングピクセルはあなたがエントリーを開いたことを検知できません。個別のメールで外部コンテンツを読み込むことはできます。スクリプトとフォームは常にブロックされます。"
+
+msgid "Who can view the log"
+msgstr "ログを閲覧できるユーザー"
+
+msgid "Why did an email fail?"
+msgstr "メールが失敗した理由は？"
+
+msgid "With attachments"
+msgstr "添付ファイルあり"
+
+msgid "With notes"
+msgstr "注意点あり"
+
+msgid "Without these DNS records, mailbox providers cannot verify that your site may send emails for this domain, so emails are more likely to land in spam. The sender check suggests records you can add at your domain provider."
+msgstr "これらの DNS レコードがないと、メールボックスプロバイダーはあなたのサイトがこのドメインでメールを送信してよいかを検証できず、メールが迷惑メールになりやすくなります。送信元チェックでは、ドメイン管理会社で追加できるレコードを提案します。"
+
+msgid "WooCommerce email"
+msgstr "WooCommerce のメール"
+
+msgid "WooCommerce › Settings › Emails"
+msgstr "WooCommerce › 設定 › メール"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "WordPress core emails have no editor; they can be changed with filters."
+msgstr "WordPress コアのメールにはエディターがなく、フィルターで変更できます。"
+
+msgid "WordPress did not send an email – a plugin may have turned this email off."
+msgstr "WordPress はメールを送信しませんでした。プラグインがこのメールをオフにしている可能性があります。"
+
+msgid "WordPress has no setting for this email. Mailspur can stop the notice to administrators; the new user still receives their own email."
+msgstr "WordPress にはこのメールの設定がありません。Mailspur は管理者への通知を止められます。新規ユーザーには引き続き本人宛てのメールが届きます。"
+
+msgid "WordPress has no setting for this email. Mailspur can stop the success notices of automatic updates; notices about failed updates still arrive."
+msgstr "WordPress にはこのメールの設定がありません。Mailspur は自動更新の成功通知を止められます。更新失敗の通知は引き続き届きます。"
+
+msgid "WordPress sends via the PHP mail() function by default. On this server it is disabled or no mail program (sendmail) is installed – common on local setups, Docker and many managed hosts."
+msgstr "WordPress はデフォルトで PHP の mail() 関数を使って送信します。このサーバーではそれが無効になっているか、メールプログラム（sendmail）がインストールされていません。ローカル環境、Docker、多くのマネージドホスティングでよくあることです。"
+
+msgid "Write the subject in normal upper and lower case and emphasize at most a single word."
+msgstr "件名は通常の大文字・小文字で書き、強調するのは多くても1単語にしてください。"
+
+msgid "XML-RPC"
+msgstr "XML-RPC"
+
+msgid "Yes, but “%1$s” to %2$s (%3$s) was marked as spam by the recipient, says %4$s."
+msgstr "届いていますが、%4$s によると、%2$s 宛ての「%1$s」（%3$s）は受信者によって迷惑メールとしてマークされました。"
+
+msgid "Yes. “%1$s” went to %2$s %3$s and %4$s confirmed delivery."
+msgstr "はい。「%1$s」は %3$s に %2$s へ送信され、%4$s が配信を確認しました。"
+
+msgid "You can still send it from the log (“Send now”)."
+msgstr "ログからまだ送信できます（「今すぐ送信」）。"
+
+msgid "You receive this digest because these email types are bundled into one daily email in Mailspur. Each email stays in the log."
+msgstr "Mailspur でこれらのメールの種類を1日1回のまとめメールにしているため、このダイジェストが届いています。各メールはログに残ります。"
+
+msgid "You receive this email because monitoring alerts are enabled in the Mailspur settings of this site."
+msgstr "このサイトの Mailspur 設定で監視アラートが有効になっているため、このメールが届いています。"
+
+msgid "You receive this email because the weekly report is enabled in the Mailspur settings of this site. It contains counts and subject patterns only – no email contents or recipients."
+msgstr "このサイトの Mailspur 設定で週次レポートが有効になっているため、このメールが届いています。件数と件名パターンのみを含み、メールの本文や受信者は含みません。"
+
+msgid "Your DKIM selector (optional)"
+msgstr "DKIM セレクター（任意）"
+
+msgid "Your site sent no emails in the last 7 days."
+msgstr "過去7日間にサイトから送信されたメールはありません。"
+
+msgid "[%1$s] %2$s notifications: %3$s"
+msgstr "[%1$s] %2$s 件の通知: %3$s"
+
+msgid "[%1$s] 1 notification: %2$s"
+msgstr "[%1$s] 1件の通知: %2$s"
+
+msgid "[%1$s] Weekly email report %2$s"
+msgstr "[%1$s] 週次メールレポート %2$s"
+
+msgid "address"
+msgstr "アドレス"
+
+msgid "and %s more"
+msgstr "ほか %s 件"
+
+msgid "and %s more – see the log"
+msgstr "ほか %s 件 - ログを確認してください"
+
+msgid "another plugin stopped it"
+msgstr "別のプラグインが送信を止めました"
+
+msgid "code"
+msgstr "コード"
+
+msgid "date"
+msgstr "日付"
+
+msgid "days"
+msgstr "日"
+
+msgid "deleted after %s days"
+msgstr "%s 日後に削除"
+
+msgid "emails to this address failed several times before"
+msgstr "このアドレスへのメールは以前にも何度か失敗しています"
+
+msgid "entries"
+msgstr "件"
+
+msgid "failing"
+msgstr "失敗中"
+
+msgid "failure spikes"
+msgstr "失敗の急増"
+
+msgid "first seen %s"
+msgstr "初回確認 %s"
+
+msgid "from a new sender"
+msgstr "新しい送信元から"
+
+msgid "holding emails right now"
+msgstr "現在メールを保留中"
+
+msgid "https://github.com/lcswll/wordpress-mails"
+msgstr "https://github.com/lcswll/wordpress-mails"
+
+msgid "https://lucaswille.de/"
+msgstr "https://lucaswille.de/"
+
+msgid "kept until deleted manually"
+msgstr "手動で削除するまで保存"
+
+msgid "link"
+msgstr "リンク"
+
+msgid "minutes"
+msgstr "分"
+
+msgid "name"
+msgstr "名前"
+
+msgid "new this week"
+msgstr "今週の新規"
+
+msgid "no"
+msgstr "いいえ"
+
+msgid "none"
+msgstr "なし"
+
+msgid "none in %1$s – %2$s"
+msgstr "%1$s - %2$s はなし"
+
+msgid "number"
+msgstr "数値"
+
+msgid "of %s"
+msgstr "/ %s"
+
+msgid "often to administrators"
+msgstr "管理者宛てが多い"
+
+msgid "on %1$s at %2$s"
+msgstr "%1$s %2$s"
+
+msgid "same recipient"
+msgstr "同じ受信者"
+
+msgid "slow to send"
+msgstr "送信が遅い"
+
+msgid "staging mode is on"
+msgstr "ステージングモードが有効です"
+
+msgid "stopped"
+msgstr "停止"
+
+msgid "stopped email types"
+msgstr "止まったメールの種類"
+
+msgid "text"
+msgstr "テキスト"
+
+msgid "the emergency brake stopped a flood of emails"
+msgstr "緊急ブレーキが大量のメール送信を止めました"
+
+msgid "time"
+msgstr "時刻"
+
+msgid "today at %s"
+msgstr "今日 %s"
+
+msgid "triggered %s times"
+msgstr "%s 回発動"
+
+msgid "unchanged"
+msgstr "変化なし"
+
+msgid "unknown – the mailer gave no error message"
+msgstr "不明 - メーラーからエラーメッセージが返されませんでした"
+
+msgid "unusual silence"
+msgstr "異常な無送信"
+
+msgid "usually sent: %s"
+msgstr "通常の送信: %s"
+
+msgid "wp_mail() called"
+msgstr "wp_mail() 呼び出し"
+
+msgid "yes"
+msgstr "はい"
+
+msgid "yesterday at %s"
+msgstr "昨日 %s"
+
+msgid "your email provider"
+msgstr "メールサービス"
+
+msgid "“%1$s” (%2$s) at %3$s"
+msgstr "「%1$s」（%2$s）%3$s"
+
+msgid "“%1$s” (%2$s) is being sent again."
+msgstr "「%1$s」（%2$s）が再び送信されています。"
+
+msgid "“%1$s” (%2$s) usually goes out at least every %3$s days. The last one was sent %4$s ago."
+msgstr "「%1$s」（%2$s）は通常、少なくとも %3$s 日ごとに送信されます。最後の送信は %4$s 前です。"
+
+msgid "“%1$s” (%2$s) was last sent %3$s ago. Until then it was sent at least every %4$s days."
+msgstr "「%1$s」（%2$s）の最後の送信は %3$s 前です。それまでは少なくとも %4$s 日ごとに送信されていました。"
+
+msgid "“%1$s” (%2$s) – usually every %4$s, last one %3$s"
+msgstr "「%1$s」（%2$s）- 通常は %4$s ごと、最後は %3$s"
+
+msgid "“%1$s” (%2$s) – usually every day, last one %3$s"
+msgstr "「%1$s」（%2$s）- 通常は毎日、最後は %3$s"
+
+msgid "“%1$s” – %2$s – %3$s"
+msgstr "「%1$s」- %2$s - %3$s"
