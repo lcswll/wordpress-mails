@@ -19,7 +19,8 @@ import { root } from './lib/php.mjs';
 const { GIFEncoder, applyPalette, quantize } = gifenc;
 const out = path.join(root, '.wordpress-org');
 const shots = !process.argv.includes('--no-shots');
-const browser = await chromium.launch(process.env.CI ? {} : { channel: 'msedge' });
+// English UI of the browser itself (date placeholders), whatever the language of this computer.
+const browser = await chromium.launch({ ...(process.env.CI ? {} : { channel: 'msedge' }), args: ['--lang=en-US'] });
 
 // ------------------------------------------------------------------ icons + banners.
 // The icon is an animated GIF (wordpress.org accepts icon-128x128.gif / icon-256x256.gif, max. 1 MB): every frame is
@@ -99,7 +100,7 @@ async function pixels(page, size) {
 
 // --------------------------------------------------------------------- screenshots.
 if (shots) {
-	const port = 9420;
+	const port = Number(process.env.E2E_PORT || 9420);
 	const marker = path.join(root, '.cache', 'e2e-out', 'seeded');
 	fs.rmSync(marker, { force: true });
 	const server = spawn(process.execPath, [path.join(root, 'scripts', 'playground-server.mjs'), '--port', String(port)], { cwd: root, stdio: 'ignore' });
@@ -110,9 +111,15 @@ if (shots) {
 			await new Promise((r) => setTimeout(r, 500));
 		}
 
-		const page = await browser.newPage({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 });
+		const page = await browser.newPage({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1, locale: 'en-US' }); // English dates.
 		const base = `http://127.0.0.1:${port}/wp-admin/admin.php?page=mailspur-email-log`;
-		const hideNoise = () => page.addStyleTag({ content: '#wpfooter, .notice, .update-nag { display: none !important; }' });
+		const shot = async (n, what, height = 800) => {
+			await page.setViewportSize({ width: 1280, height });
+			await page.evaluate(() => document.activeElement?.blur());
+			await page.addStyleTag({ content: '#wpfooter, .notice, .update-nag { display: none !important; }' });
+			await page.screenshot({ path: path.join(out, `screenshot-${n}.png`) });
+			console.log(`✓ screenshot-${n}.png (${what})`);
+		};
 
 		// The XSS test entry is for the tests, not for the directory page.
 		await page.goto(base);
@@ -122,21 +129,49 @@ if (shots) {
 			const list = await (await fetch(`${c.restUrl}/mails?search=XSS`, { headers })).json();
 			await Promise.all(list.items.map((i) => fetch(`${c.restUrl}/mails/${i.id}`, { method: 'DELETE', headers })));
 		});
+		// 60 days of plausible shop traffic (tests/e2e/screenshot-seed.php, the same as the Live Preview), so the
+		// overview, statistics and email types are filled.
+		await page.goto(`http://127.0.0.1:${port}/wp-admin/?mailspur-e2e-seed=history`);
+
+		// The overview answers "Did my email arrive?" for an address from the log.
+		await page.goto(`${base}&tab=overview`);
+		await page.getByRole('searchbox', { name: 'Email address or order number' }).fill('lena51@example.com');
+		await page.getByRole('button', { name: 'Check' }).click();
+		await page.locator('#msa-arrived-answer .msa-text').first().waitFor();
+		await shot(1, 'overview');
+
 		await page.goto(base);
 		await page.locator('#mailspur-rows tr[data-id]').first().waitFor();
-		await hideNoise();
-		await page.screenshot({ path: path.join(out, 'screenshot-1.png') });
-		console.log('✓ screenshot-1.png (log)');
+		await shot(2, 'log');
 
 		await page.goto(`${base}&s=lena1%40`);
 		await page.locator('#mailspur-rows .mailspur-open').first().click();
 		await page.frameLocator('iframe.mailspur-frame').locator('h1').waitFor();
-		await page.evaluate(() => document.activeElement?.blur());
-		await hideNoise();
-		await page.screenshot({ path: path.join(out, 'screenshot-2.png') });
-		console.log('✓ screenshot-2.png (preview)');
+		await shot(3, 'preview');
 
-		// Trace of a mail sent by a real web request: the "Lost your password?" form of wp-login.php.
+		// The failed newsletter: explained error + notes.
+		await page.goto(`${base}&s=newsletter`);
+		await page.locator('#mailspur-rows .mailspur-open').first().click();
+		await page.locator('#mailspur-dialog [role="tab"][data-view="notes"]').click();
+		await page.waitForTimeout(500);
+		await shot(5, 'notes');
+
+		// Email types: a renewal that stopped after a plugin update, merged welcome names.
+		await page.goto(`${base}&tab=types`);
+		await page.locator('.mst-row').first().waitFor();
+		await shot(6, 'email types', 1000);
+
+		await page.goto(`${base}&tab=stats`);
+		await page.locator('.mailspur svg').first().waitFor();
+		await page.waitForTimeout(500);
+		await shot(7, 'statistics', 1100);
+
+		// Tall viewport instead of fullPage, so the admin menu background reaches the bottom.
+		await page.goto(`${base}&tab=settings`);
+		await shot(8, 'settings', 1100);
+
+		// Last, because Playground cannot deliver it (one more failure): trace of a mail sent by a real web
+		// request, the "Lost your password?" form of wp-login.php.
 		await page.goto(`http://127.0.0.1:${port}/wp-login.php?action=lostpassword`);
 		await page.locator('#user_login').fill('admin');
 		await page.locator('#wp-submit').click();
@@ -145,43 +180,7 @@ if (shots) {
 		await page.locator('#mailspur-rows .mailspur-open').first().click();
 		await page.locator('#mailspur-dialog [role="tab"][data-view="trace"]').click();
 		await page.locator('#mailspur-d-body').getByText(/ms/).first().waitFor();
-		await page.evaluate(() => document.activeElement?.blur());
-		await page.screenshot({ path: path.join(out, 'screenshot-3.png') });
-		console.log('✓ screenshot-3.png (trace)');
-
-		// The failed newsletter: explained error + notes.
-		await page.goto(`${base}&s=newsletter`);
-		await page.locator('#mailspur-rows .mailspur-open').first().click();
-		await page.locator('#mailspur-dialog [role="tab"][data-view="notes"]').click();
-		await page.waitForTimeout(500);
-		await page.evaluate(() => document.activeElement?.blur());
-		await page.screenshot({ path: path.join(out, 'screenshot-4.png') });
-		console.log('✓ screenshot-4.png (notes)');
-
-		// 30 days of plausible shop traffic (tests/e2e/screenshot-seed.php), only for this screenshot.
-		await page.goto(`http://127.0.0.1:${port}/wp-admin/?mailspur-e2e-seed=history`);
-		await page.setViewportSize({ width: 1280, height: 1100 });
-		await page.goto(`${base}&tab=stats`);
-		await page.locator('.mailspur svg').first().waitFor();
-		await page.waitForTimeout(500);
-		await hideNoise();
-		await page.screenshot({ path: path.join(out, 'screenshot-5.png') });
-		console.log('✓ screenshot-5.png (statistics)');
-
-		// Email types from the same history: a stopped renewal after a plugin update, merged welcome names.
-		await page.setViewportSize({ width: 1280, height: 1000 });
-		await page.goto(`${base}&tab=types`);
-		await page.locator('.mst-row').first().waitFor();
-		await hideNoise();
-		await page.screenshot({ path: path.join(out, 'screenshot-7.png') });
-		console.log('✓ screenshot-7.png (email types)');
-
-		// Tall viewport instead of fullPage, so the admin menu background reaches the bottom.
-		await page.setViewportSize({ width: 1280, height: 1100 });
-		await page.goto(`${base}&tab=settings`);
-		await hideNoise();
-		await page.screenshot({ path: path.join(out, 'screenshot-6.png') });
-		console.log('✓ screenshot-6.png (settings)');
+		await shot(4, 'trace');
 	} finally {
 		server.kill();
 	}

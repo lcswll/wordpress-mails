@@ -1,7 +1,7 @@
 <?php
 /**
  * Installs the must-use plugin behind scripts/wporg-assets.mjs: wp-admin/?mailspur-e2e-seed=history adds
- * 30 days of realistic history for the statistics screenshot. Only on demand, so the fixed counts of the
+ * 60 days of realistic history for the statistics screenshot. Only on demand, so the fixed counts of the
  * browser specs stay untouched.
  *
  * phpcs:disable WordPress.WP.AlternativeFunctions
