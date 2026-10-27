@@ -191,6 +191,9 @@ jobs:
       - name: Translations complete and generated files up to date
         run: node scripts/i18n.mjs --check
 
+      - name: Live Preview blueprint up to date (seeded from tests/e2e/seed.php + screenshot-seed.php)
+        run: node scripts/wporg-blueprint.mjs --check
+
       - name: Plugin Check PHPCS rules (pinned Plugin Check version)
         run: node scripts/plugin-check.mjs
 

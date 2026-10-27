@@ -252,13 +252,14 @@ Yes. Each site keeps its own log.
 
 == Screenshots ==
 
-1. The log: live search, status tabs, filters and a badge for emails with notes.
-2. Email preview in a sandboxed frame with remote content blocked.
-3. Trace: timeline, transport, origin of the wp_mail() call and request context.
-4. Notes and explained errors for a failed email.
-5. Statistics: emails over time, failure rate, heatmap and top lists.
-6. Settings: access, privacy, retention, staging mode and alerts.
-7. Email types: every kind of email the site sends, with volume, rhythm and status – here a renewal email that stopped after a plugin update.
+1. Overview: everyday questions answered in plain sentences – did my email arrive, is everything running, is an email missing, why did an email fail.
+2. The log: live search, status tabs, filters and a badge for emails with notes.
+3. Email preview in a sandboxed frame with remote content blocked.
+4. Trace: timeline, transport, origin of the wp_mail() call and request context.
+5. Notes and explained errors for a failed email.
+6. Email types: every kind of email the site sends, with volume, rhythm and status – here a renewal email that stopped after a plugin update.
+7. Statistics: emails over time, failure rate, heatmap and top lists.
+8. Settings: access, privacy, retention, staging mode and alerts.
 
 == Changelog ==
 

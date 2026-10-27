@@ -23,6 +23,7 @@ const steps = [
 	{ name: 'ESLint', run: [node, [path.join(root, 'node_modules', 'eslint', 'bin', 'eslint.js'), '--max-warnings=0', '.']] },
 	{ name: 'wordpress.org readiness', run: script('repo-checks.mjs') },
 	{ name: 'Translations', run: script('i18n.mjs', '--check') },
+	{ name: 'Live Preview blueprint', run: script('wporg-blueprint.mjs', '--check') },
 	{ name: 'Plugin Check (PHPCS rules)', run: script('plugin-check.mjs'), slow: true },
 	{ name: 'npm audit', run: ['npm', ['audit', '--audit-level=moderate']], shell: process.platform === 'win32', slow: true },
 	{ name: 'composer audit', run: script('php.mjs', '--composer', 'audit', '--locked'), slow: true },
