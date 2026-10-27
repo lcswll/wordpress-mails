@@ -301,7 +301,7 @@ final class Logger {
 		 * (shown as "Source" in the log). Arguments are not collected and the depth is capped,
 		 * so it is cheap and never exposes data; only the file paths of the frames are inspected.
 		 */
-		foreach ( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 30 ) as $frame ) {
+		foreach ( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 30 ) as $frame ) { // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- not debug code: tells which plugin sent the email (file paths and function names only).
 			if ( empty( $frame['file'] ) ) {
 				continue;
 			}

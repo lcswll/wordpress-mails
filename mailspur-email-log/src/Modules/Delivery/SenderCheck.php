@@ -62,7 +62,7 @@ final class SenderCheck {
 		if ( ! self::available() ) {
 			return null;
 		}
-		set_error_handler( '__return_true' );
+		set_error_handler( '__return_true' ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler -- instead of @: a failed DNS lookup is an expected result; restored in finally.
 		try {
 			$records = dns_get_record( $host, 'MX' === $type ? DNS_MX : DNS_TXT );
 		} catch ( \Throwable $e ) {
@@ -85,7 +85,7 @@ final class SenderCheck {
 			$host = substr( $host, 4 );
 		}
 		// Same default and filter as wp_mail(), so plugins that change the sender are respected.
-		$from = (string) apply_filters( 'wp_mail_from', 'wordpress@' . $host );
+		$from = (string) apply_filters( 'wp_mail_from', 'wordpress@' . $host ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- applies the core filter to read the effective sender.
 
 		$out     = array();
 		$default = self::domain_of( $from );

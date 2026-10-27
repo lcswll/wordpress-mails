@@ -445,7 +445,7 @@ final class Facts {
 		if ( function_exists( 'wc_get_order' ) && class_exists( Screens::class ) && Screens::can_view_orders() ) {
 			$out['shop'] = true;
 			// Sequential order number plugins map the visible number to the order id through this WooCommerce filter.
-			$id    = (int) apply_filters( 'woocommerce_shortcode_order_tracking_order_id', $number );
+			$id    = (int) apply_filters( 'woocommerce_shortcode_order_tracking_order_id', $number ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- applies the WooCommerce filter to resolve the order id.
 			$order = Screens::order( wc_get_order( $id ) );
 			if ( null === $order ) {
 				return $out;

@@ -128,7 +128,7 @@ final class Probe {
 			'[%s] New User Registration' => self::NEW_USER,
 			'[%s] Login Details'         => self::NEW_USER,
 		) as $text => $kind ) {
-			$out[] = array( (string) apply_filters( 'gettext', $core->translate( $text ), $text, 'default' ), $kind );
+			$out[] = array( (string) apply_filters( 'gettext', $core->translate( $text ), $text, 'default' ), $kind ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- applies the core filter as translate() does.
 		}
 		return $out;
 	}

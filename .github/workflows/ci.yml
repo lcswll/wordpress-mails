@@ -228,10 +228,6 @@ jobs:
           # Every finding fails the job – warnings and low-severity messages included.
           strict: true
           severity: '1'
-          # Justified uses of debug_backtrace() and set_error_handler() (see tests/e2e/plugin-check-allowlist.json).
-          ignore-codes: |
-            WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
-            WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler
           # Runtime/performance checks need a front end; the plugin has none (admin screen only).
           exclude-checks: |
             enqueued_scripts_size

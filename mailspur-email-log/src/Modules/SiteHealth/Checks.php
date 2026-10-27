@@ -399,7 +399,7 @@ final class Checks {
 		if ( 0 === strpos( $host, 'www.' ) ) {
 			$host = substr( $host, 4 );
 		}
-		$from = (string) apply_filters( 'wp_mail_from', 'wordpress@' . $host );
+		$from = (string) apply_filters( 'wp_mail_from', 'wordpress@' . $host ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- applies the core filter to read the effective sender.
 		return SenderCheck::domain_of( $from );
 	}
 

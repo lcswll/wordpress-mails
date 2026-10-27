@@ -384,7 +384,7 @@ final class Templates {
 	 * The "Settings" link the plugin adds to its row on the Plugins screen – only when it points into wp-admin.
 	 */
 	private function settings( string $basename ): string {
-		$links = apply_filters( 'plugin_action_links_' . $basename, array(), $basename, array(), 'all' );
+		$links = apply_filters( 'plugin_action_links_' . $basename, array(), $basename, array(), 'all' ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- applies the core filter to read a plugin's own Settings link.
 		return self::settings_link( is_array( $links ) ? $links : array(), admin_url() );
 	}
 

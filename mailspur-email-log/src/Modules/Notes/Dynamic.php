@@ -176,7 +176,7 @@ final class Dynamic {
 	 * @return mixed
 	 */
 	private static function quietly( callable $lookup ) {
-		set_error_handler(
+		set_error_handler( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler -- instead of @: a failed DNS lookup is an expected result; restored in finally.
 			static function (): bool {
 				return true;
 			}

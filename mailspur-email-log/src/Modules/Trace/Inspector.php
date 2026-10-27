@@ -32,7 +32,7 @@ final class Inspector {
 		 * Not debug code: the backtrace is the only way to tell which code called wp_mail(). Arguments are
 		 * not collected and the depth is capped, so it is cheap and never exposes data.
 		 */
-		return self::origin_from( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 40 ) );
+		return self::origin_from( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS, 40 ) ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace -- not debug code: shows where wp_mail() was called (file paths and function names only).
 	}
 
 	/**

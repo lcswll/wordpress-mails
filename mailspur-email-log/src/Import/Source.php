@@ -150,7 +150,7 @@ abstract class Source {
 			return null;
 		}
 		// Truncated data (e.g. old FluentSMTP columns) is expected: swallow the notice instead of logging it.
-		set_error_handler(
+		set_error_handler( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler -- instead of @: truncated serialized data from other plugins is an expected result; restored in finally.
 			static function (): bool {
 				return true;
 			}
